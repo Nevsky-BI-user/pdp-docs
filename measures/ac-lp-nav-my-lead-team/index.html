@@ -3074,40 +3074,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#-" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Бізнес-суть
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        На сторінках звіту
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Пов'язані міри
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Технічний опис
@@ -3130,7 +3097,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         Джерела даних
@@ -3141,7 +3108,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Залежності (таблиці й колонки)
@@ -3152,7 +3119,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         Схема
@@ -3164,6 +3131,39 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Бізнес-суть
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        На сторінках звіту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пов'язані міри
+      
+    </span>
+  </a>
   
 </li>
       
@@ -3200,21 +3200,7 @@
 
 <h1 id="aclpnavmy_lead_team">AC.LP.Nav.My_lead_team<a class="headerlink" href="#aclpnavmy_lead_team" title="Permanent link">&para;</a></h1>
 <p><em>тека <code>Analytical Cases\Loss_Productivity\Formatting</code> · формат <code>0</code></em></p>
-<div class="admonition abstract">
-<p class="admonition-title">Джерела даних</p>
-<p><code>DM.vw_R27_dim_Employee_Access_List</code>, <code>DM.vw_R27_fact_Loss_of_Productivity</code></p>
-</div>
-<h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Бізнес-визначення відсутнє</p>
-<p>Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в <code>manualNotes</code>.</p>
-</div>
-<h2 id="_1">На сторінках звіту<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><em>Не використовується на основних сторінках звіту.</em></p>
-<h2 id="_2">Пов'язані міри<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><strong>Використовує:</strong> <a href="../user-admin-hierarchy-level/">User_Admin_Hierarchy_Level</a>, <a href="../user-hrbp-hierarchy-level/">User_HRBP_Hierarchy_Level</a></p>
-<hr />
-<h2 id="_3">Технічний опис<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_1">Технічний опис<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -3264,18 +3250,28 @@
 <span class="w">    </span><span class="m">0</span>
 <span class="p">)</span>
 </code></pre></div>
-<h3 id="_4">Джерела даних<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_2">Джерела даних<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Вихідні таблиці: <code>DM.vw_R27_dim_Employee_Access_List</code>, <code>DM.vw_R27_fact_Loss_of_Productivity</code></p>
 <p>Колонки: <code>USER_ACCESS_ID</code>, <code>USER_ROLE</code>, <code>path_length_rls</code></p>
 <p>Power Query: <code>dim_Admin_OS</code></p>
-<h3 id="_5">Залежності (таблиці й колонки)<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_3">Залежності (таблиці й колонки)<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>Таблиці: <code>dim_Admin_OS</code>, <code>fact_Loss_of_Productivity</code></p>
 <p>Колонки: <code>dim_Admin_OS[USER_ACCESS_ID]</code>, <code>dim_Admin_OS[USER_ROLE]</code>, <code>dim_Admin_OS[path_length_rls]</code>, <code>fact_Loss_of_Productivity[USER_ACCESS_ID]</code></p>
-<h3 id="_6">Схема<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_4">Схема<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <pre class="mermaid"><code>graph LR
   M["AC.LP.Nav.My_lead_team"]
   M --&gt; dim_Admin_OS["dim_Admin_OS"]
   M --&gt; fact_Loss_of_Productivity["fact_Loss_of_Productivity"]</code></pre>
+<hr />
+<h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Бізнес-визначення відсутнє</p>
+<p>Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в <code>manualNotes</code>.</p>
+</div>
+<h2 id="_5">На сторінках звіту<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p><em>Не використовується на основних сторінках звіту.</em></p>
+<h2 id="_6">Пов'язані міри<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><strong>Використовує:</strong> <a href="../user-admin-hierarchy-level/">User_Admin_Hierarchy_Level</a>, <a href="../user-hrbp-hierarchy-level/">User_HRBP_Hierarchy_Level</a></p>
 <h2 id="_7">Нотатки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p><em>порожньо</em></p>
 

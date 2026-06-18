@@ -3074,40 +3074,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#-" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Бізнес-суть
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        На сторінках звіту
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Пов'язані міри
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Технічний опис
@@ -3130,7 +3097,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         Джерела даних
@@ -3141,7 +3108,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Залежності (таблиці й колонки)
@@ -3152,7 +3119,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         Схема
@@ -3164,6 +3131,39 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Бізнес-суть
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        На сторінках звіту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пов'язані міри
+      
+    </span>
+  </a>
   
 </li>
       
@@ -3200,15 +3200,7 @@
 
 <h1 id="acbr">AC.BR.Кількість місяців без якісної відпустки<a class="headerlink" href="#acbr" title="Permanent link">&para;</a></h1>
 <p><em>тека <code>Analytical Cases\Burnout_Risk\Export</code> · формат <code>0</code></em></p>
-<h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
-<p>NO_QUALITY_VACATION_MONTHS → Кількість місяців без якісної відпустки</p>
-<p><strong>Вимоги:</strong> <code>Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22</code></p>
-<h2 id="_1">На сторінках звіту<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><a href="../../report/utrymannia-pratsivnykiv/">Утримання працівників</a></p>
-<h2 id="_2">Пов'язані міри<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><strong>Використовується в:</strong> <a href="../ac-br-referentne-znachennia-misiatsiv-bez-vidpustky/">AC.BR.Референтне значення.Місяців без відпустки</a></p>
-<hr />
-<h2 id="_3">Технічний опис<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_1">Технічний опис<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -3246,16 +3238,24 @@
 <h3 id="dax">DAX<a class="headerlink" href="#dax" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nf">SUM</span><span class="p">(</span><span class="na">fact_Burnout_Indicators[NO_QUALITY_VACATION_MONTHS]</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="_4">Джерела даних<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_2">Джерела даних<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Колонки: <code>NO_QUALITY_VACATION_MONTHS</code></p>
 <p>Power Query: <code>fact_Burnout_Indicators</code></p>
-<h3 id="_5">Залежності (таблиці й колонки)<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_3">Залежності (таблиці й колонки)<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>Таблиці: <code>fact_Burnout_Indicators</code></p>
 <p>Колонки: <code>fact_Burnout_Indicators[NO_QUALITY_VACATION_MONTHS]</code></p>
-<h3 id="_6">Схема<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_4">Схема<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <pre class="mermaid"><code>graph LR
   M["AC.BR.Кількість місяців без якісної відпустки"]
   M --&gt; fact_Burnout_Indicators["fact_Burnout_Indicators"]</code></pre>
+<hr />
+<h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<p>NO_QUALITY_VACATION_MONTHS → Кількість місяців без якісної відпустки</p>
+<p><strong>Вимоги:</strong> <code>Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22</code></p>
+<h2 id="_5">На сторінках звіту<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p><a href="../../report/utrymannia-pratsivnykiv/">Утримання працівників</a></p>
+<h2 id="_6">Пов'язані міри<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><strong>Використовується в:</strong> <a href="../ac-br-referentne-znachennia-misiatsiv-bez-vidpustky/">AC.BR.Референтне значення.Місяців без відпустки</a></p>
 <h2 id="_7">Нотатки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p><em>порожньо</em></p>
 

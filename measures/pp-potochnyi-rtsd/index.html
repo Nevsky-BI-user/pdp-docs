@@ -3074,40 +3074,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#-" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Бізнес-суть
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        На сторінках звіту
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Пов'язані міри
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Технічний опис
@@ -3130,7 +3097,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         Джерела даних
@@ -3141,7 +3108,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Залежності (таблиці й колонки)
@@ -3152,7 +3119,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         Схема
@@ -3164,6 +3131,39 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Бізнес-суть
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        На сторінках звіту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пов'язані міри
+      
+    </span>
+  </a>
   
 </li>
       
@@ -3200,20 +3200,7 @@
 
 <h1 id="pp">PP.Поточний РЦД<a class="headerlink" href="#pp" title="Permanent link">&para;</a></h1>
 <p><em>тека <code>Personal_Profile\Життєвий цикл</code> · формат <code>#,0.00</code></em></p>
-<div class="admonition abstract">
-<p class="admonition-title">Джерела даних</p>
-<p><code>DM.vw_R27_fact_Employee_History_Position</code></p>
-</div>
-<h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
-<p>PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період</p>
-<p>Це дата нарахування/виплати премії Зірка МХП (accrual_types_key = '9781d4aa-3a0d-1458-623a-7a93e90a2284'   та category_of_accrual_sort  = '2' ) Поточний період</p>
-<p><strong>Вимоги:</strong> <code>Індивідуальний-профіль-працівника/Історія-по-посадам</code>, <code>Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Деталізація-на-сторінці-Винагорода</code>, <code>Допоміжні-вітрини-для-звіту/Таблиця-(вью)-для-розрахунку-метрики-Укомплектованість-штату</code>, <code>Допоміжні-вітрини-для-звіту/Таблиця-періодична-(попередні-12-міс)-для-розрахунку-метрики-Середній-дохід</code></p>
-<h2 id="_1">На сторінках звіту<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><em>Не використовується на основних сторінках звіту.</em></p>
-<h2 id="_2">Пов'язані міри<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><strong>Використовує:</strong> <a href="../pp-rtsd/">PP.РЦД</a></p>
-<hr />
-<h2 id="_3">Технічний опис<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_1">Технічний опис<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -3254,18 +3241,27 @@
 <span class="w">    </span><span class="na">&#39;dim_Date&#39;[Date]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">MAX</span><span class="p">(</span><span class="na">&#39;fact_Employee_History_Position&#39;[PERIOD]</span><span class="p">)</span>
 <span class="p">)</span>
 </code></pre></div>
-<h3 id="_4">Джерела даних<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_2">Джерела даних<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Вихідні таблиці: <code>DM.vw_R27_fact_Employee_History_Position</code></p>
 <p>Колонки: <code>Date</code>, <code>PERIOD</code></p>
 <p>Power Query: <code>dim_Date</code></p>
-<h3 id="_5">Залежності (таблиці й колонки)<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_3">Залежності (таблиці й колонки)<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>Таблиці: <code>dim_Date</code>, <code>fact_Employee_History_Position</code></p>
 <p>Колонки: <code>dim_Date[Date]</code>, <code>fact_Employee_History_Position[PERIOD]</code></p>
-<h3 id="_6">Схема<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_4">Схема<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <pre class="mermaid"><code>graph LR
   M["PP.Поточний РЦД"]
   M --&gt; dim_Date["dim_Date"]
   M --&gt; fact_Employee_History_Position["fact_Employee_History_Position"]</code></pre>
+<hr />
+<h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<p>PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період</p>
+<p>Це дата нарахування/виплати премії Зірка МХП (accrual_types_key = '9781d4aa-3a0d-1458-623a-7a93e90a2284'   та category_of_accrual_sort  = '2' ) Поточний період</p>
+<p><strong>Вимоги:</strong> <code>Індивідуальний-профіль-працівника/Історія-по-посадам</code>, <code>Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Деталізація-на-сторінці-Винагорода</code>, <code>Допоміжні-вітрини-для-звіту/Таблиця-(вью)-для-розрахунку-метрики-Укомплектованість-штату</code>, <code>Допоміжні-вітрини-для-звіту/Таблиця-періодична-(попередні-12-міс)-для-розрахунку-метрики-Середній-дохід</code></p>
+<h2 id="_5">На сторінках звіту<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p><em>Не використовується на основних сторінках звіту.</em></p>
+<h2 id="_6">Пов'язані міри<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><strong>Використовує:</strong> <a href="../pp-rtsd/">PP.РЦД</a></p>
 <h2 id="_7">Нотатки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p><em>порожньо</em></p>
 

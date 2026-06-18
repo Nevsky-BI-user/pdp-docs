@@ -3074,40 +3074,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#-" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Бізнес-суть
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        На сторінках звіту
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Пов'язані міри
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Технічний опис
@@ -3130,7 +3097,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         Джерела даних
@@ -3141,7 +3108,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Залежності (таблиці й колонки)
@@ -3152,7 +3119,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         Схема
@@ -3164,6 +3131,39 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Бізнес-суть
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        На сторінках звіту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пов'язані міри
+      
+    </span>
+  </a>
   
 </li>
       
@@ -3200,20 +3200,7 @@
 
 <h1 id="pp">PP.Розмір фіксованої винагороди плановий, за місяць ПОТОЧНИЙ<a class="headerlink" href="#pp" title="Permanent link">&para;</a></h1>
 <p><em>тека <code>Personal_Profile\TRS</code> · формат <code>#,0</code></em></p>
-<div class="admonition abstract">
-<p class="admonition-title">Джерела даних</p>
-<p><code>DM.vw_R27_fact_TRS_Plan_PDP</code></p>
-</div>
-<h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
-<p>CATEGORY_NAME → Назва блоку; END_DATE → Термін без відпустки в днях по пріоритетному місцю роботи на поточну дату; INIT_PAYMENT_PLAN_SUM → Цільовий розмір річної винагороди, до оподаткування; INIT_PAYMENT_PLAN_SUM → Оклад по годинах; INIT_PAYMENT_PLAN_SUM → Оклад по днях; INIT_PAYMENT_PLAN_SUM → Премія за місяць, %; INIT_PAYMENT_PLAN_SUM → Доплата за шкідливі умови праці, %; INIT_PAYMENT_PLAN_SUM → Роз'їзний характер роботи, %; INIT_PAYMENT_PLAN_SUM → Оренда житла; INIT_PAYMENT_PLAN_SUM → Середній цільовий розмір річної винагороди, до оподаткування; INIT_PAYMENT_PLAN_SUM → Середня зарплата (оклад); INIT_PAYMENT_PLAN_SUM → Доля команди з премією за місяць, %; INIT_PAYMENT_PLAN_SUM → Доля команди з доплатою за шкідливі умови праці, %; INIT_PAYMENT_PLAN_SUM → Доля команди з доплатою за роз’їзний характер роботи, %; INIT_PAYMENT_PLAN_SUM → Середній розмір доплати за шкідливі умови праці; INIT_PAYMENT_PLAN_SUM → Середній розмір доплати за роз’їзний характер роботи; INIT_PAYMENT_PLAN_SUM → Середні витрати на оренду житла; INIT_PAYMENT_PLAN_SUM → Річний цільовий дохід (РЦД); INIT_PAYMENT_PLAN_SUM → Оклад</p>
-<p>TODAY - остання Дата виходу. Якщо дата виходу майбутня дата, то значення буде від'ємне. Розрахунок вести по пріоритетному місцю роботи. Тобто, якщо у працівника кілька працевлаштувань, по кожному із них будуть відображатися дані по пріоритетному місцю.<br>Аналогічний розрахуноку є в таблиці DM.vw_R27_fact_Vacation_Reserve Це сума по блокам Фіксована винагорода, всього х 12, Змінна винагорода (Щомісячна премія+ Квартальна премія+ Річний бонус) приведена до річної суми. <br> - <strong>Фіксована винагорода</strong> = Відібрати записи по працівнику [person_key], періоду [Period], організації [organization_key]</p>
-<p><strong>Вимоги:</strong> <code>Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/РВІ.-Зміна-алгоритму-розрахунку-Річного-цільового-доходу</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка/Блок-Оцінка-компетенцій</code>, <code>Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту</code>, <code>Командний-профіль/Сторінка-TRS-команди</code>, <code>Командний-профіль/Сторінка-TRS-команди/Сторінка-Винагорода-групового-профілю#вимоги-до-звіту</code>, <code>Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту</code>, <code>Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Блок-Оцінка-компетенцій-(груповий-профіль)</code></p>
-<h2 id="_1">На сторінках звіту<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><a href="../../report/tt-zmina-fiks-vynahorody/">TT:Зміна фікс винагороди</a></p>
-<h2 id="_2">Пов'язані міри<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><strong>Використовується в:</strong> <a href="../pp-vidsotok-zminy-fiksovanoi-vynahorody/">PP.Відсоток зміни фіксованої винагороди</a></p>
-<hr />
-<h2 id="_3">Технічний опис<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_1">Технічний опис<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -3256,17 +3243,26 @@
 <span class="w">        </span><span class="na">&#39;fact_TRS_Plan&#39;[END_DATE]</span><span class="w"> </span>&gt; TODAY() || &#39;fact_TRS_Plan&#39;[END_DATE] = DATE(2001,1,1)
 <span class="w">    </span><span class="p">)</span>
 </code></pre></div>
-<h3 id="_4">Джерела даних<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_2">Джерела даних<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Вихідні таблиці: <code>DM.vw_R27_fact_TRS_Plan_PDP</code></p>
 <p>Колонки: <code>CATEGORY_NAME</code>, <code>END_DATE</code>, <code>INIT_PAYMENT_PLAN_SUM</code>, <code>IS_ACTUAL</code></p>
 <p>Power Query: <code>fact_TRS_Plan</code></p>
-<h3 id="_5">Залежності (таблиці й колонки)<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_3">Залежності (таблиці й колонки)<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>Таблиці: <code>fact_TRS_Plan</code></p>
 <p>Колонки: <code>fact_TRS_Plan[CATEGORY_NAME]</code>, <code>fact_TRS_Plan[END_DATE]</code>, <code>fact_TRS_Plan[INIT_PAYMENT_PLAN_SUM]</code>, <code>fact_TRS_Plan[IS_ACTUAL]</code></p>
-<h3 id="_6">Схема<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_4">Схема<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <pre class="mermaid"><code>graph LR
   M["PP.Розмір фіксованої винагороди плановий, за місяць ПОТОЧНИЙ"]
   M --&gt; fact_TRS_Plan["fact_TRS_Plan"]</code></pre>
+<hr />
+<h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<p>CATEGORY_NAME → Назва блоку; END_DATE → Термін без відпустки в днях по пріоритетному місцю роботи на поточну дату; INIT_PAYMENT_PLAN_SUM → Цільовий розмір річної винагороди, до оподаткування; INIT_PAYMENT_PLAN_SUM → Оклад по годинах; INIT_PAYMENT_PLAN_SUM → Оклад по днях; INIT_PAYMENT_PLAN_SUM → Премія за місяць, %; INIT_PAYMENT_PLAN_SUM → Доплата за шкідливі умови праці, %; INIT_PAYMENT_PLAN_SUM → Роз'їзний характер роботи, %; INIT_PAYMENT_PLAN_SUM → Оренда житла; INIT_PAYMENT_PLAN_SUM → Середній цільовий розмір річної винагороди, до оподаткування; INIT_PAYMENT_PLAN_SUM → Середня зарплата (оклад); INIT_PAYMENT_PLAN_SUM → Доля команди з премією за місяць, %; INIT_PAYMENT_PLAN_SUM → Доля команди з доплатою за шкідливі умови праці, %; INIT_PAYMENT_PLAN_SUM → Доля команди з доплатою за роз’їзний характер роботи, %; INIT_PAYMENT_PLAN_SUM → Середній розмір доплати за шкідливі умови праці; INIT_PAYMENT_PLAN_SUM → Середній розмір доплати за роз’їзний характер роботи; INIT_PAYMENT_PLAN_SUM → Середні витрати на оренду житла; INIT_PAYMENT_PLAN_SUM → Річний цільовий дохід (РЦД); INIT_PAYMENT_PLAN_SUM → Оклад</p>
+<p>TODAY - остання Дата виходу. Якщо дата виходу майбутня дата, то значення буде від'ємне. Розрахунок вести по пріоритетному місцю роботи. Тобто, якщо у працівника кілька працевлаштувань, по кожному із них будуть відображатися дані по пріоритетному місцю.<br>Аналогічний розрахуноку є в таблиці DM.vw_R27_fact_Vacation_Reserve Це сума по блокам Фіксована винагорода, всього х 12, Змінна винагорода (Щомісячна премія+ Квартальна премія+ Річний бонус) приведена до річної суми. <br> - <strong>Фіксована винагорода</strong> = Відібрати записи по працівнику [person_key], періоду [Period], організації [organization_key]</p>
+<p><strong>Вимоги:</strong> <code>Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/РВІ.-Зміна-алгоритму-розрахунку-Річного-цільового-доходу</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка/Блок-Оцінка-компетенцій</code>, <code>Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту</code>, <code>Командний-профіль/Сторінка-TRS-команди</code>, <code>Командний-профіль/Сторінка-TRS-команди/Сторінка-Винагорода-групового-профілю#вимоги-до-звіту</code>, <code>Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту</code>, <code>Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Блок-Оцінка-компетенцій-(груповий-профіль)</code></p>
+<h2 id="_5">На сторінках звіту<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p><a href="../../report/tt-zmina-fiks-vynahorody/">TT:Зміна фікс винагороди</a></p>
+<h2 id="_6">Пов'язані міри<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><strong>Використовується в:</strong> <a href="../pp-vidsotok-zminy-fiksovanoi-vynahorody/">PP.Відсоток зміни фіксованої винагороди</a></p>
 <h2 id="_7">Нотатки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p><em>порожньо</em></p>
 

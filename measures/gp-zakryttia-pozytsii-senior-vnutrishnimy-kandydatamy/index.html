@@ -3074,40 +3074,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#-" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Бізнес-суть
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        На сторінках звіту
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Пов'язані міри
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Технічний опис
@@ -3130,7 +3097,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         Джерела даних
@@ -3141,7 +3108,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Залежності (таблиці й колонки)
@@ -3152,7 +3119,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         Схема
@@ -3164,6 +3131,39 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Бізнес-суть
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        На сторінках звіту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пов'язані міри
+      
+    </span>
+  </a>
   
 </li>
       
@@ -3200,20 +3200,7 @@
 
 <h1 id="gp-senior">GP.Закриття позицій Senior+ внутрішніми кандидатами (%)<a class="headerlink" href="#gp-senior" title="Permanent link">&para;</a></h1>
 <p><em>тека <code>Group_Profile\_Main\Індикатори здоров'я команди</code></em></p>
-<div class="admonition abstract">
-<p class="admonition-title">Джерела даних</p>
-<p><code>DM.vw_R27_dim_Employee_Access_List</code>, <code>DWH.t_SPO_HR_Group_Profile_General_Metric</code></p>
-</div>
-<h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
-<p>DIRECTION → Напрям; DIRECTION → direction_name; DIRECTION → direction; POSITION_CATEGORY_DETAIL → Деталізація категорії посади (внутрішня); POSITION_CATEGORY_DETAIL → Категорія посади; POSITION_CATEGORY_DETAIL → Категорія посади (внутрішня); POSITION_CATEGORY_DETAIL → Доля менеджерів серед всіх співробітників (%); SUB_DIRECTION → Піднапрям; SUB_DIRECTION → subdirection; SUB_DIRECTION → sub_direction; Internal_Senior_Level_Fill → Закриття позицій Senior+ внутрішніми кандидатами (%); Record_Type → Тип винятку із плинності</p>
-<p>division_person_id = unit_key Поле зберігається в довіднику [dm.vw_R27_dim_unit]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List], через відповідний зв’язок за ключем [division_key] = [unit_key].  <br>Поле завжди має значення, пусте поле не допускається  <br>Якщо не вміщається в одну строку, перенести на іншу Поле зберігається в довіднику [dm.vw_R27_dim_unit]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List_PDP], через відповідний зв’язок за ключем [division_</p>
-<p><strong>Вимоги:</strong> <code>Індивідуальний-профіль-працівника/Історія-по-посадам</code>, <code>Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам</code>, <code>Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника</code>, <code>Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Індивідуальний-профіль-працівника</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Таблиця-vw_R27_calc_Viva_Direction_PDP</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника</code>, <code>Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту</code>, <code>Командний-профіль/Паспортна-частина-групового-профілю/Метрики-рекрутингу</code>, <code>Командний-профіль/Паспортна-частина-групового-профілю/Метрики-рекрутингу/ТЗ-на-розробку-вітрин-по-метрикам-рекрутингу</code>, <code>Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю</code>, <code>Командний-профіль/Сторінка-Ефективність</code>, <code>Командний-профіль/Сторінка-Загальна-інформація-про-команду</code>, <code>Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту</code>, <code>Командний-профіль/Сторінка-Навчання-і-розвиток/Блок-Розвиток-сторінки-Навчання-і-розвиток</code>, <code>Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)</code>, <code>Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)/Додаткові-вимоги-до-вітрини-Плинність</code>, <code>Командний-профіль/Сторінка-Плинність-та-Exits/ТЗ-на-вітрину-Exits</code>, <code>Командний-профіль/Сторінка-Результативність-та-оцінка-команди</code>, <code>Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Блок-Додаткові-інструменти</code></p>
-<h2 id="_1">На сторінках звіту<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><a href="../../report/group-profile/">Group Profile</a></p>
-<h2 id="_2">Пов'язані міри<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><em>Прямих зв'язків з іншими мірами немає.</em></p>
-<hr />
-<h2 id="_3">Технічний опис<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_1">Технічний опис<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -3309,18 +3296,27 @@
 <span class="w">        </span><span class="nf">COALESCE</span><span class="p">(</span><span class="nf">TRIM</span><span class="p">(</span>_res), 0) &amp; &quot;%&quot; &amp; &quot;, (&gt;=60%)&quot;
 <span class="w">    </span><span class="p">)</span>
 </code></pre></div>
-<h3 id="_4">Джерела даних<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_2">Джерела даних<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Вихідні таблиці: <code>DM.vw_R27_dim_Employee_Access_List</code>, <code>DWH.t_SPO_HR_Group_Profile_General_Metric</code></p>
 <p>Колонки: <code>DIRECTION</code>, <code>Direction_Name</code>, <code>EMPLOYEE_EMAIL</code>, <code>Internal_Senior_Level_Fill</code>, <code>ORDER_NUM_2</code>, <code>POSITION_CATEGORY_DETAIL</code>, <code>Record_Type</code>, <code>SUB_DIRECTION</code></p>
 <p>Power Query: <code>dim_Admin_OS</code></p>
-<h3 id="_5">Залежності (таблиці й колонки)<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_3">Залежності (таблиці й колонки)<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>Таблиці: <code>dim_Admin_OS</code>, <code>fact_EXCEL_Group_Profile_General_Metric</code></p>
 <p>Колонки: <code>dim_Admin_OS[DIRECTION]</code>, <code>dim_Admin_OS[EMPLOYEE_EMAIL]</code>, <code>dim_Admin_OS[ORDER_NUM_2]</code>, <code>dim_Admin_OS[POSITION_CATEGORY_DETAIL]</code>, <code>dim_Admin_OS[SUB_DIRECTION]</code>, <code>fact_EXCEL_Group_Profile_General_Metric[Direction_Name]</code>, <code>fact_EXCEL_Group_Profile_General_Metric[Internal_Senior_Level_Fill]</code>, <code>fact_EXCEL_Group_Profile_General_Metric[Record_Type]</code></p>
-<h3 id="_6">Схема<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_4">Схема<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <pre class="mermaid"><code>graph LR
   M["GP.Закриття позицій Senior+ внутрішніми кандидатами (%)"]
   M --&gt; dim_Admin_OS["dim_Admin_OS"]
   M --&gt; fact_EXCEL_Group_Profile_General_Metric["fact_EXCEL_Group_Profile_General_Metric"]</code></pre>
+<hr />
+<h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<p>DIRECTION → Напрям; DIRECTION → direction_name; DIRECTION → direction; POSITION_CATEGORY_DETAIL → Деталізація категорії посади (внутрішня); POSITION_CATEGORY_DETAIL → Категорія посади; POSITION_CATEGORY_DETAIL → Категорія посади (внутрішня); POSITION_CATEGORY_DETAIL → Доля менеджерів серед всіх співробітників (%); SUB_DIRECTION → Піднапрям; SUB_DIRECTION → subdirection; SUB_DIRECTION → sub_direction; Internal_Senior_Level_Fill → Закриття позицій Senior+ внутрішніми кандидатами (%); Record_Type → Тип винятку із плинності</p>
+<p>division_person_id = unit_key Поле зберігається в довіднику [dm.vw_R27_dim_unit]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List], через відповідний зв’язок за ключем [division_key] = [unit_key].  <br>Поле завжди має значення, пусте поле не допускається  <br>Якщо не вміщається в одну строку, перенести на іншу Поле зберігається в довіднику [dm.vw_R27_dim_unit]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List_PDP], через відповідний зв’язок за ключем [division_</p>
+<p><strong>Вимоги:</strong> <code>Індивідуальний-профіль-працівника/Історія-по-посадам</code>, <code>Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам</code>, <code>Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника</code>, <code>Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Індивідуальний-профіль-працівника</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Таблиця-vw_R27_calc_Viva_Direction_PDP</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника</code>, <code>Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту</code>, <code>Командний-профіль/Паспортна-частина-групового-профілю/Метрики-рекрутингу</code>, <code>Командний-профіль/Паспортна-частина-групового-профілю/Метрики-рекрутингу/ТЗ-на-розробку-вітрин-по-метрикам-рекрутингу</code>, <code>Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю</code>, <code>Командний-профіль/Сторінка-Ефективність</code>, <code>Командний-профіль/Сторінка-Загальна-інформація-про-команду</code>, <code>Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту</code>, <code>Командний-профіль/Сторінка-Навчання-і-розвиток/Блок-Розвиток-сторінки-Навчання-і-розвиток</code>, <code>Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)</code>, <code>Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)/Додаткові-вимоги-до-вітрини-Плинність</code>, <code>Командний-профіль/Сторінка-Плинність-та-Exits/ТЗ-на-вітрину-Exits</code>, <code>Командний-профіль/Сторінка-Результативність-та-оцінка-команди</code>, <code>Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Блок-Додаткові-інструменти</code></p>
+<h2 id="_5">На сторінках звіту<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p><a href="../../report/group-profile/">Group Profile</a></p>
+<h2 id="_6">Пов'язані міри<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><em>Прямих зв'язків з іншими мірами немає.</em></p>
 <h2 id="_7">Нотатки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p><em>порожньо</em></p>
 

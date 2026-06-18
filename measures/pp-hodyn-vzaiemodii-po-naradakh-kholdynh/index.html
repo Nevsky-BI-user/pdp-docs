@@ -3074,40 +3074,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#-" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Бізнес-суть
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        На сторінках звіту
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Пов'язані міри
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Технічний опис
@@ -3130,7 +3097,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         Джерела даних
@@ -3141,7 +3108,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Залежності (таблиці й колонки)
@@ -3152,7 +3119,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         Схема
@@ -3164,6 +3131,39 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Бізнес-суть
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        На сторінках звіту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пов'язані міри
+      
+    </span>
+  </a>
   
 </li>
       
@@ -3200,16 +3200,7 @@
 
 <h1 id="pp">PP.Годин взаємодії по нарадах (Холдинг)<a class="headerlink" href="#pp" title="Permanent link">&para;</a></h1>
 <p><em>тека <code>Personal_Profile\Viva\Viva Meetings</code></em></p>
-<h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
-<p>MEETING_HOUR → Годин взаємодії по нарадах за період від поточної точки до попередньої точки; MEETING_HOUR → Годин взаємодії по нарадах співробітника; MEETING_HOUR → Годин взаємодії по нарадах по кадровому підрозділу співробітника; MEETING_HOUR → Годин взаємодії по нарадах по напряму співробітника; MEETING_HOUR → Годин взаємодії по нарадах по Холдингу; MEETING_HOUR → meeting_hour_direction; MEETING_HOUR → meeting_hour_holding; MEETING_HOUR → Годин взаємодії по нарадах співробітника за 3 попередніх місяці; MEETING_HOUR → Годин взаємодії по нарадах по кадровому підрозділу; MEETING_HOUR → Годин взаємодії по нарадах по напряму команди; MEETING_HOUR → Годин взаємодії по нарадах</p>
-<p>Розрахункове значення.  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_dim_Employee_Metric_Health_and_Wellbeing]  ]  <br>Відбір по працівнику [person_key], періоду [PERIOD], документу прийому [DOC_JOB_APPLICATION_ID].  <br>Розраховується як середньоденне значення за попередній місяць. Потрібно значення meeting_hour поділити на кількість робочих днів в тому місяці. Якщо працівник пропрацював менше місяця, то рахувати за фактично відпрацьований період.  <br>Якщо дані по працівнику у вітрині відсутні, то показати надпис "Дані відсутні" (наприклад,</p>
-<p><strong>Вимоги:</strong> <code>Індивідуальний-профіль-працівника/Історія-по-посадам</code>, <code>Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Сторінка-Ефективність-працівника</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Таблиця-vw_R27_calc_Viva_Direction_PDP</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Таблиця-vw_R27_calc_Viva_Holding_PDP</code>, <code>Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту</code>, <code>Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту/Зміна-алгоритму-розрахунку-метрик-по-Viva-з-урахуванням-дати-завантаження-даних-до-DWH</code>, <code>Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту/Змінити-період-розрахунку-середніх-значень-по-Віва</code>, <code>Командний-профіль/Сторінка-Взаємодія-Viva-та-залученість-команд</code>, <code>Командний-профіль/Сторінка-Ефективність</code></p>
-<h2 id="_1">На сторінках звіту<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><a href="../../report/personal-profile/">Personal Profile</a> · <a href="../../report/group-profile/">Group Profile</a></p>
-<h2 id="_2">Пов'язані міри<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><strong>Використовується в:</strong> <a href="../pp-hodyn-vzaiemodii-po-naradakh-kadrovyi-pidrozdil/">PP.Годин взаємодії по нарадах (кадровий підрозділ)</a>, <a href="../pp-hodyn-vzaiemodii-po-naradakh-napriam/">PP.Годин взаємодії по нарадах (напрям)</a>, <a href="../pp-hodyn-vzaiemodii-po-naradakh-spivrobitnyk/">PP.Годин взаємодії по нарадах (співробітник)</a></p>
-<hr />
-<h2 id="_3">Технічний опис<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_1">Технічний опис<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -3252,16 +3243,25 @@
 
 <span class="nb">RETURN</span><span class="w"> </span>__val
 </code></pre></div>
-<h3 id="_4">Джерела даних<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_2">Джерела даних<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Колонки: <code>MEETING_HOUR</code>, <code>WORKDAY_WITHOUT_SICKLEAVE_AND_VACATION</code></p>
 <p>Power Query: <code>fact_Viva_Metrics</code></p>
-<h3 id="_5">Залежності (таблиці й колонки)<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_3">Залежності (таблиці й колонки)<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>Таблиці: <code>fact_Viva_Metrics</code></p>
 <p>Колонки: <code>fact_Viva_Metrics[MEETING_HOUR]</code>, <code>fact_Viva_Metrics[WORKDAY_WITHOUT_SICKLEAVE_AND_VACATION]</code></p>
-<h3 id="_6">Схема<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_4">Схема<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <pre class="mermaid"><code>graph LR
   M["PP.Годин взаємодії по нарадах (Холдинг)"]
   M --&gt; fact_Viva_Metrics["fact_Viva_Metrics"]</code></pre>
+<hr />
+<h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<p>MEETING_HOUR → Годин взаємодії по нарадах за період від поточної точки до попередньої точки; MEETING_HOUR → Годин взаємодії по нарадах співробітника; MEETING_HOUR → Годин взаємодії по нарадах по кадровому підрозділу співробітника; MEETING_HOUR → Годин взаємодії по нарадах по напряму співробітника; MEETING_HOUR → Годин взаємодії по нарадах по Холдингу; MEETING_HOUR → meeting_hour_direction; MEETING_HOUR → meeting_hour_holding; MEETING_HOUR → Годин взаємодії по нарадах співробітника за 3 попередніх місяці; MEETING_HOUR → Годин взаємодії по нарадах по кадровому підрозділу; MEETING_HOUR → Годин взаємодії по нарадах по напряму команди; MEETING_HOUR → Годин взаємодії по нарадах</p>
+<p>Розрахункове значення.  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_dim_Employee_Metric_Health_and_Wellbeing]  ]  <br>Відбір по працівнику [person_key], періоду [PERIOD], документу прийому [DOC_JOB_APPLICATION_ID].  <br>Розраховується як середньоденне значення за попередній місяць. Потрібно значення meeting_hour поділити на кількість робочих днів в тому місяці. Якщо працівник пропрацював менше місяця, то рахувати за фактично відпрацьований період.  <br>Якщо дані по працівнику у вітрині відсутні, то показати надпис "Дані відсутні" (наприклад,</p>
+<p><strong>Вимоги:</strong> <code>Індивідуальний-профіль-працівника/Історія-по-посадам</code>, <code>Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Сторінка-Ефективність-працівника</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Таблиця-vw_R27_calc_Viva_Direction_PDP</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Таблиця-vw_R27_calc_Viva_Holding_PDP</code>, <code>Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту</code>, <code>Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту/Зміна-алгоритму-розрахунку-метрик-по-Viva-з-урахуванням-дати-завантаження-даних-до-DWH</code>, <code>Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту/Змінити-період-розрахунку-середніх-значень-по-Віва</code>, <code>Командний-профіль/Сторінка-Взаємодія-Viva-та-залученість-команд</code>, <code>Командний-профіль/Сторінка-Ефективність</code></p>
+<h2 id="_5">На сторінках звіту<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p><a href="../../report/personal-profile/">Personal Profile</a> · <a href="../../report/group-profile/">Group Profile</a></p>
+<h2 id="_6">Пов'язані міри<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><strong>Використовується в:</strong> <a href="../pp-hodyn-vzaiemodii-po-naradakh-kadrovyi-pidrozdil/">PP.Годин взаємодії по нарадах (кадровий підрозділ)</a>, <a href="../pp-hodyn-vzaiemodii-po-naradakh-napriam/">PP.Годин взаємодії по нарадах (напрям)</a>, <a href="../pp-hodyn-vzaiemodii-po-naradakh-spivrobitnyk/">PP.Годин взаємодії по нарадах (співробітник)</a></p>
 <h2 id="_7">Нотатки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p><em>порожньо</em></p>
 

@@ -3074,40 +3074,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#-" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Бізнес-суть
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        На сторінках звіту
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Пов'язані міри
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Технічний опис
@@ -3130,7 +3097,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         Джерела даних
@@ -3141,7 +3108,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Залежності (таблиці й колонки)
@@ -3152,7 +3119,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         Схема
@@ -3164,6 +3131,39 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Бізнес-суть
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        На сторінках звіту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пов'язані міри
+      
+    </span>
+  </a>
   
 </li>
       
@@ -3200,20 +3200,7 @@
 
 <h1 id="gp">GP.Доля команди з доплатою за шкідливі умови праці, %<a class="headerlink" href="#gp" title="Permanent link">&para;</a></h1>
 <p><em>тека <code>Group_Profile\TRS</code> · формат <code>0.00%;-0.00%;0.00%</code></em></p>
-<div class="admonition abstract">
-<p class="admonition-title">Джерела даних</p>
-<p><code>DM.vw_R27_dim_Employee_Access_List</code>, <code>DM.vw_R27_fact_TRS_Plan_PDP</code></p>
-</div>
-<h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
-<p>PAYMENT_PLAN_SUM → Річний цільовий дохід; PAYMENT_PLAN_SUM → Розмір фіксованої винагороди плановий, за місяць ПОТОЧНИЙ; PAYMENT_PLAN_SUM → Сума (на поточний момент); PAYMENT_PLAN_SUM → Середній розмір премії за місяць; PAYMENT_PLAN_SUM → Доля учасників із зміною фіксованої винагороди; PAYMENT_PLAN_SUM → Діапазон фіксованої винагороди (план)</p>
-<p>PAYMENT_PLAN_SUMх(BONUS_MONTH_SALARY_CNTх12 +BONUS_QUARTER_SALARY_CNTх4+BONUS_YEAR_SALARY_CNT+12) Відібрати записи по працівнику [person_key], періоду [Period], організації [organization_key], підрозділу [division_key], де category_name = Фіксована винагорода, IS_ACTUAL  = "1", END_DATE &gt; поточна дата, або END_DATE = "01.01.2001". (BONUS_MONTH_SALARY_CNT +BONUS_QUARTER_SALARY_CNT+  <br>BONUS_YEAR_SALARY_CNT)<em> PAYMENT_PLAN_SUM + (PAYMENT_PLAN_SUM</em>12) Розрахункове поле.  <br>Потрібно зсумувати значення поля [PAYMENT_PLAN_SUM] по тим членам команди, у яких воно &gt; 0,00  по ACCRUAL_ORG_CODE = 00148</p>
-<p><strong>Вимоги:</strong> <code>Індивідуальний-профіль-працівника/Історія-по-посадам</code>, <code>Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Деталізація-на-сторінці-Винагорода</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Доопрацювання-сторінки-ТРС</code>, <code>Командний-профіль/Сторінка-TRS-команди</code>, <code>Командний-профіль/Сторінка-TRS-команди/Доопрацювання-сторінки-TRS</code>, <code>Командний-профіль/Сторінка-TRS-команди/Сторінка-Винагорода-групового-профілю#вимоги-до-звіту</code></p>
-<h2 id="_1">На сторінках звіту<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><a href="../../report/group-profile/">Group Profile</a></p>
-<h2 id="_2">Пов'язані міри<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><em>Прямих зв'язків з іншими мірами немає.</em></p>
-<hr />
-<h2 id="_3">Технічний опис<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_1">Технічний опис<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -3316,19 +3303,28 @@
 <span class="nf">COALESCE</span><span class="p">(</span>
 <span class="w">    </span>_res, &quot;-&quot;)
 </code></pre></div>
-<h3 id="_4">Джерела даних<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_2">Джерела даних<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Вихідні таблиці: <code>DM.vw_R27_dim_Employee_Access_List</code>, <code>DM.vw_R27_fact_TRS_Plan_PDP</code></p>
 <p>Колонки: <code>ACCRUAL_ORG_CODE</code>, <code>IS_ACTUAL</code>, <code>Index</code>, <code>PAYMENT_PLAN_SUM</code>, <code>USER_ACCESS_ID</code></p>
 <p>Power Query: <code>dim_Admin_OS</code></p>
-<h3 id="_5">Залежності (таблиці й колонки)<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_3">Залежності (таблиці й колонки)<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>Таблиці: <code>dim_Admin_OS</code>, <code>fact_TRS_Plan</code>, <code>t_HierarchyTypes</code></p>
 <p>Колонки: <code>dim_Admin_LT_OS[USER_ACCESS_ID]</code>, <code>dim_Admin_OS[USER_ACCESS_ID]</code>, <code>fact_TRS_Plan[ACCRUAL_ORG_CODE]</code>, <code>fact_TRS_Plan[IS_ACTUAL]</code>, <code>fact_TRS_Plan[PAYMENT_PLAN_SUM]</code>, <code>t_HierarchyTypes[Index]</code></p>
-<h3 id="_6">Схема<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_4">Схема<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <pre class="mermaid"><code>graph LR
   M["GP.Доля команди з доплатою за шкідливі умови праці, %"]
   M --&gt; dim_Admin_OS["dim_Admin_OS"]
   M --&gt; fact_TRS_Plan["fact_TRS_Plan"]
   M --&gt; t_HierarchyTypes["t_HierarchyTypes"]</code></pre>
+<hr />
+<h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<p>PAYMENT_PLAN_SUM → Річний цільовий дохід; PAYMENT_PLAN_SUM → Розмір фіксованої винагороди плановий, за місяць ПОТОЧНИЙ; PAYMENT_PLAN_SUM → Сума (на поточний момент); PAYMENT_PLAN_SUM → Середній розмір премії за місяць; PAYMENT_PLAN_SUM → Доля учасників із зміною фіксованої винагороди; PAYMENT_PLAN_SUM → Діапазон фіксованої винагороди (план)</p>
+<p>PAYMENT_PLAN_SUMх(BONUS_MONTH_SALARY_CNTх12 +BONUS_QUARTER_SALARY_CNTх4+BONUS_YEAR_SALARY_CNT+12) Відібрати записи по працівнику [person_key], періоду [Period], організації [organization_key], підрозділу [division_key], де category_name = Фіксована винагорода, IS_ACTUAL  = "1", END_DATE &gt; поточна дата, або END_DATE = "01.01.2001". (BONUS_MONTH_SALARY_CNT +BONUS_QUARTER_SALARY_CNT+  <br>BONUS_YEAR_SALARY_CNT)<em> PAYMENT_PLAN_SUM + (PAYMENT_PLAN_SUM</em>12) Розрахункове поле.  <br>Потрібно зсумувати значення поля [PAYMENT_PLAN_SUM] по тим членам команди, у яких воно &gt; 0,00  по ACCRUAL_ORG_CODE = 00148</p>
+<p><strong>Вимоги:</strong> <code>Індивідуальний-профіль-працівника/Історія-по-посадам</code>, <code>Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Деталізація-на-сторінці-Винагорода</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Доопрацювання-сторінки-ТРС</code>, <code>Командний-профіль/Сторінка-TRS-команди</code>, <code>Командний-профіль/Сторінка-TRS-команди/Доопрацювання-сторінки-TRS</code>, <code>Командний-профіль/Сторінка-TRS-команди/Сторінка-Винагорода-групового-профілю#вимоги-до-звіту</code></p>
+<h2 id="_5">На сторінках звіту<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p><a href="../../report/group-profile/">Group Profile</a></p>
+<h2 id="_6">Пов'язані міри<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><em>Прямих зв'язків з іншими мірами немає.</em></p>
 <h2 id="_7">Нотатки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p><em>порожньо</em></p>
 

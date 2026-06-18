@@ -3074,40 +3074,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#-" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Бізнес-суть
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        На сторінках звіту
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Пов'язані міри
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Технічний опис
@@ -3130,7 +3097,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         Джерела даних
@@ -3141,7 +3108,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Залежності (таблиці й колонки)
@@ -3152,7 +3119,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         Схема
@@ -3164,6 +3131,39 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Бізнес-суть
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        На сторінках звіту
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пов'язані міри
+      
+    </span>
+  </a>
   
 </li>
       
@@ -3200,20 +3200,7 @@
 
 <h1 id="button_detalizationpersonal_profile">button_detalization.Personal_profile<a class="headerlink" href="#button_detalizationpersonal_profile" title="Permanent link">&para;</a></h1>
 <p><em>тека <code>Navigation\Personal</code></em></p>
-<div class="admonition abstract">
-<p class="admonition-title">Джерела даних</p>
-<p><code>DM.vw_R27_dim_Person_PDP</code></p>
-</div>
-<h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
-<p>FULL_NAME → ПІБ співробітника; FULL_NAME → Прізвище, ім'я, по-батькові; FULL_NAME → Функціональний керівник; FULL_NAME → HRBP; FULL_NAME → FinBP; FULL_NAME → employee_name; FULL_NAME → ПІБ звільненого працівника</p>
-<p>person_key=employee_id Поле зберігається в довіднику [dm.vw_R27_dim_person ]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List], через відповідний зв’язок за ключем [person_key].  <br>Поле завжди має значення, пусте поле не допускається  <br>Якщо ПІБ не вміщається в одну строку, перенести на іншу Поле зберігається в довіднику [dm.vw_R27_dim_person ]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List], через відповідний зв’язок за ключем [person_key].  <br>Поле за</p>
-<p><strong>Вимоги:</strong> <code>Індивідуальний-профіль-працівника/Історія-по-посадам</code>, <code>Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам</code>, <code>Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника</code>, <code>Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Індивідуальний-профіль-працівника</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Сторінка-Ефективність-працівника/Вітрина-Відвідування-офісів</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника</code>, <code>Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту</code>, <code>Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю</code>, <code>Командний-профіль/Сторінка-Загальна-інформація-про-команду</code>, <code>Командний-профіль/Сторінка-Плинність-та-Exits/ТЗ-на-вітрину-Exits</code></p>
-<h2 id="_1">На сторінках звіту<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><em>Не використовується на основних сторінках звіту.</em></p>
-<h2 id="_2">Пов'язані міри<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><em>Прямих зв'язків з іншими мірами немає.</em></p>
-<hr />
-<h2 id="_3">Технічний опис<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_1">Технічний опис<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -3259,17 +3246,26 @@
 <span class="w">    </span><span class="p">)</span>
 <span class="p">)</span>
 </code></pre></div>
-<h3 id="_4">Джерела даних<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_2">Джерела даних<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Вихідні таблиці: <code>DM.vw_R27_dim_Person_PDP</code></p>
 <p>Колонки: <code>FULL_NAME</code></p>
 <p>Power Query: <code>dim_Person</code></p>
-<h3 id="_5">Залежності (таблиці й колонки)<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_3">Залежності (таблиці й колонки)<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>Таблиці: <code>dim_Person</code></p>
 <p>Колонки: <code>dim_Person[FULL_NAME]</code></p>
-<h3 id="_6">Схема<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_4">Схема<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <pre class="mermaid"><code>graph LR
   M["button_detalization.Personal_profile"]
   M --&gt; dim_Person["dim_Person"]</code></pre>
+<hr />
+<h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<p>FULL_NAME → ПІБ співробітника; FULL_NAME → Прізвище, ім'я, по-батькові; FULL_NAME → Функціональний керівник; FULL_NAME → HRBP; FULL_NAME → FinBP; FULL_NAME → employee_name; FULL_NAME → ПІБ звільненого працівника</p>
+<p>person_key=employee_id Поле зберігається в довіднику [dm.vw_R27_dim_person ]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List], через відповідний зв’язок за ключем [person_key].  <br>Поле завжди має значення, пусте поле не допускається  <br>Якщо ПІБ не вміщається в одну строку, перенести на іншу Поле зберігається в довіднику [dm.vw_R27_dim_person ]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List], через відповідний зв’язок за ключем [person_key].  <br>Поле за</p>
+<p><strong>Вимоги:</strong> <code>Індивідуальний-профіль-працівника/Історія-по-посадам</code>, <code>Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам</code>, <code>Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника</code>, <code>Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Індивідуальний-профіль-працівника</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Сторінка-Ефективність-працівника/Вітрина-Відвідування-офісів</code>, <code>Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника</code>, <code>Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту</code>, <code>Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю</code>, <code>Командний-профіль/Сторінка-Загальна-інформація-про-команду</code>, <code>Командний-профіль/Сторінка-Плинність-та-Exits/ТЗ-на-вітрину-Exits</code></p>
+<h2 id="_5">На сторінках звіту<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p><em>Не використовується на основних сторінках звіту.</em></p>
+<h2 id="_6">Пов'язані міри<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><em>Прямих зв'язків з іншими мірами немає.</em></p>
 <h2 id="_7">Нотатки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p><em>порожньо</em></p>
 
