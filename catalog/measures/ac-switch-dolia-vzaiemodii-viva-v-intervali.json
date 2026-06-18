@@ -51,7 +51,6 @@
   "business": {
     "name": "Доля взаємодії (Viva) в інтервалі (%)",
     "logic": [],
-    "fieldMetrics": [],
     "requirementRefs": [
       {
         "label": "Кейс Втрати Продуктивності Працівників",

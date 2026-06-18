@@ -33,7 +33,6 @@
     "logic": [
       "Sick_Leave_Day_Without_Pregnancy/(FTE_weighted_work_day_for_absenteeism+Sick_Leave_Day_Without_Pregnancy)"
     ],
-    "fieldMetrics": [],
     "requirementRefs": [
       {
         "label": "Командний профіль › Сторінка Моя команда › ТЗ. Деталізація метрик групового профілю звіту",

@@ -37,14 +37,6 @@
   "business": {
     "name": "Чистий час в офісі, год.",
     "logic": [],
-    "fieldMetrics": [
-      [
-        "Net_Office_Time_AVG_3month",
-        [
-          "Чистий час в офісі, год."
-        ]
-      ]
-    ],
     "requirementRefs": [
       {
         "label": "Кейс Втрати Продуктивності Працівників",

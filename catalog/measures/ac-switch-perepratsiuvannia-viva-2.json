@@ -51,7 +51,6 @@
   "business": {
     "name": "Перепрацювання (Viva)",
     "logic": [],
-    "fieldMetrics": [],
     "requirementRefs": [
       {
         "label": "Кейс Втрати Продуктивності Працівників",

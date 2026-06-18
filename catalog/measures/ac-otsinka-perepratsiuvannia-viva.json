@@ -34,14 +34,6 @@
   "business": {
     "name": "Перепрацювання (Viva)",
     "logic": [],
-    "fieldMetrics": [
-      [
-        "After Hours",
-        [
-          "Перепрацювання (Viva)"
-        ]
-      ]
-    ],
     "requirementRefs": [
       {
         "label": "Кейс Втрати Продуктивності Працівників",

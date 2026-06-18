@@ -51,7 +51,6 @@
   "business": {
     "name": "Плинність % по вертикалі",
     "logic": [],
-    "fieldMetrics": [],
     "requirementRefs": [
       {
         "label": "Кейс Втрати Продуктивності Працівників",

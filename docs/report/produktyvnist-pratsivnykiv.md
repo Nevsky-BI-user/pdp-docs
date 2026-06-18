@@ -24,7 +24,7 @@
 | [AC.Export.Тренд Результативності по KPI (%)](../measures/ac-export-trend-rezultatyvnosti-po-kpi.md) | — | Тренд Результативності по KPI (%) |
 | [AC.Export.Чистий час в офісі Тренд (%)](../measures/ac-export-chystyi-chas-v-ofisi-trend.md) | — | Чистий час в офісі Тренд (%) |
 | [AC.Export.Чистий час в офісі, год.](../measures/ac-export-chystyi-chas-v-ofisi-hod.md) | — | Чистий час в офісі, год. |
-| [AC.LP.Стаж на посаді (останній)](../measures/ac-lp-stazh-na-posadi-ostannii.md) | — | Значення поля в місяцях потрібно перевести в роки та місяці. Наприклад, якшо seniority_LAST_POSITION_HIRE_DATE= 17, то в звіті треба відобразити 1 рік 5 міся… |
+| [AC.LP.Стаж на посаді (останній)](../measures/ac-lp-stazh-na-posadi-ostannii.md) | — | — |
 
 ## Analytical Cases\Loss_Productivity\Formatting
 
@@ -38,8 +38,8 @@
 
 | Міра | Формат | Бізнес-суть |
 |---|---|---|
-| [AC.Switch.1:1 в сер. на 1 підлеглого, год.](../measures/ac-switch-1-1-v-ser-na-1-pidlehloho-hod.md) | — | — |
-| [AC.Switch.Інтервал взаємодії (Viva), год. в день](../measures/ac-switch-interval-vzaiemodii-viva-hod-v-den.md) | — | — |
+| [AC.Switch.1:1 в сер. на 1 підлеглого, год.](../measures/ac-switch-1-1-v-ser-na-1-pidlehloho-hod.md) | — | 1:1 в сер. на 1 підлеглого, год. |
+| [AC.Switch.Інтервал взаємодії (Viva), год. в день](../measures/ac-switch-interval-vzaiemodii-viva-hod-v-den.md) | — | Інтервал взаємодії (Viva), год. в день |
 | [AC.Switch.Інтервал взаємодії Тренд (%)](../measures/ac-switch-interval-vzaiemodii-trend.md) | — | Інтервал взаємодії Тренд (%) |
 | [AC.Switch.Агрегований % непродуктинвих підлеглих для керівників](../measures/ac-switch-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv.md) | — | Агрегований % непродуктинвих підлеглих для керівників |
 | [AC.Switch.Доля взаємодії (Viva) в інтервалі (%)](../measures/ac-switch-dolia-vzaiemodii-viva-v-intervali.md) | — | Доля взаємодії (Viva) в інтервалі (%) |
@@ -52,7 +52,7 @@
 | [AC.Switch.Тренд Оцінки рез-ті (%)](../measures/ac-switch-trend-otsinky-rez-ti.md) | — | Тренд Оцінки рез-ті (%) |
 | [AC.Switch.Тренд Результативності по KPI (%)](../measures/ac-switch-trend-rezultatyvnosti-po-kpi.md) | — | Тренд Результативності по KPI (%) |
 | [AC.Switch.Чистий час в офісі Тренд (%)](../measures/ac-switch-chystyi-chas-v-ofisi-trend.md) | — | Чистий час в офісі Тренд (%) |
-| [AC.Switch.Чистий час в офісі, год.](../measures/ac-switch-chystyi-chas-v-ofisi-hod.md) | — | — |
+| [AC.Switch.Чистий час в офісі, год.](../measures/ac-switch-chystyi-chas-v-ofisi-hod.md) | — | Чистий час в офісі, год. |
 
 ## Navigation\Group
 

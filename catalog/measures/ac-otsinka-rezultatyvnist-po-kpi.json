@@ -34,14 +34,6 @@
   "business": {
     "name": "Результативність по KPI (%)",
     "logic": [],
-    "fieldMetrics": [
-      [
-        "Award_Norm",
-        [
-          "Результативність по KPI (%)"
-        ]
-      ]
-    ],
     "requirementRefs": [
       {
         "label": "Кейс Втрати Продуктивності Працівників",

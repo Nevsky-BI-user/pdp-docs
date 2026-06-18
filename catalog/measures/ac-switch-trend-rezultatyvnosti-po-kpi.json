@@ -51,7 +51,6 @@
   "business": {
     "name": "Тренд Результативності по KPI (%)",
     "logic": [],
-    "fieldMetrics": [],
     "requirementRefs": [
       {
         "label": "Кейс Втрати Продуктивності Працівників",

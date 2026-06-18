@@ -222,39 +222,29 @@ def build_wiki_index(root):
                         by_metric.setdefault(req.lower(),[]).append(rec)
     return by_field, by_metric
 
+def biz_candidate(name):
+    """Назва міри без провідних префіксів-кодів (PP., GP., AC., Export., BR. …)."""
+    parts=name.split('.')
+    while len(parts)>1 and ' ' not in parts[0] and len(parts[0])<=12:
+        parts=parts[1:]
+    return '.'.join(parts).strip()
+
 def business_for(cols, name, by_field, by_metric):
-    """Структуроване бізнес-визначення з wiki:
-       name  — точна бізнес-назва (міра == реквізит ТЗ);
-       logic — опис/логіка з ТЗ (коментарі, дедуп);
-       fieldMetrics — [(поле, [бізнес-метрики])] (допоміжна мапа);
-       refs  — сторінки ТЗ. Без вигадок — лише цитати."""
-    fields=[c.split('[',1)[1][:-1] for c in cols if '[' in c]
-    def _skip(f):
-        u=f.upper()
-        return u.endswith(("_ID","_KEY")) or u in {"ID","DATE","EXEC_DATE","PLAN_DATE","ORDER","USER_ACCESS_ID","EMPLOYEE_ID"}
-    fields=[f for f in fields if not _skip(f)]
-    tail=name.split('.')[-1].strip()
-    # 1) ТОЧНИЙ матч: назва міри == бізнес-реквізит → точна назва + ТЗ-логіка
-    name_recs=by_metric.get(tail.lower(),[])
+    """Точне бізнес-визначення з ТЗ: лише коли назва міри збігається з назвою
+       бізнес-метрики у wiki (реквізит). Тоді беремо її опис (логіку) і сторінки —
+       посилання ведуть саме на ТЗ цієї метрики, без шуму від спільних полів.
+       name — бізнес-назва; logic — опис/логіка з ТЗ; refs — сторінки ТЗ цієї метрики."""
+    cand=biz_candidate(name)
+    recs=by_metric.get(cand.lower(),[])
+    # складені міри «база.модифікатор» → пробуємо базову метрику (її ТЗ релевантне)
+    if not recs and '.' in cand:
+        recs=by_metric.get(cand.rsplit('.',1)[0].strip().lower(),[])
     bname=""; logic=[]; refs=set()
-    for rec in name_recs:
+    for rec in recs:
         if not bname and rec["requisite"]: bname=rec["requisite"]
         if rec["comment"] and rec["comment"] not in logic: logic.append(rec["comment"])
         if rec["page"]: refs.add(rec["page"]+("#"+rec["anchor"] if rec["anchor"] else ""))
-    # 2) поля-джерела → бізнес-метрики (мапа) + резервні коментарі/посилання (лише без точного матчу)
-    field_metrics={}
-    for f in fields:
-        for rec in by_field.get(f.lower(),[]):
-            if rec["requisite"]: field_metrics.setdefault(f,[]).append(rec["requisite"])
-            if not name_recs and rec["comment"] and rec["comment"] not in logic: logic.append(rec["comment"])
-            if rec["page"]: refs.add(rec["page"]+("#"+rec["anchor"] if rec["anchor"] else ""))
-    field_metrics=sorted((f,list(dict.fromkeys(v))) for f,v in field_metrics.items())
-    # 3) якщо точної назви немає — пробуємо метрику, що містить назву міри
-    if not bname:
-        for f,ms in field_metrics:
-            hit=next((m for m in ms if tail.lower() in m.lower()),"")
-            if hit: bname=hit; break
-    return {"name":bname,"logic":logic[:5],"fieldMetrics":field_metrics,"refs":sorted(refs)}
+    return {"name":bname,"logic":logic[:5],"refs":sorted(refs)}
 
 # ---------------------------------------------------------------- report (PBIR report.json)
 def _walk_measures(o, acc):
@@ -311,11 +301,12 @@ def hl(text):
 AZ_ORG="MHPITDepProjects"; AZ_PROJECT="People Digital Profile (PDP)"; AZ_WIKI="PDP.wiki"
 def ref_obj(ref, wiki_prefix):
     """Перетворює сирий шлях wiki на читабельний breadcrumb + клікабельне посилання Azure DevOps."""
+    readable=lambda s: urllib.parse.unquote(s.replace("-"," ")).strip()   # %22→" , дефіси→пробіли
     path=ref.split("#",1)[0]; anchor=ref.split("#",1)[1] if "#" in ref else ""
-    label=" › ".join(s.replace("-"," ").strip() for s in path.split("/") if s)
-    if anchor: label+=" › "+anchor.replace("-"," ")
+    label=" › ".join(readable(s) for s in path.split("/") if s)
+    if anchor: label+=" › "+readable(anchor)
     full="/".join(x for x in [wiki_prefix.strip("/"), path.strip("/")] if x)
-    pagepath="/"+"/".join(s.replace("-"," ") for s in full.split("/") if s)
+    pagepath="/"+"/".join(readable(s) for s in full.split("/") if s)
     url=(f"https://dev.azure.com/{AZ_ORG}/{urllib.parse.quote(AZ_PROJECT)}"
          f"/_wiki/wikis/{AZ_WIKI}?pagePath={urllib.parse.quote(pagepath)}")
     return {"label":label,"url":url,"path":path}
@@ -415,8 +406,7 @@ def main():
           "lineage":{"sourceTables":sorted(st),
                      "sourceColumns":sorted({x.split('[',1)[1][:-1] for x in c}),
                      "powerQuery":(entities[t[0]]["powerQuery"] if t else "")},
-          "business":{"name":biz["name"],"logic":biz["logic"],
-                      "fieldMetrics":biz["fieldMetrics"],"requirementRefs":req_refs},
+          "business":{"name":biz["name"],"logic":biz["logic"],"requirementRefs":req_refs},
           "tags":sorted(set([slugify(s) for s in seg]+["pdp"])),
           "source":{"repo":"PDP","file":f"{args.sm}/definition/tables/_Measures.tmdl",
                     "commit":commit,"extractedAt":now},
@@ -426,7 +416,7 @@ def main():
                       "displayFolder":m["displayFolder"],"file":f"measures/{slug}.md"})
         bizshort=biz["name"] or (biz["logic"][0] if biz["logic"] else "")
         minfo[name]={"slug":slug,"folder":m["displayFolder"],"fmt":m["formatString"],"bizdef":bizshort}
-        if not (biz["name"] or biz["logic"] or biz["fieldMetrics"]): V["no_business"].append(name)
+        if not (biz["name"] or biz["logic"]): V["no_business"].append(name)
         if not biz["refs"]: V["no_wiki"].append(name)
         write_measure_md(os.path.join(doc_m,slug+".md"),obj,slug_m)
 
@@ -518,20 +508,11 @@ def write_measure_md(path,o,sm):
     L+=["```",""]
     # 2) бізнес-суть із ТЗ: назва → опис(логіка) → мапа полів → вимоги
     L+=["---","","## Бізнес-суть",""]
-    has=bool(b.get("name") or b.get("logic") or b.get("fieldMetrics"))
+    has=bool(b.get("name") or b.get("logic"))
     if b.get("name"): L+=[f"**Бізнес-назва:** {b['name']}",""]
     if b.get("logic"):
         L+=["### Опис із ТЗ",""]
         for cmt in b["logic"]: L+=[hl(cmt),""]
-    if b.get("fieldMetrics"):
-        total=sum(len(ms) for _,ms in b["fieldMetrics"])
-        L+=[f'??? note "Поля-джерела та пов\'язані бізнес-метрики ({total})"',
-            "    | Поле | Бізнес-метрики |","    |---|---|"]
-        for f,ms in b["fieldMetrics"]:
-            more=(f" … +{len(ms)-20}" if len(ms)>20 else "")
-            cell=" · ".join(x.replace("|","/") for x in ms[:20])+more
-            L.append(f"    | `{f}` | {cell} |")
-        L+=[""]
     if b.get("requirementRefs"):
         L+=["**Вимоги (ТЗ):**",""]
         for r in b["requirementRefs"][:15]: L.append(f"- [{r['label']}]({r['url']})")

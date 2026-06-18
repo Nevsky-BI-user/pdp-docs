@@ -34,14 +34,6 @@
   "business": {
     "name": "1:1 в сер. на 1 підлеглого, год.",
     "logic": [],
-    "fieldMetrics": [
-      [
-        "Manager_Coaching_per_One_Employee",
-        [
-          "1:1 в сер. на 1 підлеглого, год."
-        ]
-      ]
-    ],
     "requirementRefs": [
       {
         "label": "Кейс Втрати Продуктивності Працівників",

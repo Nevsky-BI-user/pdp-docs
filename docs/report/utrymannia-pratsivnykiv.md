@@ -9,10 +9,10 @@
 
 | Міра | Формат | Бізнес-суть |
 |---|---|---|
-| [AC.BR.OKR](../measures/ac-br-okr.md) | — | Тренд оцінки OKR |
+| [AC.BR.OKR](../measures/ac-br-okr.md) | — | — |
 | [AC.BR.OKR останній рік](../measures/ac-br-okr-ostannii-rik.md) | `#,0.00` | OKR останній рік |
 | [AC.BR.OKR попередній рік](../measures/ac-br-okr-poperednii-rik.md) | `0.00` | OKR попередній рік |
-| [AC.BR.Годин взаємодії з керівником](../measures/ac-br-hodyn-vzaiemodii-z-kerivnykom.md) | — | <br>Розрахункове значення.  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_dim_Employee_Metric_Health_and_W… |
+| [AC.BR.Годин взаємодії з керівником](../measures/ac-br-hodyn-vzaiemodii-z-kerivnykom.md) | — | — |
 | [AC.BR.Зарплата вилка](../measures/ac-br-zarplata-vylka.md) | — | — |
 | [AC.BR.Кількість звільнених](../measures/ac-br-kilkist-zvilnenykh.md) | `0` | Кількість звільнених |
 | [AC.BR.Кількість місяців без якісної відпустки](../measures/ac-br-kilkist-misiatsiv-bez-iakisnoi-vidpustky.md) | `0` | Кількість місяців без якісної відпустки |
@@ -21,11 +21,11 @@
 | [AC.BR.Референтне значення.Viva](../measures/ac-br-referentne-znachennia-viva.md) | — | — |
 | [AC.BR.Референтне значення.Взаємодія з керівником](../measures/ac-br-referentne-znachennia-vzaiemodiia-z-kerivnykom.md) | — | — |
 | [AC.BR.Референтне значення.Місяців без відпустки](../measures/ac-br-referentne-znachennia-misiatsiv-bez-vidpustky.md) | — | — |
-| [AC.BR.Ризик втрати](../measures/ac-br-ryzyk-vtraty.md) | — | Ризик втрати працівника |
-| [AC.BR.Стаж в холдингу (неперервний)](../measures/ac-br-stazh-v-kholdynhu-neperervnyi.md) | — | Значення поля в місяцях потрібно перевести в роки та місяці. Наприклад, якшо seniority_LAST_HOLDING_HIRE_DATE= 17, то в звіті треба відобразити 1 рік 5 місяців. |
-| [AC.BR.Стаж на посаді (останній)](../measures/ac-br-stazh-na-posadi-ostannii.md) | — | Значення поля в місяцях потрібно перевести в роки та місяці. Наприклад, якшо seniority_LAST_POSITION_HIRE_DATE= 17, то в звіті треба відобразити 1 рік 5 міся… |
-| [AC.BR.ТОР останній рік](../measures/ac-br-tor-ostannii-rik.md) | `#,0.00` | Для розрахунку метрики "Тренд оцінки рез-ті" |
-| [AC.BR.ТОР попередній рік](../measures/ac-br-tor-poperednii-rik.md) | `0.00` | Для розрахунку метрики "Тренд оцінки рез-ті" |
+| [AC.BR.Ризик втрати](../measures/ac-br-ryzyk-vtraty.md) | — | — |
+| [AC.BR.Стаж в холдингу (неперервний)](../measures/ac-br-stazh-v-kholdynhu-neperervnyi.md) | — | — |
+| [AC.BR.Стаж на посаді (останній)](../measures/ac-br-stazh-na-posadi-ostannii.md) | — | — |
+| [AC.BR.ТОР останній рік](../measures/ac-br-tor-ostannii-rik.md) | `#,0.00` | — |
+| [AC.BR.ТОР попередній рік](../measures/ac-br-tor-poperednii-rik.md) | `0.00` | — |
 | [AC.BR.Тренд оцінки результативності (ТОР)](../measures/ac-br-trend-otsinky-rezultatyvnosti-tor.md) | — | — |
 | [AC.BR.Трешхолд. Плинність (%)](../measures/ac-br-treshkhold-plynnist.md) | — | Плинність (%) |
 

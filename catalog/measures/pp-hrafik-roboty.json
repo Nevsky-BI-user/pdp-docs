@@ -33,7 +33,6 @@
       "Виводити через кому значення обох полів, якщо вони є",
       "Якщо заповнено поле WORK_SCHEDULE_ID, то брати поле Name із довідника DWH.dim_Work_Schedule<br>Якщо заповнено поле WORK_SCHEDULE_INDIVID_ID, то брати поле WORK_SCHEDULE_TYPE_CODE із довідника DWH.dim_Work_Schedule_Individ та виводити його значення, попередньо змапивши українською: <br>- Пятидневка = П'ятиденка.<br>- Шестидневка = Шестиденка. <br>- Сменный = Змінний.<br>-Якщо в довіднику DWH.dim_Work_Schedule_Individ також заповнено поле WORK_SCHEDULE_ID, то також виводити його значення із довідника DWH.dim_Work_Schedule"
     ],
-    "fieldMetrics": [],
     "requirementRefs": [
       {
         "label": "Індивідуальний профіль працівника › Сторінка Загальна інформація про працівника",

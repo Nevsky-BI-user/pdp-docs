@@ -9,5 +9,5 @@
 
 | Міра | Формат | Бізнес-суть |
 |---|---|---|
-| [GP.Різниця фіксованої винагороди (факт).Максимальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-maksymalnyi-riven.md) | `#,0` | Відібрати із переліку усіх членів команди тих, у кого поле is_manager = 1 |
+| [GP.Різниця фіксованої винагороди (факт).Максимальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-maksymalnyi-riven.md) | `#,0` | — |
 

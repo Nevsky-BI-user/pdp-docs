@@ -51,7 +51,6 @@
   "business": {
     "name": "Тренд Оцінки рез-ті (%)",
     "logic": [],
-    "fieldMetrics": [],
     "requirementRefs": [
       {
         "label": "Кейс Втрати Продуктивності Працівників",

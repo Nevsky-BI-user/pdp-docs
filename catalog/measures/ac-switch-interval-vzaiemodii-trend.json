@@ -51,7 +51,6 @@
   "business": {
     "name": "Інтервал взаємодії Тренд (%)",
     "logic": [],
-    "fieldMetrics": [],
     "requirementRefs": [
       {
         "label": "Кейс Втрати Продуктивності Працівників",

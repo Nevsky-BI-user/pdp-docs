@@ -44,7 +44,6 @@
   "business": {
     "name": "",
     "logic": [],
-    "fieldMetrics": [],
     "requirementRefs": []
   },
   "tags": [

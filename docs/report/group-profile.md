@@ -13,17 +13,17 @@
 | [GP.Доля команди з доплатою за роз’їзний характер роботи, % факт](../measures/gp-dolia-komandy-z-doplatoiu-za-roziznyi-kharakter-roboty-fakt.md) | `#,0%;-#,0%;#,0%` | Доля команди з доплатою за роз’їзний характер роботи, % факт |
 | [GP.Доля команди з доплатою за шкідливі умови праці, %](../measures/gp-dolia-komandy-z-doplatoiu-za-shkidlyvi-umovy-pratsi.md) | `0.00%;-0.00%;0.00%` | Доля команди з доплатою за шкідливі умови праці, % |
 | [GP.Доля команди з доплатою за шкідливі умови праці, % факт](../measures/gp-dolia-komandy-z-doplatoiu-za-shkidlyvi-umovy-pratsi-fakt.md) | `0.00%;-0.00%;0.00%` | Доля команди з доплатою за шкідливі умови праці, % факт |
-| [GP.Доля команди з квартальною премією, % факт](../measures/gp-dolia-komandy-z-kvartalnoiu-premiieiu-fakt.md) | `0.00%;-0.00%;0.00%` | Потрібно відібрати останній запис по працівнику на дату, де  поле accrual_types_key = '9781d4aa-3a0d-1458-623a-7a93e90a2284'   та category_of_accrual_sort  =… |
+| [GP.Доля команди з квартальною премією, % факт](../measures/gp-dolia-komandy-z-kvartalnoiu-premiieiu-fakt.md) | `0.00%;-0.00%;0.00%` | — |
 | [GP.Доля команди з квартальню премією, %](../measures/gp-dolia-komandy-z-kvartalniu-premiieiu.md) | `0.00%;-0.00%;0.00%` | Доля команди з квартальню премією, % |
 | [GP.Доля команди з навчанням, %](../measures/gp-dolia-komandy-z-navchanniam.md) | `0.00%;-0.00%;0.00%` | Доля команди з навчанням, % |
 | [GP.Доля команди з позикою на ноутбук (%) (діюча)](../measures/gp-dolia-komandy-z-pozykoiu-na-noutbuk-diiucha.md) | `0%;-0%;0%` | Доля команди з позикою на ноутбук (%) (діюча) |
 | [GP.Доля команди з премією за місяць, %](../measures/gp-dolia-komandy-z-premiieiu-za-misiats.md) | `0.00%;-0.00%;0.00%` | Доля команди з премією за місяць, % |
 | [GP.Доля команди з премією за місяць, % факт](../measures/gp-dolia-komandy-z-premiieiu-za-misiats-fakt.md) | `0.00%;-0.00%;0.00%` | Доля команди з премією за місяць, % факт |
 | [GP.Доля команди з річним бонусом, %](../measures/gp-dolia-komandy-z-richnym-bonusom.md) | `0.00%;-0.00%;0.00%` | Доля команди з річним бонусом, % |
-| [GP.Доля команди з річними бонусами, % факт](../measures/gp-dolia-komandy-z-richnymy-bonusamy-fakt.md) | `0.00%;-0.00%;0.00%` | Потрібно відібрати останній запис по працівнику на дату, де  поле accrual_types_key = '9781d4aa-3a0d-1458-623a-7a93e90a2284'   та category_of_accrual_sort  =… |
+| [GP.Доля команди з річними бонусами, % факт](../measures/gp-dolia-komandy-z-richnymy-bonusamy-fakt.md) | `0.00%;-0.00%;0.00%` | — |
 | [GP.Доля команди з соціальними виплатами, %](../measures/gp-dolia-komandy-z-sotsialnymy-vyplatamy.md) | `0.00%;-0.00%;0.00%` | Доля команди з соціальними виплатами, % |
 | [GP.Доля команди з щомісячною премією, %](../measures/gp-dolia-komandy-z-shchomisiachnoiu-premiieiu.md) | `0.00%;-0.00%;0.00%` | Доля команди з щомісячною премією, % |
-| [GP.Доля команди з щомісячною премією, % факт](../measures/gp-dolia-komandy-z-shchomisiachnoiu-premiieiu-fakt.md) | `0%;-0%;0%` | Потрібно відібрати останній запис по працівнику на дату, де  поле accrual_types_key = '9781d4aa-3a0d-1458-623a-7a93e90a2284'   та category_of_accrual_sort  =… |
+| [GP.Доля команди з щомісячною премією, % факт](../measures/gp-dolia-komandy-z-shchomisiachnoiu-premiieiu-fakt.md) | `0%;-0%;0%` | — |
 | [GP.Доля команди із доплатою за наставництво, %](../measures/gp-dolia-komandy-iz-doplatoiu-za-nastavnytstvo.md) | `0.00%;-0.00%;0.00%` | Доля команди із доплатою за наставництво, % |
 | [GP.Доля команди із позиками](../measures/gp-dolia-komandy-iz-pozykamy.md) | `0.00%;-0.00%;0.00%` | Доля команди із позиками |
 | [GP.Доля команди із премією МХП Зірки, %](../measures/gp-dolia-komandy-iz-premiieiu-mkhp-zirky.md) | `0.00%;-0.00%;0.00%` | Доля команди із премією МХП Зірки, % |
@@ -31,53 +31,53 @@
 | [GP.Доля команди із премією за внутрішнє тренерство, %](../measures/gp-dolia-komandy-iz-premiieiu-za-vnutrishnie-trenerstvo.md) | `0.00%;-0.00%;0.00%` | Доля команди із премією за внутрішнє тренерство, % |
 | [GP.Доля команди із премією за збереження та розширення земельного банку, %](../measures/gp-dolia-komandy-iz-premiieiu-za-zberezhennia-ta-rozshyrennia-zemelnoho-banku.md) | `0.00%;-0.00%;0.00%` | Доля команди із премією за збереження та розширення земельного банку, % |
 | [GP.Доля команди із премією за програмою «Приведи друга», %](../measures/gp-dolia-komandy-iz-premiieiu-za-prohramoiu-pryvedy-druha.md) | `0.00%;-0.00%;0.00%` | Доля команди із премією за програмою «Приведи друга», % |
-| [GP.Доля команди із премією за сумісництво, факт](../measures/gp-dolia-komandy-iz-premiieiu-za-sumisnytstvo-fakt.md) | `0.00%;-0.00%;0.00%` | Потрібно відібрати останній запис по працівнику на дату, де  поле accrual_types_key = '9781d4aa-3a0d-1458-623a-7a93e90a2284'   та category_of_accrual_sort  =… |
+| [GP.Доля команди із премією за сумісництво, факт](../measures/gp-dolia-komandy-iz-premiieiu-za-sumisnytstvo-fakt.md) | `0.00%;-0.00%;0.00%` | — |
 | [GP.Доля команди із проектним бонусом за стратегічні ІТ проєкти, %](../measures/gp-dolia-komandy-iz-proektnym-bonusom-za-stratehichni-it-proiekty.md) | `0.00%;-0.00%;0.00%` | Доля команди із проектним бонусом за стратегічні ІТ проєкти, % |
 | [GP.Доля команди із разовою премією за програмою визнання, %](../measures/gp-dolia-komandy-iz-razovoiu-premiieiu-za-prohramoiu-vyznannia.md) | `0.00%;-0.00%;0.00%` | Доля команди із разовою премією за програмою визнання, % |
 | [GP.Доля команди із інвестиційним проєктним бонусом, %](../measures/gp-dolia-komandy-iz-investytsiinym-proiektnym-bonusom.md) | `0.00%;-0.00%;0.00%` | Доля команди із інвестиційним проєктним бонусом, % |
 | [GP.Доля учасників команди із зміною зарплати (окладу), %](../measures/gp-dolia-uchasnykiv-komandy-iz-zminoiu-zarplaty-okladu.md) | `0%;-0%;0%` | Доля учасників команди із зміною зарплати (окладу), % |
 | [GP.К-ть співробітників, що отримали позику на ноутбук (діюча)](../measures/gp-k-t-spivrobitnykiv-shcho-otrymaly-pozyku-na-noutbuk-diiucha.md) | `0` | — |
-| [GP.К-ть співробітників, що отримують виплати на мобільний зв’язок](../measures/gp-k-t-spivrobitnykiv-shcho-otrymuiut-vyplaty-na-mobilnyi-zviazok.md) | `0` | Потрібно відібрати всі записи по працівнику [person_key], періоду [Period], організації [organization_key]  <br>Якщо PHONE_CORP_LIMIT = "99999", виводимо зна… |
+| [GP.К-ть співробітників, що отримують виплати на мобільний зв’язок](../measures/gp-k-t-spivrobitnykiv-shcho-otrymuiut-vyplaty-na-mobilnyi-zviazok.md) | `0` | — |
 | [GP.К-ть співробітників, що отримують виплати на оренду житла](../measures/gp-k-t-spivrobitnykiv-shcho-otrymuiut-vyplaty-na-orendu-zhytla.md) | `0` | — |
-| [GP.Опція по авто, % план.SVG](../measures/gp-optsiia-po-avto-plan-svg.md) | — | Якщо по посаді працівника відсутня зведена посада або по зведеній посаді не прописано формат авто, то проставити лейбл "Дані відсутні" |
-| [GP.Опція по авто, % факт.SVG](../measures/gp-optsiia-po-avto-fakt-svg.md) | — | Якщо по працівнику  або по зведеній посаді не прописано формат авто, то проставити лейбл "Дані відсутні" |
+| [GP.Опція по авто, % план.SVG](../measures/gp-optsiia-po-avto-plan-svg.md) | — | — |
+| [GP.Опція по авто, % факт.SVG](../measures/gp-optsiia-po-avto-fakt-svg.md) | — | — |
 | [GP.Розподіл у вилці.SVG](../measures/gp-rozpodil-u-vyltsi-svg.md) | — | — |
-| [GP.Різниця фіксованої винагороди (план).Максимальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-plan-maksymalnyi-riven.md) | `#,0` | Відібрати із переліку усіх членів команди тих, у кого поле is_manager = 1 |
-| [GP.Різниця фіксованої винагороди (план).Мінімальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-plan-minimalnyi-riven.md) | `#,0` | Відібрати із переліку усіх членів команди тих, у кого поле is_manager = 1 |
+| [GP.Різниця фіксованої винагороди (план).Максимальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-plan-maksymalnyi-riven.md) | `#,0` | — |
+| [GP.Різниця фіксованої винагороди (план).Мінімальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-plan-minimalnyi-riven.md) | `#,0` | — |
 | [GP.Різниця фіксованої винагороди (план).Різниця](../measures/gp-riznytsia-fiksovanoi-vynahorody-plan-riznytsia.md) | `#,0` | — |
-| [GP.Різниця фіксованої винагороди (факт).Максимальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-maksymalnyi-riven.md) | `#,0` | Відібрати із переліку усіх членів команди тих, у кого поле is_manager = 1 |
-| [GP.Різниця фіксованої винагороди (факт).Мінімальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-minimalnyi-riven.md) | `#,0` | Відібрати із переліку усіх членів команди тих, у кого поле is_manager = 1 |
+| [GP.Різниця фіксованої винагороди (факт).Максимальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-maksymalnyi-riven.md) | `#,0` | — |
+| [GP.Різниця фіксованої винагороди (факт).Мінімальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-minimalnyi-riven.md) | `#,0` | — |
 | [GP.Різниця фіксованої винагороди (факт).Різниця](../measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-riznytsia.md) | — | — |
 | [GP.Середня зарплата (оклад)](../measures/gp-serednia-zarplata-oklad.md) | — | Середня зарплата (оклад) |
 | [GP.Середнє зростання цільової річної винагороди, до оподаткування](../measures/gp-serednie-zrostannia-tsilovoi-richnoi-vynahorody-do-opodatkuvannia.md) | `0.00%;-0.00%;0.00%` | — |
 | [GP.Середні витрати на мобільний зв’язок](../measures/gp-seredni-vytraty-na-mobilnyi-zviazok.md) | `0` | Середні витрати на мобільний зв’язок |
 | [GP.Середні витрати на оренду житла](../measures/gp-seredni-vytraty-na-orendu-zhytla.md) | — | Середні витрати на оренду житла |
-| [GP.Середній % зростання зарплати (окладу) за 12 міс](../measures/gp-serednii-zrostannia-zarplaty-okladu-za-12-mis.md) | `0.00%;-0.00%;0.00%` | Відібрати записи по працівнику [person_key], періоду [Period], організації [organization_key], підрозділу [division_key], де trs_category = Фіксована винагор… |
+| [GP.Середній % зростання зарплати (окладу) за 12 міс](../measures/gp-serednii-zrostannia-zarplaty-okladu-za-12-mis.md) | `0.00%;-0.00%;0.00%` | — |
 | [GP.Середній дохід без річного бонуса (за ост. 12 міс)](../measures/gp-serednii-dokhid-bez-richnoho-bonusa-za-ost-12-mis.md) | `#,0` | Середній дохід без річного бонуса (за ост. 12 міс) |
 | [GP.Середній дохід з річним бонусом (за ост. 12 міс)](../measures/gp-serednii-dokhid-z-richnym-bonusom-za-ost-12-mis.md) | `#,0` | Середній дохід з річним бонусом (за ост. 12 міс) |
-| [GP.Середній розмір доплат за суміщення, факт](../measures/gp-serednii-rozmir-doplat-za-sumishchennia-fakt.md) | — | Потрібно відібрати останній запис по працівнику на дату, де  поле accrual_types_key = '9781d4aa-3a0d-1458-623a-7a93e90a2284'   та category_of_accrual_sort  =… |
+| [GP.Середній розмір доплат за суміщення, факт](../measures/gp-serednii-rozmir-doplat-za-sumishchennia-fakt.md) | — | — |
 | [GP.Середній розмір доплати за наставництво](../measures/gp-serednii-rozmir-doplaty-za-nastavnytstvo.md) | — | Середній розмір доплати за наставництво |
 | [GP.Середній розмір доплати за роз’їзний характер роботи](../measures/gp-serednii-rozmir-doplaty-za-roziznyi-kharakter-roboty.md) | — | Середній розмір доплати за роз’їзний характер роботи |
-| [GP.Середній розмір доплати за роз’їзний характер роботи, факт](../measures/gp-serednii-rozmir-doplaty-za-roziznyi-kharakter-roboty-fakt.md) | `#,0` | Потрібно відібрати останній запис по працівнику на дату, де  поле accrual_types_key = '9781d4aa-3a0d-1458-623a-7a93e90a2284'   та category_of_accrual_sort  =… |
+| [GP.Середній розмір доплати за роз’їзний характер роботи, факт](../measures/gp-serednii-rozmir-doplaty-za-roziznyi-kharakter-roboty-fakt.md) | `#,0` | — |
 | [GP.Середній розмір доплати за шкідливі умови праці](../measures/gp-serednii-rozmir-doplaty-za-shkidlyvi-umovy-pratsi.md) | — | Середній розмір доплати за шкідливі умови праці |
-| [GP.Середній розмір доплати за шкідливі умови праці, факт](../measures/gp-serednii-rozmir-doplaty-za-shkidlyvi-umovy-pratsi-fakt.md) | `#,0` | Потрібно відібрати останній запис по працівнику на дату, де  поле accrual_types_key = '9781d4aa-3a0d-1458-623a-7a93e90a2284'   та category_of_accrual_sort  =… |
+| [GP.Середній розмір доплати за шкідливі умови праці, факт](../measures/gp-serednii-rozmir-doplaty-za-shkidlyvi-umovy-pratsi-fakt.md) | `#,0` | — |
 | [GP.Середній розмір квартальної премії](../measures/gp-serednii-rozmir-kvartalnoi-premii.md) | — | Середній розмір квартальної премії |
-| [GP.Середній розмір квартальної премії, факт](../measures/gp-serednii-rozmir-kvartalnoi-premii-fakt.md) | — | Потрібно відібрати останній запис по працівнику на дату, де  поле accrual_types_key = '9781d4aa-3a0d-1458-623a-7a93e90a2284'   та category_of_accrual_sort  =… |
+| [GP.Середній розмір квартальної премії, факт](../measures/gp-serednii-rozmir-kvartalnoi-premii-fakt.md) | — | — |
 | [GP.Середній розмір позики](../measures/gp-serednii-rozmir-pozyky.md) | — | Середній розмір позики |
 | [GP.Середній розмір премії МХП Зірки](../measures/gp-serednii-rozmir-premii-mkhp-zirky.md) | — | Середній розмір премії МХП Зірки |
 | [GP.Середній розмір премії за Банк ідей](../measures/gp-serednii-rozmir-premii-za-bank-idei.md) | — | Середній розмір премії за Банк ідей |
 | [GP.Середній розмір премії за внутрішнє тренерство](../measures/gp-serednii-rozmir-premii-za-vnutrishnie-trenerstvo.md) | — | Середній розмір премії за внутрішнє тренерство |
 | [GP.Середній розмір премії за збереження та розширення земельного банку](../measures/gp-serednii-rozmir-premii-za-zberezhennia-ta-rozshyrennia-zemelnoho-banku.md) | — | Середній розмір премії за збереження та розширення земельного банку |
 | [GP.Середній розмір премії за місяць](../measures/gp-serednii-rozmir-premii-za-misiats.md) | — | Середній розмір премії за місяць |
-| [GP.Середній розмір премії за місяць, факт](../measures/gp-serednii-rozmir-premii-za-misiats-fakt.md) | — | Потрібно відібрати останній запис по працівнику на дату, де  поле accrual_types_key = '9781d4aa-3a0d-1458-623a-7a93e90a2284'   та category_of_accrual_sort  =… |
+| [GP.Середній розмір премії за місяць, факт](../measures/gp-serednii-rozmir-premii-za-misiats-fakt.md) | — | — |
 | [GP.Середній розмір премії за програмою «Приведи друга»](../measures/gp-serednii-rozmir-premii-za-prohramoiu-pryvedy-druha.md) | — | Середній розмір премії за програмою «Приведи друга» |
 | [GP.Середній розмір проектного бонус за стратегічні ІТ проєкти](../measures/gp-serednii-rozmir-proektnoho-bonus-za-stratehichni-it-proiekty.md) | — | Середній розмір проектного бонус за стратегічні ІТ проєкти |
 | [GP.Середній розмір разової премії за програмою визнання](../measures/gp-serednii-rozmir-razovoi-premii-za-prohramoiu-vyznannia.md) | — | Середній розмір разової премії за програмою визнання |
 | [GP.Середній розмір річного бонусу](../measures/gp-serednii-rozmir-richnoho-bonusu.md) | — | Середній розмір річного бонусу |
-| [GP.Середній розмір річного бонусу, факт](../measures/gp-serednii-rozmir-richnoho-bonusu-fakt.md) | — | Потрібно відібрати останній запис по працівнику на дату, де  поле accrual_types_key = '9781d4aa-3a0d-1458-623a-7a93e90a2284'   та category_of_accrual_sort  =… |
+| [GP.Середній розмір річного бонусу, факт](../measures/gp-serednii-rozmir-richnoho-bonusu-fakt.md) | — | — |
 | [GP.Середній розмір соціальної підтримки](../measures/gp-serednii-rozmir-sotsialnoi-pidtrymky.md) | — | Середній розмір соціальної підтримки |
 | [GP.Середній розмір щомісячної премії](../measures/gp-serednii-rozmir-shchomisiachnoi-premii.md) | — | Середній розмір щомісячної премії |
-| [GP.Середній розмір щомісячної премії, факт](../measures/gp-serednii-rozmir-shchomisiachnoi-premii-fakt.md) | — | Потрібно відібрати останній запис по працівнику на дату, де  поле accrual_types_key = '9781d4aa-3a0d-1458-623a-7a93e90a2284'   та category_of_accrual_sort  =… |
+| [GP.Середній розмір щомісячної премії, факт](../measures/gp-serednii-rozmir-shchomisiachnoi-premii-fakt.md) | — | — |
 | [GP.Середній розмір інвестиційного проєктного бонусу](../measures/gp-serednii-rozmir-investytsiinoho-proiektnoho-bonusu.md) | — | Середній розмір інвестиційного проєктного бонусу |
 | [GP.Середній цільовий розмір річної винагороди, до оподаткування](../measures/gp-serednii-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia.md) | `#,0` | Середній цільовий розмір річної винагороди, до оподаткування |
 
@@ -91,11 +91,11 @@
 
 | Міра | Формат | Бізнес-суть |
 |---|---|---|
-| [GP.eNPS (%)](../measures/gp-enps.md) | — | division_person_id = unit_key |
+| [GP.eNPS (%)](../measures/gp-enps.md) | — | — |
 | [GP.Ідеї команди, шт](../measures/gp-idei-komandy-sht.md) | — | — |
-| [GP.Закриття позицій Middle внутрішніми кандидатами (%)](../measures/gp-zakryttia-pozytsii-middle-vnutrishnimy-kandydatamy.md) | — | division_person_id = unit_key |
-| [GP.Закриття позицій Senior+ внутрішніми кандидатами (%)](../measures/gp-zakryttia-pozytsii-senior-vnutrishnimy-kandydatamy.md) | — | division_person_id = unit_key |
-| [GP.Охоплення Middle\|Senior+ наступниками (%)](../measures/gp-okhoplennia-middle-senior-nastupnykamy.md) | — | division_person_id = unit_key |
+| [GP.Закриття позицій Middle внутрішніми кандидатами (%)](../measures/gp-zakryttia-pozytsii-middle-vnutrishnimy-kandydatamy.md) | — | — |
+| [GP.Закриття позицій Senior+ внутрішніми кандидатами (%)](../measures/gp-zakryttia-pozytsii-senior-vnutrishnimy-kandydatamy.md) | — | — |
+| [GP.Охоплення Middle\|Senior+ наступниками (%)](../measures/gp-okhoplennia-middle-senior-nastupnykamy.md) | — | — |
 | [GP.Продуктивність відповідно до погоджених метрик](../measures/gp-produktyvnist-vidpovidno-do-pohodzhenykh-metryk.md) | — | — |
 | [GP.Співробітники, які розуміють та демонструють цінності компанії (%)](../measures/gp-spivrobitnyky-iaki-rozumiiut-ta-demonstruiut-tsinnosti-kompanii.md) | — | Співробітники, які розуміють та демонструють цінності компанії (%) |
 | [GP.Укомплектованість штату (%)](../measures/gp-ukomplektovanist-shtatu.md) | — | Укомплектованість штату (%) |
@@ -106,14 +106,14 @@
 |---|---|---|
 | [GP.Доля гібрид онлайн (%)](../measures/gp-dolia-hibryd-onlain.md) | — | Доля гібрид онлайн (%) |
 | [GP.Доля гібрид офлайн (%)](../measures/gp-dolia-hibryd-oflain.md) | — | Доля гібрид офлайн (%) |
-| [GP.Доля заброньованих чоловіків(%)](../measures/gp-dolia-zabronovanykh-cholovikiv.md) | — | Розрахункове поле. Відношення кількості заброньованих чоловіків, у яких поле is_reserved = 1 до загальної кількості чоловіків у команді.  <br>Для визначення … |
+| [GP.Доля заброньованих чоловіків(%)](../measures/gp-dolia-zabronovanykh-cholovikiv.md) | — | — |
 | [GP.Доля команди з активними IDP](../measures/gp-dolia-komandy-z-aktyvnymy-idp.md) | — | — |
 | [GP.Доля команди з діючим конфліктом інтересів (%)](../measures/gp-dolia-komandy-z-diiuchym-konfliktom-interesiv.md) | — | — |
 | [GP.Доля онлайн (%)](../measures/gp-dolia-onlain.md) | — | Доля онлайн (%) |
 | [GP.Доля офлайн (%)](../measures/gp-dolia-oflain.md) | — | Доля офлайн (%) |
 | [GP.Доля польових (%)](../measures/gp-dolia-polovykh.md) | — | Доля польових (%) |
 | [GP.Доля співробітників команди з наявними відпустками понад 10 днів](../measures/gp-dolia-spivrobitnykiv-komandy-z-naiavnymy-vidpustkamy-ponad-10-dniv.md) | — | Доля співробітників команди з наявними відпустками понад 10 днів |
-| [GP.Доля чоловіків під ризиком мобілізації(%)](../measures/gp-dolia-cholovikiv-pid-ryzykom-mobilizatsii.md) | — | 1 - під ризиком. 0 - ризик відсутній |
+| [GP.Доля чоловіків під ризиком мобілізації(%)](../measures/gp-dolia-cholovikiv-pid-ryzykom-mobilizatsii.md) | — | — |
 | [GP.Керівник](../measures/gp-kerivnyk.md) | — | Керівник |
 | [GP.Команда](../measures/gp-komanda.md) | — | Команда |
 | [GP.Кількість співробітників всього, чол. - String](../measures/gp-kilkist-spivrobitnykiv-vsoho-chol-string.md) | — | — |
@@ -121,20 +121,20 @@
 | [GP.Плинність (%)](../measures/gp-plynnist.md) | — | Плинність (%) |
 | [GP.Посади Middle\|Senior+ із кадровим резервом (%)](../measures/gp-posady-middle-senior-iz-kadrovym-rezervom.md) | — | — |
 | [GP.Середня заробітна плата](../measures/gp-serednia-zarobitna-plata.md) | — | Середня заробітна плата |
-| [GP.Середня кількість днів невикористаної відпустки співробітником](../measures/gp-serednia-kilkist-dniv-nevykorystanoi-vidpustky-spivrobitnykom.md) | — | Це залишок днів відпусток, по яким формується резерв відпусток по підприємству /п)  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі факт… |
+| [GP.Середня кількість днів невикористаної відпустки співробітником](../measures/gp-serednia-kilkist-dniv-nevykorystanoi-vidpustky-spivrobitnykom.md) | — | — |
 | [GP.Середня оцінка OKR команди](../measures/gp-serednia-otsinka-okr-komandy.md) | — | — |
 | [GP.Середній бал компетенцій команди по комплексній, рік](../measures/gp-serednii-bal-kompetentsii-komandy-po-kompleksnii-rik.md) | — | — |
-| [GP.Середній стаж в команді, років](../measures/gp-serednii-stazh-v-komandi-rokiv.md) | — | Значення поля в місяцях потрібно перевести в роки та місяці. Наприклад, якшо seniority_LAST_DIVISION_HIRE_DATE= 17, то в звіті треба відобразити 1 рік 5 міся… |
+| [GP.Середній стаж в команді, років](../measures/gp-serednii-stazh-v-komandi-rokiv.md) | — | — |
 
 ## Group_Profile\_Main\ОКР
 
 | Міра | Формат | Бізнес-суть |
 |---|---|---|
-| [GP.OKP.Color.Оцінка керівника.Текстове поле](../measures/gp-okp-color-otsinka-kerivnyka-tekstove-pole.md) | — | — |
+| [GP.OKP.Color.Оцінка керівника.Текстове поле](../measures/gp-okp-color-otsinka-kerivnyka-tekstove-pole.md) | — | Оцінка керівника |
 | [GP.OKP.Color.Середня оцінка комади.Текстове поле](../measures/gp-okp-color-serednia-otsinka-komady-tekstove-pole.md) | — | — |
 | [GP.ОКР.К-ть співробітників, що оцінюються.Текстове поле](../measures/gp-okr-k-t-spivrobitnykiv-shcho-otsiniuiutsia-tekstove-pole.md) | — | — |
 | [GP.ОКР.Назва графіка](../measures/gp-okr-nazva-hrafika.md) | — | — |
-| [GP.ОКР.Оцінка керівника.Текстове поле](../measures/gp-okr-otsinka-kerivnyka-tekstove-pole.md) | — | — |
+| [GP.ОКР.Оцінка керівника.Текстове поле](../measures/gp-okr-otsinka-kerivnyka-tekstove-pole.md) | — | Оцінка керівника |
 | [GP.ОКР.Середня Оцінка.Formated](../measures/gp-okr-serednia-otsinka-formated.md) | — | — |
 | [GP.ОКР.Середня оцінка команди.Текстове поле](../measures/gp-okr-serednia-otsinka-komandy-tekstove-pole.md) | — | — |
 
@@ -142,7 +142,7 @@
 
 | Міра | Формат | Бізнес-суть |
 |---|---|---|
-| [GP.OKR.SVG.Bar chart](../measures/gp-okr-svg-bar-chart.md) | — | Останнє НЕ пусте актуальне значення на дату (date) поточного запису |
+| [GP.OKR.SVG.Bar chart](../measures/gp-okr-svg-bar-chart.md) | — | — |
 
 ## Group_Profile\_Main\Продуктивність
 
@@ -153,7 +153,7 @@
 | [GP.Продуктивність.К-ть співробітників, що оцінюються.Текстове поле](../measures/gp-produktyvnist-k-t-spivrobitnykiv-shcho-otsiniuiutsia-tekstove-pole.md) | — | — |
 | [GP.Продуктивність.Оцінка керівника.Текстове поле](../measures/gp-produktyvnist-otsinka-kerivnyka-tekstove-pole.md) | — | — |
 | [GP.Продуктивність.Середня Оцінка.Formeted](../measures/gp-produktyvnist-serednia-otsinka-formeted.md) | — | — |
-| [GP.Продуктивність.Середня оцінка команди.Значення](../measures/gp-produktyvnist-serednia-otsinka-komandy-znachennia.md) | — | Останнє НЕ пусте актуальне значення на дату (date) поточного запису |
+| [GP.Продуктивність.Середня оцінка команди.Значення](../measures/gp-produktyvnist-serednia-otsinka-komandy-znachennia.md) | — | — |
 | [GP.Продуктивність.Середня оцінка команди.Текстове поле](../measures/gp-produktyvnist-serednia-otsinka-komandy-tekstove-pole.md) | — | — |
 | [GP.Результативність.Назва графіка](../measures/gp-rezultatyvnist-nazva-hrafika.md) | — | — |
 
@@ -161,13 +161,13 @@
 
 | Міра | Формат | Бізнес-суть |
 |---|---|---|
-| [GP.Продуктивність.SVG.Bar chart](../measures/gp-produktyvnist-svg-bar-chart.md) | — | Останнє НЕ пусте актуальне значення на дату (date) поточного запису |
+| [GP.Продуктивність.SVG.Bar chart](../measures/gp-produktyvnist-svg-bar-chart.md) | — | — |
 
 ## Group_Profile\_Main\Ризики та фокуси уваги
 
 | Міра | Формат | Бізнес-суть |
 |---|---|---|
-| [GP.Ризик втрати працівників (%)](../measures/gp-ryzyk-vtraty-pratsivnykiv.md) | — | Це відсоток працівників, які знаходяться в статусі "Потребує уваги" = (кількість працівників в статусі "Потребує уваги"/загальну чисельність команди)*100% |
+| [GP.Ризик втрати працівників (%)](../measures/gp-ryzyk-vtraty-pratsivnykiv.md) | — | — |
 | [GP.Ризик втрати продуктивності (%)](../measures/gp-ryzyk-vtraty-produktyvnosti.md) | — | — |
 | [GP.Ризик мобілізації (%)](../measures/gp-ryzyk-mobilizatsii.md) | — | — |
 | [GP.Рівень coaching (1:1), год/міс](../measures/gp-riven-coaching-1-1-hod-mis.md) | — | Рівень coaching (1:1), год/міс |
@@ -177,8 +177,8 @@
 | [GP.Рівень критичних ролей без наступників (%)](../measures/gp-riven-krytychnykh-rolei-bez-nastupnykiv.md) | — | — |
 | [GP.Рівень неякісних відпусток (%)](../measures/gp-riven-neiakisnykh-vidpustok.md) | — | Рівень неякісних відпусток (%) |
 | [GP.Рівень ризику СБ (%)](../measures/gp-riven-ryzyku-sb.md) | — | — |
-| [GP.Рівень смертельних виробничих інцидентів за 2025р., шт.](../measures/gp-riven-smertelnykh-vyrobnychykh-intsydentiv-za-2025r-sht.md) | — | Напрям |
-| [GP.Рівень смертельних не виробничих інцидентів за 2025р., шт.](../measures/gp-riven-smertelnykh-ne-vyrobnychykh-intsydentiv-za-2025r-sht.md) | — | Напрям |
+| [GP.Рівень смертельних виробничих інцидентів за 2025р., шт.](../measures/gp-riven-smertelnykh-vyrobnychykh-intsydentiv-za-2025r-sht.md) | — | Рівень смертельних виробничих інцидентів за 2025р., шт. |
+| [GP.Рівень смертельних не виробничих інцидентів за 2025р., шт.](../measures/gp-riven-smertelnykh-ne-vyrobnychykh-intsydentiv-za-2025r-sht.md) | — | Рівень смертельних не виробничих інцидентів за 2025р., шт. |
 
 ## Group_Profile\Загальна інформація
 
@@ -186,7 +186,7 @@
 |---|---|---|
 | [GP.FinBP](../measures/gp-finbp.md) | — | FinBP |
 | [GP.HRBP](../measures/gp-hrbp.md) | — | HRBP |
-| [GP.Доля Line (%)](../measures/gp-dolia-line.md) | — | Розрахункове поле: відношення кількості Senior managers у команді до загальної кількості працівників.  <br>Відношення кількості працівників, для яких positio… |
+| [GP.Доля Line (%)](../measures/gp-dolia-line.md) | — | — |
 | [GP.Доля Middle managers (%)](../measures/gp-dolia-middle-managers.md) | — | Доля Middle managers (%) |
 | [GP.Доля Senior managers (%)](../measures/gp-dolia-senior-managers.md) | — | Доля Senior managers (%) |
 | [GP.Доля Specialists (%)](../measures/gp-dolia-specialists.md) | — | Доля Specialists (%) |
@@ -207,20 +207,20 @@
 | [GP.Рівень команди в ієрархії](../measures/gp-riven-komandy-v-iierarkhii.md) | — | Рівень команди в ієрархії |
 | [GP.Середній вік](../measures/gp-serednii-vik.md) | `#,0.00;-#,0.00;0.00` | Середній вік |
 | [Доля керівників серед всіх співробітників (%)](../measures/dolia-kerivnykiv-sered-vsikh-spivrobitnykiv.md) | — | Доля керівників серед всіх співробітників (%) |
-| [Доля управлінських категорій серед всіх співробітників (%)](../measures/dolia-upravlinskykh-katehorii-sered-vsikh-spivrobitnykiv.md) | — | Поле завжди має значення, пусте поле не допускається |
+| [Доля управлінських категорій серед всіх співробітників (%)](../measures/dolia-upravlinskykh-katehorii-sered-vsikh-spivrobitnykiv.md) | — | — |
 
 ## Group_Profile\Здоров'я та благополуччя
 
 | Міра | Формат | Бізнес-суть |
 |---|---|---|
-| [5AC.Коефіцієнт абсентеїзму](../measures/5ac-koefitsiient-absenteizmu.md) | `#,0.00%;-#,0.00%;#,0.00%` | 1 - Так  <br>0 - Ні |
+| [5AC.Коефіцієнт абсентеїзму](../measures/5ac-koefitsiient-absenteizmu.md) | `#,0.00%;-#,0.00%;#,0.00%` | — |
 | [AC.Інциденти з травматизмом](../measures/ac-intsydenty-z-travmatyzmom.md) | — | Інциденти з травматизмом |
-| [AC.Відсоток днів відпустки в робочі дні](../measures/ac-vidsotok-dniv-vidpustky-v-robochi-dni.md) | `0.00%;-0.00%;0.00%` | 1 - Так  <br>0 - Ні |
-| [AC.Доля співробітників з відпустками понад 10 днів](../measures/ac-dolia-spivrobitnykiv-z-vidpustkamy-ponad-10-dniv.md) | — | 1 - Так  <br>0 - Ні |
+| [AC.Відсоток днів відпустки в робочі дні](../measures/ac-vidsotok-dniv-vidpustky-v-robochi-dni.md) | `0.00%;-0.00%;0.00%` | — |
+| [AC.Доля співробітників з відпустками понад 10 днів](../measures/ac-dolia-spivrobitnykiv-z-vidpustkamy-ponad-10-dniv.md) | — | — |
 | [AC.Лідер за невикористаними днями відпустки](../measures/ac-lider-za-nevykorystanymy-dniamy-vidpustky.md) | — | Лідер за невикористаними днями відпустки |
 | [AC.Лідер за часом без відпустки](../measures/ac-lider-za-chasom-bez-vidpustky.md) | — | Лідер за часом без відпустки |
-| [AC.Середня кількість днів використаної відпустки](../measures/ac-serednia-kilkist-dniv-vykorystanoi-vidpustky.md) | `0` | Середня кількість днів використаної відпустки співробітником 12 міс. |
-| [AC.Середня кількість днів невикористаної відпустки](../measures/ac-serednia-kilkist-dniv-nevykorystanoi-vidpustky.md) | `#,0.00` | 1 - Так  <br>0 - Ні |
+| [AC.Середня кількість днів використаної відпустки](../measures/ac-serednia-kilkist-dniv-vykorystanoi-vidpustky.md) | `0` | — |
+| [AC.Середня кількість днів невикористаної відпустки](../measures/ac-serednia-kilkist-dniv-nevykorystanoi-vidpustky.md) | `#,0.00` | — |
 | [AC.Середня кількість лікарняних на співробітника](../measures/ac-serednia-kilkist-likarnianykh-na-spivrobitnyka.md) | — | Середня кількість лікарняних на співробітника |
 | [AC.Середня тривалість відпустки співробітника, днів](../measures/ac-serednia-tryvalist-vidpustky-spivrobitnyka-dniv.md) | — | Середня тривалість відпустки співробітника, днів |
 | [AC.Середня тривалість лікарняного на співробітника](../measures/ac-serednia-tryvalist-likarnianoho-na-spivrobitnyka.md) | — | Середня тривалість лікарняного на співробітника |
@@ -230,14 +230,14 @@
 | Міра | Формат | Бізнес-суть |
 |---|---|---|
 | [GP.Результативність.Оцінка OKR.Загальна кількість KR.CY](../measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-kr-cy.md) | `0` | — |
-| [GP.Результативність.Оцінка OKR.Загальна кількість KR.PY](../measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-kr-py.md) | `0` | Останнє доступне значення станом на дату поточного запису, релевантне відповідній оцінці результативності. |
+| [GP.Результативність.Оцінка OKR.Загальна кількість KR.PY](../measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-kr-py.md) | `0` | — |
 | [GP.Результативність.Оцінка OKR.Загальна кількість OKR.CY](../measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-okr-cy.md) | — | — |
-| [GP.Результативність.Оцінка OKR.Загальна кількість OKR.PY](../measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-okr-py.md) | `0` | Останнє доступне значення станом на дату поточного запису, релевантне відповідній оцінці результативності. |
+| [GP.Результативність.Оцінка OKR.Загальна кількість OKR.PY](../measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-okr-py.md) | `0` | — |
 | [GP.Результативність.Оцінка OKR.Кількість співробітників з OKR.CY](../measures/gp-rezultatyvnist-otsinka-okr-kilkist-spivrobitnykiv-z-okr-cy.md) | `0` | — |
 | [GP.Результативність.Оцінка OKR.Середня кількість KR на OKR.CY](../measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-kr-na-okr-cy.md) | — | — |
-| [GP.Результативність.Оцінка OKR.Середня кількість KR.PY](../measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-kr-py.md) | — | Останнє доступне значення станом на дату поточного запису, релевантне відповідній оцінці результативності. |
-| [GP.Результативність.Оцінка OKR.Середня кількість OKR.CY](../measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-okr-cy.md) | — | Останнє доступне значення станом на дату поточного запису, релевантне відповідній оцінці результативності. |
-| [GP.Результативність.Оцінка OKR.Середня кількість OKR.PY](../measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-okr-py.md) | — | Останнє доступне значення станом на дату поточного запису, релевантне відповідній оцінці результативності. |
+| [GP.Результативність.Оцінка OKR.Середня кількість KR.PY](../measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-kr-py.md) | — | — |
+| [GP.Результативність.Оцінка OKR.Середня кількість OKR.CY](../measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-okr-cy.md) | — | — |
+| [GP.Результативність.Оцінка OKR.Середня кількість OKR.PY](../measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-okr-py.md) | — | — |
 
 ## Group_Profile\Результативність та оцінка\Оцінка результативності
 
@@ -245,7 +245,7 @@
 |---|---|---|
 | [GP.Результативність.Оцінка результативності.К-ть працівників](../measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-k-t-pratsivnykiv.md) | `0` | — |
 | [GP.Результативність.Оцінка результативності.К-ть працівників.Total](../measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-k-t-pratsivnykiv-total.md) | `0` | — |
-| [GP.Результативність.Оцінка результативності.Середня оцінка.Total](../measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-serednia-otsinka-total.md) | `0.00` | Останнє НЕ пусте актуальне значення на дату (date) поточного запису |
+| [GP.Результативність.Оцінка результативності.Середня оцінка.Total](../measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-serednia-otsinka-total.md) | `0.00` | — |
 
 ## Navigation\Group
 
@@ -257,54 +257,54 @@
 
 | Міра | Формат | Бізнес-суть |
 |---|---|---|
-| [PP.Годин взаємодії у неробочий час (Холдинг)](../measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-kholdynh.md) | — | Розрахункове значення.  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_dim_Employee_Metric_Health_and_Wellb… |
-| [PP.Годин взаємодії у неробочий час (кадровий підрозділ)](../measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-kadrovyi-pidrozdil.md) | — | division_person_id = unit_key |
-| [PP.Годин взаємодії у неробочий час (напрям)](../measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-napriam.md) | — | division_person_id = unit_key |
-| [PP.Годин для фокусної роботи (Холдинг)](../measures/pp-hodyn-dlia-fokusnoi-roboty-kholdynh.md) | — | Розрахункове значення.  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_dim_Employee_Metric_Health_and_Wellb… |
-| [PP.Годин для фокусної роботи (кадровий підрозділ)](../measures/pp-hodyn-dlia-fokusnoi-roboty-kadrovyi-pidrozdil.md) | — | division_person_id = unit_key |
-| [PP.Годин для фокусної роботи (напрям)](../measures/pp-hodyn-dlia-fokusnoi-roboty-napriam.md) | — | division_person_id = unit_key |
-| [PP.Годин загальної взаємодії (Холдинг)](../measures/pp-hodyn-zahalnoi-vzaiemodii-kholdynh.md) | — | Розрахункове значення.  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_dim_Employee_Metric_Health_and_Wellb… |
-| [PP.Годин загальної взаємодії (кадровий підрозділ)](../measures/pp-hodyn-zahalnoi-vzaiemodii-kadrovyi-pidrozdil.md) | — | division_person_id = unit_key |
-| [PP.Годин загальної взаємодії (напрям)](../measures/pp-hodyn-zahalnoi-vzaiemodii-napriam.md) | — | division_person_id = unit_key |
-| [PP.Довжина (границі) робочого дня (Холдинг)](../measures/pp-dovzhyna-hranytsi-robochoho-dnia-kholdynh.md) | — | Розрахункове значення.  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_dim_Employee_Metric_Health_and_Wellb… |
-| [PP.Довжина (границі) робочого дня (кадровий підрозділ)](../measures/pp-dovzhyna-hranytsi-robochoho-dnia-kadrovyi-pidrozdil.md) | — | division_person_id = unit_key |
-| [PP.Довжина (границі) робочого дня (напрям)](../measures/pp-dovzhyna-hranytsi-robochoho-dnia-napriam.md) | — | division_person_id = unit_key |
+| [PP.Годин взаємодії у неробочий час (Холдинг)](../measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-kholdynh.md) | — | — |
+| [PP.Годин взаємодії у неробочий час (кадровий підрозділ)](../measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-kadrovyi-pidrozdil.md) | — | — |
+| [PP.Годин взаємодії у неробочий час (напрям)](../measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-napriam.md) | — | — |
+| [PP.Годин для фокусної роботи (Холдинг)](../measures/pp-hodyn-dlia-fokusnoi-roboty-kholdynh.md) | — | — |
+| [PP.Годин для фокусної роботи (кадровий підрозділ)](../measures/pp-hodyn-dlia-fokusnoi-roboty-kadrovyi-pidrozdil.md) | — | — |
+| [PP.Годин для фокусної роботи (напрям)](../measures/pp-hodyn-dlia-fokusnoi-roboty-napriam.md) | — | — |
+| [PP.Годин загальної взаємодії (Холдинг)](../measures/pp-hodyn-zahalnoi-vzaiemodii-kholdynh.md) | — | — |
+| [PP.Годин загальної взаємодії (кадровий підрозділ)](../measures/pp-hodyn-zahalnoi-vzaiemodii-kadrovyi-pidrozdil.md) | — | — |
+| [PP.Годин загальної взаємодії (напрям)](../measures/pp-hodyn-zahalnoi-vzaiemodii-napriam.md) | — | — |
+| [PP.Довжина (границі) робочого дня (Холдинг)](../measures/pp-dovzhyna-hranytsi-robochoho-dnia-kholdynh.md) | — | — |
+| [PP.Довжина (границі) робочого дня (кадровий підрозділ)](../measures/pp-dovzhyna-hranytsi-robochoho-dnia-kadrovyi-pidrozdil.md) | — | — |
+| [PP.Довжина (границі) робочого дня (напрям)](../measures/pp-dovzhyna-hranytsi-robochoho-dnia-napriam.md) | — | — |
 
 ## Personal_Profile\Viva\Viva Meetings
 
 | Міра | Формат | Бізнес-суть |
 |---|---|---|
-| [PP.Годин взаємодії по нарадах (Холдинг)](../measures/pp-hodyn-vzaiemodii-po-naradakh-kholdynh.md) | — | Розрахункове значення.  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_dim_Employee_Metric_Health_and_Wellb… |
-| [PP.Годин взаємодії по нарадах (кадровий підрозділ)](../measures/pp-hodyn-vzaiemodii-po-naradakh-kadrovyi-pidrozdil.md) | — | division_person_id = unit_key |
-| [PP.Годин взаємодії по нарадах (напрям)](../measures/pp-hodyn-vzaiemodii-po-naradakh-napriam.md) | `0.00` | division_person_id = unit_key |
-| [PP.Доля Conflicting meeting hours (Холдинг)](../measures/pp-dolia-conflicting-meeting-hours-kholdynh.md) | `0.00%;-0.00%;0.00%` | Розрахункове значення.  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_dim_Employee_Metric_Health_and_Wellb… |
-| [PP.Доля Conflicting meeting hours (кадровий підрозділ)](../measures/pp-dolia-conflicting-meeting-hours-kadrovyi-pidrozdil.md) | `0.00%;-0.00%;0.00%` | division_person_id = unit_key |
-| [PP.Доля Conflicting meeting hours (напрям)](../measures/pp-dolia-conflicting-meeting-hours-napriam.md) | `0.00%;-0.00%;0.00%` | division_person_id = unit_key |
+| [PP.Годин взаємодії по нарадах (Холдинг)](../measures/pp-hodyn-vzaiemodii-po-naradakh-kholdynh.md) | — | — |
+| [PP.Годин взаємодії по нарадах (кадровий підрозділ)](../measures/pp-hodyn-vzaiemodii-po-naradakh-kadrovyi-pidrozdil.md) | — | — |
+| [PP.Годин взаємодії по нарадах (напрям)](../measures/pp-hodyn-vzaiemodii-po-naradakh-napriam.md) | `0.00` | — |
+| [PP.Доля Conflicting meeting hours (Холдинг)](../measures/pp-dolia-conflicting-meeting-hours-kholdynh.md) | `0.00%;-0.00%;0.00%` | — |
+| [PP.Доля Conflicting meeting hours (кадровий підрозділ)](../measures/pp-dolia-conflicting-meeting-hours-kadrovyi-pidrozdil.md) | `0.00%;-0.00%;0.00%` | — |
+| [PP.Доля Conflicting meeting hours (напрям)](../measures/pp-dolia-conflicting-meeting-hours-napriam.md) | `0.00%;-0.00%;0.00%` | — |
 
 ## Personal_Profile\Viva\Viva Networks
 
 | Міра | Формат | Бізнес-суть |
 |---|---|---|
-| [PP.Розмір мережі (Холдинг, 3м)](../measures/pp-rozmir-merezhi-kholdynh-3m.md) | — | Розрахункове значення.  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_dim_Employee_Metric_Health_and_Wellb… |
-| [PP.Розмір мережі (кадровий підрозділ, 3м)](../measures/pp-rozmir-merezhi-kadrovyi-pidrozdil-3m.md) | `#,0.00` | division_person_id = unit_key |
-| [PP.Розмір мережі (напрям, 3м)](../measures/pp-rozmir-merezhi-napriam-3m.md) | — | division_person_id = unit_key |
-| [PP.Ширина мережі (Холдинг, 3м)](../measures/pp-shyryna-merezhi-kholdynh-3m.md) | — | Розрахункове значення.  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_dim_Employee_Metric_Health_and_Wellb… |
-| [PP.Ширина мережі (кадровий підрозділ, 3м)](../measures/pp-shyryna-merezhi-kadrovyi-pidrozdil-3m.md) | — | division_person_id = unit_key |
-| [PP.Ширина мережі (напрям, 3м)](../measures/pp-shyryna-merezhi-napriam-3m.md) | — | division_person_id = unit_key |
+| [PP.Розмір мережі (Холдинг, 3м)](../measures/pp-rozmir-merezhi-kholdynh-3m.md) | — | — |
+| [PP.Розмір мережі (кадровий підрозділ, 3м)](../measures/pp-rozmir-merezhi-kadrovyi-pidrozdil-3m.md) | `#,0.00` | — |
+| [PP.Розмір мережі (напрям, 3м)](../measures/pp-rozmir-merezhi-napriam-3m.md) | — | — |
+| [PP.Ширина мережі (Холдинг, 3м)](../measures/pp-shyryna-merezhi-kholdynh-3m.md) | — | — |
+| [PP.Ширина мережі (кадровий підрозділ, 3м)](../measures/pp-shyryna-merezhi-kadrovyi-pidrozdil-3m.md) | — | — |
+| [PP.Ширина мережі (напрям, 3м)](../measures/pp-shyryna-merezhi-napriam-3m.md) | — | — |
 
 ## Personal_Profile\Viva\Viva management & Coaching
 
 | Міра | Формат | Бізнес-суть |
 |---|---|---|
-| [PP.Годин взаємодії з керівником (Холдинг)](../measures/pp-hodyn-vzaiemodii-z-kerivnykom-kholdynh.md) | — | Потрібно зсумувати значення поля meeting_and_call_with_manager_hour по напряму та поділити на кількість записів (кількість працівників) по напряму за поперед… |
-| [PP.Годин взаємодії з керівником (кадровий підрозділ)](../measures/pp-hodyn-vzaiemodii-z-kerivnykom-kadrovyi-pidrozdil.md) | — | division_person_id = unit_key |
-| [PP.Годин взаємодії з керівником (напрям)](../measures/pp-hodyn-vzaiemodii-z-kerivnykom-napriam.md) | — | division_person_id = unit_key |
-| [PP.Годин керівника на взаємодію із безпосередніми підлеглими (Холдинг)](../measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-kholdynh.md) | — | Розрахункове значення.  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_dim_Employee_Metric_Health_and_Wellb… |
-| [PP.Годин керівника на взаємодію із безпосередніми підлеглими (кадровий підрозділ)](../measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-kadrovyi-pidrozdil.md) | — | division_person_id = unit_key |
-| [PP.Годин керівника на взаємодію із безпосередніми підлеглими (напрям)](../measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-napriam.md) | — | division_person_id = unit_key |
-| [PP.Годин нарад 1:1 з керівником (Холдинг)](../measures/pp-hodyn-narad-1-1-z-kerivnykom-kholdynh.md) | — | <br>Розрахункове значення.  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_dim_Employee_Metric_Health_and_W… |
-| [PP.Годин нарад 1:1 з керівником (кадровий підрозділ)](../measures/pp-hodyn-narad-1-1-z-kerivnykom-kadrovyi-pidrozdil.md) | — | division_person_id = unit_key |
-| [PP.Годин нарад 1:1 з керівником (напрям)](../measures/pp-hodyn-narad-1-1-z-kerivnykom-napriam.md) | — | division_person_id = unit_key |
+| [PP.Годин взаємодії з керівником (Холдинг)](../measures/pp-hodyn-vzaiemodii-z-kerivnykom-kholdynh.md) | — | — |
+| [PP.Годин взаємодії з керівником (кадровий підрозділ)](../measures/pp-hodyn-vzaiemodii-z-kerivnykom-kadrovyi-pidrozdil.md) | — | — |
+| [PP.Годин взаємодії з керівником (напрям)](../measures/pp-hodyn-vzaiemodii-z-kerivnykom-napriam.md) | — | — |
+| [PP.Годин керівника на взаємодію із безпосередніми підлеглими (Холдинг)](../measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-kholdynh.md) | — | — |
+| [PP.Годин керівника на взаємодію із безпосередніми підлеглими (кадровий підрозділ)](../measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-kadrovyi-pidrozdil.md) | — | — |
+| [PP.Годин керівника на взаємодію із безпосередніми підлеглими (напрям)](../measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-napriam.md) | — | — |
+| [PP.Годин нарад 1:1 з керівником (Холдинг)](../measures/pp-hodyn-narad-1-1-z-kerivnykom-kholdynh.md) | — | — |
+| [PP.Годин нарад 1:1 з керівником (кадровий підрозділ)](../measures/pp-hodyn-narad-1-1-z-kerivnykom-kadrovyi-pidrozdil.md) | — | — |
+| [PP.Годин нарад 1:1 з керівником (напрям)](../measures/pp-hodyn-narad-1-1-z-kerivnykom-napriam.md) | — | — |
 
 ## Personal_Profile\Viva\Залученість та інша інформація
 

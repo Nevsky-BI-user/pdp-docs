@@ -51,7 +51,6 @@
   "business": {
     "name": "Тренд OKR (%)",
     "logic": [],
-    "fieldMetrics": [],
     "requirementRefs": [
       {
         "label": "Кейс Втрати Продуктивності Працівників",

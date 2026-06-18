@@ -34,14 +34,6 @@
   "business": {
     "name": "Плинність % по вертикалі",
     "logic": [],
-    "fieldMetrics": [
-      [
-        "Vertical_Employee_Turnover",
-        [
-          "Плинність % по вертикалі"
-        ]
-      ]
-    ],
     "requirementRefs": [
       {
         "label": "Кейс Втрати Продуктивності Працівників",

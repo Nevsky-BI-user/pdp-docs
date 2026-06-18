@@ -51,7 +51,6 @@
   "business": {
     "name": "Доля днів польових робіт (%)",
     "logic": [],
-    "fieldMetrics": [],
     "requirementRefs": [
       {
         "label": "Кейс Втрати Продуктивності Працівників",

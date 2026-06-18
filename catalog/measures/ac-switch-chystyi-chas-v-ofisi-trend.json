@@ -51,7 +51,6 @@
   "business": {
     "name": "Чистий час в офісі Тренд (%)",
     "logic": [],
-    "fieldMetrics": [],
     "requirementRefs": [
       {
         "label": "Кейс Втрати Продуктивності Працівників",

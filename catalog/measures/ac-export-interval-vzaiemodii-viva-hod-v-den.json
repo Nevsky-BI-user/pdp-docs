@@ -37,14 +37,6 @@
   "business": {
     "name": "Інтервал взаємодії (Viva), год. в день",
     "logic": [],
-    "fieldMetrics": [
-      [
-        "Collab_Span_Norm_AVG_3month",
-        [
-          "Інтервал взаємодії (Viva), год. в день"
-        ]
-      ]
-    ],
     "requirementRefs": [
       {
         "label": "Кейс Втрати Продуктивності Працівників",
