@@ -1,0 +1,50 @@
+{
+  "id": "ac-perepratsiuvannia-viva",
+  "type": "measure",
+  "name": "AC.Перепрацювання Viva",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _res = SUM(fact_Burnout_Indicators[VIVA_OVERWORKING])\nRETURN _res",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Burnout_Indicators[VIVA_OVERWORKING]"
+    ],
+    "tables": [
+      "fact_Burnout_Indicators"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "VIVA_OVERWORKING"
+    ],
+    "powerQuery": "fact_Burnout_Indicators"
+  },
+  "business": {
+    "definition": "VIVA_OVERWORKING → Перепрацювання (Viva); VIVA_OVERWORKING → Чи є ризик вигорання через перепрацювання?; VIVA_OVERWORKING → Перепрацювання Viva",
+    "purpose": "<br>**Нові вимоги.**<br>Якщо Viva_Overworking >= 1 год, то Ризик <br>**Старі вимоги.**<br> Визначається за значенням Viva_Overworking в залежності від категорії працівника:  <br>Якщо для position_category_internal_sort in ( 5, 6, 7) поле  Viva_Overworking >= 0,5 год, то Ризик.  <br>Якщо для  position_category_internal_sort in ( 3, 2)поле Viva_Overworking >= 0,75 год, то Ризик.  <br>Якщо для position_category_internal_sort = 1 поле  Viva_Overworking >= 1 год, то Ризик.  <br>Категорія працівника визначається із t_spo_hr_position_category_matrix по ключу position_category_internal_sort.",
+    "requirementRefs": [
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Кейс-Втрати-Продуктивності-Працівників",
+      "Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22"
+    ]
+  },
+  "tags": [
+    "analytical-cases",
+    "burnout-risk",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

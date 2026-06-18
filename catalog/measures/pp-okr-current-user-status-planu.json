@@ -1,0 +1,58 @@
+{
+  "id": "pp-okr-current-user-status-planu",
+  "type": "measure",
+  "name": "PP.OKR.Current_user.Статус плану",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _employee_id = SELECTEDVALUE('dim_Admin_OS'[EMPLOYEE_ID])\nVAR _main_position = \n\tCALCULATE(\n\t\tVALUES('fact_OKR_Goals'[USER_ACCESS_ID]),\n\t\tREMOVEFILTERS('fact_OKR_Goals'),\n\t\t'fact_OKR_Goals'[EMPLOYEE_ID] = _employee_id\n\t)\nVAR _filter0 = TREATAS({_main_position}, 'fact_OKR_Goals'[USER_ACCESS_ID])\nVAR _res = \n\tCALCULATE(\n\t\tSELECTEDVALUE('fact_OKR_Goals'[PLAN_STATUS], \"-\"),\n\t\t_filter0\n\t)\nRETURN _res",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[EMPLOYEE_ID]",
+      "fact_OKR_Goals[EMPLOYEE_ID]",
+      "fact_OKR_Goals[PLAN_STATUS]",
+      "fact_OKR_Goals[USER_ACCESS_ID]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_OKR_Goals"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.R27_fact_OKR_Goals",
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "EMPLOYEE_ID",
+      "PLAN_STATUS",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "PLAN_STATUS → Статус плану ОКР",
+    "purpose": "",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Створити-блок-Виконання-OKR"
+    ]
+  },
+  "tags": [
+    "okr",
+    "pdp",
+    "personal-profile",
+    "rezultatyvnist-ta-otsinka"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

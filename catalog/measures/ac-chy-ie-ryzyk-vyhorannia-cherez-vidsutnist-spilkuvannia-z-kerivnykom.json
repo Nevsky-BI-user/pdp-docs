@@ -1,0 +1,46 @@
+{
+  "id": "ac-chy-ie-ryzyk-vyhorannia-cherez-vidsutnist-spilkuvannia-z-kerivnykom",
+  "type": "measure",
+  "name": "AC.Чи є ризик вигорання через відсутність спілкування з керівником?",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "//НЕ видаляти пробіли для ✅\nVAR _res = \nSWITCH(\n\tSELECTEDVALUE('fact_Burnout_Indicators'[IS_MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR_RISK]),\n\t\"Ризик\", \"❌\",\n\t\"Відсутній\", \" ✅ \",\n\t\"━\"\n)\nRETURN COALESCE( _res, \"-\" )",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Burnout_Indicators[IS_MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR_RISK]"
+    ],
+    "tables": [
+      "fact_Burnout_Indicators"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "IS_MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR_RISK"
+    ],
+    "powerQuery": "fact_Burnout_Indicators"
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "analytical-cases",
+    "burnout-risk",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

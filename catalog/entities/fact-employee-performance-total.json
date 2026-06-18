@@ -1,0 +1,169 @@
+{
+  "id": "fact-employee-performance-total",
+  "type": "entity",
+  "name": "fact_Employee_Performance_Total",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_Employee_Performance_Total",
+  "sourceTables": [
+    "DM.vw_R27_fact_Employee_Performance_General_PBI"
+  ],
+  "columns": [
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "General_Performance_Str_Rate",
+      "dataType": "string",
+      "source": "General_Performance_Str_Rate",
+      "isCalculated": false
+    },
+    {
+      "name": "General_Performance_Desc_Rate",
+      "dataType": "double",
+      "source": "General_Performance_Desc_Rate",
+      "isCalculated": false
+    },
+    {
+      "name": "Performance_Year",
+      "dataType": "int64",
+      "source": "Performance_Year",
+      "isCalculated": false
+    },
+    {
+      "name": "Performance_Type",
+      "dataType": "string",
+      "source": "Performance_Type",
+      "isCalculated": false
+    },
+    {
+      "name": "General_Self_Rate",
+      "dataType": "double",
+      "source": "General_Self_Rate",
+      "isCalculated": false
+    },
+    {
+      "name": "DIRECTION",
+      "dataType": "string",
+      "source": "DIRECTION",
+      "isCalculated": false
+    },
+    {
+      "name": "SUB_DIRECTION",
+      "dataType": "string",
+      "source": "SUB_DIRECTION",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_NAME",
+      "dataType": "string",
+      "source": "POSITION_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_MANAGER_NAME",
+      "dataType": "string",
+      "source": "EMPLOYEE_MANAGER_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "PERFORMENCE_PERIOD",
+      "dataType": "string",
+      "source": "PERFORMENCE_PERIOD",
+      "isCalculated": false
+    },
+    {
+      "name": "PERFORMANCE_PBI_ORDER",
+      "dataType": "int64",
+      "source": "PERFORMANCE_PBI_ORDER",
+      "isCalculated": false
+    },
+    {
+      "name": "ORDER",
+      "dataType": "int64",
+      "source": "ORDER",
+      "isCalculated": false
+    },
+    {
+      "name": "PERFORMANCE_STATUS",
+      "dataType": "string",
+      "source": "PERFORMANCE_STATUS",
+      "isCalculated": false
+    },
+    {
+      "name": "PERFORMANCE_AMPLITUDE",
+      "dataType": "string",
+      "source": "PERFORMANCE_AMPLITUDE",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_ID",
+      "dataType": "string",
+      "source": "EMPLOYEE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DATE_ID",
+      "dataType": "dateTime",
+      "source": "DATE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "General_Self_Str_Rate",
+      "dataType": "string",
+      "source": "General_Self_Str_Rate",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_Performance_Evalution",
+      "fromColumn": "General_Performance_Str_Rate",
+      "toColumn": "General_Performance_Str_Rate",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Person",
+      "fromColumn": "EMPLOYEE_ID",
+      "toColumn": "PERSON_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Admin_OS",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Date",
+      "fromColumn": "DATE_ID",
+      "toColumn": "Date",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [
+    "GP.Продуктивність.Кількість співробітників (Останній період оцінки)",
+    "GP.Продуктивність.Останній період оцінки",
+    "GP.Продуктивність.Оцінка керівника.Значення",
+    "GP.Продуктивність.Середня оцінка команди.Значення",
+    "GP.Результативність.Оцінка результативності.К-ть працівників.Total",
+    "GP.Результативність.Оцінка результативності.Середня оцінка.Total",
+    "PP.SVG.Оцінка результативності.Total",
+    "PP.Оцінка результативності.Керівником.Total",
+    "PP.Оцінка результативності.Самооцінка.Total"
+  ],
+  "requirementRefs": [
+    "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_Employee_Performance_Total.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

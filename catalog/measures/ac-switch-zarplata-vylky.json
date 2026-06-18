@@ -1,0 +1,52 @@
+{
+  "id": "ac-switch-zarplata-vylky",
+  "type": "measure",
+  "name": "AC.Switch.Зарплата (вилки)",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SWITCH(\n\tSELECTEDVALUE('t_AC Burnout'[Burnout_Indicator]),\n\t\"Оцінка\", [AC.Чи є ризик вигорання через рівень оплати праці?],\n\t\"Дані\", [AC.Зарплата (вилки)]\n)",
+  "dependencies": {
+    "measures": [
+      "AC.Зарплата (вилки)",
+      "AC.Чи є ризик вигорання через рівень оплати праці?"
+    ],
+    "columns": [
+      "t_AC Burnout[Burnout_Indicator]"
+    ],
+    "tables": [
+      "t_AC Burnout"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "Burnout_Indicator"
+    ],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "Зарплата (вилки)",
+    "purpose": "Потрібно визначити в якому діапазоні знаходиться значення min_tariff_rate за формулою<br>**Нова формула.** Положення окладу (%) = ((Оклад - Середина вилки) / Середина вилки) × 100, Положення min_tariff_rate = ((min_tariff_rate- avg_tariff_rate) / avg_tariff_rate) × 100<br> Спочатку треба порівняти оклад із мінімальним значенням, а потім застосувати формулу.<br>**Нижче мінімума** - якщо min_tariff_rate <min_salary_range<br>**Мінімум-середина**: Позиція –5,1% і нижче.<br>**Середина**: Позиція між -5,0% та +5,0% (навіть якщо рівно середина).  **Середина-максимум**: Позиція + 5,1% і вище. <br>Якщо",
+    "requirementRefs": [
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22"
+    ]
+  },
+  "tags": [
+    "analytical-cases",
+    "burnout-risk",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

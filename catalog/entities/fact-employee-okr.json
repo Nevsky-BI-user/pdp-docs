@@ -1,0 +1,76 @@
+{
+  "id": "fact-employee-okr",
+  "type": "entity",
+  "name": "fact_Employee_OKR",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_Employee_OKR",
+  "sourceTables": [
+    "DM.R27_fact_OKR_Goals"
+  ],
+  "columns": [
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "PLAN_YEAR",
+      "dataType": "int64",
+      "source": "PLAN_YEAR",
+      "isCalculated": false
+    },
+    {
+      "name": "CALC_PERFORMANCE_STR_RATE",
+      "dataType": "double",
+      "source": "CALC_PERFORMANCE_STR_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "CALC_PERFORMANCE_DESC_RATE",
+      "dataType": "string",
+      "source": "CALC_PERFORMANCE_DESC_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "order",
+      "dataType": "int64",
+      "source": "order",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_OKR_Evalution",
+      "fromColumn": "CALC_PERFORMANCE_DESC_RATE",
+      "toColumn": "CALC_PERFORMANCE_DESC_RATE",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Admin_OS",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [
+    "GP.ОКР.Кількість співробітників (Останній період оцінки)",
+    "GP.ОКР.Останній рік",
+    "GP.ОКР.Оцінка керівника.Значення",
+    "GP.ОКР.Середня оцінка команди.Значення"
+  ],
+  "requirementRefs": [
+    "Індивідуальний-профіль-працівника/Історія-по-посадам",
+    "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+    "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_Employee_OKR.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

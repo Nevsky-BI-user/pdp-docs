@@ -1,0 +1,98 @@
+{
+  "id": "gp-ukomplektovanist-shtatu",
+  "type": "measure",
+  "name": "GP.Укомплектованість штату (%)",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\Індикатори здоров'я команди",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "// VAR _current_direction = \n// \tFIRSTNONBLANKVALUE(\n// \t\t'dim_Admin_OS'[ORDER_NUM_2],\n// \t\tMIN('dim_Admin_OS'[DIRECTION])\n// \t)\n\n// VAR _current_sub_direction = \n// \tFIRSTNONBLANKVALUE(\n// \t\t'dim_Admin_OS'[ORDER_NUM_2],\n// \t\tMIN('dim_Admin_OS'[SUB_DIRECTION])\n// \t)\n\n// VAR _current_email = \n// \tFIRSTNONBLANKVALUE(\n// \t\t'dim_Admin_OS'[ORDER_NUM_2],\n// \t\tMIN('dim_Admin_OS'[EMPLOYEE_EMAIL])\n// \t)\n\n// VAR _direction_res = \n// CALCULATE(\n// \tSUM('fact_EXCEL_Group_Profile_General_Metric'[Staffing]),\n// \tFILTER(\n// \t\t'fact_EXCEL_Group_Profile_General_Metric',\n// \t\t'fact_EXCEL_Group_Profile_General_Metric'[Record_Type] = \"DIRECTION\"\n// \t\t&&'fact_EXCEL_Group_Profile_General_Metric'[Direction_Name] = _current_direction))\n\n// VAR _sub_direction_res = \n// CALCULATE(\n// \tSUM('fact_EXCEL_Group_Profile_General_Metric'[Staffing]),\n// \tFILTER(\n// \t\t'fact_EXCEL_Group_Profile_General_Metric',\n// \t\tfact_EXCEL_Group_Profile_General_Metric[Record_Type] = \"SUBDIRECTION\"\n// \t\t&& 'fact_EXCEL_Group_Profile_General_Metric'[Direction_Name] = _current_sub_direction))\n\n// VAR top_employee_list = \n// SELECTCOLUMNS(\n// \tFILTER(\n// \t'dim_Admin_OS', \n// \t'dim_Admin_OS'[POSITION_CATEGORY_DETAIL] = \"Топ-менеджмент\" \n// \t|| 'dim_Admin_OS'[EMPLOYEE_EMAIL] in \n// \t\t{\"d.konogray@mhp.com.ua\",\n// \t\t\"r.zvonenko@mhp.com.ua\",\n// \t\t\"s.p.nikolaiev@mhp.com.ua\",\n// \t\t\"a.evshel@mhp.com.ua\",\n// \t\t\"t.sakhno@mhp.com.ua\",\n// \t\t\"i.zakharchuk@mhp.com.ua\",\n// \t\t\"yu.polovyna@mhp.com.ua\",\n// \t\t\"a.gromova@mhp.com.ua\"}),\n// \t\"EmailColumn\", 'dim_Admin_OS'[EMPLOYEE_EMAIL])\n\n// VAR _res =\n// IF(_current_email in top_employee_list, _direction_res, _sub_direction_res)\n\n// RETURN \n// IF(\n//     ISBLANK(_res),\n//     \"-\", \n//     TRIM(_res) & \"%\") & \", (>=88%)\"\n\nVAR _filter_lt= TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), 'fact_Employee_List'[USER_ACCESS_ID])\nVAR _admin = \nCALCULATE(\n    DIVIDE(\n        SUM('fact_Vacancy'[CLOSE_VACANCY_COUNT]),\n        SUM('fact_Vacancy'[TOTAL_VACANCY]),\n        BLANK())\n)\n\nVAR _admin_lt = \nCALCULATE(\n    DIVIDE(\n        SUM('fact_Vacancy'[CLOSE_VACANCY_COUNT]),\n        SUM('fact_Vacancy'[TOTAL_VACANCY]),\n        BLANK()),\n    _filter_lt\n)\nVAR _res = \n    SWITCH(\n        SELECTEDVALUE('t_HierarchyTypes'[Index]),\n        0, _admin_lt,\n        1, _admin\n    )\n\nRETURN \nTRIM(\n    FORMAT(\n        COALESCE(_res, \"-\"), \n        \"##%\"))",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[DIRECTION]",
+      "dim_Admin_OS[EMPLOYEE_EMAIL]",
+      "dim_Admin_OS[ORDER_NUM_2]",
+      "dim_Admin_OS[POSITION_CATEGORY_DETAIL]",
+      "dim_Admin_OS[SUB_DIRECTION]",
+      "fact_EXCEL_Group_Profile_General_Metric[Direction_Name]",
+      "fact_EXCEL_Group_Profile_General_Metric[Record_Type]",
+      "fact_EXCEL_Group_Profile_General_Metric[Staffing]",
+      "fact_Employee_List[USER_ACCESS_ID]",
+      "fact_Vacancy[CLOSE_VACANCY_COUNT]",
+      "fact_Vacancy[TOTAL_VACANCY]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_EXCEL_Group_Profile_General_Metric",
+      "fact_Employee_List",
+      "fact_Vacancy",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List",
+      "DM.vw_R27_dim_Position",
+      "DM.vw_R27_fact_Employee_List",
+      "DWH.t_SPO_HR_Group_Profile_General_Metric"
+    ],
+    "sourceColumns": [
+      "CLOSE_VACANCY_COUNT",
+      "DIRECTION",
+      "Direction_Name",
+      "EMPLOYEE_EMAIL",
+      "Index",
+      "ORDER_NUM_2",
+      "POSITION_CATEGORY_DETAIL",
+      "Record_Type",
+      "SUB_DIRECTION",
+      "Staffing",
+      "TOTAL_VACANCY",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "DIRECTION → Напрям; DIRECTION → direction_name; DIRECTION → direction; POSITION_CATEGORY_DETAIL → Деталізація категорії посади (внутрішня); POSITION_CATEGORY_DETAIL → Категорія посади; POSITION_CATEGORY_DETAIL → Категорія посади (внутрішня); POSITION_CATEGORY_DETAIL → Доля менеджерів серед всіх співробітників (%); SUB_DIRECTION → Піднапрям; SUB_DIRECTION → subdirection; SUB_DIRECTION → sub_direction; Record_Type → Тип винятку із плинності; Staffing → Укомплектованість штату (%)",
+    "purpose": "division_person_id = unit_key Поле зберігається в довіднику [dm.vw_R27_dim_unit]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List], через відповідний зв’язок за ключем [division_key] = [unit_key].  <br>Поле завжди має значення, пусте поле не допускається  <br>Якщо не вміщається в одну строку, перенести на іншу Поле зберігається в довіднику [dm.vw_R27_dim_unit]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List_PDP], через відповідний зв’язок за ключем [division_",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Індивідуальний-профіль-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Таблиця-vw_R27_calc_Viva_Direction_PDP",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Метрики-рекрутингу",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Метрики-рекрутингу/ТЗ-на-розробку-вітрин-по-метрикам-рекрутингу",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Ефективність",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+      "Командний-профіль/Сторінка-Навчання-і-розвиток/Блок-Розвиток-сторінки-Навчання-і-розвиток",
+      "Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)",
+      "Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)/Додаткові-вимоги-до-вітрини-Плинність",
+      "Командний-профіль/Сторінка-Плинність-та-Exits/ТЗ-на-вітрину-Exits",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Блок-Додаткові-інструменти"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "indykatory-zdorovia-komandy",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

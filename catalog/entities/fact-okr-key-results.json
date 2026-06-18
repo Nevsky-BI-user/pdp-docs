@@ -1,0 +1,193 @@
+{
+  "id": "fact-okr-key-results",
+  "type": "entity",
+  "name": "fact_OKR_Key_Results",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_OKR_Key_Results",
+  "sourceTables": [
+    "DM.R27_fact_OKR_Key_Results"
+  ],
+  "columns": [
+    {
+      "name": "EMPLOYEE_ID",
+      "dataType": "string",
+      "source": "EMPLOYEE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_NAME",
+      "dataType": "string",
+      "source": "EMPLOYEE_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "INIT_DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "INIT_DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "INIT_DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "INIT_DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_OBJECTIVE_ID",
+      "dataType": "string",
+      "source": "OKR_OBJECTIVE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "FORM_TEMPLATE_NAME",
+      "dataType": "string",
+      "source": "FORM_TEMPLATE_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_WEIGHT",
+      "dataType": "double",
+      "source": "KR_WEIGHT",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_AVG_RATE",
+      "dataType": "double",
+      "source": "KR_AVG_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_COLOR_RATE",
+      "dataType": "double",
+      "source": "KR_COLOR_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_POSSIBLE_SUPER_GREEN_KR",
+      "dataType": "string",
+      "source": "IS_POSSIBLE_SUPER_GREEN_KR",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_DESCRIPTION",
+      "dataType": "string",
+      "source": "KR_DESCRIPTION",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_METRIC_DESCRIPTION",
+      "dataType": "string",
+      "source": "KR_METRIC_DESCRIPTION",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_CHANGE",
+      "dataType": "string",
+      "source": "KR_CHANGE",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_FACT_VALUE",
+      "dataType": "string",
+      "source": "KR_FACT_VALUE",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_EXEC_DATE",
+      "dataType": "dateTime",
+      "source": "KR_EXEC_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "LOAD_TIMESTAMP",
+      "dataType": "dateTime",
+      "source": "LOAD_TIMESTAMP",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_DESCRIPTION",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "CALC_PERFORMANCE_DESC_RATE",
+      "dataType": "string",
+      "source": "CALC_PERFORMANCE_DESC_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "CALC_PERFORMANCE_DESC_RATE_ORDER",
+      "dataType": "string",
+      "source": "CALC_PERFORMANCE_DESC_RATE_ORDER",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_DESCRIPTION_WRAPPED",
+      "dataType": "string",
+      "source": "KR_DESCRIPTION_WRAPPED",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_METRIC_DESCRIPTION_WRAPPED",
+      "dataType": "string",
+      "source": "KR_METRIC_DESCRIPTION_WRAPPED",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_FACT_VALUE_WRAPPED",
+      "dataType": "string",
+      "source": "KR_FACT_VALUE_WRAPPED",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "fact_OKR_Goals",
+      "fromColumn": "OKR_OBJECTIVE_ID",
+      "toColumn": "OKR_OBJECTIVE_ID",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [
+    "GP.Результативність.Оцінка OKR.Загальна кількість KR.CY",
+    "GP.Результативність.Оцінка OKR.Загальна кількість KR.PY",
+    "GP.Результативність.Оцінка OKR.Середня кількість KR.PY",
+    "GP.Результативність.Оцінка OKR.Фільтр деталізації KR",
+    "PP.KR.Ключовий результат НЕ досягнуто",
+    "PP.KR.Ключовий результат досягнуто",
+    "PP.OKR.Вага KR",
+    "PP.OKR.Значення KR",
+    "PP.OKR.Колірна оцінка KR",
+    "PP.OKR.Ціль виконана",
+    "PP.OKR.Ціль не виконана"
+  ],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_OKR_Key_Results.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

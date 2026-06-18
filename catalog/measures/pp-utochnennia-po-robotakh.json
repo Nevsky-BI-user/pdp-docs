@@ -1,0 +1,47 @@
+{
+  "id": "pp-utochnennia-po-robotakh",
+  "type": "measure",
+  "name": "PP.Уточнення по роботах",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "IF(\n\tSELECTEDVALUE('fact_Employee_List'[POSITION_JOB_SPECIFICATION]) = \"\",\n\t\"-\")",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[POSITION_JOB_SPECIFICATION]"
+    ],
+    "tables": [
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "POSITION_JOB_SPECIFICATION"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "POSITION_JOB_SPECIFICATION → Уточнення по роботам",
+    "purpose": "Поле зберігається в довіднику [dm.vw_R27_dim_position]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List_PDP], через відповідний зв’язок за ключем [position_key] = [position_code_key].  <br>Якщо значення в полі відсутнє, то показати текст \"Дані відсутні\"  або знак \"-\".  <br>Якщо значення не вміщається в одну строку, перенести на іншу",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

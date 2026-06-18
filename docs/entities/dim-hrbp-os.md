@@ -1,0 +1,65 @@
+# dim__HRBP_OS
+
+| Властивість | Значення |
+|---|---|
+| Тип | бізнес-сутність / таблиця |
+| Сервер | `mhpsynapsedev01.sql.azuresynapse.net` |
+| База | `mhpdwhdev01` |
+| Power Query | `dim__HRBP_OS` |
+| Джерела | — |
+
+## Колонки
+
+| Колонка | Тип | Джерело | Calc |
+|---|---|---|---|
+| USER_ACCESS_ID | string | USER_ACCESS_ID |  |
+| EMP_HIERARCHY_LEVEL_LIST | string | EMP_HIERARCHY_LEVEL_LIST |  |
+| EMP_HIERARCHY_LEVEL | string | EMP_HIERARCHY_LEVEL |  |
+| EMP_HEAD_ADMIN_ID_EMP_HEAD_ADMIN_DOC_JOB_APPLICATION_ID | string | EMP_HEAD_ADMIN_ID_EMP_HEAD_ADMIN_DOC_JOB_APPLICATION_ID |  |
+| EMP_HEAD_FUNCTIONAL_ID_EMP_HEAD_FUNCTIONAL_DOC_JOB_APPLICATION_ID | string | EMP_HEAD_FUNCTIONAL_ID_EMP_HEAD_FUNCTIONAL_DOC_JOB_APPLICATION_ID |  |
+| EMP_HRBP_ID_EMP_HRBP_DOC_JOB_APPLICATION_ID | string | EMP_HRBP_ID_EMP_HRBP_DOC_JOB_APPLICATION_ID |  |
+| EMP_FINBP_ID_EMP_FINBP_DOC_JOB_APPLICATION_ID | string | EMP_FINBP_ID_EMP_FINBP_DOC_JOB_APPLICATION_ID |  |
+| ID | string | ID |  |
+| EMPLOYEE_ID | string | EMPLOYEE_ID |  |
+| ORGANIZATION_ID | string | ORGANIZATION_ID |  |
+| DOC_JOB_APPLICATION_ID | string | DOC_JOB_APPLICATION_ID |  |
+| EMPLOYEE_ADMIN_ID | string | EMPLOYEE_ADMIN_ID |  |
+| DOC_JOB_APPLICATION_ADMIN_ID | string | DOC_JOB_APPLICATION_ADMIN_ID |  |
+| EMPLOYEE_NAME | string | EMPLOYEE_NAME |  |
+| EMPLOYEE_EMAIL | string | EMPLOYEE_EMAIL |  |
+| CALC_DATE | dateTime | CALC_DATE |  |
+| IS_HRBP | boolean | IS_HRBP |  |
+| IS_HIERARCHY_HRBP_ERROR | boolean | IS_HIERARCHY_HRBP_ERROR |  |
+| ORDER_NUM | int64 | ORDER_NUM |  |
+| ORDER_NUM_2 | int64 | ORDER_NUM_2 |  |
+| ORGANIZATION | string | ORGANIZATION |  |
+| PERSONNEL_UNIT | string | PERSONNEL_UNIT |  |
+| DIRECTION | string | DIRECTION |  |
+| SUB_DIRECTION | string | SUB_DIRECTION |  |
+| HAB_FOR_AGRO | string | HAB_FOR_AGRO |  |
+| SUBDIVISION_LVL_1 | string | SUBDIVISION_LVL_1 |  |
+| SUBDIVISION_LVL_2 | string | SUBDIVISION_LVL_2 |  |
+| SUBDIVISION_LVL_3 | string | SUBDIVISION_LVL_3 |  |
+| SUBDIVISION_LVL_4 | string | SUBDIVISION_LVL_4 |  |
+| SUBDIVISION_LVL_5 | string | SUBDIVISION_LVL_5 |  |
+| SUBDIVISION_LVL_6 | string | SUBDIVISION_LVL_6 |  |
+| SUBORDINATE_СNT | int64 | SUBORDINATE_СNT |  |
+| URL_FOTO | string | URL_FOTO |  |
+| DIVISION_PERSON_ID | string | DIVISION_PERSON_ID |  |
+| JOB_TITLE_ID | string | JOB_TITLE_ID |  |
+| DOC_JOB_APPLICATION_HRBP_ID | string | DOC_JOB_APPLICATION_HRBP_ID |  |
+| JOB_TITLE_HRBP_ID | string | JOB_TITLE_HRBP_ID |  |
+| EMPLOYEE_HRBP_ID | string | EMPLOYEE_HRBP_ID |  |
+| IS_MAIN_POSITION | int64 | IS_MAIN_POSITION |  |
+
+## Зв'язки
+
+—
+
+## Пов'язані міри
+
+—
+
+## Нотатки
+
+_порожньо_

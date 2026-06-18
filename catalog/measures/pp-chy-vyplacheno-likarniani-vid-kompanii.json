@@ -1,0 +1,49 @@
+{
+  "id": "pp-chy-vyplacheno-likarniani-vid-kompanii",
+  "type": "measure",
+  "name": "PP.Чи виплачено лікарняні від компанії",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Здоров'я та благополуччя",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _HasData =\n\tCOALESCE([PP.Лікарняні], 0) > 0        -- числова версія, BLANK коли даних нема\nVAR _Paid =\n\tCALCULATE(\n\t\tCOUNTROWS(\n\t\t\tFILTER('fact_Metrics', 'fact_Metrics'[IS_SICK_LEAVE_PAID] = TRUE())\n\t\t)\n\t) \nRETURN\nSWITCH(\n\tTRUE(),\n\t_Paid = 0, \"-\",\n\t_Paid >0 , \"Так\",\n\t\"Ні\"\n)",
+  "dependencies": {
+    "measures": [
+      "PP.Лікарняні"
+    ],
+    "columns": [
+      "fact_Metrics[IS_SICK_LEAVE_PAID]"
+    ],
+    "tables": [
+      "fact_Metrics"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "IS_SICK_LEAVE_PAID"
+    ],
+    "powerQuery": "fact_Metrics"
+  },
+  "business": {
+    "definition": "Чи виплачено лікарняні від компанії",
+    "purpose": "Якщо is_sl_paid = 1 за останні 12 міс, то Так, is_sl_paid = 0, то Ні  <br>НЕ включаючи поточний місяць.",
+    "requirementRefs": [
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zdorovia-ta-blahopoluchchia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

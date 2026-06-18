@@ -1,0 +1,39 @@
+{
+  "id": "gp-shyryna-merezhi-kontaktiv-napriam",
+  "type": "measure",
+  "name": "GP.Ширина мережі контактів, напрям",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\Viva_Insights",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "\"-\"",
+  "dependencies": {
+    "measures": [],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "viva-insights"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

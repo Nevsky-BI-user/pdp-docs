@@ -1,0 +1,64 @@
+{
+  "id": "gp-kilkist-veteraniv",
+  "type": "measure",
+  "name": "GP.Кількість Ветеранів",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\Загальна інформація",
+  "formatString": "0;-0;0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _filter_lt= TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), 'fact_Employee_List'[USER_ACCESS_ID])\nVAR _admin = \n\tCALCULATE(\n\t\tCOUNTROWS(VALUES('fact_Employee_List'[person_key])),\n\t\tALL('dim_Admin_OS'[STATUS_NAME]),\n\t\t'dim_Person'[IS_VETERAN] = 1\n\t)\nVAR _admin_lt = \n\tCALCULATE(\n\t\tCOUNTROWS(VALUES('fact_Employee_List'[person_key])),\n\t\tALL('dim_Admin_OS'[STATUS_NAME]),\n\t\t'dim_Person'[IS_VETERAN] = 1,\n\t\t_filter_lt\n\t)\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE('t_HierarchyTypes'[Index]),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\nRETURN \n\tTRIM(\n\t\tFORMAT(\t\n\t\t\tCOALESCE(_res, \"-\"), \n\t\t\t\"### ###\" \n\t\t) \n\t)\t",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[STATUS_NAME]",
+      "dim_Person[IS_VETERAN]",
+      "fact_Employee_List[USER_ACCESS_ID]",
+      "fact_Employee_List[person_key]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "dim_Person",
+      "fact_Employee_List",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List",
+      "DM.vw_R27_dim_Person_PDP"
+    ],
+    "sourceColumns": [
+      "IS_VETERAN",
+      "Index",
+      "STATUS_NAME",
+      "USER_ACCESS_ID",
+      "person_key"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "STATUS_NAME → Статус працівника; STATUS_NAME → Статус співробітника; IS_VETERAN → Статус Ветеран; IS_VETERAN → Кількість Ветеранів; IS_VETERAN → Кількість демобілізованих",
+    "purpose": "Поле зберігається в довіднику [dm.vw_R27_dim_Employee_Status]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List_PDP], через відповідний зв’язок за ключем [status_key].  <br>Поле Статус не може бути пустим, бо у працівника він завжди є. Поле зберігається в довіднику dm.vw_R27_dim_person ]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List], через відповідний зв’язок за ключем [person_key].  <br>Якщо 1 - Так, якщо 0 - Ні. Розрахункове поле. Підрахувати скільки прац",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду/Редизайн-сторінки-Загальна-інформація",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

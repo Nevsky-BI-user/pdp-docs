@@ -1,0 +1,44 @@
+{
+  "id": "gp-riven-neiakisnykh-vidpustok",
+  "type": "measure",
+  "name": "GP.Рівень неякісних відпусток (%)",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\Ризики та фокуси уваги",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _res = 1 - [AC.Доля співробітників з відпустками понад 10 днів]\n\nRETURN \nTRIM(COALESCE(FORMAT(_res, \"##%\"), 0))",
+  "dependencies": {
+    "measures": [
+      "AC.Доля співробітників з відпустками понад 10 днів"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "Рівень неякісних відпусток (%)",
+    "purpose": "Це метрика, обернена до Доля співробітників з наявними відпустками понад 10 днів. Тобто 100% - показник Доля співробітників з наявними відпустками понад 10 днів.",
+    "requirementRefs": [
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "main",
+    "pdp",
+    "ryzyky-ta-fokusy-uvahy"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

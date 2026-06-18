@@ -1,0 +1,41 @@
+{
+  "id": "pp-kolir-pryrostu-rtsd",
+  "type": "measure",
+  "name": "PP.Колір приросту РЦД",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Життєвий цикл",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _Val = [PP.Приріст РЦД]\nRETURN\n    SWITCH(\n        TRUE(),\n        _Val > 0, \"#1F7A47\",\n        _Val < 0, \"#A82828\",\n        \"#6B7B8E\"\n    )",
+  "dependencies": {
+    "measures": [
+      "PP.Приріст РЦД"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zhyttievyi-tsykl"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

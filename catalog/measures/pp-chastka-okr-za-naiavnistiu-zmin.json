@@ -1,0 +1,53 @@
+{
+  "id": "pp-chastka-okr-za-naiavnistiu-zmin",
+  "type": "measure",
+  "name": "PP.Частка OKR за наявністю змін",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+  "formatString": "0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _employee_id = CALCULATETABLE(VALUES('dim_Admin_OS'[EMPLOYEE_ID]))\nVAR _res = \nCALCULATE(\n        COUNTROWS(VALUES('fact_OKR_Goals'[OKR_OBJECTIVE_ID])),\n    TREATAS(_employee_id,'fact_OKR_Goals'[EMPLOYEE_ID])\n)\nRETURN _res",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[EMPLOYEE_ID]",
+      "fact_OKR_Goals[EMPLOYEE_ID]",
+      "fact_OKR_Goals[OKR_OBJECTIVE_ID]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_OKR_Goals"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.R27_fact_OKR_Goals",
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "EMPLOYEE_ID",
+      "OKR_OBJECTIVE_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "okr",
+    "pdp",
+    "personal-profile",
+    "rezultatyvnist-ta-otsinka"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

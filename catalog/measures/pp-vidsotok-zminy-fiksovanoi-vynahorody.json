@@ -1,0 +1,42 @@
+{
+  "id": "pp-vidsotok-zminy-fiksovanoi-vynahorody",
+  "type": "measure",
+  "name": "PP.Відсоток зміни фіксованої винагороди",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\TRS",
+  "formatString": "0.00%;-0.00%;0.00%",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _Now = [PP.Розмір фіксованої винагороди плановий, за місяць ПОТОЧНИЙ]\nVAR _YearAgo = [PP.Розмір фіксованої винагороди плановий, за місяць СТАНОМ НА РІК НАЗАД]\nVAR _result = DIVIDE(_Now-COALESCE(_YearAgo, _Now),_YearAgo, \"Дані відсутні\")\nRETURN _result",
+  "dependencies": {
+    "measures": [
+      "PP.Розмір фіксованої винагороди плановий, за місяць ПОТОЧНИЙ",
+      "PP.Розмір фіксованої винагороди плановий, за місяць СТАНОМ НА РІК НАЗАД"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

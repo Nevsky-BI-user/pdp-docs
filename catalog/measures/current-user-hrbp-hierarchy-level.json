@@ -1,0 +1,50 @@
+{
+  "id": "current-user-hrbp-hierarchy-level",
+  "type": "measure",
+  "name": "Current_User_HRBP_Hierarchy_Level",
+  "homeTable": "_Measures",
+  "displayFolder": "USER",
+  "formatString": "0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "CALCULATE(\n    MINX('dim_Admin_OS','dim_Admin_OS'[path_length_rls]),\n    TREATAS({USERPRINCIPALNAME()},'dim_Admin_OS'[EMPLOYEE_EMAIL]),\n    'dim_Admin_OS'[USER_ROLE] = \"HRBP\"\n) - 1",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[EMPLOYEE_EMAIL]",
+      "dim_Admin_OS[USER_ROLE]",
+      "dim_Admin_OS[path_length_rls]"
+    ],
+    "tables": [
+      "dim_Admin_OS"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "EMPLOYEE_EMAIL",
+      "USER_ROLE",
+      "path_length_rls"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "pdp",
+    "user"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

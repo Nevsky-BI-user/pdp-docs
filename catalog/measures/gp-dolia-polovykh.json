@@ -1,0 +1,55 @@
+{
+  "id": "gp-dolia-polovykh",
+  "type": "measure",
+  "name": "GP.Доля польових (%)",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _admin = \nCALCULATE(\n\tDIVIDE(\n\t\tCALCULATE(\n\t\t\tCOUNTROWS('fact_Employee_List'), \n\t\t\t'fact_Employee_List'[WORK_FORMAT_ON_EMPLOYEE_KEY] = \"5\"\n\t\t),\n\t\tCOUNTROWS('fact_Employee_List')\n\t)\n)\nVAR _admin_lt = \n\tCALCULATE(\n\t\tDIVIDE(\n\t\t\tCALCULATE(\n\t\t\t\tCOUNTROWS('fact_Employee_List'), \n\t\t\t\t'fact_Employee_List'[WORK_FORMAT_ON_EMPLOYEE_KEY] = \"5\"\n\t\t\t),\n\t\t\tCOUNTROWS('fact_Employee_List')\n\t\t),\n\t\tTREATAS( VALUES( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ), fact_Employee_List[USER_ACCESS_ID] )\n\t) \nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE('t_HierarchyTypes'[Index]),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\nRETURN \n\tTRIM(\n\t\tFORMAT(\n\t\t\tCOALESCE(_res, \"-\"),\n\t\t\t\"0.00%\"\n\t\t) \n\t)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_LT_OS[USER_ACCESS_ID]",
+      "fact_Employee_List[USER_ACCESS_ID]",
+      "fact_Employee_List[WORK_FORMAT_ON_EMPLOYEE_KEY]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "fact_Employee_List",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "Index",
+      "USER_ACCESS_ID",
+      "WORK_FORMAT_ON_EMPLOYEE_KEY"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "Доля польових (%)",
+    "purpose": "Розрахункове поле: відношення кількості працівників із форматом роботи Польовий у команді до загальної кількості працівників.  <br>Відношення кількості працівників, для яких work_format_on_employee_key = 5 до загальної чисельності команди (метрика Кількість співробітників всього, чол.) Розрахункове поле: ідношення кількості працівників із форматом роботи Польовий у команді до загальної кількості працівників.  <br>Відношення кількості працівників, для яких work_format_on_employee_key = 5 до загальної чисельності команди (людей)",
+    "requirementRefs": [
+      "Командний-профіль/Паспортна-частина-групового-профілю/Сторінка-Картка-команди",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду"
+    ]
+  },
+  "tags": [
+    "dani-pro-komandu",
+    "group-profile",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

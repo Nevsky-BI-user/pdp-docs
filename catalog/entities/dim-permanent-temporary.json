@@ -1,0 +1,72 @@
+{
+  "id": "dim-permanent-temporary",
+  "type": "entity",
+  "name": "dim_Permanent_Temporary",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "dim_Permanent_Temporary",
+  "sourceTables": [
+    "DM.vw_R27_dim_Permanent_Temporary"
+  ],
+  "columns": [
+    {
+      "name": "ID",
+      "dataType": "string",
+      "source": "ID",
+      "isCalculated": false
+    },
+    {
+      "name": "PERMANENT_TEMPORARY_DETAILS_KEY",
+      "dataType": "string",
+      "source": "PERMANENT_TEMPORARY_DETAILS_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "CODE",
+      "dataType": "string",
+      "source": "CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "NAME",
+      "dataType": "string",
+      "source": "NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "SORT_NUM",
+      "dataType": "int64",
+      "source": "SORT_NUM",
+      "isCalculated": false
+    },
+    {
+      "name": "PERMANENT_TEMPORARY",
+      "dataType": "string",
+      "source": "PERMANENT_TEMPORARY",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "fact_Employee_List",
+      "fromColumn": "PERMANENT_TEMPORARY_DETAILS_ID",
+      "toColumn": "PERMANENT_TEMPORARY_DETAILS_KEY",
+      "role": "to"
+    }
+  ],
+  "relatedMeasures": [
+    "PP.Трудові умови"
+  ],
+  "requirementRefs": [
+    "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+    "Командний-профіль/Сторінка-Загальна-інформація-про-команду"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/dim_Permanent_Temporary.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

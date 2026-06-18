@@ -1,0 +1,1056 @@
+{
+  "id": "fact-employee-list",
+  "type": "entity",
+  "name": "fact_Employee_List",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_Employee_List",
+  "sourceTables": [],
+  "columns": [
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_KEY",
+      "dataType": "string",
+      "source": "ORGANIZATION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "PERSON_KEY",
+      "dataType": "string",
+      "source": "PERSON_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_KEY",
+      "dataType": "string",
+      "source": "DIVISION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_ACCOUNTING_KEY",
+      "dataType": "string",
+      "source": "DIVISION_ACCOUNTING_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_KEY",
+      "dataType": "string",
+      "source": "POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "DISTRICT_KEY",
+      "dataType": "string",
+      "source": "DISTRICT_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "TARIFF_RATE_TYPE",
+      "dataType": "string",
+      "source": "TARIFF_RATE_TYPE",
+      "isCalculated": false
+    },
+    {
+      "name": "INDEXATION_BASE_MONTH_DATE",
+      "dataType": "dateTime",
+      "source": "INDEXATION_BASE_MONTH_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "PLAN_GO_WORK_DATE",
+      "dataType": "dateTime",
+      "source": "PLAN_GO_WORK_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "STAFFING_TABLE_NUM",
+      "dataType": "string",
+      "source": "STAFFING_TABLE_NUM",
+      "isCalculated": false
+    },
+    {
+      "name": "HIERARCHY_LEVEL",
+      "dataType": "string",
+      "source": "HIERARCHY_LEVEL",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CATEGORY_ORIGINAL",
+      "dataType": "string",
+      "source": "POSITION_CATEGORY_ORIGINAL",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CATEGORY_DETAIL",
+      "dataType": "string",
+      "source": "POSITION_CATEGORY_DETAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CATEGORY_INTERNAL",
+      "dataType": "string",
+      "source": "POSITION_CATEGORY_INTERNAL",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CATEGORY_INTERNAL_SORT",
+      "dataType": "int64",
+      "source": "POSITION_CATEGORY_INTERNAL_SORT",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_COLLAR",
+      "dataType": "string",
+      "source": "POSITION_COLLAR",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_AMT",
+      "dataType": "double",
+      "source": "POSITION_AMT",
+      "isCalculated": false
+    },
+    {
+      "name": "MIN_TARIFF_RATE",
+      "dataType": "double",
+      "source": "MIN_TARIFF_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "MAX_TARIFF_RATE",
+      "dataType": "double",
+      "source": "MAX_TARIFF_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "AVG_TARIFF_RATE",
+      "dataType": "double",
+      "source": "AVG_TARIFF_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "MIN_SALARY_RANGE",
+      "dataType": "double",
+      "source": "MIN_SALARY_RANGE",
+      "isCalculated": false
+    },
+    {
+      "name": "MAX_SALARY_RANGE",
+      "dataType": "double",
+      "source": "MAX_SALARY_RANGE",
+      "isCalculated": false
+    },
+    {
+      "name": "BONUS_YEAR_SALARY_CNT",
+      "dataType": "double",
+      "source": "BONUS_YEAR_SALARY_CNT",
+      "isCalculated": false
+    },
+    {
+      "name": "BONUS_QUARTER_SALARY_CNT",
+      "dataType": "double",
+      "source": "BONUS_QUARTER_SALARY_CNT",
+      "isCalculated": false
+    },
+    {
+      "name": "BONUS_MONTH_SALARY_CNT",
+      "dataType": "double",
+      "source": "BONUS_MONTH_SALARY_CNT",
+      "isCalculated": false
+    },
+    {
+      "name": "FTE_EMPLOYEE",
+      "dataType": "double",
+      "source": "FTE_EMPLOYEE",
+      "isCalculated": false
+    },
+    {
+      "name": "FTE_FACT",
+      "dataType": "double",
+      "source": "FTE_FACT",
+      "isCalculated": false
+    },
+    {
+      "name": "FTE_UNIT_POSITION",
+      "dataType": "double",
+      "source": "FTE_UNIT_POSITION",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_MOBILIZED",
+      "dataType": "int64",
+      "source": "IS_MOBILIZED",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_MATERNITY_LEAVE",
+      "dataType": "int64",
+      "source": "IS_MATERNITY_LEAVE",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_OUTSOURCING",
+      "dataType": "int64",
+      "source": "IS_OUTSOURCING",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_FREE_POSITION",
+      "dataType": "int64",
+      "source": "IS_FREE_POSITION",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_MAIN_POSITION",
+      "dataType": "int64",
+      "source": "IS_MAIN_POSITION",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_ADAPTATION",
+      "dataType": "int64",
+      "source": "IS_ADAPTATION",
+      "isCalculated": false
+    },
+    {
+      "name": "ADAPTATION_END_DATE",
+      "dataType": "dateTime",
+      "source": "ADAPTATION_END_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "WORK_DAYS_PER_MONTH",
+      "dataType": "double",
+      "source": "WORK_DAYS_PER_MONTH",
+      "isCalculated": false
+    },
+    {
+      "name": "NORM_HOUR",
+      "dataType": "double",
+      "source": "NORM_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "WORKED_HOUR",
+      "dataType": "double",
+      "source": "WORKED_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "ROLL_NUMBER",
+      "dataType": "string",
+      "source": "ROLL_NUMBER",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_NEWLY_HIRED",
+      "dataType": "int64",
+      "source": "IS_NEWLY_HIRED",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_HIRED_BY_TRANSFER",
+      "dataType": "int64",
+      "source": "IS_HIRED_BY_TRANSFER",
+      "isCalculated": false
+    },
+    {
+      "name": "FIRE_ARTICLE",
+      "dataType": "string",
+      "source": "FIRE_ARTICLE",
+      "isCalculated": false
+    },
+    {
+      "name": "FIRE_ARTICLE_SHORT",
+      "dataType": "string",
+      "source": "FIRE_ARTICLE_SHORT",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_FIRED_BY_DECEASE",
+      "dataType": "int64",
+      "source": "IS_FIRED_BY_DECEASE",
+      "isCalculated": false
+    },
+    {
+      "name": "CAUSE_OF_DEATH",
+      "dataType": "string",
+      "source": "CAUSE_OF_DEATH",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HIRING_CONDITION_TYPE_CODE",
+      "dataType": "string",
+      "source": "EMP_HIRING_CONDITION_TYPE_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_PART_TIME_FTE",
+      "dataType": "double",
+      "source": "JOB_PART_TIME_FTE",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_VACANCY",
+      "dataType": "int64",
+      "source": "IS_VACANCY",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_STATUS_DATE",
+      "dataType": "dateTime",
+      "source": "EMPLOYMENT_STATUS_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_STATUS_CODE",
+      "dataType": "string",
+      "source": "EMPLOYMENT_STATUS_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_STATUS",
+      "dataType": "string",
+      "source": "EMPLOYMENT_STATUS",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_KEY",
+      "dataType": "string",
+      "source": "STATUS_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_CODE",
+      "dataType": "string",
+      "source": "STATUS_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HEAD_ADMIN_ID",
+      "dataType": "string",
+      "source": "EMP_HEAD_ADMIN_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HEAD_FUNCTIONAL_ID",
+      "dataType": "string",
+      "source": "EMP_HEAD_FUNCTIONAL_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HRBP_ID",
+      "dataType": "string",
+      "source": "EMP_HRBP_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_FINBP_ID",
+      "dataType": "string",
+      "source": "EMP_FINBP_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "TENURE_ALT_BOX_KEY",
+      "dataType": "string",
+      "source": "TENURE_ALT_BOX_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "AGE",
+      "dataType": "int64",
+      "source": "AGE",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_YOUTH",
+      "dataType": "int64",
+      "source": "IS_YOUTH",
+      "isCalculated": false
+    },
+    {
+      "name": "AGE_BOX_KEY",
+      "dataType": "string",
+      "source": "AGE_BOX_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_TYPE_KEY",
+      "dataType": "string",
+      "source": "EMPLOYMENT_TYPE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "PERMANENT_TEMPORARY_ADVANCED_KEY",
+      "dataType": "int64",
+      "source": "PERMANENT_TEMPORARY_ADVANCED_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "WORK_FORMAT_ON_POSITION_KEY",
+      "dataType": "string",
+      "source": "WORK_FORMAT_ON_POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_ON_POSITION_KEY",
+      "dataType": "string",
+      "source": "OFFICE_ON_POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "WORK_FORMAT_ON_EMPLOYEE_KEY",
+      "dataType": "string",
+      "source": "WORK_FORMAT_ON_EMPLOYEE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_ON_EMPLOYEE_KEY",
+      "dataType": "string",
+      "source": "OFFICE_ON_EMPLOYEE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_ON_PERSON_KEY",
+      "dataType": "string",
+      "source": "OFFICE_ON_PERSON_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "PERIODIC_EMPLOYEE_KEY",
+      "dataType": "string",
+      "source": "PERIODIC_EMPLOYEE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "PERIODIC_UNIT_POSITION_KEY",
+      "dataType": "string",
+      "source": "PERIODIC_UNIT_POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_SPECIFICATION",
+      "dataType": "string",
+      "source": "POSITION_SPECIFICATION",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_RESERVED",
+      "dataType": "int64",
+      "source": "IS_RESERVED",
+      "isCalculated": false
+    },
+    {
+      "name": "RESERVATION_START_DATE",
+      "dataType": "dateTime",
+      "source": "RESERVATION_START_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "RESERVATION_END_DATE",
+      "dataType": "dateTime",
+      "source": "RESERVATION_END_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_BOUND_TO_MILITARY",
+      "dataType": "int64",
+      "source": "IS_BOUND_TO_MILITARY",
+      "isCalculated": false
+    },
+    {
+      "name": "MILITARY_REGISTRATION",
+      "dataType": "string",
+      "source": "MILITARY_REGISTRATION",
+      "isCalculated": false
+    },
+    {
+      "name": "DEFERMENT_REASON",
+      "dataType": "string",
+      "source": "DEFERMENT_REASON",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_AT_RISK",
+      "dataType": "int64",
+      "source": "IS_AT_RISK",
+      "isCalculated": false
+    },
+    {
+      "name": "RESERVED_BY_ORGANIZATION",
+      "dataType": "string",
+      "source": "RESERVED_BY_ORGANIZATION",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_GREEN",
+      "dataType": "int64",
+      "source": "IS_GREEN",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_MANAGER",
+      "dataType": "int64",
+      "source": "IS_MANAGER",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_PERIOD_BEGIN",
+      "dataType": "dateTime",
+      "source": "JOB_PERIOD_BEGIN",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_PERIOD_END",
+      "dataType": "dateTime",
+      "source": "JOB_PERIOD_END",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_PERIOD_BEGIN",
+      "dataType": "dateTime",
+      "source": "EMP_PERIOD_BEGIN",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_PERIOD_END",
+      "dataType": "dateTime",
+      "source": "EMP_PERIOD_END",
+      "isCalculated": false
+    },
+    {
+      "name": "ID",
+      "dataType": "string",
+      "source": "ID",
+      "isCalculated": false
+    },
+    {
+      "name": "TA_LINE_NUM",
+      "dataType": "int64",
+      "source": "TA_LINE_NUM",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_ID",
+      "dataType": "string",
+      "source": "EMPLOYEE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_ID",
+      "dataType": "string",
+      "source": "JOB_TITLE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DISTRICT_ID",
+      "dataType": "string",
+      "source": "DISTRICT_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_BIRTH_DATE",
+      "dataType": "dateTime",
+      "source": "EMP_BIRTH_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_RECEIPT_DATE",
+      "dataType": "dateTime",
+      "source": "EMP_RECEIPT_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_DEFINE_ATTR_DATE",
+      "dataType": "dateTime",
+      "source": "EMP_DEFINE_ATTR_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "FULL_NAME",
+      "dataType": "string",
+      "source": "FULL_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "DIRECTION",
+      "dataType": "string",
+      "source": "DIRECTION",
+      "isCalculated": false
+    },
+    {
+      "name": "SUB_DIRECTION",
+      "dataType": "string",
+      "source": "SUB_DIRECTION",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION",
+      "dataType": "string",
+      "source": "POSITION",
+      "isCalculated": false
+    },
+    {
+      "name": "PERSONNEL_UNIT",
+      "dataType": "string",
+      "source": "PERSONNEL_UNIT",
+      "isCalculated": false
+    },
+    {
+      "name": "DATE_OF_BIRTH",
+      "dataType": "dateTime",
+      "source": "DATE_OF_BIRTH",
+      "isCalculated": false
+    },
+    {
+      "name": "PHONE_WORK",
+      "dataType": "string",
+      "source": "PHONE_WORK",
+      "isCalculated": false
+    },
+    {
+      "name": "PHONE_PERSONAL",
+      "dataType": "string",
+      "source": "PHONE_PERSONAL",
+      "isCalculated": false
+    },
+    {
+      "name": "EMAIL",
+      "dataType": "string",
+      "source": "EMAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_WORK_FORMAT",
+      "dataType": "string",
+      "source": "EMP_WORK_FORMAT",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_WORK_FORMAT",
+      "dataType": "string",
+      "source": "POSITION_WORK_FORMAT",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_OFFICE_ADRESS",
+      "dataType": "string",
+      "source": "EMP_OFFICE_ADRESS",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_OFFICE_ADRESS",
+      "dataType": "string",
+      "source": "POSITION_OFFICE_ADRESS",
+      "isCalculated": false
+    },
+    {
+      "name": "UNIVERSITY",
+      "dataType": "string",
+      "source": "UNIVERSITY",
+      "isCalculated": false
+    },
+    {
+      "name": "EDUCATION",
+      "dataType": "string",
+      "source": "EDUCATION",
+      "isCalculated": false
+    },
+    {
+      "name": "EDUCATION_LVL",
+      "dataType": "string",
+      "source": "EDUCATION_LVL",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION",
+      "dataType": "string",
+      "source": "ORGANIZATION",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_ADMIN_NAME",
+      "dataType": "string",
+      "source": "EMPLOYEE_ADMIN_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_FUNC_NAME",
+      "dataType": "string",
+      "source": "EMPLOYEE_FUNC_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_HRBP_NAME",
+      "dataType": "string",
+      "source": "EMPLOYEE_HRBP_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_FINBP_NAME",
+      "dataType": "string",
+      "source": "EMPLOYEE_FINBP_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "HAB_FOR_AGRO",
+      "dataType": "string",
+      "source": "HAB_FOR_AGRO",
+      "isCalculated": false
+    },
+    {
+      "name": "WORK_CONDITION",
+      "dataType": "string",
+      "source": "WORK_CONDITION",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_TYPE",
+      "dataType": "string",
+      "source": "EMPLOYMENT_TYPE",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_JOB_SPECIFICATION",
+      "dataType": "string",
+      "source": "POSITION_JOB_SPECIFICATION",
+      "isCalculated": false
+    },
+    {
+      "name": "SUB_DIRECTION_LVL_3",
+      "dataType": "string",
+      "source": "SUB_DIRECTION_LVL_3",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_VETERAN",
+      "dataType": "int64",
+      "source": "IS_VETERAN",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_VETERAN_NEWMAN",
+      "dataType": "int64",
+      "source": "IS_VETERAN_NEWMAN",
+      "isCalculated": false
+    },
+    {
+      "name": "DISABILITY_GROUP",
+      "dataType": "string",
+      "source": "DISABILITY_GROUP",
+      "isCalculated": false
+    },
+    {
+      "name": "DISABILITY_VALIDITY",
+      "dataType": "dateTime",
+      "source": "DISABILITY_VALIDITY",
+      "isCalculated": false
+    },
+    {
+      "name": "TAX_CODE",
+      "dataType": "string",
+      "source": "TAX_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "CHILDREN_AMOUNT_UNDER_18",
+      "dataType": "int64",
+      "source": "CHILDREN_AMOUNT_UNDER_18",
+      "isCalculated": false
+    },
+    {
+      "name": "MILITARY_REGISTRATION_UKR",
+      "dataType": "string",
+      "source": "MILITARY_REGISTRATION_UKR",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_NAME",
+      "dataType": "string",
+      "source": "STATUS_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "CHILDREN_AMOUNT_UNDER_14",
+      "dataType": "int64",
+      "source": "CHILDREN_AMOUNT_UNDER_14",
+      "isCalculated": false
+    },
+    {
+      "name": "WORKING_HOURS",
+      "dataType": "string",
+      "source": "WORKING_HOURS",
+      "isCalculated": false
+    },
+    {
+      "name": "PERMANENT_TEMPORARY_DETAILS_ID",
+      "dataType": "int64",
+      "source": "PERMANENT_TEMPORARY_DETAILS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HIRING_CONDITION_TYPE_NAME",
+      "dataType": "string",
+      "source": "EMP_HIRING_CONDITION_TYPE_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "DISABLED_TYPE",
+      "dataType": "string",
+      "source": "DISABLED_TYPE",
+      "isCalculated": false
+    },
+    {
+      "name": "WORK_DAYS_PER_MONTH_FACT",
+      "dataType": "double",
+      "source": "WORK_DAYS_PER_MONTH_FACT",
+      "isCalculated": false
+    },
+    {
+      "name": "FULL_NAME_short",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_Person",
+      "fromColumn": "PERSON_KEY",
+      "toColumn": "PERSON_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position",
+      "fromColumn": "POSITION_KEY",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Unit",
+      "fromColumn": "DIVISION_KEY",
+      "toColumn": "UNIT_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Organization",
+      "fromColumn": "ORGANIZATION_KEY",
+      "toColumn": "ORGANIZATION_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Work_Format",
+      "fromColumn": "WORK_FORMAT_ON_EMPLOYEE_KEY",
+      "toColumn": "WORK_FORMAT_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employee_Status",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employment_Type",
+      "fromColumn": "EMPLOYMENT_TYPE_KEY",
+      "toColumn": "EMPLOYMENT_TYPE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employee_Special_FinBP",
+      "fromColumn": "EMP_HEAD_FUNCTIONAL_ID",
+      "toColumn": "ID",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employee_Special_Head_admin",
+      "fromColumn": "EMP_HEAD_ADMIN_ID",
+      "toColumn": "ID",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employee_Special_Head_functional",
+      "fromColumn": "EMP_HEAD_FUNCTIONAL_ID",
+      "toColumn": "ID",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employee_Special_HRBP",
+      "fromColumn": "EMP_HRBP_ID",
+      "toColumn": "ID",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Admin_OS",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position_Category",
+      "fromColumn": "POSITION_CATEGORY_DETAIL",
+      "toColumn": "Position_Category_Detail",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Office",
+      "fromColumn": "OFFICE_ON_POSITION_KEY",
+      "toColumn": "OFFICE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Permanent_Temporary",
+      "fromColumn": "PERMANENT_TEMPORARY_DETAILS_ID",
+      "toColumn": "PERMANENT_TEMPORARY_DETAILS_KEY",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [
+    "5AC.Коефіцієнт абсентеїзму",
+    "AC.Відсоток днів відпустки в робочі дні",
+    "AC.Доля співробітників з відпустками понад 10 днів",
+    "AC.Лідер за невикористаними днями відпустки",
+    "AC.Лідер за часом без відпустки",
+    "AC.Середня кількість днів використаної відпустки",
+    "AC.Середня кількість днів невикористаної відпустки",
+    "AC.Середня кількість лікарняних на співробітника",
+    "AC.Середня тривалість відпустки співробітника, днів",
+    "AC.Середня тривалість лікарняного на співробітника",
+    "GP.Доля Line (%)",
+    "GP.Доля Middle managers (%)",
+    "GP.Доля Senior managers (%)",
+    "GP.Доля Specialists (%)",
+    "GP.Доля Workers (%)",
+    "GP.Доля гібрид онлайн (%)",
+    "GP.Доля гібрид офлайн (%)",
+    "GP.Доля заброньованих чоловіків(%)",
+    "GP.Доля онлайн (%)",
+    "GP.Доля операціоністів",
+    "GP.Доля офлайн (%)",
+    "GP.Доля польових (%)",
+    "GP.Доля студентів",
+    "GP.Доля чоловіків під ризиком мобілізації(%)",
+    "GP.Кількість FTE по штату (план)",
+    "GP.Кількість Ветеранів",
+    "GP.Кількість зайнятих FTE (факт)",
+    "GP.Кількість мобілізованих",
+    "GP.Кількість основних працівників",
+    "GP.Кількість сезонних працівників",
+    "GP.Кількість співробітників у декретній відпустці",
+    "GP.Кількість студентів",
+    "GP.Кількість чоловіків БЕЗ ризику мобілізації(%)",
+    "GP.Кількість чоловіків під ризиком мобілізації(%)",
+    "GP.Середня кількість днів невикористаної відпустки співробітником",
+    "GP.Середній вік",
+    "GP.Укомплектованість штату (%)",
+    "PP.% днів відпустки в робочі дні",
+    "PP.% доплати по суміщенню",
+    "PP.FinBP",
+    "PP.HRBP",
+    "PP.SVG.Позиція в окладній вилці",
+    "PP.min_tariff_rate",
+    "PP.ІПН",
+    "PP.Абсентеїзм",
+    "PP.Агро Хаб",
+    "PP.Адміністративний керівник",
+    "PP.Адреса офісу (працівник)",
+    "PP.Адреса офісу (штат)",
+    "PP.Бронювання до",
+    "PP.ВНЗ",
+    "PP.Ветеран-Новачок",
+    "PP.Вид зайнятості",
+    "PP.Відношення до ВО",
+    "PP.Відстрочка від призову",
+    "PP.Військова частина",
+    "PP.Група інвалідності",
+    "PP.Дата народження",
+    "PP.Дні відпустки",
+    "PP.Дійсність інвалідності до",
+    "PP.Діти до 14 років",
+    "PP.Діти до 18 років",
+    "PP.Електронна пошта",
+    "PP.Зайнятих ставок з відсутностями",
+    "PP.Зайнятих ставок по суміщенню",
+    "PP.Зайнятих ставок фактично",
+    "PP.Залишок відпустки",
+    "PP.Категорія механізатора",
+    "PP.Категорія посади",
+    "PP.Квартальна премія",
+    "PP.Квартальна премія окладів",
+    "PP.Координатор для мобілізованих",
+    "PP.Кількість відпусток",
+    "PP.Кількість довгих відпусток",
+    "PP.Лікарняні",
+    "PP.Максимум вилки",
+    "PP.Мінімум вилки",
+    "PP.Місяці без відпустки",
+    "PP.На чиєму місці сидить",
+    "PP.Надомний інвалід (квота)",
+    "PP.Напрям",
+    "PP.Організація",
+    "PP.Освіта",
+    "PP.Офіс (штат)",
+    "PP.Позиція в окладній вилці",
+    "PP.Посада",
+    "PP.Посада зведена",
+    "PP.Посада по суміщенню",
+    "PP.Пріоритетне місце роботи",
+    "PP.Піднапрям",
+    "PP.Піднапрям рівень 2",
+    "PP.Підрозділ кадровий",
+    "PP.Підрозділ кадровий по суміщенню",
+    "PP.Ризик мобілізації",
+    "PP.Ризик.Вид відстрочки",
+    "PP.Робочий телефон",
+    "PP.Робочі години",
+    "PP.Рівень в ієрархії",
+    "PP.Річний бонус",
+    "PP.Річний бонус окладів",
+    "PP.Середина вилки",
+    "PP.Середня тривалість відпустки",
+    "PP.Середня тривалість лікарняного",
+    "PP.Спеціальність",
+    "PP.Статус Ветеран",
+    "PP.Статус працівника",
+    "PP.Строк договору до дати",
+    "PP.Термін суміщення (міс.)",
+    "PP.Тривалість довгих відпусток",
+    "PP.Трудові умови",
+    "PP.Умови прийому",
+    "PP.Уточнення по посаді",
+    "PP.Уточнення по роботах",
+    "PP.Формат роботи (працівник)",
+    "PP.Формат роботи (штат)",
+    "PP.Функціональний керівник",
+    "PP.Цільовий розмір річної винагороди, до оподаткування",
+    "PP.Щомісячна премія",
+    "PP.Щомісячна премія окладів",
+    "Доля управлінських категорій серед всіх співробітників (%)"
+  ],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_Employee_List.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,49 @@
+{
+  "id": "ac-br-trend-otsinky-rezultatyvnosti-tor",
+  "type": "measure",
+  "name": "AC.BR.Тренд оцінки результативності (ТОР)",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SELECTEDVALUE('fact_Burnout_Indicators'[PERFORMANCE_RATE_TREND])",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Burnout_Indicators[PERFORMANCE_RATE_TREND]"
+    ],
+    "tables": [
+      "fact_Burnout_Indicators"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "PERFORMANCE_RATE_TREND"
+    ],
+    "powerQuery": "fact_Burnout_Indicators"
+  },
+  "business": {
+    "definition": "PERFORMANCE_RATE_TREND → Тренд Оцінки рез-ті (%); PERFORMANCE_RATE_TREND → Тренд оцінки результативності",
+    "purpose": "",
+    "requirementRefs": [
+      "Кейс-Втрати-Продуктивності-Працівників",
+      "Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22"
+    ]
+  },
+  "tags": [
+    "analytical-cases",
+    "burnout-risk",
+    "export",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

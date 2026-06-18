@@ -1,0 +1,48 @@
+{
+  "id": "pp-vnz",
+  "type": "measure",
+  "name": "PP.ВНЗ",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "COALESCE(\n\tSELECTEDVALUE('fact_Employee_List'[UNIVERSITY]),\n\t\"-\"\n)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[UNIVERSITY]"
+    ],
+    "tables": [
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "UNIVERSITY"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "UNIVERSITY → Назва ВНЗ (останній); UNIVERSITY → Навчальний заклад",
+    "purpose": "Це назва останнього ВНЗ  <br>Якщо дані про ВНЗ відсутні, то показати текст \"Дані відсутні\"  <br>Якщо довга назва, то переносити на іншу строку  <br>Якщо по працівнику є кілька записів по освіті, показувати детальні дані про інші заклади освіти - назва,  спеціальність, рівень освіти по наведенню на кнопку Деталізація - ця частина ТЗ буде виконана після побудови відповідної фактової таблиці в DWH, так як зараз в довіднику немає історичних даних по освіті. Також буде додано рік завершення навчання",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника/Деталізація-блоку-Освіта"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

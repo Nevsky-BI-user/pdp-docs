@@ -1,0 +1,62 @@
+{
+  "id": "gp-rezultatyvnist-otsinka-rezultatyvnosti-serednia-otsinka",
+  "type": "measure",
+  "name": "GP.Результативність.Оцінка результативності.Середня оцінка",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\Результативність та оцінка\\Оцінка результативності",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt= TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), 'dim_Admin_OS'[USER_ACCESS_ID])\n\nVAR _admin = \nCALCULATE(\n    AVERAGEA('fact_Employee_Performance'[OFFICIAL_RATE]))\n\nVAR _admin_lt = \nCALCULATE(\n    AVERAGEA('fact_Employee_Performance'[OFFICIAL_RATE]),\n    _filter_lt)\n\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\n\nRETURN _res",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_Employee_Performance[OFFICIAL_RATE]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_Employee_Performance",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List",
+      "DM.vw_R27_fact_Employee_Performance_PBI"
+    ],
+    "sourceColumns": [
+      "Index",
+      "OFFICIAL_RATE",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "OFFICIAL_RATE → Оцінка керівника (Офіційна оцінка компетенції); OFFICIAL_RATE → Оцінка кожного індикатора керівником",
+    "purpose": "",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Зміна-джерела-даних-для-павутинки-Оцінка-результативності",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/ТЗ-на-побудову-візуала-Павутинка-по-оцінці-результативності-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "otsinka-rezultatyvnosti",
+    "pdp",
+    "rezultatyvnist-ta-otsinka"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

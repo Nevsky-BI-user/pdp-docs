@@ -1,0 +1,42 @@
+{
+  "id": "pp-zrostannia-tsilovoi-richnoi-vynahorody-do-opodatkuvannia-za-ostanni-12-mis",
+  "type": "measure",
+  "name": "PP.Зростання цільової річної винагороди, до оподаткування (за останні 12 міс.)",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\TRS",
+  "formatString": "#,0.0%;-#,0.0%;#,0.0%",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _Now = [PP.Цільовий розмір річної винагороди, до оподаткування]\nVAR _Prev =  [PP.Цільовий розмір річної винагороди, до оподаткування (12 місяців назад)]\nVAR _res = DIVIDE(_Now-COALESCE(_Prev, _Now),_Prev, \"Дані відсутні\")\nRETURN _res",
+  "dependencies": {
+    "measures": [
+      "PP.Цільовий розмір річної винагороди, до оподаткування",
+      "PP.Цільовий розмір річної винагороди, до оподаткування (12 місяців назад)"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

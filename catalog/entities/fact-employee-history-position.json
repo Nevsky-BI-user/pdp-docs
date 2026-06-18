@@ -1,0 +1,545 @@
+{
+  "id": "fact-employee-history-position",
+  "type": "entity",
+  "name": "fact_Employee_History_Position",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_Employee_History_Position",
+  "sourceTables": [
+    "DM.vw_R27_fact_Employee_History_Position"
+  ],
+  "columns": [
+    {
+      "name": "PERIOD",
+      "dataType": "dateTime",
+      "source": "PERIOD",
+      "isCalculated": false
+    },
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_ID",
+      "dataType": "string",
+      "source": "EMPLOYEE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_NAME",
+      "dataType": "string",
+      "source": "EMPLOYEE_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_ID",
+      "dataType": "string",
+      "source": "ORGANIZATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_NAME",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "DIRECTION",
+      "dataType": "string",
+      "source": "DIRECTION",
+      "isCalculated": false
+    },
+    {
+      "name": "SUB_DIRECTION",
+      "dataType": "string",
+      "source": "SUB_DIRECTION",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_ID",
+      "dataType": "string",
+      "source": "JOB_TITLE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_NAME",
+      "dataType": "string",
+      "source": "JOB_TITLE_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_TYPE_KEY",
+      "dataType": "string",
+      "source": "EMPLOYMENT_TYPE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_ON_POSITION_KEY",
+      "dataType": "string",
+      "source": "OFFICE_ON_POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_MAIN_POSITION",
+      "dataType": "boolean",
+      "source": "IS_MAIN_POSITION",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_KEY",
+      "dataType": "string",
+      "source": "STATUS_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "RECEIPT_DATE",
+      "dataType": "dateTime",
+      "source": "RECEIPT_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "DISMISSAL_DATE",
+      "dataType": "dateTime",
+      "source": "DISMISSAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_PART_TIME_ID",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_PART_TIME_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_PART_TIME_ID",
+      "dataType": "string",
+      "source": "JOB_TITLE_PART_TIME_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_PART_TIME_AMT",
+      "dataType": "double",
+      "source": "JOB_TITLE_PART_TIME_AMT",
+      "isCalculated": false
+    },
+    {
+      "name": "PART_TIME_PERIOD",
+      "dataType": "int64",
+      "source": "PART_TIME_PERIOD",
+      "isCalculated": false
+    },
+    {
+      "name": "REASON_CHANGE_STATE_CODE",
+      "dataType": "string",
+      "source": "REASON_CHANGE_STATE_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_POSITION_CHANGE",
+      "dataType": "boolean",
+      "source": "IS_POSITION_CHANGE",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_ANNUAL_TARGET_INCOME_CHANGE",
+      "dataType": "boolean",
+      "source": "IS_ANNUAL_TARGET_INCOME_CHANGE",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_POSITION_CATEGORY_CHANGE",
+      "dataType": "boolean",
+      "source": "IS_POSITION_CATEGORY_CHANGE",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_SALARY_CHANGE",
+      "dataType": "boolean",
+      "source": "IS_SALARY_CHANGE",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CATEGORY_DETAIL",
+      "dataType": "string",
+      "source": "POSITION_CATEGORY_DETAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "HIERARCHY_LEVEL",
+      "dataType": "string",
+      "source": "HIERARCHY_LEVEL",
+      "isCalculated": false
+    },
+    {
+      "name": "seniority_LAST_POSITION_HIRE_DATE",
+      "dataType": "int64",
+      "source": "seniority_LAST_POSITION_HIRE_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "seniority_FIRST_HOLDING_HIRE_DATE",
+      "dataType": "int64",
+      "source": "seniority_FIRST_HOLDING_HIRE_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "seniority_LAST_HOLDING_HIRE_DATE",
+      "dataType": "int64",
+      "source": "seniority_LAST_HOLDING_HIRE_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "LAST_HOLDING_HIRE_DATE",
+      "dataType": "dateTime",
+      "source": "LAST_HOLDING_HIRE_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "SALARY",
+      "dataType": "double",
+      "source": "SALARY",
+      "isCalculated": false
+    },
+    {
+      "name": "TARIFF_RATE_TYPE_CODE",
+      "dataType": "string",
+      "source": "TARIFF_RATE_TYPE_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "PAYMENT_PLAN_SUM",
+      "dataType": "double",
+      "source": "PAYMENT_PLAN_SUM",
+      "isCalculated": false
+    },
+    {
+      "name": "BONUS_YEAR_SALARY_CNT",
+      "dataType": "double",
+      "source": "BONUS_YEAR_SALARY_CNT",
+      "isCalculated": false
+    },
+    {
+      "name": "BONUS_QUARTER_SALARY_CNT",
+      "dataType": "double",
+      "source": "BONUS_QUARTER_SALARY_CNT",
+      "isCalculated": false
+    },
+    {
+      "name": "BONUS_MONTH_SALARY_CNT",
+      "dataType": "double",
+      "source": "BONUS_MONTH_SALARY_CNT",
+      "isCalculated": false
+    },
+    {
+      "name": "ANNUAL_TARGET_INCOME",
+      "dataType": "double",
+      "source": "ANNUAL_TARGET_INCOME",
+      "isCalculated": false
+    },
+    {
+      "name": "MHP_STAR",
+      "dataType": "double",
+      "source": "MHP_STAR",
+      "isCalculated": false
+    },
+    {
+      "name": "MHP_STAR_DATE",
+      "dataType": "dateTime",
+      "source": "MHP_STAR_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "GENERAL_PERFORMANCE_STR_RATE",
+      "dataType": "string",
+      "source": "GENERAL_PERFORMANCE_STR_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "GENERAL_PERFORMANCE_DESC_RATE",
+      "dataType": "double",
+      "source": "GENERAL_PERFORMANCE_DESC_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "PERFORMANCE_YEAR",
+      "dataType": "int64",
+      "source": "PERFORMANCE_YEAR",
+      "isCalculated": false
+    },
+    {
+      "name": "PERFORMANCE_TYPE",
+      "dataType": "string",
+      "source": "PERFORMANCE_TYPE",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_BEGIN",
+      "dataType": "string",
+      "source": "POSITION_BEGIN",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_BEGIN",
+      "dataType": "string",
+      "source": "DIVISION_BEGIN",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_MANAGER",
+      "dataType": "string",
+      "source": "EMPLOYEE_MANAGER",
+      "isCalculated": false
+    },
+    {
+      "name": "IND_BONUS_RATE",
+      "dataType": "double",
+      "source": "IND_BONUS_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "CALC_PERFORMANCE_STR_RATE",
+      "dataType": "string",
+      "source": "CALC_PERFORMANCE_STR_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "Calc_Performance_Desc_Rate",
+      "dataType": "string",
+      "source": "Calc_Performance_Desc_Rate",
+      "isCalculated": false
+    },
+    {
+      "name": "PLAN_YEAR",
+      "dataType": "int64",
+      "source": "PLAN_YEAR",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_ON_OKR_DATE",
+      "dataType": "string",
+      "source": "POSITION_ON_OKR_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_ON_OKR_DATE",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_ON_OKR_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "HEAD_ADMIN_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "HEAD_ADMIN_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "HEAD_ADMIN_ON_ASSESMENT_DATE",
+      "dataType": "string",
+      "source": "HEAD_ADMIN_ON_ASSESMENT_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "COLLABORATION_HOUR",
+      "dataType": "double",
+      "source": "COLLABORATION_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "COLLABORATION_SPAN",
+      "dataType": "double",
+      "source": "COLLABORATION_SPAN",
+      "isCalculated": false
+    },
+    {
+      "name": "MEETING_HOUR",
+      "dataType": "double",
+      "source": "MEETING_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "CONFLICTING_MEETING_HOUR",
+      "dataType": "double",
+      "source": "CONFLICTING_MEETING_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "TOTAL_AFTER_HOURS",
+      "dataType": "double",
+      "source": "TOTAL_AFTER_HOURS",
+      "isCalculated": false
+    },
+    {
+      "name": "MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR",
+      "dataType": "double",
+      "source": "MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "MANAGER_COACHING_ONE_TO_ONE_HOUR",
+      "dataType": "double",
+      "source": "MANAGER_COACHING_ONE_TO_ONE_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "WORKDAYS_WITHOUT_SICKLEAVES_AND_VACATIONS",
+      "dataType": "int64",
+      "source": "WORKDAYS_WITHOUT_SICKLEAVES_AND_VACATIONS",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_APRIL_SALARY_REVIEW",
+      "dataType": "boolean",
+      "source": "IS_APRIL_SALARY_REVIEW",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_TECH_POSITION_CHANGE",
+      "dataType": "boolean",
+      "source": "IS_TECH_POSITION_CHANGE",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_TECH_SALARY_TRANSFER",
+      "dataType": "boolean",
+      "source": "IS_TECH_SALARY_TRANSFER",
+      "isCalculated": false
+    },
+    {
+      "name": "FlagTag",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "IS_OTHER_EVENT",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "EVENT_LIST",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "ORGANIZATION_NAME",
+      "dataType": "string",
+      "source": "ORGANIZATION_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_CODE",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_CODE",
+      "dataType": "string",
+      "source": "JOB_TITLE_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_PART_TIME_NAME",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_PART_TIME_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_PART_TIME_NAME",
+      "dataType": "string",
+      "source": "JOB_TITLE_PART_TIME_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_BEGIN_NAME",
+      "dataType": "string",
+      "source": "POSITION_BEGIN_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_BEGIN_NAME",
+      "dataType": "string",
+      "source": "DIVISION_BEGIN_NAME",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_Admin_OS",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Date",
+      "fromColumn": "PERIOD",
+      "toColumn": "Date",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [
+    "PP.history_position_maxd",
+    "PP.Бал",
+    "PP.Бал OKR",
+    "PP.Бонуси Р/К/М",
+    "PP.Год. взаємодії",
+    "PP.Год. конфліктів",
+    "PP.Год. нарад",
+    "PP.Год. нероб.",
+    "PP.Дата події",
+    "PP.Довжина дня",
+    "PP.ЖЦ_Категорія посади",
+    "PP.ЖЦ_Напрям",
+    "PP.ЖЦ_Посада",
+    "PP.ЖЦ_Піднапрям",
+    "PP.ЖЦ_Підприємство",
+    "PP.Зірка МХП",
+    "PP.Кадровий підрозділ",
+    "PP.Категорія (Performance)",
+    "PP.Код посади",
+    "PP.Код підрозділу",
+    "PP.Коеф. бонусу",
+    "PP.Колір (OKR)",
+    "PP.Колір (Performance)",
+    "PP.Колір шапки тултіпу",
+    "PP.Оклад",
+    "PP.Оклад_detailed",
+    "PP.Поточний РЦД",
+    "PP.Приріст_РЦД_detailed",
+    "PP.Підпис типу події",
+    "PP.Підприємство",
+    "PP.РЦД",
+    "PP.РЦД_detailed",
+    "PP.Стаж в холдингу",
+    "PP.Стаж на посаді",
+    "PP.Суміщення",
+    "PP.Тип події",
+    "PP.Форма оплати"
+  ],
+  "requirementRefs": [
+    "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_Employee_History_Position.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

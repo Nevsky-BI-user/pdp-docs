@@ -1,0 +1,65 @@
+{
+  "id": "gp-okr-svg-bar-chart",
+  "type": "measure",
+  "name": "GP.OKR.SVG.Bar chart",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\ОКР\\SVG",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "-- === НАЛАШТУВАННЯ РОЗМІРІВ ===\nVAR _CanvasWidth = 440\nVAR _CanvasHeight = 164\nVAR _HalfBar = 16\nVAR _TopMargin = 15\nVAR _BottomMargin = 30\nVAR _ChartTop = _TopMargin + 15 + _HalfBar\nVAR _ChartBottom = _CanvasHeight - _BottomMargin\nVAR _MaxBarHeight = _ChartBottom - _ChartTop\nVAR _ZeroLineY = _ChartBottom - _HalfBar\n\n-- === ОБЧИСЛЕННЯ (ФАКТ - БАРИ) ===\nVAR _TotalEmployees = CALCULATE([GP.ОКР.Кількість співробітників (Останній період оцінки)], ALL('dim_OKR_Evalution'))\n\n-- === ОБЧИСЛЕННЯ (ГАУС - КРИВА) ===\nVAR _TotalGaussian = CALCULATE(SUM('fact_Gaussian_Curve_OKR'[EMPLOYEE_COUNT]), ALL('fact_Gaussian_Curve_OKR'))\n\nVAR _Data = \n    ADDCOLUMNS(\n        SUMMARIZE('dim_OKR_Evalution', 'dim_OKR_Evalution'[CALC_PERFORMANCE_DESC_RATE]), \n        \n        \"EmpCount\", [GP.ОКР.Кількість співробітників (Останній період оцінки)],\n        \"ValuePct\", DIVIDE([GP.ОКР.Кількість співробітників (Останній період оцінки)], _TotalEmployees, 0),\n        \n        \"CurvePct\", \n            VAR _GaussCategory = CALCULATE(SELECTEDVALUE('dim_OKR_Evalution'[CALC_PERFORMANCE_DESC_RATE]))\n            RETURN DIVIDE(\n                CALCULATE(\n                    SUM('fact_Gaussian_Curve_OKR'[EMPLOYEE_COUNT]),\n                    'fact_Gaussian_Curve_OKR'[CALC_PERFORMANCE_DESC_RATE] = _GaussCategory,\n                    ALL('fact_Gaussian_Curve_OKR')\n                ),\n                _TotalGaussian, \n                0\n            ),\n        \n        \"SortOrder\", SWITCH('dim_OKR_Evalution'[CALC_PERFORMANCE_DESC_RATE],\n            \"Супер зелений\", 1, \"Зелений\", 2, \"Жовто-зелений\", 3, \"Жовтий\", 4, \"Жовто-червоний\", 5, \"Червоний\", 6, 7)\n    )\n\nVAR _MaxPctInGroup = 1 \nVAR _CountItems = COUNTROWS(_Data)\nVAR _BarWidth = _HalfBar * 2\nVAR _Gap = ROUND((_CanvasWidth - _BarWidth * _CountItems) / (_CountItems + 1), 0)\n\n-- === СТИЛІ ===\nVAR _ColorText = \"#1F4E79\"\nVAR _ColorLine = \"#94C0FF\"\n\n-- === ПІДГОТОВКА ТОЧОК ===\nVAR _Points = \n    ADDCOLUMNS(\n        _Data,\n        \"X\", _Gap + ([SortOrder] - 1) * (_BarWidth + _Gap) + (_BarWidth / 2),\n        \"Y_Bar\", _ZeroLineY - (_MaxBarHeight * DIVIDE([ValuePct], _MaxPctInGroup, 0)),\n        \"Y_Curve\", _ZeroLineY - (_MaxBarHeight * DIVIDE([CurvePct], _MaxPctInGroup, 0))\n    )\n\n-- === ГЕНЕРАЦІЯ ШЛЯХУ КРИВОЇ ===\nVAR _PathDefinition = \n    CONCATENATEX(\n        _Points,\n        VAR _Idx = [SortOrder]\n        VAR _X0 = [X]\n        VAR _Y0 = [Y_Curve]\n        VAR _X1 = MAXX(FILTER(_Points, [SortOrder] = _Idx + 1), [X])\n        VAR _Y1 = MAXX(FILTER(_Points, [SortOrder] = _Idx + 1), [Y_Curve])\n        VAR _X_1 = MAXX(FILTER(_Points, [SortOrder] = _Idx - 1), [X])\n        VAR _Y_1 = MAXX(FILTER(_Points, [SortOrder] = _Idx - 1), [Y_Curve])\n        VAR _X2 = MAXX(FILTER(_Points, [SortOrder] = _Idx + 2), [X])\n        VAR _Y2 = MAXX(FILTER(_Points, [SortOrder] = _Idx + 2), [Y_Curve])\n        VAR _P_1_X = IF(ISBLANK(_X_1), _X0, _X_1)\n        VAR _P_1_Y = IF(ISBLANK(_Y_1), _Y0, _Y_1)\n        VAR _P2_X = IF(ISBLANK(_X2), _X1, _X2)\n        VAR _P2_Y = IF(ISBLANK(_Y2), _Y1, _Y2)\n        VAR _CP1_X = _X0 + (_X1 - _P_1_X) / 6\n        VAR _CP1_Y = _Y0 + (_Y1 - _P_1_Y) / 6\n        VAR _CP2_X = _X1 - (_P2_X - _X0) / 6\n        VAR _CP2_Y = _Y1 - (_P2_Y - _Y0) / 6\n        RETURN \n            IF(_Idx = 1, \"M \" & _X0 & \" \" & _Y0 & \" \", \"\") & \n            IF(_Idx < _CountItems, \n                \"C \" & _CP1_X & \" \" & _CP1_Y & \", \" & _CP2_X & \" \" & _CP2_Y & \", \" & _X1 & \" \" & _Y1 & \" \", \n                \"\"\n            ),\n        \"\", [SortOrder], ASC\n    )\n\nVAR _FirstX = MAXX(FILTER(_Points, [SortOrder] = 1), [X])\nVAR _LastX  = MAXX(FILTER(_Points, [SortOrder] = _CountItems), [X])\n\n-- === ГЕНЕРАЦІЯ БАРІВ З TOOLTIP ===\nVAR _BarsSVG = \n    CONCATENATEX(\n        _Points,\n        VAR _CurrentPct = [ValuePct]\n        VAR _CurrentCount = [EmpCount]\n        VAR _CurrentCurve = [CurvePct]\n        VAR _CatName = 'dim_OKR_Evalution'[CALC_PERFORMANCE_DESC_RATE]\n        \n        VAR _ColorFill = SWITCH(_CatName,\n            \"Супер зелений\", \"#009051\",\n            \"Зелений\", \"#02BD3D\",\n            \"Жовто-зелений\", \"#C2E330\",\n            \"Жовтий\", \"#FFE521\",\n            \"Жовто-червоний\", \"#FF7E0D\",\n            \"Червоний\", \"#F23711\",\n            \"#CDE58E\"\n        )\n        \n        VAR _Line1 = SWITCH(_CatName, \"Супер зелений\", \"Супер\", \"Жовто-зелений\", \"Жовто-\", \"Жовто-червоний\", \"Жовто-\", _CatName)\n        VAR _Line2 = SWITCH(_CatName, \"Супер зелений\", \"зелений\", \"Жовто-зелений\", \"зелений\", \"Жовто-червоний\", \"червоний\", \"\")\n        \n        VAR _XPos = [X]\n        VAR _Y_Top_Fill = [Y_Bar]\n        \n        VAR _LabelValue = FORMAT(_CurrentPct, \"0.0%\") \n        VAR _LabelY = _Y_Top_Fill - _HalfBar - 3\n        \n        VAR _TooltipText = \n            _CatName & UNICHAR(10) & \n            \"К-ть працівників: \" & FORMAT(_CurrentCount, \"#,0\") & UNICHAR(10) & \n            \"Факт: \" & FORMAT(_CurrentPct, \"0.0%\") & UNICHAR(10) & \n            \"Крива (Гаус): \" & FORMAT(_CurrentCurve, \"0.0%\")\n\n        RETURN \n        \"<g>\" &\n            \"<title>\" & _TooltipText & \"</title>\" &\n            \"<rect x='\" & (_XPos - _BarWidth/2) & \"' y='0' width='\" & _BarWidth & \"' height='\" & _CanvasHeight & \"' fill='transparent' />\" &\n            IF(_CurrentPct > 0, \n                \"<line x1='\" & _XPos & \"' y1='\" & _ZeroLineY & \"' x2='\" & _XPos & \"' y2='\" & _Y_Top_Fill & \"' \n                       stroke='\" & _ColorFill & \"' stroke-width='\" & _BarWidth & \"' stroke-linecap='round' />\",\n                \"\") &\n            \"<text x='\" & _XPos & \"' y='\" & _LabelY & \"' text-anchor='middle' font-family='Segoe UI' font-weight='bold' font-size='11' fill='\" & _ColorText & \"'>\" & _LabelValue & \"</text>\" &\n            \"<text x='\" & _XPos & \"' y='\" & (_ZeroLineY + _HalfBar + 11) & \"' text-anchor='middle' font-family='Segoe UI' font-size='9' fill='\" & _ColorText & \"'>\" & \n                   \"<tspan x='\" & _XPos & \"' dy='0'>\" & _Line1 & \"</tspan>\" &\n                   \"<tspan x='\" & _XPos & \"' dy='1.1em'>\" & _Line2 & \"</tspan>\" &\n            \"</text>\" &\n        \"</g>\",\n        \"\", [SortOrder], ASC\n    )\n\nRETURN\n\"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 \" & _CanvasWidth & \" \" & _CanvasHeight & \"' overflow='hidden'>\" &\n    \"<path d='\" & _PathDefinition & \" L \" & _LastX & \" \" & _ZeroLineY & \" L \" & _FirstX & \" \" & _ZeroLineY & \" Z' \n           fill='\" & _ColorLine & \"' fill-opacity='0.2' stroke='none' />\" &\n    _BarsSVG &\n    \"<path d='\" & _PathDefinition & \"' \n           fill='none' stroke='\" & _ColorLine & \"' stroke-width='3' stroke-linecap='round' />\" &\n\"</svg>\"",
+  "dependencies": {
+    "measures": [
+      "GP.ОКР.Кількість співробітників (Останній період оцінки)"
+    ],
+    "columns": [
+      "dim_OKR_Evalution[CALC_PERFORMANCE_DESC_RATE]",
+      "fact_Gaussian_Curve_OKR[CALC_PERFORMANCE_DESC_RATE]",
+      "fact_Gaussian_Curve_OKR[EMPLOYEE_COUNT]"
+    ],
+    "tables": [
+      "dim_OKR_Evalution",
+      "fact_Gaussian_Curve_OKR"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.R27_fact_OKR_Goals"
+    ],
+    "sourceColumns": [
+      "CALC_PERFORMANCE_DESC_RATE",
+      "EMPLOYEE_COUNT"
+    ],
+    "powerQuery": "dim_OKR_Evalution"
+  },
+  "business": {
+    "definition": "CALC_PERFORMANCE_DESC_RATE → Колірна оцінка ОКР; CALC_PERFORMANCE_DESC_RATE → Загальна колірна оцінка ОКР; CALC_PERFORMANCE_DESC_RATE → Загальна колірна оцінка OKR; CALC_PERFORMANCE_DESC_RATE → Ціль виконана; CALC_PERFORMANCE_DESC_RATE → Ціль не виконана; CALC_PERFORMANCE_DESC_RATE → Колірна оцінка OKR за останній період; CALC_PERFORMANCE_DESC_RATE → Колірна оцінка OKR за передостанній період; CALC_PERFORMANCE_DESC_RATE → Загальний колір ОКР; CALC_PERFORMANCE_DESC_RATE → Колірна оцінка OKR",
+    "purpose": "Останнє НЕ пусте актуальне значення на дату (date) поточного запису Якщо поле Calc_Performance_Desc_Rate має значення Супер зелений, або Жовто-зелений, або Зелений, або Жовтий, або Жовто-червоний Якщо поле Calc_Performance_Desc_Rate має значення Червоний",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/Редизайн-паспортної-частини",
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Створити-блок-Виконання-OKR"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "main",
+    "okr",
+    "pdp",
+    "svg"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

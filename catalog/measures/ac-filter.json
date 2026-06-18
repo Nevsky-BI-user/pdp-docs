@@ -1,0 +1,52 @@
+{
+  "id": "ac-filter",
+  "type": "measure",
+  "name": "AC.Filter",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SELECTEDVALUE('fact_Burnout_Indicators'[IS_TOTAL_RISK])",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Burnout_Indicators[IS_TOTAL_RISK]"
+    ],
+    "tables": [
+      "fact_Burnout_Indicators"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "IS_TOTAL_RISK"
+    ],
+    "powerQuery": "fact_Burnout_Indicators"
+  },
+  "business": {
+    "definition": "IS_TOTAL_RISK → Ризик втрати працівника; IS_TOTAL_RISK → Ризик; IS_TOTAL_RISK → Ризик вигорання (%)",
+    "purpose": "Це відсоток працівників, які знаходяться в статусі \"Потребує уваги\" = (кількість працівників в статусі \"Потребує уваги\"/загальну чисельність команди)*100%",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/Редизайн-паспортної-частини",
+      "Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "analytical-cases",
+    "burnout-risk",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

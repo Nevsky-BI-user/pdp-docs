@@ -1,0 +1,52 @@
+{
+  "id": "ac-switch-trend-otsinky-okr",
+  "type": "measure",
+  "name": "AC.Switch.Тренд оцінки OKR",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SWITCH(\n\tSELECTEDVALUE('t_AC Burnout'[Burnout_Indicator]),\n\t\"Оцінка\", [AC.Чи є ризик вигорання по результатам оцінки OKR?],\n\t\"Дані\", [AC.Тренд оцінки OKR]\n)",
+  "dependencies": {
+    "measures": [
+      "AC.Тренд оцінки OKR",
+      "AC.Чи є ризик вигорання по результатам оцінки OKR?"
+    ],
+    "columns": [
+      "t_AC Burnout[Burnout_Indicator]"
+    ],
+    "tables": [
+      "t_AC Burnout"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "Burnout_Indicator"
+    ],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "Тренд оцінки OKR",
+    "purpose": "Тренд оцінки ОКР визначається порівнянням коефіцієнту індивідуального бонусу за останні два періоди.  <br>Якщо Ind_Bonus_Rate за останній рік [OKR_Last_Year_Rate] дорівнює Ind_Bonus_Rate за попередній рік [OKR_Prev_Year_Rate], то Стабільний  <br>Якщо Ind_Bonus_Rate за останній рік [OKR_Last_Year_Rate]  більше ніж Ind_Bonus_Rate за попередній рік [OKR_Prev_Year_Rate], то Зростання  <br>Якщо Ind_Bonus_Rate за останній рік [OKR_Last_Year_Rate] менше ніж Ind_Bonus_Rate за попередній рік [OKR_Prev_Year_Rate], то Спадання. Якщо у працівника Ind_Bonus_Rate присутній тільки за один період (рік), то ст",
+    "requirementRefs": [
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22"
+    ]
+  },
+  "tags": [
+    "analytical-cases",
+    "burnout-risk",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,59 @@
+{
+  "id": "pp-svg-otsinka-rezultatyvnosti-total",
+  "type": "measure",
+  "name": "PP.SVG.Оцінка результативності.Total",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Результативність та оцінка\\Результативність",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _fontFamily = \"Segoe UI\"\nVAR _labelColor = \"#003A5D\"\nVAR _MaxValue = 5\n\n// --- Параметри підпису ---\nVAR _ValueFontSize = 10\nVAR _TopTextH = 28\nVAR _BottomMargin = 22\n\n// --- Дані ---\nVAR _data_sup = SUMMARIZE(\n\t'fact_Employee_Performance_Total',\n\t'fact_Employee_Performance_Total'[performance_PBI_order],\n\t'fact_Employee_Performance_Total'[performence_period],\n\t\"Value1\", [PP.Оцінка результативності.Керівником.Total],\n\t\"Value2\", [PP.Оцінка результативності.Самооцінка.Total]\n)\n\n// --- Геометрія полотна ---\nVAR _W = 640\nVAR _H = 150\nVAR _MarginTop = 8\nVAR _MarginLR = 40\nVAR _ChartTop = _MarginTop + _TopTextH\nVAR _ChartBot = _H - _BottomMargin\nVAR _ChartH = _ChartBot - _ChartTop\n\nVAR _BarCount = COUNTROWS(_data_sup)\nVAR _BarWidth = 20\nVAR _BarGap = 10\nVAR _GroupWidth = (_BarWidth * 2) + _BarGap\nVAR _AvailableW = _W - 2 * _MarginLR\nVAR _GroupGap = IF(_BarCount > 1, (_AvailableW - _BarCount * _GroupWidth) / (_BarCount - 1), 0)\nVAR _StartX = _MarginLR\n\n// --- Побудова ---\nVAR _BarsSVG = CONCATENATEX(\n\tADDCOLUMNS(\n\t\tADDCOLUMNS(\n\t\t\t_data_sup,\n\t\t\t\"@i\", RANKX(_data_sup, [performance_PBI_order], , ASC, Dense) - 1\n\t\t),\n\t\t\"@xGroup\", _StartX + [@i] * (_GroupWidth + _GroupGap)\n\t),\n\tVAR _v1 = [Value1]\n\tVAR _v2 = [Value2]\n\n\tVAR _class1 = SWITCH(TRUE(),\n\t\tISBLANK(_v1), \"\",\n\t\t_v1 < 3, \"D\",\n\t\t_v1 <= 3.39, \"C\",\n\t\t_v1 <= 3.89, \"B\",\n\t\t_v1 <= 4.29, \"A\",\n\t\t_v1 <= 5.00, \"A+\"\n\t)\n\n\tVAR _class2 = SWITCH(TRUE(),\n\t\tISBLANK(_v2), \"\",\n\t\t_v2 < 3, \"D\",\n\t\t_v2 <= 3.39, \"C\",\n\t\t_v2 <= 3.89, \"B\",\n\t\t_v2 <= 4.29, \"A\",\n\t\t_v2 <= 5.00, \"A+\"\n\t)\n\n\tVAR _ColorFill1 = SWITCH(_class1,\n\t\t\"A+\", \"#8bd6ea\",\n\t\t\"A\", \"#5a974d\",\n\t\t\"B\", \"#e9c246\",\n\t\t\"C\", \"#9e241e\",\n\t\t\"D\", \"#a5a4a6\",\n\t\t\"#a5a4a6\"\n\t)\n\n\tVAR _ColorFill2 = SWITCH(_class2,\n\t\t\"A+\", \"#8bd6ea\",\n\t\t\"A\", \"#5a974d\",\n\t\t\"B\", \"#e9c246\",\n\t\t\"C\", \"#9e241e\",\n\t\t\"D\", \"#a5a4a6\",\n\t\t\"#a5a4a6\"\n\t)\n\n\tVAR _label1 = FORMAT(_v1, \"0.00\") & IF(_class1 <> \"\", \" (\" & _class1 & \")\", \"\")\n\tVAR _label2 = FORMAT(_v2, \"0.00\") & IF(_class2 <> \"\", \" (\" & _class2 & \")\", \"\")\n\n\tVAR _x1 = [@xGroup]\n\tVAR _x2 = [@xGroup] + _BarWidth + _BarGap\n\tVAR _cx = [@xGroup] + (_GroupWidth / 2)\n\n\tVAR _h1 = MIN(DIVIDE(_v1, _MaxValue, 0), 1) * _ChartH\n\tVAR _y1 = _ChartBot - _h1\n\tVAR _h2 = MIN(DIVIDE(_v2, _MaxValue, 0), 1) * _ChartH\n\tVAR _y2 = _ChartBot - _h2\n\n\tVAR _rects =\n\t\t\"<rect x='\" & _x1 & \"' y='\" & _ChartTop & \"' width='\" & _BarWidth & \"' height='\" & _ChartH & \"' fill='\" & _ColorFill1 & \"' fill-opacity='0.1' stroke='\" & _ColorFill1 & \"' stroke-width='1' stroke-opacity='0.3' />\" &\n\t\t\"<rect x='\" & _x2 & \"' y='\" & _ChartTop & \"' width='\" & _BarWidth & \"' height='\" & _ChartH & \"' fill='\" & _ColorFill2 & \"' fill-opacity='0.1' />\" &\n\t\t\"<rect x='\" & _x1 & \"' y='\" & FORMAT(_y1, \"0.0\") & \"' width='\" & _BarWidth & \"' height='\" & FORMAT(_h1, \"0.0\") & \"' fill='\" & _ColorFill1 & \"' stroke='\" & _ColorFill1 & \"' stroke-width='1' />\" &\n\t\t\"<rect x='\" & _x2 & \"' y='\" & FORMAT(_y2, \"0.0\") & \"' width='\" & _BarWidth & \"' height='\" & FORMAT(_h2, \"0.0\") & \"' fill='\" & _ColorFill2 & \"' fill-opacity='0.7' />\"\n\n\tVAR _labelMidX = _x1 + _BarWidth + (_BarGap / 2)\n\tVAR _labels =\n\t\t\"<text x='\" & (_labelMidX - 3) & \"' y='\" & (_ChartTop - 12) & \"' text-anchor='end' style='font-family:\" & _fontFamily & \"; font-size:\" & _ValueFontSize & \"px; fill:\" & _labelColor & \"; font-weight:700;'>\" & _label1 & \"</text>\" &\n\t\t\"<text x='\" & (_labelMidX + 3) & \"' y='\" & (_ChartTop - 12) & \"' text-anchor='start' style='font-family:\" & _fontFamily & \"; font-size:\" & _ValueFontSize & \"px; fill:\" & _labelColor & \";'>\" & _label2 & \"</text>\"\n\n\tVAR _periodLabel =\n\t\t\"<text x='\" & _cx & \"' y='\" & (_H - 5) & \"' text-anchor='middle' style='font-family:\" & _fontFamily & \"; font-size:12px; fill:\" & _labelColor & \"; font-weight:600;'>\" &\n\t\tSUBSTITUTE([performence_period], \"&\", \"&amp;\") &\n\t\t\"</text>\"\n\n\tRETURN _rects & _labels & _periodLabel,\n\t\"\",\n\t[performance_PBI_order], ASC\n)\n\nRETURN\n\"<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='\" & _H & \"' viewBox='0 0 \" & _W & \" \" & _H & \"' preserveAspectRatio='xMinYMid meet'>\n\t\" & _BarsSVG & \"\n</svg>\"",
+  "dependencies": {
+    "measures": [
+      "PP.Оцінка результативності.Керівником.Total",
+      "PP.Оцінка результативності.Самооцінка.Total"
+    ],
+    "columns": [
+      "fact_Employee_Performance_Total[performance_PBI_order]",
+      "fact_Employee_Performance_Total[performence_period]"
+    ],
+    "tables": [
+      "fact_Employee_Performance_Total"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_Employee_Performance_General_PBI"
+    ],
+    "sourceColumns": [
+      "performance_PBI_order",
+      "performence_period"
+    ],
+    "powerQuery": "fact_Employee_Performance_Total"
+  },
+  "business": {
+    "definition": "performance_PBI_order → Сортування (для виведення 4-х останніх періодів)",
+    "purpose": "",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Зміна-джерела-даних-для-павутинки-Оцінка-результативності",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/ТЗ-на-побудову-візуала-Павутинка-по-оцінці-результативності-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "rezultatyvnist",
+    "rezultatyvnist-ta-otsinka"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

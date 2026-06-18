@@ -1,0 +1,157 @@
+{
+  "id": "dim-employee-status",
+  "type": "entity",
+  "name": "dim_Employee_Status",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "dim_Employee_Status",
+  "sourceTables": [
+    "DM.vw_R27_dim_Employee_Status"
+  ],
+  "columns": [
+    {
+      "name": "ID",
+      "dataType": "string",
+      "source": "ID",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_KEY",
+      "dataType": "string",
+      "source": "STATUS_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "CODE",
+      "dataType": "string",
+      "source": "CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "NAME",
+      "dataType": "string",
+      "source": "NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "SORT_NUM",
+      "dataType": "int64",
+      "source": "SORT_NUM",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_SHORT",
+      "dataType": "string",
+      "source": "STATUS_SHORT",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS",
+      "dataType": "string",
+      "source": "STATUS",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "fact_Employee_List",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_TRS",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Vacation",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Vacation_Reserve",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Sick_Leaves",
+      "fromColumn": "status_key",
+      "toColumn": "STATUS_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Metrics",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Burnout_Indicators",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_employee_seniority_by_month",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Mobile_Limit",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Monthly_Viva_Insights",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Repayment_Credit",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_TRS_Plan",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Viva_Metrics",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Loss_of_Productivity",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "to"
+    }
+  ],
+  "relatedMeasures": [
+    "GP.Плинність (%)"
+  ],
+  "requirementRefs": [
+    "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+    "Командний-профіль/Паспортна-частина-групового-профілю/Сторінка-Картка-команди",
+    "Командний-профіль/Сторінка-Загальна-інформація-про-команду"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/dim_Employee_Status.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

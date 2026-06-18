@@ -1,0 +1,50 @@
+{
+  "id": "ac-br-kilkist-zvilnenykh",
+  "type": "measure",
+  "name": "AC.BR.Кількість звільнених",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+  "formatString": "0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SUM(fact_Burnout_Indicators[FIRED_UNIT_CNT])",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Burnout_Indicators[FIRED_UNIT_CNT]"
+    ],
+    "tables": [
+      "fact_Burnout_Indicators"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "FIRED_UNIT_CNT"
+    ],
+    "powerQuery": "fact_Burnout_Indicators"
+  },
+  "business": {
+    "definition": "FIRED_UNIT_CNT → Кількість звільнених; FIRED_UNIT_CNT → Загальна плинність; FIRED_UNIT_CNT → Прогноз плинності; FIRED_UNIT_CNT → Керівник з високою плинністю",
+    "purpose": "Для розрахунку метрики \"Плинність % по вертикалі\" Кількість звільнених (поле Fired_Unit_Cnt)  <br>/ Середньооблікову чисельність (поле Employee_Unit_Average) за останні 12 місяців або скільки існує підрозділ Прогноз плинності = Плинність з початку року/кількість повних місяців з початку року*12.  <br>- Плинність з початку року = це значення плинності за період з 1 січня поточного року до останнього повністю завершеного місяця.  <br>- Кількість повних місяців з початку року - кількість завершених календарних місяців у поточному році, починаючи з січня до останнього повного місяця. Наприклад, у ",
+    "requirementRefs": [
+      "Кейс-Втрати-Продуктивності-Працівників/Деталізація-метрик-в-кейсі-Продуктивність",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+      "Командний-профіль/Сторінка-Плинність-та-Exits"
+    ]
+  },
+  "tags": [
+    "analytical-cases",
+    "burnout-risk",
+    "export",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

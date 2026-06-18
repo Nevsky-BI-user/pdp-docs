@@ -1,0 +1,47 @@
+{
+  "id": "pp-diisnist-invalidnosti-do",
+  "type": "measure",
+  "name": "PP.Дійсність інвалідності до",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _date = SELECTEDVALUE(fact_Employee_List[DISABILITY_VALIDITY])\nRETURN\nCOALESCE(\n\tSWITCH(\n\t\tTRUE(),\n\t\t_date = DATE(1900,1,1), \"Безстроково\",\n\t\tNOT ISBLANK(_date), FORMAT(_date, \"dd.mm.yyyy\"),\n\t\t\"-\"\n\t),\n\t\"-\"\n)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[DISABILITY_VALIDITY]"
+    ],
+    "tables": [
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "DISABILITY_VALIDITY"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "DISABILITY_VALIDITY → Дійсність інвалідності до",
+    "purpose": "Поле зберігається в довіднику [ dm.vw_R27_dim_person]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List_PDP]  через відповідний зв’язок за ключем person_key  <br>Якщо значення в полі відсутнє, то показати текст \"Дані відсутні\"  або знак \"-\".",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

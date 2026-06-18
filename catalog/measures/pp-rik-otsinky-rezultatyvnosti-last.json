@@ -1,0 +1,50 @@
+{
+  "id": "pp-rik-otsinky-rezultatyvnosti-last",
+  "type": "measure",
+  "name": "PP.Рік оцінки результативності.Last",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Паспорт\\Результативність",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "\"Динаміка OKR\" \n--AVERAGE('fact_Burnout_Indicators'[LAST_YEAR_PERFORMANCE])",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Burnout_Indicators[LAST_YEAR_PERFORMANCE]"
+    ],
+    "tables": [
+      "fact_Burnout_Indicators"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "LAST_YEAR_PERFORMANCE"
+    ],
+    "powerQuery": "fact_Burnout_Indicators"
+  },
+  "business": {
+    "definition": "LAST_YEAR_PERFORMANCE → Значення останнього року оцінки результативності",
+    "purpose": "Ці дані виводяться в деталізацію по тренду оцінки результативності",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/Додати-інформацію-про-оцінку-результативності-працівника-в-Картку-працівника",
+      "Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Додати-інформацію-про-ОКР-команди-та-середню-оцінку-результативності-по-команді"
+    ]
+  },
+  "tags": [
+    "pasport",
+    "pdp",
+    "personal-profile",
+    "rezultatyvnist"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

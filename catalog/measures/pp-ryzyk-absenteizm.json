@@ -1,0 +1,44 @@
+{
+  "id": "pp-ryzyk-absenteizm",
+  "type": "measure",
+  "name": "PP.Ризик.Абсентеїзм",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Паспорт\\Ризики",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _v = [PP.Абсентеїзм]\nRETURN\n\tIF(ISBLANK(_v), \"Дані відсутні\", FORMAT(_v, \"0.0%\"))",
+  "dependencies": {
+    "measures": [
+      "PP.Абсентеїзм"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "Абсентеїзм",
+    "purpose": "Sick_Leave_Day_Without_Pregnancy/(FTE_weighted_work_day_for_absenteeism+Sick_Leave_Day_Without_Pregnancy)",
+    "requirementRefs": [
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "pasport",
+    "pdp",
+    "personal-profile",
+    "ryzyky"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

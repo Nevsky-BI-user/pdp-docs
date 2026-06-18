@@ -1,0 +1,47 @@
+{
+  "id": "pp-pryrist-okladu",
+  "type": "measure",
+  "name": "PP.Приріст окладу",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\TRS",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "GrowthLabel(\nVAR _CurrentRCD = [PP.Оклад]\nVAR _CurrentDate = MAX ( 'dim_Date'[Date] )\nVAR _PrevDate =\n    CALCULATE (\n        LASTNONBLANK ( 'dim_Date'[Date], [PP.Оклад] ),\n        FILTER (\n            ALLSELECTED ( 'dim_Date'[Date] ),\n            'dim_Date'[Date] < _CurrentDate\n        )\n    )\nVAR _IsFirstPoint = ISBLANK ( _PrevDate )\nVAR _PrevRCD =\n    CALCULATE (\n        [PP.Оклад],\n        'dim_Date'[Date] = _PrevDate\n    )\nVAR _GrowthPct =\n    ( DIVIDE ( _CurrentRCD, _PrevRCD ) - 1 ) * 100\nVAR _Result =\n    SWITCH (\n        TRUE (),\n        ISBLANK ( _CurrentRCD ), BLANK (),\n        _IsFirstPoint, 0,\n        ISBLANK ( _PrevRCD ) || _PrevRCD = 0, BLANK (),\n        _GrowthPct\n    )\nRETURN\n    _Result)",
+  "dependencies": {
+    "measures": [
+      "PP.Оклад"
+    ],
+    "columns": [
+      "dim_Date[Date]"
+    ],
+    "tables": [
+      "dim_Date"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "Date"
+    ],
+    "powerQuery": "dim_Date"
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

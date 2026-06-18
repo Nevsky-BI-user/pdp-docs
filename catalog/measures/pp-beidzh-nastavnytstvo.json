@@ -1,0 +1,42 @@
+{
+  "id": "pp-beidzh-nastavnytstvo",
+  "type": "measure",
+  "name": "PP.Бейдж.Наставництво",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Паспорт\\Бейджі",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "\"В розробці\"",
+  "dependencies": {
+    "measures": [],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "Наставництво",
+    "purpose": "Потрібно відібрати всі записи по працівнику [person_key], періоду [Period], організації [organization_key] , підрозділу [division_key], посаді [position_key], де  поле accrual_types_key = '83ce68c2-8a36-d6d5-21bd-27fc6b970114'   та category_of_accrual_sort  = '3' за останні 12 місяців, НЕ включаючи поточний.",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Бейджики-під-фото-працівника"
+    ]
+  },
+  "tags": [
+    "beidzhi",
+    "pasport",
+    "pdp",
+    "personal-profile"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

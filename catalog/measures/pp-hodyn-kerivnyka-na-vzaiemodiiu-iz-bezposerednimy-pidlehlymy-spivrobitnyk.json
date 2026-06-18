@@ -1,0 +1,54 @@
+{
+  "id": "pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-spivrobitnyk",
+  "type": "measure",
+  "name": "PP.Годин керівника на взаємодію із безпосередніми підлеглими (співробітник)",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Viva\\Viva management & Coaching",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR employee = \nFIRSTNONBLANKVALUE(\n\t\tVALUES('dim_Admin_OS'[ORDER_NUM]),\n\t\tCALCULATE(SELECTEDVALUE('dim_Admin_OS'[EMPLOYEE_ID])))\n\nVAR __val =\nCALCULATE(\n\t[PP.Годин керівника на взаємодію із безпосередніми підлеглими (Холдинг)],\n\tfact_Viva_Metrics[EMPLOYEE_ID] = employee)\n\nRETURN __val",
+  "dependencies": {
+    "measures": [
+      "PP.Годин керівника на взаємодію із безпосередніми підлеглими (Холдинг)"
+    ],
+    "columns": [
+      "dim_Admin_OS[EMPLOYEE_ID]",
+      "dim_Admin_OS[ORDER_NUM]",
+      "fact_Viva_Metrics[EMPLOYEE_ID]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_Viva_Metrics"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "EMPLOYEE_ID",
+      "ORDER_NUM"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "viva",
+    "viva-management-coaching"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

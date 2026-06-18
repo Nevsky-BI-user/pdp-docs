@@ -1,0 +1,45 @@
+{
+  "id": "pp-svg-beidzhi",
+  "type": "measure",
+  "name": "PP.SVG.Бейджі",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Паспорт\\Бейджі",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _fontFamily = \"Segoe UI, sans-serif\"\n\n// === Real measures ===\nVAR _starsYearsReal = [PP.Бейдж.Зірка МХП]\nVAR _trenerReal     = [PP.Бейдж.Тренерство]\nVAR _mentorReal     = [PP.Бейдж.Наставництво]\nVAR _ideasReal      = [PP.Бейдж.Банк ідей]\nVAR _hasStarReal    = NOT (ISBLANK(_starsYearsReal) || _starsYearsReal = \"Дані відсутні\")\nVAR _hasTrenerReal  = NOT (ISBLANK(_trenerReal) || _trenerReal = \"В розробці\")\nVAR _hasMentorReal  = NOT (ISBLANK(_mentorReal) || _mentorReal = \"В розробці\")\nVAR _hasIdeasReal   = NOT (ISBLANK(_ideasReal)  || _ideasReal  = \"В розробці\")\n\n// === Прив'язка до реальних мір ===\nVAR _hasStar     = _hasStarReal\nVAR _hasTrener   = _hasTrenerReal\nVAR _hasMentor   = _hasMentorReal\nVAR _hasIdeas    = _hasIdeasReal\n\nVAR _starsYears  = _starsYearsReal\n\n// Count з has-флагів (для adaptive layout — потрібен до побудови _badgesAll)\nVAR _Count =\n    (IF(_hasStar,   1, 0)) +\n    (IF(_hasTrener, 1, 0)) +\n    (IF(_hasMentor, 1, 0)) +\n    (IF(_hasIdeas,  1, 0))\n\n// === Adaptive labels: повний для Зірки тільки якщо вона єдиний бейдж ===\nVAR _starLbl  = IF(_Count = 1, \"Зірка МХП \" & _starsYears, \"Зірка\")\nVAR _trenerLbl = \"Тренер\"\nVAR _mentorLbl = \"Ментор\"\nVAR _ideasLbl  = \"Ідеї\"\n\nVAR _badgesAll =\n    UNION(\n        ROW(\"@ord\", 1, \"@kind\", \"star\",   \"@label\", _starLbl,   \"@show\", _hasStar),\n        ROW(\"@ord\", 2, \"@kind\", \"trener\", \"@label\", _trenerLbl, \"@show\", _hasTrener),\n        ROW(\"@ord\", 3, \"@kind\", \"mentor\", \"@label\", _mentorLbl, \"@show\", _hasMentor),\n        ROW(\"@ord\", 4, \"@kind\", \"ideas\",  \"@label\", _ideasLbl,  \"@show\", _hasIdeas)\n    )\nVAR _badges = FILTER(_badgesAll, [@show] = TRUE())\nVAR _data   = ADDCOLUMNS(_badges, \"@i\", RANKX(_badges, [@ord], , ASC, Dense) - 1)\n\n// === Layout ===\nVAR _W        = 200\nVAR _H        = 22\nVAR _TileH    = 16\nVAR _ColGap   = 4\nVAR _StartY   = 3\nVAR _StripeW  = 3\nVAR _TileRx   = 2\nVAR _FontSize = 8\n\n// Adaptive tile width:\n//  _Count = 1  → 170 (під довгий label \"Зірка МХП — отримана в YYYY\")\n//  _Count ≥ 2  → авто-fit по ширині viewBox: (200 - (n-1)*4) / n\nVAR _TileW =\n    SWITCH(\n        TRUE(),\n        _Count = 1, 170,\n        _Count = 2, 98,\n        _Count = 3, 64,\n        _Count = 4, 47,\n        0\n    )\n\nVAR _ContentW = _Count * _TileW + (_Count - 1) * _ColGap\nVAR _StartX   = (_W - _ContentW) / 2\n\n// === Icons ===\nVAR _StarIcon =\n    \"<polygon points='0,-7 2.1,-2.2 7,-2.2 3,1.3 4.4,7 0,3.5 -4.4,7 -3,1.3 -7,-2.2 -2.1,-2.2' fill='#F4B400' stroke='#C28800' stroke-width='0.5'/>\"\nVAR _TrenerIcon =\n    \"<g stroke='#2C5282' stroke-width='1.2' fill='none'><circle cx='0' cy='0' r='6'/><circle cx='0' cy='0' r='3'/><circle cx='0' cy='0' r='1' fill='#2C5282'/></g>\"\nVAR _MentorIcon =\n    \"<g fill='#7B61FF'><circle cx='-2.4' cy='-1.6' r='2.4'/><circle cx='2.4' cy='-1.6' r='2.4'/><path d='M-5.6,5.6 Q-5.6,1.6 -2.4,1.6 Q0,1.6 0,4 Q0,1.6 2.4,1.6 Q5.6,1.6 5.6,5.6 Z'/></g>\"\nVAR _IdeasIcon =\n    \"<g fill='#FBBF24' stroke='#9A6E00' stroke-width='0.5'><circle cx='0' cy='-1.6' r='4.6'/><rect x='-1.8' y='2.4' width='3.6' height='1.6' rx='0.8' fill='#9A6E00' stroke='none'/><rect x='-1.4' y='4.2' width='2.8' height='1.1' rx='0.5' fill='#9A6E00' stroke='none'/></g>\"\n\nVAR _tiles = CONCATENATEX(\n    _data,\n    VAR _kind  = [@kind]\n    VAR _label = [@label]\n    VAR _idx   = [@i]\n    VAR _x     = _StartX + _idx * (_TileW + _ColGap)\n    VAR _y     = _StartY\n    VAR _stripeColor = SWITCH(_kind,\n        \"star\",   \"#F4B400\",\n        \"trener\", \"#2C5282\",\n        \"mentor\", \"#7B61FF\",\n        \"ideas\",  \"#FBBF24\",\n        \"#CBD5E1\"\n    )\n    VAR _icon = SWITCH(_kind,\n        \"star\",   _StarIcon,\n        \"trener\", _TrenerIcon,\n        \"mentor\", _MentorIcon,\n        \"ideas\",  _IdeasIcon,\n        \"\"\n    )\n    VAR _iconCx  = _x + _StripeW + 7\n    VAR _iconCy  = _y + _TileH / 2\n    VAR _labelX  = _x + _StripeW + 13\n    VAR _labelY  = _y + _TileH / 2 + 2\n    VAR _tileBg =\n        \"<rect x='\" & _x & \"' y='\" & _y & \"' width='\" & _TileW & \"' height='\" & _TileH & \"' rx='\" & _TileRx & \"' fill='#FFFFFF' stroke='#E3E8EE' stroke-width='0.7'/>\"\n    VAR _stripe =\n        \"<path d='M\" & (_x + _TileRx) & \",\" & _y &\n        \" H\" & (_x + _StripeW) &\n        \" V\" & (_y + _TileH) &\n        \" H\" & (_x + _TileRx) &\n        \" Q\" & _x & \",\" & (_y + _TileH) & \" \" & _x & \",\" & (_y + _TileH - _TileRx) &\n        \" V\" & (_y + _TileRx) &\n        \" Q\" & _x & \",\" & _y & \" \" & (_x + _TileRx) & \",\" & _y &\n        \" Z' fill='\" & _stripeColor & \"'/>\"\n    VAR _iconGroup =\n        \"<g transform='translate(\" & _iconCx & \",\" & _iconCy & \") scale(0.7)'>\" & _icon & \"</g>\"\n    VAR _labelText =\n        \"<text x='\" & _labelX & \"' y='\" & _labelY & \"' text-anchor='start' style='font-family:\" & _fontFamily & \"; font-size:\" & _FontSize & \"px; fill:#1A202C; font-weight:600;'>\" & _label & \"</text>\"\n    RETURN \"<g>\" & _tileBg & _stripe & _iconGroup & _labelText & \"</g>\",\n    \"\",\n    [@ord], ASC\n)\n\n// === Pure SVG, explicit pixel dimensions ===\nVAR _SVG =\n    \"<svg xmlns='http://www.w3.org/2000/svg' \" &\n    \"width='\" & _W & \"' height='\" & _H & \"' \" &\n    \"viewBox='0 0 \" & _W & \" \" & _H & \"' \" &\n    \"preserveAspectRatio='xMidYMid meet' \" &\n    \"style='display:block;'>\" &\n    _tiles &\n    \"</svg>\"\n\nRETURN\n    IF(_Count = 0, BLANK(), _SVG)",
+  "dependencies": {
+    "measures": [
+      "PP.Бейдж.Банк ідей",
+      "PP.Бейдж.Зірка МХП",
+      "PP.Бейдж.Наставництво",
+      "PP.Бейдж.Тренерство"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "beidzhi",
+    "pasport",
+    "pdp",
+    "personal-profile"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

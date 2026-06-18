@@ -1,0 +1,58 @@
+{
+  "id": "pp-okr-zahalna-kolirna-otsinka-okr",
+  "type": "measure",
+  "name": "PP.OKR.Загальна колірна оцінка OKR",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SELECTEDVALUE('fact_OKR_Goals'[Calc_Performance_Desc_Rate])",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_OKR_Goals[Calc_Performance_Desc_Rate]"
+    ],
+    "tables": [
+      "fact_OKR_Goals"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.R27_fact_OKR_Goals"
+    ],
+    "sourceColumns": [
+      "Calc_Performance_Desc_Rate"
+    ],
+    "powerQuery": "fact_OKR_Goals"
+  },
+  "business": {
+    "definition": "Calc_Performance_Desc_Rate → Колірна оцінка ОКР; Calc_Performance_Desc_Rate → Загальна колірна оцінка ОКР; Calc_Performance_Desc_Rate → Загальна колірна оцінка OKR; Calc_Performance_Desc_Rate → Ціль виконана; Calc_Performance_Desc_Rate → Ціль не виконана; Calc_Performance_Desc_Rate → Колірна оцінка OKR за останній період; Calc_Performance_Desc_Rate → Колірна оцінка OKR за передостанній період; Calc_Performance_Desc_Rate → Загальний колір ОКР; Calc_Performance_Desc_Rate → Колірна оцінка OKR",
+    "purpose": "Останнє НЕ пусте актуальне значення на дату (date) поточного запису Якщо поле Calc_Performance_Desc_Rate має значення Супер зелений, або Жовто-зелений, або Зелений, або Жовтий, або Жовто-червоний Якщо поле Calc_Performance_Desc_Rate має значення Червоний",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/Редизайн-паспортної-частини",
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Створити-блок-Виконання-OKR"
+    ]
+  },
+  "tags": [
+    "okr",
+    "pdp",
+    "personal-profile",
+    "rezultatyvnist-ta-otsinka"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

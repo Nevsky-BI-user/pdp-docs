@@ -1,0 +1,68 @@
+{
+  "id": "pp-mobilnyi-zviazok-nazva-paketu",
+  "type": "measure",
+  "name": "'PP.Мобільний зв''язок - Назва пакету'",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\TRS",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _lim = MAX(fact_Mobile_Limit[PHONE_CORP_LIMIT])\nVAR _person = VALUES('fact_Mobile_Limit'[PERSON_KEY])\nRETURN\nCALCULATE(\n\tIF(\n\t\tISBLANK(_lim),\n\t\t\"Відсутній\",\n\t\tLASTNONBLANKVALUE(\n\t\t\t'fact_Mobile_Limit'[PERIOD],\n\t\t\tCALCULATE(MAX(fact_Mobile_Limit[PHONE_PACKAGE_NAME]))\n\t\t) &\" - \" &\n\t\tIF (\n\t\t\t_lim = 99999,\n\t\t\t\"Безлімітний\",\n\t\t\tLASTNONBLANKVALUE(\n\t\t\t\t'fact_Mobile_Limit'[PERIOD],\n\t\t\t\tCALCULATE(MAX(fact_Mobile_Limit[PHONE_CORP_LIMIT]))\n\t\t\t)\n\t\t)\n\t),\n\tALL('fact_Mobile_Limit'[USER_ACCESS_ID]), ALL('dim_Admin_OS'[USER_ACCESS_ID]),\n\tTREATAS(_person, 'fact_Mobile_Limit'[PERSON_KEY])\n)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_Mobile_Limit[PERIOD]",
+      "fact_Mobile_Limit[PERSON_KEY]",
+      "fact_Mobile_Limit[PHONE_CORP_LIMIT]",
+      "fact_Mobile_Limit[PHONE_PACKAGE_NAME]",
+      "fact_Mobile_Limit[USER_ACCESS_ID]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_Mobile_Limit"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List",
+      "DM.vw_R27_fact_Mobile_Limit_PDP"
+    ],
+    "sourceColumns": [
+      "PERIOD",
+      "PERSON_KEY",
+      "PHONE_CORP_LIMIT",
+      "PHONE_PACKAGE_NAME",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період; PHONE_CORP_LIMIT → Мобільний зв'язок - Корпоративний ліміт; PHONE_CORP_LIMIT → Середні витрати на мобільний зв’язок; PHONE_CORP_LIMIT → Мобільний зв'язок; PHONE_PACKAGE_NAME → Мобільний зв'язок - Назва пакету",
+    "purpose": "Це дата нарахування/виплати премії Зірка МХП (accrual_types_key = '9781d4aa-3a0d-1458-623a-7a93e90a2284'   та category_of_accrual_sort  = '2' ) Поточний період Потрібно відібрати всі записи по працівнику [person_key], періоду [Period], організації [organization_key]  <br>Якщо PHONE_CORP_LIMIT = \"99999\", виводимо значення \"Безлімітний\"  <br>Якщо значення в полі відсутнє, то показати текст \"Дані відсутні\" або знак \"-\" Розрахункове.  <br>Потрібно зсумувати значення поля PHONE_CORP_LIMIT ( PHONE_CORP_LIMIT <> '99999') по членам команди, які мають компенсацію мобільного зв'язку, та поділити на кіль",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Деталізація-на-сторінці-Винагорода",
+      "Допоміжні-вітрини-для-звіту/Таблиця-(вью)-для-розрахунку-метрики-Укомплектованість-штату",
+      "Допоміжні-вітрини-для-звіту/Таблиця-періодична-(попередні-12-міс)-для-розрахунку-метрики-Середній-дохід",
+      "Командний-профіль/Сторінка-TRS-команди",
+      "Командний-профіль/Сторінка-TRS-команди/Сторінка-Винагорода-групового-профілю#вимоги-до-звіту",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

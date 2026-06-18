@@ -1,0 +1,47 @@
+{
+  "id": "text-my-lead-team",
+  "type": "measure",
+  "name": "text.My_lead_team",
+  "homeTable": "_Measures",
+  "displayFolder": "Navigation\\Group",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SWITCH(\n    SELECTEDVALUE('dim_Admin_OS'[USER_ROLE]),\n    \"HRBP\", \"Мої прямі підопічні\",\n    \"Мої прямі підлеглі\"\n)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[USER_ROLE]"
+    ],
+    "tables": [
+      "dim_Admin_OS"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "USER_ROLE"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "group",
+    "navigation",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

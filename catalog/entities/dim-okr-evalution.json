@@ -1,0 +1,49 @@
+{
+  "id": "dim-okr-evalution",
+  "type": "entity",
+  "name": "dim_OKR_Evalution",
+  "definition": "",
+  "server": "",
+  "db": "",
+  "powerQuery": "dim_OKR_Evalution",
+  "sourceTables": [],
+  "columns": [
+    {
+      "name": "CALC_PERFORMANCE_DESC_RATE",
+      "dataType": "string",
+      "source": "CALC_PERFORMANCE_DESC_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "ORDER",
+      "dataType": "string",
+      "source": "ORDER",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "fact_Employee_OKR",
+      "fromColumn": "CALC_PERFORMANCE_DESC_RATE",
+      "toColumn": "CALC_PERFORMANCE_DESC_RATE",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Gaussian_Curve_OKR",
+      "fromColumn": "CALC_PERFORMANCE_DESC_RATE",
+      "toColumn": "CALC_PERFORMANCE_DESC_RATE",
+      "role": "to"
+    }
+  ],
+  "relatedMeasures": [
+    "GP.OKR.SVG.Bar chart"
+  ],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/dim_OKR_Evalution.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

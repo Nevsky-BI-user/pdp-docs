@@ -1,0 +1,49 @@
+{
+  "id": "gp-manager-id",
+  "type": "measure",
+  "name": "GP._Manager_ID",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": true,
+  "description": "",
+  "dax": "\t\t\t\nFIRSTNONBLANKVALUE(\n\t'dim_Admin_OS'[ORDER_NUM_2],\n\tMIN('dim_Admin_OS'[USER_ACCESS_ID])\n)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[ORDER_NUM_2]",
+      "dim_Admin_OS[USER_ACCESS_ID]"
+    ],
+    "tables": [
+      "dim_Admin_OS"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "ORDER_NUM_2",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

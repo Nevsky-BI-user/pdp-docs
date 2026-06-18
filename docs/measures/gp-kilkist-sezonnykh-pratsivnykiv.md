@@ -1,0 +1,55 @@
+# GP.Кількість сезонних працівників
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Group_Profile\Загальна інформація` |
+| formatString | `0;-0;0` |
+| dataType | — |
+| Прихована | ні |
+
+## DAX
+
+```dax
+"В розробці"
+//VAR _res  = 
+//    CALCULATE(
+//        COUNTROWS('fact_Employee_List'), 
+//        'fact_Employee_List'[POSITION_CATEGORY_INTERNAL_SORT] = 8
+//    )
+//RETURN FORMAT(COALESCE(_res, "-"), "0")
+```
+
+## Джерела
+
+
+Колонки: `POSITION_CATEGORY_INTERNAL_SORT`
+
+Power Query: `fact_Employee_List`
+
+## Бізнес-суть
+
+POSITION_CATEGORY_INTERNAL_SORT → Доля Senior managers (%); POSITION_CATEGORY_INTERNAL_SORT → Доля Middle managers (%); POSITION_CATEGORY_INTERNAL_SORT → Доля Line  (%); POSITION_CATEGORY_INTERNAL_SORT → Доля Specialists (%); POSITION_CATEGORY_INTERNAL_SORT → Доля Workers (%)
+
+Розрахункове поле: відношення кількості Senior managers у команді до загальної кількості працівників.  <br>Відношення кількості працівників, для яких position_category_internal_sort = 2 до загальної чисельності команди (метрика Кількість співробітників всього, чол.) Розрахункове поле: відношення кількості Middle managers у команді до загальної кількості працівників.  <br>Відношення кількості працівників, для яких position_category_internal_sort = 3 до загальної чисельності команди (метрика Кількість співробітників всього, чол.) Розрахункове поле: відношення кількості Line  у команді до загальн
+
+**Вимоги:** `Командний-профіль/Сторінка-Загальна-інформація-про-команду`
+
+## Залежності
+
+Таблиці: `fact_Employee_List`
+
+Колонки: `fact_Employee_List[POSITION_CATEGORY_INTERNAL_SORT]`
+
+## Схема
+
+```mermaid
+graph LR
+  M["GP.Кількість сезонних працівників"]
+  M --> fact_Employee_List
+```
+
+## Нотатки
+
+_порожньо_

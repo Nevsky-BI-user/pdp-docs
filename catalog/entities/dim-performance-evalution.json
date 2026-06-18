@@ -1,0 +1,55 @@
+{
+  "id": "dim-performance-evalution",
+  "type": "entity",
+  "name": "dim_Performance_Evalution",
+  "definition": "",
+  "server": "",
+  "db": "",
+  "powerQuery": "dim_Performance_Evalution",
+  "sourceTables": [],
+  "columns": [
+    {
+      "name": "General_Performance_Str_Rate",
+      "dataType": "string",
+      "source": "General_Performance_Str_Rate",
+      "isCalculated": false
+    },
+    {
+      "name": "order_General_Performance_Desc_Rate",
+      "dataType": "int64",
+      "source": "order_General_Performance_Desc_Rate",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "fact_Employee_Performance_Total",
+      "fromColumn": "General_Performance_Str_Rate",
+      "toColumn": "General_Performance_Str_Rate",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Gaussian_Curve_Performance",
+      "fromColumn": "General_Performance_Str_Rate",
+      "toColumn": "General_Performance_Str_Rate",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Employee_Performance",
+      "fromColumn": "GENERAL_PERFORMANCE_STR_RATE",
+      "toColumn": "General_Performance_Str_Rate",
+      "role": "to"
+    }
+  ],
+  "relatedMeasures": [
+    "GP.Продуктивність.SVG.Bar chart"
+  ],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/dim_Performance_Evalution.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

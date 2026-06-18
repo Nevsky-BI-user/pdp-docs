@@ -1,0 +1,59 @@
+{
+  "id": "pp-shyryna-merezhi-kholdynh-3m",
+  "type": "measure",
+  "name": "PP.Ширина мережі (Холдинг, 3м)",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Viva\\Viva Networks",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "// VAR __val =\n// CALCULATE(\n//     [PP.Ширина мережі (співробітник, 3м)],\n//     REMOVEFILTERS(fact_Metrics))\n\nVAR __val =\nDIVIDE(\n\t\tSUM('fact_Viva_Metrics'[NETWORK_OUTSIDE_ORGANIZATION]),\n\t\tCALCULATE(COUNTROWS('fact_Viva_Metrics'), NOT ISBLANK('fact_Viva_Metrics'[NETWORK_OUTSIDE_ORGANIZATION])))\n\nRETURN __val",
+  "dependencies": {
+    "measures": [
+      "PP.Ширина мережі (співробітник, 3м)"
+    ],
+    "columns": [
+      "fact_Viva_Metrics[NETWORK_OUTSIDE_ORGANIZATION]"
+    ],
+    "tables": [
+      "fact_Viva_Metrics"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "NETWORK_OUTSIDE_ORGANIZATION"
+    ],
+    "powerQuery": "fact_Viva_Metrics"
+  },
+  "business": {
+    "definition": "NETWORK_OUTSIDE_ORGANIZATION → Ширина мережі контактів по  <br>співробітнику; NETWORK_OUTSIDE_ORGANIZATION → Ширина мережі контактів по кадровому підрозділу співробітника; NETWORK_OUTSIDE_ORGANIZATION → Ширина мережі контактів по напряму співробітника; NETWORK_OUTSIDE_ORGANIZATION → Ширина мережі контактів по Холдингу; NETWORK_OUTSIDE_ORGANIZATION → Ширина мережі контактів; NETWORK_OUTSIDE_ORGANIZATION → network_outside_organization_direction; NETWORK_OUTSIDE_ORGANIZATION → network_outside_organization_holding; NETWORK_OUTSIDE_ORGANIZATION → Ширина мережі контактів по  <br>співробітнику за попередні три місяці; NETWORK_OUTSIDE_ORGANIZATION → Ширина мережі контактів по співробітнику за попередні три місяці; NETWORK_OUTSIDE_ORGANIZATION → Ширина мережі контактів по кадровому підрозділу (Команді); NETWORK_OUTSIDE_ORGANIZATION → Ширина мережі контактів по напряму команди",
+    "purpose": "Розрахункове значення.  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_dim_Employee_Metric_Health_and_Wellbeing]   <br>Відбір по працівнику [person_key], періоду [PERIOD], документу прийому.  <br>Потрібно значення NETWORK_OUTSIDE_ORGANIZATION поділити на три (розраховано в таблиці).<br>Якщо дані по працівнику у вітрині відсутні, то показати надпис \"Дані відсутні\" (наприклад, якщо немає ліцензії та прцівник не користується teams or outlook Розрахункове значення.  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової табли",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Сторінка-Ефективність-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Таблиця-vw_R27_calc_Viva_Direction_PDP",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Таблиця-vw_R27_calc_Viva_Holding_PDP",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту/Зміна-алгоритму-розрахунку-метрик-по-Viva-з-урахуванням-дати-завантаження-даних-до-DWH",
+      "Командний-профіль/Сторінка-Взаємодія-Viva-та-залученість-команд",
+      "Командний-профіль/Сторінка-Ефективність",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "viva",
+    "viva-networks"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

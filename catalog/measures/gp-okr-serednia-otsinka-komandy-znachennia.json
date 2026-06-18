@@ -1,0 +1,70 @@
+{
+  "id": "gp-okr-serednia-otsinka-komandy-znachennia",
+  "type": "measure",
+  "name": "GP.ОКР.Середня оцінка команди.Значення",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\ОКР",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "//************* ROLE FILTERS **************\nVAR _filter_lt = TREATAS(VALUES(dim_Admin_LT_OS[USER_ACCESS_ID]), 'dim_Admin_OS'[USER_ACCESS_ID])\n\nVAR LastYears = [GP.ОКР.Останній рік]\n    // SUMMARIZE(\n    //     'fact_Employee_OKR', \n    //     'fact_Employee_OKR'[USER_ACCESS_ID], \n    //     \"MaxYear\", MAX('fact_Employee_OKR'[PLAN_YEAR])\n    // )\n/* *********** ADMIN *********** */\nVAR _admin = \n    CALCULATE(\n            AVERAGE('fact_Employee_OKR'[CALC_PERFORMANCE_STR_RATE]),\n            'fact_Employee_OKR'[PLAN_YEAR] = LastYears\n            // TREATAS(LastYearsPerPerson, 'fact_Employee_OKR'[USER_ACCESS_ID], 'fact_Employee_OKR'[PLAN_YEAR])\n        )\n\n/* *********** ADMIN LT *********** */\nVAR _admin_lt = \n    CALCULATE(\n            AVERAGE('fact_Employee_OKR'[CALC_PERFORMANCE_STR_RATE]),\n            'fact_Employee_OKR'[PLAN_YEAR] = LastYears,\n            // TREATAS(LastYearsPerPerson, 'fact_Employee_OKR'[USER_ACCESS_ID], 'fact_Employee_OKR'[PLAN_YEAR]),\n            _filter_lt\n        )\n\n/* *********** RESULT *********** */\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE( t_HierarchyTypes[Index] ),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\n\nRETURN\nROUND(_res, 2)",
+  "dependencies": {
+    "measures": [
+      "GP.ОКР.Останній рік"
+    ],
+    "columns": [
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_Employee_OKR[CALC_PERFORMANCE_STR_RATE]",
+      "fact_Employee_OKR[PLAN_YEAR]",
+      "fact_Employee_OKR[USER_ACCESS_ID]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_Employee_OKR",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.R27_fact_OKR_Goals",
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "CALC_PERFORMANCE_STR_RATE",
+      "Index",
+      "PLAN_YEAR",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "CALC_PERFORMANCE_STR_RATE → Загальна оцінка ОКР; CALC_PERFORMANCE_STR_RATE → Загальна оцінка OKR; CALC_PERFORMANCE_STR_RATE → Оцінка OKR; PLAN_YEAR → Рік ОКР; PLAN_YEAR → Значення останнього року оцінки ОКР; PLAN_YEAR → Значення передостаннього  року оцінки ОКР",
+    "purpose": "Останнє НЕ пусте актуальне значення на дату (date) поточного запису Останнє доступне значення станом на дату поточного запису, релевантне відповідній оцінці результативності. Значення останнього року оцінки ОКР визначати в залежності від того, які дані доступні на поточний момент. Наприклад, протягом 2025 року в оцінку брати коефіцієнт індивідуального бонусу працівника за 2023-2024 роки, бо за 2025 рік оцінки ще немає. Тому останній рік буде 2024. На початку 2026 року, коли з'являться результати оцінки ОКР за 2025 рік, потрібно буде змістити період і брати 2025 рік.  <br>  <br>Для того, що виз",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/Редизайн-паспортної-частини",
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Створити-блок-Виконання-OKR"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "main",
+    "okr",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

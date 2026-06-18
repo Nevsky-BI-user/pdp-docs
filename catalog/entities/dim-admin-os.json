@@ -1,0 +1,767 @@
+{
+  "id": "dim-admin-os",
+  "type": "entity",
+  "name": "dim_Admin_OS",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "dim_Admin_OS",
+  "sourceTables": [
+    "DM.vw_R27_dim_Employee_Access_List"
+  ],
+  "columns": [
+    {
+      "name": "ID",
+      "dataType": "string",
+      "source": "ID",
+      "isCalculated": false
+    },
+    {
+      "name": "path_column",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "EMP_HIERARCHY_LEVEL",
+      "dataType": "string",
+      "source": "EMP_HIERARCHY_LEVEL",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HEAD_ADMIN_ID_EMP_HEAD_ADMIN_DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "EMP_HEAD_ADMIN_ID_EMP_HEAD_ADMIN_DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_ID",
+      "dataType": "string",
+      "source": "EMPLOYEE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "path_length",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_EMAIL",
+      "dataType": "string",
+      "source": "EMPLOYEE_EMAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "path_column_email",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "check_hierarchy_length",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "EMPLOYEE_ADMIN_ID",
+      "dataType": "string",
+      "source": "EMPLOYEE_ADMIN_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_JOB_APPLICATION_ADMIN_ID",
+      "dataType": "string",
+      "source": "DOC_JOB_APPLICATION_ADMIN_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_ID",
+      "dataType": "string",
+      "source": "ORGANIZATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "ORDER_NUM",
+      "dataType": "int64",
+      "source": "ORDER_NUM",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION",
+      "dataType": "string",
+      "source": "ORGANIZATION",
+      "isCalculated": false
+    },
+    {
+      "name": "PERSONNEL_UNIT",
+      "dataType": "string",
+      "source": "PERSONNEL_UNIT",
+      "isCalculated": false
+    },
+    {
+      "name": "DIRECTION",
+      "dataType": "string",
+      "source": "DIRECTION",
+      "isCalculated": false
+    },
+    {
+      "name": "SUB_DIRECTION",
+      "dataType": "string",
+      "source": "SUB_DIRECTION",
+      "isCalculated": false
+    },
+    {
+      "name": "HAB_FOR_AGRO",
+      "dataType": "string",
+      "source": "HAB_FOR_AGRO",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_1",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_1",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_2",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_2",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_3",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_3",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_4",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_4",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_5",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_5",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_6",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_6",
+      "isCalculated": false
+    },
+    {
+      "name": "N-1",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "N-2",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "N-3",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "N-4",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "N-5",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "N-6",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "N-7",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "N-8",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "EMPLOYEE_NAME",
+      "dataType": "string",
+      "source": "EMPLOYEE_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "ORDER_NUM_2",
+      "dataType": "int64",
+      "source": "ORDER_NUM_2",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBORDINATE_СNT",
+      "dataType": "int64",
+      "source": "SUBORDINATE_СNT",
+      "isCalculated": false
+    },
+    {
+      "name": "URL_FOTO",
+      "dataType": "string",
+      "source": "URL_FOTO",
+      "isCalculated": false
+    },
+    {
+      "name": "FULL_NAME",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "IS_MAIN_POSITION",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "EMP_HEAD_FUNCTIONAL_ID_EMP_HEAD_FUNCTIONAL_DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "EMP_HEAD_FUNCTIONAL_ID_EMP_HEAD_FUNCTIONAL_DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HRBP_ID_EMP_HRBP_DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "EMP_HRBP_ID_EMP_HRBP_DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_FINBP_ID_EMP_FINBP_DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "EMP_FINBP_ID_EMP_FINBP_DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "Position_category",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "EMP_STATUS_KEY",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "POSITION_CATEGORY_DETAIL",
+      "dataType": "string",
+      "source": "POSITION_CATEGORY_DETAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_TYPE",
+      "dataType": "string",
+      "source": "EMPLOYMENT_TYPE",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_NAME",
+      "dataType": "string",
+      "source": "STATUS_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_KEY",
+      "dataType": "string",
+      "source": "STATUS_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_TYPE",
+      "dataType": "string",
+      "source": "OFFICE_TYPE",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION",
+      "dataType": "string",
+      "source": "POSITION",
+      "isCalculated": false
+    },
+    {
+      "name": "ROLL_NUMBER",
+      "dataType": "string",
+      "source": "ROLL_NUMBER",
+      "isCalculated": false
+    },
+    {
+      "name": "N-0",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_POSITION_ID",
+      "dataType": "string",
+      "source": "DIVISION_POSITION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "HRBP_email",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "EMP_HIERARCHY_LEVEL_LIST",
+      "dataType": "string",
+      "source": "EMP_HIERARCHY_LEVEL_LIST",
+      "isCalculated": false
+    },
+    {
+      "name": "FULL_NAME_HRBP",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "FULL_NAME_ADMIN",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "FULL_NAME_FinBP",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "USER_ROLE",
+      "dataType": "string",
+      "source": "USER_ROLE",
+      "isCalculated": false
+    },
+    {
+      "name": "PARENT_USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "PARENT_USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "path_length_rls",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "JOB_TITLE_ID",
+      "dataType": "string",
+      "source": "JOB_TITLE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_DIVISION_PERSON_ID_JOB_TITLE_ID",
+      "dataType": "string",
+      "source": "EMP_DIVISION_PERSON_ID_JOB_TITLE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_MANAGER",
+      "dataType": "boolean",
+      "source": "IS_MANAGER",
+      "isCalculated": false
+    },
+    {
+      "name": "FULL_NAME_short",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "fact_Employee_List",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_TRS",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Vacation",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Vacation_Reserve",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Mobile_Limit",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Repayment_Credit",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_TRS_Plan",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Sick_Leaves",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Monthly_Viva_Insights",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Metrics",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Burnout_Indicators",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_employee_seniority_by_month",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Vacancy",
+      "fromColumn": "DIVISION_POSITION_ID",
+      "toColumn": "DIVISION_POSITION_id",
+      "role": "from"
+    },
+    {
+      "toTable": "fact_Employee_OKR",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Loss_of_Productivity",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Employee_Performance",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Employee_Performance_Total",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Average_Income",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "from"
+    },
+    {
+      "toTable": "fact_Employees_Attributes",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "from"
+    },
+    {
+      "toTable": "fact_Employee_History_Position",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "to"
+    }
+  ],
+  "relatedMeasures": [
+    "'PP.Мобільний зв''язок - Назва пакету'",
+    "5AC.Коефіцієнт абсентеїзму",
+    "AC.Burnout_Risk.Панель фільтрів.Звільнені",
+    "AC.Burnout_risk.Панель фільтрів.Працюючі",
+    "AC.LP.Nav.My_lead_team",
+    "AC.Loss_Productivity.Панель фільтрів",
+    "AC.Nav.My_lead_team",
+    "AC.Відсоток днів відпустки в робочі дні",
+    "AC.Доля співробітників з відпустками понад 10 днів",
+    "AC.Лідер за невикористаними днями відпустки",
+    "AC.Лідер за часом без відпустки",
+    "AC.Середня кількість днів використаної відпустки",
+    "AC.Середня кількість днів невикористаної відпустки",
+    "AC.Середня кількість лікарняних на співробітника",
+    "AC.Середня тривалість відпустки співробітника, днів",
+    "AC.Середня тривалість лікарняного на співробітника",
+    "Administrative_role_filter",
+    "Current_User_Admin_Hierarchy_Level",
+    "Current_User_HRBP_Hierarchy_Level",
+    "GP.FinBP",
+    "GP.HRBP",
+    "GP.Nav.Панель фільтрів",
+    "GP.NavigationButton2",
+    "GP.Start_Page_NavigationButton",
+    "GP._Manager_ID",
+    "GP.eNPS (%)",
+    "GP.Виконання плану ФОП YTD (%)",
+    "GP.Доля команди з доплатою за роз’їзний характер роботи, %",
+    "GP.Доля команди з доплатою за роз’їзний характер роботи, % факт",
+    "GP.Доля команди з доплатою за шкідливі умови праці, %",
+    "GP.Доля команди з доплатою за шкідливі умови праці, % факт",
+    "GP.Доля команди з квартальною премією, % факт",
+    "GP.Доля команди з квартальню премією, %",
+    "GP.Доля команди з навчанням, %",
+    "GP.Доля команди з позикою на ноутбук (%) (діюча)",
+    "GP.Доля команди з премією за місяць, %",
+    "GP.Доля команди з премією за місяць, % факт",
+    "GP.Доля команди з річним бонусом, %",
+    "GP.Доля команди з річними бонусами, % факт",
+    "GP.Доля команди з соціальними виплатами, %",
+    "GP.Доля команди з щомісячною премією, %",
+    "GP.Доля команди з щомісячною премією, % факт",
+    "GP.Доля команди із доплатою за наставництво, %",
+    "GP.Доля команди із позиками",
+    "GP.Доля команди із премією МХП Зірки, %",
+    "GP.Доля команди із премією за Банк ідей, %",
+    "GP.Доля команди із премією за внутрішнє тренерство, %",
+    "GP.Доля команди із премією за збереження та розширення земельного банку, %",
+    "GP.Доля команди із премією за програмою «Приведи друга», %",
+    "GP.Доля команди із премією за сумісництво, факт",
+    "GP.Доля команди із проектним бонусом за стратегічні ІТ проєкти, %",
+    "GP.Доля команди із разовою премією за програмою визнання, %",
+    "GP.Доля команди із інвестиційним проєктним бонусом, %",
+    "GP.Доля учасників команди із зміною зарплати (окладу), %",
+    "GP.Закриття позицій Middle внутрішніми кандидатами (%)",
+    "GP.Закриття позицій Senior+ внутрішніми кандидатами (%)",
+    "GP.К-ть співробітників, що отримали позику на ноутбук (діюча)",
+    "GP.К-ть співробітників, що отримують виплати на мобільний зв’язок",
+    "GP.К-ть співробітників, що отримують виплати на оренду житла",
+    "GP.Керівник",
+    "GP.Команда",
+    "GP.Кількість Ветеранів",
+    "GP.Кількість мобілізованих",
+    "GP.Кількість співробітників всього, чол.",
+    "GP.Кількість співробітників всього, чол. - Integer",
+    "GP.Кількість співробітників у декретній відпустці",
+    "GP.Напрям",
+    "GP.ОКР.Кількість співробітників (Останній період оцінки)",
+    "GP.ОКР.Оцінка керівника.Значення",
+    "GP.ОКР.Середня оцінка команди.Значення",
+    "GP.Опція по авто, %",
+    "GP.Охоплення Middle|Senior+ наступниками (%)",
+    "GP.Оцінка результативності попередній рік",
+    "GP.Оцінка результативності поточний рік",
+    "GP.Продуктивність.Кількість співробітників (Останній період оцінки)",
+    "GP.Продуктивність.Оцінка керівника.Значення",
+    "GP.Продуктивність.Середня оцінка команди.Значення",
+    "GP.Піднапрям",
+    "GP.Результативність.Оцінка OKR.Загальна кількість KR.CY",
+    "GP.Результативність.Оцінка OKR.Загальна кількість KR.PY",
+    "GP.Результативність.Оцінка OKR.Загальна кількість OKR.CY",
+    "GP.Результативність.Оцінка OKR.Загальна кількість OKR.PY",
+    "GP.Результативність.Оцінка OKR.Кількість співробітників з OKR.CY",
+    "GP.Результативність.Оцінка OKR.Кількість співробітників з OKR.PY",
+    "GP.Результативність.Оцінка OKR.Середня кількість KR.PY",
+    "GP.Результативність.Оцінка OKR.Середня кількість OKR.CY",
+    "GP.Результативність.Оцінка OKR.Середня кількість OKR.PY",
+    "GP.Результативність.Оцінка OKR.Фільтр деталізації KR",
+    "GP.Результативність.Оцінка OKR.Фільтр деталізації OKR",
+    "GP.Результативність.Оцінка результативності.К-ть працівників",
+    "GP.Результативність.Оцінка результативності.К-ть працівників.Total",
+    "GP.Результативність.Оцінка результативності.Середня оцінка",
+    "GP.Результативність.Оцінка результативності.Середня оцінка.Total",
+    "GP.Ризик втрати працівників (%)",
+    "GP.Ризик втрати продуктивності (%)",
+    "GP.Розподіл у вилці",
+    "GP.Розподіл у вилці.SVG",
+    "GP.Рівень coaching (1:1), год/міс",
+    "GP.Рівень втрати високорезультативних працівників (%)",
+    "GP.Рівень команди в ієрархії",
+    "GP.Рівень смертельних виробничих інцидентів за 2025р., шт.",
+    "GP.Рівень смертельних не виробничих інцидентів за 2025р., шт.",
+    "GP.Різниця фіксованої винагороди (план).Максимальний рівень",
+    "GP.Різниця фіксованої винагороди (план).Мінімальний рівень",
+    "GP.Різниця фіксованої винагороди (факт).Максимальний рівень",
+    "GP.Різниця фіксованої винагороди (факт).Мінімальний рівень",
+    "GP.Середня заробітна плата",
+    "GP.Середня зарплата (оклад)",
+    "GP.Середня кількість днів невикористаної відпустки співробітником",
+    "GP.Середнє зростання цільової річної винагороди, до оподаткування",
+    "GP.Середні витрати на мобільний зв’язок",
+    "GP.Середні витрати на оренду житла",
+    "GP.Середній % зростання зарплати (окладу) за 12 міс",
+    "GP.Середній дохід без річного бонуса (за ост. 12 міс)",
+    "GP.Середній дохід з річним бонусом (за ост. 12 міс)",
+    "GP.Середній розмір доплат за суміщення, факт",
+    "GP.Середній розмір доплати за наставництво",
+    "GP.Середній розмір доплати за роз’їзний характер роботи",
+    "GP.Середній розмір доплати за роз’їзний характер роботи, факт",
+    "GP.Середній розмір доплати за шкідливі умови праці",
+    "GP.Середній розмір доплати за шкідливі умови праці, факт",
+    "GP.Середній розмір квартальної премії",
+    "GP.Середній розмір квартальної премії, факт",
+    "GP.Середній розмір позики",
+    "GP.Середній розмір премії МХП Зірки",
+    "GP.Середній розмір премії за Банк ідей",
+    "GP.Середній розмір премії за внутрішнє тренерство",
+    "GP.Середній розмір премії за збереження та розширення земельного банку",
+    "GP.Середній розмір премії за місяць",
+    "GP.Середній розмір премії за місяць, факт",
+    "GP.Середній розмір премії за програмою «Приведи друга»",
+    "GP.Середній розмір проектного бонус за стратегічні ІТ проєкти",
+    "GP.Середній розмір разової премії за програмою визнання",
+    "GP.Середній розмір річного бонусу",
+    "GP.Середній розмір річного бонусу, факт",
+    "GP.Середній розмір соціальної підтримки",
+    "GP.Середній розмір щомісячної премії",
+    "GP.Середній розмір щомісячної премії, факт",
+    "GP.Середній розмір інвестиційного проєктного бонусу",
+    "GP.Середній стаж в команді, років",
+    "GP.Середній цільовий розмір річної винагороди, до оподаткування",
+    "GP.Співробітники, які розуміють та демонструють цінності компанії (%)",
+    "GP.Укомплектованість штату (%)",
+    "PP.KR.Ключовий результат НЕ досягнуто",
+    "PP.KR.Ключовий результат досягнуто",
+    "PP.Nav.My_lead_team",
+    "PP.Nav.Застосувати вибір",
+    "PP.Nav.Панель фільтрів",
+    "PP.OKR.Current_user.Загальна  оцінка OKR",
+    "PP.OKR.Current_user.Загальна колірна оцінка OKR",
+    "PP.OKR.Current_user.Коефіцієнт індивідуального бонусу",
+    "PP.OKR.Current_user.Статус плану",
+    "PP.OKR.IsCurrentEmployee",
+    "PP.OKR.SVG.IsCurrentEmployee",
+    "PP.OKR.SVG.Last2Periods",
+    "PP.OKR.Ціль виконана",
+    "PP.OKR.Ціль не виконана",
+    "PP.PIB",
+    "PP.SVG.OKR.Детально",
+    "PP.Годин взаємодії з керівником (кадровий підрозділ)",
+    "PP.Годин взаємодії з керівником (напрям)",
+    "PP.Годин взаємодії з керівником (співробітник)",
+    "PP.Годин взаємодії по нарадах (кадровий підрозділ)",
+    "PP.Годин взаємодії по нарадах (напрям)",
+    "PP.Годин взаємодії по нарадах (співробітник)",
+    "PP.Годин взаємодії у неробочий час (кадровий підрозділ)",
+    "PP.Годин взаємодії у неробочий час (напрям)",
+    "PP.Годин взаємодії у неробочий час (співробітник)",
+    "PP.Годин для фокусної роботи (кадровий підрозділ)",
+    "PP.Годин для фокусної роботи (напрям)",
+    "PP.Годин для фокусної роботи (співробітник)",
+    "PP.Годин загальної взаємодії (кадровий підрозділ)",
+    "PP.Годин загальної взаємодії (напрям)",
+    "PP.Годин загальної взаємодії (співробітник)",
+    "PP.Годин керівника на взаємодію із безпосередніми підлеглими (кадровий підрозділ)",
+    "PP.Годин керівника на взаємодію із безпосередніми підлеглими (напрям)",
+    "PP.Годин керівника на взаємодію із безпосередніми підлеглими (співробітник)",
+    "PP.Годин нарад 1:1 з керівником (кадровий підрозділ)",
+    "PP.Годин нарад 1:1 з керівником (напрям)",
+    "PP.Годин нарад 1:1 з керівником (співробітник)",
+    "PP.Дата доступності позики на ноутбук",
+    "PP.Довжина (границі) робочого дня (кадровий підрозділ)",
+    "PP.Довжина (границі) робочого дня (напрям)",
+    "PP.Довжина (границі) робочого дня (співробітник)",
+    "PP.Доля Conflicting meeting hours (кадровий підрозділ)",
+    "PP.Доля Conflicting meeting hours (напрям)",
+    "PP.Доля Conflicting meeting hours (співробітник)",
+    "PP.Підрозділ 1",
+    "PP.Підрозділ 2",
+    "PP.Підрозділ 3",
+    "PP.Підрозділ 4",
+    "PP.Підрозділ 5",
+    "PP.Ризик.Вид відстрочки",
+    "PP.Ризик.Втрата продуктивності",
+    "PP.Розмір мережі (кадровий підрозділ, 3м)",
+    "PP.Розмір мережі (напрям, 3м)",
+    "PP.Розмір мережі (співробітник, 3м)",
+    "PP.Рівень в ієрархії",
+    "PP.Тип опції по авто",
+    "PP.Частка KR за наявністю змін",
+    "PP.Частка OKR за кросфункційністю",
+    "PP.Частка OKR за наявністю змін",
+    "PP.Частка OKR за статусом",
+    "PP.Частка OKR за типом цілі",
+    "PP.Ширина мережі (кадровий підрозділ, 3м)",
+    "PP.Ширина мережі (напрям, 3м)",
+    "PP.Ширина мережі (співробітник, 3м)",
+    "User_Admin_Hierarchy_Level",
+    "User_HRBP_Hierarchy_Level",
+    "User_role_filter",
+    "current_user_name",
+    "current_user_photo_",
+    "filtered_users_check",
+    "test_measure",
+    "text.My_lead_team",
+    "user_photo",
+    "Доля керівників серед всіх співробітників (%)"
+  ],
+  "requirementRefs": [
+    "Індивідуальний-профіль-працівника/Сторінка-Індивідуальний-профіль-працівника"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/dim_Admin_OS.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

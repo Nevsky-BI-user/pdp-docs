@@ -1,0 +1,58 @@
+{
+  "id": "gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-okr-cy",
+  "type": "measure",
+  "name": "GP.Результативність.Оцінка OKR.Загальна кількість OKR.CY",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\Результативність та оцінка\\Оцінка OKR",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\n\nVAR _filter_admin = VALUES('dim_Admin_OS'[EMPLOYEE_ID])\nVAR _filter_lt = \nCALCULATETABLE(\n    VALUES('dim_Admin_OS'[EMPLOYEE_ID]), \n    TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), 'dim_Admin_OS'[USER_ACCESS_ID]))\n\nVAR _admin = \nCALCULATE(\n    COUNTA('fact_OKR_Goals'[OKR_OBJECTIVE_ID]),\n    TREATAS(_filter_admin, 'fact_OKR_Goals'[EMPLOYEE_ID]))\n\nVAR _admin_lt = \nCALCULATE(\n    COUNTA('fact_OKR_Goals'[OKR_OBJECTIVE_ID]),\n    TREATAS(_filter_lt, 'fact_OKR_Goals'[EMPLOYEE_ID]))\n\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\n\nRETURN _res",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[EMPLOYEE_ID]",
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_OKR_Goals[EMPLOYEE_ID]",
+      "fact_OKR_Goals[OKR_OBJECTIVE_ID]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_OKR_Goals",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.R27_fact_OKR_Goals",
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "EMPLOYEE_ID",
+      "Index",
+      "OKR_OBJECTIVE_ID",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "group-profile",
+    "otsinka-okr",
+    "pdp",
+    "rezultatyvnist-ta-otsinka"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

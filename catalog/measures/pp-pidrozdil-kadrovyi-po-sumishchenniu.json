@@ -1,0 +1,47 @@
+{
+  "id": "pp-pidrozdil-kadrovyi-po-sumishchenniu",
+  "type": "measure",
+  "name": "PP.Підрозділ кадровий по суміщенню",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "\"В розробці\"\n// COALESCE(\n//     SELECTEDVALUE('fact_Employee_List'[EMPLOYEE_ADMIN_NAME]),\n//     \"-\"\n// )",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[EMPLOYEE_ADMIN_NAME]"
+    ],
+    "tables": [
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "EMPLOYEE_ADMIN_NAME"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "EMPLOYEE_ADMIN_NAME → Адміністративний керівник",
+    "purpose": "Поле зберігається в довіднику [dm.vw_R27_dim_Employee_Special_Head_admin]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List_PDP], через відповідний зв’язок за ключем [emp_head_admin_id] = id.  <br>Якщо значення в полі відсутнє, то показати текст \"Дані відсутні\"  <br>Якщо ПІБ керівника не вміщається в одну строку, перенести на іншу",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

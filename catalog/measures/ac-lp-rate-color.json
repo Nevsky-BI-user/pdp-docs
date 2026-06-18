@@ -1,0 +1,46 @@
+{
+  "id": "ac-lp-rate-color",
+  "type": "measure",
+  "name": "AC.LP.Rate_color",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Loss_Productivity\\Formatting",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _indicator = SELECTEDVALUE('t_AC Burnout'[Burnout_Indicator])\nVAR _color = IF(_indicator = \"Дані\", \"#F9F8F8\", \"#00FFFFFF\")\nRETURN\n_color",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "t_AC Burnout[Burnout_Indicator]"
+    ],
+    "tables": [
+      "t_AC Burnout"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "Burnout_Indicator"
+    ],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "analytical-cases",
+    "formatting",
+    "loss-productivity",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

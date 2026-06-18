@@ -1,0 +1,41 @@
+{
+  "id": "pp-pilhove-kharchuvannia",
+  "type": "measure",
+  "name": "PP.Пільгове харчування",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\TRS",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _value = BLANK()\nRETURN COALESCE(_value, \"-\")",
+  "dependencies": {
+    "measures": [],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "Пільгове харчування",
+    "purpose": "Просто як опція, яка доступна працівнику",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

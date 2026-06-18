@@ -1,0 +1,71 @@
+{
+  "id": "gp-dolia-komandy-z-pozykoiu-na-noutbuk-diiucha",
+  "type": "measure",
+  "name": "GP.Доля команди з позикою на ноутбук (%) (діюча)",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\TRS",
+  "formatString": "0%;-0%;0%",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),dim_Admin_OS[USER_ACCESS_ID] )\n\n/* *********** ADMIN *********** */\nVAR _admin =\n\tVAR _Employees =VALUES('dim_Admin_OS'[EMPLOYEE_ID])\n\tVAR _table0 = \n\t\tADDCOLUMNS(\n\t\t\t_Employees,\n\t\t\t\"@Indicator\",\n\t\t\tCALCULATE(\n\t\t\t\tLASTNONBLANKVALUE(\n\t\t\t\t\tVALUES('dim_Date'[Date]),\n\t\t\t\t\tCALCULATE(SUM('fact_Repayment_Credit'[LAND_SHARE_CONTRACT_SUM]))\n\t\t\t\t),\n\t\t\t\tfact_Repayment_Credit[BUDGET_ITEM_CODE]=\"0000008240\",\n\t\t\t\t'fact_Repayment_Credit'[IS_INCOMING] = TRUE()\n\t\t\t)\n\t\t)\n\tVAR _ShareOfSomeIndicator = \n\t\tVAR _Nominator = \n\t\tCOUNTROWS(\n\t\t\tFILTER(\n\t\t\t\t_table0, \n\t\t\t\tNOT ISBLANK([@Indicator]) && [@Indicator] > 0\n\t\t\t)\n\t\t)\n\t\tVAR _Denominator = COUNTROWS(_table0)\n\t\tRETURN DIVIDE(_Nominator, _Denominator)\n\tRETURN _ShareOfSomeIndicator\n\n/* *********** LT *********** */\nVAR _admin_lt =\n\tVAR _table0 = \n\t\tCALCULATETABLE(\n\t\t\tADDCOLUMNS(\n\t\t\t\tVALUES( 'dim_Admin_OS'[EMPLOYEE_ID] ),\n\t\t\t\t\"@Indicator\",\n\t\t\t\tCALCULATE(\n\t\t\t\t\tLASTNONBLANKVALUE(\n\t\t\t\t\t\tVALUES('dim_Date'[Date]),\n\t\t\t\t\t\tCALCULATE(SUM('fact_Repayment_Credit'[LAND_SHARE_CONTRACT_SUM]))\n\t\t\t\t\t),\n\t\t\t\t\tfact_Repayment_Credit[BUDGET_ITEM_CODE]=\"0000008240\",\n\t\t\t\t\t'fact_Repayment_Credit'[IS_INCOMING] = TRUE()\n\t\t\t\t)\n\t\t\t),\n\t\t\t_filter_lt\n\t\t)\n\tVAR _ShareOfSomeIndicator = \n\t\tVAR _Nominator = \n\t\tCOUNTROWS(\n\t\t\tFILTER(\n\t\t\t\t_table0, \n\t\t\t\tNOT ISBLANK([@Indicator]) && [@Indicator] > 0\n\t\t\t)\n\t\t)\n\t\tVAR _Denominator = COUNTROWS(_table0)\n\t\tRETURN DIVIDE(_Nominator, _Denominator)\n\tRETURN _ShareOfSomeIndicator\n\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\nRETURN \nCOALESCE(\n\t_res, \"-\")",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_LT_OS[USER_ACCESS_ID]",
+      "dim_Admin_OS[EMPLOYEE_ID]",
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "dim_Date[Date]",
+      "fact_Repayment_Credit[BUDGET_ITEM_CODE]",
+      "fact_Repayment_Credit[IS_INCOMING]",
+      "fact_Repayment_Credit[LAND_SHARE_CONTRACT_SUM]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "dim_Date",
+      "fact_Repayment_Credit",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List",
+      "DM.vw_R27_fact_Repayment_Credit_PDP"
+    ],
+    "sourceColumns": [
+      "BUDGET_ITEM_CODE",
+      "Date",
+      "EMPLOYEE_ID",
+      "IS_INCOMING",
+      "Index",
+      "LAND_SHARE_CONTRACT_SUM",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "LAND_SHARE_CONTRACT_SUM → Сума позики; LAND_SHARE_CONTRACT_SUM → Позика на ноутбук (остання); LAND_SHARE_CONTRACT_SUM → Доля команди з позикою на ноутбук (%) (діюча); LAND_SHARE_CONTRACT_SUM → Середній розмір позики; LAND_SHARE_CONTRACT_SUM → Позики",
+    "purpose": "Потрібно відібрати всі записи по працівнику [person_key], періоду [Period], організації [organization_key] ,  договору [CONTRACT_KEY], де [BUDGET_ITEM_CODE] = '0000008240'  <br>Якщо по працівнику не знайшлося запису, то вивести прочерк \"-\" Розрахункове поле: відношення кількості працівників із діючою на поточний день позикою на ноутбук до загальної чисельності команди Потрібно зсумувати значення поля land_share_contract_sum по всім працівникам із діючою позикою та подялити на кількість таких працівників.",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Доопрацювання-сторінки-ТРС",
+      "Командний-профіль/Сторінка-TRS-команди",
+      "Командний-профіль/Сторінка-TRS-команди/Доопрацювання-сторінки-TRS",
+      "Командний-профіль/Сторінка-TRS-команди/Сторінка-Винагорода-групового-профілю#вимоги-до-звіту",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

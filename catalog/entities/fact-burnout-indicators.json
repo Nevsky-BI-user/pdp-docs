@@ -1,0 +1,487 @@
+{
+  "id": "fact-burnout-indicators",
+  "type": "entity",
+  "name": "fact_Burnout_Indicators",
+  "definition": "",
+  "server": "",
+  "db": "",
+  "powerQuery": "fact_Burnout_Indicators",
+  "sourceTables": [],
+  "columns": [
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_ID",
+      "dataType": "string",
+      "source": "EMPLOYEE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_ID",
+      "dataType": "string",
+      "source": "ORGANIZATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_MAIN_POSITION",
+      "dataType": "boolean",
+      "source": "IS_MAIN_POSITION",
+      "isCalculated": false
+    },
+    {
+      "name": "FIRED_UNIT_CNT",
+      "dataType": "int64",
+      "source": "FIRED_UNIT_CNT",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_UNIT_AVERAGE",
+      "dataType": "double",
+      "source": "EMPLOYEE_UNIT_AVERAGE",
+      "isCalculated": false
+    },
+    {
+      "name": "TURNOVER",
+      "dataType": "double",
+      "source": "TURNOVER",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_TURNOVER_RISK",
+      "dataType": "string",
+      "source": "IS_TURNOVER_RISK",
+      "isCalculated": false
+    },
+    {
+      "name": "LAST_YEAR_PERFORMANCE_STR_RATE",
+      "dataType": "string",
+      "source": "LAST_YEAR_PERFORMANCE_STR_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "PREV_YEAR_PERFORMANCE_STR_RATE",
+      "dataType": "string",
+      "source": "PREV_YEAR_PERFORMANCE_STR_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "LAST_YEAR_PERFORMANCE_DESC_RATE",
+      "dataType": "double",
+      "source": "LAST_YEAR_PERFORMANCE_DESC_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "PREV_YEAR_PERFORMANCE_DESC_RATE",
+      "dataType": "double",
+      "source": "PREV_YEAR_PERFORMANCE_DESC_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "LAST_YEAR_PERFORMANCE",
+      "dataType": "int64",
+      "source": "LAST_YEAR_PERFORMANCE",
+      "isCalculated": false
+    },
+    {
+      "name": "PREV_YEAR_PERFORMANCE",
+      "dataType": "int64",
+      "source": "PREV_YEAR_PERFORMANCE",
+      "isCalculated": false
+    },
+    {
+      "name": "PERFORMANCE_RATE_TREND",
+      "dataType": "string",
+      "source": "PERFORMANCE_RATE_TREND",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_PERFORMANCE_RISK",
+      "dataType": "string",
+      "source": "IS_PERFORMANCE_RISK",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_LAST_YEAR_RATE",
+      "dataType": "double",
+      "source": "OKR_LAST_YEAR_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_PREV_YEAR_RATE",
+      "dataType": "double",
+      "source": "OKR_PREV_YEAR_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_LAST_YEAR_COLOR_RATE",
+      "dataType": "string",
+      "source": "OKR_LAST_YEAR_COLOR_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_PREV_YEAR_COLOR_RATE",
+      "dataType": "string",
+      "source": "OKR_PREV_YEAR_COLOR_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "LAST_YEAR_OKR_PLAN",
+      "dataType": "int64",
+      "source": "LAST_YEAR_OKR_PLAN",
+      "isCalculated": false
+    },
+    {
+      "name": "PREV_YEAR_OKR_PLAN",
+      "dataType": "int64",
+      "source": "PREV_YEAR_OKR_PLAN",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_RATE_TREND",
+      "dataType": "string",
+      "source": "OKR_RATE_TREND",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_OKR_RISK",
+      "dataType": "string",
+      "source": "IS_OKR_RISK",
+      "isCalculated": false
+    },
+    {
+      "name": "SALARY_RANGE",
+      "dataType": "string",
+      "source": "SALARY_RANGE",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_SALARY_RISK",
+      "dataType": "string",
+      "source": "IS_SALARY_RISK",
+      "isCalculated": false
+    },
+    {
+      "name": "NO_QUALITY_VACATION_MONTHS",
+      "dataType": "int64",
+      "source": "NO_QUALITY_VACATION_MONTHS",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_VACATION_RISK",
+      "dataType": "string",
+      "source": "IS_VACATION_RISK",
+      "isCalculated": false
+    },
+    {
+      "name": "TOTAL_AFTER_HOURS",
+      "dataType": "double",
+      "source": "TOTAL_AFTER_HOURS",
+      "isCalculated": false
+    },
+    {
+      "name": "WORKDAYS_WITHOUT_SICKLEAVES_AND_VACATIONS",
+      "dataType": "int64",
+      "source": "WORKDAYS_WITHOUT_SICKLEAVES_AND_VACATIONS",
+      "isCalculated": false
+    },
+    {
+      "name": "VIVA_OVERWORKING",
+      "dataType": "double",
+      "source": "VIVA_OVERWORKING",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_VIVA_RISK",
+      "dataType": "string",
+      "source": "IS_VIVA_RISK",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_TOTAL_RISK",
+      "dataType": "string",
+      "source": "IS_TOTAL_RISK",
+      "isCalculated": false
+    },
+    {
+      "name": "ID",
+      "dataType": "string",
+      "source": "ID",
+      "isCalculated": false
+    },
+    {
+      "name": "S_ID",
+      "dataType": "string",
+      "source": "S_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "CALC_DATE",
+      "dataType": "dateTime",
+      "source": "CALC_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "PERIOD",
+      "dataType": "dateTime",
+      "source": "PERIOD",
+      "isCalculated": false
+    },
+    {
+      "name": "DISMISSAL_DATE",
+      "dataType": "dateTime",
+      "source": "DISMISSAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_ID",
+      "dataType": "string",
+      "source": "JOB_TITLE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_KEY",
+      "dataType": "string",
+      "source": "STATUS_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_FIRED",
+      "dataType": "boolean",
+      "source": "IS_FIRED",
+      "isCalculated": false
+    },
+    {
+      "name": "RETENTION_CASE",
+      "dataType": "string",
+      "source": "RETENTION_CASE",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_FOCUS_GROUP",
+      "dataType": "string",
+      "source": "IS_FOCUS_GROUP",
+      "isCalculated": false
+    },
+    {
+      "name": "MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR",
+      "dataType": "double",
+      "source": "MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR_RISK",
+      "dataType": "string",
+      "source": "IS_MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR_RISK",
+      "isCalculated": false
+    },
+    {
+      "name": "FULL_NAME",
+      "dataType": "string",
+      "source": "FULL_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "TOTAL_RISK_CNT",
+      "dataType": "int64",
+      "source": "TOTAL_RISK_CNT",
+      "isCalculated": false
+    },
+    {
+      "name": "VACATION_RESERVE",
+      "dataType": "double",
+      "source": "VACATION_RESERVE",
+      "isCalculated": false
+    },
+    {
+      "name": "VACATION_RESERVE_BY_MAIN_POSITION",
+      "dataType": "double",
+      "source": "VACATION_RESERVE_BY_MAIN_POSITION",
+      "isCalculated": false
+    },
+    {
+      "name": "NO_VACATION_DURATION_BY_MAIN_POSITION",
+      "dataType": "int64",
+      "source": "NO_VACATION_DURATION_BY_MAIN_POSITION",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CATEGORY_DETAIL",
+      "dataType": "string",
+      "source": "POSITION_CATEGORY_DETAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_TYPE_KEY",
+      "dataType": "string",
+      "source": "EMPLOYMENT_TYPE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_ON_POSITION_KEY",
+      "dataType": "string",
+      "source": "OFFICE_ON_POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_KEY",
+      "dataType": "string",
+      "source": "POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION",
+      "dataType": "string",
+      "source": "POSITION",
+      "isCalculated": false
+    },
+    {
+      "name": "ORDER_NUM_BY_RISK",
+      "dataType": "int64",
+      "source": "ORDER_NUM_BY_RISK",
+      "isCalculated": false
+    },
+    {
+      "name": "HIERARCHY_LEVEL",
+      "dataType": "int64",
+      "source": "HIERARCHY_LEVEL",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_Unit",
+      "fromColumn": "DIVISION_PERSON_ID",
+      "toColumn": "UNIT_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Person",
+      "fromColumn": "EMPLOYEE_ID",
+      "toColumn": "EMPLOYEE_CODE",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Admin_OS",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position_Category",
+      "fromColumn": "POSITION_CATEGORY_DETAIL",
+      "toColumn": "Position_Category_Detail",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employment_Type",
+      "fromColumn": "EMPLOYMENT_TYPE_KEY",
+      "toColumn": "EMPLOYMENT_TYPE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Office",
+      "fromColumn": "OFFICE_ON_POSITION_KEY",
+      "toColumn": "OFFICE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employee_Status",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position",
+      "fromColumn": "POSITION_KEY",
+      "toColumn": "ID",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Organization",
+      "fromColumn": "ORGANIZATION_ID",
+      "toColumn": "ORGANIZATION_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Date",
+      "fromColumn": "DISMISSAL_DATE",
+      "toColumn": "Date",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [
+    "AC.BR.OKR",
+    "AC.BR.OKR останній рік",
+    "AC.BR.OKR попередній рік",
+    "AC.BR.Годин взаємодії з керівником",
+    "AC.BR.Зарплата вилка",
+    "AC.BR.Кількість звільнених",
+    "AC.BR.Кількість місяців без якісної відпустки",
+    "AC.BR.Перепрацювання Viva",
+    "AC.BR.Плинність (%)",
+    "AC.BR.Ризик втрати",
+    "AC.BR.Стаж в холдингу (неперервний)",
+    "AC.BR.Стаж на посаді (останній)",
+    "AC.BR.ТОР останній рік",
+    "AC.BR.ТОР попередній рік",
+    "AC.BR.Тренд оцінки результативності (ТОР)",
+    "AC.Burnout_Risk.c_rows",
+    "AC.Burnout_Risk.Панель фільтрів.Звільнені",
+    "AC.Burnout_risk.Застосувати вибір",
+    "AC.Burnout_risk.Панель фільтрів.Працюючі",
+    "AC.Filter",
+    "AC.Nav.My_lead_team",
+    "AC.Взаємодія з керівником",
+    "AC.Зарплата (вилки)",
+    "AC.Кількість місяців без якісної відпустки",
+    "AC.Перепрацювання Viva",
+    "AC.Плинність (%)",
+    "AC.Ризик",
+    "AC.Тренд оцінки OKR",
+    "AC.Тренд оцінки результативності",
+    "AC.Чи є ризик вигорання по плинності?",
+    "AC.Чи є ризик вигорання по результатам оцінки OKR?",
+    "AC.Чи є ризик вигорання по результатам оцінки результативності?",
+    "AC.Чи є ризик вигорання через відсутність відпусток?",
+    "AC.Чи є ризик вигорання через відсутність спілкування з керівником?",
+    "AC.Чи є ризик вигорання через перепрацювання?",
+    "AC.Чи є ризик вигорання через рівень оплати праці?",
+    "AC.Чи є ризик?",
+    "GP.OKR  попередній рік",
+    "GP.OKR  поточний рік",
+    "GP.Оцінка результативності попередній рік",
+    "GP.Оцінка результативності поточний рік",
+    "GP.Ризик втрати працівників (%)",
+    "GP.Рік оцінки результативності.Last",
+    "GP.Рік оцінки результативності.Prev",
+    "PP.SVG.Performance.Last2Periods",
+    "PP.Оцінка результативності попередній рік",
+    "PP.Оцінка результативності поточний рік",
+    "PP.Рік оцінки результативності.Last",
+    "PP.Рік оцінки результативності.Prev"
+  ],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_Burnout_Indicators.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

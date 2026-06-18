@@ -1,0 +1,47 @@
+{
+  "id": "pp-umovy-pryiomu",
+  "type": "measure",
+  "name": "PP.Умови прийому",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "COALESCE(\n\tSELECTEDVALUE('fact_Employee_List'[EMP_HIRING_CONDITION_TYPE_CODE]),\n\t\"-\"\n)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[EMP_HIRING_CONDITION_TYPE_CODE]"
+    ],
+    "tables": [
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "EMP_HIRING_CONDITION_TYPE_CODE"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "Умови прийому",
+    "purpose": "Потрібно змапити із українськими відповідниками  <br>ВРЕМЕННО - Тимчасово  <br>БЕССРОЧНО - Безстроково  <br>НА_ПЕРИОД_ОТСУТСТВИЯ_ОСНОВНОГО_РАБОТНИКА - На період відсутності основного працівника  <br>НА_ОПРЕДЕЛЕННЫЙ_СРОК - На визначений термін  <br>ПЕРЕВОД - перевод  <br>Якщо значення в полі відсутнє, то показати текст \"Дані відсутні\"  або знак \"-\".",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

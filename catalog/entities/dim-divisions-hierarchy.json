@@ -1,0 +1,76 @@
+{
+  "id": "dim-divisions-hierarchy",
+  "type": "entity",
+  "name": "dim_Divisions_Hierarchy",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "dim_Divisions_Hierarchy",
+  "sourceTables": [
+    "DM.vw_R27_dim_Divisions_Hierarchy"
+  ],
+  "columns": [
+    {
+      "name": "division_id",
+      "dataType": "string",
+      "source": "division_id",
+      "isCalculated": false
+    },
+    {
+      "name": "division_name",
+      "dataType": "string",
+      "source": "division_name",
+      "isCalculated": false
+    },
+    {
+      "name": "parent_division_id",
+      "dataType": "string",
+      "source": "parent_division_id",
+      "isCalculated": false
+    },
+    {
+      "name": "parent_division_name",
+      "dataType": "string",
+      "source": "parent_division_name",
+      "isCalculated": false
+    },
+    {
+      "name": "Organization_ID",
+      "dataType": "string",
+      "source": "Organization_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "Organization_name",
+      "dataType": "string",
+      "source": "Organization_name",
+      "isCalculated": false
+    },
+    {
+      "name": "Org_Div_Parent_Key",
+      "dataType": "string",
+      "source": "Org_Div_Parent_Key",
+      "isCalculated": false
+    },
+    {
+      "name": "division_hierarchy_list",
+      "dataType": "string",
+      "source": "division_hierarchy_list",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [],
+  "relatedMeasures": [],
+  "requirementRefs": [
+    "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+    "Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)",
+    "Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)/Додаткові-вимоги-до-вітрини-Плинність"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/dim_Divisions_Hierarchy.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

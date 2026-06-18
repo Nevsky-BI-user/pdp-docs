@@ -1,0 +1,45 @@
+{
+  "id": "ac-br-treshkhold-plynnist",
+  "type": "measure",
+  "name": "AC.BR.Трешхолд. Плинність (%)",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "IF(NOT(ISBLANK([AC.BR.Плинність (%)])),\">=15%\")",
+  "dependencies": {
+    "measures": [
+      "AC.BR.Плинність (%)"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "Плинність (%)",
+    "purpose": "Плинність по кадровому підрозділу Щоб порахувати плинність по структурі, яка містить в собі кілька кадрових підрозділів, потрібно показник Fired_Unit_Cnt по кожному підрозділу (не людині) зсумувати та поділити на суму Employee_Unit_Average по кожному підрозділу (не людині). Щоб визначити Fired_Unit_Cnt  та  Employee_Unit_Average по підрозділу, треба взяти їх значення по одному із працівників цього підрозділу, бо плинність по людині рахується по її підрозділу",
+    "requirementRefs": [
+      "Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Сторінка-Картка-команди"
+    ]
+  },
+  "tags": [
+    "analytical-cases",
+    "burnout-risk",
+    "export",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

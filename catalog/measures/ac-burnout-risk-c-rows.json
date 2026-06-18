@@ -1,0 +1,48 @@
+{
+  "id": "ac-burnout-risk-c-rows",
+  "type": "measure",
+  "name": "AC.Burnout_Risk.c_rows",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+  "formatString": "0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SWITCH(\n\tSELECTEDVALUE('t_IS_FIRED'[IS_FIRED]),\n\t0, \n\tCALCULATE(\n\t\tCOUNTROWS('fact_Burnout_Indicators'),\n\t\t'fact_Burnout_Indicators'[IS_FIRED] = FALSE()\n\t),\n\t1,\n\tCALCULATE(\n\t\tCOUNTROWS('fact_Burnout_Indicators'),\n\t\t'fact_Burnout_Indicators'[IS_FIRED] = TRUE()\n\t)\n)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Burnout_Indicators[IS_FIRED]",
+      "t_IS_FIRED[IS_FIRED]"
+    ],
+    "tables": [
+      "fact_Burnout_Indicators",
+      "t_IS_FIRED"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "IS_FIRED"
+    ],
+    "powerQuery": "fact_Burnout_Indicators"
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "analytical-cases",
+    "burnout-risk",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

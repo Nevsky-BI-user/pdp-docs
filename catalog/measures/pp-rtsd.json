@@ -1,0 +1,49 @@
+{
+  "id": "pp-rtsd",
+  "type": "measure",
+  "name": "PP.РЦД",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Життєвий цикл",
+  "formatString": "#,0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SUM('fact_Employee_History_Position'[ANNUAL_TARGET_INCOME])",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_History_Position[ANNUAL_TARGET_INCOME]"
+    ],
+    "tables": [
+      "fact_Employee_History_Position"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_Employee_History_Position"
+    ],
+    "sourceColumns": [
+      "ANNUAL_TARGET_INCOME"
+    ],
+    "powerQuery": "fact_Employee_History_Position"
+  },
+  "business": {
+    "definition": "ANNUAL_TARGET_INCOME → Відсоток приросту річного цільового доходу (РЦД)",
+    "purpose": "Відсоток приросту = ((РЦД в поточній точці/РЦД в попередній точці)-1)*100%. Округлення до цілих.  <br>Якщо це найперша точка на графіку, то приріст = 0%.  <br>Якщо дані про РЦД відсутні, то проставити лейбл \"Дані відсутні\".",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zhyttievyi-tsykl"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

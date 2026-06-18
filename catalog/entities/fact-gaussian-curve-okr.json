@@ -1,0 +1,49 @@
+{
+  "id": "fact-gaussian-curve-okr",
+  "type": "entity",
+  "name": "fact_Gaussian_Curve_OKR",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_Gaussian_Curve_OKR",
+  "sourceTables": [
+    "DM.R27_fact_OKR_Goals"
+  ],
+  "columns": [
+    {
+      "name": "CALC_PERFORMANCE_DESC_RATE",
+      "dataType": "string",
+      "source": "CALC_PERFORMANCE_DESC_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_COUNT",
+      "dataType": "int64",
+      "source": "EMPLOYEE_COUNT",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_OKR_Evalution",
+      "fromColumn": "CALC_PERFORMANCE_DESC_RATE",
+      "toColumn": "CALC_PERFORMANCE_DESC_RATE",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [
+    "GP.OKR.SVG.Bar chart"
+  ],
+  "requirementRefs": [
+    "Індивідуальний-профіль-працівника/Історія-по-посадам",
+    "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+    "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_Gaussian_Curve_OKR.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

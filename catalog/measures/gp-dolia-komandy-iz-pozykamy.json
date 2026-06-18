@@ -1,0 +1,60 @@
+{
+  "id": "gp-dolia-komandy-iz-pozykamy",
+  "type": "measure",
+  "name": "GP.Доля команди із позиками",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\TRS",
+  "formatString": "0.00%;-0.00%;0.00%",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),dim_Admin_OS[USER_ACCESS_ID] )\n\n/* *********** ADMIN *********** */\nVAR _admin = \nDIVIDE(\n    CALCULATE(\n        DISTINCTCOUNT('fact_Repayment_Credit'[USER_ACCESS_ID]),\n        'fact_Repayment_Credit'[ACTION_END_DATE] > TODAY()),\n    [GP.Кількість співробітників всього, чол. - Integer])\n\n/* *********** LT *********** */\nVAR _admin_lt =\nDIVIDE(\n    CALCULATE(\n        DISTINCTCOUNT('fact_Repayment_Credit'[USER_ACCESS_ID]),\n        'fact_Repayment_Credit'[ACTION_END_DATE] > TODAY(),\n        _filter_lt),\n    [GP.Кількість співробітників всього, чол. - Integer])\n\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\nRETURN \nCOALESCE(_res, \"-\")",
+  "dependencies": {
+    "measures": [
+      "GP.Кількість співробітників всього, чол. - Integer"
+    ],
+    "columns": [
+      "dim_Admin_LT_OS[USER_ACCESS_ID]",
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_Repayment_Credit[ACTION_END_DATE]",
+      "fact_Repayment_Credit[USER_ACCESS_ID]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_Repayment_Credit",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List",
+      "DM.vw_R27_fact_Repayment_Credit_PDP"
+    ],
+    "sourceColumns": [
+      "ACTION_END_DATE",
+      "Index",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "ACTION_END_DATE → Доля команди із позиками",
+    "purpose": "Потрібно підрахувати кількість працівників у команді, по яким є записи в таблиці DM.vw_R27_fact_Repayment_Credit_PDP та поле action_end_date>поточна дата (діюча позика) та поділити на поточну кількість членів команди. В деталізацію вивести ПІБ таких працівників, вид і розмір позики, дати видачі та погашення.",
+    "requirementRefs": [
+      "Командний-профіль/Сторінка-TRS-команди/Доопрацювання-сторінки-TRS"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

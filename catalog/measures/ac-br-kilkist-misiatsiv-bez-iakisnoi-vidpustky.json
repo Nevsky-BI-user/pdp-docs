@@ -1,0 +1,48 @@
+{
+  "id": "ac-br-kilkist-misiatsiv-bez-iakisnoi-vidpustky",
+  "type": "measure",
+  "name": "AC.BR.Кількість місяців без якісної відпустки",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+  "formatString": "0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SUM(fact_Burnout_Indicators[NO_QUALITY_VACATION_MONTHS])",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Burnout_Indicators[NO_QUALITY_VACATION_MONTHS]"
+    ],
+    "tables": [
+      "fact_Burnout_Indicators"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "NO_QUALITY_VACATION_MONTHS"
+    ],
+    "powerQuery": "fact_Burnout_Indicators"
+  },
+  "business": {
+    "definition": "NO_QUALITY_VACATION_MONTHS → Кількість місяців без якісної відпустки",
+    "purpose": "",
+    "requirementRefs": [
+      "Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22"
+    ]
+  },
+  "tags": [
+    "analytical-cases",
+    "burnout-risk",
+    "export",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

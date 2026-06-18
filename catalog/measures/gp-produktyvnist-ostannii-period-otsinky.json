@@ -1,0 +1,56 @@
+{
+  "id": "gp-produktyvnist-ostannii-period-otsinky",
+  "type": "measure",
+  "name": "GP.Продуктивність.Останній період оцінки",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\Продуктивність",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": " \n//_last_period = CALCULATE(MAX('fact_Employee_Performance_Total'[performance_PBI_order]), ALL('dim_Performance_Evalution'))\n\n-- логіка визначення періоду для виводу \n-- наприклад: 01.11.2025-31.03.2026 - Півріччя 2025 | 01.04.2026-31.10.2026 - Річна 2025\nVAR _date  = TODAY()\nVAR _year  = YEAR ( _date )\nVAR _month = MONTH ( _date )\n\nVAR _baseYear =\n    SWITCH (\n        TRUE(),\n        _month >= 11, _year,        -- листопад–грудень → поточний рік\n        _month <= 3,  _year - 1,    -- січень–березень → попередній рік\n        _month >= 4 && _month <= 10, _year - 1  -- квітень–жовтень → попередній рік\n    )\n\nVAR _periodIndex =\n    IF ( _month >= 11 || _month <= 3, 1, 2 )\n\nVAR _last_period = \n_baseYear * 10 + _periodIndex\n\nVAR _res =\nCALCULATE(\n    SELECTEDVALUE('fact_Employee_Performance_Total'[performence_period]), \n    'fact_Employee_Performance_Total'[performance_PBI_order] = _last_period)\n\nRETURN _res",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_Performance_Total[performance_PBI_order]",
+      "fact_Employee_Performance_Total[performence_period]"
+    ],
+    "tables": [
+      "fact_Employee_Performance_Total"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_Employee_Performance_General_PBI"
+    ],
+    "sourceColumns": [
+      "performance_PBI_order",
+      "performence_period"
+    ],
+    "powerQuery": "fact_Employee_Performance_Total"
+  },
+  "business": {
+    "definition": "performance_PBI_order → Сортування (для виведення 4-х останніх періодів)",
+    "purpose": "",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Зміна-джерела-даних-для-павутинки-Оцінка-результативності",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/ТЗ-на-побудову-візуала-Павутинка-по-оцінці-результативності-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "main",
+    "pdp",
+    "produktyvnist"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

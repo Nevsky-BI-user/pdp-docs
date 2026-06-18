@@ -1,0 +1,49 @@
+{
+  "id": "pp-viiskova-chastyna",
+  "type": "measure",
+  "name": "PP.Військова частина",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "\"В розробці\"\n// COALESCE(\n//     FORMAT(\n//         SELECTEDVALUE('fact_Employee_List'[MILITARY_REGISTRATION]),\n//         \"0\"\n//     ),\n//     \"-\"\n// )",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[MILITARY_REGISTRATION]"
+    ],
+    "tables": [
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "MILITARY_REGISTRATION"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "Військова частина",
+    "purpose": "Дані відсутні в побудованих вітринах. Потрібно досліджувати джерело. Буде додано пізніше.",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника/Додаткові-кадрові-дані",
+      "Допоміжні-вітрини-для-звіту/Вітрина-атрибутів-по-працівнику"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

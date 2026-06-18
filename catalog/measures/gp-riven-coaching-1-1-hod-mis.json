@@ -1,0 +1,75 @@
+{
+  "id": "gp-riven-coaching-1-1-hod-mis",
+  "type": "measure",
+  "name": "GP.Рівень coaching (1:1), год/міс",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\Ризики та фокуси уваги",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "//************* ROLE FILTERS **************\nVAR _filter_lt = TREATAS(VALUES(dim_Admin_LT_OS[USER_ACCESS_ID]), 'dim_Admin_OS'[USER_ACCESS_ID])\n\n/* *********** ADMIN *********** */\nVAR _admin =\nCALCULATE(\n\tDIVIDE(\n\t\tSUM('fact_Metrics'[MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR]),\n\t\tCOUNT('fact_Metrics'[MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR]), \"-\"),\n\tFILTER('fact_Metrics', 'fact_Metrics'[IS_MAIN_POSITION] = TRUE()))\n\n/* *********** ADMIN LT *********** */\nVAR _admin_lt =\nCALCULATE(\n\tDIVIDE(\n\t\tSUM('fact_Metrics'[MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR]),\n\t\tCOUNT('fact_Metrics'[MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR]), \"-\"),\n\tFILTER('fact_Metrics', 'fact_Metrics'[IS_MAIN_POSITION] = TRUE()),\n\t_filter_lt)\n\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE( t_HierarchyTypes[Index] ),\n\t\t0, DIVIDE(_admin_lt, 3, BLANK()),\n\t\t1, DIVIDE(_admin, 3, BLANK())\n\t)\n\n/* *********** RESULT *********** */\nRETURN \nTRIM(\n    COALESCE(ROUND(_res, 2), 0))",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_Metrics[IS_MAIN_POSITION]",
+      "fact_Metrics[MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_Metrics",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "IS_MAIN_POSITION",
+      "Index",
+      "MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин нарад 1:1 з керівником за період від поточної точки до попередньої точки; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин нарад 1:1 з керівником працівника; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин нарад 1:1 з керівником кадровому підрозділу співробітника; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин нарад 1:1 з керівником по напряму співробітника; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин нарад 1:1 з керівником по Холдингу; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → meeting_with_manager_one_to_one_hour_direction; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → meeting_with_manager_one_to_one_hour_cnt; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → meeting_with_manager_one_to_one_hour_holding; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин нарад 1:1 з керівником працівника за 3 попередніх місяці; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Чи є ризик вигорання через недостатню взаємодію з керівником?; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин 1:1 за попередні 3 міс.; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин нарад 1:1 з керівником кадровому підрозділу; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин нарад 1:1 з керівником по напряму команди; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин нарад 1:1 з керівником; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Рівень coaching (1:1), год/міс",
+    "purpose": "1 - Так  <br>0 - Ні <br>Розрахункове значення.  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_dim_Employee_Metric_Health_and_Wellbeing]    <br>Відбір по працівнику [person_key], періоду [PERIOD], документу прийому [DOC_JOB_APPLICATION_ID].  <br>Якщо дані по працівнику у вітрині відсутні, то показати надпис \"Дані відсутні\" (наприклад, якщо немає ліцензії та прцівник не користується teams or outlook Розрахункове значення.  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_dim_Employee_Metric_Health_",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Сторінка-Ефективність-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Сторінка-Ефективність-працівника/Вітрина-Відвідування-офісів",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Таблиця-vw_R27_calc_Viva_Direction_PDP",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Таблиця-vw_R27_calc_Viva_Holding_PDP",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту/Зміна-алгоритму-розрахунку-метрик-по-Viva-з-урахуванням-дати-завантаження-даних-до-DWH",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту/Змінити-період-розрахунку-середніх-значень-по-Віва",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту/Змінити-трешхолд-1%3A1-для-кейсу-Утримання-працівника",
+      "Кейс-Утримання-працівників/Деталізація-метрик-в-кейсі-Утримання-співробітника",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Взаємодія-Viva-та-залученість-команд",
+      "Командний-профіль/Сторінка-Ефективність",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+      "Командний-профіль/Сторінка-Плинність-та-Exits/ТЗ-на-вітрину-Exits"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "main",
+    "pdp",
+    "ryzyky-ta-fokusy-uvahy"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

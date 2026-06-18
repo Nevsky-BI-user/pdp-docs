@@ -1,0 +1,256 @@
+{
+  "id": "dim-hrbp-os",
+  "type": "entity",
+  "name": "dim__HRBP_OS",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "dim__HRBP_OS",
+  "sourceTables": [],
+  "columns": [
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HIERARCHY_LEVEL_LIST",
+      "dataType": "string",
+      "source": "EMP_HIERARCHY_LEVEL_LIST",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HIERARCHY_LEVEL",
+      "dataType": "string",
+      "source": "EMP_HIERARCHY_LEVEL",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HEAD_ADMIN_ID_EMP_HEAD_ADMIN_DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "EMP_HEAD_ADMIN_ID_EMP_HEAD_ADMIN_DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HEAD_FUNCTIONAL_ID_EMP_HEAD_FUNCTIONAL_DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "EMP_HEAD_FUNCTIONAL_ID_EMP_HEAD_FUNCTIONAL_DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HRBP_ID_EMP_HRBP_DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "EMP_HRBP_ID_EMP_HRBP_DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_FINBP_ID_EMP_FINBP_DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "EMP_FINBP_ID_EMP_FINBP_DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "ID",
+      "dataType": "string",
+      "source": "ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_ID",
+      "dataType": "string",
+      "source": "EMPLOYEE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_ID",
+      "dataType": "string",
+      "source": "ORGANIZATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_ADMIN_ID",
+      "dataType": "string",
+      "source": "EMPLOYEE_ADMIN_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_JOB_APPLICATION_ADMIN_ID",
+      "dataType": "string",
+      "source": "DOC_JOB_APPLICATION_ADMIN_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_NAME",
+      "dataType": "string",
+      "source": "EMPLOYEE_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_EMAIL",
+      "dataType": "string",
+      "source": "EMPLOYEE_EMAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "CALC_DATE",
+      "dataType": "dateTime",
+      "source": "CALC_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_HRBP",
+      "dataType": "boolean",
+      "source": "IS_HRBP",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_HIERARCHY_HRBP_ERROR",
+      "dataType": "boolean",
+      "source": "IS_HIERARCHY_HRBP_ERROR",
+      "isCalculated": false
+    },
+    {
+      "name": "ORDER_NUM",
+      "dataType": "int64",
+      "source": "ORDER_NUM",
+      "isCalculated": false
+    },
+    {
+      "name": "ORDER_NUM_2",
+      "dataType": "int64",
+      "source": "ORDER_NUM_2",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION",
+      "dataType": "string",
+      "source": "ORGANIZATION",
+      "isCalculated": false
+    },
+    {
+      "name": "PERSONNEL_UNIT",
+      "dataType": "string",
+      "source": "PERSONNEL_UNIT",
+      "isCalculated": false
+    },
+    {
+      "name": "DIRECTION",
+      "dataType": "string",
+      "source": "DIRECTION",
+      "isCalculated": false
+    },
+    {
+      "name": "SUB_DIRECTION",
+      "dataType": "string",
+      "source": "SUB_DIRECTION",
+      "isCalculated": false
+    },
+    {
+      "name": "HAB_FOR_AGRO",
+      "dataType": "string",
+      "source": "HAB_FOR_AGRO",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_1",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_1",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_2",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_2",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_3",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_3",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_4",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_4",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_5",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_5",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_6",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_6",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBORDINATE_СNT",
+      "dataType": "int64",
+      "source": "SUBORDINATE_СNT",
+      "isCalculated": false
+    },
+    {
+      "name": "URL_FOTO",
+      "dataType": "string",
+      "source": "URL_FOTO",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_ID",
+      "dataType": "string",
+      "source": "JOB_TITLE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_JOB_APPLICATION_HRBP_ID",
+      "dataType": "string",
+      "source": "DOC_JOB_APPLICATION_HRBP_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_HRBP_ID",
+      "dataType": "string",
+      "source": "JOB_TITLE_HRBP_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_HRBP_ID",
+      "dataType": "string",
+      "source": "EMPLOYEE_HRBP_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_MAIN_POSITION",
+      "dataType": "int64",
+      "source": "IS_MAIN_POSITION",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [],
+  "relatedMeasures": [],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/dim__HRBP_OS.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

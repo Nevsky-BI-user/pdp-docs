@@ -1,0 +1,57 @@
+{
+  "id": "pp-oklad-detailed",
+  "type": "measure",
+  "name": "PP.Оклад_detailed",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\TRS",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _maxd = [PP.history_position_maxd]\nVAR _res = \n    CALCULATE(\n        SELECTEDVALUE(fact_Employee_History_Position[SALARY]),\n        'fact_Employee_History_Position'[PERIOD] = _maxd\n    )\nRETURN \nCOALESCE(\n    FORMAT(_res, \"### ### ### \\грн\"),\n    \"—\"\n)",
+  "dependencies": {
+    "measures": [
+      "PP.history_position_maxd"
+    ],
+    "columns": [
+      "fact_Employee_History_Position[PERIOD]",
+      "fact_Employee_History_Position[SALARY]"
+    ],
+    "tables": [
+      "fact_Employee_History_Position"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_Employee_History_Position"
+    ],
+    "sourceColumns": [
+      "PERIOD",
+      "SALARY"
+    ],
+    "powerQuery": "fact_Employee_History_Position"
+  },
+  "business": {
+    "definition": "PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період; SALARY → Оклад",
+    "purpose": "Це дата нарахування/виплати премії Зірка МХП (accrual_types_key = '9781d4aa-3a0d-1458-623a-7a93e90a2284'   та category_of_accrual_sort  = '2' ) Поточний період",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Деталізація-на-сторінці-Винагорода",
+      "Допоміжні-вітрини-для-звіту/Таблиця-(вью)-для-розрахунку-метрики-Укомплектованість-штату",
+      "Допоміжні-вітрини-для-звіту/Таблиця-періодична-(попередні-12-міс)-для-розрахунку-метрики-Середній-дохід"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

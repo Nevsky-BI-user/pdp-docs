@@ -1,0 +1,147 @@
+{
+  "id": "fact-trs-plan-fact",
+  "type": "entity",
+  "name": "fact_TRS_plan_fact",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_TRS_plan_fact",
+  "sourceTables": [
+    "DM.vw_R27_fact_TRS_plan_fact"
+  ],
+  "columns": [
+    {
+      "name": "period",
+      "dataType": "dateTime",
+      "source": "period",
+      "isCalculated": false
+    },
+    {
+      "name": "payment_budget",
+      "dataType": "double",
+      "source": "payment_budget",
+      "isCalculated": false
+    },
+    {
+      "name": "payment_budget_adjusted",
+      "dataType": "double",
+      "source": "payment_budget_adjusted",
+      "isCalculated": false
+    },
+    {
+      "name": "budget_year",
+      "dataType": "string",
+      "source": "budget_year",
+      "isCalculated": false
+    },
+    {
+      "name": "payment_fact",
+      "dataType": "double",
+      "source": "payment_fact",
+      "isCalculated": false
+    },
+    {
+      "name": "total_sum",
+      "dataType": "double",
+      "source": "total_sum",
+      "isCalculated": false
+    },
+    {
+      "name": "scenario",
+      "dataType": "string",
+      "source": "scenario",
+      "isCalculated": false
+    },
+    {
+      "name": "organization_key",
+      "dataType": "string",
+      "source": "organization_key",
+      "isCalculated": false
+    },
+    {
+      "name": "unit_key",
+      "dataType": "string",
+      "source": "unit_key",
+      "isCalculated": false
+    },
+    {
+      "name": "unit_direction",
+      "dataType": "string",
+      "source": "unit_direction",
+      "isCalculated": false
+    },
+    {
+      "name": "unit_sub_direction",
+      "dataType": "string",
+      "source": "unit_sub_direction",
+      "isCalculated": false
+    },
+    {
+      "name": "division_key",
+      "dataType": "string",
+      "source": "division_key",
+      "isCalculated": false
+    },
+    {
+      "name": "division_direction_Org",
+      "dataType": "string",
+      "source": "division_direction_Org",
+      "isCalculated": false
+    },
+    {
+      "name": "division_sub_direction_Org",
+      "dataType": "string",
+      "source": "division_sub_direction_Org",
+      "isCalculated": false
+    },
+    {
+      "name": "status_key",
+      "dataType": "string",
+      "source": "status_key",
+      "isCalculated": false
+    },
+    {
+      "name": "trs_category",
+      "dataType": "string",
+      "source": "trs_category",
+      "isCalculated": false
+    },
+    {
+      "name": "cost_centre_key",
+      "dataType": "string",
+      "source": "cost_centre_key",
+      "isCalculated": false
+    },
+    {
+      "name": "budget_code",
+      "dataType": "string",
+      "source": "budget_code",
+      "isCalculated": false
+    },
+    {
+      "name": "object_code",
+      "dataType": "string",
+      "source": "object_code",
+      "isCalculated": false
+    },
+    {
+      "name": "budget_cost_item",
+      "dataType": "string",
+      "source": "budget_cost_item",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [],
+  "relatedMeasures": [],
+  "requirementRefs": [
+    "Командний-профіль/Сторінка-TRS-команди",
+    "Командний-профіль/Сторінка-TRS-команди/Сторінка-Винагорода-групового-профілю#вимоги-до-звіту"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_TRS_plan_fact.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

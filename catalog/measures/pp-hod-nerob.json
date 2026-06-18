@@ -1,0 +1,60 @@
+{
+  "id": "pp-hod-nerob",
+  "type": "measure",
+  "name": "PP.Год. нероб.",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Життєвий цикл",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _maxd = [PP.history_position_maxd]\nVAR _res = \n    CALCULATE(\n        SELECTEDVALUE(fact_Employee_History_Position[TOTAL_AFTER_HOURS]),\n        'fact_Employee_History_Position'[PERIOD] = _maxd\n    )\nRETURN COALESCE(\"\"&_res, \"—\")",
+  "dependencies": {
+    "measures": [
+      "PP.history_position_maxd"
+    ],
+    "columns": [
+      "fact_Employee_History_Position[PERIOD]",
+      "fact_Employee_History_Position[TOTAL_AFTER_HOURS]"
+    ],
+    "tables": [
+      "fact_Employee_History_Position"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_Employee_History_Position"
+    ],
+    "sourceColumns": [
+      "PERIOD",
+      "TOTAL_AFTER_HOURS"
+    ],
+    "powerQuery": "fact_Employee_History_Position"
+  },
+  "business": {
+    "definition": "PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період; TOTAL_AFTER_HOURS → Годин взаємодії в неробочий час за період від поточної точки до попередньої точки; TOTAL_AFTER_HOURS → Годин роботи в неробочий час за попередні 6 міс.",
+    "purpose": "Це дата нарахування/виплати премії Зірка МХП (accrual_types_key = '9781d4aa-3a0d-1458-623a-7a93e90a2284'   та category_of_accrual_sort  = '2' ) Поточний період Сума значень [TOTAL_AFTER_HOURS] по працівнику за попередні 6 місяців.<br>Для звільнених - попередні 6 місяців від дати звільнення, не включаючи місяць звільнення. Сума значень [TOTAL_AFTER_HOURS] по працівнику за попередні 6 місяців.  <br>Для звільнених - попередні 6 місяців від дати звільнення, не включаючи місяць звільнення. **<br> - до 15 числа поточного місяця включно розраховувати дані за останні 6 місяців, як Поточний місяць -2. ",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Деталізація-на-сторінці-Винагорода",
+      "Допоміжні-вітрини-для-звіту/Таблиця-(вью)-для-розрахунку-метрики-Укомплектованість-штату",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту/Зміна-алгоритму-розрахунку-метрик-по-Viva-з-урахуванням-дати-завантаження-даних-до-DWH",
+      "Допоміжні-вітрини-для-звіту/Таблиця-періодична-(попередні-12-міс)-для-розрахунку-метрики-Середній-дохід",
+      "Кейс-Утримання-працівників/Деталізація-метрик-в-кейсі-Утримання-співробітника"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zhyttievyi-tsykl"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

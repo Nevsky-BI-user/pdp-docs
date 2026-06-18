@@ -1,0 +1,51 @@
+{
+  "id": "pp-okr-vaha-okr",
+  "type": "measure",
+  "name": "PP.OKR.Вага OKR",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "AVERAGE('fact_OKR_Goals'[OKR_WEIGHT])",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_OKR_Goals[OKR_WEIGHT]"
+    ],
+    "tables": [
+      "fact_OKR_Goals"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.R27_fact_OKR_Goals"
+    ],
+    "sourceColumns": [
+      "OKR_WEIGHT"
+    ],
+    "powerQuery": "fact_OKR_Goals"
+  },
+  "business": {
+    "definition": "OKR_WEIGHT → Вага ОКР",
+    "purpose": "",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Створити-блок-Виконання-OKR"
+    ]
+  },
+  "tags": [
+    "okr",
+    "pdp",
+    "personal-profile",
+    "rezultatyvnist-ta-otsinka"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,44 @@
+{
+  "id": "gp-riven-absenteizmu",
+  "type": "measure",
+  "name": "GP.Рівень абсентеїзму (%)",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\Ризики та фокуси уваги",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "TRIM(\n\tFORMAT(\n\t\tCOALESCE([5AC.Коефіцієнт абсентеїзму], 0),\n\t\t\"0.00%\"\n\t) \n)",
+  "dependencies": {
+    "measures": [
+      "5AC.Коефіцієнт абсентеїзму"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "Рівень абсентеїзму (%)",
+    "purpose": "Розрахункове поле.  <br>Коефіцієнт абсентизму розраховується по команді за попередні 12 місяців, НЕ включаючи поточний місяць. Розрахунок треба проводити за кожен період, так як FTE_employee може змінюватися.  <br>АБСЕНТЕЇЗМ= (Кількість днів на лікарняному, крім днів на лікарняному по вагітності та пологам) по кожному працівнику та періоду/(відпрацьовані робочі дні у місяці*FTE_employee + дні на лік-му (без днів на лікарняному по вагітності та пологам) по кожному працівнику та періоду, де Кількість днів на лікарняному крім днів на лікарняному по вагітності та пологам = Sick_Leave_Day_Without_P",
+    "requirementRefs": [
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "main",
+    "pdp",
+    "ryzyky-ta-fokusy-uvahy"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

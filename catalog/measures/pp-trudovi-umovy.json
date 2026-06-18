@@ -1,0 +1,58 @@
+{
+  "id": "pp-trudovi-umovy",
+  "type": "measure",
+  "name": "PP.Трудові умови",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _fact_table_key= VALUES('fact_Employee_List'[PERMANENT_TEMPORARY_DETAILS_ID])\nVAR _result = \nCALCULATE(\n\tSELECTEDVALUE('dim_Permanent_Temporary'[NAME]),\n\tTREATAS(_fact_table_key, 'dim_Permanent_Temporary'[PERMANENT_TEMPORARY_DETAILS_KEY])\n)\nRETURN _result",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Permanent_Temporary[NAME]",
+      "dim_Permanent_Temporary[PERMANENT_TEMPORARY_DETAILS_KEY]",
+      "fact_Employee_List[PERMANENT_TEMPORARY_DETAILS_ID]"
+    ],
+    "tables": [
+      "dim_Permanent_Temporary",
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Permanent_Temporary"
+    ],
+    "sourceColumns": [
+      "NAME",
+      "PERMANENT_TEMPORARY_DETAILS_ID",
+      "PERMANENT_TEMPORARY_DETAILS_KEY"
+    ],
+    "powerQuery": "dim_Permanent_Temporary"
+  },
+  "business": {
+    "definition": "NAME → Назва кадрового підрозділу; NAME → Назва батьківського кадрового підрозділу; NAME → Організація, назва; NAME → Групи віку; NAME → division_person_name",
+    "purpose": "Назву тягти із таблиці dwh.dim_divisions по ключу division_person_id=id Поле зберігається в довіднику DM.vw_R27_dim_Group_Age",
+    "requirementRefs": [
+      "Допоміжні-вітрини-для-звіту/Вью-по-ієрархії-кадрових-підрозділів",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду/Редизайн-сторінки-Загальна-інформація",
+      "Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)",
+      "Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)/Додаткові-вимоги-до-вітрини-Плинність"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

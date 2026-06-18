@@ -1,0 +1,59 @@
+{
+  "id": "pp-stazh-v-kholdynhu",
+  "type": "measure",
+  "name": "PP.Стаж в холдингу",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Життєвий цикл",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _maxd = [PP.history_position_maxd]\nVAR _seniority = \n    CALCULATE(\n        SELECTEDVALUE(fact_Employee_History_Position[seniority_LAST_HOLDING_HIRE_DATE]),\n        'fact_Employee_History_Position'[PERIOD] = _maxd\n    )\nVAR _years = ROUNDDOWN(_seniority/12,0)\nVAR _month = _seniority - _years *12\nVAR _res = \n\tIF(\n\t\tNOT ISBLANK( _seniority ),\n\t\tIF(\n\t\t\tNOT ISBLANK( _years ),\n\t\t\t_years & \" р.\"\n\t\t) & \" \" &\n\t\tIF(\n\t\t\tNOT ISBLANK( _month ) && _month <> 0,\n\t\t\t_month & \" міс.\"\n\t\t)\n\t)\nRETURN \n\tCOALESCE(\n\t\tTRIM(_res),\n\t\t\"-\"\n\t)",
+  "dependencies": {
+    "measures": [
+      "PP.history_position_maxd"
+    ],
+    "columns": [
+      "fact_Employee_History_Position[PERIOD]",
+      "fact_Employee_History_Position[seniority_LAST_HOLDING_HIRE_DATE]"
+    ],
+    "tables": [
+      "fact_Employee_History_Position"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_Employee_History_Position"
+    ],
+    "sourceColumns": [
+      "PERIOD",
+      "seniority_LAST_HOLDING_HIRE_DATE"
+    ],
+    "powerQuery": "fact_Employee_History_Position"
+  },
+  "business": {
+    "definition": "PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період; seniority_LAST_HOLDING_HIRE_DATE → Стаж в холдингу останній; seniority_LAST_HOLDING_HIRE_DATE → Стаж в холдингу; seniority_LAST_HOLDING_HIRE_DATE → Стаж в холдингу (останній)",
+    "purpose": "Це дата нарахування/виплати премії Зірка МХП (accrual_types_key = '9781d4aa-3a0d-1458-623a-7a93e90a2284'   та category_of_accrual_sort  = '2' ) Поточний період Значення поля в місяцях потрібно перевести в роки та місяці. Наприклад, якшо seniority_LAST_HOLDING_HIRE_DATE= 17, то в звіті треба відобразити 1 рік 5 місяців.",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Деталізація-на-сторінці-Винагорода",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Допоміжні-вітрини-для-звіту/Таблиця-(вью)-для-розрахунку-метрики-Укомплектованість-штату",
+      "Допоміжні-вітрини-для-звіту/Таблиця-періодична-(попередні-12-міс)-для-розрахунку-метрики-Середній-дохід",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zhyttievyi-tsykl"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

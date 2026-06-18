@@ -1,0 +1,31 @@
+{
+  "id": "t-is-fired",
+  "type": "entity",
+  "name": "t_IS_FIRED",
+  "definition": "",
+  "server": "",
+  "db": "",
+  "powerQuery": "t_IS_FIRED",
+  "sourceTables": [],
+  "columns": [
+    {
+      "name": "IS_FIRED",
+      "dataType": "int64",
+      "source": "IS_FIRED",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [],
+  "relatedMeasures": [
+    "AC.Burnout_Risk.c_rows",
+    "AC.Burnout_risk.Застосувати вибір"
+  ],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/t_IS_FIRED.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

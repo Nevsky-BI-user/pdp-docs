@@ -1,0 +1,370 @@
+{
+  "id": "fact-viva-metrics",
+  "type": "entity",
+  "name": "fact_Viva_Metrics",
+  "definition": "",
+  "server": "",
+  "db": "",
+  "powerQuery": "fact_Viva_Metrics",
+  "sourceTables": [],
+  "columns": [
+    {
+      "name": "ID",
+      "dataType": "string",
+      "source": "ID",
+      "isCalculated": false
+    },
+    {
+      "name": "PERIOD",
+      "dataType": "dateTime",
+      "source": "PERIOD",
+      "isCalculated": false
+    },
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_ID",
+      "dataType": "string",
+      "source": "EMPLOYEE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_ID",
+      "dataType": "string",
+      "source": "ORGANIZATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_ID",
+      "dataType": "string",
+      "source": "JOB_TITLE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_KEY",
+      "dataType": "string",
+      "source": "STATUS_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_MAIN_POSITION",
+      "dataType": "boolean",
+      "source": "IS_MAIN_POSITION",
+      "isCalculated": false
+    },
+    {
+      "name": "VACATION_DAY",
+      "dataType": "double",
+      "source": "VACATION_DAY",
+      "isCalculated": false
+    },
+    {
+      "name": "WEEKEND_DAY",
+      "dataType": "double",
+      "source": "WEEKEND_DAY",
+      "isCalculated": false
+    },
+    {
+      "name": "VACATION_NUMBER",
+      "dataType": "double",
+      "source": "VACATION_NUMBER",
+      "isCalculated": false
+    },
+    {
+      "name": "LONG_VACATION",
+      "dataType": "double",
+      "source": "LONG_VACATION",
+      "isCalculated": false
+    },
+    {
+      "name": "LONG_VACATION_BY_MAIN_POSITION",
+      "dataType": "double",
+      "source": "LONG_VACATION_BY_MAIN_POSITION",
+      "isCalculated": false
+    },
+    {
+      "name": "LONG_VACATION_TOTAL_DAY",
+      "dataType": "double",
+      "source": "LONG_VACATION_TOTAL_DAY",
+      "isCalculated": false
+    },
+    {
+      "name": "LONG_VACATION_TOTAL_DAY_BY_MAIN_POSITION",
+      "dataType": "double",
+      "source": "LONG_VACATION_TOTAL_DAY_BY_MAIN_POSITION",
+      "isCalculated": false
+    },
+    {
+      "name": "SICK_LEAVE_DAY_WITHOUT_PREGNANCY",
+      "dataType": "double",
+      "source": "SICK_LEAVE_DAY_WITHOUT_PREGNANCY",
+      "isCalculated": false
+    },
+    {
+      "name": "WORK_DAY_FOR_ABSENTEEISM_СNT",
+      "dataType": "double",
+      "source": "WORK_DAY_FOR_ABSENTEEISM_СNT",
+      "isCalculated": false
+    },
+    {
+      "name": "FTE_WEIGHTED_WORK_DAY_FOR_ABSENTEEISM",
+      "dataType": "double",
+      "source": "FTE_WEIGHTED_WORK_DAY_FOR_ABSENTEEISM",
+      "isCalculated": false
+    },
+    {
+      "name": "WORK_DAYS_PER_MONTH_YEAR_CNT",
+      "dataType": "double",
+      "source": "WORK_DAYS_PER_MONTH_YEAR_CNT",
+      "isCalculated": false
+    },
+    {
+      "name": "FTE_WEIGHTED_WORK_DAYS_PER_MONTH_YEAR_CNT",
+      "dataType": "double",
+      "source": "FTE_WEIGHTED_WORK_DAYS_PER_MONTH_YEAR_CNT",
+      "isCalculated": false
+    },
+    {
+      "name": "SICK_LEAVE_ID_CNT",
+      "dataType": "double",
+      "source": "SICK_LEAVE_ID_CNT",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_SICK_LEAVE_PAID",
+      "dataType": "boolean",
+      "source": "IS_SICK_LEAVE_PAID",
+      "isCalculated": false
+    },
+    {
+      "name": "SICK_LEAVE_DAY_TOTAL",
+      "dataType": "double",
+      "source": "SICK_LEAVE_DAY_TOTAL",
+      "isCalculated": false
+    },
+    {
+      "name": "INTERNAL_NETWORK_SIZE",
+      "dataType": "double",
+      "source": "INTERNAL_NETWORK_SIZE",
+      "isCalculated": false
+    },
+    {
+      "name": "NETWORK_OUTSIDE_ORGANIZATION",
+      "dataType": "double",
+      "source": "NETWORK_OUTSIDE_ORGANIZATION",
+      "isCalculated": false
+    },
+    {
+      "name": "COLLABORATION_HOUR",
+      "dataType": "double",
+      "source": "COLLABORATION_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "COLLABORATION_SPAN",
+      "dataType": "double",
+      "source": "COLLABORATION_SPAN",
+      "isCalculated": false
+    },
+    {
+      "name": "TOTAL_AFTER_HOUR",
+      "dataType": "double",
+      "source": "TOTAL_AFTER_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "UNINTERRUPTED_HOUR",
+      "dataType": "double",
+      "source": "UNINTERRUPTED_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "MEETING_HOUR",
+      "dataType": "double",
+      "source": "MEETING_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "MEETING_AND_CALL_WITH_MANAGER_HOUR",
+      "dataType": "double",
+      "source": "MEETING_AND_CALL_WITH_MANAGER_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "MANAGER_COACHING_ONE_TO_ONE_HOUR",
+      "dataType": "double",
+      "source": "MANAGER_COACHING_ONE_TO_ONE_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "WORKDAY_WITHOUT_SICKLEAVE_AND_VACATION",
+      "dataType": "double",
+      "source": "WORKDAY_WITHOUT_SICKLEAVE_AND_VACATION",
+      "isCalculated": false
+    },
+    {
+      "name": "CONFLICTING_MEETING_HOUR",
+      "dataType": "double",
+      "source": "CONFLICTING_MEETING_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR",
+      "dataType": "double",
+      "source": "MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_EXIST_VIVA_INFO",
+      "dataType": "boolean",
+      "source": "IS_EXIST_VIVA_INFO",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_FIRED",
+      "dataType": "boolean",
+      "source": "IS_FIRED",
+      "isCalculated": false
+    },
+    {
+      "name": "FIRED_UNIT_CNT",
+      "dataType": "int64",
+      "source": "FIRED_UNIT_CNT",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_UNIT_AVERAGE",
+      "dataType": "double",
+      "source": "EMPLOYEE_UNIT_AVERAGE",
+      "isCalculated": false
+    },
+    {
+      "name": "FULL_NAME",
+      "dataType": "string",
+      "source": "FULL_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CATEGORY_DETAIL",
+      "dataType": "string",
+      "source": "POSITION_CATEGORY_DETAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_TYPE_KEY",
+      "dataType": "string",
+      "source": "EMPLOYMENT_TYPE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_ON_POSITION_KEY",
+      "dataType": "string",
+      "source": "OFFICE_ON_POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_KEY",
+      "dataType": "string",
+      "source": "POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION",
+      "dataType": "string",
+      "source": "POSITION",
+      "isCalculated": false
+    },
+    {
+      "name": "DISMISSAL_DATE",
+      "dataType": "dateTime",
+      "source": "DISMISSAL_DATE",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_Unit",
+      "fromColumn": "DIVISION_PERSON_ID",
+      "toColumn": "UNIT_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position_Category",
+      "fromColumn": "POSITION_CATEGORY_DETAIL",
+      "toColumn": "Position_Category_Detail",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employment_Type",
+      "fromColumn": "EMPLOYMENT_TYPE_KEY",
+      "toColumn": "EMPLOYMENT_TYPE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Office",
+      "fromColumn": "OFFICE_ON_POSITION_KEY",
+      "toColumn": "OFFICE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employee_Status",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position",
+      "fromColumn": "POSITION_KEY",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [
+    "PP.Годин взаємодії з керівником (Холдинг)",
+    "PP.Годин взаємодії з керівником (співробітник)",
+    "PP.Годин взаємодії по нарадах (Холдинг)",
+    "PP.Годин взаємодії по нарадах (співробітник)",
+    "PP.Годин взаємодії у неробочий час (Холдинг)",
+    "PP.Годин взаємодії у неробочий час (співробітник)",
+    "PP.Годин для фокусної роботи (Холдинг)",
+    "PP.Годин для фокусної роботи (співробітник)",
+    "PP.Годин загальної взаємодії (Холдинг)",
+    "PP.Годин загальної взаємодії (співробітник)",
+    "PP.Годин керівника на взаємодію із безпосередніми підлеглими (Холдинг)",
+    "PP.Годин керівника на взаємодію із безпосередніми підлеглими (співробітник)",
+    "PP.Годин нарад 1:1 з керівником (Холдинг)",
+    "PP.Годин нарад 1:1 з керівником (співробітник)",
+    "PP.Довжина (границі) робочого дня (Холдинг)",
+    "PP.Довжина (границі) робочого дня (співробітник)",
+    "PP.Доля Conflicting meeting hours (Холдинг)",
+    "PP.Доля Conflicting meeting hours (співробітник)",
+    "PP.Розмір мережі (Холдинг, 3м)",
+    "PP.Розмір мережі (співробітник, 3м)",
+    "PP.Ширина мережі (Холдинг, 3м)",
+    "PP.Ширина мережі (співробітник, 3м)"
+  ],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_Viva_Metrics.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

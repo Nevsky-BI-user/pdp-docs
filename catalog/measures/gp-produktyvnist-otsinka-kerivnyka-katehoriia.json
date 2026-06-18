@@ -1,0 +1,42 @@
+{
+  "id": "gp-produktyvnist-otsinka-kerivnyka-katehoriia",
+  "type": "measure",
+  "name": "GP.Продуктивність.Оцінка керівника.Категорія",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\Продуктивність",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _rate_value = [GP.Продуктивність.Оцінка керівника.Значення]\nVAR _category = \n    SWITCH(\n        TRUE(),\n        _rate_value > 4.3, \"Категорія ТОР А\",\n        _rate_value > 3.90, \"Категорія А\",\n        _rate_value > 3.4, \"Категорія B\",\n        _rate_value > 3.0, \"Категорія C\",\n        _rate_value > 0, \"Категорія D\"\n    )\n\nRETURN _category",
+  "dependencies": {
+    "measures": [
+      "GP.Продуктивність.Оцінка керівника.Значення"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "group-profile",
+    "main",
+    "pdp",
+    "produktyvnist"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

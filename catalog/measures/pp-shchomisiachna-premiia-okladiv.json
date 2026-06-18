@@ -1,0 +1,65 @@
+{
+  "id": "pp-shchomisiachna-premiia-okladiv",
+  "type": "measure",
+  "name": "PP.Щомісячна премія окладів",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\TRS",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _v = \n\tCALCULATE(\n\t\tMAXX(\n\t\t\t'fact_Employee_List',\n\t\t\t'fact_Employee_List'[BONUS_MONTH_SALARY_CNT]\n\t\t)\n\t)\n\n// VAR _v = \n//     CALCULATE(\n//         MAXX(\n//             'fact_TRS_Plan',\n//             'fact_TRS_Plan'[BONUS_MONTH_SALARY_CNT]\n//         ),\n//         fact_TRS_Plan[IS_ACTUAL]=TRUE(),\n//         fact_TRS_Plan[CALC_TYPE_CODE]=\"UAH\",\n//         fact_TRS_Plan[category_name]=\"Фіксована винагорода\"\n//     )    \n\nRETURN \"Окладів: \"&_v",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[BONUS_MONTH_SALARY_CNT]",
+      "fact_TRS_Plan[BONUS_MONTH_SALARY_CNT]",
+      "fact_TRS_Plan[CALC_TYPE_CODE]",
+      "fact_TRS_Plan[IS_ACTUAL]",
+      "fact_TRS_Plan[category_name]"
+    ],
+    "tables": [
+      "fact_Employee_List",
+      "fact_TRS_Plan"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_TRS_Plan_PDP"
+    ],
+    "sourceColumns": [
+      "BONUS_MONTH_SALARY_CNT",
+      "CALC_TYPE_CODE",
+      "IS_ACTUAL",
+      "category_name"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "BONUS_MONTH_SALARY_CNT → Премія місячна кіл-ть окладів; BONUS_MONTH_SALARY_CNT → Щомісячна премія; BONUS_MONTH_SALARY_CNT → Доля команди з щомісячною премією, %; BONUS_MONTH_SALARY_CNT → Місячна премія; category_name → Назва блоку",
+    "purpose": "Станом на дату події <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_fact_Employee_List_PDP]  <br>Відібрати записи по працівнику по працівнику [person_key], періоду [Period], організації [organization_key], підрозділу [division_key], посаді [position_key]<br>BONUS_MONTH_SALARY_CNT  - кількість окладів  <br>Розмір премії = Min_Tariff_Rate помножити на BONUS_MONTH_SALARY_CNT - сума (к-сть окладів*оклад)  <br>Якщо по працівнику записи відсутні, то показати прочерк \"-\" <br>Відбір робити за період станом на 12 міс. тому  <br>BONUS_MONTH_SALARY_CNT  -",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Деталізація-на-сторінці-Винагорода",
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка/Блок-Оцінка-компетенцій",
+      "Командний-профіль/Сторінка-TRS-команди",
+      "Командний-профіль/Сторінка-TRS-команди/Сторінка-Винагорода-групового-профілю#вимоги-до-звіту",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Блок-Оцінка-компетенцій-(груповий-профіль)"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

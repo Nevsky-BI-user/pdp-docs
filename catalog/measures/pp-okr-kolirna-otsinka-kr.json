@@ -1,0 +1,51 @@
+{
+  "id": "pp-okr-kolirna-otsinka-kr",
+  "type": "measure",
+  "name": "PP.OKR.Колірна оцінка KR",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "AVERAGE('fact_OKR_Key_Results'[KR_COLOR_RATE])",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_OKR_Key_Results[KR_COLOR_RATE]"
+    ],
+    "tables": [
+      "fact_OKR_Key_Results"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.R27_fact_OKR_Key_Results"
+    ],
+    "sourceColumns": [
+      "KR_COLOR_RATE"
+    ],
+    "powerQuery": "fact_OKR_Key_Results"
+  },
+  "business": {
+    "definition": "KR_COLOR_RATE → КР виконано; KR_COLOR_RATE → КР не виконано; KR_COLOR_RATE → Коефіцієнт колірної оцінки КР з плану",
+    "purpose": "Якщо поле kr_color_rate >= 25 Якщо поле Calc_Performance_Desc_Rate <= 24.99 Якщо поле Calc_Performance_Desc_Rate < 25",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Створити-блок-Виконання-OKR"
+    ]
+  },
+  "tags": [
+    "okr",
+    "pdp",
+    "personal-profile",
+    "rezultatyvnist-ta-otsinka"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

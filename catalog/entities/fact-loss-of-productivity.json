@@ -1,0 +1,546 @@
+{
+  "id": "fact-loss-of-productivity",
+  "type": "entity",
+  "name": "fact_Loss_of_Productivity",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_Loss_of_Productivity",
+  "sourceTables": [
+    "DM.vw_R27_fact_Loss_of_Productivity"
+  ],
+  "columns": [
+    {
+      "name": "PERIOD",
+      "dataType": "dateTime",
+      "source": "PERIOD",
+      "isCalculated": false
+    },
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_ID",
+      "dataType": "string",
+      "source": "EMPLOYEE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_NAME",
+      "dataType": "string",
+      "source": "EMPLOYEE_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_ID",
+      "dataType": "string",
+      "source": "ORGANIZATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_ID",
+      "dataType": "string",
+      "source": "JOB_TITLE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DIRECTION_CODE",
+      "dataType": "string",
+      "source": "DIRECTION_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "WORK_FORMAT_ON_EMPLOYEE_KEY",
+      "dataType": "string",
+      "source": "WORK_FORMAT_ON_EMPLOYEE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_MAIN_POSITION",
+      "dataType": "int64",
+      "source": "IS_MAIN_POSITION",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_LAST_YEAR_RATE",
+      "dataType": "double",
+      "source": "OKR_LAST_YEAR_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "PERFORMANCE_RATE_TREND",
+      "dataType": "string",
+      "source": "PERFORMANCE_RATE_TREND",
+      "isCalculated": false
+    },
+    {
+      "name": "SUPERVISOR_INDICATOR",
+      "dataType": "string",
+      "source": "SUPERVISOR_INDICATOR",
+      "isCalculated": false
+    },
+    {
+      "name": "BONUS_QUARTER_SALARY_CNT",
+      "dataType": "double",
+      "source": "BONUS_QUARTER_SALARY_CNT",
+      "isCalculated": false
+    },
+    {
+      "name": "BONUS_MONTH_SALARY_CNT",
+      "dataType": "double",
+      "source": "BONUS_MONTH_SALARY_CNT",
+      "isCalculated": false
+    },
+    {
+      "name": "Person_Name",
+      "dataType": "string",
+      "source": "Person_Name",
+      "isCalculated": false
+    },
+    {
+      "name": "Person_group_Name",
+      "dataType": "string",
+      "source": "Person_group_Name",
+      "isCalculated": false
+    },
+    {
+      "name": "Net_Office_Time_Last_Month",
+      "dataType": "double",
+      "source": "Net_Office_Time_Last_Month",
+      "isCalculated": false
+    },
+    {
+      "name": "Net_Office_Time_AVG_3month",
+      "dataType": "double",
+      "source": "Net_Office_Time_AVG_3month",
+      "isCalculated": false
+    },
+    {
+      "name": "Net_Office_Time_Norm_Deviation",
+      "dataType": "double",
+      "source": "Net_Office_Time_Norm_Deviation",
+      "isCalculated": false
+    },
+    {
+      "name": "Trend_Net_Office_Time_Pct",
+      "dataType": "double",
+      "source": "Trend_Net_Office_Time_Pct",
+      "isCalculated": false
+    },
+    {
+      "name": "Net_Office_Time_Trend_Pct",
+      "dataType": "double",
+      "source": "Net_Office_Time_Trend_Pct",
+      "isCalculated": false
+    },
+    {
+      "name": "COLLABORATION_SPAN",
+      "dataType": "double",
+      "source": "COLLABORATION_SPAN",
+      "isCalculated": false
+    },
+    {
+      "name": "Collab_Span_Norm_Last_Month",
+      "dataType": "double",
+      "source": "Collab_Span_Norm_Last_Month",
+      "isCalculated": false
+    },
+    {
+      "name": "Collab_Span_Norm",
+      "dataType": "double",
+      "source": "Collab_Span_Norm",
+      "isCalculated": false
+    },
+    {
+      "name": "Collab_Span_Norm_AVG_3month",
+      "dataType": "double",
+      "source": "Collab_Span_Norm_AVG_3month",
+      "isCalculated": false
+    },
+    {
+      "name": "Collab_Span_Trend",
+      "dataType": "double",
+      "source": "Collab_Span_Trend",
+      "isCalculated": false
+    },
+    {
+      "name": "Collab_Span_Trend_Pct",
+      "dataType": "double",
+      "source": "Collab_Span_Trend_Pct",
+      "isCalculated": false
+    },
+    {
+      "name": "COLLABORATION_HOUR",
+      "dataType": "double",
+      "source": "COLLABORATION_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "Collab_Hour_by_Span_Value",
+      "dataType": "double",
+      "source": "Collab_Hour_by_Span_Value",
+      "isCalculated": false
+    },
+    {
+      "name": "Collab_Hour_by_Span",
+      "dataType": "double",
+      "source": "Collab_Hour_by_Span",
+      "isCalculated": false
+    },
+    {
+      "name": "Award_Norm_LAST_3_Month",
+      "dataType": "double",
+      "source": "Award_Norm_LAST_3_Month",
+      "isCalculated": false
+    },
+    {
+      "name": "Award_Norm_Pct",
+      "dataType": "double",
+      "source": "Award_Norm_Pct",
+      "isCalculated": false
+    },
+    {
+      "name": "Award_Norm",
+      "dataType": "double",
+      "source": "Award_Norm",
+      "isCalculated": false
+    },
+    {
+      "name": "Award_Norm_LAST_Month",
+      "dataType": "double",
+      "source": "Award_Norm_LAST_Month",
+      "isCalculated": false
+    },
+    {
+      "name": "Award_Trend",
+      "dataType": "double",
+      "source": "Award_Trend",
+      "isCalculated": false
+    },
+    {
+      "name": "Award_Trend_Pct",
+      "dataType": "double",
+      "source": "Award_Trend_Pct",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_Pct",
+      "dataType": "double",
+      "source": "OKR_Pct",
+      "isCalculated": false
+    },
+    {
+      "name": "Trend_Rate_Pct",
+      "dataType": "double",
+      "source": "Trend_Rate_Pct",
+      "isCalculated": false
+    },
+    {
+      "name": "MANAGER_COACHING_ONE_TO_ONE_HOUR",
+      "dataType": "double",
+      "source": "MANAGER_COACHING_ONE_TO_ONE_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "MANAGER_COACHING_PER_ONE_EMPLOYEE",
+      "dataType": "double",
+      "source": "MANAGER_COACHING_PER_ONE_EMPLOYEE",
+      "isCalculated": false
+    },
+    {
+      "name": "NORM_WORKS_HOUR_MONTH",
+      "dataType": "int64",
+      "source": "NORM_WORKS_HOUR_MONTH",
+      "isCalculated": false
+    },
+    {
+      "name": "Fieldwork_Share",
+      "dataType": "double",
+      "source": "Fieldwork_Share",
+      "isCalculated": false
+    },
+    {
+      "name": "Fieldwork_Share_by_Norm",
+      "dataType": "double",
+      "source": "Fieldwork_Share_by_Norm",
+      "isCalculated": false
+    },
+    {
+      "name": "TOTAL_AFTER_HOURS",
+      "dataType": "double",
+      "source": "TOTAL_AFTER_HOURS",
+      "isCalculated": false
+    },
+    {
+      "name": "VIVA_OVERWORKING",
+      "dataType": "double",
+      "source": "VIVA_OVERWORKING",
+      "isCalculated": false
+    },
+    {
+      "name": "After Hours",
+      "dataType": "double",
+      "source": "After Hours",
+      "isCalculated": false
+    },
+    {
+      "name": "Percentage_Of_Unproductive_Employees",
+      "dataType": "double",
+      "source": "Percentage_Of_Unproductive_Employees",
+      "isCalculated": false
+    },
+    {
+      "name": "Unproductive_Subordinate_Pct",
+      "dataType": "double",
+      "source": "Unproductive_Subordinate_Pct",
+      "isCalculated": false
+    },
+    {
+      "name": "Turnover",
+      "dataType": "double",
+      "source": "Turnover",
+      "isCalculated": false
+    },
+    {
+      "name": "Vertical_Employee_Turnover",
+      "dataType": "double",
+      "source": "Vertical_Employee_Turnover",
+      "isCalculated": false
+    },
+    {
+      "name": "Total_Risk_Productive_without_manager",
+      "dataType": "double",
+      "source": "Total_Risk_Productive_without_manager",
+      "isCalculated": false
+    },
+    {
+      "name": "Total_Risk_Productive",
+      "dataType": "double",
+      "source": "Total_Risk_Productive",
+      "isCalculated": false
+    },
+    {
+      "name": "Total_Risk_Productive_Name",
+      "dataType": "string",
+      "source": "Total_Risk_Productive_Name",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_KEY",
+      "dataType": "string",
+      "source": "STATUS_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CATEGORY_DETAIL",
+      "dataType": "string",
+      "source": "POSITION_CATEGORY_DETAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_TYPE_KEY",
+      "dataType": "string",
+      "source": "EMPLOYMENT_TYPE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_ON_POSITION_KEY",
+      "dataType": "string",
+      "source": "OFFICE_ON_POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "HIERARCHY_LEVEL",
+      "dataType": "int64",
+      "source": "HIERARCHY_LEVEL",
+      "isCalculated": false
+    },
+    {
+      "name": "ORDER_NUM_BY_RISK",
+      "dataType": "int64",
+      "source": "ORDER_NUM_BY_RISK",
+      "isCalculated": false
+    },
+    {
+      "name": "Employee_Admin_ID",
+      "dataType": "string",
+      "source": "Employee_Admin_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "Employee_HRBP_ID",
+      "dataType": "string",
+      "source": "Employee_HRBP_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "LOAD_TIMESTAMP",
+      "dataType": "dateTime",
+      "source": "LOAD_TIMESTAMP",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_Employee_Status",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Admin_OS",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employment_Type",
+      "fromColumn": "EMPLOYMENT_TYPE_KEY",
+      "toColumn": "EMPLOYMENT_TYPE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Organization",
+      "fromColumn": "ORGANIZATION_ID",
+      "toColumn": "ORGANIZATION_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Person",
+      "fromColumn": "EMPLOYEE_ID",
+      "toColumn": "PERSON_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position_Category",
+      "fromColumn": "POSITION_CATEGORY_DETAIL",
+      "toColumn": "Position_Category_Detail",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Unit",
+      "fromColumn": "DIVISION_PERSON_ID",
+      "toColumn": "UNIT_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Work_Format",
+      "fromColumn": "WORK_FORMAT_ON_EMPLOYEE_KEY",
+      "toColumn": "WORK_FORMAT_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Office",
+      "fromColumn": "OFFICE_ON_POSITION_KEY",
+      "toColumn": "OFFICE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position",
+      "fromColumn": "JOB_TITLE_ID",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_LP_risks",
+      "fromColumn": "Total_Risk_Productive_Name",
+      "toColumn": "RISK_TYPE",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [
+    "AC.Export.1:1 в сер. на 1 підлеглого, год.",
+    "AC.Export.Інтервал взаємодії (Viva), год. в день",
+    "AC.Export.Інтервал взаємодії Тренд (%)",
+    "AC.Export.Агрегований % непродуктинвих підлеглих для керівників",
+    "AC.Export.Доля взаємодії (Viva) в інтервалі (%)",
+    "AC.Export.Доля днів польових робіт (%)",
+    "AC.Export.Перепрацювання (Viva)",
+    "AC.Export.Плинність % по вертикалі",
+    "AC.Export.Результативність по KPI (%)",
+    "AC.Export.Ризик втрати продуктивності",
+    "AC.Export.Тренд OKR (%)",
+    "AC.Export.Тренд Оцінки рез-ті (%)",
+    "AC.Export.Тренд Результативності по KPI (%)",
+    "AC.Export.Чистий час в офісі Тренд (%)",
+    "AC.Export.Чистий час в офісі, год.",
+    "AC.LP.Nav.My_lead_team",
+    "AC.LP.Стаж на посаді (останній)",
+    "AC.Loss_Productivity.Застосувати вибір",
+    "AC.Loss_Productivity.Панель фільтрів",
+    "AC.Switch.1:1 в сер. на 1 підлеглого, год.",
+    "AC.Switch.Інтервал взаємодії (Viva), год. в день",
+    "AC.Switch.Інтервал взаємодії Тренд (%)",
+    "AC.Switch.Агрегований % непродуктинвих підлеглих для керівників",
+    "AC.Switch.Доля взаємодії (Viva) в інтервалі (%)",
+    "AC.Switch.Доля днів польових робіт (%)",
+    "AC.Switch.Перепрацювання (Viva)",
+    "AC.Switch.Плинність % по вертикалі",
+    "AC.Switch.Результативність по KPI (%)",
+    "AC.Switch.Тренд OKR (%)",
+    "AC.Switch.Тренд Оцінки рез-ті (%)",
+    "AC.Switch.Тренд Результативності по KPI (%)",
+    "AC.Switch.Чистий час в офісі Тренд (%)",
+    "AC.Switch.Чистий час в офісі, год.",
+    "AC.Дані.1:1 в сер. на 1 підлеглого, год.",
+    "AC.Дані.Інтервал взаємодії (Viva), год. в день",
+    "AC.Дані.Інтервал взаємодії Тренд (%)",
+    "AC.Дані.Агрегований % непродуктинвих підлеглих для керівників",
+    "AC.Дані.Доля взаємодії (Viva) в інтервалі (%)",
+    "AC.Дані.Доля днів польових робіт (%)",
+    "AC.Дані.Перепрацювання (Viva)",
+    "AC.Дані.Плинність % по вертикалі",
+    "AC.Дані.Результативність по KPI (%)",
+    "AC.Дані.Ризик втрати продуктивності",
+    "AC.Дані.Тренд OKR (%)",
+    "AC.Дані.Тренд Оцінки рез-ті (%)",
+    "AC.Дані.Тренд Результативності по KPI (%)",
+    "AC.Дані.Чистий час в офісі Тренд (%)",
+    "AC.Дані.Чистий час в офісі, год.",
+    "AC.Оцінка.1:1 в сер. на 1 підлеглого, год.",
+    "AC.Оцінка.Інтервал взаємодії (Viva), год. в день",
+    "AC.Оцінка.Інтервал взаємодії Тренд (%)",
+    "AC.Оцінка.Агрегований % непродуктинвих підлеглих для керівників",
+    "AC.Оцінка.Доля взаємодії (Viva) в інтервалі (%)",
+    "AC.Оцінка.Доля днів польових робіт (%)",
+    "AC.Оцінка.Перепрацювання (Viva)",
+    "AC.Оцінка.Плинність % по вертикалі",
+    "AC.Оцінка.Результативність по KPI (%)",
+    "AC.Оцінка.Ризик втрати продуктивності",
+    "AC.Оцінка.Тренд OKR (%)",
+    "AC.Оцінка.Тренд Оцінки рез-ті (%)",
+    "AC.Оцінка.Тренд Результативності по KPI (%)",
+    "AC.Оцінка.Чистий час в офісі Тренд (%)",
+    "AC.Оцінка.Чистий час в офісі, год.",
+    "GP.Ризик втрати продуктивності (%)",
+    "PP.Ризик.Втрата продуктивності"
+  ],
+  "requirementRefs": [
+    "Кейс-Втрати-Продуктивності-Працівників",
+    "Кейс-Втрати-Продуктивності-Працівників/Деталізація-метрик-в-кейсі-Продуктивність",
+    "Командний-профіль/Сторінка-Ефективність",
+    "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_Loss_of_Productivity.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,60 @@
+{
+  "id": "gp-produktyvnist-kilkist-spivrobitnykiv-ostannii-period-otsinky",
+  "type": "measure",
+  "name": "GP.Продуктивність.Кількість співробітників (Останній період оцінки)",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\Продуктивність",
+  "formatString": "0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "//************* ROLE FILTERS **************\nVAR _filter_lt = TREATAS(VALUES(dim_Admin_LT_OS[USER_ACCESS_ID]), 'dim_Admin_OS'[USER_ACCESS_ID])\n\nVAR LastPeriod = [GP.Продуктивність.Останній період оцінки]\n\n/* *********** ADMIN *********** */\nVAR _admin =\nCALCULATE(\n        DISTINCTCOUNT('fact_Employee_Performance_Total'[USER_ACCESS_ID]),\n        'fact_Employee_Performance_Total'[performence_period] = LastPeriod)\n        // FILTER(\n        //     'fact_Employee_Performance_Total',\n        //     'fact_Employee_Performance_Total'[order] = 1))\n\n/* *********** ADMIN LT *********** */\nVAR _admin_lt =\nCALCULATE(\n        DISTINCTCOUNT('fact_Employee_Performance_Total'[USER_ACCESS_ID]),\n        'fact_Employee_Performance_Total'[performence_period] = LastPeriod,\n        // FILTER(\n        //     'fact_Employee_Performance_Total',\n        //     'fact_Employee_Performance_Total'[order] = 1),\n        _filter_lt)\n\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE( t_HierarchyTypes[Index] ),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\n\n/* *********** RESULT *********** */\nRETURN COALESCE(_res, 0)",
+  "dependencies": {
+    "measures": [
+      "GP.Продуктивність.Останній період оцінки"
+    ],
+    "columns": [
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_Employee_Performance_Total[USER_ACCESS_ID]",
+      "fact_Employee_Performance_Total[order]",
+      "fact_Employee_Performance_Total[performence_period]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_Employee_Performance_Total",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List",
+      "DM.vw_R27_fact_Employee_Performance_General_PBI"
+    ],
+    "sourceColumns": [
+      "Index",
+      "USER_ACCESS_ID",
+      "order",
+      "performence_period"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "group-profile",
+    "main",
+    "pdp",
+    "produktyvnist"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

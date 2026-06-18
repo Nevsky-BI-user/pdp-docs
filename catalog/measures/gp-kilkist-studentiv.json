@@ -1,0 +1,49 @@
+{
+  "id": "gp-kilkist-studentiv",
+  "type": "measure",
+  "name": "GP.Кількість студентів",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\Загальна інформація",
+  "formatString": "0;-0;0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "\"В розробці\"\n// VAR _set =\n//  CALCULATE(\n//     COUNTROWS(VALUES('fact_Employee_List'[person_key])),\n//     KEEPFILTERS('fact_Employee_List'[STATUS_KEY] = 11)\n// )",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[STATUS_KEY]",
+      "fact_Employee_List[person_key]"
+    ],
+    "tables": [
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "STATUS_KEY",
+      "person_key"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "Кількість студентів",
+    "purpose": "Деталі підрахунку будуть додані після доробки відповідного довідника та оновлення алгоритму розрахунку.  <br>Потрібно рахувати унікальну к-ть, щоб двічі не рахували тих, в кого осн місце і сумісництво.",
+    "requirementRefs": [
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

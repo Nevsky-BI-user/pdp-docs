@@ -1,0 +1,40 @@
+{
+  "id": "p-ac-loss-productivity",
+  "type": "entity",
+  "name": "p_AC.Loss_Productivity",
+  "definition": "",
+  "server": "",
+  "db": "",
+  "powerQuery": "'p_AC.Loss_Productivity'",
+  "sourceTables": [],
+  "columns": [
+    {
+      "name": "p_AC.Loss_Productivity",
+      "dataType": "",
+      "source": "[Value1]",
+      "isCalculated": false
+    },
+    {
+      "name": "p_AC.Loss_Productivity Поля",
+      "dataType": "",
+      "source": "[Value2]",
+      "isCalculated": false
+    },
+    {
+      "name": "p_AC.Loss_Productivity Замовлення",
+      "dataType": "",
+      "source": "[Value3]",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [],
+  "relatedMeasures": [],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/p_AC.Loss_Productivity.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

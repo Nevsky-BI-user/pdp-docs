@@ -1,0 +1,301 @@
+{
+  "id": "dim-unit",
+  "type": "entity",
+  "name": "dim_Unit",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "dim_Unit",
+  "sourceTables": [
+    "DM.vw_R27_dim_Unit"
+  ],
+  "columns": [
+    {
+      "name": "ID",
+      "dataType": "string",
+      "source": "ID",
+      "isCalculated": false
+    },
+    {
+      "name": "UNIT_KEY",
+      "dataType": "string",
+      "source": "UNIT_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "PERSONNEL_UNIT_CODE",
+      "dataType": "string",
+      "source": "PERSONNEL_UNIT_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "PERSONNEL_UNIT",
+      "dataType": "string",
+      "source": "PERSONNEL_UNIT",
+      "isCalculated": false
+    },
+    {
+      "name": "DIRECTION_CODE",
+      "dataType": "string",
+      "source": "DIRECTION_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "DIRECTION",
+      "dataType": "string",
+      "source": "DIRECTION",
+      "isCalculated": false
+    },
+    {
+      "name": "DIRECTION_SHORT",
+      "dataType": "string",
+      "source": "DIRECTION_SHORT",
+      "isCalculated": false
+    },
+    {
+      "name": "SUB_DIRECTION_CODE",
+      "dataType": "string",
+      "source": "SUB_DIRECTION_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "SUB_DIRECTION",
+      "dataType": "string",
+      "source": "SUB_DIRECTION",
+      "isCalculated": false
+    },
+    {
+      "name": "SUB_DIRECTION_LVL_3",
+      "dataType": "string",
+      "source": "SUB_DIRECTION_LVL_3",
+      "isCalculated": false
+    },
+    {
+      "name": "HAB_FOR_AGRO",
+      "dataType": "string",
+      "source": "HAB_FOR_AGRO",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_1",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_1",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_2",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_2",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_3",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_3",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_4",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_4",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_5",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_5",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_6",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_6",
+      "isCalculated": false
+    },
+    {
+      "name": "LEVEL_NUM",
+      "dataType": "int64",
+      "source": "LEVEL_NUM",
+      "isCalculated": false
+    },
+    {
+      "name": "SUPPORT_UNIT",
+      "dataType": "string",
+      "source": "SUPPORT_UNIT",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_KEY",
+      "dataType": "string",
+      "source": "ORGANIZATION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION",
+      "dataType": "string",
+      "source": "ORGANIZATION",
+      "isCalculated": false
+    },
+    {
+      "name": "OGRANIZATION_DIRECTION",
+      "dataType": "string",
+      "source": "OGRANIZATION_DIRECTION",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_SECTOR",
+      "dataType": "string",
+      "source": "ORGANIZATION_SECTOR",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_SEGMENT",
+      "dataType": "string",
+      "source": "ORGANIZATION_SEGMENT",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_CODE",
+      "dataType": "string",
+      "source": "ORGANIZATION_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "EDRPOU",
+      "dataType": "string",
+      "source": "EDRPOU",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_GREEN",
+      "dataType": "boolean",
+      "source": "IS_GREEN",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "fact_Employee_List",
+      "fromColumn": "DIVISION_KEY",
+      "toColumn": "UNIT_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Metrics",
+      "fromColumn": "DIVISION_PERSON_ID",
+      "toColumn": "UNIT_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_TRS",
+      "fromColumn": "UNIT_KEY",
+      "toColumn": "UNIT_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_TRS_Plan",
+      "fromColumn": "DIVISION_PERSON_ID",
+      "toColumn": "UNIT_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Vacation",
+      "fromColumn": "DIVISION_PERSON_ID",
+      "toColumn": "UNIT_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Vacation_Reserve",
+      "fromColumn": "DIVISION_PERSON_ID",
+      "toColumn": "UNIT_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Sick_Leaves",
+      "fromColumn": "unit_key",
+      "toColumn": "UNIT_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Monthly_Viva_Insights",
+      "fromColumn": "UNIT_KEY",
+      "toColumn": "UNIT_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Burnout_Indicators",
+      "fromColumn": "DIVISION_PERSON_ID",
+      "toColumn": "UNIT_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Viva_Metrics",
+      "fromColumn": "DIVISION_PERSON_ID",
+      "toColumn": "UNIT_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_employee_seniority_by_month",
+      "fromColumn": "DIVISION_PERSON_ID",
+      "toColumn": "UNIT_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Loss_of_Productivity",
+      "fromColumn": "DIVISION_PERSON_ID",
+      "toColumn": "UNIT_KEY",
+      "role": "to"
+    }
+  ],
+  "relatedMeasures": [
+    "PP.Годин взаємодії з керівником (кадровий підрозділ)",
+    "PP.Годин взаємодії з керівником (напрям)",
+    "PP.Годин взаємодії по нарадах (кадровий підрозділ)",
+    "PP.Годин взаємодії по нарадах (напрям)",
+    "PP.Годин взаємодії у неробочий час (кадровий підрозділ)",
+    "PP.Годин взаємодії у неробочий час (напрям)",
+    "PP.Годин для фокусної роботи (кадровий підрозділ)",
+    "PP.Годин для фокусної роботи (напрям)",
+    "PP.Годин загальної взаємодії (кадровий підрозділ)",
+    "PP.Годин загальної взаємодії (напрям)",
+    "PP.Годин керівника на взаємодію із безпосередніми підлеглими (кадровий підрозділ)",
+    "PP.Годин керівника на взаємодію із безпосередніми підлеглими (напрям)",
+    "PP.Годин нарад 1:1 з керівником (кадровий підрозділ)",
+    "PP.Годин нарад 1:1 з керівником (напрям)",
+    "PP.Довжина (границі) робочого дня (кадровий підрозділ)",
+    "PP.Довжина (границі) робочого дня (напрям)",
+    "PP.Доля Conflicting meeting hours (кадровий підрозділ)",
+    "PP.Доля Conflicting meeting hours (напрям)",
+    "PP.Розмір мережі (кадровий підрозділ, 3м)",
+    "PP.Розмір мережі (напрям, 3м)",
+    "PP.Ширина мережі (кадровий підрозділ, 3м)",
+    "PP.Ширина мережі (напрям, 3м)"
+  ],
+  "requirementRefs": [
+    "Індивідуальний-профіль-працівника/Історія-по-посадам",
+    "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+    "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника",
+    "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника",
+    "Індивідуальний-профіль-працівника/Сторінка-Індивідуальний-профіль-працівника",
+    "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Таблиця-vw_R27_calc_Viva_Direction_PDP",
+    "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+    "Допоміжні-вітрини-для-звіту/Вью-по-ієрархії-кадрових-підрозділів",
+    "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+    "Допоміжні-вітрини-для-звіту/Таблиця-періодична-(попередні-12-міс)-для-розрахунку-метрики-Середній-дохід",
+    "Командний-профіль/Паспортна-частина-групового-профілю/Метрики-рекрутингу/ТЗ-на-розробку-вітрин-по-метрикам-рекрутингу",
+    "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+    "Командний-профіль/Паспортна-частина-групового-профілю/Сторінка-Картка-команди",
+    "Командний-профіль/Сторінка-Загальна-інформація-про-команду",
+    "Командний-профіль/Сторінка-Навчання-і-розвиток/Блок-Розвиток-сторінки-Навчання-і-розвиток",
+    "Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)",
+    "Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)/Додаткові-вимоги-до-вітрини-Плинність",
+    "Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Блок-Додаткові-інструменти"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/dim_Unit.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

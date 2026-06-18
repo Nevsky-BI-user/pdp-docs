@@ -1,0 +1,35 @@
+{
+  "id": "dim-lp-risks",
+  "type": "entity",
+  "name": "dim_LP_risks",
+  "definition": "",
+  "server": "",
+  "db": "",
+  "powerQuery": "dim_LP_risks",
+  "sourceTables": [],
+  "columns": [
+    {
+      "name": "RISK_TYPE",
+      "dataType": "string",
+      "source": "RISK_TYPE",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "fact_Loss_of_Productivity",
+      "fromColumn": "Total_Risk_Productive_Name",
+      "toColumn": "RISK_TYPE",
+      "role": "to"
+    }
+  ],
+  "relatedMeasures": [],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/dim_LP_risks.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,48 @@
+{
+  "id": "ac-chy-ie-ryzyk-vyhorannia-cherez-perepratsiuvannia",
+  "type": "measure",
+  "name": "AC.Чи є ризик вигорання через перепрацювання?",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "//НЕ видаляти пробіли для ✅\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE('fact_Burnout_Indicators'[IS_VIVA_RISK]),\n\t\t\"Ризик\", \"❌\",\n\t\t\"Відсутній\", \" ✅ \",\n\t\t\"━\"\n\t)\nRETURN COALESCE( _res, \"-\" )",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Burnout_Indicators[IS_VIVA_RISK]"
+    ],
+    "tables": [
+      "fact_Burnout_Indicators"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "IS_VIVA_RISK"
+    ],
+    "powerQuery": "fact_Burnout_Indicators"
+  },
+  "business": {
+    "definition": "IS_VIVA_RISK → Чи є ризик вигорання через перепрацювання?",
+    "purpose": "",
+    "requirementRefs": [
+      "Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22"
+    ]
+  },
+  "tags": [
+    "analytical-cases",
+    "burnout-risk",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

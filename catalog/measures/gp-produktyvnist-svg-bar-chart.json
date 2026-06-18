@@ -1,0 +1,64 @@
+{
+  "id": "gp-produktyvnist-svg-bar-chart",
+  "type": "measure",
+  "name": "GP.Продуктивність.SVG.Bar chart",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\Продуктивність\\SVG",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "-- === НАЛАШТУВАННЯ РОЗМІРІВ ===\nVAR CanvasWidth = 348\nVAR CanvasHeight = 170\nVAR HalfBar = 19\nVAR TopMargin = 15\nVAR BottomMargin = 20\nVAR ChartTop = TopMargin + 15 + HalfBar\nVAR ChartBottom = CanvasHeight - BottomMargin\nVAR MaxBarHeight = ChartBottom - ChartTop\nVAR ZeroLineY = ChartBottom - HalfBar\n\n-- === ОБЧИСЛЕННЯ (ФАКТ - БАРИ) ===\nVAR TotalEmployees = CALCULATE([GP.Продуктивність.Кількість співробітників (Останній період оцінки)], ALL('dim_Performance_Evalution'))\n\n-- === ОБЧИСЛЕННЯ (ГАУС - КРИВА) ===\nVAR TotalGaussian = CALCULATE(SUM('fact_Gaussian_Curve_Performance'[EMPLOYEE_COUNT]), ALL('fact_Gaussian_Curve_Performance'))\n\nVAR Data = \n    ADDCOLUMNS(\n        SUMMARIZE('dim_Performance_Evalution', 'dim_Performance_Evalution'[General_Performance_Str_Rate]), \n        \n        \"EmpCount\", [GP.Продуктивність.Кількість співробітників (Останній період оцінки)],\n        \"ValuePct\", DIVIDE([GP.Продуктивність.Кількість співробітників (Останній період оцінки)], TotalEmployees, 0),\n        \n        \"CurvePct\", \n            VAR GaussCategory = SWITCH(\n                'dim_Performance_Evalution'[General_Performance_Str_Rate],\n                \"Категорія ТОР А\", \"Категорія TOP A\",\n                \"Категорія А\", \"Категорія A\",\n                \"Категорія B\", \"Категорія B\",\n                \"Категорія C\", \"Категорія C\",\n                \"Категорія D\", \"Категорія D\",\n                'dim_Performance_Evalution'[General_Performance_Str_Rate]\n            )\n            RETURN DIVIDE(\n                CALCULATE(\n                    SUM('fact_Gaussian_Curve_Performance'[EMPLOYEE_COUNT]),\n                    'fact_Gaussian_Curve_Performance'[General_Performance_Str_Rate] = GaussCategory,\n                    ALL('fact_Gaussian_Curve_Performance')\n                ),\n                TotalGaussian, \n                0\n            ),\n        \n        \"SortOrder\", SWITCH('dim_Performance_Evalution'[General_Performance_Str_Rate],\n            \"Категорія ТОР А\", 1, \"Категорія А\", 2, \"Категорія B\", 3, \"Категорія C\", 4, \"Категорія D\", 5, 6)\n    )\n\nVAR MaxPctInGroup = 1 \nVAR CountItems = COUNTROWS(Data)\nVAR BarWidth = HalfBar * 2\nVAR Gap = ROUND((CanvasWidth - BarWidth * CountItems) / (CountItems + 1), 0)\n\n-- === СТИЛІ ===\nVAR ColorText = \"#1F4E79\"\nVAR ColorLine = \"#94C0FF\"\n\n-- === ПІДГОТОВКА ТОЧОК ===\nVAR Points = \n    ADDCOLUMNS(\n        Data,\n        \"X\", Gap + ([SortOrder] - 1) * (BarWidth + Gap) + (BarWidth / 2),\n        \"Y_Bar\", ZeroLineY - (MaxBarHeight * DIVIDE([ValuePct], MaxPctInGroup, 0)),\n        \"Y_Curve\", ZeroLineY - (MaxBarHeight * DIVIDE([CurvePct], MaxPctInGroup, 0))\n    )\n\n-- === ГЕНЕРАЦІЯ ШЛЯХУ КРИВОЇ ===\nVAR PathDefinition = \n    CONCATENATEX(\n        Points,\n        VAR Idx = [SortOrder]\n        VAR X0 = [X]\n        VAR Y0 = [Y_Curve]\n        VAR X1 = MAXX(FILTER(Points, [SortOrder] = Idx + 1), [X])\n        VAR Y1 = MAXX(FILTER(Points, [SortOrder] = Idx + 1), [Y_Curve])\n        VAR X_1 = MAXX(FILTER(Points, [SortOrder] = Idx - 1), [X])\n        VAR Y_1 = MAXX(FILTER(Points, [SortOrder] = Idx - 1), [Y_Curve])\n        VAR X2 = MAXX(FILTER(Points, [SortOrder] = Idx + 2), [X])\n        VAR Y2 = MAXX(FILTER(Points, [SortOrder] = Idx + 2), [Y_Curve])\n        VAR P_1_X = IF(ISBLANK(X_1), X0, X_1)\n        VAR P_1_Y = IF(ISBLANK(Y_1), Y0, Y_1)\n        VAR P2_X = IF(ISBLANK(X2), X1, X2)\n        VAR P2_Y = IF(ISBLANK(Y2), Y1, Y2)\n        VAR CP1_X = X0 + (X1 - P_1_X) / 6\n        VAR CP1_Y = Y0 + (Y1 - P_1_Y) / 6\n        VAR CP2_X = X1 - (P2_X - X0) / 6\n        VAR CP2_Y = Y1 - (P2_Y - Y0) / 6\n        RETURN \n            IF(Idx = 1, \"M \" & X0 & \" \" & Y0 & \" \", \"\") & \n            IF(Idx < CountItems, \n                \"C \" & CP1_X & \" \" & CP1_Y & \", \" & CP2_X & \" \" & CP2_Y & \", \" & X1 & \" \" & Y1 & \" \", \n                \"\"\n            ),\n        \"\", [SortOrder], ASC\n    )\n\nVAR FirstX = MAXX(FILTER(Points, [SortOrder] = 1), [X])\nVAR LastX  = MAXX(FILTER(Points, [SortOrder] = CountItems), [X])\n\n-- === ГЕНЕРАЦІЯ БАРІВ З TOOLTIP ===\nVAR BarsSVG = \n    CONCATENATEX(\n        Points,\n        VAR CurrentPct = [ValuePct]\n        VAR CurrentCount = [EmpCount]\n        VAR CurrentCurve = [CurvePct]\n        VAR CatName = 'dim_Performance_Evalution'[General_Performance_Str_Rate]\n\n        VAR LabelCategory = SWITCH(CatName,\n            \"Категорія ТОР А\", \"TOP A\", \"Категорія А\", \"A\", \"Категорія B\", \"B\", \"Категорія C\", \"C\", \"Категорія D\", \"D\", CatName)\n\n        VAR ColorFill = SWITCH(LabelCategory,\n            \"TOP A\", \"#8bd6ea\",\n            \"A\", \"#5a974d\",\n            \"B\", \"#e9c246\",\n            \"C\", \"#9e241e\",\n            \"D\", \"#a5a4a6\",\n            \"#a5a4a6\"\n        )\n\n        VAR XPos = [X]\n        VAR Y_Top_Fill = [Y_Bar]\n        \n        VAR LabelValue = FORMAT(CurrentPct, \"0.0%\") \n        VAR LabelY = Y_Top_Fill - HalfBar - 3\n        \n        VAR TooltipText = \n            CatName & UNICHAR(10) & \n            \"К-ть працівників: \" & FORMAT(CurrentCount, \"#,0\") & UNICHAR(10) & \n            \"Факт: \" & FORMAT(CurrentPct, \"0.0%\") & UNICHAR(10) & \n            \"Крива (Гаус): \" & FORMAT(CurrentCurve, \"0.0%\")\n\n        RETURN \n        \"<g>\" &\n            \"<title>\" & TooltipText & \"</title>\" &\n            \"<rect x='\" & (XPos - BarWidth/2) & \"' y='0' width='\" & BarWidth & \"' height='\" & CanvasHeight & \"' fill='transparent' />\" &\n            IF(CurrentPct > 0, \n                \"<line x1='\" & XPos & \"' y1='\" & ZeroLineY & \"' x2='\" & XPos & \"' y2='\" & Y_Top_Fill & \"' \n                       stroke='\" & ColorFill & \"' stroke-width='\" & BarWidth & \"' stroke-linecap='round' />\",\n                \"\") &\n            \"<text x='\" & XPos & \"' y='\" & LabelY & \"' text-anchor='middle' font-family='Segoe UI' font-weight='bold' font-size='11' fill='\" & ColorText & \"'>\" & LabelValue & \"</text>\" &\n            \"<text x='\" & XPos & \"' y='\" & (ZeroLineY + HalfBar + 13) & \"' text-anchor='middle' font-family='Segoe UI' font-size='10' fill='\" & ColorText & \"'>\" & LabelCategory & \"</text>\" &\n        \"</g>\",\n        \"\", [SortOrder], ASC\n    )\n\nRETURN\n\"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 \" & CanvasWidth & \" \" & CanvasHeight & \"' overflow='hidden'>\" &\n    \"<path d='\" & PathDefinition & \" L \" & LastX & \" \" & ZeroLineY & \" L \" & FirstX & \" \" & ZeroLineY & \" Z' \n           fill='\" & ColorLine & \"' fill-opacity='0.2' stroke='none' />\" &\n    BarsSVG &\n    \"<path d='\" & PathDefinition & \"' \n           fill='none' stroke='\" & ColorLine & \"' stroke-width='3' stroke-linecap='round' />\" &\n\"</svg>\"",
+  "dependencies": {
+    "measures": [
+      "GP.Продуктивність.Кількість співробітників (Останній період оцінки)"
+    ],
+    "columns": [
+      "dim_Performance_Evalution[General_Performance_Str_Rate]",
+      "fact_Gaussian_Curve_Performance[EMPLOYEE_COUNT]",
+      "fact_Gaussian_Curve_Performance[General_Performance_Str_Rate]"
+    ],
+    "tables": [
+      "dim_Performance_Evalution",
+      "fact_Gaussian_Curve_Performance"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.R27_fact_Employee_Performance"
+    ],
+    "sourceColumns": [
+      "EMPLOYEE_COUNT",
+      "General_Performance_Str_Rate"
+    ],
+    "powerQuery": "dim_Performance_Evalution"
+  },
+  "business": {
+    "definition": "General_Performance_Str_Rate → Категорія оцінки результативнсті; General_Performance_Str_Rate → #71711; General_Performance_Str_Rate → Категорія оцінки співробітника; General_Performance_Str_Rate → Категорія оцінки співробітника за останній період (рік); General_Performance_Str_Rate → Категорія оцінки співробітника за передостанній період (рік); General_Performance_Str_Rate → Керівник з високими/низькими оцінками результативності підлеглих; General_Performance_Str_Rate → Остання доступна оцінка керівника, Категорія",
+    "purpose": "Останнє НЕ пусте актуальне значення на дату (date) поточного запису Останнє НЕ пусте актуальне значення на дату (date) поточного запису. Відбираємо один будь-який рядок по даті запуску форми оцінювання. Для розрахунку потрібні лише річні форми оцінки:  <br>1. Оцінка результативності: Річна, Form_Template_ID = '06c35fbd-1ff3-f1b8-37a3-45b9cd528696'  <br>2. Оцінка результативності: Річна функціональним керівником, Form_Template_ID ='ef3fbd7d-0099-e129-2027-f75748fed9bd'<br>3. Оцінка результативності річна 2023 Form_Template_ID ='8d88b5e2-da71-d373-1ccd-72a1eb2d045d' <br>4. Оцінка результативност",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/ТЗ-на-побудову-візуала-Павутинка-по-оцінці-результативності-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "main",
+    "pdp",
+    "produktyvnist",
+    "svg"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

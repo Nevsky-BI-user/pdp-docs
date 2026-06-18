@@ -1,0 +1,59 @@
+{
+  "id": "pp-rozmir-fiksovanoi-vynahorody-planovyi-za-misiats-stanom-na-rik-nazad",
+  "type": "measure",
+  "name": "PP.Розмір фіксованої винагороди плановий, за місяць СТАНОМ НА РІК НАЗАД",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\TRS",
+  "formatString": "#,0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "\tVAR _CurrMonthStart =\n\t\tDATE ( YEAR ( TODAY() ), MONTH ( TODAY() ), 1 )\n\tVAR _PrevYearSameMonthStart =\n\t\tEDATE ( _CurrMonthStart, -12 )\n\tVAR _prev_year = \n\t\tCALCULATE(\n\t\t\tAVERAGE(fact_TRS[PAYMENTS_PLAN_UAH]),\n\t\t\tfact_TRS[TRS_CATEGORY] = \"Фіксована винагорода\",\n            'fact_TRS'[IS_PAYMENTS_PLAN] = 1,\n\t\t\tTREATAS({_PrevYearSameMonthStart}, 'dim_Date'[Date])\n\t\t)\n\tRETURN _prev_year",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Date[Date]",
+      "fact_TRS[IS_PAYMENTS_PLAN]",
+      "fact_TRS[PAYMENTS_PLAN_UAH]",
+      "fact_TRS[TRS_CATEGORY]"
+    ],
+    "tables": [
+      "dim_Date",
+      "fact_TRS"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_TRS_PDP"
+    ],
+    "sourceColumns": [
+      "Date",
+      "IS_PAYMENTS_PLAN",
+      "PAYMENTS_PLAN_UAH",
+      "TRS_CATEGORY"
+    ],
+    "powerQuery": "dim_Date"
+  },
+  "business": {
+    "definition": "PAYMENTS_PLAN_UAH → Розмір фіксованої винагороди плановий, за місяць СТАНОМ НА РІК НАЗАД; PAYMENTS_PLAN_UAH → Сума (рік тому); PAYMENTS_PLAN_UAH → Оклад по годинам (рік тому); PAYMENTS_PLAN_UAH → % зміни фіксованої винагороди",
+    "purpose": "Відібрати записи по працівнику [person_key], періоду [Period], організації [organization_key], підрозділу [division_key], де trs_category = Фіксована винагорода, is_payments_plan  = \"1\" Потрібно відібрати записи станом на 12 міс. тому, де ACCRUAL_TYPES_KEY = 5e416521-f6d6-80e3-bcde-48aec8a474fe та IS_PAYMENTS_PLAN =1 Сума за поточний місяць (план) - Відібрати записи по працівнику [person_key], періоду [Period], організації [organization_key], підрозділу [division_key], де category_name = Фіксована винагорода, IS_ACTUAL  = \"1\", END_DATE > поточна дата, або END_DATE = \"01.01.2001\".  <br>Сума ста",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Деталізація-на-сторінці-Винагорода",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Доопрацювання-сторінки-ТРС",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

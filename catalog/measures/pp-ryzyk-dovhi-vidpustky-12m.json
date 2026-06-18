@@ -1,0 +1,42 @@
+{
+  "id": "pp-ryzyk-dovhi-vidpustky-12m",
+  "type": "measure",
+  "name": "PP.Ризик.Довгі відпустки 12м",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Паспорт\\Ризики",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _v = [PP.Кількість довгих відпусток]\nRETURN\n\tIF(ISBLANK(_v) || _v = 0, \"Дані відсутні\", FORMAT(_v, \"0\") & \" шт.\")",
+  "dependencies": {
+    "measures": [
+      "PP.Кількість довгих відпусток"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "pasport",
+    "pdp",
+    "personal-profile",
+    "ryzyky"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

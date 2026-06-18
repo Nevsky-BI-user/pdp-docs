@@ -1,0 +1,49 @@
+{
+  "id": "pp-zainiatykh-stavok-z-vidsutnostiamy",
+  "type": "measure",
+  "name": "PP.Зайнятих ставок з відсутностями",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "COALESCE(\n\tSELECTEDVALUE('fact_Employee_List'[FTE_EMPLOYEE]),\n\t\"-\"\n)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[FTE_EMPLOYEE]"
+    ],
+    "tables": [
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "FTE_EMPLOYEE"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "FTE_EMPLOYEE → Зайнятих ставок з відсутностями; FTE_EMPLOYEE → Зайняті ставки; FTE_EMPLOYEE → Кількість зайнятих FTE (факт)",
+    "purpose": "Поле завжди має значення, пусте поле не допускається Розрахункове поле.  <br>Потрібно підрахувати кількість фактично зайнятих ставок по штатним посадам по організації (organization_key) та підрозділу (division_key) по працівникам у статусах Активні та Інша відсутність (status_key = 1 або 4)  <br>(Аутсорс поки не входить в розрахунок)",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Допоміжні-вітрини-для-звіту/Таблиця-періодична-(попередні-12-міс)-для-розрахунку-метрики-Середній-дохід",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

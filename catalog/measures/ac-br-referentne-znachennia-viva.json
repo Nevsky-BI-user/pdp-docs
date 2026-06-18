@@ -1,0 +1,42 @@
+{
+  "id": "ac-br-referentne-znachennia-viva",
+  "type": "measure",
+  "name": "AC.BR.Референтне значення.Viva",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "IF(NOT(ISBLANK([AC.BR.Перепрацювання Viva])),\">=1 год\")",
+  "dependencies": {
+    "measures": [
+      "AC.BR.Перепрацювання Viva"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "analytical-cases",
+    "burnout-risk",
+    "export",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

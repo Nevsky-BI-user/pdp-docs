@@ -1,0 +1,66 @@
+{
+  "id": "ac-dolia-spivrobitnykiv-z-vidpustkamy-ponad-10-dniv",
+  "type": "measure",
+  "name": "AC.Доля співробітників з відпустками понад 10 днів",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\Здоров'я та благополуччя",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt= TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),'dim_Admin_OS'[USER_ACCESS_ID] )\n\n//***** HEALTH AND WELLBEING FILTERS ******* \nVAR _employee_list = VALUES('fact_Employee_List'[EMPLOYEE_ID])\nVAR _main_position_employees = \n\tCALCULATETABLE(\n\t\tVALUES('fact_Employee_List'[USER_ACCESS_ID]),\n\t\tREMOVEFILTERS('fact_Employee_List'), \n\t\t'fact_Employee_List'[EMPLOYEE_ID] IN _employee_list,\n\t\t'fact_Employee_List'[IS_MAIN_POSITION] = 1\n\t)\nVAR _filter0 = TREATAS(_main_position_employees, 'dim_Admin_OS'[USER_ACCESS_ID])\n\n/* *********** ADMIN *********** */\nVAR _admin =\n\tVAR _table0 = \n\t\tCALCULATETABLE(\n\t\t\tADDCOLUMNS(\n\t\t\t\tVALUES('dim_Admin_OS'[USER_ACCESS_ID]),\n\t\t\t\t\"@Indicator\",\n\t\t\t\tCALCULATE(\n\t\t\t\t\tSUM('fact_Metrics'[LONG_VACATION_TOTAL_DAY_BY_MAIN_POSITION])\n\t\t\t\t)\n\t\t\t),\n\t\t\tREMOVEFILTERS('fact_Metrics'),\n\t\t\t_filter0\n\t\t)\n\tVAR _ShareOfSomeIndicator = \n\t\tVAR _Nominator = \n\t\tCOUNTROWS(\n\t\t\tFILTER(\n\t\t\t\t_table0, \n\t\t\t\tNOT ISBLANK([@Indicator]) && [@Indicator] > 0\n\t\t\t)\n\t\t)\n\t\tVAR _Denominator = COUNTROWS(_table0)\n\t\tRETURN DIVIDE(_Nominator, _Denominator)\n\tRETURN _ShareOfSomeIndicator\n\n/* *********** LT *********** */\nVAR _admin_lt =\n\tVAR _table0 = \n\t\tCALCULATETABLE(\n\t\t\tADDCOLUMNS(\n\t\t\t\tVALUES('dim_Admin_OS'[USER_ACCESS_ID]),\n\t\t\t\t\"@Indicator\",\n\t\t\t\tCALCULATE(\n\t\t\t\t\tSUM('fact_Metrics'[LONG_VACATION_TOTAL_DAY_BY_MAIN_POSITION])\n\t\t\t\t)\n\t\t\t),\n\t\t\tREMOVEFILTERS('fact_Metrics'),\n\t\t\t_filter0,\n\t\t\t_filter_lt\n\t\t)\n\tVAR _ShareOfSomeIndicator = \n\t\tVAR _Nominator = \n\t\tCOUNTROWS(\n\t\t\tFILTER(\n\t\t\t\t_table0, \n\t\t\t\tNOT ISBLANK([@Indicator]) && [@Indicator] > 0\n\t\t\t)\n\t\t)\n\t\tVAR _Denominator = COUNTROWS(_table0)\n\t\tRETURN DIVIDE(_Nominator, _Denominator)\n\tRETURN _ShareOfSomeIndicator\n\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\nRETURN COALESCE(_res, 0)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_LT_OS[USER_ACCESS_ID]",
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_Employee_List[EMPLOYEE_ID]",
+      "fact_Employee_List[IS_MAIN_POSITION]",
+      "fact_Employee_List[USER_ACCESS_ID]",
+      "fact_Metrics[LONG_VACATION_TOTAL_DAY_BY_MAIN_POSITION]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_Employee_List",
+      "fact_Metrics",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "EMPLOYEE_ID",
+      "IS_MAIN_POSITION",
+      "Index",
+      "LONG_VACATION_TOTAL_DAY_BY_MAIN_POSITION",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position",
+    "purpose": "1 - Так  <br>0 - Ні",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Сторінка-Ефективність-працівника/Вітрина-Відвідування-офісів",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Командний-профіль/Сторінка-Плинність-та-Exits/ТЗ-на-вітрину-Exits"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "zdorovia-ta-blahopoluchchia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

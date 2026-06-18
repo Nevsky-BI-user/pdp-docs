@@ -1,0 +1,69 @@
+{
+  "id": "gp-dolia-cholovikiv-pid-ryzykom-mobilizatsii",
+  "type": "measure",
+  "name": "GP.Доля чоловіків під ризиком мобілізації(%)",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _admin = \n\tDIVIDE(\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(VALUES('fact_Employee_List'[EMPLOYEE_ID])),\n\t\t\t'fact_Employee_List'[IS_AT_RISK] = 1,\n\t\t\t'dim_Person'[GENDER] = \"ЧОЛОВІКИ\"\n\t\t),\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(VALUES('fact_Employee_List'[EMPLOYEE_ID])),\n\t\t\t'dim_Person'[GENDER] = \"ЧОЛОВІКИ\"\n\t\t)\n\t)\nVAR _admin_lt = \n\tCALCULATE(\n\t\tDIVIDE(\n\t\t\tCALCULATE(\n\t\t\t\tCOUNTROWS(VALUES('fact_Employee_List'[EMPLOYEE_ID])),\n\t\t\t\t'fact_Employee_List'[IS_AT_RISK] = 1,\n\t\t\t\t'dim_Person'[GENDER] = \"ЧОЛОВІКИ\"\n\t\t\t),\n\t\t\tCALCULATE(\n\t\t\t\tCOUNTROWS(VALUES('fact_Employee_List'[EMPLOYEE_ID])),\n\t\t\t\t'dim_Person'[GENDER] = \"ЧОЛОВІКИ\"\n\t\t\t)\n\t\t),\n\t\tTREATAS( VALUES( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ), fact_Employee_List[USER_ACCESS_ID] )\n\t) \nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE('t_HierarchyTypes'[Index]),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\nRETURN \n\tTRIM(\n\t\tFORMAT(\n\t\t\tCOALESCE(_res, 0),\n\t\t\t\"0.00%\"\n\t\t) \n\t)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_LT_OS[USER_ACCESS_ID]",
+      "dim_Person[GENDER]",
+      "fact_Employee_List[EMPLOYEE_ID]",
+      "fact_Employee_List[IS_AT_RISK]",
+      "fact_Employee_List[USER_ACCESS_ID]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Person",
+      "fact_Employee_List",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Person_PDP"
+    ],
+    "sourceColumns": [
+      "EMPLOYEE_ID",
+      "GENDER",
+      "IS_AT_RISK",
+      "Index",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Person"
+  },
+  "business": {
+    "definition": "GENDER → Стать; IS_AT_RISK → Під ризиком мобілізації; IS_AT_RISK → Ризик мобілізації; IS_AT_RISK → Доля чоловіків під ризиком мобілізації (%)",
+    "purpose": "1 - під ризиком. 0 - ризик відсутній <br>  <br>Якщо 1 - Так, якщо 0 - Ні. Розрахункове поле. Відношення кількості чоловіків під ризиком мобілізації, is_at_risk = 1 до загальної кількості чоловіків у команді Розрахункове поле. Відношення кількості чоловіків під ризиком мобілізації, is_at_risk = 1 до загальної кількості чоловіків у команді  <br>",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/Редизайн-паспортної-частини",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Сторінка-Картка-команди",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду/Редизайн-сторінки-Загальна-інформація",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Створити-блок-Виконання-OKR"
+    ]
+  },
+  "tags": [
+    "dani-pro-komandu",
+    "group-profile",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,316 @@
+{
+  "id": "fact-vacation-reserve",
+  "type": "entity",
+  "name": "fact_Vacation_Reserve",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_Vacation_Reserve",
+  "sourceTables": [
+    "DM.vw_R27_fact_Vacation_Reserve_PDP"
+  ],
+  "columns": [
+    {
+      "name": "PERIOD",
+      "dataType": "dateTime",
+      "source": "PERIOD",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_ID",
+      "dataType": "string",
+      "source": "EMPLOYEE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_ID",
+      "dataType": "string",
+      "source": "JOB_TITLE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "RESERVE_START_OF_MONTH",
+      "dataType": "double",
+      "source": "RESERVE_START_OF_MONTH",
+      "isCalculated": false
+    },
+    {
+      "name": "ACCRUED",
+      "dataType": "double",
+      "source": "ACCRUED",
+      "isCalculated": false
+    },
+    {
+      "name": "UTILIZED",
+      "dataType": "double",
+      "source": "UTILIZED",
+      "isCalculated": false
+    },
+    {
+      "name": "RESERVE_END_OF_MONTH",
+      "dataType": "double",
+      "source": "RESERVE_END_OF_MONTH",
+      "isCalculated": false
+    },
+    {
+      "name": "LAST_DAY_OF_VACATION",
+      "dataType": "dateTime",
+      "source": "LAST_DAY_OF_VACATION",
+      "isCalculated": false
+    },
+    {
+      "name": "NO_VACATION_DURATION_MONTHS",
+      "dataType": "double",
+      "source": "NO_VACATION_DURATION_MONTHS",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_YEAR_NO_VACATION",
+      "dataType": "int64",
+      "source": "IS_YEAR_NO_VACATION",
+      "isCalculated": false
+    },
+    {
+      "name": "VACATION_TYPE",
+      "dataType": "string",
+      "source": "VACATION_TYPE",
+      "isCalculated": false
+    },
+    {
+      "name": "VACATION_TYPE_KEY",
+      "dataType": "string",
+      "source": "VACATION_TYPE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "VACATION_TYPE_DETALIZATION",
+      "dataType": "string",
+      "source": "VACATION_TYPE_DETALIZATION",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_KEY",
+      "dataType": "string",
+      "source": "STATUS_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_CODE",
+      "dataType": "string",
+      "source": "STATUS_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_RATE_RELEASE",
+      "dataType": "int64",
+      "source": "IS_RATE_RELEASE",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HEAD_ADMIN_ID",
+      "dataType": "string",
+      "source": "EMP_HEAD_ADMIN_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HEAD_FUNCTIONAL_ID",
+      "dataType": "string",
+      "source": "EMP_HEAD_FUNCTIONAL_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HRBP_ID",
+      "dataType": "string",
+      "source": "EMP_HRBP_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_FINBP_ID",
+      "dataType": "string",
+      "source": "EMP_FINBP_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "TENURE_ALT_BOX_KEY",
+      "dataType": "string",
+      "source": "TENURE_ALT_BOX_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "AGE_BOX_KEY",
+      "dataType": "string",
+      "source": "AGE_BOX_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_TYPE_KEY",
+      "dataType": "string",
+      "source": "EMPLOYMENT_TYPE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "WORK_FORMAT_ON_POSITION_KEY",
+      "dataType": "string",
+      "source": "WORK_FORMAT_ON_POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_ON_POSITION_KEY",
+      "dataType": "string",
+      "source": "OFFICE_ON_POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "WORK_FORMAT_ON_PERSON_KEY",
+      "dataType": "string",
+      "source": "WORK_FORMAT_ON_PERSON_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_ON_PERSON_KEY",
+      "dataType": "string",
+      "source": "OFFICE_ON_PERSON_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_GREEN",
+      "dataType": "int64",
+      "source": "IS_GREEN",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_ID",
+      "dataType": "string",
+      "source": "ORGANIZATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_STATUS_ID",
+      "dataType": "string",
+      "source": "EMPLOYEE_STATUS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_VACATION_ID",
+      "dataType": "string",
+      "source": "DOC_VACATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CATEGORY_DETAIL",
+      "dataType": "string",
+      "source": "POSITION_CATEGORY_DETAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "PERSON_KEY",
+      "dataType": "string",
+      "source": "PERSON_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_KEY",
+      "dataType": "string",
+      "source": "ORGANIZATION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "PERMANENT_TEMPORARY_DETAILS_ID",
+      "dataType": "int64",
+      "source": "PERMANENT_TEMPORARY_DETAILS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "PERMANENT_TEMPORARY_ADVANCED_KEY",
+      "dataType": "int64",
+      "source": "PERMANENT_TEMPORARY_ADVANCED_KEY",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_Person",
+      "fromColumn": "DIVISION_PERSON_ID",
+      "toColumn": "PERSON_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Unit",
+      "fromColumn": "DIVISION_PERSON_ID",
+      "toColumn": "UNIT_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employee_Status",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Admin_OS",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position_Category",
+      "fromColumn": "POSITION_CATEGORY_DETAIL",
+      "toColumn": "Position_Category_Detail",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employment_Type",
+      "fromColumn": "EMPLOYMENT_TYPE_KEY",
+      "toColumn": "EMPLOYMENT_TYPE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Office",
+      "fromColumn": "OFFICE_ON_POSITION_KEY",
+      "toColumn": "OFFICE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position",
+      "fromColumn": "JOB_TITLE_ID",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Date",
+      "fromColumn": "PERIOD",
+      "toColumn": "Date",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [
+    "PP.Залишок відпустки",
+    "PP.Місяці без відпустки"
+  ],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_Vacation_Reserve.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

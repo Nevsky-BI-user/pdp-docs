@@ -1,0 +1,44 @@
+{
+  "id": "selected-hierarchytype",
+  "type": "measure",
+  "name": "Selected.HierarchyType",
+  "homeTable": "_Measures",
+  "displayFolder": "Hierarchy",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SELECTEDVALUE('t_HierarchyTypes'[Hierarchy_Type_Name])",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "t_HierarchyTypes[Hierarchy_Type_Name]"
+    ],
+    "tables": [
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "Hierarchy_Type_Name"
+    ],
+    "powerQuery": "t_HierarchyTypes"
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "hierarchy",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,52 @@
+{
+  "id": "ac-switch-trend-otsinky-rezultatyvnosti",
+  "type": "measure",
+  "name": "AC.Switch.Тренд оцінки результативності",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SWITCH(\n\tSELECTEDVALUE('t_AC Burnout'[Burnout_Indicator]),\n\t\"Оцінка\", [AC.Чи є ризик вигорання по результатам оцінки результативності?],\n\t\"Дані\", [AC.Тренд оцінки результативності]\n)",
+  "dependencies": {
+    "measures": [
+      "AC.Тренд оцінки результативності",
+      "AC.Чи є ризик вигорання по результатам оцінки результативності?"
+    ],
+    "columns": [
+      "t_AC Burnout[Burnout_Indicator]"
+    ],
+    "tables": [
+      "t_AC Burnout"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "Burnout_Indicator"
+    ],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "Тренд оцінки результативності",
+    "purpose": "Тренд оцінки результативності визначається порівнянням категорії працівника за останні два річні періоди.  <br>Якщо Last_Year_Performance_Str_Rate=Prev_Year_Performance_Str_Rate за за результатами двох останніх річних оцінок результативності, то Стабільний  <br>Якщо Last_Year_Performance_Str_Rate вище за Prev_Year_Performance_Str_Rate, то Зростання  <br>Якщо Last_Year_Performance_Str_Rate нижче за Prev_Year_Performance_Str_Rate, то Спадання.  <br>Якщо у працівника оцінка результативності присутня тільки за один період (рік), то ставити прочерк, наче дані відсутні.",
+    "requirementRefs": [
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22"
+    ]
+  },
+  "tags": [
+    "analytical-cases",
+    "burnout-risk",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

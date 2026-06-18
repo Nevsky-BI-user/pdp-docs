@@ -1,0 +1,61 @@
+{
+  "id": "gp-serednia-kilkist-dniv-nevykorystanoi-vidpustky-spivrobitnykom",
+  "type": "measure",
+  "name": "GP.Середня кількість днів невикористаної відпустки співробітником",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "TRIM( \n\t\tCOALESCE( \n\t\t\tFORMAT( [AC.Середня кількість днів невикористаної відпустки], \"0.00\" ), \"-\"\n\t\t)\n\t)\n\n// VAR _admin =\n//     AVERAGEX( \n//         VALUES( dim_Admin_OS[USER_ACCESS_ID] ), \n//         CALCULATE( \n//             SUM('fact_Metrics'[VACATION_RESERVE_BY_MAIN_POSITION])\n//         )\n//     )\n// VAR _admin_lt =\n//     CALCULATE(\n//         AVERAGEX( \n//             VALUES( dim_Admin_OS[USER_ACCESS_ID] ), \n//             CALCULATE( \n//                 SUM('fact_Metrics'[VACATION_RESERVE_BY_MAIN_POSITION])\n//             )\n//         ),\n//         TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), fact_Employee_List[USER_ACCESS_ID])\n//     )\n// VAR _res = \n//     SWITCH(\n//         SELECTEDVALUE( t_HierarchyTypes[Index] ),\n//         0, _admin_lt,\n//         1, _admin\n//     )\n// RETURN\n//     TRIM( \n//         COALESCE( \n//             FORMAT( _res, \"0.00\" ), \"-\"\n//         )\n//     )",
+  "dependencies": {
+    "measures": [
+      "AC.Середня кількість днів невикористаної відпустки"
+    ],
+    "columns": [
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_Employee_List[USER_ACCESS_ID]",
+      "fact_Metrics[VACATION_RESERVE_BY_MAIN_POSITION]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_Employee_List",
+      "fact_Metrics",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "Index",
+      "USER_ACCESS_ID",
+      "VACATION_RESERVE_BY_MAIN_POSITION"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "VACATION_RESERVE_BY_MAIN_POSITION → Залишок відпустки",
+    "purpose": "Це залишок днів відпусток, по яким формується резерв відпусток по підприємству /п)  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [ DM.vw_R27_fact_Vacation_Reserve].  <br>Цифру округлювати до цілих в більшу сторону, якщо цифра після коми 5-9, і в меншу сторону, якщо цифра після коми 0-4.  <br>Не включати в MVP, але потрібно буде додати цей же показник, але в роках. Це відношення норми днів відпусток до залишку відпусток. Норма днів відпусток - відсутній в джерелах даних, потрібно досліджувати.",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Здоров'я-та-благополуччя-працівника",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "dani-pro-komandu",
+    "group-profile",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

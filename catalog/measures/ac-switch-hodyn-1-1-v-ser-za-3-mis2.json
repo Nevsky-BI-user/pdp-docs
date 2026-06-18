@@ -1,0 +1,49 @@
+{
+  "id": "ac-switch-hodyn-1-1-v-ser-za-3-mis2",
+  "type": "measure",
+  "name": "AC.Switch.Годин 1:1 в сер. за 3 міс2",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _indicator = SELECTEDVALUE('t_AC Burnout'[Burnout_Indicator])\nRETURN\nSWITCH(\n\t_indicator,\n\t\"Оцінка\", [AC.Чи є ризик вигорання через відсутність спілкування з керівником?],\n\t\"Дані\", \n\t\tVAR _value = [AC.Взаємодія з керівником]\n\t\tRETURN COALESCE(_value, 0)\n)",
+  "dependencies": {
+    "measures": [
+      "AC.Взаємодія з керівником",
+      "AC.Чи є ризик вигорання через відсутність спілкування з керівником?"
+    ],
+    "columns": [
+      "t_AC Burnout[Burnout_Indicator]"
+    ],
+    "tables": [
+      "t_AC Burnout"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "Burnout_Indicator"
+    ],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "analytical-cases",
+    "burnout-risk",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,5518 @@
+[
+  {
+    "id": "pp-svg-spiderwebvisual",
+    "type": "measure",
+    "name": "PP.SVG.SpiderwebVisual",
+    "displayFolder": "Personal_Profile\\Паспорт\\Spider",
+    "file": "measures/pp-svg-spiderwebvisual.md"
+  },
+  {
+    "id": "current-user-admin-hierarchy-level",
+    "type": "measure",
+    "name": "Current_User_Admin_Hierarchy_Level",
+    "displayFolder": "USER",
+    "file": "measures/current-user-admin-hierarchy-level.md"
+  },
+  {
+    "id": "pp-svg-perfomance-last-year",
+    "type": "measure",
+    "name": "PP.SVG.Perfomance_Last_Year",
+    "displayFolder": "Personal_Profile\\Паспорт\\Результативність",
+    "file": "measures/pp-svg-perfomance-last-year.md"
+  },
+  {
+    "id": "pp-pib",
+    "type": "measure",
+    "name": "PP.PIB",
+    "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+    "file": "measures/pp-pib.md"
+  },
+  {
+    "id": "button-detalization-personal-profile",
+    "type": "measure",
+    "name": "button_detalization.Personal_profile",
+    "displayFolder": "Navigation\\Personal",
+    "file": "measures/button-detalization-personal-profile.md"
+  },
+  {
+    "id": "pp-posada",
+    "type": "measure",
+    "name": "PP.Посада",
+    "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+    "file": "measures/pp-posada.md"
+  },
+  {
+    "id": "pp-pidrozdil-kadrovyi",
+    "type": "measure",
+    "name": "PP.Підрозділ кадровий",
+    "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+    "file": "measures/pp-pidrozdil-kadrovyi.md"
+  },
+  {
+    "id": "pp-katehoriia-posady",
+    "type": "measure",
+    "name": "PP.Категорія посади",
+    "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+    "file": "measures/pp-katehoriia-posady.md"
+  },
+  {
+    "id": "pp-data-narodzhennia",
+    "type": "measure",
+    "name": "PP.Дата народження",
+    "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+    "file": "measures/pp-data-narodzhennia.md"
+  },
+  {
+    "id": "pp-robochyi-telefon",
+    "type": "measure",
+    "name": "PP.Робочий телефон",
+    "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+    "file": "measures/pp-robochyi-telefon.md"
+  },
+  {
+    "id": "pp-elektronna-poshta",
+    "type": "measure",
+    "name": "PP.Електронна пошта",
+    "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+    "file": "measures/pp-elektronna-poshta.md"
+  },
+  {
+    "id": "pp-robochi-hodyny",
+    "type": "measure",
+    "name": "PP.Робочі години",
+    "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+    "file": "measures/pp-robochi-hodyny.md"
+  },
+  {
+    "id": "pp-format-roboty-shtat",
+    "type": "measure",
+    "name": "PP.Формат роботи (штат)",
+    "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+    "file": "measures/pp-format-roboty-shtat.md"
+  },
+  {
+    "id": "pp-adresa-ofisu-pratsivnyk",
+    "type": "measure",
+    "name": "PP.Адреса офісу (працівник)",
+    "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+    "file": "measures/pp-adresa-ofisu-pratsivnyk.md"
+  },
+  {
+    "id": "pp-vnz",
+    "type": "measure",
+    "name": "PP.ВНЗ",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-vnz.md"
+  },
+  {
+    "id": "pp-spetsialnist",
+    "type": "measure",
+    "name": "PP.Спеціальність",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-spetsialnist.md"
+  },
+  {
+    "id": "pp-osvita",
+    "type": "measure",
+    "name": "PP.Освіта",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-osvita.md"
+  },
+  {
+    "id": "pp-orhanizatsiia",
+    "type": "measure",
+    "name": "PP.Організація",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-orhanizatsiia.md"
+  },
+  {
+    "id": "pp-riven-v-iierarkhii",
+    "type": "measure",
+    "name": "PP.Рівень в ієрархії",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-riven-v-iierarkhii.md"
+  },
+  {
+    "id": "pp-zainiatykh-stavok-z-vidsutnostiamy",
+    "type": "measure",
+    "name": "PP.Зайнятих ставок з відсутностями",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-zainiatykh-stavok-z-vidsutnostiamy.md"
+  },
+  {
+    "id": "pp-hrbp",
+    "type": "measure",
+    "name": "PP.HRBP",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-hrbp.md"
+  },
+  {
+    "id": "pp-funktsionalnyi-kerivnyk",
+    "type": "measure",
+    "name": "PP.Функціональний керівник",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-funktsionalnyi-kerivnyk.md"
+  },
+  {
+    "id": "pp-strok-dohovoru-do-daty",
+    "type": "measure",
+    "name": "PP.Строк договору до дати",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-strok-dohovoru-do-daty.md"
+  },
+  {
+    "id": "pp-status-veteran",
+    "type": "measure",
+    "name": "PP.Статус Ветеран",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-status-veteran.md"
+  },
+  {
+    "id": "pp-broniuvannia-do",
+    "type": "measure",
+    "name": "PP.Бронювання до",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-broniuvannia-do.md"
+  },
+  {
+    "id": "pp-ryzyk-mobilizatsii",
+    "type": "measure",
+    "name": "PP.Ризик мобілізації",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-ryzyk-mobilizatsii.md"
+  },
+  {
+    "id": "pp-hrupa-invalidnosti",
+    "type": "measure",
+    "name": "PP.Група інвалідності",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-hrupa-invalidnosti.md"
+  },
+  {
+    "id": "pp-diisnist-invalidnosti-do",
+    "type": "measure",
+    "name": "PP.Дійсність інвалідності до",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-diisnist-invalidnosti-do.md"
+  },
+  {
+    "id": "pp-nadomnyi-invalid-kvota",
+    "type": "measure",
+    "name": "PP.Надомний інвалід (квота)",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-nadomnyi-invalid-kvota.md"
+  },
+  {
+    "id": "pp-ipn",
+    "type": "measure",
+    "name": "PP.ІПН",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-ipn.md"
+  },
+  {
+    "id": "pp-dity-do-18-rokiv",
+    "type": "measure",
+    "name": "PP.Діти до 18 років",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-dity-do-18-rokiv.md"
+  },
+  {
+    "id": "pp-materialna-vidpovidalnist",
+    "type": "measure",
+    "name": "PP.Матеріальна відповідальність",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-materialna-vidpovidalnist.md"
+  },
+  {
+    "id": "dummy-blank",
+    "type": "measure",
+    "name": "dummy_blank",
+    "displayFolder": "_Technical",
+    "file": "measures/dummy-blank.md"
+  },
+  {
+    "id": "gp-kerivnyk",
+    "type": "measure",
+    "name": "GP.Керівник",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-kerivnyk.md"
+  },
+  {
+    "id": "gp-dolia-onlain",
+    "type": "measure",
+    "name": "GP.Доля онлайн (%)",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-dolia-onlain.md"
+  },
+  {
+    "id": "gp-dolia-oflain",
+    "type": "measure",
+    "name": "GP.Доля офлайн (%)",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-dolia-oflain.md"
+  },
+  {
+    "id": "gp-dolia-polovykh",
+    "type": "measure",
+    "name": "GP.Доля польових (%)",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-dolia-polovykh.md"
+  },
+  {
+    "id": "gp-kilkist-spivrobitnykiv-vsoho-chol-string",
+    "type": "measure",
+    "name": "GP.Кількість співробітників всього, чол. - String",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-kilkist-spivrobitnykiv-vsoho-chol-string.md"
+  },
+  {
+    "id": "gp-ukomplektovanist-shtatu",
+    "type": "measure",
+    "name": "GP.Укомплектованість штату (%)",
+    "displayFolder": "Group_Profile\\_Main\\Індикатори здоров'я команди",
+    "file": "measures/gp-ukomplektovanist-shtatu.md"
+  },
+  {
+    "id": "gp-serednii-stazh-v-komandi-rokiv",
+    "type": "measure",
+    "name": "GP.Середній стаж в команді, років",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-serednii-stazh-v-komandi-rokiv.md"
+  },
+  {
+    "id": "gp-enps",
+    "type": "measure",
+    "name": "GP.eNPS (%)",
+    "displayFolder": "Group_Profile\\_Main\\Індикатори здоров'я команди",
+    "file": "measures/gp-enps.md"
+  },
+  {
+    "id": "gp-serednii-bal-kompetentsii-komandy-po-kompleksnii-rik",
+    "type": "measure",
+    "name": "GP.Середній бал компетенцій команди по комплексній, рік",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-serednii-bal-kompetentsii-komandy-po-kompleksnii-rik.md"
+  },
+  {
+    "id": "gp-serednia-zarobitna-plata",
+    "type": "measure",
+    "name": "GP.Середня заробітна плата",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-serednia-zarobitna-plata.md"
+  },
+  {
+    "id": "gp-plynnist",
+    "type": "measure",
+    "name": "GP.Плинність (%)",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-plynnist.md"
+  },
+  {
+    "id": "gp-nebazhana-plynnist",
+    "type": "measure",
+    "name": "GP.Небажана плинність (%)",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-nebazhana-plynnist.md"
+  },
+  {
+    "id": "gp-serednia-kilkist-dniv-nevykorystanoi-vidpustky-spivrobitnykom",
+    "type": "measure",
+    "name": "GP.Середня кількість днів невикористаної відпустки співробітником",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-serednia-kilkist-dniv-nevykorystanoi-vidpustky-spivrobitnykom.md"
+  },
+  {
+    "id": "gp-dolia-spivrobitnykiv-komandy-z-naiavnymy-vidpustkamy-ponad-10-dniv",
+    "type": "measure",
+    "name": "GP.Доля співробітників команди з наявними відпустками понад 10 днів",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-dolia-spivrobitnykiv-komandy-z-naiavnymy-vidpustkamy-ponad-10-dniv.md"
+  },
+  {
+    "id": "gp-riven-absenteizmu",
+    "type": "measure",
+    "name": "GP.Рівень абсентеїзму (%)",
+    "displayFolder": "Group_Profile\\_Main\\Ризики та фокуси уваги",
+    "file": "measures/gp-riven-absenteizmu.md"
+  },
+  {
+    "id": "gp-posady-middle-senior-iz-kadrovym-rezervom",
+    "type": "measure",
+    "name": "GP.Посади Middle|Senior+ із кадровим резервом (%)",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-posady-middle-senior-iz-kadrovym-rezervom.md"
+  },
+  {
+    "id": "gp-dolia-komandy-z-diiuchym-konfliktom-interesiv",
+    "type": "measure",
+    "name": "GP.Доля команди з діючим конфліктом інтересів (%)",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-dolia-komandy-z-diiuchym-konfliktom-interesiv.md"
+  },
+  {
+    "id": "gp-dolia-zabronovanykh-cholovikiv",
+    "type": "measure",
+    "name": "GP.Доля заброньованих чоловіків(%)",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-dolia-zabronovanykh-cholovikiv.md"
+  },
+  {
+    "id": "gp-dolia-cholovikiv-pid-ryzykom-mobilizatsii",
+    "type": "measure",
+    "name": "GP.Доля чоловіків під ризиком мобілізації(%)",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-dolia-cholovikiv-pid-ryzykom-mobilizatsii.md"
+  },
+  {
+    "id": "gp-dolia-komandy-z-aktyvnymy-idp",
+    "type": "measure",
+    "name": "GP.Доля команди з активними IDP",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-dolia-komandy-z-aktyvnymy-idp.md"
+  },
+  {
+    "id": "gp-start-page-navigationbutton",
+    "type": "measure",
+    "name": "GP.Start_Page_NavigationButton",
+    "displayFolder": "Navigation\\Group",
+    "file": "measures/gp-start-page-navigationbutton.md"
+  },
+  {
+    "id": "gp-photo-url",
+    "type": "measure",
+    "name": "GP.Photo_URL",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-photo-url.md"
+  },
+  {
+    "id": "pp-dniv-vidpustky-v-robochi-dni",
+    "type": "measure",
+    "name": "PP.% днів відпустки в робочі дні",
+    "displayFolder": "Personal_Profile\\Здоров'я та благополуччя",
+    "file": "measures/pp-dniv-vidpustky-v-robochi-dni.md"
+  },
+  {
+    "id": "pp-zalyshok-vidpustky",
+    "type": "measure",
+    "name": "PP.Залишок відпустки",
+    "displayFolder": "Personal_Profile\\Здоров'я та благополуччя",
+    "file": "measures/pp-zalyshok-vidpustky.md"
+  },
+  {
+    "id": "pp-misiatsi-bez-vidpustky",
+    "type": "measure",
+    "name": "PP.Місяці без відпустки",
+    "displayFolder": "Personal_Profile\\Здоров'я та благополуччя",
+    "file": "measures/pp-misiatsi-bez-vidpustky.md"
+  },
+  {
+    "id": "pp-dni-vidpustky",
+    "type": "measure",
+    "name": "PP.Дні відпустки",
+    "displayFolder": "Personal_Profile\\Здоров'я та благополуччя",
+    "file": "measures/pp-dni-vidpustky.md"
+  },
+  {
+    "id": "pp-serednia-tryvalist-vidpustky",
+    "type": "measure",
+    "name": "PP.Середня тривалість відпустки",
+    "displayFolder": "Personal_Profile\\Здоров'я та благополуччя",
+    "file": "measures/pp-serednia-tryvalist-vidpustky.md"
+  },
+  {
+    "id": "pp-kilkist-vidpustok",
+    "type": "measure",
+    "name": "PP.Кількість відпусток",
+    "displayFolder": "Personal_Profile\\Здоров'я та благополуччя",
+    "file": "measures/pp-kilkist-vidpustok.md"
+  },
+  {
+    "id": "pp-kilkist-dovhykh-vidpustok",
+    "type": "measure",
+    "name": "PP.Кількість довгих відпусток",
+    "displayFolder": "Personal_Profile\\Здоров'я та благополуччя",
+    "file": "measures/pp-kilkist-dovhykh-vidpustok.md"
+  },
+  {
+    "id": "pp-absenteizm",
+    "type": "measure",
+    "name": "PP.Абсентеїзм",
+    "displayFolder": "Personal_Profile\\Здоров'я та благополуччя",
+    "file": "measures/pp-absenteizm.md"
+  },
+  {
+    "id": "pp-likarniani",
+    "type": "measure",
+    "name": "PP.Лікарняні",
+    "displayFolder": "Personal_Profile\\Здоров'я та благополуччя",
+    "file": "measures/pp-likarniani.md"
+  },
+  {
+    "id": "pp-serednia-tryvalist-likarnianoho",
+    "type": "measure",
+    "name": "PP.Середня тривалість лікарняного",
+    "displayFolder": "Personal_Profile\\Здоров'я та благополуччя",
+    "file": "measures/pp-serednia-tryvalist-likarnianoho.md"
+  },
+  {
+    "id": "pp-intsydenty-z-travmatyzmom",
+    "type": "measure",
+    "name": "PP.Інциденти з травматизмом",
+    "displayFolder": "Personal_Profile\\Здоров'я та благополуччя",
+    "file": "measures/pp-intsydenty-z-travmatyzmom.md"
+  },
+  {
+    "id": "gp-svg-okr-komandy",
+    "type": "measure",
+    "name": "GP.SVG.OKR команди",
+    "displayFolder": "Group_Profile\\_Main\\SVG",
+    "file": "measures/gp-svg-okr-komandy.md"
+  },
+  {
+    "id": "selected-hierarchytype",
+    "type": "measure",
+    "name": "Selected.HierarchyType",
+    "displayFolder": "Hierarchy",
+    "file": "measures/selected-hierarchytype.md"
+  },
+  {
+    "id": "c-rows-employee-list",
+    "type": "measure",
+    "name": "c_rows_employee_list",
+    "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+    "file": "measures/c-rows-employee-list.md"
+  },
+  {
+    "id": "pp-serednii-bal-otsinky-kompetentsii-po-kompleksnii",
+    "type": "measure",
+    "name": "PP.Середній бал оцінки компетенцій по комплексній",
+    "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+    "file": "measures/pp-serednii-bal-otsinky-kompetentsii-po-kompleksnii.md"
+  },
+  {
+    "id": "pp-status-pratsivnyka",
+    "type": "measure",
+    "name": "PP.Статус працівника",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-status-pratsivnyka.md"
+  },
+  {
+    "id": "pp-napriam",
+    "type": "measure",
+    "name": "PP.Напрям",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-napriam.md"
+  },
+  {
+    "id": "pp-pidnapriam",
+    "type": "measure",
+    "name": "PP.Піднапрям",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-pidnapriam.md"
+  },
+  {
+    "id": "pp-administratyvnyi-kerivnyk",
+    "type": "measure",
+    "name": "PP.Адміністративний керівник",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-administratyvnyi-kerivnyk.md"
+  },
+  {
+    "id": "pp-ahro-khab",
+    "type": "measure",
+    "name": "PP.Агро Хаб",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-ahro-khab.md"
+  },
+  {
+    "id": "pp-trudovi-umovy",
+    "type": "measure",
+    "name": "PP.Трудові умови",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-trudovi-umovy.md"
+  },
+  {
+    "id": "pp-finbp",
+    "type": "measure",
+    "name": "PP.FinBP",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-finbp.md"
+  },
+  {
+    "id": "pp-priorytetne-mistse-roboty",
+    "type": "measure",
+    "name": "PP.Пріоритетне місце роботи",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-priorytetne-mistse-roboty.md"
+  },
+  {
+    "id": "pp-zainiatykh-stavok-faktychno",
+    "type": "measure",
+    "name": "PP.Зайнятих ставок фактично",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-zainiatykh-stavok-faktychno.md"
+  },
+  {
+    "id": "pp-utochnennia-po-posadi",
+    "type": "measure",
+    "name": "PP.Уточнення по посаді",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-utochnennia-po-posadi.md"
+  },
+  {
+    "id": "pp-utochnennia-po-robotakh",
+    "type": "measure",
+    "name": "PP.Уточнення по роботах",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-utochnennia-po-robotakh.md"
+  },
+  {
+    "id": "pp-format-roboty-pratsivnyk",
+    "type": "measure",
+    "name": "PP.Формат роботи (працівник)",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-format-roboty-pratsivnyk.md"
+  },
+  {
+    "id": "pp-adresa-ofisu-shtat",
+    "type": "measure",
+    "name": "PP.Адреса офісу (штат)",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-adresa-ofisu-shtat.md"
+  },
+  {
+    "id": "pp-ofis-shtat",
+    "type": "measure",
+    "name": "PP.Офіс (штат)",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-ofis-shtat.md"
+  },
+  {
+    "id": "pp-hrafik-roboty",
+    "type": "measure",
+    "name": "PP.Графік роботи",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-hrafik-roboty.md"
+  },
+  {
+    "id": "pp-zmina",
+    "type": "measure",
+    "name": "PP.Зміна",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-zmina.md"
+  },
+  {
+    "id": "pp-na-chyiemu-mistsi-sydyt",
+    "type": "measure",
+    "name": "PP.На чиєму місці сидить",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-na-chyiemu-mistsi-sydyt.md"
+  },
+  {
+    "id": "pp-pidnapriam-riven-2",
+    "type": "measure",
+    "name": "PP.Піднапрям рівень 2",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-pidnapriam-riven-2.md"
+  },
+  {
+    "id": "pp-posada-zvedena",
+    "type": "measure",
+    "name": "PP.Посада зведена",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-posada-zvedena.md"
+  },
+  {
+    "id": "pp-pidrozdil-kadrovyi-po-sumishchenniu",
+    "type": "measure",
+    "name": "PP.Підрозділ кадровий по суміщенню",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-pidrozdil-kadrovyi-po-sumishchenniu.md"
+  },
+  {
+    "id": "pp-posada-po-sumishchenniu",
+    "type": "measure",
+    "name": "PP.Посада по суміщенню",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-posada-po-sumishchenniu.md"
+  },
+  {
+    "id": "pp-zainiatykh-stavok-po-sumishchenniu",
+    "type": "measure",
+    "name": "PP.Зайнятих ставок по суміщенню",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-zainiatykh-stavok-po-sumishchenniu.md"
+  },
+  {
+    "id": "pp-termin-sumishchennia-mis",
+    "type": "measure",
+    "name": "PP.Термін суміщення (міс.)",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-termin-sumishchennia-mis.md"
+  },
+  {
+    "id": "pp-doplaty-po-sumishchenniu",
+    "type": "measure",
+    "name": "PP.% доплати по суміщенню",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-doplaty-po-sumishchenniu.md"
+  },
+  {
+    "id": "pp-vidstrochka-vid-pryzovu",
+    "type": "measure",
+    "name": "PP.Відстрочка від призову",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-vidstrochka-vid-pryzovu.md"
+  },
+  {
+    "id": "pp-veteran-novachok",
+    "type": "measure",
+    "name": "PP.Ветеран-Новачок",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-veteran-novachok.md"
+  },
+  {
+    "id": "pp-vidnoshennia-do-vo",
+    "type": "measure",
+    "name": "PP.Відношення до ВО",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-vidnoshennia-do-vo.md"
+  },
+  {
+    "id": "pp-viiskova-chastyna",
+    "type": "measure",
+    "name": "PP.Військова частина",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-viiskova-chastyna.md"
+  },
+  {
+    "id": "pp-koordynator-dlia-mobilizovanykh",
+    "type": "measure",
+    "name": "PP.Координатор для мобілізованих",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-koordynator-dlia-mobilizovanykh.md"
+  },
+  {
+    "id": "pp-dity-do-14-rokiv",
+    "type": "measure",
+    "name": "PP.Діти до 14 років",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-dity-do-14-rokiv.md"
+  },
+  {
+    "id": "pp-katehoriia-mekhanizatora",
+    "type": "measure",
+    "name": "PP.Категорія механізатора",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-katehoriia-mekhanizatora.md"
+  },
+  {
+    "id": "pp-chy-vyplacheno-likarniani-vid-kompanii",
+    "type": "measure",
+    "name": "PP.Чи виплачено лікарняні від компанії",
+    "displayFolder": "Personal_Profile\\Здоров'я та благополуччя",
+    "file": "measures/pp-chy-vyplacheno-likarniani-vid-kompanii.md"
+  },
+  {
+    "id": "pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia",
+    "type": "measure",
+    "name": "PP.Цільовий розмір річної винагороди, до оподаткування",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia.md"
+  },
+  {
+    "id": "pp-vidsotok-zminy-fiksovanoi-vynahorody",
+    "type": "measure",
+    "name": "PP.Відсоток зміни фіксованої винагороди",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-vidsotok-zminy-fiksovanoi-vynahorody.md"
+  },
+  {
+    "id": "pp-zrostannia-tsilovoi-richnoi-vynahorody-do-opodatkuvannia-za-ostanni-12-mis",
+    "type": "measure",
+    "name": "PP.Зростання цільової річної винагороди, до оподаткування (за останні 12 міс.)",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-zrostannia-tsilovoi-richnoi-vynahorody-do-opodatkuvannia-za-ostanni-12-mis.md"
+  },
+  {
+    "id": "pp-oklad-po-hodynakh",
+    "type": "measure",
+    "name": "PP.Оклад по годинах",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-oklad-po-hodynakh.md"
+  },
+  {
+    "id": "pp-oklad-po-dniakh",
+    "type": "measure",
+    "name": "PP.Оклад по днях",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-oklad-po-dniakh.md"
+  },
+  {
+    "id": "pp-pozytsiia-v-okladnii-vyltsi",
+    "type": "measure",
+    "name": "PP.Позиція в окладній вилці",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-pozytsiia-v-okladnii-vyltsi.md"
+  },
+  {
+    "id": "pp-minimum-vylky",
+    "type": "measure",
+    "name": "PP.Мінімум вилки",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-minimum-vylky.md"
+  },
+  {
+    "id": "pp-seredyna-vylky",
+    "type": "measure",
+    "name": "PP.Середина вилки",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-seredyna-vylky.md"
+  },
+  {
+    "id": "pp-maksymum-vylky",
+    "type": "measure",
+    "name": "PP.Максимум вилки",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-maksymum-vylky.md"
+  },
+  {
+    "id": "pp-premiia-za-misiats",
+    "type": "measure",
+    "name": "PP.Премія за місяць, %",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-premiia-za-misiats.md"
+  },
+  {
+    "id": "pp-doplata-za-shkidlyvi-umovy-pratsi",
+    "type": "measure",
+    "name": "PP.Доплата за шкідливі умови праці, %",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-doplata-za-shkidlyvi-umovy-pratsi.md"
+  },
+  {
+    "id": "pp-roziznyi-kharakter-roboty",
+    "type": "measure",
+    "name": "'PP.Роз''їзний характер роботи, %'",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-roziznyi-kharakter-roboty.md"
+  },
+  {
+    "id": "pp-shchomisiachna-premiia",
+    "type": "measure",
+    "name": "PP.Щомісячна премія",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-shchomisiachna-premiia.md"
+  },
+  {
+    "id": "pp-kvartalna-premiia",
+    "type": "measure",
+    "name": "PP.Квартальна премія",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-kvartalna-premiia.md"
+  },
+  {
+    "id": "pp-richnyi-bonus",
+    "type": "measure",
+    "name": "PP.Річний бонус",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-richnyi-bonus.md"
+  },
+  {
+    "id": "pp-orenda-zhytla",
+    "type": "measure",
+    "name": "PP.Оренда житла",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-orenda-zhytla.md"
+  },
+  {
+    "id": "pp-mobilnyi-zviazok-korporatyvnyi-limit",
+    "type": "measure",
+    "name": "'PP.Мобільний зв''язок - Корпоративний ліміт'",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-mobilnyi-zviazok-korporatyvnyi-limit.md"
+  },
+  {
+    "id": "pp-mobilnyi-zviazok-nazva-paketu",
+    "type": "measure",
+    "name": "'PP.Мобільний зв''язок - Назва пакету'",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-mobilnyi-zviazok-nazva-paketu.md"
+  },
+  {
+    "id": "pp-pozyka-na-noutbuk",
+    "type": "measure",
+    "name": "PP.Позика на ноутбук",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-pozyka-na-noutbuk.md"
+  },
+  {
+    "id": "pp-data-dostupnosti-pozyky-na-noutbuk",
+    "type": "measure",
+    "name": "PP.Дата доступності позики на ноутбук",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-data-dostupnosti-pozyky-na-noutbuk.md"
+  },
+  {
+    "id": "pp-typ-optsii-po-avto",
+    "type": "measure",
+    "name": "PP.Тип опції по авто",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-typ-optsii-po-avto.md"
+  },
+  {
+    "id": "pp-premiia-mkhp-zirky",
+    "type": "measure",
+    "name": "PP.Премія МХП Зірки",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-premiia-mkhp-zirky.md"
+  },
+  {
+    "id": "pp-proektnyi-bonus-za-stratehichni-it-proiekty",
+    "type": "measure",
+    "name": "PP.Проектний бонус за стратегічні ІТ проєкти",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-proektnyi-bonus-za-stratehichni-it-proiekty.md"
+  },
+  {
+    "id": "pp-investytsiinyi-proiektnyi-bonus",
+    "type": "measure",
+    "name": "PP.Інвестиційний проєктний бонус",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-investytsiinyi-proiektnyi-bonus.md"
+  },
+  {
+    "id": "pp-premiia-za-zberezhennia-ta-rozshyrennia-zemelnoho-banku",
+    "type": "measure",
+    "name": "PP.Премія за збереження та розширення земельного банку",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-premiia-za-zberezhennia-ta-rozshyrennia-zemelnoho-banku.md"
+  },
+  {
+    "id": "pp-razova-premiia-za-prohramoiu-vyznannia",
+    "type": "measure",
+    "name": "PP.Разова премія за програмою визнання",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-razova-premiia-za-prohramoiu-vyznannia.md"
+  },
+  {
+    "id": "pp-premiia-za-vnutrishnie-trenerstvo",
+    "type": "measure",
+    "name": "PP.Премія за внутрішнє тренерство",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-premiia-za-vnutrishnie-trenerstvo.md"
+  },
+  {
+    "id": "pp-doplata-za-nastavnytstvo",
+    "type": "measure",
+    "name": "PP.Доплата за наставництво",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-doplata-za-nastavnytstvo.md"
+  },
+  {
+    "id": "pp-premiia-za-prohramoiu-pryvedy-druha",
+    "type": "measure",
+    "name": "PP.Премія за програмою «Приведи друга»",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-premiia-za-prohramoiu-pryvedy-druha.md"
+  },
+  {
+    "id": "pp-premiia-za-bank-idei",
+    "type": "measure",
+    "name": "PP.Премія за Банк ідей",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-premiia-za-bank-idei.md"
+  },
+  {
+    "id": "pp-navchannia",
+    "type": "measure",
+    "name": "PP.Навчання",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-navchannia.md"
+  },
+  {
+    "id": "pp-prohrama-mkhp-zdorovia-strakhova-kompaniia-kniazha",
+    "type": "measure",
+    "name": "PP.Програма “МХП Здоров’я”. Страхова компанія “КНЯЖА”. ...",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-prohrama-mkhp-zdorovia-strakhova-kompaniia-kniazha.md"
+  },
+  {
+    "id": "pp-prohrama-mkhp-zdorovia-strakhova-kompaniia-vuso",
+    "type": "measure",
+    "name": "PP.Програма “МХП Здоров’я”. Страхова компанія “ВУСО”. ...",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-prohrama-mkhp-zdorovia-strakhova-kompaniia-vuso.md"
+  },
+  {
+    "id": "pp-pilhove-kharchuvannia",
+    "type": "measure",
+    "name": "PP.Пільгове харчування",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-pilhove-kharchuvannia.md"
+  },
+  {
+    "id": "pp-produktsiia-zi-znyzhkamy",
+    "type": "measure",
+    "name": "PP.Продукція зі знижками",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-produktsiia-zi-znyzhkamy.md"
+  },
+  {
+    "id": "pp-sotsialna-pidtrymka",
+    "type": "measure",
+    "name": "PP.Соціальна підтримка",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-sotsialna-pidtrymka.md"
+  },
+  {
+    "id": "pp-min-tariff-rate",
+    "type": "measure",
+    "name": "PP.min_tariff_rate",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-min-tariff-rate.md"
+  },
+  {
+    "id": "pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia-12-misiatsiv-nazad",
+    "type": "measure",
+    "name": "PP.Цільовий розмір річної винагороди, до оподаткування (12 місяців назад)",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia-12-misiatsiv-nazad.md"
+  },
+  {
+    "id": "date-filters-check",
+    "type": "measure",
+    "name": "date_filters_check",
+    "displayFolder": "_Technical",
+    "file": "measures/date-filters-check.md"
+  },
+  {
+    "id": "pp-button-detalization-font-color",
+    "type": "measure",
+    "name": "PP.button_detalization_font_color",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-button-detalization-font-color.md"
+  },
+  {
+    "id": "pp-premiia-za-misiats-hrn",
+    "type": "measure",
+    "name": "PP.Премія за місяць, грн",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-premiia-za-misiats-hrn.md"
+  },
+  {
+    "id": "pp-doplata-za-shkidlyvi-umovy-pratsi-hrn",
+    "type": "measure",
+    "name": "PP.Доплата за шкідливі умови праці,грн",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-doplata-za-shkidlyvi-umovy-pratsi-hrn.md"
+  },
+  {
+    "id": "pp-roziznyi-kharakter-roboty-hrn",
+    "type": "measure",
+    "name": "'PP.Роз''їзний характер роботи, грн'",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-roziznyi-kharakter-roboty-hrn.md"
+  },
+  {
+    "id": "pp-kvartalna-premiia-okladiv",
+    "type": "measure",
+    "name": "PP.Квартальна премія окладів",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-kvartalna-premiia-okladiv.md"
+  },
+  {
+    "id": "pp-shchomisiachna-premiia-okladiv",
+    "type": "measure",
+    "name": "PP.Щомісячна премія окладів",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-shchomisiachna-premiia-okladiv.md"
+  },
+  {
+    "id": "pp-richnyi-bonus-okladiv",
+    "type": "measure",
+    "name": "PP.Річний бонус окладів",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-richnyi-bonus-okladiv.md"
+  },
+  {
+    "id": "pp-nav-zastosuvaty-vybir",
+    "type": "measure",
+    "name": "PP.Nav.Застосувати вибір",
+    "displayFolder": "Navigation\\Personal",
+    "file": "measures/pp-nav-zastosuvaty-vybir.md"
+  },
+  {
+    "id": "pp-nav-my-lead-team",
+    "type": "measure",
+    "name": "PP.Nav.My_lead_team",
+    "displayFolder": "Navigation\\Personal",
+    "file": "measures/pp-nav-my-lead-team.md"
+  },
+  {
+    "id": "pp-rozmir-merezhi-spivrobitnyk-3m",
+    "type": "measure",
+    "name": "PP.Розмір мережі (співробітник, 3м)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Networks",
+    "file": "measures/pp-rozmir-merezhi-spivrobitnyk-3m.md"
+  },
+  {
+    "id": "pp-rozmir-merezhi-kadrovyi-pidrozdil-3m",
+    "type": "measure",
+    "name": "PP.Розмір мережі (кадровий підрозділ, 3м)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Networks",
+    "file": "measures/pp-rozmir-merezhi-kadrovyi-pidrozdil-3m.md"
+  },
+  {
+    "id": "pp-rozmir-merezhi-napriam-3m",
+    "type": "measure",
+    "name": "PP.Розмір мережі (напрям, 3м)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Networks",
+    "file": "measures/pp-rozmir-merezhi-napriam-3m.md"
+  },
+  {
+    "id": "pp-rozmir-merezhi-kholdynh-3m",
+    "type": "measure",
+    "name": "PP.Розмір мережі (Холдинг, 3м)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Networks",
+    "file": "measures/pp-rozmir-merezhi-kholdynh-3m.md"
+  },
+  {
+    "id": "pp-shyryna-merezhi-spivrobitnyk-3m",
+    "type": "measure",
+    "name": "PP.Ширина мережі (співробітник, 3м)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Networks",
+    "file": "measures/pp-shyryna-merezhi-spivrobitnyk-3m.md"
+  },
+  {
+    "id": "pp-shyryna-merezhi-kadrovyi-pidrozdil-3m",
+    "type": "measure",
+    "name": "PP.Ширина мережі (кадровий підрозділ, 3м)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Networks",
+    "file": "measures/pp-shyryna-merezhi-kadrovyi-pidrozdil-3m.md"
+  },
+  {
+    "id": "pp-shyryna-merezhi-napriam-3m",
+    "type": "measure",
+    "name": "PP.Ширина мережі (напрям, 3м)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Networks",
+    "file": "measures/pp-shyryna-merezhi-napriam-3m.md"
+  },
+  {
+    "id": "pp-shyryna-merezhi-kholdynh-3m",
+    "type": "measure",
+    "name": "PP.Ширина мережі (Холдинг, 3м)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Networks",
+    "file": "measures/pp-shyryna-merezhi-kholdynh-3m.md"
+  },
+  {
+    "id": "pp-hodyn-zahalnoi-vzaiemodii-spivrobitnyk",
+    "type": "measure",
+    "name": "PP.Годин загальної взаємодії (співробітник)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Collaboration",
+    "file": "measures/pp-hodyn-zahalnoi-vzaiemodii-spivrobitnyk.md"
+  },
+  {
+    "id": "pp-hodyn-zahalnoi-vzaiemodii-kadrovyi-pidrozdil",
+    "type": "measure",
+    "name": "PP.Годин загальної взаємодії (кадровий підрозділ)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Collaboration",
+    "file": "measures/pp-hodyn-zahalnoi-vzaiemodii-kadrovyi-pidrozdil.md"
+  },
+  {
+    "id": "pp-hodyn-zahalnoi-vzaiemodii-napriam",
+    "type": "measure",
+    "name": "PP.Годин загальної взаємодії (напрям)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Collaboration",
+    "file": "measures/pp-hodyn-zahalnoi-vzaiemodii-napriam.md"
+  },
+  {
+    "id": "pp-hodyn-zahalnoi-vzaiemodii-kholdynh",
+    "type": "measure",
+    "name": "PP.Годин загальної взаємодії (Холдинг)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Collaboration",
+    "file": "measures/pp-hodyn-zahalnoi-vzaiemodii-kholdynh.md"
+  },
+  {
+    "id": "pp-dovzhyna-hranytsi-robochoho-dnia-spivrobitnyk",
+    "type": "measure",
+    "name": "PP.Довжина (границі) робочого дня (співробітник)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Collaboration",
+    "file": "measures/pp-dovzhyna-hranytsi-robochoho-dnia-spivrobitnyk.md"
+  },
+  {
+    "id": "pp-dovzhyna-hranytsi-robochoho-dnia-kadrovyi-pidrozdil",
+    "type": "measure",
+    "name": "PP.Довжина (границі) робочого дня (кадровий підрозділ)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Collaboration",
+    "file": "measures/pp-dovzhyna-hranytsi-robochoho-dnia-kadrovyi-pidrozdil.md"
+  },
+  {
+    "id": "pp-dovzhyna-hranytsi-robochoho-dnia-napriam",
+    "type": "measure",
+    "name": "PP.Довжина (границі) робочого дня (напрям)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Collaboration",
+    "file": "measures/pp-dovzhyna-hranytsi-robochoho-dnia-napriam.md"
+  },
+  {
+    "id": "pp-dovzhyna-hranytsi-robochoho-dnia-kholdynh",
+    "type": "measure",
+    "name": "PP.Довжина (границі) робочого дня (Холдинг)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Collaboration",
+    "file": "measures/pp-dovzhyna-hranytsi-robochoho-dnia-kholdynh.md"
+  },
+  {
+    "id": "pp-hodyn-vzaiemodii-u-nerobochyi-chas-spivrobitnyk",
+    "type": "measure",
+    "name": "PP.Годин взаємодії у неробочий час (співробітник)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Collaboration",
+    "file": "measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-spivrobitnyk.md"
+  },
+  {
+    "id": "pp-hodyn-vzaiemodii-u-nerobochyi-chas-kadrovyi-pidrozdil",
+    "type": "measure",
+    "name": "PP.Годин взаємодії у неробочий час (кадровий підрозділ)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Collaboration",
+    "file": "measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-kadrovyi-pidrozdil.md"
+  },
+  {
+    "id": "pp-hodyn-vzaiemodii-u-nerobochyi-chas-napriam",
+    "type": "measure",
+    "name": "PP.Годин взаємодії у неробочий час (напрям)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Collaboration",
+    "file": "measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-napriam.md"
+  },
+  {
+    "id": "pp-hodyn-vzaiemodii-u-nerobochyi-chas-kholdynh",
+    "type": "measure",
+    "name": "PP.Годин взаємодії у неробочий час (Холдинг)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Collaboration",
+    "file": "measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-kholdynh.md"
+  },
+  {
+    "id": "pp-hodyn-dlia-fokusnoi-roboty-spivrobitnyk",
+    "type": "measure",
+    "name": "PP.Годин для фокусної роботи (співробітник)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Collaboration",
+    "file": "measures/pp-hodyn-dlia-fokusnoi-roboty-spivrobitnyk.md"
+  },
+  {
+    "id": "pp-hodyn-dlia-fokusnoi-roboty-kadrovyi-pidrozdil",
+    "type": "measure",
+    "name": "PP.Годин для фокусної роботи (кадровий підрозділ)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Collaboration",
+    "file": "measures/pp-hodyn-dlia-fokusnoi-roboty-kadrovyi-pidrozdil.md"
+  },
+  {
+    "id": "pp-hodyn-dlia-fokusnoi-roboty-napriam",
+    "type": "measure",
+    "name": "PP.Годин для фокусної роботи (напрям)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Collaboration",
+    "file": "measures/pp-hodyn-dlia-fokusnoi-roboty-napriam.md"
+  },
+  {
+    "id": "pp-hodyn-dlia-fokusnoi-roboty-kholdynh",
+    "type": "measure",
+    "name": "PP.Годин для фокусної роботи (Холдинг)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Collaboration",
+    "file": "measures/pp-hodyn-dlia-fokusnoi-roboty-kholdynh.md"
+  },
+  {
+    "id": "pp-hodyn-vzaiemodii-po-naradakh-spivrobitnyk",
+    "type": "measure",
+    "name": "PP.Годин взаємодії по нарадах (співробітник)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Meetings",
+    "file": "measures/pp-hodyn-vzaiemodii-po-naradakh-spivrobitnyk.md"
+  },
+  {
+    "id": "pp-hodyn-vzaiemodii-po-naradakh-kadrovyi-pidrozdil",
+    "type": "measure",
+    "name": "PP.Годин взаємодії по нарадах (кадровий підрозділ)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Meetings",
+    "file": "measures/pp-hodyn-vzaiemodii-po-naradakh-kadrovyi-pidrozdil.md"
+  },
+  {
+    "id": "pp-hodyn-vzaiemodii-po-naradakh-napriam",
+    "type": "measure",
+    "name": "PP.Годин взаємодії по нарадах (напрям)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Meetings",
+    "file": "measures/pp-hodyn-vzaiemodii-po-naradakh-napriam.md"
+  },
+  {
+    "id": "pp-hodyn-vzaiemodii-po-naradakh-kholdynh",
+    "type": "measure",
+    "name": "PP.Годин взаємодії по нарадах (Холдинг)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Meetings",
+    "file": "measures/pp-hodyn-vzaiemodii-po-naradakh-kholdynh.md"
+  },
+  {
+    "id": "pp-dolia-conflicting-meeting-hours-spivrobitnyk",
+    "type": "measure",
+    "name": "PP.Доля Conflicting meeting hours (співробітник)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Meetings",
+    "file": "measures/pp-dolia-conflicting-meeting-hours-spivrobitnyk.md"
+  },
+  {
+    "id": "pp-dolia-conflicting-meeting-hours-kadrovyi-pidrozdil",
+    "type": "measure",
+    "name": "PP.Доля Conflicting meeting hours (кадровий підрозділ)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Meetings",
+    "file": "measures/pp-dolia-conflicting-meeting-hours-kadrovyi-pidrozdil.md"
+  },
+  {
+    "id": "pp-dolia-conflicting-meeting-hours-napriam",
+    "type": "measure",
+    "name": "PP.Доля Conflicting meeting hours (напрям)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Meetings",
+    "file": "measures/pp-dolia-conflicting-meeting-hours-napriam.md"
+  },
+  {
+    "id": "pp-dolia-conflicting-meeting-hours-kholdynh",
+    "type": "measure",
+    "name": "PP.Доля Conflicting meeting hours (Холдинг)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva Meetings",
+    "file": "measures/pp-dolia-conflicting-meeting-hours-kholdynh.md"
+  },
+  {
+    "id": "pp-hodyn-narad-1-1-z-kerivnykom-spivrobitnyk",
+    "type": "measure",
+    "name": "PP.Годин нарад 1:1 з керівником (співробітник)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva management & Coaching",
+    "file": "measures/pp-hodyn-narad-1-1-z-kerivnykom-spivrobitnyk.md"
+  },
+  {
+    "id": "pp-hodyn-narad-1-1-z-kerivnykom-kadrovyi-pidrozdil",
+    "type": "measure",
+    "name": "PP.Годин нарад 1:1 з керівником (кадровий підрозділ)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva management & Coaching",
+    "file": "measures/pp-hodyn-narad-1-1-z-kerivnykom-kadrovyi-pidrozdil.md"
+  },
+  {
+    "id": "pp-hodyn-narad-1-1-z-kerivnykom-napriam",
+    "type": "measure",
+    "name": "PP.Годин нарад 1:1 з керівником (напрям)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva management & Coaching",
+    "file": "measures/pp-hodyn-narad-1-1-z-kerivnykom-napriam.md"
+  },
+  {
+    "id": "pp-hodyn-narad-1-1-z-kerivnykom-kholdynh",
+    "type": "measure",
+    "name": "PP.Годин нарад 1:1 з керівником (Холдинг)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva management & Coaching",
+    "file": "measures/pp-hodyn-narad-1-1-z-kerivnykom-kholdynh.md"
+  },
+  {
+    "id": "pp-hodyn-vzaiemodii-z-kerivnykom-spivrobitnyk",
+    "type": "measure",
+    "name": "PP.Годин взаємодії з керівником (співробітник)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva management & Coaching",
+    "file": "measures/pp-hodyn-vzaiemodii-z-kerivnykom-spivrobitnyk.md"
+  },
+  {
+    "id": "pp-hodyn-vzaiemodii-z-kerivnykom-kadrovyi-pidrozdil",
+    "type": "measure",
+    "name": "PP.Годин взаємодії з керівником (кадровий підрозділ)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva management & Coaching",
+    "file": "measures/pp-hodyn-vzaiemodii-z-kerivnykom-kadrovyi-pidrozdil.md"
+  },
+  {
+    "id": "pp-hodyn-vzaiemodii-z-kerivnykom-napriam",
+    "type": "measure",
+    "name": "PP.Годин взаємодії з керівником (напрям)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva management & Coaching",
+    "file": "measures/pp-hodyn-vzaiemodii-z-kerivnykom-napriam.md"
+  },
+  {
+    "id": "pp-hodyn-vzaiemodii-z-kerivnykom-kholdynh",
+    "type": "measure",
+    "name": "PP.Годин взаємодії з керівником (Холдинг)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva management & Coaching",
+    "file": "measures/pp-hodyn-vzaiemodii-z-kerivnykom-kholdynh.md"
+  },
+  {
+    "id": "pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-spivrobitnyk",
+    "type": "measure",
+    "name": "PP.Годин керівника на взаємодію із безпосередніми підлеглими (співробітник)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva management & Coaching",
+    "file": "measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-spivrobitnyk.md"
+  },
+  {
+    "id": "pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-kadrovyi-pidrozdil",
+    "type": "measure",
+    "name": "PP.Годин керівника на взаємодію із безпосередніми підлеглими (кадровий підрозділ)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva management & Coaching",
+    "file": "measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-kadrovyi-pidrozdil.md"
+  },
+  {
+    "id": "pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-napriam",
+    "type": "measure",
+    "name": "PP.Годин керівника на взаємодію із безпосередніми підлеглими (напрям)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva management & Coaching",
+    "file": "measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-napriam.md"
+  },
+  {
+    "id": "pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-kholdynh",
+    "type": "measure",
+    "name": "PP.Годин керівника на взаємодію із безпосередніми підлеглими (Холдинг)",
+    "displayFolder": "Personal_Profile\\Viva\\Viva management & Coaching",
+    "file": "measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-kholdynh.md"
+  },
+  {
+    "id": "pp-nastavnytstvo",
+    "type": "measure",
+    "name": "PP.Наставництво",
+    "displayFolder": "Personal_Profile\\Viva\\Залученість та інша інформація",
+    "file": "measures/pp-nastavnytstvo.md"
+  },
+  {
+    "id": "pp-trener-ekspert",
+    "type": "measure",
+    "name": "PP.Тренер-експерт",
+    "displayFolder": "Personal_Profile\\Viva\\Залученість та інша інформація",
+    "file": "measures/pp-trener-ekspert.md"
+  },
+  {
+    "id": "pp-uchast-u-banku-idei",
+    "type": "measure",
+    "name": "PP.Участь у Банку ідей",
+    "displayFolder": "Personal_Profile\\Viva\\Залученість та інша інформація",
+    "file": "measures/pp-uchast-u-banku-idei.md"
+  },
+  {
+    "id": "pp-mentorstvo-studentiv",
+    "type": "measure",
+    "name": "PP.Менторство студентів",
+    "displayFolder": "Personal_Profile\\Viva\\Залученість та інша інформація",
+    "file": "measures/pp-mentorstvo-studentiv.md"
+  },
+  {
+    "id": "pp-tryvalist-dovhykh-vidpustok",
+    "type": "measure",
+    "name": "PP.Тривалість довгих відпусток",
+    "displayFolder": "Personal_Profile\\Здоров'я та благополуччя",
+    "file": "measures/pp-tryvalist-dovhykh-vidpustok.md"
+  },
+  {
+    "id": "pp-naiavnist-dovhykh-vidpustok",
+    "type": "measure",
+    "name": "PP.Наявність довгих відпусток",
+    "displayFolder": "Personal_Profile\\Здоров'я та благополуччя",
+    "file": "measures/pp-naiavnist-dovhykh-vidpustok.md"
+  },
+  {
+    "id": "c-rows-admin-os",
+    "type": "measure",
+    "name": "c_rows_ADMIN_OS",
+    "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+    "file": "measures/c-rows-admin-os.md"
+  },
+  {
+    "id": "gp-komanda",
+    "type": "measure",
+    "name": "GP.Команда",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-komanda.md"
+  },
+  {
+    "id": "user-photo",
+    "type": "measure",
+    "name": "user_photo",
+    "displayFolder": "USER",
+    "file": "measures/user-photo.md"
+  },
+  {
+    "id": "gp-dolia-hibryd-onlain",
+    "type": "measure",
+    "name": "GP.Доля гібрид онлайн (%)",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-dolia-hibryd-onlain.md"
+  },
+  {
+    "id": "gp-dolia-hibryd-oflain",
+    "type": "measure",
+    "name": "GP.Доля гібрид офлайн (%)",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-dolia-hibryd-oflain.md"
+  },
+  {
+    "id": "filtered-users-check",
+    "type": "measure",
+    "name": "filtered_users_check",
+    "displayFolder": "_Technical",
+    "file": "measures/filtered-users-check.md"
+  },
+  {
+    "id": "gp-manager-id",
+    "type": "measure",
+    "name": "GP._Manager_ID",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-manager-id.md"
+  },
+  {
+    "id": "gp-hrbp",
+    "type": "measure",
+    "name": "GP.HRBP",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-hrbp.md"
+  },
+  {
+    "id": "gp-finbp",
+    "type": "measure",
+    "name": "GP.FinBP",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-finbp.md"
+  },
+  {
+    "id": "gp-napriam",
+    "type": "measure",
+    "name": "GP.Напрям",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-napriam.md"
+  },
+  {
+    "id": "gp-riven-komandy-v-iierarkhii",
+    "type": "measure",
+    "name": "GP.Рівень команди в ієрархії",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-riven-komandy-v-iierarkhii.md"
+  },
+  {
+    "id": "gp-pidnapriam",
+    "type": "measure",
+    "name": "GP.Піднапрям",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-pidnapriam.md"
+  },
+  {
+    "id": "gp-dolia-senior-managers",
+    "type": "measure",
+    "name": "GP.Доля Senior managers (%)",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-dolia-senior-managers.md"
+  },
+  {
+    "id": "gp-dolia-middle-managers",
+    "type": "measure",
+    "name": "GP.Доля Middle managers (%)",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-dolia-middle-managers.md"
+  },
+  {
+    "id": "gp-dolia-specialists",
+    "type": "measure",
+    "name": "GP.Доля Specialists (%)",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-dolia-specialists.md"
+  },
+  {
+    "id": "gp-dolia-workers",
+    "type": "measure",
+    "name": "GP.Доля Workers (%)",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-dolia-workers.md"
+  },
+  {
+    "id": "gp-dolia-operatsionistiv",
+    "type": "measure",
+    "name": "GP.Доля операціоністів",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-dolia-operatsionistiv.md"
+  },
+  {
+    "id": "gp-dolia-studentiv",
+    "type": "measure",
+    "name": "GP.Доля студентів",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-dolia-studentiv.md"
+  },
+  {
+    "id": "gp-kilkist-fte-po-shtatu-plan",
+    "type": "measure",
+    "name": "GP.Кількість FTE по штату (план)",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-kilkist-fte-po-shtatu-plan.md"
+  },
+  {
+    "id": "gp-kilkist-zainiatykh-fte-fakt",
+    "type": "measure",
+    "name": "GP.Кількість зайнятих FTE (факт)",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-kilkist-zainiatykh-fte-fakt.md"
+  },
+  {
+    "id": "gp-kilkist-mobilizovanykh",
+    "type": "measure",
+    "name": "GP.Кількість мобілізованих",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-kilkist-mobilizovanykh.md"
+  },
+  {
+    "id": "gp-kilkist-veteraniv",
+    "type": "measure",
+    "name": "GP.Кількість Ветеранів",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-kilkist-veteraniv.md"
+  },
+  {
+    "id": "gp-kilkist-spivrobitnykiv-u-dekretnii-vidpusttsi",
+    "type": "measure",
+    "name": "GP.Кількість співробітників у декретній відпустці",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-kilkist-spivrobitnykiv-u-dekretnii-vidpusttsi.md"
+  },
+  {
+    "id": "gp-kilkist-studentiv",
+    "type": "measure",
+    "name": "GP.Кількість студентів",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-kilkist-studentiv.md"
+  },
+  {
+    "id": "gp-serednii-vik",
+    "type": "measure",
+    "name": "GP.Середній вік",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-serednii-vik.md"
+  },
+  {
+    "id": "gp-kilkist-osnovnykh-pratsivnykiv",
+    "type": "measure",
+    "name": "GP.Кількість основних працівників",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-kilkist-osnovnykh-pratsivnykiv.md"
+  },
+  {
+    "id": "gp-kilkist-sezonnykh-pratsivnykiv",
+    "type": "measure",
+    "name": "GP.Кількість сезонних працівників",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-kilkist-sezonnykh-pratsivnykiv.md"
+  },
+  {
+    "id": "gp-kilkist-stazhysty",
+    "type": "measure",
+    "name": "GP.Кількість стажисти",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-kilkist-stazhysty.md"
+  },
+  {
+    "id": "gp-dolia-line",
+    "type": "measure",
+    "name": "GP.Доля Line (%)",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-dolia-line.md"
+  },
+  {
+    "id": "pp-riven-anhliiskoi",
+    "type": "measure",
+    "name": "PP.Рівень англійської",
+    "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+    "file": "measures/pp-riven-anhliiskoi.md"
+  },
+  {
+    "id": "pp-nastupnyk-dlia-roli",
+    "type": "measure",
+    "name": "PP.Наступник для ролі",
+    "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+    "file": "measures/pp-nastupnyk-dlia-roli.md"
+  },
+  {
+    "id": "pp-kilkist-nastupnykiv-na-moiu-rol",
+    "type": "measure",
+    "name": "PP.Кількість наступників на мою роль",
+    "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+    "file": "measures/pp-kilkist-nastupnykiv-na-moiu-rol.md"
+  },
+  {
+    "id": "pp-matrytsia-9-boxes",
+    "type": "measure",
+    "name": "PP.Матриця 9 boxes",
+    "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+    "file": "measures/pp-matrytsia-9-boxes.md"
+  },
+  {
+    "id": "pp-rishennia-talent-council",
+    "type": "measure",
+    "name": "PP.Рішення Talent Council",
+    "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+    "file": "measures/pp-rishennia-talent-council.md"
+  },
+  {
+    "id": "pp-vyd-zainiatosti",
+    "type": "measure",
+    "name": "PP.Вид зайнятості",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-vyd-zainiatosti.md"
+  },
+  {
+    "id": "pp-vidviduvanist-tso",
+    "type": "measure",
+    "name": "PP.Відвідуваність ЦО (%)",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-vidviduvanist-tso.md"
+  },
+  {
+    "id": "pp-uchast-u-proiektakh-pmo",
+    "type": "measure",
+    "name": "PP.Участь у проєктах PMO (%)",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-uchast-u-proiektakh-pmo.md"
+  },
+  {
+    "id": "gp-serednii-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia",
+    "type": "measure",
+    "name": "GP.Середній цільовий розмір річної винагороди, до оподаткування",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia.md"
+  },
+  {
+    "id": "gp-serednia-zarplata-oklad",
+    "type": "measure",
+    "name": "GP.Середня зарплата (оклад)",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednia-zarplata-oklad.md"
+  },
+  {
+    "id": "gp-rozpodil-u-vyltsi-svg",
+    "type": "measure",
+    "name": "GP.Розподіл у вилці.SVG",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-rozpodil-u-vyltsi-svg.md"
+  },
+  {
+    "id": "gp-dolia-uchasnykiv-komandy-iz-zminoiu-zarplaty-okladu",
+    "type": "measure",
+    "name": "GP.Доля учасників команди із зміною зарплати (окладу), %",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-uchasnykiv-komandy-iz-zminoiu-zarplaty-okladu.md"
+  },
+  {
+    "id": "gp-serednie-zrostannia-tsilovoi-richnoi-vynahorody-do-opodatkuvannia",
+    "type": "measure",
+    "name": "GP.Середнє зростання цільової річної винагороди, до оподаткування",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednie-zrostannia-tsilovoi-richnoi-vynahorody-do-opodatkuvannia.md"
+  },
+  {
+    "id": "gp-serednii-zrostannia-zarplaty-okladu-za-12-mis",
+    "type": "measure",
+    "name": "GP.Середній % зростання зарплати (окладу) за 12 міс",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-zrostannia-zarplaty-okladu-za-12-mis.md"
+  },
+  {
+    "id": "gp-vykonannia-planu-fop-ytd",
+    "type": "measure",
+    "name": "GP.Виконання плану ФОП YTD (%)",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-vykonannia-planu-fop-ytd.md"
+  },
+  {
+    "id": "gp-vykonannia-planu-fop-ytd-aktyvni",
+    "type": "measure",
+    "name": "GP.Виконання плану ФОП YTD (%) Активні",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-vykonannia-planu-fop-ytd-aktyvni.md"
+  },
+  {
+    "id": "gp-vykonannia-planu-fop-ytd-mobilizovani",
+    "type": "measure",
+    "name": "GP.Виконання плану ФОП YTD (%) Мобілізовані",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-vykonannia-planu-fop-ytd-mobilizovani.md"
+  },
+  {
+    "id": "gp-dolia-komandy-z-premiieiu-za-misiats",
+    "type": "measure",
+    "name": "GP.Доля команди з премією за місяць, %",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-z-premiieiu-za-misiats.md"
+  },
+  {
+    "id": "gp-dolia-komandy-z-doplatoiu-za-shkidlyvi-umovy-pratsi",
+    "type": "measure",
+    "name": "GP.Доля команди з доплатою за шкідливі умови праці, %",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-z-doplatoiu-za-shkidlyvi-umovy-pratsi.md"
+  },
+  {
+    "id": "gp-dolia-komandy-z-doplatoiu-za-roziznyi-kharakter-roboty",
+    "type": "measure",
+    "name": "GP.Доля команди з доплатою за роз’їзний характер роботи, %",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-z-doplatoiu-za-roziznyi-kharakter-roboty.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-premii-za-misiats",
+    "type": "measure",
+    "name": "GP.Середній розмір премії за місяць",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-premii-za-misiats.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-doplaty-za-shkidlyvi-umovy-pratsi",
+    "type": "measure",
+    "name": "GP.Середній розмір доплати за шкідливі умови праці",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-doplaty-za-shkidlyvi-umovy-pratsi.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-doplaty-za-roziznyi-kharakter-roboty",
+    "type": "measure",
+    "name": "GP.Середній розмір доплати за роз’їзний характер роботи",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-doplaty-za-roziznyi-kharakter-roboty.md"
+  },
+  {
+    "id": "gp-dolia-komandy-z-shchomisiachnoiu-premiieiu",
+    "type": "measure",
+    "name": "GP.Доля команди з щомісячною премією, %",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-z-shchomisiachnoiu-premiieiu.md"
+  },
+  {
+    "id": "gp-dolia-komandy-z-kvartalniu-premiieiu",
+    "type": "measure",
+    "name": "GP.Доля команди з квартальню премією, %",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-z-kvartalniu-premiieiu.md"
+  },
+  {
+    "id": "gp-dolia-komandy-z-richnym-bonusom",
+    "type": "measure",
+    "name": "GP.Доля команди з річним бонусом, %",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-z-richnym-bonusom.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-shchomisiachnoi-premii",
+    "type": "measure",
+    "name": "GP.Середній розмір щомісячної премії",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-shchomisiachnoi-premii.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-kvartalnoi-premii",
+    "type": "measure",
+    "name": "GP.Середній розмір квартальної премії",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-kvartalnoi-premii.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-richnoho-bonusu",
+    "type": "measure",
+    "name": "GP.Середній розмір річного бонусу",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-richnoho-bonusu.md"
+  },
+  {
+    "id": "gp-seredni-vytraty-na-orendu-zhytla",
+    "type": "measure",
+    "name": "GP.Середні витрати на оренду житла",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-seredni-vytraty-na-orendu-zhytla.md"
+  },
+  {
+    "id": "gp-seredni-vytraty-na-mobilnyi-zviazok",
+    "type": "measure",
+    "name": "GP.Середні витрати на мобільний зв’язок",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-seredni-vytraty-na-mobilnyi-zviazok.md"
+  },
+  {
+    "id": "gp-optsiia-po-avto",
+    "type": "measure",
+    "name": "GP.Опція по авто, %",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-optsiia-po-avto.md"
+  },
+  {
+    "id": "gp-dolia-komandy-z-pozykoiu-na-noutbuk-diiucha",
+    "type": "measure",
+    "name": "GP.Доля команди з позикою на ноутбук (%) (діюча)",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-z-pozykoiu-na-noutbuk-diiucha.md"
+  },
+  {
+    "id": "gp-dolia-komandy-iz-premiieiu-mkhp-zirky",
+    "type": "measure",
+    "name": "GP.Доля команди із премією МХП Зірки, %",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-iz-premiieiu-mkhp-zirky.md"
+  },
+  {
+    "id": "gp-dolia-komandy-iz-proektnym-bonusom-za-stratehichni-it-proiekty",
+    "type": "measure",
+    "name": "GP.Доля команди із проектним бонусом за стратегічні ІТ проєкти, %",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-iz-proektnym-bonusom-za-stratehichni-it-proiekty.md"
+  },
+  {
+    "id": "gp-dolia-komandy-iz-investytsiinym-proiektnym-bonusom",
+    "type": "measure",
+    "name": "GP.Доля команди із інвестиційним проєктним бонусом, %",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-iz-investytsiinym-proiektnym-bonusom.md"
+  },
+  {
+    "id": "gp-dolia-komandy-iz-premiieiu-za-zberezhennia-ta-rozshyrennia-zemelnoho-banku",
+    "type": "measure",
+    "name": "GP.Доля команди із премією за збереження та розширення земельного банку, %",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-iz-premiieiu-za-zberezhennia-ta-rozshyrennia-zemelnoho-banku.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-premii-mkhp-zirky",
+    "type": "measure",
+    "name": "GP.Середній розмір премії МХП Зірки",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-premii-mkhp-zirky.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-proektnoho-bonus-za-stratehichni-it-proiekty",
+    "type": "measure",
+    "name": "GP.Середній розмір проектного бонус за стратегічні ІТ проєкти",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-proektnoho-bonus-za-stratehichni-it-proiekty.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-investytsiinoho-proiektnoho-bonusu",
+    "type": "measure",
+    "name": "GP.Середній розмір інвестиційного проєктного бонусу",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-investytsiinoho-proiektnoho-bonusu.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-premii-za-zberezhennia-ta-rozshyrennia-zemelnoho-banku",
+    "type": "measure",
+    "name": "GP.Середній розмір премії за збереження та розширення земельного банку",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-premii-za-zberezhennia-ta-rozshyrennia-zemelnoho-banku.md"
+  },
+  {
+    "id": "gp-dolia-komandy-iz-razovoiu-premiieiu-za-prohramoiu-vyznannia",
+    "type": "measure",
+    "name": "GP.Доля команди із разовою премією за програмою визнання, %",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-iz-razovoiu-premiieiu-za-prohramoiu-vyznannia.md"
+  },
+  {
+    "id": "gp-dolia-komandy-iz-premiieiu-za-vnutrishnie-trenerstvo",
+    "type": "measure",
+    "name": "GP.Доля команди із премією за внутрішнє тренерство, %",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-iz-premiieiu-za-vnutrishnie-trenerstvo.md"
+  },
+  {
+    "id": "gp-dolia-komandy-iz-doplatoiu-za-nastavnytstvo",
+    "type": "measure",
+    "name": "GP.Доля команди із доплатою за наставництво, %",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-iz-doplatoiu-za-nastavnytstvo.md"
+  },
+  {
+    "id": "gp-dolia-komandy-iz-premiieiu-za-prohramoiu-pryvedy-druha",
+    "type": "measure",
+    "name": "GP.Доля команди із премією за програмою «Приведи друга», %",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-iz-premiieiu-za-prohramoiu-pryvedy-druha.md"
+  },
+  {
+    "id": "gp-dolia-komandy-iz-premiieiu-za-bank-idei",
+    "type": "measure",
+    "name": "GP.Доля команди із премією за Банк ідей, %",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-iz-premiieiu-za-bank-idei.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-razovoi-premii-za-prohramoiu-vyznannia",
+    "type": "measure",
+    "name": "GP.Середній розмір разової премії за програмою визнання",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-razovoi-premii-za-prohramoiu-vyznannia.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-premii-za-vnutrishnie-trenerstvo",
+    "type": "measure",
+    "name": "GP.Середній розмір премії за внутрішнє тренерство",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-premii-za-vnutrishnie-trenerstvo.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-doplaty-za-nastavnytstvo",
+    "type": "measure",
+    "name": "GP.Середній розмір доплати за наставництво",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-doplaty-za-nastavnytstvo.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-premii-za-prohramoiu-pryvedy-druha",
+    "type": "measure",
+    "name": "GP.Середній розмір премії за програмою «Приведи друга»",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-premii-za-prohramoiu-pryvedy-druha.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-premii-za-bank-idei",
+    "type": "measure",
+    "name": "GP.Середній розмір премії за Банк ідей",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-premii-za-bank-idei.md"
+  },
+  {
+    "id": "gp-dolia-komandy-z-navchanniam",
+    "type": "measure",
+    "name": "GP.Доля команди з навчанням, %",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-z-navchanniam.md"
+  },
+  {
+    "id": "gp-dolia-komandy-z-sotsialnymy-vyplatamy",
+    "type": "measure",
+    "name": "GP.Доля команди з соціальними виплатами, %",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-z-sotsialnymy-vyplatamy.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-vytrat-na-navchannia",
+    "type": "measure",
+    "name": "GP.Середній розмір витрат на навчання",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-vytrat-na-navchannia.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-sotsialnoi-pidtrymky",
+    "type": "measure",
+    "name": "GP.Середній розмір соціальної підтримки",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-sotsialnoi-pidtrymky.md"
+  },
+  {
+    "id": "gp-navigationbutton2",
+    "type": "measure",
+    "name": "GP.NavigationButton2",
+    "displayFolder": "Navigation\\Group",
+    "file": "measures/gp-navigationbutton2.md"
+  },
+  {
+    "id": "ac-pib-pratsivnyka",
+    "type": "measure",
+    "name": "AC.ПІБ працівника",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-pib-pratsivnyka.md"
+  },
+  {
+    "id": "ac-plynnist",
+    "type": "measure",
+    "name": "AC.Плинність (%)",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-plynnist.md"
+  },
+  {
+    "id": "ac-chy-ie-ryzyk-vyhorannia-po-plynnosti",
+    "type": "measure",
+    "name": "AC.Чи є ризик вигорання по плинності?",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-chy-ie-ryzyk-vyhorannia-po-plynnosti.md"
+  },
+  {
+    "id": "ac-trend-otsinky-rezultatyvnosti",
+    "type": "measure",
+    "name": "AC.Тренд оцінки результативності",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-trend-otsinky-rezultatyvnosti.md"
+  },
+  {
+    "id": "ac-znachennia-ostannoho-roku-otsinky-rezultatyvnosti",
+    "type": "measure",
+    "name": "AC.Значення останнього року оцінки результативності",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-znachennia-ostannoho-roku-otsinky-rezultatyvnosti.md"
+  },
+  {
+    "id": "ac-znachennia-peredostannii-roku-otsinky-rezultatyvnosti",
+    "type": "measure",
+    "name": "AC.Значення передостанній  року оцінки результативності",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-znachennia-peredostannii-roku-otsinky-rezultatyvnosti.md"
+  },
+  {
+    "id": "ac-chy-ie-ryzyk-vyhorannia-po-rezultatam-otsinky-rezultatyvnosti",
+    "type": "measure",
+    "name": "AC.Чи є ризик вигорання по результатам оцінки результативності?",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-chy-ie-ryzyk-vyhorannia-po-rezultatam-otsinky-rezultatyvnosti.md"
+  },
+  {
+    "id": "ac-trend-otsinky-okr",
+    "type": "measure",
+    "name": "AC.Тренд оцінки OKR",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-trend-otsinky-okr.md"
+  },
+  {
+    "id": "ac-znachennia-koefitsiienta-indyvidualnoho-bonusu-za-ostannii-period",
+    "type": "measure",
+    "name": "AC.Значення коефіцієнта індивідуального бонусу за останній період",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-znachennia-koefitsiienta-indyvidualnoho-bonusu-za-ostannii-period.md"
+  },
+  {
+    "id": "ac-znachennia-koefitsiienta-indyvidualnoho-bonusu-za-peredostannii-period",
+    "type": "measure",
+    "name": "AC.Значення коефіцієнта індивідуального бонусу за передостанній період",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-znachennia-koefitsiienta-indyvidualnoho-bonusu-za-peredostannii-period.md"
+  },
+  {
+    "id": "ac-znachennia-ostannoho-roku-otsinky-okr",
+    "type": "measure",
+    "name": "AC.Значення останнього року оцінки ОКР",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-znachennia-ostannoho-roku-otsinky-okr.md"
+  },
+  {
+    "id": "ac-znachennia-peredostannoho-roku-otsinky-okr",
+    "type": "measure",
+    "name": "AC.Значення передостаннього  року оцінки ОКР",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-znachennia-peredostannoho-roku-otsinky-okr.md"
+  },
+  {
+    "id": "ac-chy-ie-ryzyk-vyhorannia-po-rezultatam-otsinky-okr",
+    "type": "measure",
+    "name": "AC.Чи є ризик вигорання по результатам оцінки OKR?",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-chy-ie-ryzyk-vyhorannia-po-rezultatam-otsinky-okr.md"
+  },
+  {
+    "id": "ac-zarplata-vylky",
+    "type": "measure",
+    "name": "AC.Зарплата (вилки)",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-zarplata-vylky.md"
+  },
+  {
+    "id": "ac-chy-ie-ryzyk-vyhorannia-cherez-riven-oplaty-pratsi",
+    "type": "measure",
+    "name": "AC.Чи є ризик вигорання через рівень оплати праці?",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-chy-ie-ryzyk-vyhorannia-cherez-riven-oplaty-pratsi.md"
+  },
+  {
+    "id": "ac-kilkist-misiatsiv-bez-iakisnoi-vidpustky",
+    "type": "measure",
+    "name": "AC.Кількість місяців без якісної відпустки",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-kilkist-misiatsiv-bez-iakisnoi-vidpustky.md"
+  },
+  {
+    "id": "ac-chy-ie-ryzyk-vyhorannia-cherez-vidsutnist-vidpustok",
+    "type": "measure",
+    "name": "AC.Чи є ризик вигорання через відсутність відпусток?",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-chy-ie-ryzyk-vyhorannia-cherez-vidsutnist-vidpustok.md"
+  },
+  {
+    "id": "ac-perepratsiuvannia-viva",
+    "type": "measure",
+    "name": "AC.Перепрацювання Viva",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-perepratsiuvannia-viva.md"
+  },
+  {
+    "id": "ac-chy-ie-ryzyk-vyhorannia-cherez-perepratsiuvannia",
+    "type": "measure",
+    "name": "AC.Чи є ризик вигорання через перепрацювання?",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-chy-ie-ryzyk-vyhorannia-cherez-perepratsiuvannia.md"
+  },
+  {
+    "id": "ac-ryzyk",
+    "type": "measure",
+    "name": "AC.Ризик",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-ryzyk.md"
+  },
+  {
+    "id": "ac-katehoriia-otsinky-spvrobitnyka-za-ostannii-period-rik",
+    "type": "measure",
+    "name": "AC.Категорія оцінки спвробітника за останній період (рік)",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-katehoriia-otsinky-spvrobitnyka-za-ostannii-period-rik.md"
+  },
+  {
+    "id": "ac-burnout-risk-zastosuvaty-vybir",
+    "type": "measure",
+    "name": "AC.Burnout_risk.Застосувати вибір",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-burnout-risk-zastosuvaty-vybir.md"
+  },
+  {
+    "id": "ac-filter",
+    "type": "measure",
+    "name": "AC.Filter",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-filter.md"
+  },
+  {
+    "id": "ac-burnout-tooltip",
+    "type": "measure",
+    "name": "AC.Burnout.Tooltip",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-burnout-tooltip.md"
+  },
+  {
+    "id": "ac-switch-plynnist",
+    "type": "measure",
+    "name": "AC.Switch.Плинність (%)",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-switch-plynnist.md"
+  },
+  {
+    "id": "ac-switch-trend-otsinky-rezultatyvnosti",
+    "type": "measure",
+    "name": "AC.Switch.Тренд оцінки результативності",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-switch-trend-otsinky-rezultatyvnosti.md"
+  },
+  {
+    "id": "ac-switch-trend-otsinky-okr",
+    "type": "measure",
+    "name": "AC.Switch.Тренд оцінки OKR",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-switch-trend-otsinky-okr.md"
+  },
+  {
+    "id": "ac-switch-zarplata-vylky",
+    "type": "measure",
+    "name": "AC.Switch.Зарплата (вилки)",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-switch-zarplata-vylky.md"
+  },
+  {
+    "id": "ac-switch-kilkist-misiatsiv-bez-iakisnoi-vidpustky-za-ost-3-roky",
+    "type": "measure",
+    "name": "AC.Switch.Кількість місяців без якісної відпустки за ост. 3 роки",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-switch-kilkist-misiatsiv-bez-iakisnoi-vidpustky-za-ost-3-roky.md"
+  },
+  {
+    "id": "ac-switch-perepratsiuvannia-viva",
+    "type": "measure",
+    "name": "AC.Switch.Перепрацювання Viva",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-switch-perepratsiuvannia-viva.md"
+  },
+  {
+    "id": "ac-chy-ie-ryzyk",
+    "type": "measure",
+    "name": "AC.Чи є ризик?",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-chy-ie-ryzyk.md"
+  },
+  {
+    "id": "ac-serednia-kilkist-dniv-vykorystanoi-vidpustky",
+    "type": "measure",
+    "name": "AC.Середня кількість днів використаної відпустки",
+    "displayFolder": "Group_Profile\\Здоров'я та благополуччя",
+    "file": "measures/ac-serednia-kilkist-dniv-vykorystanoi-vidpustky.md"
+  },
+  {
+    "id": "ac-serednia-kilkist-dniv-nevykorystanoi-vidpustky",
+    "type": "measure",
+    "name": "AC.Середня кількість днів невикористаної відпустки",
+    "displayFolder": "Group_Profile\\Здоров'я та благополуччя",
+    "file": "measures/ac-serednia-kilkist-dniv-nevykorystanoi-vidpustky.md"
+  },
+  {
+    "id": "ac-serednia-tryvalist-vidpustky-spivrobitnyka-dniv",
+    "type": "measure",
+    "name": "AC.Середня тривалість відпустки співробітника, днів",
+    "displayFolder": "Group_Profile\\Здоров'я та благополуччя",
+    "file": "measures/ac-serednia-tryvalist-vidpustky-spivrobitnyka-dniv.md"
+  },
+  {
+    "id": "ac-lider-za-nevykorystanymy-dniamy-vidpustky",
+    "type": "measure",
+    "name": "AC.Лідер за невикористаними днями відпустки",
+    "displayFolder": "Group_Profile\\Здоров'я та благополуччя",
+    "file": "measures/ac-lider-za-nevykorystanymy-dniamy-vidpustky.md"
+  },
+  {
+    "id": "ac-lider-za-chasom-bez-vidpustky",
+    "type": "measure",
+    "name": "AC.Лідер за часом без відпустки",
+    "displayFolder": "Group_Profile\\Здоров'я та благополуччя",
+    "file": "measures/ac-lider-za-chasom-bez-vidpustky.md"
+  },
+  {
+    "id": "ac-dolia-spivrobitnykiv-z-vidpustkamy-ponad-10-dniv",
+    "type": "measure",
+    "name": "AC.Доля співробітників з відпустками понад 10 днів",
+    "displayFolder": "Group_Profile\\Здоров'я та благополуччя",
+    "file": "measures/ac-dolia-spivrobitnykiv-z-vidpustkamy-ponad-10-dniv.md"
+  },
+  {
+    "id": "ac-vidsotok-dniv-vidpustky-v-robochi-dni",
+    "type": "measure",
+    "name": "AC.Відсоток днів відпустки в робочі дні",
+    "displayFolder": "Group_Profile\\Здоров'я та благополуччя",
+    "file": "measures/ac-vidsotok-dniv-vidpustky-v-robochi-dni.md"
+  },
+  {
+    "id": "5ac-koefitsiient-absenteizmu",
+    "type": "measure",
+    "name": "5AC.Коефіцієнт абсентеїзму",
+    "displayFolder": "Group_Profile\\Здоров'я та благополуччя",
+    "file": "measures/5ac-koefitsiient-absenteizmu.md"
+  },
+  {
+    "id": "ac-serednia-kilkist-likarnianykh-na-spivrobitnyka",
+    "type": "measure",
+    "name": "AC.Середня кількість лікарняних на співробітника",
+    "displayFolder": "Group_Profile\\Здоров'я та благополуччя",
+    "file": "measures/ac-serednia-kilkist-likarnianykh-na-spivrobitnyka.md"
+  },
+  {
+    "id": "ac-serednia-tryvalist-likarnianoho-na-spivrobitnyka",
+    "type": "measure",
+    "name": "AC.Середня тривалість лікарняного на співробітника",
+    "displayFolder": "Group_Profile\\Здоров'я та благополуччя",
+    "file": "measures/ac-serednia-tryvalist-likarnianoho-na-spivrobitnyka.md"
+  },
+  {
+    "id": "ac-intsydenty-z-travmatyzmom",
+    "type": "measure",
+    "name": "AC.Інциденти з травматизмом",
+    "displayFolder": "Group_Profile\\Здоров'я та благополуччя",
+    "file": "measures/ac-intsydenty-z-travmatyzmom.md"
+  },
+  {
+    "id": "test-measure",
+    "type": "measure",
+    "name": "test_measure",
+    "displayFolder": "_Technical",
+    "file": "measures/test-measure.md"
+  },
+  {
+    "id": "pp-umovy-pryiomu",
+    "type": "measure",
+    "name": "PP.Умови прийому",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-umovy-pryiomu.md"
+  },
+  {
+    "id": "gp-rozmir-merezhi-kontaktiv-pidrozdil",
+    "type": "measure",
+    "name": "GP.Розмір мережі контактів, підрозділ",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-rozmir-merezhi-kontaktiv-pidrozdil.md"
+  },
+  {
+    "id": "gp-rozmir-merezhi-kontaktiv-napriam",
+    "type": "measure",
+    "name": "GP.Розмір мережі контактів, напрям",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-rozmir-merezhi-kontaktiv-napriam.md"
+  },
+  {
+    "id": "gp-rozmir-merezhi-kontaktiv-kholdynh",
+    "type": "measure",
+    "name": "GP.Розмір мережі контактів, холдинг",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-rozmir-merezhi-kontaktiv-kholdynh.md"
+  },
+  {
+    "id": "gp-shyryna-merezhi-kontaktiv-pidrozdil",
+    "type": "measure",
+    "name": "GP.Ширина мережі контактів, підрозділ",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-shyryna-merezhi-kontaktiv-pidrozdil.md"
+  },
+  {
+    "id": "gp-shyryna-merezhi-kontaktiv-napriam",
+    "type": "measure",
+    "name": "GP.Ширина мережі контактів, напрям",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-shyryna-merezhi-kontaktiv-napriam.md"
+  },
+  {
+    "id": "gp-shyryna-merezhi-kontaktiv-kholdynh",
+    "type": "measure",
+    "name": "GP.Ширина мережі контактів, холдинг",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-shyryna-merezhi-kontaktiv-kholdynh.md"
+  },
+  {
+    "id": "gp-hodyny-zahalnoi-vzaiemodii-pidrozdil",
+    "type": "measure",
+    "name": "GP.Години загальної взаємодії, підрозділ",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-zahalnoi-vzaiemodii-pidrozdil.md"
+  },
+  {
+    "id": "gp-hodyny-zahalnoi-vzaiemodii-napriam",
+    "type": "measure",
+    "name": "GP.Години загальної взаємодії, напрям",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-zahalnoi-vzaiemodii-napriam.md"
+  },
+  {
+    "id": "gp-hodyny-zahalnoi-vzaiemodii-kholdynh",
+    "type": "measure",
+    "name": "GP.Години загальної взаємодії, холдинг",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-zahalnoi-vzaiemodii-kholdynh.md"
+  },
+  {
+    "id": "gp-dovzhyna-robochoho-dnia-pidrozdil",
+    "type": "measure",
+    "name": "GP.Довжина робочого дня, підрозділ",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-dovzhyna-robochoho-dnia-pidrozdil.md"
+  },
+  {
+    "id": "gp-dovzhyna-robochoho-dnia-napriam",
+    "type": "measure",
+    "name": "GP.Довжина робочого дня, напрям",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-dovzhyna-robochoho-dnia-napriam.md"
+  },
+  {
+    "id": "gp-dovzhyna-robochoho-dnia-kholdynh",
+    "type": "measure",
+    "name": "GP.Довжина робочого дня, холдинг",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-dovzhyna-robochoho-dnia-kholdynh.md"
+  },
+  {
+    "id": "gp-hodyny-vzaiemodii-u-nerobochyi-chas-pidrozdil",
+    "type": "measure",
+    "name": "GP.Години взаємодії у неробочий час, підрозділ",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-vzaiemodii-u-nerobochyi-chas-pidrozdil.md"
+  },
+  {
+    "id": "gp-hodyny-vzaiemodii-u-nerobochyi-chas-napriam",
+    "type": "measure",
+    "name": "GP.Години взаємодії у неробочий час, напрям",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-vzaiemodii-u-nerobochyi-chas-napriam.md"
+  },
+  {
+    "id": "gp-hodyny-vzaiemodii-u-nerobochyi-chas-kholdynh",
+    "type": "measure",
+    "name": "GP.Години взаємодії у неробочий час, холдинг",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-vzaiemodii-u-nerobochyi-chas-kholdynh.md"
+  },
+  {
+    "id": "gp-hodyny-fokusnoi-roboty-pidrozdil",
+    "type": "measure",
+    "name": "GP.Години фокусної роботи, підрозділ",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-fokusnoi-roboty-pidrozdil.md"
+  },
+  {
+    "id": "gp-hodyny-fokusnoi-roboty-napriam",
+    "type": "measure",
+    "name": "GP.Години фокусної роботи, напрям",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-fokusnoi-roboty-napriam.md"
+  },
+  {
+    "id": "gp-hodyny-fokusnoi-roboty-kholdynh",
+    "type": "measure",
+    "name": "GP.Години фокусної роботи, холдинг",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-fokusnoi-roboty-kholdynh.md"
+  },
+  {
+    "id": "gp-hodyny-narad-pidrozdil",
+    "type": "measure",
+    "name": "GP.Години нарад, підрозділ",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-narad-pidrozdil.md"
+  },
+  {
+    "id": "gp-hodyny-narad-napriam",
+    "type": "measure",
+    "name": "GP.Години нарад, напрям",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-narad-napriam.md"
+  },
+  {
+    "id": "gp-hodyny-narad-kholdynh",
+    "type": "measure",
+    "name": "GP.Години нарад, холдинг",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-narad-kholdynh.md"
+  },
+  {
+    "id": "gp-chastka-conflicting-meeting-hours-pidrozdil",
+    "type": "measure",
+    "name": "GP.Частка conflicting meeting hours, підрозділ",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-chastka-conflicting-meeting-hours-pidrozdil.md"
+  },
+  {
+    "id": "gp-chastka-conflicting-meeting-hours-napriam",
+    "type": "measure",
+    "name": "GP.Частка conflicting meeting hours, напрям",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-chastka-conflicting-meeting-hours-napriam.md"
+  },
+  {
+    "id": "gp-chastka-conflicting-meeting-hours-kholdynh",
+    "type": "measure",
+    "name": "GP.Частка conflicting meeting hours, холдинг",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-chastka-conflicting-meeting-hours-kholdynh.md"
+  },
+  {
+    "id": "gp-hodyny-1-1-z-kerivnykom-pidrozdil",
+    "type": "measure",
+    "name": "GP.Години 1:1 з керівником, підрозділ",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-1-1-z-kerivnykom-pidrozdil.md"
+  },
+  {
+    "id": "gp-hodyny-1-1-z-kerivnykom-napriam",
+    "type": "measure",
+    "name": "GP.Години 1:1 з керівником, напрям",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-1-1-z-kerivnykom-napriam.md"
+  },
+  {
+    "id": "gp-hodyny-1-1-z-kerivnykom-kholdynh",
+    "type": "measure",
+    "name": "GP.Години 1:1 з керівником, холдинг",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-1-1-z-kerivnykom-kholdynh.md"
+  },
+  {
+    "id": "gp-hodyny-vzaiemodii-z-kerivnykom-pidrozdil",
+    "type": "measure",
+    "name": "GP.Години взаємодії з керівником, підрозділ",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-vzaiemodii-z-kerivnykom-pidrozdil.md"
+  },
+  {
+    "id": "gp-hodyny-vzaiemodii-z-kerivnykom-napriam",
+    "type": "measure",
+    "name": "GP.Години взаємодії з керівником, напрям",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-vzaiemodii-z-kerivnykom-napriam.md"
+  },
+  {
+    "id": "gp-hodyny-vzaiemodii-z-kerivnykom-kholdynh",
+    "type": "measure",
+    "name": "GP.Години взаємодії з керівником, холдинг",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-vzaiemodii-z-kerivnykom-kholdynh.md"
+  },
+  {
+    "id": "gp-hodyny-kerivnyka-dlia-vzaiemodii-z-pidlehlymy-pidrozdil",
+    "type": "measure",
+    "name": "GP.Години керівника для взаємодії з підлеглими, підрозділ",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-kerivnyka-dlia-vzaiemodii-z-pidlehlymy-pidrozdil.md"
+  },
+  {
+    "id": "gp-hodyny-kerivnyka-dlia-vzaiemodii-z-pidlehlymy-napriam",
+    "type": "measure",
+    "name": "GP.Години керівника для взаємодії з підлеглими, напрям",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-kerivnyka-dlia-vzaiemodii-z-pidlehlymy-napriam.md"
+  },
+  {
+    "id": "gp-hodyny-kerivnyka-dlia-vzaiemodii-z-pidlehlymy-kholdynh",
+    "type": "measure",
+    "name": "GP.Години керівника для взаємодії з підлеглими, холдинг",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-hodyny-kerivnyka-dlia-vzaiemodii-z-pidlehlymy-kholdynh.md"
+  },
+  {
+    "id": "gp-mentorstvo-studentiv",
+    "type": "measure",
+    "name": "GP.Менторство студентів",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-mentorstvo-studentiv.md"
+  },
+  {
+    "id": "gp-nastavnytstvo",
+    "type": "measure",
+    "name": "GP.Наставництво",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-nastavnytstvo.md"
+  },
+  {
+    "id": "gp-trener-ekspert",
+    "type": "measure",
+    "name": "GP.Тренер-експерт",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-trener-ekspert.md"
+  },
+  {
+    "id": "gp-uchast-u-banku-idei",
+    "type": "measure",
+    "name": "GP.Участь у Банку ідей",
+    "displayFolder": "Group_Profile\\Viva_Insights",
+    "file": "measures/gp-uchast-u-banku-idei.md"
+  },
+  {
+    "id": "pp-otsinka-rezultatyvnosti-potochnyi-rik",
+    "type": "measure",
+    "name": "PP.Оцінка результативності поточний рік",
+    "displayFolder": "Personal_Profile\\Паспорт\\Результативність",
+    "file": "measures/pp-otsinka-rezultatyvnosti-potochnyi-rik.md"
+  },
+  {
+    "id": "pp-otsinka-rezultatyvnosti-poperednii-rik",
+    "type": "measure",
+    "name": "PP.Оцінка результативності попередній рік",
+    "displayFolder": "Personal_Profile\\Паспорт\\Результативність",
+    "file": "measures/pp-otsinka-rezultatyvnosti-poperednii-rik.md"
+  },
+  {
+    "id": "pp-rik-otsinky-rezultatyvnosti-last",
+    "type": "measure",
+    "name": "PP.Рік оцінки результативності.Last",
+    "displayFolder": "Personal_Profile\\Паспорт\\Результативність",
+    "file": "measures/pp-rik-otsinky-rezultatyvnosti-last.md"
+  },
+  {
+    "id": "pp-rik-otsinky-rezultatyvnosti-prev",
+    "type": "measure",
+    "name": "PP.Рік оцінки результативності.Prev",
+    "displayFolder": "Personal_Profile\\Паспорт\\Результативність",
+    "file": "measures/pp-rik-otsinky-rezultatyvnosti-prev.md"
+  },
+  {
+    "id": "pp-svg-perfomance-prev-year",
+    "type": "measure",
+    "name": "PP.SVG.Perfomance_Prev_Year",
+    "displayFolder": "Personal_Profile\\Паспорт\\Результативність",
+    "file": "measures/pp-svg-perfomance-prev-year.md"
+  },
+  {
+    "id": "pp-stazh-v-kholdynhu-perervnyi",
+    "type": "measure",
+    "name": "PP.Стаж в холдингу (перервний)",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-stazh-v-kholdynhu-perervnyi.md"
+  },
+  {
+    "id": "pp-data-pryiomu-v-kholdynh-perervnyi",
+    "type": "measure",
+    "name": "PP.Дата прийому в холдинг (перервний)",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-data-pryiomu-v-kholdynh-perervnyi.md"
+  },
+  {
+    "id": "pp-stazh-v-orhanizatsii-ostannii",
+    "type": "measure",
+    "name": "PP.Стаж в організації (останній)",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-stazh-v-orhanizatsii-ostannii.md"
+  },
+  {
+    "id": "pp-data-pryiomu-v-orhanizatsiiu-ostannii",
+    "type": "measure",
+    "name": "PP.Дата прийому в організацію (останній)",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-data-pryiomu-v-orhanizatsiiu-ostannii.md"
+  },
+  {
+    "id": "pp-stazh-na-posadi-ostannii",
+    "type": "measure",
+    "name": "PP.Стаж на посаді (останній)",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-stazh-na-posadi-ostannii.md"
+  },
+  {
+    "id": "pp-data-pryiomu-na-posadu-ostannii",
+    "type": "measure",
+    "name": "PP.Дата прийому на посаду (останній)",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-data-pryiomu-na-posadu-ostannii.md"
+  },
+  {
+    "id": "pp-stazh-v-komandi-ostannii",
+    "type": "measure",
+    "name": "PP.Стаж в команді (останній)",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-stazh-v-komandi-ostannii.md"
+  },
+  {
+    "id": "pp-data-pryiomu-v-komandu-ostannii",
+    "type": "measure",
+    "name": "PP.Дата прийому в команду (останній)",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-data-pryiomu-v-komandu-ostannii.md"
+  },
+  {
+    "id": "pp-stazh-v-kholdynhu-neperervnyi",
+    "type": "measure",
+    "name": "PP.Стаж в холдингу (неперервний)",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-stazh-v-kholdynhu-neperervnyi.md"
+  },
+  {
+    "id": "pp-data-pryiomu-v-kholdynh-neperervnyi",
+    "type": "measure",
+    "name": "PP.Дата прийому в холдинг (неперервний)",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-data-pryiomu-v-kholdynh-neperervnyi.md"
+  },
+  {
+    "id": "pp-otsinka-rezultatyvnosti-potochnyi-rik-pusto",
+    "type": "measure",
+    "name": "PP.Оцінка результативності поточний рік (пусто)",
+    "displayFolder": "Personal_Profile\\Паспорт\\Результативність",
+    "file": "measures/pp-otsinka-rezultatyvnosti-potochnyi-rik-pusto.md"
+  },
+  {
+    "id": "pp-otsinka-rezultatyvnosti-poperednii-rik-pusto",
+    "type": "measure",
+    "name": "PP.Оцінка результативності попередній рік (пусто)",
+    "displayFolder": "Personal_Profile\\Паспорт\\Результативність",
+    "file": "measures/pp-otsinka-rezultatyvnosti-poperednii-rik-pusto.md"
+  },
+  {
+    "id": "ac-vzaiemodiia-z-kerivnykom",
+    "type": "measure",
+    "name": "AC.Взаємодія з керівником",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-vzaiemodiia-z-kerivnykom.md"
+  },
+  {
+    "id": "ac-chy-ie-ryzyk-vyhorannia-cherez-vidsutnist-spilkuvannia-z-kerivnykom",
+    "type": "measure",
+    "name": "AC.Чи є ризик вигорання через відсутність спілкування з керівником?",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-chy-ie-ryzyk-vyhorannia-cherez-vidsutnist-spilkuvannia-z-kerivnykom.md"
+  },
+  {
+    "id": "gp-svg-otsinka-rezultatyvnosti-komandy",
+    "type": "measure",
+    "name": "GP.SVG.Оцінка результативності команди",
+    "displayFolder": "Group_Profile\\_Main\\SVG",
+    "file": "measures/gp-svg-otsinka-rezultatyvnosti-komandy.md"
+  },
+  {
+    "id": "gp-rik-otsinky-rezultatyvnosti-prev",
+    "type": "measure",
+    "name": "GP.Рік оцінки результативності.Prev",
+    "displayFolder": "Group_Profile\\_Main\\SVG",
+    "file": "measures/gp-rik-otsinky-rezultatyvnosti-prev.md"
+  },
+  {
+    "id": "gp-rik-otsinky-rezultatyvnosti-last",
+    "type": "measure",
+    "name": "GP.Рік оцінки результативності.Last",
+    "displayFolder": "Group_Profile\\_Main\\SVG",
+    "file": "measures/gp-rik-otsinky-rezultatyvnosti-last.md"
+  },
+  {
+    "id": "gp-otsinka-rezultatyvnosti-potochnyi-rik",
+    "type": "measure",
+    "name": "GP.Оцінка результативності поточний рік",
+    "displayFolder": "Group_Profile\\_Main\\SVG",
+    "file": "measures/gp-otsinka-rezultatyvnosti-potochnyi-rik.md"
+  },
+  {
+    "id": "gp-otsinka-rezultatyvnosti-pusto",
+    "type": "measure",
+    "name": "GP.Оцінка результативності пусто",
+    "displayFolder": "Group_Profile\\_Main\\SVG",
+    "file": "measures/gp-otsinka-rezultatyvnosti-pusto.md"
+  },
+  {
+    "id": "gp-otsinka-rezultatyvnosti-poperednii-rik",
+    "type": "measure",
+    "name": "GP.Оцінка результативності попередній рік",
+    "displayFolder": "Group_Profile\\_Main\\SVG",
+    "file": "measures/gp-otsinka-rezultatyvnosti-poperednii-rik.md"
+  },
+  {
+    "id": "gp-okr-poperednii-rik",
+    "type": "measure",
+    "name": "GP.OKR  попередній рік",
+    "displayFolder": "Group_Profile\\_Main\\SVG",
+    "file": "measures/gp-okr-poperednii-rik.md"
+  },
+  {
+    "id": "gp-okr-pusto",
+    "type": "measure",
+    "name": "GP.OKR пусто",
+    "displayFolder": "Group_Profile\\_Main\\SVG",
+    "file": "measures/gp-okr-pusto.md"
+  },
+  {
+    "id": "gp-okr-potochnyi-rik",
+    "type": "measure",
+    "name": "GP.OKR  поточний рік",
+    "displayFolder": "Group_Profile\\_Main\\SVG",
+    "file": "measures/gp-okr-potochnyi-rik.md"
+  },
+  {
+    "id": "ac-switch-ryzyk",
+    "type": "measure",
+    "name": "AC.Switch.Ризик",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-switch-ryzyk.md"
+  },
+  {
+    "id": "current-user",
+    "type": "measure",
+    "name": "Current_user",
+    "displayFolder": "USER",
+    "file": "measures/current-user.md"
+  },
+  {
+    "id": "ac-burnout-risk-c-rows",
+    "type": "measure",
+    "name": "AC.Burnout_Risk.c_rows",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-burnout-risk-c-rows.md"
+  },
+  {
+    "id": "gp-kilkist-cholovikiv-pid-ryzykom-mobilizatsii",
+    "type": "measure",
+    "name": "GP.Кількість чоловіків під ризиком мобілізації(%)",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-kilkist-cholovikiv-pid-ryzykom-mobilizatsii.md"
+  },
+  {
+    "id": "gp-kilkist-cholovikiv-bez-ryzyku-mobilizatsii",
+    "type": "measure",
+    "name": "GP.Кількість чоловіків БЕЗ ризику мобілізації(%)",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/gp-kilkist-cholovikiv-bez-ryzyku-mobilizatsii.md"
+  },
+  {
+    "id": "ac-switch-hodyn-1-1-v-ser-za-3-mis",
+    "type": "measure",
+    "name": "AC.Switch.Годин 1:1 в сер. за 3 міс.",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-switch-hodyn-1-1-v-ser-za-3-mis.md"
+  },
+  {
+    "id": "ac-switch-hodyn-1-1-v-ser-za-3-mis2",
+    "type": "measure",
+    "name": "AC.Switch.Годин 1:1 в сер. за 3 міс2",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-switch-hodyn-1-1-v-ser-za-3-mis2.md"
+  },
+  {
+    "id": "ac-nav-my-lead-team",
+    "type": "measure",
+    "name": "AC.Nav.My_lead_team",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-nav-my-lead-team.md"
+  },
+  {
+    "id": "pp-nav-panel-filtriv",
+    "type": "measure",
+    "name": "PP.Nav.Панель фільтрів",
+    "displayFolder": "Navigation\\Personal",
+    "file": "measures/pp-nav-panel-filtriv.md"
+  },
+  {
+    "id": "gp-nav-panel-filtriv",
+    "type": "measure",
+    "name": "GP.Nav.Панель фільтрів",
+    "displayFolder": "Navigation\\Group",
+    "file": "measures/gp-nav-panel-filtriv.md"
+  },
+  {
+    "id": "ac-burnout-risk-panel-filtriv-pratsiuiuchi",
+    "type": "measure",
+    "name": "AC.Burnout_risk.Панель фільтрів.Працюючі",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-burnout-risk-panel-filtriv-pratsiuiuchi.md"
+  },
+  {
+    "id": "ac-burnout-risk-panel-filtriv-zvilneni",
+    "type": "measure",
+    "name": "AC.Burnout_Risk.Панель фільтрів.Звільнені",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+    "file": "measures/ac-burnout-risk-panel-filtriv-zvilneni.md"
+  },
+  {
+    "id": "pp-otsinka-rezultatyvnosti-kerivnykom",
+    "type": "measure",
+    "name": "PP.Оцінка результативності.Керівником",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\Результативність",
+    "file": "measures/pp-otsinka-rezultatyvnosti-kerivnykom.md"
+  },
+  {
+    "id": "pp-otsinka-rezultatyvnosti-samootsinka",
+    "type": "measure",
+    "name": "PP.Оцінка результативності.Самооцінка",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\Результативність",
+    "file": "measures/pp-otsinka-rezultatyvnosti-samootsinka.md"
+  },
+  {
+    "id": "pp-svg-otsinka-rezultatyvnosti",
+    "type": "measure",
+    "name": "PP.SVG.Оцінка результативності",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\Результативність",
+    "file": "measures/pp-svg-otsinka-rezultatyvnosti.md"
+  },
+  {
+    "id": "pp-otsinka-rezultatyvnosti",
+    "type": "measure",
+    "name": "PP.Оцінка результативності",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\Результативність",
+    "file": "measures/pp-otsinka-rezultatyvnosti.md"
+  },
+  {
+    "id": "pp-svg-performence-manager-color",
+    "type": "measure",
+    "name": "PP.SVG.Performence.Manager.Color",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\Результативність",
+    "file": "measures/pp-svg-performence-manager-color.md"
+  },
+  {
+    "id": "pp-svg-performence-self-color",
+    "type": "measure",
+    "name": "PP.SVG.Performence.Self.Color",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\Результативність",
+    "file": "measures/pp-svg-performence-self-color.md"
+  },
+  {
+    "id": "pp-otsinka-rezultatyvnosti-kerivnykom-total",
+    "type": "measure",
+    "name": "PP.Оцінка результативності.Керівником.Total",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\Результативність",
+    "file": "measures/pp-otsinka-rezultatyvnosti-kerivnykom-total.md"
+  },
+  {
+    "id": "pp-otsinka-rezultatyvnosti-samootsinka-total",
+    "type": "measure",
+    "name": "PP.Оцінка результативності.Самооцінка.Total",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\Результативність",
+    "file": "measures/pp-otsinka-rezultatyvnosti-samootsinka-total.md"
+  },
+  {
+    "id": "pp-svg-otsinka-rezultatyvnosti-total",
+    "type": "measure",
+    "name": "PP.SVG.Оцінка результативності.Total",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\Результативність",
+    "file": "measures/pp-svg-otsinka-rezultatyvnosti-total.md"
+  },
+  {
+    "id": "ac-br-stazh-na-posadi-ostannii",
+    "type": "measure",
+    "name": "AC.BR.Стаж на посаді (останній)",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+    "file": "measures/ac-br-stazh-na-posadi-ostannii.md"
+  },
+  {
+    "id": "ac-br-stazh-v-kholdynhu-neperervnyi",
+    "type": "measure",
+    "name": "AC.BR.Стаж в холдингу (неперервний)",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+    "file": "measures/ac-br-stazh-v-kholdynhu-neperervnyi.md"
+  },
+  {
+    "id": "ac-br-ryzyk-vtraty",
+    "type": "measure",
+    "name": "AC.BR.Ризик втрати",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+    "file": "measures/ac-br-ryzyk-vtraty.md"
+  },
+  {
+    "id": "ac-br-plynnist",
+    "type": "measure",
+    "name": "AC.BR.Плинність (%)",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+    "file": "measures/ac-br-plynnist.md"
+  },
+  {
+    "id": "ac-br-treshkhold-plynnist",
+    "type": "measure",
+    "name": "AC.BR.Трешхолд. Плинність (%)",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+    "file": "measures/ac-br-treshkhold-plynnist.md"
+  },
+  {
+    "id": "ac-br-kilkist-zvilnenykh",
+    "type": "measure",
+    "name": "AC.BR.Кількість звільнених",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+    "file": "measures/ac-br-kilkist-zvilnenykh.md"
+  },
+  {
+    "id": "ac-br-trend-otsinky-rezultatyvnosti-tor",
+    "type": "measure",
+    "name": "AC.BR.Тренд оцінки результативності (ТОР)",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+    "file": "measures/ac-br-trend-otsinky-rezultatyvnosti-tor.md"
+  },
+  {
+    "id": "ac-br-tor-ostannii-rik",
+    "type": "measure",
+    "name": "AC.BR.ТОР останній рік",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+    "file": "measures/ac-br-tor-ostannii-rik.md"
+  },
+  {
+    "id": "ac-br-tor-poperednii-rik",
+    "type": "measure",
+    "name": "AC.BR.ТОР попередній рік",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+    "file": "measures/ac-br-tor-poperednii-rik.md"
+  },
+  {
+    "id": "ac-br-okr",
+    "type": "measure",
+    "name": "AC.BR.OKR",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+    "file": "measures/ac-br-okr.md"
+  },
+  {
+    "id": "ac-br-okr-ostannii-rik",
+    "type": "measure",
+    "name": "AC.BR.OKR останній рік",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+    "file": "measures/ac-br-okr-ostannii-rik.md"
+  },
+  {
+    "id": "ac-br-okr-poperednii-rik",
+    "type": "measure",
+    "name": "AC.BR.OKR попередній рік",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+    "file": "measures/ac-br-okr-poperednii-rik.md"
+  },
+  {
+    "id": "ac-br-zarplata-vylka",
+    "type": "measure",
+    "name": "AC.BR.Зарплата вилка",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+    "file": "measures/ac-br-zarplata-vylka.md"
+  },
+  {
+    "id": "ac-br-kilkist-misiatsiv-bez-iakisnoi-vidpustky",
+    "type": "measure",
+    "name": "AC.BR.Кількість місяців без якісної відпустки",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+    "file": "measures/ac-br-kilkist-misiatsiv-bez-iakisnoi-vidpustky.md"
+  },
+  {
+    "id": "ac-br-referentne-znachennia-misiatsiv-bez-vidpustky",
+    "type": "measure",
+    "name": "AC.BR.Референтне значення.Місяців без відпустки",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+    "file": "measures/ac-br-referentne-znachennia-misiatsiv-bez-vidpustky.md"
+  },
+  {
+    "id": "ac-br-perepratsiuvannia-viva",
+    "type": "measure",
+    "name": "AC.BR.Перепрацювання Viva",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+    "file": "measures/ac-br-perepratsiuvannia-viva.md"
+  },
+  {
+    "id": "ac-br-referentne-znachennia-viva",
+    "type": "measure",
+    "name": "AC.BR.Референтне значення.Viva",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+    "file": "measures/ac-br-referentne-znachennia-viva.md"
+  },
+  {
+    "id": "ac-br-hodyn-vzaiemodii-z-kerivnykom",
+    "type": "measure",
+    "name": "AC.BR.Годин взаємодії з керівником",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+    "file": "measures/ac-br-hodyn-vzaiemodii-z-kerivnykom.md"
+  },
+  {
+    "id": "ac-br-referentne-znachennia-vzaiemodiia-z-kerivnykom",
+    "type": "measure",
+    "name": "AC.BR.Референтне значення.Взаємодія з керівником",
+    "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+    "file": "measures/ac-br-referentne-znachennia-vzaiemodiia-z-kerivnykom.md"
+  },
+  {
+    "id": "pp-otsinka-rezultatyvnosti-bazova",
+    "type": "measure",
+    "name": "PP.Оцінка результативності базова",
+    "displayFolder": "Personal_Profile\\Паспорт\\Spider",
+    "file": "measures/pp-otsinka-rezultatyvnosti-bazova.md"
+  },
+  {
+    "id": "pp-iakist-rezultatu-vykonanykh-zavdan",
+    "type": "measure",
+    "name": "PP.Якість результату виконаних завдань",
+    "displayFolder": "Personal_Profile\\Паспорт\\Spider",
+    "file": "measures/pp-iakist-rezultatu-vykonanykh-zavdan.md"
+  },
+  {
+    "id": "pp-vykonannia-zavdan-u-vstanovleni-terminy",
+    "type": "measure",
+    "name": "PP.Виконання завдань у встановлені терміни",
+    "displayFolder": "Personal_Profile\\Паспорт\\Spider",
+    "file": "measures/pp-vykonannia-zavdan-u-vstanovleni-terminy.md"
+  },
+  {
+    "id": "pp-avtonomnist-pry-vykonanni-zavdan",
+    "type": "measure",
+    "name": "PP.Автономність при виконанні завдань",
+    "displayFolder": "Personal_Profile\\Паспорт\\Spider",
+    "file": "measures/pp-avtonomnist-pry-vykonanni-zavdan.md"
+  },
+  {
+    "id": "pp-natsilenist-na-otrymannia-rezultatu",
+    "type": "measure",
+    "name": "PP.Націленість на отримання результату",
+    "displayFolder": "Personal_Profile\\Паспорт\\Spider",
+    "file": "measures/pp-natsilenist-na-otrymannia-rezultatu.md"
+  },
+  {
+    "id": "pp-vidpovidnist-kilkosti-vykonanykh-zavdan-funktsionalu",
+    "type": "measure",
+    "name": "PP.Відповідність кількості виконаних завдань функціоналу",
+    "displayFolder": "Personal_Profile\\Паспорт\\Spider",
+    "file": "measures/pp-vidpovidnist-kilkosti-vykonanykh-zavdan-funktsionalu.md"
+  },
+  {
+    "id": "pp-pryiniattia-vidpovidalnosti-za-otrymanyi-rezultat",
+    "type": "measure",
+    "name": "PP.Прийняття відповідальності за отриманий результат",
+    "displayFolder": "Personal_Profile\\Паспорт\\Spider",
+    "file": "measures/pp-pryiniattia-vidpovidalnosti-za-otrymanyi-rezultat.md"
+  },
+  {
+    "id": "pp-podolannia-pereshkod-pry-vyrishenni-problem",
+    "type": "measure",
+    "name": "PP.Подолання перешкод при вирішенні проблем",
+    "displayFolder": "Personal_Profile\\Паспорт\\Spider",
+    "file": "measures/pp-podolannia-pereshkod-pry-vyrishenni-problem.md"
+  },
+  {
+    "id": "pp-initsiatyvnist-pry-vykonanni-zavdan",
+    "type": "measure",
+    "name": "PP.Ініціативність при виконанні завдань",
+    "displayFolder": "Personal_Profile\\Паспорт\\Spider",
+    "file": "measures/pp-initsiatyvnist-pry-vykonanni-zavdan.md"
+  },
+  {
+    "id": "pp-serednia-otsinka-rezultatyvnosti-richna",
+    "type": "measure",
+    "name": "PP.Середня оцінка результативності річна",
+    "displayFolder": "Personal_Profile\\Паспорт\\Spider",
+    "file": "measures/pp-serednia-otsinka-rezultatyvnosti-richna.md"
+  },
+  {
+    "id": "gp-produktyvnist-kilkist-spivrobitnykiv-ostannii-period-otsinky",
+    "type": "measure",
+    "name": "GP.Продуктивність.Кількість співробітників (Останній період оцінки)",
+    "displayFolder": "Group_Profile\\_Main\\Продуктивність",
+    "file": "measures/gp-produktyvnist-kilkist-spivrobitnykiv-ostannii-period-otsinky.md"
+  },
+  {
+    "id": "gp-produktyvnist-serednia-otsinka-komandy-znachennia",
+    "type": "measure",
+    "name": "GP.Продуктивність.Середня оцінка команди.Значення",
+    "displayFolder": "Group_Profile\\_Main\\Продуктивність",
+    "file": "measures/gp-produktyvnist-serednia-otsinka-komandy-znachennia.md"
+  },
+  {
+    "id": "gp-idei-komandy-sht",
+    "type": "measure",
+    "name": "GP.Ідеї команди, шт",
+    "displayFolder": "Group_Profile\\_Main\\Індикатори здоров'я команди",
+    "file": "measures/gp-idei-komandy-sht.md"
+  },
+  {
+    "id": "gp-produktyvnist-vidpovidno-do-pohodzhenykh-metryk",
+    "type": "measure",
+    "name": "GP.Продуктивність відповідно до погоджених метрик",
+    "displayFolder": "Group_Profile\\_Main\\Індикатори здоров'я команди",
+    "file": "measures/gp-produktyvnist-vidpovidno-do-pohodzhenykh-metryk.md"
+  },
+  {
+    "id": "gp-serednia-otsinka-okr-komandy",
+    "type": "measure",
+    "name": "GP.Середня оцінка OKR команди",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-serednia-otsinka-okr-komandy.md"
+  },
+  {
+    "id": "gp-spivrobitnyky-iaki-rozumiiut-ta-demonstruiut-tsinnosti-kompanii",
+    "type": "measure",
+    "name": "GP.Співробітники, які розуміють та демонструють цінності компанії (%)",
+    "displayFolder": "Group_Profile\\_Main\\Індикатори здоров'я команди",
+    "file": "measures/gp-spivrobitnyky-iaki-rozumiiut-ta-demonstruiut-tsinnosti-kompanii.md"
+  },
+  {
+    "id": "gp-zakryttia-pozytsii-middle-vnutrishnimy-kandydatamy",
+    "type": "measure",
+    "name": "GP.Закриття позицій Middle внутрішніми кандидатами (%)",
+    "displayFolder": "Group_Profile\\_Main\\Індикатори здоров'я команди",
+    "file": "measures/gp-zakryttia-pozytsii-middle-vnutrishnimy-kandydatamy.md"
+  },
+  {
+    "id": "gp-zakryttia-pozytsii-senior-vnutrishnimy-kandydatamy",
+    "type": "measure",
+    "name": "GP.Закриття позицій Senior+ внутрішніми кандидатами (%)",
+    "displayFolder": "Group_Profile\\_Main\\Індикатори здоров'я команди",
+    "file": "measures/gp-zakryttia-pozytsii-senior-vnutrishnimy-kandydatamy.md"
+  },
+  {
+    "id": "gp-ryzyk-vtraty-pratsivnykiv",
+    "type": "measure",
+    "name": "GP.Ризик втрати працівників (%)",
+    "displayFolder": "Group_Profile\\_Main\\Ризики та фокуси уваги",
+    "file": "measures/gp-ryzyk-vtraty-pratsivnykiv.md"
+  },
+  {
+    "id": "gp-ryzyk-vtraty-produktyvnosti",
+    "type": "measure",
+    "name": "GP.Ризик втрати продуктивності (%)",
+    "displayFolder": "Group_Profile\\_Main\\Ризики та фокуси уваги",
+    "file": "measures/gp-ryzyk-vtraty-produktyvnosti.md"
+  },
+  {
+    "id": "gp-riven-vtraty-vysokorezultatyvnykh-pratsivnykiv",
+    "type": "measure",
+    "name": "GP.Рівень втрати високорезультативних працівників (%)",
+    "displayFolder": "Group_Profile\\_Main\\Ризики та фокуси уваги",
+    "file": "measures/gp-riven-vtraty-vysokorezultatyvnykh-pratsivnykiv.md"
+  },
+  {
+    "id": "gp-riven-neiakisnykh-vidpustok",
+    "type": "measure",
+    "name": "GP.Рівень неякісних відпусток (%)",
+    "displayFolder": "Group_Profile\\_Main\\Ризики та фокуси уваги",
+    "file": "measures/gp-riven-neiakisnykh-vidpustok.md"
+  },
+  {
+    "id": "gp-riven-coaching-1-1-hod-mis",
+    "type": "measure",
+    "name": "GP.Рівень coaching (1:1), год/міс",
+    "displayFolder": "Group_Profile\\_Main\\Ризики та фокуси уваги",
+    "file": "measures/gp-riven-coaching-1-1-hod-mis.md"
+  },
+  {
+    "id": "gp-riven-krytychnykh-rolei-bez-nastupnykiv",
+    "type": "measure",
+    "name": "GP.Рівень критичних ролей без наступників (%)",
+    "displayFolder": "Group_Profile\\_Main\\Ризики та фокуси уваги",
+    "file": "measures/gp-riven-krytychnykh-rolei-bez-nastupnykiv.md"
+  },
+  {
+    "id": "gp-riven-komplaiens-ryzyku",
+    "type": "measure",
+    "name": "GP.Рівень комплаєнс ризику (%)",
+    "displayFolder": "Group_Profile\\_Main\\Ризики та фокуси уваги",
+    "file": "measures/gp-riven-komplaiens-ryzyku.md"
+  },
+  {
+    "id": "gp-riven-ryzyku-sb",
+    "type": "measure",
+    "name": "GP.Рівень ризику СБ (%)",
+    "displayFolder": "Group_Profile\\_Main\\Ризики та фокуси уваги",
+    "file": "measures/gp-riven-ryzyku-sb.md"
+  },
+  {
+    "id": "gp-riven-smertelnykh-vyrobnychykh-intsydentiv-za-2025r-sht",
+    "type": "measure",
+    "name": "GP.Рівень смертельних виробничих інцидентів за 2025р., шт.",
+    "displayFolder": "Group_Profile\\_Main\\Ризики та фокуси уваги",
+    "file": "measures/gp-riven-smertelnykh-vyrobnychykh-intsydentiv-za-2025r-sht.md"
+  },
+  {
+    "id": "gp-riven-smertelnykh-ne-vyrobnychykh-intsydentiv-za-2025r-sht",
+    "type": "measure",
+    "name": "GP.Рівень смертельних не виробничих інцидентів за 2025р., шт.",
+    "displayFolder": "Group_Profile\\_Main\\Ризики та фокуси уваги",
+    "file": "measures/gp-riven-smertelnykh-ne-vyrobnychykh-intsydentiv-za-2025r-sht.md"
+  },
+  {
+    "id": "gp-okhoplennia-middle-senior-nastupnykamy",
+    "type": "measure",
+    "name": "GP.Охоплення Middle|Senior+ наступниками (%)",
+    "displayFolder": "Group_Profile\\_Main\\Індикатори здоров'я команди",
+    "file": "measures/gp-okhoplennia-middle-senior-nastupnykamy.md"
+  },
+  {
+    "id": "gp-ryzyk-mobilizatsii",
+    "type": "measure",
+    "name": "GP.Ризик мобілізації (%)",
+    "displayFolder": "Group_Profile\\_Main\\Ризики та фокуси уваги",
+    "file": "measures/gp-ryzyk-mobilizatsii.md"
+  },
+  {
+    "id": "gp-okr-kilkist-spivrobitnykiv-ostannii-period-otsinky",
+    "type": "measure",
+    "name": "GP.ОКР.Кількість співробітників (Останній період оцінки)",
+    "displayFolder": "Group_Profile\\_Main\\ОКР",
+    "file": "measures/gp-okr-kilkist-spivrobitnykiv-ostannii-period-otsinky.md"
+  },
+  {
+    "id": "gp-okr-svg-bar-chart",
+    "type": "measure",
+    "name": "GP.OKR.SVG.Bar chart",
+    "displayFolder": "Group_Profile\\_Main\\ОКР\\SVG",
+    "file": "measures/gp-okr-svg-bar-chart.md"
+  },
+  {
+    "id": "gp-produktyvnist-svg-bar-chart",
+    "type": "measure",
+    "name": "GP.Продуктивність.SVG.Bar chart",
+    "displayFolder": "Group_Profile\\_Main\\Продуктивність\\SVG",
+    "file": "measures/gp-produktyvnist-svg-bar-chart.md"
+  },
+  {
+    "id": "ac-export-plynnist-po-vertykali",
+    "type": "measure",
+    "name": "AC.Export.Плинність % по вертикалі",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Export",
+    "file": "measures/ac-export-plynnist-po-vertykali.md"
+  },
+  {
+    "id": "ac-export-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv",
+    "type": "measure",
+    "name": "AC.Export.Агрегований % непродуктинвих підлеглих для керівників",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Export",
+    "file": "measures/ac-export-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv.md"
+  },
+  {
+    "id": "ac-export-perepratsiuvannia-viva",
+    "type": "measure",
+    "name": "AC.Export.Перепрацювання (Viva)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Export",
+    "file": "measures/ac-export-perepratsiuvannia-viva.md"
+  },
+  {
+    "id": "ac-export-dolia-dniv-polovykh-robit",
+    "type": "measure",
+    "name": "AC.Export.Доля днів польових робіт (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Export",
+    "file": "measures/ac-export-dolia-dniv-polovykh-robit.md"
+  },
+  {
+    "id": "ac-export-1-1-v-ser-na-1-pidlehloho-hod",
+    "type": "measure",
+    "name": "AC.Export.1:1 в сер. на 1 підлеглого, год.",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Export",
+    "file": "measures/ac-export-1-1-v-ser-na-1-pidlehloho-hod.md"
+  },
+  {
+    "id": "ac-export-trend-otsinky-rez-ti",
+    "type": "measure",
+    "name": "AC.Export.Тренд Оцінки рез-ті (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Export",
+    "file": "measures/ac-export-trend-otsinky-rez-ti.md"
+  },
+  {
+    "id": "ac-export-trend-okr",
+    "type": "measure",
+    "name": "AC.Export.Тренд OKR (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Export",
+    "file": "measures/ac-export-trend-okr.md"
+  },
+  {
+    "id": "ac-export-trend-rezultatyvnosti-po-kpi",
+    "type": "measure",
+    "name": "AC.Export.Тренд Результативності по KPI (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Export",
+    "file": "measures/ac-export-trend-rezultatyvnosti-po-kpi.md"
+  },
+  {
+    "id": "ac-export-rezultatyvnist-po-kpi",
+    "type": "measure",
+    "name": "AC.Export.Результативність по KPI (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Export",
+    "file": "measures/ac-export-rezultatyvnist-po-kpi.md"
+  },
+  {
+    "id": "ac-export-dolia-vzaiemodii-viva-v-intervali",
+    "type": "measure",
+    "name": "AC.Export.Доля взаємодії (Viva) в інтервалі (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Export",
+    "file": "measures/ac-export-dolia-vzaiemodii-viva-v-intervali.md"
+  },
+  {
+    "id": "ac-export-interval-vzaiemodii-trend",
+    "type": "measure",
+    "name": "AC.Export.Інтервал взаємодії Тренд (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Export",
+    "file": "measures/ac-export-interval-vzaiemodii-trend.md"
+  },
+  {
+    "id": "ac-export-interval-vzaiemodii-viva-hod-v-den",
+    "type": "measure",
+    "name": "AC.Export.Інтервал взаємодії (Viva), год. в день",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Export",
+    "file": "measures/ac-export-interval-vzaiemodii-viva-hod-v-den.md"
+  },
+  {
+    "id": "ac-export-chystyi-chas-v-ofisi-trend",
+    "type": "measure",
+    "name": "AC.Export.Чистий час в офісі Тренд (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Export",
+    "file": "measures/ac-export-chystyi-chas-v-ofisi-trend.md"
+  },
+  {
+    "id": "ac-export-chystyi-chas-v-ofisi-hod",
+    "type": "measure",
+    "name": "AC.Export.Чистий час в офісі, год.",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Export",
+    "file": "measures/ac-export-chystyi-chas-v-ofisi-hod.md"
+  },
+  {
+    "id": "ac-export-ryzyk-vtraty-produktyvnosti",
+    "type": "measure",
+    "name": "AC.Export.Ризик втрати продуктивності",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Export",
+    "file": "measures/ac-export-ryzyk-vtraty-produktyvnosti.md"
+  },
+  {
+    "id": "ac-loss-productivity-c-rows",
+    "type": "measure",
+    "name": "AC.Loss_Productivity.c_rows",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Formatting",
+    "file": "measures/ac-loss-productivity-c-rows.md"
+  },
+  {
+    "id": "ac-loss-productivity-panel-filtriv",
+    "type": "measure",
+    "name": "AC.Loss_Productivity.Панель фільтрів",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Formatting",
+    "file": "measures/ac-loss-productivity-panel-filtriv.md"
+  },
+  {
+    "id": "ac-loss-productivity-zastosuvaty-vybir",
+    "type": "measure",
+    "name": "AC.Loss_Productivity.Застосувати вибір",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Formatting",
+    "file": "measures/ac-loss-productivity-zastosuvaty-vybir.md"
+  },
+  {
+    "id": "ac-lp-nav-my-lead-team",
+    "type": "measure",
+    "name": "AC.LP.Nav.My_lead_team",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Formatting",
+    "file": "measures/ac-lp-nav-my-lead-team.md"
+  },
+  {
+    "id": "ac-switch-plynnist-po-vertykali",
+    "type": "measure",
+    "name": "AC.Switch.Плинність % по вертикалі",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-switch-plynnist-po-vertykali.md"
+  },
+  {
+    "id": "ac-switch-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv",
+    "type": "measure",
+    "name": "AC.Switch.Агрегований % непродуктинвих підлеглих для керівників",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-switch-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv.md"
+  },
+  {
+    "id": "ac-switch-perepratsiuvannia-viva-2",
+    "type": "measure",
+    "name": "AC.Switch.Перепрацювання (Viva)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-switch-perepratsiuvannia-viva-2.md"
+  },
+  {
+    "id": "ac-switch-dolia-dniv-polovykh-robit",
+    "type": "measure",
+    "name": "AC.Switch.Доля днів польових робіт (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-switch-dolia-dniv-polovykh-robit.md"
+  },
+  {
+    "id": "ac-switch-1-1-v-ser-na-1-pidlehloho-hod",
+    "type": "measure",
+    "name": "AC.Switch.1:1 в сер. на 1 підлеглого, год.",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-switch-1-1-v-ser-na-1-pidlehloho-hod.md"
+  },
+  {
+    "id": "ac-switch-trend-otsinky-rez-ti",
+    "type": "measure",
+    "name": "AC.Switch.Тренд Оцінки рез-ті (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-switch-trend-otsinky-rez-ti.md"
+  },
+  {
+    "id": "ac-switch-trend-okr",
+    "type": "measure",
+    "name": "AC.Switch.Тренд OKR (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-switch-trend-okr.md"
+  },
+  {
+    "id": "ac-switch-trend-rezultatyvnosti-po-kpi",
+    "type": "measure",
+    "name": "AC.Switch.Тренд Результативності по KPI (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-switch-trend-rezultatyvnosti-po-kpi.md"
+  },
+  {
+    "id": "ac-switch-rezultatyvnist-po-kpi",
+    "type": "measure",
+    "name": "AC.Switch.Результативність по KPI (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-switch-rezultatyvnist-po-kpi.md"
+  },
+  {
+    "id": "ac-switch-dolia-vzaiemodii-viva-v-intervali",
+    "type": "measure",
+    "name": "AC.Switch.Доля взаємодії (Viva) в інтервалі (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-switch-dolia-vzaiemodii-viva-v-intervali.md"
+  },
+  {
+    "id": "ac-switch-interval-vzaiemodii-trend",
+    "type": "measure",
+    "name": "AC.Switch.Інтервал взаємодії Тренд (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-switch-interval-vzaiemodii-trend.md"
+  },
+  {
+    "id": "ac-switch-interval-vzaiemodii-viva-hod-v-den",
+    "type": "measure",
+    "name": "AC.Switch.Інтервал взаємодії (Viva), год. в день",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-switch-interval-vzaiemodii-viva-hod-v-den.md"
+  },
+  {
+    "id": "ac-switch-chystyi-chas-v-ofisi-trend",
+    "type": "measure",
+    "name": "AC.Switch.Чистий час в офісі Тренд (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-switch-chystyi-chas-v-ofisi-trend.md"
+  },
+  {
+    "id": "ac-switch-chystyi-chas-v-ofisi-hod",
+    "type": "measure",
+    "name": "AC.Switch.Чистий час в офісі, год.",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-switch-chystyi-chas-v-ofisi-hod.md"
+  },
+  {
+    "id": "ac-switch-ryzyk-vtraty-produktyvnosti",
+    "type": "measure",
+    "name": "AC.Switch.Ризик втрати продуктивності",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-switch-ryzyk-vtraty-produktyvnosti.md"
+  },
+  {
+    "id": "ac-otsinka-plynnist-po-vertykali",
+    "type": "measure",
+    "name": "AC.Оцінка.Плинність % по вертикалі",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-otsinka-plynnist-po-vertykali.md"
+  },
+  {
+    "id": "ac-otsinka-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv",
+    "type": "measure",
+    "name": "AC.Оцінка.Агрегований % непродуктинвих підлеглих для керівників",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-otsinka-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv.md"
+  },
+  {
+    "id": "ac-otsinka-perepratsiuvannia-viva",
+    "type": "measure",
+    "name": "AC.Оцінка.Перепрацювання (Viva)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-otsinka-perepratsiuvannia-viva.md"
+  },
+  {
+    "id": "ac-otsinka-dolia-dniv-polovykh-robit",
+    "type": "measure",
+    "name": "AC.Оцінка.Доля днів польових робіт (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-otsinka-dolia-dniv-polovykh-robit.md"
+  },
+  {
+    "id": "ac-otsinka-1-1-v-ser-na-1-pidlehloho-hod",
+    "type": "measure",
+    "name": "AC.Оцінка.1:1 в сер. на 1 підлеглого, год.",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-otsinka-1-1-v-ser-na-1-pidlehloho-hod.md"
+  },
+  {
+    "id": "ac-otsinka-trend-otsinky-rez-ti",
+    "type": "measure",
+    "name": "AC.Оцінка.Тренд Оцінки рез-ті (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-otsinka-trend-otsinky-rez-ti.md"
+  },
+  {
+    "id": "ac-otsinka-trend-okr",
+    "type": "measure",
+    "name": "AC.Оцінка.Тренд OKR (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-otsinka-trend-okr.md"
+  },
+  {
+    "id": "ac-otsinka-trend-rezultatyvnosti-po-kpi",
+    "type": "measure",
+    "name": "AC.Оцінка.Тренд Результативності по KPI (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-otsinka-trend-rezultatyvnosti-po-kpi.md"
+  },
+  {
+    "id": "ac-otsinka-rezultatyvnist-po-kpi",
+    "type": "measure",
+    "name": "AC.Оцінка.Результативність по KPI (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-otsinka-rezultatyvnist-po-kpi.md"
+  },
+  {
+    "id": "ac-otsinka-dolia-vzaiemodii-viva-v-intervali",
+    "type": "measure",
+    "name": "AC.Оцінка.Доля взаємодії (Viva) в інтервалі (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-otsinka-dolia-vzaiemodii-viva-v-intervali.md"
+  },
+  {
+    "id": "ac-otsinka-interval-vzaiemodii-trend",
+    "type": "measure",
+    "name": "AC.Оцінка.Інтервал взаємодії Тренд (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-otsinka-interval-vzaiemodii-trend.md"
+  },
+  {
+    "id": "ac-otsinka-interval-vzaiemodii-viva-hod-v-den",
+    "type": "measure",
+    "name": "AC.Оцінка.Інтервал взаємодії (Viva), год. в день",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-otsinka-interval-vzaiemodii-viva-hod-v-den.md"
+  },
+  {
+    "id": "ac-otsinka-chystyi-chas-v-ofisi-trend",
+    "type": "measure",
+    "name": "AC.Оцінка.Чистий час в офісі Тренд (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-otsinka-chystyi-chas-v-ofisi-trend.md"
+  },
+  {
+    "id": "ac-otsinka-chystyi-chas-v-ofisi-hod",
+    "type": "measure",
+    "name": "AC.Оцінка.Чистий час в офісі, год.",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-otsinka-chystyi-chas-v-ofisi-hod.md"
+  },
+  {
+    "id": "ac-otsinka-ryzyk-vtraty-produktyvnosti",
+    "type": "measure",
+    "name": "AC.Оцінка.Ризик втрати продуктивності",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-otsinka-ryzyk-vtraty-produktyvnosti.md"
+  },
+  {
+    "id": "ac-dani-plynnist-po-vertykali",
+    "type": "measure",
+    "name": "AC.Дані.Плинність % по вертикалі",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-dani-plynnist-po-vertykali.md"
+  },
+  {
+    "id": "ac-dani-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv",
+    "type": "measure",
+    "name": "AC.Дані.Агрегований % непродуктинвих підлеглих для керівників",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-dani-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv.md"
+  },
+  {
+    "id": "ac-dani-perepratsiuvannia-viva",
+    "type": "measure",
+    "name": "AC.Дані.Перепрацювання (Viva)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-dani-perepratsiuvannia-viva.md"
+  },
+  {
+    "id": "ac-dani-dolia-dniv-polovykh-robit",
+    "type": "measure",
+    "name": "AC.Дані.Доля днів польових робіт (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-dani-dolia-dniv-polovykh-robit.md"
+  },
+  {
+    "id": "ac-dani-1-1-v-ser-na-1-pidlehloho-hod",
+    "type": "measure",
+    "name": "AC.Дані.1:1 в сер. на 1 підлеглого, год.",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-dani-1-1-v-ser-na-1-pidlehloho-hod.md"
+  },
+  {
+    "id": "ac-dani-trend-otsinky-rez-ti",
+    "type": "measure",
+    "name": "AC.Дані.Тренд Оцінки рез-ті (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-dani-trend-otsinky-rez-ti.md"
+  },
+  {
+    "id": "ac-dani-trend-okr",
+    "type": "measure",
+    "name": "AC.Дані.Тренд OKR (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-dani-trend-okr.md"
+  },
+  {
+    "id": "ac-dani-trend-rezultatyvnosti-po-kpi",
+    "type": "measure",
+    "name": "AC.Дані.Тренд Результативності по KPI (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-dani-trend-rezultatyvnosti-po-kpi.md"
+  },
+  {
+    "id": "ac-dani-rezultatyvnist-po-kpi",
+    "type": "measure",
+    "name": "AC.Дані.Результативність по KPI (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-dani-rezultatyvnist-po-kpi.md"
+  },
+  {
+    "id": "ac-dani-dolia-vzaiemodii-viva-v-intervali",
+    "type": "measure",
+    "name": "AC.Дані.Доля взаємодії (Viva) в інтервалі (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-dani-dolia-vzaiemodii-viva-v-intervali.md"
+  },
+  {
+    "id": "ac-dani-interval-vzaiemodii-trend",
+    "type": "measure",
+    "name": "AC.Дані.Інтервал взаємодії Тренд (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-dani-interval-vzaiemodii-trend.md"
+  },
+  {
+    "id": "ac-dani-interval-vzaiemodii-viva-hod-v-den",
+    "type": "measure",
+    "name": "AC.Дані.Інтервал взаємодії (Viva), год. в день",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-dani-interval-vzaiemodii-viva-hod-v-den.md"
+  },
+  {
+    "id": "ac-dani-chystyi-chas-v-ofisi-trend",
+    "type": "measure",
+    "name": "AC.Дані.Чистий час в офісі Тренд (%)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-dani-chystyi-chas-v-ofisi-trend.md"
+  },
+  {
+    "id": "ac-dani-chystyi-chas-v-ofisi-hod",
+    "type": "measure",
+    "name": "AC.Дані.Чистий час в офісі, год.",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-dani-chystyi-chas-v-ofisi-hod.md"
+  },
+  {
+    "id": "ac-dani-ryzyk-vtraty-produktyvnosti",
+    "type": "measure",
+    "name": "AC.Дані.Ризик втрати продуктивності",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+    "file": "measures/ac-dani-ryzyk-vtraty-produktyvnosti.md"
+  },
+  {
+    "id": "ac-lp-stazh-na-posadi-ostannii",
+    "type": "measure",
+    "name": "AC.LP.Стаж на посаді (останній)",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Export",
+    "file": "measures/ac-lp-stazh-na-posadi-ostannii.md"
+  },
+  {
+    "id": "ac-lp-rate-color",
+    "type": "measure",
+    "name": "AC.LP.Rate_color",
+    "displayFolder": "Analytical Cases\\Loss_Productivity\\Formatting",
+    "file": "measures/ac-lp-rate-color.md"
+  },
+  {
+    "id": "dolia-upravlinskykh-katehorii-sered-vsikh-spivrobitnykiv",
+    "type": "measure",
+    "name": "Доля управлінських категорій серед всіх співробітників (%)",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/dolia-upravlinskykh-katehorii-sered-vsikh-spivrobitnykiv.md"
+  },
+  {
+    "id": "dolia-kerivnykiv-sered-vsikh-spivrobitnykiv",
+    "type": "measure",
+    "name": "Доля керівників серед всіх співробітників (%)",
+    "displayFolder": "Group_Profile\\Загальна інформація",
+    "file": "measures/dolia-kerivnykiv-sered-vsikh-spivrobitnykiv.md"
+  },
+  {
+    "id": "gp-produktyvnist-otsinka-kerivnyka-tekstove-pole",
+    "type": "measure",
+    "name": "GP.Продуктивність.Оцінка керівника.Текстове поле",
+    "displayFolder": "Group_Profile\\_Main\\Продуктивність",
+    "file": "measures/gp-produktyvnist-otsinka-kerivnyka-tekstove-pole.md"
+  },
+  {
+    "id": "gp-produktyvnist-serednia-otsinka-komandy-tekstove-pole",
+    "type": "measure",
+    "name": "GP.Продуктивність.Середня оцінка команди.Текстове поле",
+    "displayFolder": "Group_Profile\\_Main\\Продуктивність",
+    "file": "measures/gp-produktyvnist-serednia-otsinka-komandy-tekstove-pole.md"
+  },
+  {
+    "id": "gp-produktyvnist-k-t-spivrobitnykiv-shcho-otsiniuiutsia-tekstove-pole",
+    "type": "measure",
+    "name": "GP.Продуктивність.К-ть співробітників, що оцінюються.Текстове поле",
+    "displayFolder": "Group_Profile\\_Main\\Продуктивність",
+    "file": "measures/gp-produktyvnist-k-t-spivrobitnykiv-shcho-otsiniuiutsia-tekstove-pole.md"
+  },
+  {
+    "id": "gp-okr-otsinka-kerivnyka-tekstove-pole",
+    "type": "measure",
+    "name": "GP.ОКР.Оцінка керівника.Текстове поле",
+    "displayFolder": "Group_Profile\\_Main\\ОКР",
+    "file": "measures/gp-okr-otsinka-kerivnyka-tekstove-pole.md"
+  },
+  {
+    "id": "gp-okr-serednia-otsinka-komandy-tekstove-pole",
+    "type": "measure",
+    "name": "GP.ОКР.Середня оцінка команди.Текстове поле",
+    "displayFolder": "Group_Profile\\_Main\\ОКР",
+    "file": "measures/gp-okr-serednia-otsinka-komandy-tekstove-pole.md"
+  },
+  {
+    "id": "gp-okr-k-t-spivrobitnykiv-shcho-otsiniuiutsia-tekstove-pole",
+    "type": "measure",
+    "name": "GP.ОКР.К-ть співробітників, що оцінюються.Текстове поле",
+    "displayFolder": "Group_Profile\\_Main\\ОКР",
+    "file": "measures/gp-okr-k-t-spivrobitnykiv-shcho-otsiniuiutsia-tekstove-pole.md"
+  },
+  {
+    "id": "gp-okr-serednia-otsinka-komandy-znachennia",
+    "type": "measure",
+    "name": "GP.ОКР.Середня оцінка команди.Значення",
+    "displayFolder": "Group_Profile\\_Main\\ОКР",
+    "file": "measures/gp-okr-serednia-otsinka-komandy-znachennia.md"
+  },
+  {
+    "id": "pp-pidrozdil-1",
+    "type": "measure",
+    "name": "PP.Підрозділ 1",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-pidrozdil-1.md"
+  },
+  {
+    "id": "pp-pidrozdil-2",
+    "type": "measure",
+    "name": "PP.Підрозділ 2",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-pidrozdil-2.md"
+  },
+  {
+    "id": "pp-pidrozdil-3",
+    "type": "measure",
+    "name": "PP.Підрозділ 3",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-pidrozdil-3.md"
+  },
+  {
+    "id": "pp-pidrozdil-4",
+    "type": "measure",
+    "name": "PP.Підрозділ 4",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-pidrozdil-4.md"
+  },
+  {
+    "id": "pp-pidrozdil-5",
+    "type": "measure",
+    "name": "PP.Підрозділ 5",
+    "displayFolder": "Personal_Profile\\Загальна інформація",
+    "file": "measures/pp-pidrozdil-5.md"
+  },
+  {
+    "id": "gp-okr-serednia-otsinka-formated",
+    "type": "measure",
+    "name": "GP.ОКР.Середня Оцінка.Formated",
+    "displayFolder": "Group_Profile\\_Main\\ОКР",
+    "file": "measures/gp-okr-serednia-otsinka-formated.md"
+  },
+  {
+    "id": "gp-produktyvnist-serednia-otsinka-formeted",
+    "type": "measure",
+    "name": "GP.Продуктивність.Середня Оцінка.Formeted",
+    "displayFolder": "Group_Profile\\_Main\\Продуктивність",
+    "file": "measures/gp-produktyvnist-serednia-otsinka-formeted.md"
+  },
+  {
+    "id": "gp-okr-ostannii-rik",
+    "type": "measure",
+    "name": "GP.ОКР.Останній рік",
+    "displayFolder": "Group_Profile\\_Main\\ОКР",
+    "file": "measures/gp-okr-ostannii-rik.md"
+  },
+  {
+    "id": "gp-produktyvnist-ostannii-period-otsinky",
+    "type": "measure",
+    "name": "GP.Продуктивність.Останній період оцінки",
+    "displayFolder": "Group_Profile\\_Main\\Продуктивність",
+    "file": "measures/gp-produktyvnist-ostannii-period-otsinky.md"
+  },
+  {
+    "id": "gp-rezultatyvnist-nazva-hrafika",
+    "type": "measure",
+    "name": "GP.Результативність.Назва графіка",
+    "displayFolder": "Group_Profile\\_Main\\Продуктивність",
+    "file": "measures/gp-rezultatyvnist-nazva-hrafika.md"
+  },
+  {
+    "id": "gp-okr-nazva-hrafika",
+    "type": "measure",
+    "name": "GP.ОКР.Назва графіка",
+    "displayFolder": "Group_Profile\\_Main\\ОКР",
+    "file": "measures/gp-okr-nazva-hrafika.md"
+  },
+  {
+    "id": "administrative-role-filter",
+    "type": "measure",
+    "name": "Administrative_role_filter",
+    "displayFolder": "_Technical",
+    "file": "measures/administrative-role-filter.md"
+  },
+  {
+    "id": "current-user-photo",
+    "type": "measure",
+    "name": "current_user_photo_",
+    "displayFolder": "USER",
+    "file": "measures/current-user-photo.md"
+  },
+  {
+    "id": "current-user-name",
+    "type": "measure",
+    "name": "current_user_name",
+    "displayFolder": "USER",
+    "file": "measures/current-user-name.md"
+  },
+  {
+    "id": "gp-okp-color-otsinka-kerivnyka-tekstove-pole",
+    "type": "measure",
+    "name": "GP.OKP.Color.Оцінка керівника.Текстове поле",
+    "displayFolder": "Group_Profile\\_Main\\ОКР",
+    "file": "measures/gp-okp-color-otsinka-kerivnyka-tekstove-pole.md"
+  },
+  {
+    "id": "gp-okr-otsinka-kerivnyka-znachennia",
+    "type": "measure",
+    "name": "GP.ОКР.Оцінка керівника.Значення",
+    "displayFolder": "Group_Profile\\_Main\\ОКР",
+    "file": "measures/gp-okr-otsinka-kerivnyka-znachennia.md"
+  },
+  {
+    "id": "gp-okr-otsinka-kerivnyka-kolir",
+    "type": "measure",
+    "name": "GP.ОКР.Оцінка керівника.Колір",
+    "displayFolder": "Group_Profile\\_Main\\ОКР",
+    "file": "measures/gp-okr-otsinka-kerivnyka-kolir.md"
+  },
+  {
+    "id": "gp-okr-serednia-otsinka-komandy-kolir",
+    "type": "measure",
+    "name": "GP.ОКР.Середня оцінка команди.Колір",
+    "displayFolder": "Group_Profile\\_Main\\ОКР",
+    "file": "measures/gp-okr-serednia-otsinka-komandy-kolir.md"
+  },
+  {
+    "id": "gp-okp-color-serednia-otsinka-komady-tekstove-pole",
+    "type": "measure",
+    "name": "GP.OKP.Color.Середня оцінка комади.Текстове поле",
+    "displayFolder": "Group_Profile\\_Main\\ОКР",
+    "file": "measures/gp-okp-color-serednia-otsinka-komady-tekstove-pole.md"
+  },
+  {
+    "id": "gp-produktyvnist-serednia-otsinka-komandy-katehoriia",
+    "type": "measure",
+    "name": "GP.Продуктивність.Середня оцінка команди.Категорія",
+    "displayFolder": "Group_Profile\\_Main\\Продуктивність",
+    "file": "measures/gp-produktyvnist-serednia-otsinka-komandy-katehoriia.md"
+  },
+  {
+    "id": "gp-produktyvnist-otsinka-kerivnyka-znachennia",
+    "type": "measure",
+    "name": "GP.Продуктивність.Оцінка керівника.Значення",
+    "displayFolder": "Group_Profile\\_Main\\Продуктивність",
+    "file": "measures/gp-produktyvnist-otsinka-kerivnyka-znachennia.md"
+  },
+  {
+    "id": "gp-produktyvnist-otsinka-kerivnyka-katehoriia",
+    "type": "measure",
+    "name": "GP.Продуктивність.Оцінка керівника.Категорія",
+    "displayFolder": "Group_Profile\\_Main\\Продуктивність",
+    "file": "measures/gp-produktyvnist-otsinka-kerivnyka-katehoriia.md"
+  },
+  {
+    "id": "gp-produktyvnist-color-serednia-otsinka-komady-tekstove-pole",
+    "type": "measure",
+    "name": "GP.Продуктивність.Color.Середня оцінка комади.Текстове поле",
+    "displayFolder": "Group_Profile\\_Main\\Продуктивність",
+    "file": "measures/gp-produktyvnist-color-serednia-otsinka-komady-tekstove-pole.md"
+  },
+  {
+    "id": "gp-produktyvnist-color-otsinka-kerivnyka-tekstove-pole",
+    "type": "measure",
+    "name": "GP.Продуктивність.Color.Оцінка керівника.Текстове поле",
+    "displayFolder": "Group_Profile\\_Main\\Продуктивність",
+    "file": "measures/gp-produktyvnist-color-otsinka-kerivnyka-tekstove-pole.md"
+  },
+  {
+    "id": "pp-otsinka-rezultatyvnosti-dani-vidsutni",
+    "type": "measure",
+    "name": "PP.Оцінка результативності.Дані відсутні",
+    "displayFolder": "Personal_Profile\\Паспорт\\Результативність",
+    "file": "measures/pp-otsinka-rezultatyvnosti-dani-vidsutni.md"
+  },
+  {
+    "id": "user-role-filter",
+    "type": "measure",
+    "name": "User_role_filter",
+    "displayFolder": "USER",
+    "file": "measures/user-role-filter.md"
+  },
+  {
+    "id": "gp-rezultatyvnist-otsinka-rezultatyvnosti-k-t-pratsivnykiv",
+    "type": "measure",
+    "name": "GP.Результативність.Оцінка результативності.К-ть працівників",
+    "displayFolder": "Group_Profile\\Результативність та оцінка\\Оцінка результативності",
+    "file": "measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-k-t-pratsivnykiv.md"
+  },
+  {
+    "id": "gp-rezultatyvnist-otsinka-rezultatyvnosti-serednia-otsinka",
+    "type": "measure",
+    "name": "GP.Результативність.Оцінка результативності.Середня оцінка",
+    "displayFolder": "Group_Profile\\Результативність та оцінка\\Оцінка результативності",
+    "file": "measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-serednia-otsinka.md"
+  },
+  {
+    "id": "pp-okr-current-user-koefitsiient-indyvidualnoho-bonusu",
+    "type": "measure",
+    "name": "PP.OKR.Current_user.Коефіцієнт індивідуального бонусу",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-okr-current-user-koefitsiient-indyvidualnoho-bonusu.md"
+  },
+  {
+    "id": "pp-okr-zahalna-kilkist-tsilei",
+    "type": "measure",
+    "name": "PP.OKR.Загальна кількість цілей",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-okr-zahalna-kilkist-tsilei.md"
+  },
+  {
+    "id": "pp-okr-zahalna-otsinka-okr",
+    "type": "measure",
+    "name": "PP.OKR.Загальна оцінка OKR",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-okr-zahalna-otsinka-okr.md"
+  },
+  {
+    "id": "pp-okr-zahalna-kolirna-otsinka-okr",
+    "type": "measure",
+    "name": "PP.OKR.Загальна колірна оцінка OKR",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-okr-zahalna-kolirna-otsinka-okr.md"
+  },
+  {
+    "id": "pp-okr-svg-zahalna-kolirna-otsinka-okr",
+    "type": "measure",
+    "name": "PP.OKR.SVG.Загальна колірна оцінка OKR",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-okr-svg-zahalna-kolirna-otsinka-okr.md"
+  },
+  {
+    "id": "pp-okr-tsil-ne-vykonana",
+    "type": "measure",
+    "name": "PP.OKR.Ціль не виконана",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-okr-tsil-ne-vykonana.md"
+  },
+  {
+    "id": "pp-okr-tsil-vykonana",
+    "type": "measure",
+    "name": "PP.OKR.Ціль виконана",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-okr-tsil-vykonana.md"
+  },
+  {
+    "id": "gp-rezultatyvnist-otsinka-rezultatyvnosti-k-t-pratsivnykiv-total",
+    "type": "measure",
+    "name": "GP.Результативність.Оцінка результативності.К-ть працівників.Total",
+    "displayFolder": "Group_Profile\\Результативність та оцінка\\Оцінка результативності",
+    "file": "measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-k-t-pratsivnykiv-total.md"
+  },
+  {
+    "id": "gp-rezultatyvnist-otsinka-rezultatyvnosti-serednia-otsinka-total",
+    "type": "measure",
+    "name": "GP.Результативність.Оцінка результативності.Середня оцінка.Total",
+    "displayFolder": "Group_Profile\\Результативність та оцінка\\Оцінка результативності",
+    "file": "measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-serednia-otsinka-total.md"
+  },
+  {
+    "id": "pp-svg-okr-zahalna-otsinka",
+    "type": "measure",
+    "name": "PP.SVG.OKR.Загальна оцінка",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-svg-okr-zahalna-otsinka.md"
+  },
+  {
+    "id": "pp-svg-okr-detalno",
+    "type": "measure",
+    "name": "PP.SVG.OKR.Детально",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-svg-okr-detalno.md"
+  },
+  {
+    "id": "pp-okr-vaha-okr",
+    "type": "measure",
+    "name": "PP.OKR.Вага OKR",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-okr-vaha-okr.md"
+  },
+  {
+    "id": "pp-okr-znachennia-okr",
+    "type": "measure",
+    "name": "PP.OKR.Значення OKR",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-okr-znachennia-okr.md"
+  },
+  {
+    "id": "pp-okr-kolirna-otsinka-okr",
+    "type": "measure",
+    "name": "PP.OKR.Колірна оцінка OKR",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-okr-kolirna-otsinka-okr.md"
+  },
+  {
+    "id": "pp-okr-vaha-kr",
+    "type": "measure",
+    "name": "PP.OKR.Вага KR",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-okr-vaha-kr.md"
+  },
+  {
+    "id": "pp-okr-znachennia-kr",
+    "type": "measure",
+    "name": "PP.OKR.Значення KR",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-okr-znachennia-kr.md"
+  },
+  {
+    "id": "pp-okr-kolirna-otsinka-kr",
+    "type": "measure",
+    "name": "PP.OKR.Колірна оцінка KR",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-okr-kolirna-otsinka-kr.md"
+  },
+  {
+    "id": "pp-okr-iscurrentemployee",
+    "type": "measure",
+    "name": "PP.OKR.IsCurrentEmployee",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-okr-iscurrentemployee.md"
+  },
+  {
+    "id": "current-user-hrbp-hierarchy-level",
+    "type": "measure",
+    "name": "Current_User_HRBP_Hierarchy_Level",
+    "displayFolder": "USER",
+    "file": "measures/current-user-hrbp-hierarchy-level.md"
+  },
+  {
+    "id": "user-hrbp-hierarchy-level",
+    "type": "measure",
+    "name": "User_HRBP_Hierarchy_Level",
+    "displayFolder": "USER",
+    "file": "measures/user-hrbp-hierarchy-level.md"
+  },
+  {
+    "id": "user-admin-hierarchy-level",
+    "type": "measure",
+    "name": "User_Admin_Hierarchy_Level",
+    "displayFolder": "USER",
+    "file": "measures/user-admin-hierarchy-level.md"
+  },
+  {
+    "id": "text-my-lead-team",
+    "type": "measure",
+    "name": "text.My_lead_team",
+    "displayFolder": "Navigation\\Group",
+    "file": "measures/text-my-lead-team.md"
+  },
+  {
+    "id": "pp-okr-current-user-zahalna-kolirna-otsinka-okr",
+    "type": "measure",
+    "name": "PP.OKR.Current_user.Загальна колірна оцінка OKR",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-okr-current-user-zahalna-kolirna-otsinka-okr.md"
+  },
+  {
+    "id": "pp-okr-current-user-zahalna-otsinka-okr",
+    "type": "measure",
+    "name": "PP.OKR.Current_user.Загальна  оцінка OKR",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-okr-current-user-zahalna-otsinka-okr.md"
+  },
+  {
+    "id": "pp-kr-kliuchovyi-rezultat-dosiahnuto",
+    "type": "measure",
+    "name": "PP.KR.Ключовий результат досягнуто",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-kr-kliuchovyi-rezultat-dosiahnuto.md"
+  },
+  {
+    "id": "pp-kr-kliuchovyi-rezultat-ne-dosiahnuto",
+    "type": "measure",
+    "name": "PP.KR.Ключовий результат НЕ досягнуто",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-kr-kliuchovyi-rezultat-ne-dosiahnuto.md"
+  },
+  {
+    "id": "gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-okr-cy",
+    "type": "measure",
+    "name": "GP.Результативність.Оцінка OKR.Загальна кількість OKR.CY",
+    "displayFolder": "Group_Profile\\Результативність та оцінка\\Оцінка OKR",
+    "file": "measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-okr-cy.md"
+  },
+  {
+    "id": "gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-okr-py",
+    "type": "measure",
+    "name": "GP.Результативність.Оцінка OKR.Загальна кількість OKR.PY",
+    "displayFolder": "Group_Profile\\Результативність та оцінка\\Оцінка OKR",
+    "file": "measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-okr-py.md"
+  },
+  {
+    "id": "gp-rezultatyvnist-otsinka-okr-serednia-kilkist-okr-cy",
+    "type": "measure",
+    "name": "GP.Результативність.Оцінка OKR.Середня кількість OKR.CY",
+    "displayFolder": "Group_Profile\\Результативність та оцінка\\Оцінка OKR",
+    "file": "measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-okr-cy.md"
+  },
+  {
+    "id": "gp-rezultatyvnist-otsinka-okr-serednia-kilkist-okr-py",
+    "type": "measure",
+    "name": "GP.Результативність.Оцінка OKR.Середня кількість OKR.PY",
+    "displayFolder": "Group_Profile\\Результативність та оцінка\\Оцінка OKR",
+    "file": "measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-okr-py.md"
+  },
+  {
+    "id": "gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-kr-cy",
+    "type": "measure",
+    "name": "GP.Результативність.Оцінка OKR.Загальна кількість KR.CY",
+    "displayFolder": "Group_Profile\\Результативність та оцінка\\Оцінка OKR",
+    "file": "measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-kr-cy.md"
+  },
+  {
+    "id": "gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-kr-py",
+    "type": "measure",
+    "name": "GP.Результативність.Оцінка OKR.Загальна кількість KR.PY",
+    "displayFolder": "Group_Profile\\Результативність та оцінка\\Оцінка OKR",
+    "file": "measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-kr-py.md"
+  },
+  {
+    "id": "gp-rezultatyvnist-otsinka-okr-serednia-kilkist-kr-na-okr-cy",
+    "type": "measure",
+    "name": "GP.Результативність.Оцінка OKR.Середня кількість KR на OKR.CY",
+    "displayFolder": "Group_Profile\\Результативність та оцінка\\Оцінка OKR",
+    "file": "measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-kr-na-okr-cy.md"
+  },
+  {
+    "id": "gp-rezultatyvnist-otsinka-okr-serednia-kilkist-kr-py",
+    "type": "measure",
+    "name": "GP.Результативність.Оцінка OKR.Середня кількість KR.PY",
+    "displayFolder": "Group_Profile\\Результативність та оцінка\\Оцінка OKR",
+    "file": "measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-kr-py.md"
+  },
+  {
+    "id": "gp-rezultatyvnist-otsinka-okr-kilkist-spivrobitnykiv-z-okr-cy",
+    "type": "measure",
+    "name": "GP.Результативність.Оцінка OKR.Кількість співробітників з OKR.CY",
+    "displayFolder": "Group_Profile\\Результативність та оцінка\\Оцінка OKR",
+    "file": "measures/gp-rezultatyvnist-otsinka-okr-kilkist-spivrobitnykiv-z-okr-cy.md"
+  },
+  {
+    "id": "gp-rezultatyvnist-otsinka-okr-kilkist-spivrobitnykiv-z-okr-py",
+    "type": "measure",
+    "name": "GP.Результативність.Оцінка OKR.Кількість співробітників з OKR.PY",
+    "displayFolder": "Group_Profile\\Результативність та оцінка\\Оцінка OKR",
+    "file": "measures/gp-rezultatyvnist-otsinka-okr-kilkist-spivrobitnykiv-z-okr-py.md"
+  },
+  {
+    "id": "gp-rezultatyvnist-otsinka-okr-filtr-detalizatsii-okr",
+    "type": "measure",
+    "name": "GP.Результативність.Оцінка OKR.Фільтр деталізації OKR",
+    "displayFolder": "Group_Profile\\Результативність та оцінка\\Оцінка OKR",
+    "file": "measures/gp-rezultatyvnist-otsinka-okr-filtr-detalizatsii-okr.md"
+  },
+  {
+    "id": "gp-rezultatyvnist-otsinka-okr-filtr-detalizatsii-kr",
+    "type": "measure",
+    "name": "GP.Результативність.Оцінка OKR.Фільтр деталізації KR",
+    "displayFolder": "Group_Profile\\Результативність та оцінка\\Оцінка OKR",
+    "file": "measures/gp-rezultatyvnist-otsinka-okr-filtr-detalizatsii-kr.md"
+  },
+  {
+    "id": "pp-okr-svg-iscurrentemployee",
+    "type": "measure",
+    "name": "PP.OKR.SVG.IsCurrentEmployee",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-okr-svg-iscurrentemployee.md"
+  },
+  {
+    "id": "pp-chastka-okr-za-naiavnistiu-zmin",
+    "type": "measure",
+    "name": "PP.Частка OKR за наявністю змін",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-chastka-okr-za-naiavnistiu-zmin.md"
+  },
+  {
+    "id": "pp-chastka-okr-za-typom-tsili",
+    "type": "measure",
+    "name": "PP.Частка OKR за типом цілі",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-chastka-okr-za-typom-tsili.md"
+  },
+  {
+    "id": "pp-chastka-kr-za-naiavnistiu-zmin",
+    "type": "measure",
+    "name": "PP.Частка KR за наявністю змін",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-chastka-kr-za-naiavnistiu-zmin.md"
+  },
+  {
+    "id": "pp-chastka-okr-za-statusom",
+    "type": "measure",
+    "name": "PP.Частка OKR за статусом",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-chastka-okr-za-statusom.md"
+  },
+  {
+    "id": "pp-chastka-okr-za-krosfunktsiinistiu",
+    "type": "measure",
+    "name": "PP.Частка OKR за кросфункційністю",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-chastka-okr-za-krosfunktsiinistiu.md"
+  },
+  {
+    "id": "pp-svg-okr-size",
+    "type": "measure",
+    "name": "PP.SVG.OKR.Size",
+    "displayFolder": "Personal_Profile\\Паспорт\\OKR",
+    "file": "measures/pp-svg-okr-size.md"
+  },
+  {
+    "id": "gp-serednii-dokhid-z-richnym-bonusom-za-ost-12-mis",
+    "type": "measure",
+    "name": "GP.Середній дохід з річним бонусом (за ост. 12 міс)",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-dokhid-z-richnym-bonusom-za-ost-12-mis.md"
+  },
+  {
+    "id": "gp-serednii-dokhid-bez-richnoho-bonusa-za-ost-12-mis",
+    "type": "measure",
+    "name": "GP.Середній дохід без річного бонуса (за ост. 12 міс)",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-dokhid-bez-richnoho-bonusa-za-ost-12-mis.md"
+  },
+  {
+    "id": "gp-riznytsia-fiksovanoi-vynahorody-plan-minimalnyi-riven",
+    "type": "measure",
+    "name": "GP.Різниця фіксованої винагороди (план).Мінімальний рівень",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-riznytsia-fiksovanoi-vynahorody-plan-minimalnyi-riven.md"
+  },
+  {
+    "id": "gp-riznytsia-fiksovanoi-vynahorody-plan-maksymalnyi-riven",
+    "type": "measure",
+    "name": "GP.Різниця фіксованої винагороди (план).Максимальний рівень",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-riznytsia-fiksovanoi-vynahorody-plan-maksymalnyi-riven.md"
+  },
+  {
+    "id": "gp-riznytsia-fiksovanoi-vynahorody-plan-riznytsia",
+    "type": "measure",
+    "name": "GP.Різниця фіксованої винагороди (план).Різниця",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-riznytsia-fiksovanoi-vynahorody-plan-riznytsia.md"
+  },
+  {
+    "id": "gp-dolia-komandy-z-premiieiu-za-misiats-fakt",
+    "type": "measure",
+    "name": "GP.Доля команди з премією за місяць, % факт",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-z-premiieiu-za-misiats-fakt.md"
+  },
+  {
+    "id": "gp-kilkist-spivrobitnykiv-vsoho-chol-integer",
+    "type": "measure",
+    "name": "GP.Кількість співробітників всього, чол. - Integer",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-kilkist-spivrobitnykiv-vsoho-chol-integer.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-premii-za-misiats-fakt",
+    "type": "measure",
+    "name": "GP.Середній розмір премії за місяць, факт",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-premii-za-misiats-fakt.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-doplaty-za-shkidlyvi-umovy-pratsi-fakt",
+    "type": "measure",
+    "name": "GP.Середній розмір доплати за шкідливі умови праці, факт",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-doplaty-za-shkidlyvi-umovy-pratsi-fakt.md"
+  },
+  {
+    "id": "gp-dolia-komandy-z-doplatoiu-za-shkidlyvi-umovy-pratsi-fakt",
+    "type": "measure",
+    "name": "GP.Доля команди з доплатою за шкідливі умови праці, % факт",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-z-doplatoiu-za-shkidlyvi-umovy-pratsi-fakt.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-doplaty-za-roziznyi-kharakter-roboty-fakt",
+    "type": "measure",
+    "name": "GP.Середній розмір доплати за роз’їзний характер роботи, факт",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-doplaty-za-roziznyi-kharakter-roboty-fakt.md"
+  },
+  {
+    "id": "gp-dolia-komandy-z-doplatoiu-za-roziznyi-kharakter-roboty-fakt",
+    "type": "measure",
+    "name": "GP.Доля команди з доплатою за роз’їзний характер роботи, % факт",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-z-doplatoiu-za-roziznyi-kharakter-roboty-fakt.md"
+  },
+  {
+    "id": "gp-riznytsia-fiksovanoi-vynahorody-fakt-maksymalnyi-riven",
+    "type": "measure",
+    "name": "GP.Різниця фіксованої винагороди (факт).Максимальний рівень",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-maksymalnyi-riven.md"
+  },
+  {
+    "id": "gp-riznytsia-fiksovanoi-vynahorody-fakt-minimalnyi-riven",
+    "type": "measure",
+    "name": "GP.Різниця фіксованої винагороди (факт).Мінімальний рівень",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-minimalnyi-riven.md"
+  },
+  {
+    "id": "gp-riznytsia-fiksovanoi-vynahorody-fakt-riznytsia",
+    "type": "measure",
+    "name": "GP.Різниця фіксованої винагороди (факт).Різниця",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-riznytsia.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-shchomisiachnoi-premii-fakt",
+    "type": "measure",
+    "name": "GP.Середній розмір щомісячної премії, факт",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-shchomisiachnoi-premii-fakt.md"
+  },
+  {
+    "id": "gp-dolia-komandy-z-shchomisiachnoiu-premiieiu-fakt",
+    "type": "measure",
+    "name": "GP.Доля команди з щомісячною премією, % факт",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-z-shchomisiachnoiu-premiieiu-fakt.md"
+  },
+  {
+    "id": "gp-dolia-komandy-z-kvartalnoiu-premiieiu-fakt",
+    "type": "measure",
+    "name": "GP.Доля команди з квартальною премією, % факт",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-z-kvartalnoiu-premiieiu-fakt.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-kvartalnoi-premii-fakt",
+    "type": "measure",
+    "name": "GP.Середній розмір квартальної премії, факт",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-kvartalnoi-premii-fakt.md"
+  },
+  {
+    "id": "gp-dolia-komandy-z-richnymy-bonusamy-fakt",
+    "type": "measure",
+    "name": "GP.Доля команди з річними бонусами, % факт",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-z-richnymy-bonusamy-fakt.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-richnoho-bonusu-fakt",
+    "type": "measure",
+    "name": "GP.Середній розмір річного бонусу, факт",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-richnoho-bonusu-fakt.md"
+  },
+  {
+    "id": "gp-optsiia-po-avto-plan-svg",
+    "type": "measure",
+    "name": "GP.Опція по авто, % план.SVG",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-optsiia-po-avto-plan-svg.md"
+  },
+  {
+    "id": "gp-optsiia-po-avto-fakt-svg",
+    "type": "measure",
+    "name": "GP.Опція по авто, % факт.SVG",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-optsiia-po-avto-fakt-svg.md"
+  },
+  {
+    "id": "gp-k-t-spivrobitnykiv-shcho-otrymuiut-vyplaty-na-orendu-zhytla",
+    "type": "measure",
+    "name": "GP.К-ть співробітників, що отримують виплати на оренду житла",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-k-t-spivrobitnykiv-shcho-otrymuiut-vyplaty-na-orendu-zhytla.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-doplat-za-sumishchennia-fakt",
+    "type": "measure",
+    "name": "GP.Середній розмір доплат за суміщення, факт",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-doplat-za-sumishchennia-fakt.md"
+  },
+  {
+    "id": "gp-dolia-komandy-iz-premiieiu-za-sumisnytstvo-fakt",
+    "type": "measure",
+    "name": "GP.Доля команди із премією за сумісництво, факт",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-iz-premiieiu-za-sumisnytstvo-fakt.md"
+  },
+  {
+    "id": "gp-serednii-rozmir-pozyky",
+    "type": "measure",
+    "name": "GP.Середній розмір позики",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-serednii-rozmir-pozyky.md"
+  },
+  {
+    "id": "gp-dolia-komandy-iz-pozykamy",
+    "type": "measure",
+    "name": "GP.Доля команди із позиками",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-dolia-komandy-iz-pozykamy.md"
+  },
+  {
+    "id": "gp-kilkist-spivrobitnykiv-vsoho-chol",
+    "type": "measure",
+    "name": "GP.Кількість співробітників всього, чол.",
+    "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+    "file": "measures/gp-kilkist-spivrobitnykiv-vsoho-chol.md"
+  },
+  {
+    "id": "gp-rozpodil-u-vyltsi",
+    "type": "measure",
+    "name": "GP.Розподіл у вилці",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-rozpodil-u-vyltsi.md"
+  },
+  {
+    "id": "pp-svg-performance-last2periods",
+    "type": "measure",
+    "name": "PP.SVG.Performance.Last2Periods",
+    "displayFolder": "Personal_Profile\\Паспорт\\Результативність",
+    "file": "measures/pp-svg-performance-last2periods.md"
+  },
+  {
+    "id": "pp-okr-svg-last2periods",
+    "type": "measure",
+    "name": "PP.OKR.SVG.Last2Periods",
+    "displayFolder": "Personal_Profile\\Паспорт\\OKR",
+    "file": "measures/pp-okr-svg-last2periods.md"
+  },
+  {
+    "id": "pp-beidzh-zirka-mkhp",
+    "type": "measure",
+    "name": "PP.Бейдж.Зірка МХП",
+    "displayFolder": "Personal_Profile\\Паспорт\\Бейджі",
+    "file": "measures/pp-beidzh-zirka-mkhp.md"
+  },
+  {
+    "id": "pp-beidzh-trenerstvo",
+    "type": "measure",
+    "name": "PP.Бейдж.Тренерство",
+    "displayFolder": "Personal_Profile\\Паспорт\\Бейджі",
+    "file": "measures/pp-beidzh-trenerstvo.md"
+  },
+  {
+    "id": "pp-beidzh-nastavnytstvo",
+    "type": "measure",
+    "name": "PP.Бейдж.Наставництво",
+    "displayFolder": "Personal_Profile\\Паспорт\\Бейджі",
+    "file": "measures/pp-beidzh-nastavnytstvo.md"
+  },
+  {
+    "id": "pp-beidzh-bank-idei",
+    "type": "measure",
+    "name": "PP.Бейдж.Банк ідей",
+    "displayFolder": "Personal_Profile\\Паспорт\\Бейджі",
+    "file": "measures/pp-beidzh-bank-idei.md"
+  },
+  {
+    "id": "pp-ryzyk-vtrata-produktyvnosti",
+    "type": "measure",
+    "name": "PP.Ризик.Втрата продуктивності",
+    "displayFolder": "Personal_Profile\\Паспорт\\Ризики",
+    "file": "measures/pp-ryzyk-vtrata-produktyvnosti.md"
+  },
+  {
+    "id": "pp-ryzyk-vtrata-pratsivnyka",
+    "type": "measure",
+    "name": "PP.Ризик.Втрата працівника",
+    "displayFolder": "Personal_Profile\\Паспорт\\Ризики",
+    "file": "measures/pp-ryzyk-vtrata-pratsivnyka.md"
+  },
+  {
+    "id": "pp-ryzyk-nepomichena-zirka",
+    "type": "measure",
+    "name": "PP.Ризик.Непомічена зірка",
+    "displayFolder": "Personal_Profile\\Паспорт\\Ризики",
+    "file": "measures/pp-ryzyk-nepomichena-zirka.md"
+  },
+  {
+    "id": "pp-ryzyk-vyd-vidstrochky",
+    "type": "measure",
+    "name": "PP.Ризик.Вид відстрочки",
+    "displayFolder": "Personal_Profile\\Паспорт\\Ризики",
+    "file": "measures/pp-ryzyk-vyd-vidstrochky.md"
+  },
+  {
+    "id": "pp-ryzyk-sb",
+    "type": "measure",
+    "name": "PP.Ризик.СБ",
+    "displayFolder": "Personal_Profile\\Паспорт\\Ризики",
+    "file": "measures/pp-ryzyk-sb.md"
+  },
+  {
+    "id": "pp-ryzyk-komplaiens",
+    "type": "measure",
+    "name": "PP.Ризик.Комплаєнс",
+    "displayFolder": "Personal_Profile\\Паспорт\\Ризики",
+    "file": "measures/pp-ryzyk-komplaiens.md"
+  },
+  {
+    "id": "pp-ryzyk-dovhi-vidpustky-12m",
+    "type": "measure",
+    "name": "PP.Ризик.Довгі відпустки 12м",
+    "displayFolder": "Personal_Profile\\Паспорт\\Ризики",
+    "file": "measures/pp-ryzyk-dovhi-vidpustky-12m.md"
+  },
+  {
+    "id": "pp-ryzyk-absenteizm",
+    "type": "measure",
+    "name": "PP.Ризик.Абсентеїзм",
+    "displayFolder": "Personal_Profile\\Паспорт\\Ризики",
+    "file": "measures/pp-ryzyk-absenteizm.md"
+  },
+  {
+    "id": "pp-metryka-produktyvnist-metryky",
+    "type": "measure",
+    "name": "PP.Метрика.Продуктивність метрики",
+    "displayFolder": "Personal_Profile\\Паспорт\\Метрики",
+    "file": "measures/pp-metryka-produktyvnist-metryky.md"
+  },
+  {
+    "id": "pp-metryka-roli-nastupnyk",
+    "type": "measure",
+    "name": "PP.Метрика.Ролі-наступник",
+    "displayFolder": "Personal_Profile\\Паспорт\\Метрики",
+    "file": "measures/pp-metryka-roli-nastupnyk.md"
+  },
+  {
+    "id": "pp-metryka-hodyny-vzaiemodii-3m",
+    "type": "measure",
+    "name": "PP.Метрика.Години взаємодії 3м",
+    "displayFolder": "Personal_Profile\\Паспорт\\Метрики",
+    "file": "measures/pp-metryka-hodyny-vzaiemodii-3m.md"
+  },
+  {
+    "id": "pp-metryka-rozmir-shyryna-merezhi-3m",
+    "type": "measure",
+    "name": "PP.Метрика.Розмір/ширина мережі 3м",
+    "displayFolder": "Personal_Profile\\Паспорт\\Метрики",
+    "file": "measures/pp-metryka-rozmir-shyryna-merezhi-3m.md"
+  },
+  {
+    "id": "pp-metryka-shyryna-merezhi-3m",
+    "type": "measure",
+    "name": "PP.Метрика.Ширина мережі 3м",
+    "displayFolder": "Personal_Profile\\Паспорт\\Метрики",
+    "file": "measures/pp-metryka-shyryna-merezhi-3m.md"
+  },
+  {
+    "id": "pp-metryka-talent-council",
+    "type": "measure",
+    "name": "PP.Метрика.Talent Council",
+    "displayFolder": "Personal_Profile\\Паспорт\\Метрики",
+    "file": "measures/pp-metryka-talent-council.md"
+  },
+  {
+    "id": "pp-metryka-kilkist-nastupnykiv",
+    "type": "measure",
+    "name": "PP.Метрика.Кількість наступників",
+    "displayFolder": "Personal_Profile\\Паспорт\\Метрики",
+    "file": "measures/pp-metryka-kilkist-nastupnykiv.md"
+  },
+  {
+    "id": "pp-metryka-9-boxes",
+    "type": "measure",
+    "name": "PP.Метрика.9 boxes",
+    "displayFolder": "Personal_Profile\\Паспорт\\Метрики",
+    "file": "measures/pp-metryka-9-boxes.md"
+  },
+  {
+    "id": "pp-svg-beidzhi",
+    "type": "measure",
+    "name": "PP.SVG.Бейджі",
+    "displayFolder": "Personal_Profile\\Паспорт\\Бейджі",
+    "file": "measures/pp-svg-beidzhi.md"
+  },
+  {
+    "id": "pp-okr-current-user-status-planu",
+    "type": "measure",
+    "name": "PP.OKR.Current_user.Статус плану",
+    "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+    "file": "measures/pp-okr-current-user-status-planu.md"
+  },
+  {
+    "id": "gp-k-t-spivrobitnykiv-shcho-otrymuiut-vyplaty-na-mobilnyi-zviazok",
+    "type": "measure",
+    "name": "GP.К-ть співробітників, що отримують виплати на мобільний зв’язок",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-k-t-spivrobitnykiv-shcho-otrymuiut-vyplaty-na-mobilnyi-zviazok.md"
+  },
+  {
+    "id": "gp-k-t-spivrobitnykiv-shcho-otrymaly-pozyku-na-noutbuk-diiucha",
+    "type": "measure",
+    "name": "GP.К-ть співробітників, що отримали позику на ноутбук (діюча)",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-k-t-spivrobitnykiv-shcho-otrymaly-pozyku-na-noutbuk-diiucha.md"
+  },
+  {
+    "id": "gp-mobilnyi-zviazok-fakt-svg",
+    "type": "measure",
+    "name": "'GP.Мобільний зв''язок, % факт.SVG'",
+    "displayFolder": "Group_Profile\\TRS",
+    "file": "measures/gp-mobilnyi-zviazok-fakt-svg.md"
+  },
+  {
+    "id": "pp-svg-pozytsiia-v-okladnii-vyltsi",
+    "type": "measure",
+    "name": "PP.SVG.Позиція в окладній вилці",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-svg-pozytsiia-v-okladnii-vyltsi.md"
+  },
+  {
+    "id": "pp-rozmir-fiksovanoi-vynahorody-planovyi-za-misiats-potochnyi",
+    "type": "measure",
+    "name": "PP.Розмір фіксованої винагороди плановий, за місяць ПОТОЧНИЙ",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-rozmir-fiksovanoi-vynahorody-planovyi-za-misiats-potochnyi.md"
+  },
+  {
+    "id": "pp-rozmir-fiksovanoi-vynahorody-planovyi-za-misiats-stanom-na-rik-nazad",
+    "type": "measure",
+    "name": "PP.Розмір фіксованої винагороди плановий, за місяць СТАНОМ НА РІК НАЗАД",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-rozmir-fiksovanoi-vynahorody-planovyi-za-misiats-stanom-na-rik-nazad.md"
+  },
+  {
+    "id": "pp-trs-category-y-axis-max-value-doplaty-za-sumishchennia",
+    "type": "measure",
+    "name": "PP.TRS_category_Y_axis_max_value_Доплати_за_суміщення",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-trs-category-y-axis-max-value-doplaty-za-sumishchennia.md"
+  },
+  {
+    "id": "pp-doplaty-za-sumishchennia",
+    "type": "measure",
+    "name": "PP.Доплати за суміщення",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-doplaty-za-sumishchennia.md"
+  },
+  {
+    "id": "pp-shchomisiachni-premii-nakopychuvalno",
+    "type": "measure",
+    "name": "PP.Щомісячні премії накопичувально",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-shchomisiachni-premii-nakopychuvalno.md"
+  },
+  {
+    "id": "pp-kvartalni-premii-fakt",
+    "type": "measure",
+    "name": "PP.Квартальні премії факт",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-kvartalni-premii-fakt.md"
+  },
+  {
+    "id": "pp-richni-bonusy",
+    "type": "measure",
+    "name": "PP.Річні бонуси",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-richni-bonusy.md"
+  },
+  {
+    "id": "pp-inshi-doplaty",
+    "type": "measure",
+    "name": "PP.Інші доплати",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-inshi-doplaty.md"
+  },
+  {
+    "id": "pp-pozyka-aktyvna-suma",
+    "type": "measure",
+    "name": "PP.Позика (активна).Сума",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-pozyka-aktyvna-suma.md"
+  },
+  {
+    "id": "pp-data-podii",
+    "type": "measure",
+    "name": "PP.Дата події",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-data-podii.md"
+  },
+  {
+    "id": "pp-pidpryiemstvo",
+    "type": "measure",
+    "name": "PP.Підприємство",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-pidpryiemstvo.md"
+  },
+  {
+    "id": "pp-zhts-napriam",
+    "type": "measure",
+    "name": "PP.ЖЦ_Напрям",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-zhts-napriam.md"
+  },
+  {
+    "id": "pp-zhts-pidnapriam",
+    "type": "measure",
+    "name": "PP.ЖЦ_Піднапрям",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-zhts-pidnapriam.md"
+  },
+  {
+    "id": "pp-kadrovyi-pidrozdil",
+    "type": "measure",
+    "name": "PP.Кадровий підрозділ",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-kadrovyi-pidrozdil.md"
+  },
+  {
+    "id": "pp-kod-pidrozdilu",
+    "type": "measure",
+    "name": "PP.Код підрозділу",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-kod-pidrozdilu.md"
+  },
+  {
+    "id": "pp-zhts-posada",
+    "type": "measure",
+    "name": "PP.ЖЦ_Посада",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-zhts-posada.md"
+  },
+  {
+    "id": "pp-kod-posady",
+    "type": "measure",
+    "name": "PP.Код посади",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-kod-posady.md"
+  },
+  {
+    "id": "pp-zhts-katehoriia-posady",
+    "type": "measure",
+    "name": "PP.ЖЦ_Категорія посади",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-zhts-katehoriia-posady.md"
+  },
+  {
+    "id": "pp-typ-podii",
+    "type": "measure",
+    "name": "PP.Тип події",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-typ-podii.md"
+  },
+  {
+    "id": "pp-stazh-na-posadi",
+    "type": "measure",
+    "name": "PP.Стаж на посаді",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-stazh-na-posadi.md"
+  },
+  {
+    "id": "pp-stazh-v-kholdynhu",
+    "type": "measure",
+    "name": "PP.Стаж в холдингу",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-stazh-v-kholdynhu.md"
+  },
+  {
+    "id": "pp-sumishchennia",
+    "type": "measure",
+    "name": "PP.Суміщення",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-sumishchennia.md"
+  },
+  {
+    "id": "pp-rtsd",
+    "type": "measure",
+    "name": "PP.РЦД",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-rtsd.md"
+  },
+  {
+    "id": "pp-oklad",
+    "type": "measure",
+    "name": "PP.Оклад",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-oklad.md"
+  },
+  {
+    "id": "pp-forma-oplaty",
+    "type": "measure",
+    "name": "PP.Форма оплати",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-forma-oplaty.md"
+  },
+  {
+    "id": "pp-bonusy-r-k-m",
+    "type": "measure",
+    "name": "PP.Бонуси Р/К/М",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-bonusy-r-k-m.md"
+  },
+  {
+    "id": "pp-zirka-mkhp",
+    "type": "measure",
+    "name": "PP.Зірка МХП",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-zirka-mkhp.md"
+  },
+  {
+    "id": "pp-katehoriia-performance",
+    "type": "measure",
+    "name": "PP.Категорія (Performance)",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-katehoriia-performance.md"
+  },
+  {
+    "id": "pp-bal",
+    "type": "measure",
+    "name": "PP.Бал",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-bal.md"
+  },
+  {
+    "id": "pp-kolir-performance",
+    "type": "measure",
+    "name": "PP.Колір (Performance)",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-kolir-performance.md"
+  },
+  {
+    "id": "pp-kolir-okr",
+    "type": "measure",
+    "name": "PP.Колір (OKR)",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-kolir-okr.md"
+  },
+  {
+    "id": "pp-koef-bonusu",
+    "type": "measure",
+    "name": "PP.Коеф. бонусу",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-koef-bonusu.md"
+  },
+  {
+    "id": "pp-hod-vzaiemodii",
+    "type": "measure",
+    "name": "PP.Год. взаємодії",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-hod-vzaiemodii.md"
+  },
+  {
+    "id": "pp-rozmir-merezhi",
+    "type": "measure",
+    "name": "PP.Розмір мережі",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-rozmir-merezhi.md"
+  },
+  {
+    "id": "pp-shyryna-merezhi",
+    "type": "measure",
+    "name": "PP.Ширина мережі",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-shyryna-merezhi.md"
+  },
+  {
+    "id": "pp-dovzhyna-dnia",
+    "type": "measure",
+    "name": "PP.Довжина дня",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-dovzhyna-dnia.md"
+  },
+  {
+    "id": "pp-hod-narad",
+    "type": "measure",
+    "name": "PP.Год. нарад",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-hod-narad.md"
+  },
+  {
+    "id": "pp-hod-konfliktiv",
+    "type": "measure",
+    "name": "PP.Год. конфліктів",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-hod-konfliktiv.md"
+  },
+  {
+    "id": "pp-hod-nerob",
+    "type": "measure",
+    "name": "PP.Год. нероб.",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-hod-nerob.md"
+  },
+  {
+    "id": "pp-y-axis-rcd",
+    "type": "measure",
+    "name": "PP.Y_axis_rcd",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-y-axis-rcd.md"
+  },
+  {
+    "id": "pp-pryrist-rtsd",
+    "type": "measure",
+    "name": "PP.Приріст РЦД",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-pryrist-rtsd.md"
+  },
+  {
+    "id": "pp-leibl-pryrostu-rtsd",
+    "type": "measure",
+    "name": "PP.Лейбл приросту РЦД",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-leibl-pryrostu-rtsd.md"
+  },
+  {
+    "id": "pp-kolir-pryrostu-rtsd",
+    "type": "measure",
+    "name": "PP.Колір приросту РЦД",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-kolir-pryrostu-rtsd.md"
+  },
+  {
+    "id": "pp-kolir-shapky-tultipu",
+    "type": "measure",
+    "name": "PP.Колір шапки тултіпу",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-kolir-shapky-tultipu.md"
+  },
+  {
+    "id": "pp-pidpys-typu-podii",
+    "type": "measure",
+    "name": "PP.Підпис типу події",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-pidpys-typu-podii.md"
+  },
+  {
+    "id": "pp-min-y-axis-rcd",
+    "type": "measure",
+    "name": "PP.min_Y_axis_rcd",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-min-y-axis-rcd.md"
+  },
+  {
+    "id": "pp-potochnyi-rtsd",
+    "type": "measure",
+    "name": "PP.Поточний РЦД",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-potochnyi-rtsd.md"
+  },
+  {
+    "id": "pp-zhts-pidpryiemstvo",
+    "type": "measure",
+    "name": "PP.ЖЦ_Підприємство",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-zhts-pidpryiemstvo.md"
+  },
+  {
+    "id": "pp-history-position-maxd",
+    "type": "measure",
+    "name": "PP.history_position_maxd",
+    "displayFolder": "Personal_Profile\\Життєвий цикл",
+    "file": "measures/pp-history-position-maxd.md"
+  },
+  {
+    "id": "pp-rtsd-detailed",
+    "type": "measure",
+    "name": "PP.РЦД_detailed",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-rtsd-detailed.md"
+  },
+  {
+    "id": "pp-pryrist-rtsd-detailed",
+    "type": "measure",
+    "name": "PP.Приріст_РЦД_detailed",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-pryrist-rtsd-detailed.md"
+  },
+  {
+    "id": "pp-oklad-detailed",
+    "type": "measure",
+    "name": "PP.Оклад_detailed",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-oklad-detailed.md"
+  },
+  {
+    "id": "pp-pryrist-okladu",
+    "type": "measure",
+    "name": "PP.Приріст окладу",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-pryrist-okladu.md"
+  },
+  {
+    "id": "pp-bal-okr",
+    "type": "measure",
+    "name": "PP.Бал OKR",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-bal-okr.md"
+  },
+  {
+    "id": "pp-shchomisiachni-premii-serednomisiachno",
+    "type": "measure",
+    "name": "PP.Щомісячні премії середньомісячно",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-shchomisiachni-premii-serednomisiachno.md"
+  },
+  {
+    "id": "pp-shchokvartalni-premii-v-serednomu-za-kvartal",
+    "type": "measure",
+    "name": "PP.Щоквартальні премії в середньому за квартал",
+    "displayFolder": "Personal_Profile\\TRS",
+    "file": "measures/pp-shchokvartalni-premii-v-serednomu-za-kvartal.md"
+  },
+  {
+    "id": "cg-event-types",
+    "type": "entity",
+    "name": "CG_Event_Types",
+    "displayFolder": "",
+    "file": "entities/cg-event-types.md"
+  },
+  {
+    "id": "dim-admin-os",
+    "type": "entity",
+    "name": "dim_Admin_OS",
+    "displayFolder": "",
+    "file": "entities/dim-admin-os.md"
+  },
+  {
+    "id": "dim-date",
+    "type": "entity",
+    "name": "dim_Date",
+    "displayFolder": "",
+    "file": "entities/dim-date.md"
+  },
+  {
+    "id": "dim-divisions-hierarchy",
+    "type": "entity",
+    "name": "dim_Divisions_Hierarchy",
+    "displayFolder": "",
+    "file": "entities/dim-divisions-hierarchy.md"
+  },
+  {
+    "id": "dim-employee-special-finbp",
+    "type": "entity",
+    "name": "dim_Employee_Special_FinBP",
+    "displayFolder": "",
+    "file": "entities/dim-employee-special-finbp.md"
+  },
+  {
+    "id": "dim-employee-special-head-admin",
+    "type": "entity",
+    "name": "dim_Employee_Special_Head_admin",
+    "displayFolder": "",
+    "file": "entities/dim-employee-special-head-admin.md"
+  },
+  {
+    "id": "dim-employee-special-head-functional",
+    "type": "entity",
+    "name": "dim_Employee_Special_Head_functional",
+    "displayFolder": "",
+    "file": "entities/dim-employee-special-head-functional.md"
+  },
+  {
+    "id": "dim-employee-special-hrbp",
+    "type": "entity",
+    "name": "dim_Employee_Special_HRBP",
+    "displayFolder": "",
+    "file": "entities/dim-employee-special-hrbp.md"
+  },
+  {
+    "id": "dim-employee-status",
+    "type": "entity",
+    "name": "dim_Employee_Status",
+    "displayFolder": "",
+    "file": "entities/dim-employee-status.md"
+  },
+  {
+    "id": "dim-employment-type",
+    "type": "entity",
+    "name": "dim_Employment_Type",
+    "displayFolder": "",
+    "file": "entities/dim-employment-type.md"
+  },
+  {
+    "id": "dim-lp-risks",
+    "type": "entity",
+    "name": "dim_LP_risks",
+    "displayFolder": "",
+    "file": "entities/dim-lp-risks.md"
+  },
+  {
+    "id": "dim-office",
+    "type": "entity",
+    "name": "dim_Office",
+    "displayFolder": "",
+    "file": "entities/dim-office.md"
+  },
+  {
+    "id": "dim-okr-evalution",
+    "type": "entity",
+    "name": "dim_OKR_Evalution",
+    "displayFolder": "",
+    "file": "entities/dim-okr-evalution.md"
+  },
+  {
+    "id": "dim-organization",
+    "type": "entity",
+    "name": "dim_Organization",
+    "displayFolder": "",
+    "file": "entities/dim-organization.md"
+  },
+  {
+    "id": "dim-performance-evalution",
+    "type": "entity",
+    "name": "dim_Performance_Evalution",
+    "displayFolder": "",
+    "file": "entities/dim-performance-evalution.md"
+  },
+  {
+    "id": "dim-permanent-temporary",
+    "type": "entity",
+    "name": "dim_Permanent_Temporary",
+    "displayFolder": "",
+    "file": "entities/dim-permanent-temporary.md"
+  },
+  {
+    "id": "dim-person",
+    "type": "entity",
+    "name": "dim_Person",
+    "displayFolder": "",
+    "file": "entities/dim-person.md"
+  },
+  {
+    "id": "dim-position",
+    "type": "entity",
+    "name": "dim_Position",
+    "displayFolder": "",
+    "file": "entities/dim-position.md"
+  },
+  {
+    "id": "dim-position-category",
+    "type": "entity",
+    "name": "dim_Position_Category",
+    "displayFolder": "",
+    "file": "entities/dim-position-category.md"
+  },
+  {
+    "id": "dim-trs-categories",
+    "type": "entity",
+    "name": "dim_TRS_categories",
+    "displayFolder": "",
+    "file": "entities/dim-trs-categories.md"
+  },
+  {
+    "id": "dim-unit",
+    "type": "entity",
+    "name": "dim_Unit",
+    "displayFolder": "",
+    "file": "entities/dim-unit.md"
+  },
+  {
+    "id": "dim-work-format",
+    "type": "entity",
+    "name": "dim_Work_Format",
+    "displayFolder": "",
+    "file": "entities/dim-work-format.md"
+  },
+  {
+    "id": "dim-hrbp-os",
+    "type": "entity",
+    "name": "dim__HRBP_OS",
+    "displayFolder": "",
+    "file": "entities/dim-hrbp-os.md"
+  },
+  {
+    "id": "fact-average-income",
+    "type": "entity",
+    "name": "fact_Average_Income",
+    "displayFolder": "",
+    "file": "entities/fact-average-income.md"
+  },
+  {
+    "id": "fact-burnout-indicators",
+    "type": "entity",
+    "name": "fact_Burnout_Indicators",
+    "displayFolder": "",
+    "file": "entities/fact-burnout-indicators.md"
+  },
+  {
+    "id": "fact-employees-attributes",
+    "type": "entity",
+    "name": "fact_Employees_Attributes",
+    "displayFolder": "",
+    "file": "entities/fact-employees-attributes.md"
+  },
+  {
+    "id": "fact-employee-history-position",
+    "type": "entity",
+    "name": "fact_Employee_History_Position",
+    "displayFolder": "",
+    "file": "entities/fact-employee-history-position.md"
+  },
+  {
+    "id": "fact-employee-list",
+    "type": "entity",
+    "name": "fact_Employee_List",
+    "displayFolder": "",
+    "file": "entities/fact-employee-list.md"
+  },
+  {
+    "id": "fact-employee-okr",
+    "type": "entity",
+    "name": "fact_Employee_OKR",
+    "displayFolder": "",
+    "file": "entities/fact-employee-okr.md"
+  },
+  {
+    "id": "fact-employee-performance",
+    "type": "entity",
+    "name": "fact_Employee_Performance",
+    "displayFolder": "",
+    "file": "entities/fact-employee-performance.md"
+  },
+  {
+    "id": "fact-employee-performance-total",
+    "type": "entity",
+    "name": "fact_Employee_Performance_Total",
+    "displayFolder": "",
+    "file": "entities/fact-employee-performance-total.md"
+  },
+  {
+    "id": "fact-employee-seniority-by-month",
+    "type": "entity",
+    "name": "fact_employee_seniority_by_month",
+    "displayFolder": "",
+    "file": "entities/fact-employee-seniority-by-month.md"
+  },
+  {
+    "id": "fact-excel-group-profile-general-metric",
+    "type": "entity",
+    "name": "fact_EXCEL_Group_Profile_General_Metric",
+    "displayFolder": "",
+    "file": "entities/fact-excel-group-profile-general-metric.md"
+  },
+  {
+    "id": "fact-gaussian-curve-okr",
+    "type": "entity",
+    "name": "fact_Gaussian_Curve_OKR",
+    "displayFolder": "",
+    "file": "entities/fact-gaussian-curve-okr.md"
+  },
+  {
+    "id": "fact-gaussian-curve-performance",
+    "type": "entity",
+    "name": "fact_Gaussian_Curve_Performance",
+    "displayFolder": "",
+    "file": "entities/fact-gaussian-curve-performance.md"
+  },
+  {
+    "id": "fact-loss-of-productivity",
+    "type": "entity",
+    "name": "fact_Loss_of_Productivity",
+    "displayFolder": "",
+    "file": "entities/fact-loss-of-productivity.md"
+  },
+  {
+    "id": "fact-metrics",
+    "type": "entity",
+    "name": "fact_Metrics",
+    "displayFolder": "",
+    "file": "entities/fact-metrics.md"
+  },
+  {
+    "id": "fact-mobile-limit",
+    "type": "entity",
+    "name": "fact_Mobile_Limit",
+    "displayFolder": "",
+    "file": "entities/fact-mobile-limit.md"
+  },
+  {
+    "id": "fact-monthly-viva-insights",
+    "type": "entity",
+    "name": "fact_Monthly_Viva_Insights",
+    "displayFolder": "",
+    "file": "entities/fact-monthly-viva-insights.md"
+  },
+  {
+    "id": "fact-okr-goals",
+    "type": "entity",
+    "name": "fact_OKR_Goals",
+    "displayFolder": "",
+    "file": "entities/fact-okr-goals.md"
+  },
+  {
+    "id": "fact-okr-key-results",
+    "type": "entity",
+    "name": "fact_OKR_Key_Results",
+    "displayFolder": "",
+    "file": "entities/fact-okr-key-results.md"
+  },
+  {
+    "id": "fact-okr-svg",
+    "type": "entity",
+    "name": "fact_OKR_SVG",
+    "displayFolder": "",
+    "file": "entities/fact-okr-svg.md"
+  },
+  {
+    "id": "fact-repayment-credit",
+    "type": "entity",
+    "name": "fact_Repayment_Credit",
+    "displayFolder": "",
+    "file": "entities/fact-repayment-credit.md"
+  },
+  {
+    "id": "fact-sick-leaves",
+    "type": "entity",
+    "name": "fact_Sick_Leaves",
+    "displayFolder": "",
+    "file": "entities/fact-sick-leaves.md"
+  },
+  {
+    "id": "fact-trs",
+    "type": "entity",
+    "name": "fact_TRS",
+    "displayFolder": "",
+    "file": "entities/fact-trs.md"
+  },
+  {
+    "id": "fact-trs-plan",
+    "type": "entity",
+    "name": "fact_TRS_Plan",
+    "displayFolder": "",
+    "file": "entities/fact-trs-plan.md"
+  },
+  {
+    "id": "fact-trs-plan-fact",
+    "type": "entity",
+    "name": "fact_TRS_plan_fact",
+    "displayFolder": "",
+    "file": "entities/fact-trs-plan-fact.md"
+  },
+  {
+    "id": "fact-vacancy",
+    "type": "entity",
+    "name": "fact_Vacancy",
+    "displayFolder": "",
+    "file": "entities/fact-vacancy.md"
+  },
+  {
+    "id": "fact-vacation",
+    "type": "entity",
+    "name": "fact_Vacation",
+    "displayFolder": "",
+    "file": "entities/fact-vacation.md"
+  },
+  {
+    "id": "fact-vacation-reserve",
+    "type": "entity",
+    "name": "fact_Vacation_Reserve",
+    "displayFolder": "",
+    "file": "entities/fact-vacation-reserve.md"
+  },
+  {
+    "id": "fact-viva-metrics",
+    "type": "entity",
+    "name": "fact_Viva_Metrics",
+    "displayFolder": "",
+    "file": "entities/fact-viva-metrics.md"
+  },
+  {
+    "id": "p-ac-loss-productivity",
+    "type": "entity",
+    "name": "p_AC.Loss_Productivity",
+    "displayFolder": "",
+    "file": "entities/p-ac-loss-productivity.md"
+  },
+  {
+    "id": "t-ac-burnout",
+    "type": "entity",
+    "name": "t_AC Burnout",
+    "displayFolder": "",
+    "file": "entities/t-ac-burnout.md"
+  },
+  {
+    "id": "t-flagdim",
+    "type": "entity",
+    "name": "t_FlagDim",
+    "displayFolder": "",
+    "file": "entities/t-flagdim.md"
+  },
+  {
+    "id": "t-hierarchytypes",
+    "type": "entity",
+    "name": "t_HierarchyTypes",
+    "displayFolder": "",
+    "file": "entities/t-hierarchytypes.md"
+  },
+  {
+    "id": "t-is-fired",
+    "type": "entity",
+    "name": "t_IS_FIRED",
+    "displayFolder": "",
+    "file": "entities/t-is-fired.md"
+  },
+  {
+    "id": "t-loss-productivity-metrics-by-persona",
+    "type": "entity",
+    "name": "t_Loss_Productivity_Metrics_by_Persona",
+    "displayFolder": "",
+    "file": "entities/t-loss-productivity-metrics-by-persona.md"
+  },
+  {
+    "id": "t-user-roles",
+    "type": "entity",
+    "name": "t_user_roles",
+    "displayFolder": "",
+    "file": "entities/t-user-roles.md"
+  },
+  {
+    "id": "measures",
+    "type": "entity",
+    "name": "_Measures",
+    "displayFolder": "",
+    "file": "entities/measures.md"
+  }
+]

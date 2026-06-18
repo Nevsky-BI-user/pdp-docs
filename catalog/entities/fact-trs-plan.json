@@ -1,0 +1,348 @@
+{
+  "id": "fact-trs-plan",
+  "type": "entity",
+  "name": "fact_TRS_Plan",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_TRS_Plan",
+  "sourceTables": [
+    "DM.vw_R27_fact_TRS_Plan_PDP"
+  ],
+  "columns": [
+    {
+      "name": "PERIOD",
+      "dataType": "dateTime",
+      "source": "PERIOD",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_NAME",
+      "dataType": "string",
+      "source": "EMPLOYEE_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_ACTIVE",
+      "dataType": "boolean",
+      "source": "IS_ACTIVE",
+      "isCalculated": false
+    },
+    {
+      "name": "ACCRUAL_ORG_CODE",
+      "dataType": "string",
+      "source": "ACCRUAL_ORG_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "ACCRUAL_ORG_NAME",
+      "dataType": "string",
+      "source": "ACCRUAL_ORG_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "CATEGORY_NAME",
+      "dataType": "string",
+      "source": "CATEGORY_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_ACTUAL",
+      "dataType": "boolean",
+      "source": "IS_ACTUAL",
+      "isCalculated": false
+    },
+    {
+      "name": "START_DATE",
+      "dataType": "dateTime",
+      "source": "START_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "END_DATE",
+      "dataType": "dateTime",
+      "source": "END_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "TARIFF_RATE_TYPE_CODE",
+      "dataType": "string",
+      "source": "TARIFF_RATE_TYPE_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "CURR_TARIFF_RATE_TYPE_CODE",
+      "dataType": "string",
+      "source": "CURR_TARIFF_RATE_TYPE_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "MIN_TARIFF_RATE",
+      "dataType": "double",
+      "source": "MIN_TARIFF_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "CALC_TYPE_CODE",
+      "dataType": "string",
+      "source": "CALC_TYPE_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "BONUS_YEAR_SALARY_CNT",
+      "dataType": "double",
+      "source": "BONUS_YEAR_SALARY_CNT",
+      "isCalculated": false
+    },
+    {
+      "name": "BONUS_QUARTER_SALARY_CNT",
+      "dataType": "double",
+      "source": "BONUS_QUARTER_SALARY_CNT",
+      "isCalculated": false
+    },
+    {
+      "name": "BONUS_MONTH_SALARY_CNT",
+      "dataType": "double",
+      "source": "BONUS_MONTH_SALARY_CNT",
+      "isCalculated": false
+    },
+    {
+      "name": "INIT_PAYMENT_PLAN_SUM",
+      "dataType": "double",
+      "source": "INIT_PAYMENT_PLAN_SUM",
+      "isCalculated": false
+    },
+    {
+      "name": "ACCRUAL_ORG_BASE_CODE",
+      "dataType": "string",
+      "source": "ACCRUAL_ORG_BASE_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "PAYMENT_PLAN_SUM",
+      "dataType": "double",
+      "source": "PAYMENT_PLAN_SUM",
+      "isCalculated": false
+    },
+    {
+      "name": "FTE_FACT",
+      "dataType": "double",
+      "source": "FTE_FACT",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_ID",
+      "dataType": "string",
+      "source": "EMPLOYEE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_ID",
+      "dataType": "string",
+      "source": "ORGANIZATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_ID",
+      "dataType": "string",
+      "source": "JOB_TITLE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "ACCRUAL_ORG_BASE_MEASURE_ID",
+      "dataType": "string",
+      "source": "ACCRUAL_ORG_BASE_MEASURE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "ACCRUAL_ORG_ADD_MEASURE_ID",
+      "dataType": "string",
+      "source": "ACCRUAL_ORG_ADD_MEASURE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "ACCRUAL_ORG_BASE_ID",
+      "dataType": "string",
+      "source": "ACCRUAL_ORG_BASE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "ACCRUAL_ORG_ADD_ID",
+      "dataType": "string",
+      "source": "ACCRUAL_ORG_ADD_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_TYPE_ID",
+      "dataType": "string",
+      "source": "EMPLOYMENT_TYPE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "BONES_SIZE",
+      "dataType": "double",
+      "source": "BONES_SIZE",
+      "isCalculated": false
+    },
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CATEGORY_DETAIL",
+      "dataType": "string",
+      "source": "POSITION_CATEGORY_DETAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_KEY",
+      "dataType": "string",
+      "source": "STATUS_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_ON_POSITION_KEY",
+      "dataType": "string",
+      "source": "OFFICE_ON_POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_KEY",
+      "dataType": "string",
+      "source": "POSITION_KEY",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_Person",
+      "fromColumn": "DIVISION_PERSON_ID",
+      "toColumn": "PERSON_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Unit",
+      "fromColumn": "DIVISION_PERSON_ID",
+      "toColumn": "UNIT_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Admin_OS",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position_Category",
+      "fromColumn": "POSITION_CATEGORY_DETAIL",
+      "toColumn": "Position_Category_Detail",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employment_Type",
+      "fromColumn": "EMPLOYMENT_TYPE_ID",
+      "toColumn": "EMPLOYMENT_TYPE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Office",
+      "fromColumn": "OFFICE_ON_POSITION_KEY",
+      "toColumn": "OFFICE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employee_Status",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position",
+      "fromColumn": "POSITION_KEY",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_TRS_categories",
+      "fromColumn": "ACCRUAL_ORG_NAME",
+      "toColumn": "TRS_CATEGORY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Date",
+      "fromColumn": "PERIOD",
+      "toColumn": "Date",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [
+    "'PP.Роз''їзний характер роботи, %'",
+    "'PP.Роз''їзний характер роботи, грн'",
+    "GP.Виконання плану ФОП YTD (%)",
+    "GP.Доля команди з доплатою за роз’їзний характер роботи, %",
+    "GP.Доля команди з доплатою за шкідливі умови праці, %",
+    "GP.Доля команди з квартальню премією, %",
+    "GP.Доля команди з навчанням, %",
+    "GP.Доля команди з премією за місяць, %",
+    "GP.Доля команди з річним бонусом, %",
+    "GP.Доля команди з щомісячною премією, %",
+    "GP.Доля команди із премією за внутрішнє тренерство, %",
+    "GP.Доля команди із премією за програмою «Приведи друга», %",
+    "GP.Доля учасників команди із зміною зарплати (окладу), %",
+    "GP.К-ть співробітників, що отримують виплати на оренду житла",
+    "GP.Опція по авто, %",
+    "GP.Різниця фіксованої винагороди (план).Максимальний рівень",
+    "GP.Різниця фіксованої винагороди (план).Мінімальний рівень",
+    "GP.Середня зарплата (оклад)",
+    "GP.Середні витрати на оренду житла",
+    "GP.Середній % зростання зарплати (окладу) за 12 міс",
+    "GP.Середній розмір доплати за роз’їзний характер роботи",
+    "GP.Середній розмір доплати за шкідливі умови праці",
+    "GP.Середній розмір квартальної премії",
+    "GP.Середній розмір премії за внутрішнє тренерство",
+    "GP.Середній розмір премії за місяць",
+    "GP.Середній розмір річного бонусу",
+    "GP.Середній розмір щомісячної премії",
+    "GP.Середній цільовий розмір річної винагороди, до оподаткування",
+    "PP.Доплата за шкідливі умови праці, %",
+    "PP.Доплата за шкідливі умови праці,грн",
+    "PP.Квартальна премія",
+    "PP.Квартальна премія окладів",
+    "PP.Оклад по годинах",
+    "PP.Оклад по днях",
+    "PP.Оренда житла",
+    "PP.Премія за місяць, %",
+    "PP.Премія за місяць, грн",
+    "PP.Розмір фіксованої винагороди плановий, за місяць ПОТОЧНИЙ",
+    "PP.Річний бонус",
+    "PP.Річний бонус окладів",
+    "PP.Цільовий розмір річної винагороди, до оподаткування",
+    "PP.Щомісячна премія",
+    "PP.Щомісячна премія окладів"
+  ],
+  "requirementRefs": [
+    "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника",
+    "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_TRS_Plan.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

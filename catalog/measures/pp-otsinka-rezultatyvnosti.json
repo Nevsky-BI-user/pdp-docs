@@ -1,0 +1,46 @@
+{
+  "id": "pp-otsinka-rezultatyvnosti",
+  "type": "measure",
+  "name": "PP.Оцінка результативності",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Результативність та оцінка\\Результативність",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "[PP.Оцінка результативності.Керівником] + [PP.Оцінка результативності.Самооцінка]",
+  "dependencies": {
+    "measures": [
+      "PP.Оцінка результативності.Керівником",
+      "PP.Оцінка результативності.Самооцінка"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "Оцінка результативності",
+    "purpose": "",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "rezultatyvnist",
+    "rezultatyvnist-ta-otsinka"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

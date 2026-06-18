@@ -1,0 +1,42 @@
+{
+  "id": "gp-okp-color-serednia-otsinka-komady-tekstove-pole",
+  "type": "measure",
+  "name": "GP.OKP.Color.Середня оцінка комади.Текстове поле",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\ОКР",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SWITCH(\n    [GP.ОКР.Середня оцінка команди.Колір],\n    \"Супер зелений\", \"#006B3D\",\n    \"Зелений\", \"#028A2E\",\n    \"Жовто-зелений\", \"#8BA620\",\n    \"Жовтий\", \"#C4A800\",\n    \"Жовто-червоний\", \"#CC6500\",\n    \"Червоний\", \"#C42A0D\",\n    \"#252423\"\n)",
+  "dependencies": {
+    "measures": [
+      "GP.ОКР.Середня оцінка команди.Колір"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "group-profile",
+    "main",
+    "okr",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,34 @@
+{
+  "id": "cg-event-types",
+  "type": "entity",
+  "name": "CG_Event_Types",
+  "definition": "",
+  "server": "",
+  "db": "",
+  "powerQuery": "",
+  "sourceTables": [],
+  "columns": [
+    {
+      "name": "Стовпець групи обчислення",
+      "dataType": "string",
+      "source": "Name",
+      "isCalculated": false
+    },
+    {
+      "name": "Порядковий",
+      "dataType": "int64",
+      "source": "Ordinal",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [],
+  "relatedMeasures": [],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/CG_Event_Types.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,53 @@
+{
+  "id": "ac-burnout-risk-zastosuvaty-vybir",
+  "type": "measure",
+  "name": "AC.Burnout_risk.Застосувати вибір",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _v = \nSWITCH(\n\tSELECTEDVALUE('t_IS_FIRED'[IS_FIRED]),\n\t1,\n\tCALCULATE(\n\t\tCOUNTROWS(\n\t\t\tVALUES('fact_Burnout_Indicators'[USER_ACCESS_ID])\n\t\t),\n\t\t'fact_Burnout_Indicators'[IS_FIRED] = TRUE()\n\t),\n\t0,\n\tSWITCH(\n\t\tSELECTEDVALUE('t_HierarchyTypes'[HierarchyType]),\n\t\t\"Hierarchy\",\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(VALUES('fact_Burnout_Indicators'[USER_ACCESS_ID])),\n\t\t\t'fact_Burnout_Indicators'[IS_FIRED] = FALSE()\n\t\t),\n\t\t\"Lead Team\",\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(VALUES('fact_Burnout_Indicators'[USER_ACCESS_ID])),\n\t\t\t'fact_Burnout_Indicators'[IS_FIRED] = FALSE(),\n\t\t\tTREATAS(VALUES(dim_Admin_LT_OS[USER_ACCESS_ID]), 'fact_Burnout_Indicators'[USER_ACCESS_ID])\n\t\t)\n\t)\n)\nRETURN \n\t\"Застосувати вибір (\"& \n\t\tCOALESCE(\n\t\t\tTRIM(\n\t\t\t\tFORMAT(\n\t\t\t\t\tCOALESCE(_v, 0),\n\t\t\t\t\t\"[uk-UA]# ##0\"\n\t\t\t\t)\n\t\t\t),\n\t\t\t0\n\t\t) \n\t& \")\"",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Burnout_Indicators[IS_FIRED]",
+      "fact_Burnout_Indicators[USER_ACCESS_ID]",
+      "t_HierarchyTypes[HierarchyType]",
+      "t_IS_FIRED[IS_FIRED]"
+    ],
+    "tables": [
+      "fact_Burnout_Indicators",
+      "t_HierarchyTypes",
+      "t_IS_FIRED"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "HierarchyType",
+      "IS_FIRED",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "fact_Burnout_Indicators"
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "analytical-cases",
+    "burnout-risk",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

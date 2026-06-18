@@ -1,0 +1,42 @@
+{
+  "id": "pp-nastupnyk-dlia-roli",
+  "type": "measure",
+  "name": "PP.Наступник для ролі",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "\"В розробці\"",
+  "dependencies": {
+    "measures": [],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "Наступник для ролі",
+    "purpose": "В звіті будуть dummy дані, поки не побудовані відповідні вітрини, які є джерелом даних",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника"
+    ]
+  },
+  "tags": [
+    "main",
+    "pasport",
+    "pdp",
+    "personal-profile"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

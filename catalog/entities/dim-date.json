@@ -1,0 +1,294 @@
+{
+  "id": "dim-date",
+  "type": "entity",
+  "name": "dim_Date",
+  "definition": "",
+  "server": "",
+  "db": "",
+  "powerQuery": "dim_Date",
+  "sourceTables": [],
+  "columns": [
+    {
+      "name": "Date",
+      "dataType": "",
+      "source": "[Date]",
+      "isCalculated": false
+    },
+    {
+      "name": "Year",
+      "dataType": "",
+      "source": "[Year]",
+      "isCalculated": false
+    },
+    {
+      "name": "MonthNumber",
+      "dataType": "",
+      "source": "[MonthNumber]",
+      "isCalculated": false
+    },
+    {
+      "name": "MonthFull",
+      "dataType": "",
+      "source": "[MonthFull]",
+      "isCalculated": false
+    },
+    {
+      "name": "MonthAbbr",
+      "dataType": "",
+      "source": "[MonthAbbr]",
+      "isCalculated": false
+    },
+    {
+      "name": "WeekNumber",
+      "dataType": "",
+      "source": "[WeekNumber]",
+      "isCalculated": false
+    },
+    {
+      "name": "DayOfMonth",
+      "dataType": "",
+      "source": "[DayOfMonth]",
+      "isCalculated": false
+    },
+    {
+      "name": "DayOfWeek",
+      "dataType": "",
+      "source": "[DayOfWeek]",
+      "isCalculated": false
+    },
+    {
+      "name": "DayOfWeekFull",
+      "dataType": "",
+      "source": "[DayOfWeekFull]",
+      "isCalculated": false
+    },
+    {
+      "name": "DayOfWeekAbbr",
+      "dataType": "",
+      "source": "[DayOfWeekAbbr]",
+      "isCalculated": false
+    },
+    {
+      "name": "QuarterAbbr",
+      "dataType": "",
+      "source": "[QuarterAbbr]",
+      "isCalculated": false
+    },
+    {
+      "name": "Quarter",
+      "dataType": "",
+      "source": "[Quarter]",
+      "isCalculated": false
+    },
+    {
+      "name": "QuarterNumber",
+      "dataType": "",
+      "source": "[QuarterNumber]",
+      "isCalculated": false
+    },
+    {
+      "name": "FullDate",
+      "dataType": "",
+      "source": "[FullDate]",
+      "isCalculated": false
+    },
+    {
+      "name": "FullDateNu",
+      "dataType": "",
+      "source": "[FullDateNu]",
+      "isCalculated": false
+    },
+    {
+      "name": "Quarter and Year",
+      "dataType": "",
+      "source": "[Quarter and Year]",
+      "isCalculated": false
+    },
+    {
+      "name": "MonthAndYearAbbr",
+      "dataType": "",
+      "source": "[MonthAndYearAbbr]",
+      "isCalculated": false
+    },
+    {
+      "name": "SortMonth&Year",
+      "dataType": "",
+      "source": "[SortMonth&Year]",
+      "isCalculated": false
+    },
+    {
+      "name": "Week&Year",
+      "dataType": "",
+      "source": "[Week&Year]",
+      "isCalculated": false
+    },
+    {
+      "name": "Week&YearIndex",
+      "dataType": "",
+      "source": "[Week&YearIndex]",
+      "isCalculated": false
+    },
+    {
+      "name": "TillToday",
+      "dataType": "",
+      "source": "[TillToday]",
+      "isCalculated": false
+    },
+    {
+      "name": "Date d mmmm",
+      "dataType": "",
+      "source": "[Date d mmmm]",
+      "isCalculated": false
+    },
+    {
+      "name": "SortDate d mmmm",
+      "dataType": "",
+      "source": "[SortDate d mmmm]",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "fact_TRS",
+      "fromColumn": "PERIOD",
+      "toColumn": "Date",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Vacation_Reserve",
+      "fromColumn": "PERIOD",
+      "toColumn": "Date",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Vacation",
+      "fromColumn": "PERIOD",
+      "toColumn": "Date",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_TRS_Plan",
+      "fromColumn": "PERIOD",
+      "toColumn": "Date",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Mobile_Limit",
+      "fromColumn": "PERIOD",
+      "toColumn": "Date",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Sick_Leaves",
+      "fromColumn": "period",
+      "toColumn": "Date",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Repayment_Credit",
+      "fromColumn": "PERIOD",
+      "toColumn": "Date",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Monthly_Viva_Insights",
+      "fromColumn": "PERIOD",
+      "toColumn": "Date",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Burnout_Indicators",
+      "fromColumn": "DISMISSAL_DATE",
+      "toColumn": "Date",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_OKR_Goals",
+      "fromColumn": "EXEC_DATE",
+      "toColumn": "Date",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Employee_Performance_Total",
+      "fromColumn": "DATE_ID",
+      "toColumn": "Date",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_OKR_SVG",
+      "fromColumn": "PLAN_DATE",
+      "toColumn": "Date",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Employee_History_Position",
+      "fromColumn": "PERIOD",
+      "toColumn": "Date",
+      "role": "to"
+    }
+  ],
+  "relatedMeasures": [
+    "GP.Доля команди з позикою на ноутбук (%) (діюча)",
+    "GP.Доля команди з соціальними виплатами, %",
+    "GP.Доля команди із доплатою за наставництво, %",
+    "GP.Доля команди із премією МХП Зірки, %",
+    "GP.Доля команди із премією за Банк ідей, %",
+    "GP.Доля команди із премією за збереження та розширення земельного банку, %",
+    "GP.Доля команди із премією за програмою «Приведи друга», %",
+    "GP.Доля команди із проектним бонусом за стратегічні ІТ проєкти, %",
+    "GP.Доля команди із разовою премією за програмою визнання, %",
+    "GP.Доля команди із інвестиційним проєктним бонусом, %",
+    "GP.Доля учасників команди із зміною зарплати (окладу), %",
+    "GP.Середня заробітна плата",
+    "GP.Середній % зростання зарплати (окладу) за 12 міс",
+    "GP.Середній розмір доплати за наставництво",
+    "GP.Середній розмір премії МХП Зірки",
+    "GP.Середній розмір премії за Банк ідей",
+    "GP.Середній розмір премії за збереження та розширення земельного банку",
+    "GP.Середній розмір премії за програмою «Приведи друга»",
+    "GP.Середній розмір проектного бонус за стратегічні ІТ проєкти",
+    "GP.Середній розмір разової премії за програмою визнання",
+    "GP.Середній розмір соціальної підтримки",
+    "GP.Середній розмір інвестиційного проєктного бонусу",
+    "PP.SVG.OKR.Загальна оцінка",
+    "PP.Y_axis_rcd",
+    "PP.history_position_maxd",
+    "PP.min_Y_axis_rcd",
+    "PP.Інвестиційний проєктний бонус",
+    "PP.Інші доплати",
+    "PP.Доплата за наставництво",
+    "PP.Доплати за суміщення",
+    "PP.Квартальні премії факт",
+    "PP.Колір шапки тултіпу",
+    "PP.Місяці без відпустки",
+    "PP.Наставництво",
+    "PP.Позика (активна).Сума",
+    "PP.Позика на ноутбук",
+    "PP.Поточний РЦД",
+    "PP.Премія МХП Зірки",
+    "PP.Премія за Банк ідей",
+    "PP.Премія за внутрішнє тренерство",
+    "PP.Премія за збереження та розширення земельного банку",
+    "PP.Премія за програмою «Приведи друга»",
+    "PP.Приріст РЦД",
+    "PP.Приріст окладу",
+    "PP.Проектний бонус за стратегічні ІТ проєкти",
+    "PP.Разова премія за програмою визнання",
+    "PP.Розмір фіксованої винагороди плановий, за місяць СТАНОМ НА РІК НАЗАД",
+    "PP.Річні бонуси",
+    "PP.Соціальна підтримка",
+    "PP.Цільовий розмір річної винагороди, до оподаткування (12 місяців назад)",
+    "PP.Щоквартальні премії в середньому за квартал",
+    "PP.Щомісячні премії накопичувально",
+    "PP.Щомісячні премії середньомісячно",
+    "date_filters_check"
+  ],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/dim_Date.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

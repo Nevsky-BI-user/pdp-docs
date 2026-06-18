@@ -1,0 +1,314 @@
+{
+  "id": "dim-person",
+  "type": "entity",
+  "name": "dim_Person",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "dim_Person",
+  "sourceTables": [
+    "DM.vw_R27_dim_Person_PDP"
+  ],
+  "columns": [
+    {
+      "name": "ID",
+      "dataType": "string",
+      "source": "ID",
+      "isCalculated": false
+    },
+    {
+      "name": "PERSON_KEY",
+      "dataType": "string",
+      "source": "PERSON_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "FULL_NAME",
+      "dataType": "string",
+      "source": "FULL_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "FIRST_NAME",
+      "dataType": "string",
+      "source": "FIRST_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "LAST_NAME",
+      "dataType": "string",
+      "source": "LAST_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "SHORT_NAME",
+      "dataType": "string",
+      "source": "SHORT_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_CODE",
+      "dataType": "string",
+      "source": "EMPLOYEE_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "TAX_CODE",
+      "dataType": "string",
+      "source": "TAX_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "GENDER",
+      "dataType": "string",
+      "source": "GENDER",
+      "isCalculated": false
+    },
+    {
+      "name": "DATE_OF_BIRTH",
+      "dataType": "dateTime",
+      "source": "DATE_OF_BIRTH",
+      "isCalculated": false
+    },
+    {
+      "name": "INDIVIDUAL_CODE",
+      "dataType": "string",
+      "source": "INDIVIDUAL_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "PHONE_PERSONAL",
+      "dataType": "string",
+      "source": "PHONE_PERSONAL",
+      "isCalculated": false
+    },
+    {
+      "name": "PHONE_WORK",
+      "dataType": "string",
+      "source": "PHONE_WORK",
+      "isCalculated": false
+    },
+    {
+      "name": "EMAIL",
+      "dataType": "string",
+      "source": "EMAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "EDUCATION",
+      "dataType": "string",
+      "source": "EDUCATION",
+      "isCalculated": false
+    },
+    {
+      "name": "EDUCATION_LVL",
+      "dataType": "string",
+      "source": "EDUCATION_LVL",
+      "isCalculated": false
+    },
+    {
+      "name": "UNIVERSITY",
+      "dataType": "string",
+      "source": "UNIVERSITY",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_TG_SUBSCRIBER",
+      "dataType": "int64",
+      "source": "IS_TG_SUBSCRIBER",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_VETERAN_NEWMAN",
+      "dataType": "int64",
+      "source": "IS_VETERAN_NEWMAN",
+      "isCalculated": false
+    },
+    {
+      "name": "WAR_UBD",
+      "dataType": "string",
+      "source": "WAR_UBD",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_VETERAN",
+      "dataType": "int64",
+      "source": "IS_VETERAN",
+      "isCalculated": false
+    },
+    {
+      "name": "ADDRESS_REGISTRATION",
+      "dataType": "string",
+      "source": "ADDRESS_REGISTRATION",
+      "isCalculated": false
+    },
+    {
+      "name": "ADDRESS_FACT",
+      "dataType": "string",
+      "source": "ADDRESS_FACT",
+      "isCalculated": false
+    },
+    {
+      "name": "MARITAL_STATUS",
+      "dataType": "string",
+      "source": "MARITAL_STATUS",
+      "isCalculated": false
+    },
+    {
+      "name": "DISABILITY_PERIOD_DATE",
+      "dataType": "dateTime",
+      "source": "DISABILITY_PERIOD_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "URL_FOTO",
+      "dataType": "string",
+      "source": "URL_FOTO",
+      "isCalculated": false
+    },
+    {
+      "name": "FinalImage",
+      "dataType": "",
+      "source": "",
+      "isCalculated": true
+    },
+    {
+      "name": "DISABILITY_GROUP",
+      "dataType": "string",
+      "source": "DISABILITY_GROUP",
+      "isCalculated": false
+    },
+    {
+      "name": "DISABILITY_START_DATE",
+      "dataType": "dateTime",
+      "source": "DISABILITY_START_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "DISABILITY_COMMENT",
+      "dataType": "string",
+      "source": "DISABILITY_COMMENT",
+      "isCalculated": false
+    },
+    {
+      "name": "WORK_HOUR_START_TIME",
+      "dataType": "dateTime",
+      "source": "WORK_HOUR_START_TIME",
+      "isCalculated": false
+    },
+    {
+      "name": "WORK_HOUR_END_TIME",
+      "dataType": "dateTime",
+      "source": "WORK_HOUR_END_TIME",
+      "isCalculated": false
+    },
+    {
+      "name": "CHILDREN_UNDER_18_AMOUNT",
+      "dataType": "int64",
+      "source": "CHILDREN_UNDER_18_AMOUNT",
+      "isCalculated": false
+    },
+    {
+      "name": "CHILDREN_UNDER_14_AMOUNT",
+      "dataType": "int64",
+      "source": "CHILDREN_UNDER_14_AMOUNT",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "fact_Employee_List",
+      "fromColumn": "PERSON_KEY",
+      "toColumn": "PERSON_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_TRS",
+      "fromColumn": "PERSON_KEY",
+      "toColumn": "PERSON_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_TRS_Plan",
+      "fromColumn": "DIVISION_PERSON_ID",
+      "toColumn": "PERSON_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Vacation",
+      "fromColumn": "DIVISION_PERSON_ID",
+      "toColumn": "PERSON_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Vacation_Reserve",
+      "fromColumn": "DIVISION_PERSON_ID",
+      "toColumn": "PERSON_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Sick_Leaves",
+      "fromColumn": "person_key",
+      "toColumn": "PERSON_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Repayment_Credit",
+      "fromColumn": "PERSON_KEY",
+      "toColumn": "PERSON_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Mobile_Limit",
+      "fromColumn": "PERSON_KEY",
+      "toColumn": "PERSON_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Monthly_Viva_Insights",
+      "fromColumn": "PERSON_KEY",
+      "toColumn": "PERSON_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Metrics",
+      "fromColumn": "DIVISION_PERSON_ID",
+      "toColumn": "PERSON_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Burnout_Indicators",
+      "fromColumn": "EMPLOYEE_ID",
+      "toColumn": "EMPLOYEE_CODE",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Loss_of_Productivity",
+      "fromColumn": "EMPLOYEE_ID",
+      "toColumn": "PERSON_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Employee_Performance_Total",
+      "fromColumn": "EMPLOYEE_ID",
+      "toColumn": "PERSON_KEY",
+      "role": "to"
+    }
+  ],
+  "relatedMeasures": [
+    "GP.Доля заброньованих чоловіків(%)",
+    "GP.Доля чоловіків під ризиком мобілізації(%)",
+    "GP.Кількість Ветеранів",
+    "GP.Кількість чоловіків БЕЗ ризику мобілізації(%)",
+    "GP.Кількість чоловіків під ризиком мобілізації(%)",
+    "button_detalization.Personal_profile"
+  ],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/dim_Person.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

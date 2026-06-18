@@ -1,0 +1,42 @@
+{
+  "id": "pp-svg-okr-size",
+  "type": "measure",
+  "name": "PP.SVG.OKR.Size",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Паспорт\\OKR",
+  "formatString": "0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "LEN([PP.SVG.OKR.Детально])",
+  "dependencies": {
+    "measures": [
+      "PP.SVG.OKR.Детально"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "okr",
+    "pasport",
+    "pdp",
+    "personal-profile"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

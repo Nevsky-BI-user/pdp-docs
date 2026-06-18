@@ -1,0 +1,58 @@
+{
+  "id": "ac-br-stazh-na-posadi-ostannii",
+  "type": "measure",
+  "name": "AC.BR.Стаж на посаді (останній)",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _user = VALUES('fact_Burnout_Indicators'[USER_ACCESS_ID])\nVAR _seniority = \n\tCALCULATE(\n\t\tSELECTEDVALUE(fact_employee_seniority_by_month[seniority_LAST_POSITION_HIRE_DATE]),\n\t\tTREATAS(_user, 'fact_employee_seniority_by_month'[USER_ACCESS_ID])\n\t)\nVAR _years = ROUNDDOWN(_seniority/12,0)\nVAR _month = _seniority - _years *12\nVAR _res = \n\tIF(\n\t\tNOT ISBLANK( _seniority ),\n\t\tIF(\n\t\t\tNOT ISBLANK( _years ),\n\t\t\t_years & \" р.\"\n\t\t) & \" \" &\n\t\tIF(\n\t\t\tNOT ISBLANK( _month ) && _month <> 0,\n\t\t\t_month & \" міс.\"\n\t\t)\n\t)\nRETURN _res",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Burnout_Indicators[USER_ACCESS_ID]",
+      "fact_employee_seniority_by_month[USER_ACCESS_ID]",
+      "fact_employee_seniority_by_month[seniority_LAST_POSITION_HIRE_DATE]"
+    ],
+    "tables": [
+      "fact_Burnout_Indicators",
+      "fact_employee_seniority_by_month"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_employee_seniority_by_month_PDP"
+    ],
+    "sourceColumns": [
+      "USER_ACCESS_ID",
+      "seniority_LAST_POSITION_HIRE_DATE"
+    ],
+    "powerQuery": "fact_Burnout_Indicators"
+  },
+  "business": {
+    "definition": "seniority_LAST_POSITION_HIRE_DATE → Стаж на посаді",
+    "purpose": "Значення поля в місяцях потрібно перевести в роки та місяці. Наприклад, якшо seniority_LAST_POSITION_HIRE_DATE= 17, то в звіті треба відобразити 1 рік 5 місяців.",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "analytical-cases",
+    "burnout-risk",
+    "export",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

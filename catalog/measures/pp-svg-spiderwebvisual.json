@@ -1,0 +1,49 @@
+{
+  "id": "pp-svg-spiderwebvisual",
+  "type": "measure",
+  "name": "PP.SVG.SpiderwebVisual",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Паспорт\\Spider",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _Indicator1 = [PP.Якість результату виконаних завдань]\nVAR _Indicator2 = [PP.Виконання завдань у встановлені терміни]\nVAR _Indicator3 = [PP.Ініціативність при виконанні завдань]\nVAR _Indicator4 = [PP.Подолання перешкод при вирішенні проблем]\nVAR _Indicator5 = [PP.Прийняття відповідальності за отриманий результат]\nVAR _Indicator6 = [PP.Відповідність кількості виконаних завдань функціоналу]\nVAR _Indicator7 = [PP.Націленість на отримання результату]\nVAR _Indicator8 = [PP.Автономність при виконанні завдань]\n\nVAR __boxSize   = 360\nVAR __radius    = 100\nVAR __offset    = 35\nVAR __centerX   = __boxSize / 2\nVAR __centerY   = __boxSize / 2\n\nVAR __axisColor       = \"#CCCCCC\"\nVAR __axisLabelColor  = \"#333333\"\nVAR __polygonColor    = \"#00A3E0\"\nVAR __polygonFill     = \"rgba(0,163,224,0.25)\"\nVAR __fontFamily      = \"Segoe UI\"\n\nVAR __valuesTable =\n\tUNION(\n\t\tROW(\"IndicatorName\", \"Якість результату виконаних завдань\",              \"Value\", _Indicator1, \"MaxValue\", 5, \"@idx\", 0),\n\t\tROW(\"IndicatorName\", \"Виконання завдань у встановлені терміни\",          \"Value\", _Indicator2, \"MaxValue\", 5, \"@idx\", 1),\n\t\tROW(\"IndicatorName\", \"Ініціативність при виконанні завдань\",             \"Value\", _Indicator3, \"MaxValue\", 5, \"@idx\", 2),\n\t\tROW(\"IndicatorName\", \"Подолання перешкод при вирішенні проблем\",         \"Value\", _Indicator4, \"MaxValue\", 5, \"@idx\", 3),\n\t\tROW(\"IndicatorName\", \"Прийняття відповідальності за отриманий результат\",\"Value\", _Indicator5, \"MaxValue\", 5, \"@idx\", 4),\n\t\tROW(\"IndicatorName\", \"Відповідність кількості виконаних завдань функціоналу\", \"Value\", _Indicator6, \"MaxValue\", 5, \"@idx\", 5),\n\t\tROW(\"IndicatorName\", \"Націленість на отримання результату\",              \"Value\", _Indicator7, \"MaxValue\", 5, \"@idx\", 6),\n\t\tROW(\"IndicatorName\", \"Автономність при виконанні завдань\",               \"Value\", _Indicator8, \"MaxValue\", 5, \"@idx\", 7)\n\t)\n\nVAR __count     = COUNTROWS(__valuesTable)\nVAR __angleStep = 360.0 / __count\n\nVAR __numCircles = 5\nVAR __rings =\n\tCONCATENATEX(\n\t\tGENERATESERIES(1, __numCircles),\n\t\tVAR ringIndex = [Value]\n\t\tVAR r = (__radius / __numCircles) * ringIndex\n\t\tVAR ringPoints =\n\t\t\tCONCATENATEX(\n\t\t\t\tSELECTCOLUMNS(__valuesTable, \"@idx\", [@idx]),\n\t\t\t\tVAR __angDeg = [@idx] * __angleStep - 90\n\t\t\t\tVAR __angRad = RADIANS(__angDeg)\n\t\t\t\tVAR x = __centerX + r * COS(__angRad)\n\t\t\t\tVAR y = __centerY + r * SIN(__angRad)\n\t\t\t\tRETURN x & \",\" & y,\n\t\t\t\t\" \"\n\t\t\t)\n\t\tRETURN\n\t\t\t\"<polygon points='\" & ringPoints \n\t\t\t& \"' fill='none' stroke='\" & __axisColor \n\t\t\t& \"' stroke-width='1' />\",\n\t\t\"\"\n\t)\n\nVAR __axes =\n\tCONCATENATEX(\n\t\tSELECTCOLUMNS(__valuesTable, \"@idx\", [@idx]),\n\t\tVAR __angleDeg = [@idx] * __angleStep - 90\n\t\tVAR __angleRad = RADIANS(__angleDeg)\n\t\tVAR x2 = __centerX + __radius * COS(__angleRad)\n\t\tVAR y2 = __centerY + __radius * SIN(__angleRad)\n\t\tRETURN\n\t\t\t\"<line x1='\" & __centerX & \"' y1='\" & __centerY \n\t\t\t& \"' x2='\" & x2 & \"' y2='\" & y2 \n\t\t\t& \"' stroke='\" & __axisColor & \"' stroke-width='1' />\",\n\t\t\"\"\n\t)\n\nVAR __polygonPoints =\n\tCONCATENATEX(\n\t\tSELECTCOLUMNS(__valuesTable, \"@idx\", [@idx], \"@Val\",[Value], \"@Max\",[MaxValue]),\n\t\tVAR __angleDeg = [@idx] * __angleStep - 90\n\t\tVAR __angleRad = RADIANS(__angleDeg)\n\t\tVAR ratio = DIVIDE([@Val], [@Max], 0)\n\t\tVAR rVal = ratio * __radius\n\t\tVAR px = __centerX + rVal * COS(__angleRad)\n\t\tVAR py = __centerY + rVal * SIN(__angleRad)\n\t\tRETURN px & \",\" & py,\n\t\t\" \"\n\t)\nVAR __polygonSVG =\n\t\"<polygon points='\" & __polygonPoints \n\t& \"' fill='\" & __polygonFill \n\t& \"' stroke='\" & __polygonColor \n\t& \"' stroke-width='2' />\"\n\nVAR __dataPoints =\n\tCONCATENATEX(\n\t\tSELECTCOLUMNS(__valuesTable, \"@idx\",[@idx], \"@Val\",[Value], \"@Max\",[MaxValue]),\n\t\tVAR __angleDeg = [@idx] * __angleStep - 90\n\t\tVAR __angleRad = RADIANS(__angleDeg)\n\t\tVAR ratio = DIVIDE([@Val], [@Max], 0)\n\t\tVAR rVal = ratio * __radius\n\t\tVAR px = __centerX + rVal * COS(__angleRad)\n\t\tVAR py = __centerY + rVal * SIN(__angleRad)\n\t\tRETURN\n\t\t\t\"<circle cx='\" & px & \"' cy='\" & py & \"' r='3' fill='\" & __polygonColor & \"' />\",\n\t\t\"\"\n\t)\n\nVAR __labels =\n\tCONCATENATEX(\n\t\tSELECTCOLUMNS(__valuesTable, \"@idx\", [@idx], \"@Ind\", [IndicatorName], \"@Val\", [Value]),\n\t\tVAR __angleDeg = [@idx] * __angleStep - 90\n\t\tVAR __angleRad = RADIANS(__angleDeg)\n\t\tVAR baseLX = __centerX + (__radius + __offset) * COS(__angleRad)\n\t\tVAR baseLY = __centerY + (__radius + __offset) * SIN(__angleRad)\n\n\t\tVAR lx = baseLX\n\t\tVAR ly = baseLY\n\n\t\tVAR nameLine1 = SWITCH([@Ind],\n\t\t\t\"Якість результату виконаних завдань\", \"Якість\",\n\t\t\t\"Виконання завдань у встановлені терміни\", \"Виконання\",\n\t\t\t\"Ініціативність при виконанні завдань\", \"Ініціативність\",\n\t\t\t\"Подолання перешкод при вирішенні проблем\", \"Подолання\",\n\t\t\t\"Прийняття відповідальності за отриманий результат\", \"Відповідальність\",\n\t\t\t\"Відповідність кількості виконаних завдань функціоналу\", \"Відповідність\",\n\t\t\t\"Націленість на отримання результату\", \"Націленість\",\n\t\t\t\"Автономність при виконанні завдань\", \"Автономність\",\n\t\t\t[@Ind]\n\t\t)\n\t\tVAR nameLine2 = SWITCH([@Ind],\n\t\t\t\"Якість результату виконаних завдань\", \"результату\",\n\t\t\t\"Виконання завдань у встановлені терміни\", \"в терміни\",\n\t\t\t\"Ініціативність при виконанні завдань\", \"\",\n\t\t\t\"Подолання перешкод при вирішенні проблем\", \"перешкод\",\n\t\t\t\"Прийняття відповідальності за отриманий результат\", \"\",\n\t\t\t\"Відповідність кількості виконаних завдань функціоналу\", \"функціоналу\",\n\t\t\t\"Націленість на отримання результату\", \"на результат\",\n\t\t\t\"Автономність при виконанні завдань\", \"\",\n\t\t\tBLANK()\n\t\t)\n\n\t\tRETURN\n\t\t\t\"<text x='\" & lx & \"' y='\" & ly & \"' fill='\" & __axisLabelColor \n\t\t\t& \"' font-family='\" & __fontFamily & \"' text-anchor='middle' font-size='10'>\"\n\t\t\t\t& \"<tspan x='\" & lx & \"' dy='0em'>\" & nameLine1 & \"</tspan>\" &\n\t\t\t\tIF(nameLine2 <> BLANK() && nameLine2 <> \"\",\n\t\t\t\t\t\"<tspan x='\" & lx & \"' dy='1.2em'>\" & nameLine2 & \"</tspan>\",\n\t\t\t\t\t\"\"\n\t\t\t\t) &\n\t\t\t\t\"<tspan x='\" & lx & \"' dy='1.2em'>\" & FORMAT([@Val], \"0.0\") & \"</tspan>\" &\n\t\t\t\"</text>\",\n\t\t\"\"\n\t)\n\nVAR __svgContent =\n\t\"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 \" \n\t\t& __boxSize & \" \" & __boxSize & \"'>\" &\n\t\t__rings &\n\t\t__axes &\n\t\t__polygonSVG &\n\t\t__dataPoints &\n\t\t__labels &\n\t\"</svg>\"\n\nRETURN __svgContent",
+  "dependencies": {
+    "measures": [
+      "PP.Ініціативність при виконанні завдань",
+      "PP.Автономність при виконанні завдань",
+      "PP.Виконання завдань у встановлені терміни",
+      "PP.Відповідність кількості виконаних завдань функціоналу",
+      "PP.Націленість на отримання результату",
+      "PP.Подолання перешкод при вирішенні проблем",
+      "PP.Прийняття відповідальності за отриманий результат",
+      "PP.Якість результату виконаних завдань"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "pasport",
+    "pdp",
+    "personal-profile",
+    "spider"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

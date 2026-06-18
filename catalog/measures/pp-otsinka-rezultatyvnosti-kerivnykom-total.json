@@ -1,0 +1,57 @@
+{
+  "id": "pp-otsinka-rezultatyvnosti-kerivnykom-total",
+  "type": "measure",
+  "name": "PP.Оцінка результативності.Керівником.Total",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Результативність та оцінка\\Результативність",
+  "formatString": "#,0.00",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "CALCULATE(AVERAGE('fact_Employee_Performance_Total'[General_Performance_Desc_Rate]))",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_Performance_Total[General_Performance_Desc_Rate]"
+    ],
+    "tables": [
+      "fact_Employee_Performance_Total"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_Employee_Performance_General_PBI"
+    ],
+    "sourceColumns": [
+      "General_Performance_Desc_Rate"
+    ],
+    "powerQuery": "fact_Employee_Performance_Total"
+  },
+  "business": {
+    "definition": "General_Performance_Desc_Rate → Бал оцінки результативності; General_Performance_Desc_Rate → Загальна оцінка; General_Performance_Desc_Rate → Загальна оцінка співробітника за останній період (рік); General_Performance_Desc_Rate → Загальна оцінка співробітника за передостанній період (рік); General_Performance_Desc_Rate → Остання доступна оцінка керівника,  бал",
+    "purpose": "Останнє НЕ пусте актуальне значення на дату (date) поточного запису Останнє НЕ пусте актуальне значення на дату (date) поточного запису. Відбираємо один будь-який рядок по даті запуску форми оцінювання. Якщо у працівника є дві оцінки (форми) за один період, від адміністративного та функціонального керівника, то потрібно вивести середньоарифметичне значення",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/ТЗ-на-побудову-візуала-Павутинка-по-оцінці-результативності-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "rezultatyvnist",
+    "rezultatyvnist-ta-otsinka"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

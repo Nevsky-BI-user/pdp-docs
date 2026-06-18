@@ -1,0 +1,57 @@
+{
+  "id": "t-loss-productivity-metrics-by-persona",
+  "type": "entity",
+  "name": "t_Loss_Productivity_Metrics_by_Persona",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "t_Loss_Productivity_Metrics_by_Persona",
+  "sourceTables": [
+    "DWH.t_SPO_HR_Person_Matrix_with_Coefficient"
+  ],
+  "columns": [
+    {
+      "name": "SubPerson",
+      "dataType": "string",
+      "source": "SubPerson",
+      "isCalculated": false
+    },
+    {
+      "name": "Metric_Name",
+      "dataType": "string",
+      "source": "Metric_Name",
+      "isCalculated": false
+    },
+    {
+      "name": "Value",
+      "dataType": "string",
+      "source": "Value",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [],
+  "relatedMeasures": [
+    "AC.Switch.1:1 в сер. на 1 підлеглого, год.",
+    "AC.Switch.Інтервал взаємодії (Viva), год. в день",
+    "AC.Switch.Інтервал взаємодії Тренд (%)",
+    "AC.Switch.Агрегований % непродуктинвих підлеглих для керівників",
+    "AC.Switch.Доля взаємодії (Viva) в інтервалі (%)",
+    "AC.Switch.Доля днів польових робіт (%)",
+    "AC.Switch.Перепрацювання (Viva)",
+    "AC.Switch.Плинність % по вертикалі",
+    "AC.Switch.Результативність по KPI (%)",
+    "AC.Switch.Тренд OKR (%)",
+    "AC.Switch.Тренд Оцінки рез-ті (%)",
+    "AC.Switch.Тренд Результативності по KPI (%)",
+    "AC.Switch.Чистий час в офісі Тренд (%)",
+    "AC.Switch.Чистий час в офісі, год."
+  ],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/t_Loss_Productivity_Metrics_by_Persona.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

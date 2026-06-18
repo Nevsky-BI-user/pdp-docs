@@ -1,0 +1,62 @@
+{
+  "id": "pp-ryzyk-vyd-vidstrochky",
+  "type": "measure",
+  "name": "PP.Ризик.Вид відстрочки",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Паспорт\\Ризики",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _employee_id = SELECTEDVALUE('dim_Admin_OS'[EMPLOYEE_ID])\nVAR _reason =\n\tCALCULATE(\n\t\tSELECTEDVALUE('fact_Employee_List'[DEFERMENT_REASON]),\n\t\t'fact_Employee_List'[EMPLOYEE_ID] = _employee_id\n\t)\nVAR _atRisk =\n\tCALCULATE(\n\t\tSELECTEDVALUE('fact_Employee_List'[IS_AT_RISK]),\n\t\t'fact_Employee_List'[EMPLOYEE_ID] = _employee_id\n\t)\nRETURN\n\tSWITCH(\n\t\tTRUE(),\n\t\tNOT ISBLANK(_reason), _reason,\n\t\t_atRisk = 1, \"Під ризиком мобілізації\",\n\t\t\"Дані відсутні\"\n\t)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[EMPLOYEE_ID]",
+      "fact_Employee_List[DEFERMENT_REASON]",
+      "fact_Employee_List[EMPLOYEE_ID]",
+      "fact_Employee_List[IS_AT_RISK]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "DEFERMENT_REASON",
+      "EMPLOYEE_ID",
+      "IS_AT_RISK"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "DEFERMENT_REASON → Вид відстрочки; DEFERMENT_REASON → Відстрочка від призову; DEFERMENT_REASON → Причина відстрочки; IS_AT_RISK → Під ризиком мобілізації; IS_AT_RISK → Ризик мобілізації; IS_AT_RISK → Доля чоловіків під ризиком мобілізації (%)",
+    "purpose": "\"За віком\"  <br> \"Троє дітей\"  <br>\"За станом здоров'я\"  <br>\"Бронювання\"  <br>Якщо поле deferment_reason is null, тоді треба перевірити поле is_at_risk. Якщо is_at_risk = 1, тоді \"Під ризиком\", інакше - проставити лейбл \"Дані відсутні\". Якщо значення в полі відсутнє, то показати текст \"Дані відсутні\"  або знак \"-\". \"За віком\"  <br> \"Троє дітей\"  <br>\"За станом здоров'я\"  <br>\"Бронювання\"  <br>Якщо поле deferment_reason is null, тоді треба перевірити поле is_at_risk. Якщо is_at_risk = 1, тоді \"Під ризиком\", інакше - проставити лейбл \"Дані відсутні\". \"За віком\"  <br> \"Троє дітей\"  <br>\"За стано",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/Редизайн-паспортної-частини",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Сторінка-Картка-команди",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду/Редизайн-сторінки-Загальна-інформація",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "pasport",
+    "pdp",
+    "personal-profile",
+    "ryzyky"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,50 @@
+{
+  "id": "ac-br-okr-poperednii-rik",
+  "type": "measure",
+  "name": "AC.BR.OKR попередній рік",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Burnout_Risk\\Export",
+  "formatString": "0.00",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SELECTEDVALUE('fact_Burnout_Indicators'[OKR_PREV_YEAR_RATE])",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Burnout_Indicators[OKR_PREV_YEAR_RATE]"
+    ],
+    "tables": [
+      "fact_Burnout_Indicators"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "OKR_PREV_YEAR_RATE"
+    ],
+    "powerQuery": "fact_Burnout_Indicators"
+  },
+  "business": {
+    "definition": "OKR_PREV_YEAR_RATE → OKR попередній рік; OKR_PREV_YEAR_RATE → Значення коефіцієнта індивідуального бонусу за передостанній період; OKR_PREV_YEAR_RATE → OKR команди за передостанній рік",
+    "purpose": "Для розрахунку метрики \"Тренд OKR\" Ці дані виводяться в деталізацію по тренду оцінки ОКР Тимчасово це буде коефіцієнт індивідуального бонусу, а не оцінка ОКР.  <br>Визначається по показнику керівника цієї команди.  <br>Якщо у керівника є ОКР, який було складено/оцінено по іншому кадровому підрозділу/організації, то такий ОКР  не відображається. Наприклад, керівник в 2023 році працював на іншому підприємстві чи підрозділі.",
+    "requirementRefs": [
+      "Кейс-Втрати-Продуктивності-Працівників/Деталізація-метрик-в-кейсі-Продуктивність",
+      "Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Додати-інформацію-про-ОКР-команди-та-середню-оцінку-результативності-по-команді"
+    ]
+  },
+  "tags": [
+    "analytical-cases",
+    "burnout-risk",
+    "export",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

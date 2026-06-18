@@ -1,0 +1,195 @@
+{
+  "id": "fact-mobile-limit",
+  "type": "entity",
+  "name": "fact_Mobile_Limit",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_Mobile_Limit",
+  "sourceTables": [
+    "DM.vw_R27_fact_Mobile_Limit_PDP"
+  ],
+  "columns": [
+    {
+      "name": "PERIOD",
+      "dataType": "dateTime",
+      "source": "PERIOD",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_KEY",
+      "dataType": "string",
+      "source": "ORGANIZATION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "PERSON_KEY",
+      "dataType": "string",
+      "source": "PERSON_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "PHONE_NUMBER_KEY",
+      "dataType": "string",
+      "source": "PHONE_NUMBER_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "PHONE_PACKAGE_KEY",
+      "dataType": "string",
+      "source": "PHONE_PACKAGE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "PHONE_CORP_LIMIT_KEY",
+      "dataType": "string",
+      "source": "PHONE_CORP_LIMIT_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "PHONE_NUMBER_PURPOSE_KEY",
+      "dataType": "string",
+      "source": "PHONE_NUMBER_PURPOSE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "PERSON_NAME",
+      "dataType": "string",
+      "source": "PERSON_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "PHONE_PACKAGE_NAME",
+      "dataType": "string",
+      "source": "PHONE_PACKAGE_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "PHONE_CORP_LIMIT_CODE",
+      "dataType": "string",
+      "source": "PHONE_CORP_LIMIT_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "PHONE_CORP_LIMIT_NAME",
+      "dataType": "string",
+      "source": "PHONE_CORP_LIMIT_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "PHONE_CORP_LIMIT",
+      "dataType": "int64",
+      "source": "PHONE_CORP_LIMIT",
+      "isCalculated": false
+    },
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CATEGORY_DETAIL",
+      "dataType": "string",
+      "source": "POSITION_CATEGORY_DETAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_TYPE_KEY",
+      "dataType": "string",
+      "source": "EMPLOYMENT_TYPE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_KEY",
+      "dataType": "string",
+      "source": "STATUS_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_ON_POSITION_KEY",
+      "dataType": "string",
+      "source": "OFFICE_ON_POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_KEY",
+      "dataType": "string",
+      "source": "POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_ID",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_Person",
+      "fromColumn": "PERSON_KEY",
+      "toColumn": "PERSON_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Admin_OS",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position_Category",
+      "fromColumn": "POSITION_CATEGORY_DETAIL",
+      "toColumn": "Position_Category_Detail",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employment_Type",
+      "fromColumn": "EMPLOYMENT_TYPE_KEY",
+      "toColumn": "EMPLOYMENT_TYPE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Office",
+      "fromColumn": "OFFICE_ON_POSITION_KEY",
+      "toColumn": "OFFICE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employee_Status",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position",
+      "fromColumn": "POSITION_KEY",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Date",
+      "fromColumn": "PERIOD",
+      "toColumn": "Date",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [
+    "'GP.Мобільний зв''язок, % факт.SVG'",
+    "'PP.Мобільний зв''язок - Корпоративний ліміт'",
+    "'PP.Мобільний зв''язок - Назва пакету'",
+    "GP.К-ть співробітників, що отримують виплати на мобільний зв’язок",
+    "GP.Середні витрати на мобільний зв’язок"
+  ],
+  "requirementRefs": [
+    "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_Mobile_Limit.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

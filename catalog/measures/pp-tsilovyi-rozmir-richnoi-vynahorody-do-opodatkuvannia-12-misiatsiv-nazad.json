@@ -1,0 +1,71 @@
+{
+  "id": "pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia-12-misiatsiv-nazad",
+  "type": "measure",
+  "name": "PP.Цільовий розмір річної винагороди, до оподаткування (12 місяців назад)",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\TRS",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _CurrMonthStart =  DATE ( YEAR ( TODAY() ), MONTH ( TODAY() ), 1 )\nVAR _PrevYearSameMonthStart =  EDATE ( _CurrMonthStart, -12 )\nVAR _Fixed =\n\tCALCULATE (\n\t\tSUMX(\n\t\t\t'fact_TRS',\n\t\t\t'fact_TRS'[payments_plan_UAH]\n\t\t),\n\t\t'fact_TRS'[CATEGORY_OF_ACCRUAL_SORT] = 1,\n\t\t'fact_TRS'[wage_rate_type] <> \"СДЕЛЬНАЯ\",\n\t\tTREATAS ( { _PrevYearSameMonthStart }, 'dim_Date'[Date] )\n\t)\nVAR _Variable =\n\tCALCULATE (\n\t\tAVERAGEX(\n\t\t\t'fact_TRS',\n\t\t\t('fact_TRS'[bonus_month_salary_cnt] * 12 + 'fact_TRS'[bonus_quarter_salary_cnt] * 4 + 'fact_TRS'[bonus_year_salary_cnt])  * 'fact_TRS'[wage_rate]\n\t\t),\n\t\tTREATAS ( { _PrevYearSameMonthStart }, 'dim_Date'[Date] )\n\t)\nRETURN _Fixed * 12 + _Variable",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Date[Date]",
+      "fact_TRS[CATEGORY_OF_ACCRUAL_SORT]",
+      "fact_TRS[bonus_month_salary_cnt]",
+      "fact_TRS[bonus_quarter_salary_cnt]",
+      "fact_TRS[bonus_year_salary_cnt]",
+      "fact_TRS[payments_plan_UAH]",
+      "fact_TRS[wage_rate]",
+      "fact_TRS[wage_rate_type]"
+    ],
+    "tables": [
+      "dim_Date",
+      "fact_TRS"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_TRS_PDP"
+    ],
+    "sourceColumns": [
+      "CATEGORY_OF_ACCRUAL_SORT",
+      "Date",
+      "bonus_month_salary_cnt",
+      "bonus_quarter_salary_cnt",
+      "bonus_year_salary_cnt",
+      "payments_plan_UAH",
+      "wage_rate",
+      "wage_rate_type"
+    ],
+    "powerQuery": "dim_Date"
+  },
+  "business": {
+    "definition": "bonus_month_salary_cnt → Премія місячна кіл-ть окладів; bonus_month_salary_cnt → Щомісячна премія; bonus_month_salary_cnt → Доля команди з щомісячною премією, %; bonus_month_salary_cnt → Місячна премія; bonus_quarter_salary_cnt → Премія квартальна кіл-ть окладів; bonus_quarter_salary_cnt → Квартальна премія; bonus_quarter_salary_cnt → Доля команди з квартальню премією, %; bonus_year_salary_cnt → Премія річна кіл-ть окладів; bonus_year_salary_cnt → Річний бонус; bonus_year_salary_cnt → Доля команди з річним бонусом, %; payments_plan_UAH → Розмір фіксованої винагороди плановий, за місяць СТАНОМ НА РІК НАЗАД; payments_plan_UAH → Сума (рік тому); payments_plan_UAH → Оклад по годинам (рік тому); payments_plan_UAH → % зміни фіксованої винагороди",
+    "purpose": "Станом на дату події <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_fact_Employee_List_PDP]  <br>Відібрати записи по працівнику по працівнику [person_key], періоду [Period], організації [organization_key], підрозділу [division_key], посаді [position_key]<br>BONUS_MONTH_SALARY_CNT  - кількість окладів  <br>Розмір премії = Min_Tariff_Rate помножити на BONUS_MONTH_SALARY_CNT - сума (к-сть окладів*оклад)  <br>Якщо по працівнику записи відсутні, то показати прочерк \"-\" <br>Відбір робити за період станом на 12 міс. тому  <br>BONUS_MONTH_SALARY_CNT  -",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Деталізація-на-сторінці-Винагорода",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Доопрацювання-сторінки-ТРС",
+      "Командний-профіль/Сторінка-TRS-команди",
+      "Командний-профіль/Сторінка-TRS-команди/Сторінка-Винагорода-групового-профілю#вимоги-до-звіту",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

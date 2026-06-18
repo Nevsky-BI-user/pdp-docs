@@ -1,0 +1,83 @@
+{
+  "id": "gp-komanda",
+  "type": "measure",
+  "name": "GP.Команда",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _filter_lt= TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), 'dim_Admin_OS'[USER_ACCESS_ID])\n\n--1. Якщо у вибірку для HR BP потрапляють керівники рівня N-1, то конкатинацію робити лише по категоріях посади Старший менеджмент А, Старший менеджмент А+ і Топ-менеджмент\n\nVAR _sample_of_users = \n    CALCULATETABLE(\n        VALUES('dim_Admin_OS'[USER_ACCESS_ID]),\n        OR(\n            'dim_Admin_OS'[POSITION_CATEGORY_DETAIL] IN {\"Старший менеджмент А\", \"Старший менеджмент А+\", \"Топ-менеджмент\"} && 'dim_Admin_OS'[path_length] = 2,\n            dim_Admin_OS[path_length] > 2\n        )\n    )\nVAR _sample_of_users_lt = \n    CALCULATETABLE(\n        VALUES('dim_Admin_OS'[USER_ACCESS_ID]),\n        OR(\n            'dim_Admin_OS'[POSITION_CATEGORY_DETAIL] IN {\"Старший менеджмент А\", \"Старший менеджмент А+\", \"Топ-менеджмент\"} && 'dim_Admin_OS'[path_length] = 2,\n            dim_Admin_OS[path_length] > 2\n        ),\n        _filter_lt\n    )\n\n--2. Визначення найвищого рівня ієрархії, за яким конкатенується атрибут\n\nVAR _highest_ADMIN_hierarchy_level = CALCULATE(MINX('dim_Admin_OS', 'dim_Admin_OS'[path_length]))\nVAR _highest_ADMIN_hierarchy_level_lt = CALCULATE(MINX('dim_Admin_OS', 'dim_Admin_OS'[path_length]))\nVAR _highest_HRBP_hierarchy_level = CALCULATE(MINX('dim_Admin_OS', 'dim_Admin_OS'[path_length]),_sample_of_users)\nVAR _highest_HRBP_hierarchy_level_lt = CALCULATE(MINX('dim_Admin_OS', 'dim_Admin_OS'[path_length]),_sample_of_users_lt)\n\n--3. Розрахунок метрики для ADMIN ролі\n\nVAR _admin =\n    CALCULATE(\n        CONCATENATEX(\n            SUMMARIZE(\n                'dim_Admin_OS',\n                'dim_Admin_OS'[PERSONNEL_UNIT],\n                'dim_Admin_OS'[SUB_DIRECTION]\n            ),\n            'dim_Admin_OS'[PERSONNEL_UNIT],\n            \", \",\n            [SUB_DIRECTION]\n        ),\n        'dim_Admin_OS'[path_length] = _highest_ADMIN_hierarchy_level\n    )\nVAR _admin_lt = \"Мої прямі підлеглі\"\n\n--4. Розрахунок метрики для HRBP ролі\n\nVAR _HRBP =\n    CALCULATE(\n        CONCATENATEX(\n            SUMMARIZE(\n                'dim_Admin_OS',\n                'dim_Admin_OS'[PERSONNEL_UNIT],\n                'dim_Admin_OS'[SUB_DIRECTION]\n            ),\n            'dim_Admin_OS'[PERSONNEL_UNIT],\n            \", \",\n            [SUB_DIRECTION]\n        ),\n        'dim_Admin_OS'[path_length] = _highest_HRBP_hierarchy_level,\n        _sample_of_users\n    )\nVAR _HRBP_lt = \"Мої прямі підопічні\"\n\n--5. Визначення результату\nVAR _res = \n    SWITCH(\n        SELECTEDVALUE('t_HierarchyTypes'[Index]),\n        0, \n        SWITCH(\n            SELECTEDVALUE('dim_Admin_OS'[USER_ROLE]),\n            \"Адміністративний керівник\", _admin_lt,\n            \"HRBP\", _HRBP_lt\n        ),\n        1,\n        SWITCH(\n            SELECTEDVALUE('dim_Admin_OS'[USER_ROLE]),\n            \"Адміністративний керівник\", _admin,\n            \"HRBP\", _HRBP\n        )\n    )\nRETURN _res & \" (\" & [GP.Кількість співробітників всього, чол. - String] & \")\"",
+  "dependencies": {
+    "measures": [
+      "GP.Кількість співробітників всього, чол. - String"
+    ],
+    "columns": [
+      "dim_Admin_OS[PERSONNEL_UNIT]",
+      "dim_Admin_OS[POSITION_CATEGORY_DETAIL]",
+      "dim_Admin_OS[SUB_DIRECTION]",
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "dim_Admin_OS[USER_ROLE]",
+      "dim_Admin_OS[path_length]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "Index",
+      "PERSONNEL_UNIT",
+      "POSITION_CATEGORY_DETAIL",
+      "SUB_DIRECTION",
+      "USER_ACCESS_ID",
+      "USER_ROLE",
+      "path_length"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "PERSONNEL_UNIT → Кадровий підрозділ працівника; PERSONNEL_UNIT → Підрозділ кадровий; PERSONNEL_UNIT → Назва попереднього кадрового підрозділу; PERSONNEL_UNIT → Назва поточного кадрового підрозділу; PERSONNEL_UNIT → Команда; PERSONNEL_UNIT → division_person; POSITION_CATEGORY_DETAIL → Деталізація категорії посади (внутрішня); POSITION_CATEGORY_DETAIL → Категорія посади; POSITION_CATEGORY_DETAIL → Категорія посади (внутрішня); POSITION_CATEGORY_DETAIL → Доля менеджерів серед всіх співробітників (%); SUB_DIRECTION → Піднапрям; SUB_DIRECTION → subdirection; SUB_DIRECTION → sub_direction",
+    "purpose": "division_person_id = unit_key Поле зберігається в довіднику [dm.vw_R27_dim_unit]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List], через відповідний зв’язок за ключем [division_key] = [unit_key].  <br>Поле завжди має значення, пусте поле не допускається  <br>Якщо назва не вміщається в одну строку, перенести на іншу Поле зберігається в довіднику [dm.vw_R27_dim_unit]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List_PDP], через відповідний зв’язок за ключем [div",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Індивідуальний-профіль-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Допоміжні-вітрини-для-звіту/Таблиця-періодична-(попередні-12-міс)-для-розрахунку-метрики-Середній-дохід",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Метрики-рекрутингу/ТЗ-на-розробку-вітрин-по-метрикам-рекрутингу",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Сторінка-Картка-команди",
+      "Командний-профіль/Сторінка-Ефективність",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+      "Командний-профіль/Сторінка-Навчання-і-розвиток/Блок-Розвиток-сторінки-Навчання-і-розвиток",
+      "Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)",
+      "Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)/Додаткові-вимоги-до-вітрини-Плинність",
+      "Командний-профіль/Сторінка-Плинність-та-Exits/ТЗ-на-вітрину-Exits",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Блок-Додаткові-інструменти"
+    ]
+  },
+  "tags": [
+    "dani-pro-komandu",
+    "group-profile",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

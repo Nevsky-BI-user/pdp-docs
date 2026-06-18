@@ -1,0 +1,47 @@
+{
+  "id": "pp-nadomnyi-invalid-kvota",
+  "type": "measure",
+  "name": "PP.Надомний інвалід (квота)",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "COALESCE(\n\tSWITCH(\n\t\tSELECTEDVALUE('fact_Employee_List'[DISABLED_TYPE]),\n\t\t\"Технічні з інвалідністю\", \"Так\",\n\t\t\"Ні\"\n\t),\n\t\"-\"\n)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[DISABLED_TYPE]"
+    ],
+    "tables": [
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "DISABLED_TYPE"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "Надомний інвалід (квота)",
+    "purpose": "<br>  <br>Якщо 1 - Так, якщо 0 - Ні.",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

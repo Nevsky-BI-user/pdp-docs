@@ -1,0 +1,42 @@
+{
+  "id": "gp-serednii-rozmir-vytrat-na-navchannia",
+  "type": "measure",
+  "name": "GP.Середній розмір витрат на навчання",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\TRS",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "\"В розробці\"",
+  "dependencies": {
+    "measures": [],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "Середній розмір витрат на навчання",
+    "purpose": "В звіті будуть dummy дані, поки не побудовані відповідні вітрини, які є джерелом даних.  <br>Дані потрібно взяти за останні 12 місяців.  <br>В деталізацію вивести перелік таких працівників та суму по кожному із них",
+    "requirementRefs": [
+      "Командний-профіль/Сторінка-TRS-команди",
+      "Командний-профіль/Сторінка-TRS-команди/Сторінка-Винагорода-групового-профілю#вимоги-до-звіту"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

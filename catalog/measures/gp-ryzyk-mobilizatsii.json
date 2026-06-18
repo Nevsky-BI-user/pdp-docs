@@ -1,0 +1,42 @@
+{
+  "id": "gp-ryzyk-mobilizatsii",
+  "type": "measure",
+  "name": "GP.Ризик мобілізації (%)",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\Ризики та фокуси уваги",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "[GP.Доля чоловіків під ризиком мобілізації(%)]",
+  "dependencies": {
+    "measures": [
+      "GP.Доля чоловіків під ризиком мобілізації(%)"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "group-profile",
+    "main",
+    "pdp",
+    "ryzyky-ta-fokusy-uvahy"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

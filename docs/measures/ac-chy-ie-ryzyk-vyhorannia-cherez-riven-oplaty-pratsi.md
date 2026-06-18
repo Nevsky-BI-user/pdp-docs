@@ -1,0 +1,55 @@
+# AC.Чи є ризик вигорання через рівень оплати праці?
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Analytical Cases\Burnout_Risk\Main` |
+| formatString | — |
+| dataType | — |
+| Прихована | ні |
+
+## DAX
+
+```dax
+//НЕ видаляти пробіли для ✅
+VAR _res = 
+	SWITCH(
+		SELECTEDVALUE('fact_Burnout_Indicators'[IS_SALARY_RISK]),
+		"Ризик", "❌",
+		"Відсутній", " ✅ ",
+		"━"
+	)
+RETURN COALESCE( _res, "-" )
+```
+
+## Джерела
+
+
+Колонки: `IS_SALARY_RISK`
+
+Power Query: `fact_Burnout_Indicators`
+
+## Бізнес-суть
+
+IS_SALARY_RISK → Чи є ризик вигорання через рівень оплати праці?
+
+**Вимоги:** `Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22`
+
+## Залежності
+
+Таблиці: `fact_Burnout_Indicators`
+
+Колонки: `fact_Burnout_Indicators[IS_SALARY_RISK]`
+
+## Схема
+
+```mermaid
+graph LR
+  M["AC.Чи є ризик вигорання через рівень оплати праці?"]
+  M --> fact_Burnout_Indicators
+```
+
+## Нотатки
+
+_порожньо_

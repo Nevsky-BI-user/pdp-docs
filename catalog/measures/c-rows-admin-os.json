@@ -1,0 +1,40 @@
+{
+  "id": "c-rows-admin-os",
+  "type": "measure",
+  "name": "c_rows_ADMIN_OS",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+  "formatString": "0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "COUNTROWS(RELATEDTABLE('dim_Admin_OS'))",
+  "dependencies": {
+    "measures": [],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "main",
+    "pasport",
+    "pdp",
+    "personal-profile"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

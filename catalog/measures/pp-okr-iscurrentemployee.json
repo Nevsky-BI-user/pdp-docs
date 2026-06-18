@@ -1,0 +1,51 @@
+{
+  "id": "pp-okr-iscurrentemployee",
+  "type": "measure",
+  "name": "PP.OKR.IsCurrentEmployee",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+  "formatString": "0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _current = SELECTEDVALUE('dim_Admin_OS'[EMPLOYEE_ID])\nRETURN\n    IF(\n        CALCULATE(\n            COUNTROWS('fact_OKR_Goals'),\n            TREATAS({_current}, 'fact_OKR_Goals'[EMPLOYEE_ID])\n        ) > 0,\n        1\n    )",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[EMPLOYEE_ID]",
+      "fact_OKR_Goals[EMPLOYEE_ID]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_OKR_Goals"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.R27_fact_OKR_Goals",
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "EMPLOYEE_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "okr",
+    "pdp",
+    "personal-profile",
+    "rezultatyvnist-ta-otsinka"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

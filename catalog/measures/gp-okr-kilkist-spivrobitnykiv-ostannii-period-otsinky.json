@@ -1,0 +1,69 @@
+{
+  "id": "gp-okr-kilkist-spivrobitnykiv-ostannii-period-otsinky",
+  "type": "measure",
+  "name": "GP.ОКР.Кількість співробітників (Останній період оцінки)",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\ОКР",
+  "formatString": "0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "//************* ROLE FILTERS **************\nVAR _filter_lt = TREATAS(VALUES(dim_Admin_LT_OS[USER_ACCESS_ID]), 'dim_Admin_OS'[USER_ACCESS_ID])\n\nVAR lastYear = [GP.ОКР.Останній рік]\n/* *********** ADMIN *********** */\nVAR _admin =\nCALCULATE(\n        DISTINCTCOUNT('fact_Employee_OKR'[USER_ACCESS_ID]),\n        'fact_Employee_OKR'[PLAN_YEAR] = lastYear)\n        // FILTER(\n        //     'fact_Employee_OKR',\n        //     'fact_Employee_OKR'[order] = 1))\n\n/* *********** ADMIN LT *********** */\nVAR _admin_lt =\nCALCULATE(\n        DISTINCTCOUNT('fact_Employee_OKR'[USER_ACCESS_ID]),\n        'fact_Employee_OKR'[PLAN_YEAR] = lastYear,\n        // FILTER(\n        //     'fact_Employee_OKR',\n        //     'fact_Employee_OKR'[order] = 1),\n        _filter_lt)\n\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE( t_HierarchyTypes[Index] ),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\n\n/* *********** RESULT *********** */\nRETURN COALESCE(_res, 0)",
+  "dependencies": {
+    "measures": [
+      "GP.ОКР.Останній рік"
+    ],
+    "columns": [
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_Employee_OKR[PLAN_YEAR]",
+      "fact_Employee_OKR[USER_ACCESS_ID]",
+      "fact_Employee_OKR[order]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_Employee_OKR",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.R27_fact_OKR_Goals",
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "Index",
+      "PLAN_YEAR",
+      "USER_ACCESS_ID",
+      "order"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "PLAN_YEAR → Рік ОКР; PLAN_YEAR → Значення останнього року оцінки ОКР; PLAN_YEAR → Значення передостаннього  року оцінки ОКР",
+    "purpose": "Останнє доступне значення станом на дату поточного запису, релевантне відповідній оцінці результативності. Значення останнього року оцінки ОКР визначати в залежності від того, які дані доступні на поточний момент. Наприклад, протягом 2025 року в оцінку брати коефіцієнт індивідуального бонусу працівника за 2023-2024 роки, бо за 2025 рік оцінки ще немає. Тому останній рік буде 2024. На початку 2026 року, коли з'являться результати оцінки ОКР за 2025 рік, потрібно буде змістити період і брати 2025 рік.  <br>  <br>Для того, що визначити період (рік), за який виставлено індивідуальний бонус, потріб",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/Редизайн-паспортної-частини",
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Створити-блок-Виконання-OKR"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "main",
+    "okr",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

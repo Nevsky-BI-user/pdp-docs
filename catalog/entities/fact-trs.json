@@ -1,0 +1,338 @@
+{
+  "id": "fact-trs",
+  "type": "entity",
+  "name": "fact_TRS",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_TRS",
+  "sourceTables": [
+    "DM.vw_R27_fact_TRS_PDP"
+  ],
+  "columns": [
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "PERIOD",
+      "dataType": "dateTime",
+      "source": "PERIOD",
+      "isCalculated": false
+    },
+    {
+      "name": "PAYMENTS_FACT_UAH",
+      "dataType": "double",
+      "source": "PAYMENTS_FACT_UAH",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_MOBILIZED",
+      "dataType": "string",
+      "source": "IS_MOBILIZED",
+      "isCalculated": false
+    },
+    {
+      "name": "BUDGET_CODE",
+      "dataType": "string",
+      "source": "BUDGET_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "OBJECT_CODE",
+      "dataType": "string",
+      "source": "OBJECT_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "BUDGET_COST_ITEM",
+      "dataType": "string",
+      "source": "BUDGET_COST_ITEM",
+      "isCalculated": false
+    },
+    {
+      "name": "ACCRUAL_TYPES_KEY",
+      "dataType": "string",
+      "source": "ACCRUAL_TYPES_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "ACCRUAL_TYPE_NAME",
+      "dataType": "string",
+      "source": "ACCRUAL_TYPE_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "CATEGORY_OF_ACCRUAL_SORT",
+      "dataType": "int64",
+      "source": "CATEGORY_OF_ACCRUAL_SORT",
+      "isCalculated": false
+    },
+    {
+      "name": "TRS_CATEGORY",
+      "dataType": "string",
+      "source": "TRS_CATEGORY",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_KEY",
+      "dataType": "string",
+      "source": "ORGANIZATION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "PERSON_KEY",
+      "dataType": "string",
+      "source": "PERSON_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HEAD_ADMIN_ID",
+      "dataType": "string",
+      "source": "EMP_HEAD_ADMIN_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "TAX_PIT_ID",
+      "dataType": "string",
+      "source": "TAX_PIT_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "COST_CENTRE_KEY",
+      "dataType": "string",
+      "source": "COST_CENTRE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "UNIT_KEY",
+      "dataType": "string",
+      "source": "UNIT_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_KEY",
+      "dataType": "string",
+      "source": "DIVISION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_KEY",
+      "dataType": "string",
+      "source": "POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_KEY",
+      "dataType": "string",
+      "source": "STATUS_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "PAYMENTS_PLAN_UAH",
+      "dataType": "double",
+      "source": "PAYMENTS_PLAN_UAH",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_PAYMENTS_PLAN",
+      "dataType": "int64",
+      "source": "IS_PAYMENTS_PLAN",
+      "isCalculated": false
+    },
+    {
+      "name": "WAGE_RATE",
+      "dataType": "double",
+      "source": "WAGE_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "WAGE_RATE_TYPE",
+      "dataType": "string",
+      "source": "WAGE_RATE_TYPE",
+      "isCalculated": false
+    },
+    {
+      "name": "BONUS_YEAR_SALARY_CNT",
+      "dataType": "double",
+      "source": "BONUS_YEAR_SALARY_CNT",
+      "isCalculated": false
+    },
+    {
+      "name": "BONUS_QUARTER_SALARY_CNT",
+      "dataType": "double",
+      "source": "BONUS_QUARTER_SALARY_CNT",
+      "isCalculated": false
+    },
+    {
+      "name": "BONUS_MONTH_SALARY_CNT",
+      "dataType": "double",
+      "source": "BONUS_MONTH_SALARY_CNT",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CATEGORY_DETAIL",
+      "dataType": "string",
+      "source": "POSITION_CATEGORY_DETAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_TYPE_KEY",
+      "dataType": "string",
+      "source": "EMPLOYMENT_TYPE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_ON_POSITION_KEY",
+      "dataType": "string",
+      "source": "OFFICE_ON_POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBCATEGORY_OF_ACCRUAL_TYPE",
+      "dataType": "string",
+      "source": "SUBCATEGORY_OF_ACCRUAL_TYPE",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_Person",
+      "fromColumn": "PERSON_KEY",
+      "toColumn": "PERSON_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Unit",
+      "fromColumn": "UNIT_KEY",
+      "toColumn": "UNIT_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employee_Status",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Admin_OS",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position_Category",
+      "fromColumn": "POSITION_CATEGORY_DETAIL",
+      "toColumn": "Position_Category_Detail",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employment_Type",
+      "fromColumn": "EMPLOYMENT_TYPE_KEY",
+      "toColumn": "EMPLOYMENT_TYPE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position",
+      "fromColumn": "POSITION_KEY",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_TRS_categories",
+      "fromColumn": "ACCRUAL_TYPE_NAME",
+      "toColumn": "TRS_CATEGORY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Date",
+      "fromColumn": "PERIOD",
+      "toColumn": "Date",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [
+    "GP.Виконання плану ФОП YTD (%)",
+    "GP.Доля команди з доплатою за роз’їзний характер роботи, % факт",
+    "GP.Доля команди з доплатою за шкідливі умови праці, % факт",
+    "GP.Доля команди з квартальною премією, % факт",
+    "GP.Доля команди з премією за місяць, % факт",
+    "GP.Доля команди з річними бонусами, % факт",
+    "GP.Доля команди з соціальними виплатами, %",
+    "GP.Доля команди з щомісячною премією, % факт",
+    "GP.Доля команди із доплатою за наставництво, %",
+    "GP.Доля команди із премією МХП Зірки, %",
+    "GP.Доля команди із премією за Банк ідей, %",
+    "GP.Доля команди із премією за збереження та розширення земельного банку, %",
+    "GP.Доля команди із премією за програмою «Приведи друга», %",
+    "GP.Доля команди із премією за сумісництво, факт",
+    "GP.Доля команди із проектним бонусом за стратегічні ІТ проєкти, %",
+    "GP.Доля команди із разовою премією за програмою визнання, %",
+    "GP.Доля команди із інвестиційним проєктним бонусом, %",
+    "GP.Доля учасників команди із зміною зарплати (окладу), %",
+    "GP.Різниця фіксованої винагороди (факт).Максимальний рівень",
+    "GP.Різниця фіксованої винагороди (факт).Мінімальний рівень",
+    "GP.Середня заробітна плата",
+    "GP.Середній % зростання зарплати (окладу) за 12 міс",
+    "GP.Середній розмір доплат за суміщення, факт",
+    "GP.Середній розмір доплати за наставництво",
+    "GP.Середній розмір доплати за роз’їзний характер роботи, факт",
+    "GP.Середній розмір доплати за шкідливі умови праці, факт",
+    "GP.Середній розмір квартальної премії, факт",
+    "GP.Середній розмір премії МХП Зірки",
+    "GP.Середній розмір премії за Банк ідей",
+    "GP.Середній розмір премії за збереження та розширення земельного банку",
+    "GP.Середній розмір премії за місяць, факт",
+    "GP.Середній розмір премії за програмою «Приведи друга»",
+    "GP.Середній розмір проектного бонус за стратегічні ІТ проєкти",
+    "GP.Середній розмір разової премії за програмою визнання",
+    "GP.Середній розмір річного бонусу, факт",
+    "GP.Середній розмір соціальної підтримки",
+    "GP.Середній розмір щомісячної премії, факт",
+    "GP.Середній розмір інвестиційного проєктного бонусу",
+    "PP.Інвестиційний проєктний бонус",
+    "PP.Інші доплати",
+    "PP.Бейдж.Зірка МХП",
+    "PP.Доплата за наставництво",
+    "PP.Доплати за суміщення",
+    "PP.Квартальні премії факт",
+    "PP.Наставництво",
+    "PP.Премія МХП Зірки",
+    "PP.Премія за Банк ідей",
+    "PP.Премія за внутрішнє тренерство",
+    "PP.Премія за збереження та розширення земельного банку",
+    "PP.Премія за програмою «Приведи друга»",
+    "PP.Проектний бонус за стратегічні ІТ проєкти",
+    "PP.Разова премія за програмою визнання",
+    "PP.Розмір фіксованої винагороди плановий, за місяць СТАНОМ НА РІК НАЗАД",
+    "PP.Річні бонуси",
+    "PP.Соціальна підтримка",
+    "PP.Цільовий розмір річної винагороди, до оподаткування (12 місяців назад)",
+    "PP.Щоквартальні премії в середньому за квартал",
+    "PP.Щомісячні премії накопичувально",
+    "PP.Щомісячні премії середньомісячно"
+  ],
+  "requirementRefs": [
+    "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника",
+    "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Деталізація-на-сторінці-Винагорода",
+    "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Доопрацювання-сторінки-ТРС",
+    "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+    "Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)",
+    "Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)/ТЗ.-Метрика-Небажана-плинність-(regretted-atrition-ratio)"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_TRS.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

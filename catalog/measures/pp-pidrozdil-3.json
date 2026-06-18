@@ -1,0 +1,50 @@
+{
+  "id": "pp-pidrozdil-3",
+  "type": "measure",
+  "name": "PP.Підрозділ 3",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "COALESCE(\n\tSELECTEDVALUE('dim_Admin_OS'[SUBDIVISION_LVL_3]),\n\t\"-\"\n)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[SUBDIVISION_LVL_3]"
+    ],
+    "tables": [
+      "dim_Admin_OS"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "SUBDIVISION_LVL_3"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "SUBDIVISION_LVL_3 → subdivision_lvl_3",
+    "purpose": "",
+    "requirementRefs": [
+      "Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)",
+      "Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)/Додаткові-вимоги-до-вітрини-Плинність"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

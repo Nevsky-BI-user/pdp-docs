@@ -1,0 +1,51 @@
+{
+  "id": "gp-riven-komandy-v-iierarkhii",
+  "type": "measure",
+  "name": "GP.Рівень команди в ієрархії",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "FIRSTNONBLANKVALUE(\n\t'dim_Admin_OS'[ORDER_NUM_2],\n\tMIN('dim_Admin_OS'[EMP_HIERARCHY_LEVEL])\n)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[EMP_HIERARCHY_LEVEL]",
+      "dim_Admin_OS[ORDER_NUM_2]"
+    ],
+    "tables": [
+      "dim_Admin_OS"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "EMP_HIERARCHY_LEVEL",
+      "ORDER_NUM_2"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "EMP_HIERARCHY_LEVEL → Рівень в ієрархії",
+    "purpose": "Якщо значення в полі відсутнє, то потрібно визначити проблему та виправити",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Індивідуальний-профіль-працівника"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

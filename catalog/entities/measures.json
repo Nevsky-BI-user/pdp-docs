@@ -1,0 +1,21 @@
+{
+  "id": "measures",
+  "type": "entity",
+  "name": "_Measures",
+  "definition": "",
+  "server": "",
+  "db": "",
+  "powerQuery": "_Measures",
+  "sourceTables": [],
+  "columns": [],
+  "relationships": [],
+  "relatedMeasures": [],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

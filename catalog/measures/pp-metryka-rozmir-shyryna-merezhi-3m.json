@@ -1,0 +1,43 @@
+{
+  "id": "pp-metryka-rozmir-shyryna-merezhi-3m",
+  "type": "measure",
+  "name": "PP.Метрика.Розмір/ширина мережі 3м",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Паспорт\\Метрики",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _v = [PP.Розмір мережі (співробітник, 3м)]\nVAR _w = [PP.Ширина мережі (співробітник, 3м)]\nRETURN\n\tIF(ISBLANK(_v), \"Дані відсутні\", FORMAT(_v, \"0\")) \n    & \" / \" & IF(ISBLANK(_w), \"Дані відсутні\", FORMAT(_w, \"0\"))",
+  "dependencies": {
+    "measures": [
+      "PP.Розмір мережі (співробітник, 3м)",
+      "PP.Ширина мережі (співробітник, 3м)"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "metryky",
+    "pasport",
+    "pdp",
+    "personal-profile"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,49 @@
+{
+  "id": "pp-data-pryiomu-v-kholdynh-perervnyi",
+  "type": "measure",
+  "name": "PP.Дата прийому в холдинг (перервний)",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _res = SELECTEDVALUE('fact_employee_seniority_by_month'[FIRST_HOLDING_HIRE_DATE])\nRETURN \n\tCOALESCE(\n\t\tFORMAT(\n\t\t\t_res,\n\t\t\t\"dd.mm.yyyy\"\n\t\t),\n\t\t\"-\"\n\t)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_employee_seniority_by_month[FIRST_HOLDING_HIRE_DATE]"
+    ],
+    "tables": [
+      "fact_employee_seniority_by_month"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_employee_seniority_by_month_PDP"
+    ],
+    "sourceColumns": [
+      "FIRST_HOLDING_HIRE_DATE"
+    ],
+    "powerQuery": "fact_employee_seniority_by_month"
+  },
+  "business": {
+    "definition": "FIRST_HOLDING_HIRE_DATE → Стаж в холдингу (загальний)  <br>Дата прийому",
+    "purpose": "",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

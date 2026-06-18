@@ -1,0 +1,526 @@
+{
+  "id": "fact-okr-goals",
+  "type": "entity",
+  "name": "fact_OKR_Goals",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_OKR_Goals",
+  "sourceTables": [
+    "DM.R27_fact_OKR_Goals"
+  ],
+  "columns": [
+    {
+      "name": "EMPLOYEE_ID",
+      "dataType": "string",
+      "source": "EMPLOYEE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_NAME",
+      "dataType": "string",
+      "source": "EMPLOYEE_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "INIT_DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "INIT_DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "INIT_DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "INIT_DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "INIT_DIVISION_PERSON",
+      "dataType": "string",
+      "source": "INIT_DIVISION_PERSON",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON",
+      "dataType": "string",
+      "source": "DIVISION_PERSON",
+      "isCalculated": false
+    },
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "FORM_TEMPLATE_ID",
+      "dataType": "string",
+      "source": "FORM_TEMPLATE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "FORM_TEMPLATE_NAME",
+      "dataType": "string",
+      "source": "FORM_TEMPLATE_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "PLAN_YEAR",
+      "dataType": "int64",
+      "source": "PLAN_YEAR",
+      "isCalculated": false
+    },
+    {
+      "name": "PLAN_STATUS",
+      "dataType": "string",
+      "source": "PLAN_STATUS",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_OBJECTIVE_ID",
+      "dataType": "string",
+      "source": "OKR_OBJECTIVE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_WEIGHT",
+      "dataType": "double",
+      "source": "OKR_WEIGHT",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_AVG_RATE",
+      "dataType": "double",
+      "source": "OKR_AVG_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_COLOR_RATE",
+      "dataType": "string",
+      "source": "OKR_COLOR_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "TOTAL_OKR_RATE",
+      "dataType": "double",
+      "source": "TOTAL_OKR_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "TOTAL_OKR_COLOR_RATE",
+      "dataType": "string",
+      "source": "TOTAL_OKR_COLOR_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "CATEGORY",
+      "dataType": "string",
+      "source": "CATEGORY",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_POSSIBLE_SUPER_GREEN_OKR",
+      "dataType": "string",
+      "source": "IS_POSSIBLE_SUPER_GREEN_OKR",
+      "isCalculated": false
+    },
+    {
+      "name": "FILLING_STATUS",
+      "dataType": "string",
+      "source": "FILLING_STATUS",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_CROSSFUNCTIONAL",
+      "dataType": "string",
+      "source": "IS_CROSSFUNCTIONAL",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_DESCRIPTION",
+      "dataType": "string",
+      "source": "OKR_DESCRIPTION",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_METRIC_DESCRIPTION",
+      "dataType": "string",
+      "source": "OKR_METRIC_DESCRIPTION",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_CHANGE",
+      "dataType": "string",
+      "source": "OKR_CHANGE",
+      "isCalculated": false
+    },
+    {
+      "name": "IND_BONUS_RATE",
+      "dataType": "double",
+      "source": "IND_BONUS_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "CALC_PERFORMANCE_STR_RATE",
+      "dataType": "double",
+      "source": "CALC_PERFORMANCE_STR_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "CALC_PERFORMANCE_DESC_RATE",
+      "dataType": "string",
+      "source": "CALC_PERFORMANCE_DESC_RATE",
+      "isCalculated": false
+    },
+    {
+      "name": "EXEC_DATE",
+      "dataType": "dateTime",
+      "source": "EXEC_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "CREATED_DATE",
+      "dataType": "dateTime",
+      "source": "CREATED_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "UPDATED_DATE",
+      "dataType": "dateTime",
+      "source": "UPDATED_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "MONITORING_START_DATE",
+      "dataType": "dateTime",
+      "source": "MONITORING_START_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "MONITORING_END_DATE",
+      "dataType": "dateTime",
+      "source": "MONITORING_END_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "MONITORING_END_PLAN_DATE",
+      "dataType": "dateTime",
+      "source": "MONITORING_END_PLAN_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "MONITORING_END_FACT_DATE",
+      "dataType": "dateTime",
+      "source": "MONITORING_END_FACT_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "MONITORING_LAST_MODIFY_DATE",
+      "dataType": "dateTime",
+      "source": "MONITORING_LAST_MODIFY_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "MONITORING_EMPLOYEE_INIT_ID",
+      "dataType": "string",
+      "source": "MONITORING_EMPLOYEE_INIT_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "CONSENT_START_DATE",
+      "dataType": "dateTime",
+      "source": "CONSENT_START_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "CONSENT_END_DATE",
+      "dataType": "dateTime",
+      "source": "CONSENT_END_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "CONSENT_END_PLAN_DATE",
+      "dataType": "dateTime",
+      "source": "CONSENT_END_PLAN_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "CONSENT_END_FACT_DATE",
+      "dataType": "dateTime",
+      "source": "CONSENT_END_FACT_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "CONSENT_LAST_MODIFY_DATE",
+      "dataType": "dateTime",
+      "source": "CONSENT_LAST_MODIFY_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "CONSENT_EMPLOYEE_INIT_ID",
+      "dataType": "string",
+      "source": "CONSENT_EMPLOYEE_INIT_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_APPROVE_TIME",
+      "dataType": "int64",
+      "source": "OKR_APPROVE_TIME",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_ASSESMENT_TIME",
+      "dataType": "int64",
+      "source": "OKR_ASSESMENT_TIME",
+      "isCalculated": false
+    },
+    {
+      "name": "DIRECTION_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "DIRECTION_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "SUB_DIRECTION_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "SUB_DIRECTION_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "ORGANIZATION_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "HAB_FOR_AGRO_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "HAB_FOR_AGRO_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "POSITION_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_TYPE_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "EMPLOYMENT_TYPE_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CATEGORY_DETAIL_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "POSITION_CATEGORY_DETAIL_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_TYPE_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "OFFICE_TYPE_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "WORK_FORMAT_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "WORK_FORMAT_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "PERMANENT_TEMPORARY_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "PERMANENT_TEMPORARY_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "GROUP_AGE_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "GROUP_AGE_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "TENURE_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "TENURE_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "GENDER",
+      "dataType": "string",
+      "source": "GENDER",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "STATUS_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_1_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_1_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_2_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_2_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_3_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_3_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_4_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_4_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_5_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_5_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "SUBDIVISION_LVL_6_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "SUBDIVISION_LVL_6_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "HRBP_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "HRBP_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "HEAD_ADMIN_ON_APPROVAL_DATE",
+      "dataType": "string",
+      "source": "HEAD_ADMIN_ON_APPROVAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "HRBP_ON_ASSESMENT_DATE",
+      "dataType": "string",
+      "source": "HRBP_ON_ASSESMENT_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "HEAD_ADMIN_ON_ASSESMENT_DATE",
+      "dataType": "string",
+      "source": "HEAD_ADMIN_ON_ASSESMENT_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "LOAD_TIMESTAMP",
+      "dataType": "dateTime",
+      "source": "LOAD_TIMESTAMP",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_AVG_RATE_WEIGHTED",
+      "dataType": "double",
+      "source": "OKR_AVG_RATE_WEIGHTED",
+      "isCalculated": false
+    },
+    {
+      "name": "CALC_PERFORMANCE_DESC_RATE_ORDER",
+      "dataType": "string",
+      "source": "CALC_PERFORMANCE_DESC_RATE_ORDER",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_COLOR_RATE_ORDER",
+      "dataType": "string",
+      "source": "OKR_COLOR_RATE_ORDER",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_DESCRIPTION_WRAPPED",
+      "dataType": "string",
+      "source": "OKR_DESCRIPTION_WRAPPED",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "fact_OKR_Key_Results",
+      "fromColumn": "OKR_OBJECTIVE_ID",
+      "toColumn": "OKR_OBJECTIVE_ID",
+      "role": "to"
+    },
+    {
+      "toTable": "dim_Date",
+      "fromColumn": "EXEC_DATE",
+      "toColumn": "Date",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [
+    "GP.Результативність.Оцінка OKR.Загальна кількість KR.PY",
+    "GP.Результативність.Оцінка OKR.Загальна кількість OKR.CY",
+    "GP.Результативність.Оцінка OKR.Загальна кількість OKR.PY",
+    "GP.Результативність.Оцінка OKR.Кількість співробітників з OKR.CY",
+    "GP.Результативність.Оцінка OKR.Кількість співробітників з OKR.PY",
+    "GP.Результативність.Оцінка OKR.Середня кількість KR.PY",
+    "GP.Результативність.Оцінка OKR.Середня кількість OKR.CY",
+    "GP.Результативність.Оцінка OKR.Середня кількість OKR.PY",
+    "GP.Результативність.Оцінка OKR.Фільтр деталізації OKR",
+    "PP.OKR.Current_user.Загальна  оцінка OKR",
+    "PP.OKR.Current_user.Загальна колірна оцінка OKR",
+    "PP.OKR.Current_user.Коефіцієнт індивідуального бонусу",
+    "PP.OKR.Current_user.Статус плану",
+    "PP.OKR.IsCurrentEmployee",
+    "PP.OKR.SVG.Last2Periods",
+    "PP.OKR.Вага OKR",
+    "PP.OKR.Загальна колірна оцінка OKR",
+    "PP.OKR.Загальна оцінка OKR",
+    "PP.OKR.Значення OKR",
+    "PP.OKR.Колірна оцінка OKR",
+    "PP.OKR.Ціль виконана",
+    "PP.OKR.Ціль не виконана",
+    "PP.SVG.OKR.Загальна оцінка",
+    "PP.Частка KR за наявністю змін",
+    "PP.Частка OKR за кросфункційністю",
+    "PP.Частка OKR за наявністю змін",
+    "PP.Частка OKR за статусом",
+    "PP.Частка OKR за типом цілі"
+  ],
+  "requirementRefs": [
+    "Індивідуальний-профіль-працівника/Історія-по-посадам",
+    "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+    "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_OKR_Goals.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

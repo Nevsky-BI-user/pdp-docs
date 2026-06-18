@@ -1,0 +1,63 @@
+{
+  "id": "gp-vykonannia-planu-fop-ytd",
+  "type": "measure",
+  "name": "GP.Виконання плану ФОП YTD (%)",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\TRS",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "\"В розробці\"\n// //************* ROLE FILTERS **************\n// VAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\n// VAR _filter_lt_plan_trs = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),'fact_TRS_Plan'[USER_ACCESS_ID] )\n// VAR _filter_lt_fact_trs = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),'fact_TRS'[USER_ACCESS_ID] )\n\n// /* *********** ADMIN *********** */\n// VAR _admin =\n//     VAR _Employees =\n//         SUMMARIZE ( ALLSELECTED ( 'dim_Admin_OS'[USER_ACCESS_ID] ),\n//                     'dim_Admin_OS'[USER_ACCESS_ID] )\n//     VAR _EmployeeAnnualBonus = \n//         ADDCOLUMNS(\n//             _Employees,\n//             \"@Now\", [PP.Цільовий розмір річної винагороди, до оподаткування],\n//             \"@YearAgo\", [PP.Цільовий розмір річної винагороди, до оподаткування (12 місяців назад)]\n//         )\n//     VAR _AverageAnnualBonusGrowth = \n//         AVERAGEX(\n//             FILTER(\n//                 _EmployeeAnnualBonus,\n//                 NOT ISBLANK([@YearAgo])\n//             ),\n//             [@Now] - [@YearAgo]\n//         )\n//     RETURN _AverageAnnualBonusGrowth\n\n// /* *********** LT *********** */\n// VAR _admin_lt =\n//     VAR _Employees =\n//         SUMMARIZE ( ALLSELECTED ( 'dim_Admin_OS'[USER_ACCESS_ID] ),\n//                     'dim_Admin_OS'[USER_ACCESS_ID] )\n//     VAR _EmployeeAnnualBonus = \n//         ADDCOLUMNS(\n//             _Employees,\n//             \"@Now\",  CALCULATE([PP.Цільовий розмір річної винагороди, до оподаткування], _filter_lt_plan_trs),\n//             \"@YearAgo\", CALCULATE([PP.Цільовий розмір річної винагороди, до оподаткування (12 місяців назад)], _filter_lt_fact_trs)\n//         )\n//     VAR _AverageAnnualBonusGrowth = \n//         AVERAGEX(\n//             FILTER(\n//                 _EmployeeAnnualBonus,\n//                 NOT ISBLANK([@YearAgo])\n//             ),\n//             [@Now] - [@YearAgo]\n//         )\n//     RETURN _AverageAnnualBonusGrowth\n\n// VAR _res =\n//     SWITCH (\n//         _roleIndex,\n//         0, _admin_lt,    -- LT\n//         1, _admin,       -- Admin\n//         _admin\n//     )\n// RETURN _res",
+  "dependencies": {
+    "measures": [
+      "PP.Цільовий розмір річної винагороди, до оподаткування",
+      "PP.Цільовий розмір річної винагороди, до оподаткування (12 місяців назад)"
+    ],
+    "columns": [
+      "dim_Admin_LT_OS[USER_ACCESS_ID]",
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_TRS[USER_ACCESS_ID]",
+      "fact_TRS_Plan[USER_ACCESS_ID]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_TRS",
+      "fact_TRS_Plan",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List",
+      "DM.vw_R27_fact_TRS_PDP",
+      "DM.vw_R27_fact_TRS_Plan_PDP"
+    ],
+    "sourceColumns": [
+      "Index",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "Виконання плану ФОП YTD (%)",
+    "purpose": "Розрахункове поле: відношення плану ФОП по кадровому підрозділу до факту ФОП по кадровому підрозділу за період з початку року до поточної дати.  <br>ПО lead team таку метрику рахувати поки не будемо.  <br>Відібрати записи по періоду [Period], організації [organization_key] , підрозділу [unit_key]  <br>total_sum - планові виплати  <br> payment_fact - фактичні виплати  <br>Виконання плану ФОП YTD (%) = (Факт ФОП YTD / План ФОП YTD) × 100  <br>До ФОП входять тільки ті види нарахувань, по яким поле is_include_in_FOP_analytics = '1' Розрахункове поле: відношення плану ФОП по кадровому підрозділу до",
+    "requirementRefs": [
+      "Командний-профіль/Сторінка-TRS-команди",
+      "Командний-профіль/Сторінка-TRS-команди/Сторінка-Винагорода-групового-профілю#вимоги-до-звіту"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

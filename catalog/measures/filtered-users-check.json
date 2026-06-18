@@ -1,0 +1,60 @@
+{
+  "id": "filtered-users-check",
+  "type": "measure",
+  "name": "filtered_users_check",
+  "homeTable": "_Measures",
+  "displayFolder": "_Technical",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _users_list =\n\tSUMMARIZE(\n\t\t'dim_Admin_OS',\n\t\t'dim_Admin_OS'[FULL_NAME],\n\t\t'dim_Admin_OS'[ORDER_NUM_2]\n\t)\nVAR _res =\n\tCONCATENATEX (\n\t\t_users_list,\n\t\t'dim_Admin_OS'[FULL_NAME],\n\t\t\", \" & UNICHAR(10),\n\t\t'dim_Admin_OS'[ORDER_NUM_2],\n\t\tASC\n\t)\nRETURN\n\t_res",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[FULL_NAME]",
+      "dim_Admin_OS[ORDER_NUM_2]"
+    ],
+    "tables": [
+      "dim_Admin_OS"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "FULL_NAME",
+      "ORDER_NUM_2"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "FULL_NAME → ПІБ співробітника; FULL_NAME → Прізвище, ім'я, по-батькові; FULL_NAME → Функціональний керівник; FULL_NAME → HRBP; FULL_NAME → FinBP; FULL_NAME → employee_name; FULL_NAME → ПІБ звільненого працівника",
+    "purpose": "person_key=employee_id Поле зберігається в довіднику [dm.vw_R27_dim_person ]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List], через відповідний зв’язок за ключем [person_key].  <br>Поле завжди має значення, пусте поле не допускається  <br>Якщо ПІБ не вміщається в одну строку, перенести на іншу Поле зберігається в довіднику [dm.vw_R27_dim_person ]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List], через відповідний зв’язок за ключем [person_key].  <br>Поле за",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Індивідуальний-профіль-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Сторінка-Ефективність-працівника/Вітрина-Відвідування-офісів",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду",
+      "Командний-профіль/Сторінка-Плинність-та-Exits/ТЗ-на-вітрину-Exits"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "technical"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

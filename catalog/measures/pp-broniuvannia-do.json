@@ -1,0 +1,55 @@
+{
+  "id": "pp-broniuvannia-do",
+  "type": "measure",
+  "name": "PP.Бронювання до",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR __val =\nCOALESCE(\n\tIF(\n\t\tNOT(ISBLANK(SELECTEDVALUE('fact_Employee_List'[RESERVATION_END_DATE]))) \n\t\t&& SELECTEDVALUE('fact_Employee_List'[IS_AT_RISK]) = 1 \n\t\t&& ABS(\n\t\t\t\tDATEDIFF(\n\t\t\t\t\tSELECTEDVALUE('fact_Employee_List'[RESERVATION_END_DATE]), \n\t\t\t\t\tTODAY(),\n\t\t\t\t\tDAY\n\t\t\t\t)\n\t\t\t) < 30,\n\t\t\"⚠️\" \n\t\t&\n\t\tSELECTEDVALUE('fact_Employee_List'[RESERVATION_END_DATE])\n\t, SELECTEDVALUE('fact_Employee_List'[RESERVATION_END_DATE])),\n\t\"-\"\n)\n\nRETURN __val",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[IS_AT_RISK]",
+      "fact_Employee_List[RESERVATION_END_DATE]"
+    ],
+    "tables": [
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "IS_AT_RISK",
+      "RESERVATION_END_DATE"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "IS_AT_RISK → Під ризиком мобілізації; IS_AT_RISK → Ризик мобілізації; IS_AT_RISK → Доля чоловіків під ризиком мобілізації (%); RESERVATION_END_DATE → Бронювання до",
+    "purpose": "1 - під ризиком. 0 - ризик відсутній <br>  <br>Якщо 1 - Так, якщо 0 - Ні. Розрахункове поле. Відношення кількості чоловіків під ризиком мобілізації, is_at_risk = 1 до загальної кількості чоловіків у команді Розрахункове поле. Відношення кількості чоловіків під ризиком мобілізації, is_at_risk = 1 до загальної кількості чоловіків у команді  <br> Якщо значення в полі відсутнє, то показати текст \"Дані відсутні\"  або знак \"-\".",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/Редизайн-паспортної-частини",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Сторінка-Картка-команди",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду/Редизайн-сторінки-Загальна-інформація",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,109 @@
+{
+  "id": "dim-organization",
+  "type": "entity",
+  "name": "dim_Organization",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "dim_Organization",
+  "sourceTables": [
+    "DM.vw_R27_dim_Organization"
+  ],
+  "columns": [
+    {
+      "name": "ID",
+      "dataType": "string",
+      "source": "ID",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_KEY",
+      "dataType": "string",
+      "source": "ORGANIZATION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_CODE",
+      "dataType": "string",
+      "source": "ORGANIZATION_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION",
+      "dataType": "string",
+      "source": "ORGANIZATION",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_PARENT",
+      "dataType": "string",
+      "source": "ORGANIZATION_PARENT",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_DIRECTION",
+      "dataType": "string",
+      "source": "ORGANIZATION_DIRECTION",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_SECTOR",
+      "dataType": "string",
+      "source": "ORGANIZATION_SECTOR",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_SEGMENT",
+      "dataType": "string",
+      "source": "ORGANIZATION_SEGMENT",
+      "isCalculated": false
+    },
+    {
+      "name": "EDRPOU",
+      "dataType": "string",
+      "source": "EDRPOU",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_GREEN",
+      "dataType": "boolean",
+      "source": "IS_GREEN",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "fact_Employee_List",
+      "fromColumn": "ORGANIZATION_KEY",
+      "toColumn": "ORGANIZATION_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Burnout_Indicators",
+      "fromColumn": "ORGANIZATION_ID",
+      "toColumn": "ORGANIZATION_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Loss_of_Productivity",
+      "fromColumn": "ORGANIZATION_ID",
+      "toColumn": "ORGANIZATION_KEY",
+      "role": "to"
+    }
+  ],
+  "relatedMeasures": [],
+  "requirementRefs": [
+    "Індивідуальний-профіль-працівника/Історія-по-посадам",
+    "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+    "Індивідуальний-профіль-працівника/Сторінка-Індивідуальний-профіль-працівника",
+    "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+    "Командний-профіль/Паспортна-частина-групового-профілю/Метрики-рекрутингу/ТЗ-на-розробку-вітрин-по-метрикам-рекрутингу"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/dim_Organization.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

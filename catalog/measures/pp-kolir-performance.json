@@ -1,0 +1,63 @@
+{
+  "id": "pp-kolir-performance",
+  "type": "measure",
+  "name": "PP.Колір (Performance)",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Життєвий цикл",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _maxd = [PP.history_position_maxd]\nVAR _res = \n    CALCULATE(\n        SELECTEDVALUE(fact_Employee_History_Position[GENERAL_PERFORMANCE_DESC_RATE]),\n        'fact_Employee_History_Position'[PERIOD] = _maxd\n    )\nRETURN COALESCE(\"\"&_res, \"—\")",
+  "dependencies": {
+    "measures": [
+      "PP.history_position_maxd"
+    ],
+    "columns": [
+      "fact_Employee_History_Position[GENERAL_PERFORMANCE_DESC_RATE]",
+      "fact_Employee_History_Position[PERIOD]"
+    ],
+    "tables": [
+      "fact_Employee_History_Position"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_Employee_History_Position"
+    ],
+    "sourceColumns": [
+      "GENERAL_PERFORMANCE_DESC_RATE",
+      "PERIOD"
+    ],
+    "powerQuery": "fact_Employee_History_Position"
+  },
+  "business": {
+    "definition": "GENERAL_PERFORMANCE_DESC_RATE → Бал оцінки результативності; GENERAL_PERFORMANCE_DESC_RATE → Загальна оцінка; GENERAL_PERFORMANCE_DESC_RATE → Загальна оцінка співробітника за останній період (рік); GENERAL_PERFORMANCE_DESC_RATE → Загальна оцінка співробітника за передостанній період (рік); GENERAL_PERFORMANCE_DESC_RATE → Остання доступна оцінка керівника,  бал; PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період",
+    "purpose": "Останнє НЕ пусте актуальне значення на дату (date) поточного запису Останнє НЕ пусте актуальне значення на дату (date) поточного запису. Відбираємо один будь-який рядок по даті запуску форми оцінювання. Якщо у працівника є дві оцінки (форми) за один період, від адміністративного та функціонального керівника, то потрібно вивести середньоарифметичне значення Це дата нарахування/виплати премії Зірка МХП (accrual_types_key = '9781d4aa-3a0d-1458-623a-7a93e90a2284'   та category_of_accrual_sort  = '2' ) Поточний період",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/ТЗ-на-побудову-візуала-Павутинка-по-оцінці-результативності-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Деталізація-на-сторінці-Винагорода",
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка",
+      "Допоміжні-вітрини-для-звіту/Таблиця-(вью)-для-розрахунку-метрики-Укомплектованість-штату",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Допоміжні-вітрини-для-звіту/Таблиця-періодична-(попередні-12-міс)-для-розрахунку-метрики-Середній-дохід",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zhyttievyi-tsykl"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

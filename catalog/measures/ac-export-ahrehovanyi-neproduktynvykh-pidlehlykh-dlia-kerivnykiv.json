@@ -1,0 +1,50 @@
+{
+  "id": "ac-export-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv",
+  "type": "measure",
+  "name": "AC.Export.Агрегований % непродуктинвих підлеглих для керівників",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Loss_Productivity\\Export",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SELECTEDVALUE('fact_Loss_of_Productivity'[Percentage_Of_Unproductive_Employees])",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Loss_of_Productivity[Percentage_Of_Unproductive_Employees]"
+    ],
+    "tables": [
+      "fact_Loss_of_Productivity"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_Loss_of_Productivity"
+    ],
+    "sourceColumns": [
+      "Percentage_Of_Unproductive_Employees"
+    ],
+    "powerQuery": "fact_Loss_of_Productivity"
+  },
+  "business": {
+    "definition": "Percentage_Of_Unproductive_Employees → Агрегований % непродуктинвих підлеглих для керівників",
+    "purpose": "",
+    "requirementRefs": [
+      "Кейс-Втрати-Продуктивності-Працівників"
+    ]
+  },
+  "tags": [
+    "analytical-cases",
+    "export",
+    "loss-productivity",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,57 @@
+{
+  "id": "ac-nav-my-lead-team",
+  "type": "measure",
+  "name": "AC.Nav.My_lead_team",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+  "formatString": "0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SWITCH(\n\tCALCULATE(\n\t\tSELECTEDVALUE('dim_Admin_OS'[path_length_rls]),\n\t\tTREATAS(VALUES('fact_Burnout_Indicators'[USER_ACCESS_ID]), 'dim_Admin_OS'[USER_ACCESS_ID])\n\t)  <= \n    SWITCH(\n        SELECTEDVALUE('dim_Admin_OS'[USER_ROLE]),\n        \"Адміністративний керівник\", [Current_User_Admin_Hierarchy_Level],\n        \"HRBP\", [Current_User_HRBP_Hierarchy_Level]\n    ) + 2,\n\tTRUE(), 1,\n\t0\n)",
+  "dependencies": {
+    "measures": [
+      "Current_User_Admin_Hierarchy_Level",
+      "Current_User_HRBP_Hierarchy_Level"
+    ],
+    "columns": [
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "dim_Admin_OS[USER_ROLE]",
+      "dim_Admin_OS[path_length_rls]",
+      "fact_Burnout_Indicators[USER_ACCESS_ID]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_Burnout_Indicators"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "USER_ACCESS_ID",
+      "USER_ROLE",
+      "path_length_rls"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "analytical-cases",
+    "burnout-risk",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

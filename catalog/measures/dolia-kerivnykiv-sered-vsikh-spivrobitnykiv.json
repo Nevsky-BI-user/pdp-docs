@@ -1,0 +1,57 @@
+{
+  "id": "dolia-kerivnykiv-sered-vsikh-spivrobitnykiv",
+  "type": "measure",
+  "name": "Доля керівників серед всіх співробітників (%)",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _filter_lt= TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), 'dim_Admin_OS'[USER_ACCESS_ID])\nVAR _admin =\nDIVIDE(\n    CALCULATE(\n        COUNTROWS('dim_Admin_OS'),\n        FILTER(\n            'dim_Admin_OS', \n            'dim_Admin_OS'[IS_MANAGER] = TRUE())),\n    CALCULATE(\n        COUNTROWS('dim_Admin_OS')),\n    BLANK())\n\nVAR _admin_lt = \nDIVIDE(\n    CALCULATE(\n        COUNTROWS('dim_Admin_OS'),\n        FILTER(\n            'dim_Admin_OS', \n            'dim_Admin_OS'[IS_MANAGER] = TRUE()),\n        _filter_lt),\n    CALCULATE(\n        COUNTROWS('dim_Admin_OS'), _filter_lt),\n    BLANK())\n\nVAR _res = \n    SWITCH(\n        SELECTEDVALUE('t_HierarchyTypes'[Index]),\n        0, _admin_lt,\n        1, _admin)\n        \nRETURN \nTRIM(\n    FORMAT(\n        COALESCE(_res, 0), \n        \"0.00%\"))",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[IS_MANAGER]",
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "IS_MANAGER",
+      "Index",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "IS_MANAGER → Кількість керівників; IS_MANAGER → Керівник; IS_MANAGER → Доля керівників серед всіх співробітників (%); IS_MANAGER → Керівник - ПІБ керівника команди",
+    "purpose": "Відібрати із переліку усіх членів команди тих, у кого поле is_manager = 1 Якщо lead team - то ПІБ керівника цієї команди (поточного користувача).  <br>Якщо структурна одиниця- ПІБ керівника визначати по кадровому підрозділу цієї одиниці.  <br>Потрібно відібрати в кадровому підрозділі запис в якому is_manager =true та вивести ПІБ.  <br>Якщо для кадрового підрозділу відсутній такий запис, то вивести \"Дані відсутні\"  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List]. Керівником вважається той працівник, який має підлеглих.",
+    "requirementRefs": [
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Сторінка-Картка-команди",
+      "Командний-профіль/Сторінка-Ефективність",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

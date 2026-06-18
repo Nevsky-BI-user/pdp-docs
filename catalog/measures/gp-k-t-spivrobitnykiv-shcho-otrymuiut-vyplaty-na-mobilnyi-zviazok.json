@@ -1,0 +1,61 @@
+{
+  "id": "gp-k-t-spivrobitnykiv-shcho-otrymuiut-vyplaty-na-mobilnyi-zviazok",
+  "type": "measure",
+  "name": "GP.К-ть співробітників, що отримують виплати на мобільний зв’язок",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\TRS",
+  "formatString": "0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),dim_Admin_OS[USER_ACCESS_ID] )\n\n/* *********** ADMIN *********** */\nVAR _admin =\nCALCULATE(\n    COUNTA('fact_Mobile_Limit'[USER_ACCESS_ID]),\n    FILTER(\n        'fact_Mobile_Limit',\n        NOT ISBLANK('fact_Mobile_Limit'[PHONE_CORP_LIMIT]) && 'fact_Mobile_Limit'[PHONE_CORP_LIMIT] <> 0))\n        \n/* *********** LT *********** */\nVAR _admin_lt =\n    CALCULATE(\n        COUNTA('fact_Mobile_Limit'[USER_ACCESS_ID]),\n        FILTER(\n            'fact_Mobile_Limit',\n            NOT ISBLANK('fact_Mobile_Limit'[PHONE_CORP_LIMIT]) && 'fact_Mobile_Limit'[PHONE_CORP_LIMIT] <> 0),\n            _filter_lt)\n\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\nRETURN _res",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_LT_OS[USER_ACCESS_ID]",
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_Mobile_Limit[PHONE_CORP_LIMIT]",
+      "fact_Mobile_Limit[USER_ACCESS_ID]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_Mobile_Limit",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List",
+      "DM.vw_R27_fact_Mobile_Limit_PDP"
+    ],
+    "sourceColumns": [
+      "Index",
+      "PHONE_CORP_LIMIT",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "PHONE_CORP_LIMIT → Мобільний зв'язок - Корпоративний ліміт; PHONE_CORP_LIMIT → Середні витрати на мобільний зв’язок; PHONE_CORP_LIMIT → Мобільний зв'язок",
+    "purpose": "Потрібно відібрати всі записи по працівнику [person_key], періоду [Period], організації [organization_key]  <br>Якщо PHONE_CORP_LIMIT = \"99999\", виводимо значення \"Безлімітний\"  <br>Якщо значення в полі відсутнє, то показати текст \"Дані відсутні\" або знак \"-\" Розрахункове.  <br>Потрібно зсумувати значення поля PHONE_CORP_LIMIT ( PHONE_CORP_LIMIT <> '99999') по членам команди, які мають компенсацію мобільного зв'язку, та поділити на кількість таких членів команди.  <br>В деталізацію вивести перелік таких працівників та суму на компенсацію зв'язку та назву пакету (PHONE_PACKAGE_NAME) по кожному ",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника",
+      "Командний-профіль/Сторінка-TRS-команди",
+      "Командний-профіль/Сторінка-TRS-команди/Сторінка-Винагорода-групового-профілю#вимоги-до-звіту",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

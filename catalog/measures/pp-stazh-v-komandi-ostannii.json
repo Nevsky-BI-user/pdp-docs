@@ -1,0 +1,51 @@
+{
+  "id": "pp-stazh-v-komandi-ostannii",
+  "type": "measure",
+  "name": "PP.Стаж в команді (останній)",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _seniority = SELECTEDVALUE(fact_employee_seniority_by_month[seniority_LAST_DIVISION_HIRE_DATE])\nVAR _years = ROUNDDOWN(_seniority/12,0)\nVAR _month = _seniority - _years *12\nVAR _res = \n\tIF(\n\t\tNOT ISBLANK( _seniority ),\n\t\tIF(\n\t\t\tNOT ISBLANK( _years ),\n\t\t\t_years & \" р.\"\n\t\t) & \" \" &\n\t\tIF(\n\t\t\tNOT ISBLANK( _month ) && _month <> 0,\n\t\t\t_month & \" міс.\"\n\t\t)\n\t)\nRETURN \n\tCOALESCE(\n\t\tTRIM(_res),\n\t\t\"-\"\n\t)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_employee_seniority_by_month[seniority_LAST_DIVISION_HIRE_DATE]"
+    ],
+    "tables": [
+      "fact_employee_seniority_by_month"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_employee_seniority_by_month_PDP"
+    ],
+    "sourceColumns": [
+      "seniority_LAST_DIVISION_HIRE_DATE"
+    ],
+    "powerQuery": "fact_employee_seniority_by_month"
+  },
+  "business": {
+    "definition": "seniority_LAST_DIVISION_HIRE_DATE → Стаж в команді; seniority_LAST_DIVISION_HIRE_DATE → <br>Середній стаж в команді",
+    "purpose": "Значення поля в місяцях потрібно перевести в роки та місяці. Наприклад, якшо seniority_LAST_DIVISION_HIRE_DATE= 17, то в звіті треба відобразити 1 рік 5 місяців. Розрахункове поле: Х = (Х1 + Х2 + Х3.... + Xn )/С, де: - Х - середній стаж працівників команди; - Х1, Х2,Х3... Xn - стаж кожного працівника в підрозділі; - С - кількість працівників в команді  <br>На даний момент стаж буде розраховуватися однаково і для структурної одиниці (підрозділ), і для lead team.  <br>_Для  lead team потрібно буде рахувати стаж саме в цій команді по зв'яку Керівник - Підлеглий. Залежить від задачі по оновленню т",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

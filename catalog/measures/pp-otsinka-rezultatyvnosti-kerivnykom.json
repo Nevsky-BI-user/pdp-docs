@@ -1,0 +1,55 @@
+{
+  "id": "pp-otsinka-rezultatyvnosti-kerivnykom",
+  "type": "measure",
+  "name": "PP.Оцінка результативності.Керівником",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Результативність та оцінка\\Результативність",
+  "formatString": "0.00",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "CALCULATE(AVERAGE('fact_Employee_Performance'[Official_Rate]))",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_Performance[Official_Rate]"
+    ],
+    "tables": [
+      "fact_Employee_Performance"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_Employee_Performance_PBI"
+    ],
+    "sourceColumns": [
+      "Official_Rate"
+    ],
+    "powerQuery": "fact_Employee_Performance"
+  },
+  "business": {
+    "definition": "Official_Rate → Оцінка керівника (Офіційна оцінка компетенції); Official_Rate → Оцінка кожного індикатора керівником",
+    "purpose": "",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Зміна-джерела-даних-для-павутинки-Оцінка-результативності",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/ТЗ-на-побудову-візуала-Павутинка-по-оцінці-результативності-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "rezultatyvnist",
+    "rezultatyvnist-ta-otsinka"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,63 @@
+{
+  "id": "gp-ryzyk-vtraty-pratsivnykiv",
+  "type": "measure",
+  "name": "GP.Ризик втрати працівників (%)",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\Ризики та фокуси уваги",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "//************* ROLE FILTERS **************\nVAR _filter_lt = TREATAS(VALUES(dim_Admin_LT_OS[USER_ACCESS_ID]), 'dim_Admin_OS'[USER_ACCESS_ID])\n\n/* *********** ADMIN *********** */\nVAR _count_risked_employee = \nCALCULATE(\n\tCOUNTA('fact_Burnout_Indicators'[USER_ACCESS_ID]),\n\t'fact_Burnout_Indicators'[IS_FIRED] = FALSE(),\n\t'fact_Burnout_Indicators'[IS_TOTAL_RISK] = \"Потребує уваги\")\n\nVAR _count_all_employee = \nCALCULATE(\n\tCOUNTA('fact_Burnout_Indicators'[USER_ACCESS_ID]),\n\tFILTER(\n\t\t'fact_Burnout_Indicators',\n\t\t'fact_Burnout_Indicators'[IS_FIRED] = FALSE()))\n\nVAR _admin =\nCALCULATE(\n\tDIVIDE(\n\t\t_count_risked_employee,\n\t\t_count_all_employee, BLANK()))\n\n/* *********** ADMIN LT *********** */\nVAR _count_risked_employee_lt = \nCALCULATE(\n\tCOUNTA('fact_Burnout_Indicators'[USER_ACCESS_ID]),\n\t'fact_Burnout_Indicators'[IS_FIRED] = FALSE(),\n\t'fact_Burnout_Indicators'[IS_TOTAL_RISK] = \"Потребує уваги\",\n\t_filter_lt)\n\nVAR _count_all_employee_lt = \nCALCULATE(\n\tCOUNTA('fact_Burnout_Indicators'[USER_ACCESS_ID]),\n\t'fact_Burnout_Indicators'[IS_FIRED] = FALSE(),\n\t_filter_lt)\n\nVAR _admin_lt =\nCALCULATE(\n\tDIVIDE(\n\t\t_count_risked_employee_lt,\n\t\t_count_all_employee_lt, BLANK()))\n\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE( t_HierarchyTypes[Index] ),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\n\n/* *********** RESULT *********** */\nRETURN \nTRIM(\n\tFORMAT(\n\t\tCOALESCE(_res, 0),\n\t\t\"0.00%\"\n\t) \n)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_Burnout_Indicators[IS_FIRED]",
+      "fact_Burnout_Indicators[IS_TOTAL_RISK]",
+      "fact_Burnout_Indicators[USER_ACCESS_ID]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_Burnout_Indicators",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "IS_FIRED",
+      "IS_TOTAL_RISK",
+      "Index",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "IS_TOTAL_RISK → Ризик втрати працівника; IS_TOTAL_RISK → Ризик; IS_TOTAL_RISK → Ризик вигорання (%)",
+    "purpose": "Це відсоток працівників, які знаходяться в статусі \"Потребує уваги\" = (кількість працівників в статусі \"Потребує уваги\"/загальну чисельність команди)*100%",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/Редизайн-паспортної-частини",
+      "Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "main",
+    "pdp",
+    "ryzyky-ta-fokusy-uvahy"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

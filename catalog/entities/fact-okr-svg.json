@@ -1,0 +1,758 @@
+{
+  "id": "fact-okr-svg",
+  "type": "entity",
+  "name": "fact_OKR_SVG",
+  "definition": "",
+  "server": "",
+  "db": "",
+  "powerQuery": "fact_OKR_SVG",
+  "sourceTables": [],
+  "columns": [
+    {
+      "name": "OKR_VAL",
+      "dataType": "",
+      "source": "[OKR_VAL]",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_WT",
+      "dataType": "",
+      "source": "[OKR_WT]",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_COLOR",
+      "dataType": "",
+      "source": "[OKR_COLOR]",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_VAL",
+      "dataType": "",
+      "source": "[KR_VAL]",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_WT",
+      "dataType": "",
+      "source": "[KR_WT]",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_COLOR",
+      "dataType": "",
+      "source": "[KR_COLOR]",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_FILL",
+      "dataType": "",
+      "source": "[OKR_FILL]",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_TXT",
+      "dataType": "",
+      "source": "[OKR_TXT]",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_FILL",
+      "dataType": "",
+      "source": "[KR_FILL]",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_TXT",
+      "dataType": "",
+      "source": "[KR_TXT]",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_IDX",
+      "dataType": "",
+      "source": "[KR_IDX]",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_FIRST",
+      "dataType": "",
+      "source": "[IS_FIRST]",
+      "isCalculated": false
+    },
+    {
+      "name": "N_KR",
+      "dataType": "",
+      "source": "[N_KR]",
+      "isCalculated": false
+    },
+    {
+      "name": "GOAL_H",
+      "dataType": "",
+      "source": "[GOAL_H]",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_CL",
+      "dataType": "",
+      "source": "[OKR_CL]",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_CL",
+      "dataType": "",
+      "source": "[KR_CL]",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_BAR_W",
+      "dataType": "",
+      "source": "[OKR_BAR_W]",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_BAR_W",
+      "dataType": "",
+      "source": "[KR_BAR_W]",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_VAL_LBL",
+      "dataType": "",
+      "source": "[OKR_VAL_LBL]",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_WT_LBL",
+      "dataType": "",
+      "source": "[OKR_WT_LBL]",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_VAL_LBL",
+      "dataType": "",
+      "source": "[KR_VAL_LBL]",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_WT_LBL",
+      "dataType": "",
+      "source": "[KR_WT_LBL]",
+      "isCalculated": false
+    },
+    {
+      "name": "PLAN_DATE",
+      "dataType": "",
+      "source": "[PLAN_DATE]",
+      "isCalculated": false
+    },
+    {
+      "name": "LINES_KD",
+      "dataType": "",
+      "source": "[LINES_KD]",
+      "isCalculated": false
+    },
+    {
+      "name": "LINES_KM",
+      "dataType": "",
+      "source": "[LINES_KM]",
+      "isCalculated": false
+    },
+    {
+      "name": "LINES_KF",
+      "dataType": "",
+      "source": "[LINES_KF]",
+      "isCalculated": false
+    },
+    {
+      "name": "LINES_OD",
+      "dataType": "",
+      "source": "[LINES_OD]",
+      "isCalculated": false
+    },
+    {
+      "name": "ROW_H_BASE",
+      "dataType": "",
+      "source": "[ROW_H_BASE]",
+      "isCalculated": false
+    },
+    {
+      "name": "FIRST_ROW_PAD",
+      "dataType": "",
+      "source": "[FIRST_ROW_PAD]",
+      "isCalculated": false
+    },
+    {
+      "name": "YEAR_LABEL",
+      "dataType": "",
+      "source": "[YEAR_LABEL]",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_DELETE",
+      "dataType": "",
+      "source": "[IS_DELETE]",
+      "isCalculated": false
+    },
+    {
+      "name": "OD_L1",
+      "dataType": "",
+      "source": "[OD_L1]",
+      "isCalculated": false
+    },
+    {
+      "name": "OD_L2",
+      "dataType": "",
+      "source": "[OD_L2]",
+      "isCalculated": false
+    },
+    {
+      "name": "OD_L3",
+      "dataType": "",
+      "source": "[OD_L3]",
+      "isCalculated": false
+    },
+    {
+      "name": "OD_L4",
+      "dataType": "",
+      "source": "[OD_L4]",
+      "isCalculated": false
+    },
+    {
+      "name": "OD_L5",
+      "dataType": "",
+      "source": "[OD_L5]",
+      "isCalculated": false
+    },
+    {
+      "name": "OD_L6",
+      "dataType": "",
+      "source": "[OD_L6]",
+      "isCalculated": false
+    },
+    {
+      "name": "OD_L7",
+      "dataType": "",
+      "source": "[OD_L7]",
+      "isCalculated": false
+    },
+    {
+      "name": "OD_L8",
+      "dataType": "",
+      "source": "[OD_L8]",
+      "isCalculated": false
+    },
+    {
+      "name": "OD_L9",
+      "dataType": "",
+      "source": "[OD_L9]",
+      "isCalculated": false
+    },
+    {
+      "name": "OD_L10",
+      "dataType": "",
+      "source": "[OD_L10]",
+      "isCalculated": false
+    },
+    {
+      "name": "KD_L1",
+      "dataType": "",
+      "source": "[KD_L1]",
+      "isCalculated": false
+    },
+    {
+      "name": "KD_L2",
+      "dataType": "",
+      "source": "[KD_L2]",
+      "isCalculated": false
+    },
+    {
+      "name": "KM_L1",
+      "dataType": "",
+      "source": "[KM_L1]",
+      "isCalculated": false
+    },
+    {
+      "name": "KM_L2",
+      "dataType": "",
+      "source": "[KM_L2]",
+      "isCalculated": false
+    },
+    {
+      "name": "KM_L3",
+      "dataType": "",
+      "source": "[KM_L3]",
+      "isCalculated": false
+    },
+    {
+      "name": "KM_L4",
+      "dataType": "",
+      "source": "[KM_L4]",
+      "isCalculated": false
+    },
+    {
+      "name": "KF_L1",
+      "dataType": "",
+      "source": "[KF_L1]",
+      "isCalculated": false
+    },
+    {
+      "name": "KF_L2",
+      "dataType": "",
+      "source": "[KF_L2]",
+      "isCalculated": false
+    },
+    {
+      "name": "KF_L3",
+      "dataType": "",
+      "source": "[KF_L3]",
+      "isCalculated": false
+    },
+    {
+      "name": "KF_L4",
+      "dataType": "",
+      "source": "[KF_L4]",
+      "isCalculated": false
+    },
+    {
+      "name": "OD_L1_E",
+      "dataType": "",
+      "source": "[OD_L1_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "OD_L2_E",
+      "dataType": "",
+      "source": "[OD_L2_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "OD_L3_E",
+      "dataType": "",
+      "source": "[OD_L3_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "OD_L4_E",
+      "dataType": "",
+      "source": "[OD_L4_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "OD_L5_E",
+      "dataType": "",
+      "source": "[OD_L5_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "OD_L6_E",
+      "dataType": "",
+      "source": "[OD_L6_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "OD_L7_E",
+      "dataType": "",
+      "source": "[OD_L7_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "OD_L8_E",
+      "dataType": "",
+      "source": "[OD_L8_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "OD_L9_E",
+      "dataType": "",
+      "source": "[OD_L9_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "OD_L10_E",
+      "dataType": "",
+      "source": "[OD_L10_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KD_L1_E",
+      "dataType": "",
+      "source": "[KD_L1_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KD_L2_E",
+      "dataType": "",
+      "source": "[KD_L2_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KM_L1_E",
+      "dataType": "",
+      "source": "[KM_L1_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KM_L2_E",
+      "dataType": "",
+      "source": "[KM_L2_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KM_L3_E",
+      "dataType": "",
+      "source": "[KM_L3_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KM_L4_E",
+      "dataType": "",
+      "source": "[KM_L4_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KF_L1_E",
+      "dataType": "",
+      "source": "[KF_L1_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KF_L2_E",
+      "dataType": "",
+      "source": "[KF_L2_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KF_L3_E",
+      "dataType": "",
+      "source": "[KF_L3_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KF_L4_E",
+      "dataType": "",
+      "source": "[KF_L4_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_OBJECTIVE_ID",
+      "dataType": "",
+      "source": "fact_OKR_Goals[OKR_OBJECTIVE_ID]",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_DESCRIPTION",
+      "dataType": "",
+      "source": "fact_OKR_Goals[OKR_DESCRIPTION]",
+      "isCalculated": false
+    },
+    {
+      "name": "OKR_DESCRIPTION_WRAPPED",
+      "dataType": "",
+      "source": "fact_OKR_Goals[OKR_DESCRIPTION_WRAPPED]",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_DESCRIPTION",
+      "dataType": "",
+      "source": "fact_OKR_Key_Results[KR_DESCRIPTION]",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_DESCRIPTION_WRAPPED",
+      "dataType": "",
+      "source": "fact_OKR_Key_Results[KR_DESCRIPTION_WRAPPED]",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_METRIC_DESCRIPTION_WRAPPED",
+      "dataType": "",
+      "source": "fact_OKR_Key_Results[KR_METRIC_DESCRIPTION_WRAPPED]",
+      "isCalculated": false
+    },
+    {
+      "name": "KR_FACT_VALUE_WRAPPED",
+      "dataType": "",
+      "source": "fact_OKR_Key_Results[KR_FACT_VALUE_WRAPPED]",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_ID",
+      "dataType": "",
+      "source": "fact_OKR_Key_Results[EMPLOYEE_ID]",
+      "isCalculated": false
+    },
+    {
+      "name": "PLAN_YEAR",
+      "dataType": "",
+      "source": "fact_OKR_Goals[PLAN_YEAR]",
+      "isCalculated": false
+    },
+    {
+      "name": "KD_L3",
+      "dataType": "",
+      "source": "[KD_L3]",
+      "isCalculated": false
+    },
+    {
+      "name": "KD_L4",
+      "dataType": "",
+      "source": "[KD_L4]",
+      "isCalculated": false
+    },
+    {
+      "name": "KD_L5",
+      "dataType": "",
+      "source": "[KD_L5]",
+      "isCalculated": false
+    },
+    {
+      "name": "KD_L6",
+      "dataType": "",
+      "source": "[KD_L6]",
+      "isCalculated": false
+    },
+    {
+      "name": "KD_L7",
+      "dataType": "",
+      "source": "[KD_L7]",
+      "isCalculated": false
+    },
+    {
+      "name": "KD_L8",
+      "dataType": "",
+      "source": "[KD_L8]",
+      "isCalculated": false
+    },
+    {
+      "name": "KD_L9",
+      "dataType": "",
+      "source": "[KD_L9]",
+      "isCalculated": false
+    },
+    {
+      "name": "KD_L10",
+      "dataType": "",
+      "source": "[KD_L10]",
+      "isCalculated": false
+    },
+    {
+      "name": "KM_L5",
+      "dataType": "",
+      "source": "[KM_L5]",
+      "isCalculated": false
+    },
+    {
+      "name": "KM_L6",
+      "dataType": "",
+      "source": "[KM_L6]",
+      "isCalculated": false
+    },
+    {
+      "name": "KM_L7",
+      "dataType": "",
+      "source": "[KM_L7]",
+      "isCalculated": false
+    },
+    {
+      "name": "KM_L8",
+      "dataType": "",
+      "source": "[KM_L8]",
+      "isCalculated": false
+    },
+    {
+      "name": "KM_L9",
+      "dataType": "",
+      "source": "[KM_L9]",
+      "isCalculated": false
+    },
+    {
+      "name": "KM_L10",
+      "dataType": "",
+      "source": "[KM_L10]",
+      "isCalculated": false
+    },
+    {
+      "name": "KF_L5",
+      "dataType": "",
+      "source": "[KF_L5]",
+      "isCalculated": false
+    },
+    {
+      "name": "KF_L6",
+      "dataType": "",
+      "source": "[KF_L6]",
+      "isCalculated": false
+    },
+    {
+      "name": "KF_L7",
+      "dataType": "",
+      "source": "[KF_L7]",
+      "isCalculated": false
+    },
+    {
+      "name": "KF_L8",
+      "dataType": "",
+      "source": "[KF_L8]",
+      "isCalculated": false
+    },
+    {
+      "name": "KF_L9",
+      "dataType": "",
+      "source": "[KF_L9]",
+      "isCalculated": false
+    },
+    {
+      "name": "KF_L10",
+      "dataType": "",
+      "source": "[KF_L10]",
+      "isCalculated": false
+    },
+    {
+      "name": "KD_L3_E",
+      "dataType": "",
+      "source": "[KD_L3_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KD_L4_E",
+      "dataType": "",
+      "source": "[KD_L4_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KD_L5_E",
+      "dataType": "",
+      "source": "[KD_L5_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KD_L6_E",
+      "dataType": "",
+      "source": "[KD_L6_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KD_L7_E",
+      "dataType": "",
+      "source": "[KD_L7_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KD_L8_E",
+      "dataType": "",
+      "source": "[KD_L8_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KD_L9_E",
+      "dataType": "",
+      "source": "[KD_L9_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KD_L10_E",
+      "dataType": "",
+      "source": "[KD_L10_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KM_L5_E",
+      "dataType": "",
+      "source": "[KM_L5_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KM_L6_E",
+      "dataType": "",
+      "source": "[KM_L6_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KM_L7_E",
+      "dataType": "",
+      "source": "[KM_L7_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KM_L8_E",
+      "dataType": "",
+      "source": "[KM_L8_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KM_L9_E",
+      "dataType": "",
+      "source": "[KM_L9_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KM_L10_E",
+      "dataType": "",
+      "source": "[KM_L10_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KF_L5_E",
+      "dataType": "",
+      "source": "[KF_L5_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KF_L6_E",
+      "dataType": "",
+      "source": "[KF_L6_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KF_L7_E",
+      "dataType": "",
+      "source": "[KF_L7_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KF_L8_E",
+      "dataType": "",
+      "source": "[KF_L8_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KF_L9_E",
+      "dataType": "",
+      "source": "[KF_L9_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "KF_L10_E",
+      "dataType": "",
+      "source": "[KF_L10_E]",
+      "isCalculated": false
+    },
+    {
+      "name": "PLAN_STATUS",
+      "dataType": "",
+      "source": "fact_OKR_Goals[PLAN_STATUS]",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_Date",
+      "fromColumn": "PLAN_DATE",
+      "toColumn": "Date",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [
+    "PP.OKR.SVG.IsCurrentEmployee",
+    "PP.SVG.OKR.Детально"
+  ],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_OKR_SVG.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

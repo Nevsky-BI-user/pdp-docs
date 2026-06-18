@@ -1,0 +1,55 @@
+{
+  "id": "pp-riven-v-iierarkhii",
+  "type": "measure",
+  "name": "PP.Рівень в ієрархії",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _value = SELECTEDVALUE('dim_Admin_OS'[EMP_HIERARCHY_LEVEL])\n--SELECTEDVALUE('fact_Employee_List'[HIERARCHY_LEVEL])\n\nRETURN IF(_value = \"\", \"-\", _value)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[EMP_HIERARCHY_LEVEL]",
+      "fact_Employee_List[HIERARCHY_LEVEL]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "EMP_HIERARCHY_LEVEL",
+      "HIERARCHY_LEVEL"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "EMP_HIERARCHY_LEVEL → Рівень в ієрархії; HIERARCHY_LEVEL → Рівень посади працівника в ієрархії; HIERARCHY_LEVEL → Рівень в ієрархії",
+    "purpose": "Якщо значення в полі відсутнє, то потрібно визначити проблему та виправити Потрібно буде доопрацювання після розробки окремої вітрини по історизації керівників. Якщо значення в полі відсутнє, то показати текст \"Дані відсутні\"",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Сторінка-Індивідуальний-профіль-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Командний-профіль/Сторінка-Ефективність"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

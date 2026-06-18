@@ -1,0 +1,55 @@
+{
+  "id": "gp-serednii-vik",
+  "type": "measure",
+  "name": "GP.Середній вік",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\Загальна інформація",
+  "formatString": "#,0.00;-#,0.00;0.00",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),'fact_Employee_List'[USER_ACCESS_ID] )\n\n/* *********** ADMIN *********** */\nVAR _admin =\n\tAVERAGEX(\n\t\tVALUES('fact_Employee_List'[PERSON_KEY]),\n\t\tCALCULATE(AVERAGE('fact_Employee_List'[age]))\n\t)\n\n/* *********** LT *********** */\nVAR _admin_lt =\nCALCULATE(\n\tAVERAGEX(\n\t\tVALUES('fact_Employee_List'[PERSON_KEY]),\n\t\tCALCULATE(AVERAGE('fact_Employee_List'[age]))\n\t),\n\t_filter_lt\n)\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\nRETURN COALESCE(_res, \"-\")",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_LT_OS[USER_ACCESS_ID]",
+      "fact_Employee_List[PERSON_KEY]",
+      "fact_Employee_List[USER_ACCESS_ID]",
+      "fact_Employee_List[age]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "fact_Employee_List",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "Index",
+      "PERSON_KEY",
+      "USER_ACCESS_ID",
+      "age"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "age → Середній вік",
+    "purpose": "Розрахункове поле: Середній вік = (age1 +age2 + age3.... + agen )/С, де: - age1, age2,age3... agen - вік кожного працівника; - С - кількість працівників в команді",
+    "requirementRefs": [
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

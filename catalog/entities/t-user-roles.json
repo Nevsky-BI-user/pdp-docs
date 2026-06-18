@@ -1,0 +1,40 @@
+{
+  "id": "t-user-roles",
+  "type": "entity",
+  "name": "t_user_roles",
+  "definition": "",
+  "server": "",
+  "db": "",
+  "powerQuery": "t_user_roles",
+  "sourceTables": [],
+  "columns": [
+    {
+      "name": "user_role",
+      "dataType": "string",
+      "source": "user_role",
+      "isCalculated": false
+    },
+    {
+      "name": "user_role_eng",
+      "dataType": "string",
+      "source": "user_role_eng",
+      "isCalculated": false
+    },
+    {
+      "name": "user_role_sorting",
+      "dataType": "int64",
+      "source": "user_role_sorting",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [],
+  "relatedMeasures": [],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/t_user_roles.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

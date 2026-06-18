@@ -1,0 +1,53 @@
+{
+  "id": "ac-export-trend-okr",
+  "type": "measure",
+  "name": "AC.Export.Тренд OKR (%)",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Loss_Productivity\\Export",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SELECTEDVALUE('fact_Loss_of_Productivity'[OKR_LAST_YEAR_RATE])",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Loss_of_Productivity[OKR_LAST_YEAR_RATE]"
+    ],
+    "tables": [
+      "fact_Loss_of_Productivity"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_Loss_of_Productivity"
+    ],
+    "sourceColumns": [
+      "OKR_LAST_YEAR_RATE"
+    ],
+    "powerQuery": "fact_Loss_of_Productivity"
+  },
+  "business": {
+    "definition": "OKR_LAST_YEAR_RATE → Тренд OKR (%); OKR_LAST_YEAR_RATE → OKR останній рік; OKR_LAST_YEAR_RATE → Значення коефіцієнта індивідуального бонусу за останній період; OKR_LAST_YEAR_RATE → OKR команди за останній рік",
+    "purpose": "Для розрахунку метрики \"Тренд OKR\" Ці дані виводяться в деталізацію по тренду оцінки ОКР Тимчасово це буде коефіцієнт індивідуального бонусу, а не оцінка ОКР.  <br>Визначається по показнику керівника цієї команди.  <br>Якщо у керівника є ОКР, який було складено/оцінено по іншому кадровому підрозділу/організації, то такий ОКР  не відображається. Наприклад, керівник в 2023 році працював на іншому підприємстві чи підрозділі.",
+    "requirementRefs": [
+      "Кейс-Втрати-Продуктивності-Працівників",
+      "Кейс-Втрати-Продуктивності-Працівників/Деталізація-метрик-в-кейсі-Продуктивність",
+      "Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Додати-інформацію-про-ОКР-команди-та-середню-оцінку-результативності-по-команді"
+    ]
+  },
+  "tags": [
+    "analytical-cases",
+    "export",
+    "loss-productivity",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

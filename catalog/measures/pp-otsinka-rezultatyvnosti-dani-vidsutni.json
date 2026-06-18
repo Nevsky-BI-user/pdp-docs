@@ -1,0 +1,45 @@
+{
+  "id": "pp-otsinka-rezultatyvnosti-dani-vidsutni",
+  "type": "measure",
+  "name": "PP.Оцінка результативності.Дані відсутні",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Паспорт\\Результативність",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "IF(\n    ISBLANK([PP.Оцінка результативності.Керівником.Total])\n    && ISBLANK([PP.Оцінка результативності.Керівником])\n    && ISBLANK([PP.Оцінка результативності.Самооцінка.Total])\n    && ISBLANK([PP.Оцінка результативності.Самооцінка]), \n    \"Дані відсутні\", \n    \"\"\n)",
+  "dependencies": {
+    "measures": [
+      "PP.Оцінка результативності.Керівником",
+      "PP.Оцінка результативності.Керівником.Total",
+      "PP.Оцінка результативності.Самооцінка",
+      "PP.Оцінка результативності.Самооцінка.Total"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "pasport",
+    "pdp",
+    "personal-profile",
+    "rezultatyvnist"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

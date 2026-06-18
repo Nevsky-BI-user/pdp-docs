@@ -1,0 +1,58 @@
+{
+  "id": "gp-k-t-spivrobitnykiv-shcho-otrymuiut-vyplaty-na-orendu-zhytla",
+  "type": "measure",
+  "name": "GP.К-ть співробітників, що отримують виплати на оренду житла",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\TRS",
+  "formatString": "0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),dim_Admin_OS[USER_ACCESS_ID] )\n\n/* *********** ADMIN *********** */\nVAR _admin =\n\tCALCULATE(\n        DISTINCTCOUNT(fact_TRS_Plan[USER_ACCESS_ID]),\n        fact_TRS_Plan[IS_ACTUAL] = TRUE(),\n        fact_TRS_Plan[ACCRUAL_ORG_CODE] = \"00144\")\n\n/* *********** LT *********** */\nVAR _admin_lt =\n\tCALCULATE(\n        DISTINCTCOUNT(fact_TRS_Plan[USER_ACCESS_ID]),\n        fact_TRS_Plan[IS_ACTUAL] = TRUE(),\n        fact_TRS_Plan[ACCRUAL_ORG_CODE] = \"00144\",\n        _filter_lt)\n\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\nRETURN \nCOALESCE(\n\t_res, \"-\")",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_LT_OS[USER_ACCESS_ID]",
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_TRS_Plan[ACCRUAL_ORG_CODE]",
+      "fact_TRS_Plan[IS_ACTUAL]",
+      "fact_TRS_Plan[USER_ACCESS_ID]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_TRS_Plan",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List",
+      "DM.vw_R27_fact_TRS_Plan_PDP"
+    ],
+    "sourceColumns": [
+      "ACCRUAL_ORG_CODE",
+      "IS_ACTUAL",
+      "Index",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

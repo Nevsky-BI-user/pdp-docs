@@ -1,0 +1,52 @@
+{
+  "id": "ac-switch-perepratsiuvannia-viva",
+  "type": "measure",
+  "name": "AC.Switch.Перепрацювання Viva",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SWITCH(\n\tSELECTEDVALUE('t_AC Burnout'[Burnout_Indicator]),\n\t\"Оцінка\", [AC.Чи є ризик вигорання через перепрацювання?],\n\t\"Дані\", COALESCE([AC.Перепрацювання Viva],0)\n)",
+  "dependencies": {
+    "measures": [
+      "AC.Перепрацювання Viva",
+      "AC.Чи є ризик вигорання через перепрацювання?"
+    ],
+    "columns": [
+      "t_AC Burnout[Burnout_Indicator]"
+    ],
+    "tables": [
+      "t_AC Burnout"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "Burnout_Indicator"
+    ],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "Перепрацювання Viva",
+    "purpose": "Viva_Overworking = TOTAL_AFTER_HOURS/  <br>workdays_without_sickleaves_and_vacations.<br>**18.05.2026** Якщо поле TOTAL_AFTER_HOURS > 0 і поле workdays_without_sickleaves_and_vacations = 0, то замість workdays_without_sickleaves_and_vacations брати значення поля Viva_days_6month.",
+    "requirementRefs": [
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22"
+    ]
+  },
+  "tags": [
+    "analytical-cases",
+    "burnout-risk",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

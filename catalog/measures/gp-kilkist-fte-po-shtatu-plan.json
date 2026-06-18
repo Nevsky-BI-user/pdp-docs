@@ -1,0 +1,54 @@
+{
+  "id": "gp-kilkist-fte-po-shtatu-plan",
+  "type": "measure",
+  "name": "GP.Кількість FTE по штату (план)",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\Загальна інформація",
+  "formatString": "#,0.00;-#,0.00;0.00",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _filter_lt= TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), 'fact_Employee_List'[USER_ACCESS_ID])\nVAR _admin = \n\tCALCULATE(\n\t\tSUM('fact_Employee_List'[POSITION_AMT]),\n\t\tNOT('fact_Employee_List'[STATUS_KEY] IN {\"2\",\"3\"})\n\t)\nVAR _admin_lt = \n\tCALCULATE(\n\t\tSUM('fact_Employee_List'[POSITION_AMT]),\n\t\tNOT('fact_Employee_List'[STATUS_KEY] IN {\"2\",\"3\"}),\n\t\t_filter_lt\n\t)\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE('t_HierarchyTypes'[Index]),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\nRETURN \n\tTRIM(\n\t\tFORMAT(\t\n\t\t\tCOALESCE(_res, \"-\"), \n\t\t\t\"### ###\" \n\t\t) \n\t)\n\t\t",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[POSITION_AMT]",
+      "fact_Employee_List[STATUS_KEY]",
+      "fact_Employee_List[USER_ACCESS_ID]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "fact_Employee_List",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "Index",
+      "POSITION_AMT",
+      "STATUS_KEY",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "POSITION_AMT → Кількість FTE по штату (план)",
+    "purpose": "Розрахункове поле.  <br>Потрібно підрахувати кількість запланованих ставок по штатним посадам по організації (organization_key) та підрозділу (division_key) без врахування задубльованих посад (тобто, коли на одній посаді є людина в статусах мобілізація або декрет (status_key = 2 або 3) та інший працівник в статусі Активний).  <br>Якщо це команда lead team, то штатну чисельність рахувати - так же, плюс посади, виходячи із зв'язку керівник-підлеглий.",
+    "requirementRefs": [
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

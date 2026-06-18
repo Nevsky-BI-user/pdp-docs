@@ -1,0 +1,70 @@
+{
+  "id": "pp-dovzhyna-hranytsi-robochoho-dnia-napriam",
+  "type": "measure",
+  "name": "PP.Довжина (границі) робочого дня (напрям)",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Viva\\Viva Collaboration",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR direction = \nFIRSTNONBLANKVALUE(\n\t\tVALUES('dim_Admin_OS'[ORDER_NUM]),\n\t\tCALCULATE(SELECTEDVALUE('dim_Admin_OS'[DIRECTION])))\n\nVAR __val =\nCALCULATE(\n\t[PP.Довжина (границі) робочого дня (Холдинг)],\n\tdim_Unit[DIRECTION] = direction)\n\nRETURN __val",
+  "dependencies": {
+    "measures": [
+      "PP.Довжина (границі) робочого дня (Холдинг)"
+    ],
+    "columns": [
+      "dim_Admin_OS[DIRECTION]",
+      "dim_Admin_OS[ORDER_NUM]",
+      "dim_Unit[DIRECTION]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "dim_Unit"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List",
+      "DM.vw_R27_dim_Unit"
+    ],
+    "sourceColumns": [
+      "DIRECTION",
+      "ORDER_NUM"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "DIRECTION → Напрям; DIRECTION → direction_name; DIRECTION → direction",
+    "purpose": "division_person_id = unit_key Поле зберігається в довіднику [dm.vw_R27_dim_unit]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List], через відповідний зв’язок за ключем [division_key] = [unit_key].  <br>Поле завжди має значення, пусте поле не допускається  <br>Якщо не вміщається в одну строку, перенести на іншу Поле зберігається в довіднику [dm.vw_R27_dim_unit]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List_PDP], через відповідний зв’язок за ключем [division_",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Сторінка-Індивідуальний-профіль-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Таблиця-vw_R27_calc_Viva_Direction_PDP",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Метрики-рекрутингу",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Метрики-рекрутингу/ТЗ-на-розробку-вітрин-по-метрикам-рекрутингу",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду",
+      "Командний-профіль/Сторінка-Навчання-і-розвиток/Блок-Розвиток-сторінки-Навчання-і-розвиток",
+      "Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)",
+      "Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)/Додаткові-вимоги-до-вітрини-Плинність",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Блок-Додаткові-інструменти"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "viva",
+    "viva-collaboration"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

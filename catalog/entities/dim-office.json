@@ -1,0 +1,168 @@
+{
+  "id": "dim-office",
+  "type": "entity",
+  "name": "dim_Office",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "dim_Office",
+  "sourceTables": [
+    "DM.vw_R27_dim_Office"
+  ],
+  "columns": [
+    {
+      "name": "ID",
+      "dataType": "string",
+      "source": "ID",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_KEY",
+      "dataType": "string",
+      "source": "OFFICE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_CODE",
+      "dataType": "string",
+      "source": "OFFICE_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE",
+      "dataType": "string",
+      "source": "OFFICE",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_TYPE",
+      "dataType": "string",
+      "source": "OFFICE_TYPE",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_REGION",
+      "dataType": "string",
+      "source": "OFFICE_REGION",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_LOCALITY",
+      "dataType": "string",
+      "source": "OFFICE_LOCALITY",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_REGIONID",
+      "dataType": "string",
+      "source": "OFFICE_REGIONID",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_ADRESS",
+      "dataType": "string",
+      "source": "OFFICE_ADRESS",
+      "isCalculated": false
+    },
+    {
+      "name": "REGION_NAME",
+      "dataType": "string",
+      "source": "REGION_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "CITY_NAME",
+      "dataType": "string",
+      "source": "CITY_NAME",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "fact_Burnout_Indicators",
+      "fromColumn": "OFFICE_ON_POSITION_KEY",
+      "toColumn": "OFFICE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Employee_List",
+      "fromColumn": "OFFICE_ON_POSITION_KEY",
+      "toColumn": "OFFICE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_employee_seniority_by_month",
+      "fromColumn": "OFFICE_ON_POSITION_KEY",
+      "toColumn": "OFFICE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Metrics",
+      "fromColumn": "OFFICE_ON_POSITION_KEY",
+      "toColumn": "OFFICE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Mobile_Limit",
+      "fromColumn": "OFFICE_ON_POSITION_KEY",
+      "toColumn": "OFFICE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Sick_Leaves",
+      "fromColumn": "office_on_position_key",
+      "toColumn": "OFFICE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Monthly_Viva_Insights",
+      "fromColumn": "OFFICE_ON_POSITION_KEY",
+      "toColumn": "OFFICE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_TRS_Plan",
+      "fromColumn": "OFFICE_ON_POSITION_KEY",
+      "toColumn": "OFFICE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Vacation",
+      "fromColumn": "OFFICE_ON_POSITION_KEY",
+      "toColumn": "OFFICE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Vacation_Reserve",
+      "fromColumn": "OFFICE_ON_POSITION_KEY",
+      "toColumn": "OFFICE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Viva_Metrics",
+      "fromColumn": "OFFICE_ON_POSITION_KEY",
+      "toColumn": "OFFICE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Loss_of_Productivity",
+      "fromColumn": "OFFICE_ON_POSITION_KEY",
+      "toColumn": "OFFICE_KEY",
+      "role": "to"
+    }
+  ],
+  "relatedMeasures": [],
+  "requirementRefs": [
+    "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника",
+    "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника",
+    "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+    "Командний-профіль/Сторінка-Загальна-інформація-про-команду/Редизайн-сторінки-Загальна-інформація"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/dim_Office.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

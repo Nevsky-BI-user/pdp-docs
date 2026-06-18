@@ -1,0 +1,52 @@
+{
+  "id": "gp-dolia-studentiv",
+  "type": "measure",
+  "name": "GP.Доля студентів",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _filter_lt= TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), 'fact_Employee_List'[USER_ACCESS_ID])\nVAR _admin = \n\tDIVIDE(\n\t\tCALCULATE(\n\t\t\tCOUNTROWS('fact_Employee_List'), \n\t\t\t'fact_Employee_List'[POSITION_CATEGORY_INTERNAL_SORT] = 11\n\t\t),\n\t\tCOUNTROWS('fact_Employee_List')\n\t)\nVAR _admin_lt = \n\tCALCULATE(\n\t\tDIVIDE(\n\t\t\tCALCULATE(\n\t\t\t\tCOUNTROWS( 'fact_Employee_List' ),\n\t\t\t\t'fact_Employee_List'[POSITION_CATEGORY_INTERNAL_SORT] = 11\n\t\t\t),\n\t\t\tCOUNTROWS( 'fact_Employee_List' )\n\t\t),\n\t\t_filter_lt\n\t)\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE('t_HierarchyTypes'[Index]),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\nRETURN  \n\tTRIM(\n\t\tFORMAT(\n\t\t\tCOALESCE(_res, \"-\"),\n\t\t\t\"0.00%\"\n\t\t) )",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[POSITION_CATEGORY_INTERNAL_SORT]",
+      "fact_Employee_List[USER_ACCESS_ID]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "fact_Employee_List",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "Index",
+      "POSITION_CATEGORY_INTERNAL_SORT",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "POSITION_CATEGORY_INTERNAL_SORT → Доля Senior managers (%); POSITION_CATEGORY_INTERNAL_SORT → Доля Middle managers (%); POSITION_CATEGORY_INTERNAL_SORT → Доля Line  (%); POSITION_CATEGORY_INTERNAL_SORT → Доля Specialists (%); POSITION_CATEGORY_INTERNAL_SORT → Доля Workers (%)",
+    "purpose": "Розрахункове поле: відношення кількості Senior managers у команді до загальної кількості працівників.  <br>Відношення кількості працівників, для яких position_category_internal_sort = 2 до загальної чисельності команди (метрика Кількість співробітників всього, чол.) Розрахункове поле: відношення кількості Middle managers у команді до загальної кількості працівників.  <br>Відношення кількості працівників, для яких position_category_internal_sort = 3 до загальної чисельності команди (метрика Кількість співробітників всього, чол.) Розрахункове поле: відношення кількості Line  у команді до загальн",
+    "requirementRefs": [
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

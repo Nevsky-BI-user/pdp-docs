@@ -1,0 +1,50 @@
+# PP.Підприємство
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Personal_Profile\Життєвий цикл` |
+| formatString | — |
+| dataType | — |
+| Прихована | ні |
+
+## DAX
+
+```dax
+SELECTEDVALUE(fact_Employee_History_Position[organization])
+```
+
+## Джерела
+
+Вихідні таблиці: `DM.vw_R27_fact_Employee_History_Position`
+
+Колонки: `organization`
+
+Power Query: `fact_Employee_History_Position`
+
+## Бізнес-суть
+
+organization → Організація
+
+organization_key=organization_id Поле зберігається в довіднику [dm.vw_R27_dim_organization]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List], через відповідний зв’язок за ключем [organization_key].  <br>Якщо назва організації не вміщається в одну строку, перенести на іншу Поле зберігається в довіднику [dm.vw_R27_dim_organization]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List_PDP], через відповідний зв’язок за ключем [organization_key].  <br>Якщо назва орга
+
+**Вимоги:** `Індивідуальний-профіль-працівника/Історія-по-посадам`, `Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам`, `Індивідуальний-профіль-працівника/Сторінка-Індивідуальний-профіль-працівника`, `Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника`, `Командний-профіль/Паспортна-частина-групового-профілю/Метрики-рекрутингу`
+
+## Залежності
+
+Таблиці: `fact_Employee_History_Position`
+
+Колонки: `fact_Employee_History_Position[organization]`
+
+## Схема
+
+```mermaid
+graph LR
+  M["PP.Підприємство"]
+  M --> fact_Employee_History_Position
+```
+
+## Нотатки
+
+_порожньо_

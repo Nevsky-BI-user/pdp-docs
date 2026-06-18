@@ -1,0 +1,50 @@
+{
+  "id": "pp-finbp",
+  "type": "measure",
+  "name": "PP.FinBP",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "COALESCE(\n\tSELECTEDVALUE('fact_Employee_List'[EMPLOYEE_FINBP_NAME]),\n\t\"-\"\n)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[EMPLOYEE_FINBP_NAME]"
+    ],
+    "tables": [
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "EMPLOYEE_FINBP_NAME"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "FinBP",
+    "purpose": "Поле зберігається в довіднику [ dm.vw_R27_dim_person]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List_PDP] та таблиці dm.vw_R27_dim_Employee_Special_Head_FinBP, через відповідний зв’язок за ключем [emp_finbp_id] = id, щоб із  таблиці dm.vw_R27_dim_person по ключу emp_finbp_id =person_key витягти значення  full_name.  <br>Якщо значення в полі відсутнє, то показати текст \"Дані відсутні\"  <br>Якщо ПІБ FinBP не вміщається в одну строку, перенести на іншу ПІБ FinBP керівника команди  <br>Поле зберігається в довіднику [ dm.vw_R27_d",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Допоміжні-вітрини-для-звіту/Денормалізація-даних-для-вітрини-DM.vw_R27_fact_Employee_List_PDP",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,49 @@
+{
+  "id": "ac-switch-kilkist-misiatsiv-bez-iakisnoi-vidpustky-za-ost-3-roky",
+  "type": "measure",
+  "name": "AC.Switch.Кількість місяців без якісної відпустки за ост. 3 роки",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Burnout_Risk\\Main",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SWITCH(\n\tSELECTEDVALUE('t_AC Burnout'[Burnout_Indicator]),\n\t\"Оцінка\", [AC.Чи є ризик вигорання через відсутність відпусток?],\n\t\"Дані\", COALESCE([AC.Кількість місяців без якісної відпустки], 0)\n)",
+  "dependencies": {
+    "measures": [
+      "AC.Кількість місяців без якісної відпустки",
+      "AC.Чи є ризик вигорання через відсутність відпусток?"
+    ],
+    "columns": [
+      "t_AC Burnout[Burnout_Indicator]"
+    ],
+    "tables": [
+      "t_AC Burnout"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "Burnout_Indicator"
+    ],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "analytical-cases",
+    "burnout-risk",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,58 @@
+{
+  "id": "pp-kolir-shapky-tultipu",
+  "type": "measure",
+  "name": "PP.Колір шапки тултіпу",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Життєвий цикл",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _first_date = \n    CALCULATE (\n        FIRSTNONBLANK(\n            'dim_Date'[Date],\n            [PP.РЦД]\n        ),\n        ALLSELECTED( 'dim_Date'[Date] )\n    )\nVAR _result = \n    SWITCH(\n        TRUE(),\n        SELECTEDVALUE('fact_Employee_History_Position'[IS_APRIL_SALARY_REVIEW]), \"#5B59C2\",\n        SELECTEDVALUE('fact_Employee_History_Position'[IS_TECH_POSITION_CHANGE]),  \"#0F8C6E\",\n        SELECTEDVALUE('fact_Employee_History_Position'[IS_TECH_SALARY_TRANSFER]), \"#C28814\",\n        SELECTEDVALUE('dim_Date'[Date]) = _first_date, \"#7A8AA0\",\n        \"#7A8AA0\"\n    )\nRETURN _result",
+  "dependencies": {
+    "measures": [
+      "PP.РЦД"
+    ],
+    "columns": [
+      "dim_Date[Date]",
+      "fact_Employee_History_Position[IS_APRIL_SALARY_REVIEW]",
+      "fact_Employee_History_Position[IS_TECH_POSITION_CHANGE]",
+      "fact_Employee_History_Position[IS_TECH_SALARY_TRANSFER]"
+    ],
+    "tables": [
+      "dim_Date",
+      "fact_Employee_History_Position"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_Employee_History_Position"
+    ],
+    "sourceColumns": [
+      "Date",
+      "IS_APRIL_SALARY_REVIEW",
+      "IS_TECH_POSITION_CHANGE",
+      "IS_TECH_SALARY_TRANSFER"
+    ],
+    "powerQuery": "dim_Date"
+  },
+  "business": {
+    "definition": "IS_APRIL_SALARY_REVIEW → Квітневий перегляд заробітної плати; IS_TECH_POSITION_CHANGE → Технічна зміна посади; IS_TECH_SALARY_TRANSFER → Технічний перелив (з/п)",
+    "purpose": "",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zhyttievyi-tsykl"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,68 @@
+{
+  "id": "gp-dolia-komandy-z-doplatoiu-za-roziznyi-kharakter-roboty",
+  "type": "measure",
+  "name": "GP.Доля команди з доплатою за роз’їзний характер роботи, %",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\TRS",
+  "formatString": "0.00%;-0.00%;0.00%",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),dim_Admin_OS[USER_ACCESS_ID] )\n\n/* *********** ADMIN *********** */\nVAR _admin =\n\tVAR _Employees =VALUES('dim_Admin_OS'[USER_ACCESS_ID])\n\tVAR _table0 = \n\t\tADDCOLUMNS(\n\t\t\t_Employees,\n\t\t\t\"@Indicator\",\n\t\t\tCALCULATE(\n\t\t\t\tMAX(fact_TRS_Plan[PAYMENT_PLAN_SUM]),\n\t\t\t\tfact_TRS_Plan[IS_ACTUAL]=TRUE(),\n\t\t\t\tfact_TRS_Plan[ACCRUAL_ORG_CODE]=\"00193\"\n\t\t\t)\n\t\t)\n\tVAR _ShareOfSomeIndicator = \n\t\tVAR _Nominator = \n\t\tCOUNTROWS(\n\t\t\tFILTER(\n\t\t\t\t_table0, \n\t\t\t\tNOT ISBLANK([@Indicator]) && [@Indicator] > 0\n\t\t\t)\n\t\t)\n\t\tVAR _Denominator = COUNTROWS(_table0)\n\t\tRETURN DIVIDE(_Nominator, _Denominator)\n\tRETURN _ShareOfSomeIndicator\n\n/* *********** LT *********** */\nVAR _admin_lt =\n\tVAR _table0 = \n\t\tCALCULATETABLE(\n\t\t\tADDCOLUMNS(\n\t\t\t\tVALUES( 'dim_Admin_OS'[USER_ACCESS_ID] ),\n\t\t\t\t\"@Indicator\",\n\t\t\t\tCALCULATE(\n\t\t\t\t\tMAX(fact_TRS_Plan[PAYMENT_PLAN_SUM]),\n\t\t\t\t\tfact_TRS_Plan[IS_ACTUAL]=TRUE(),\n\t\t\t\t\tfact_TRS_Plan[ACCRUAL_ORG_CODE]=\"00193\"\n\t\t\t\t)\n\t\t\t),\n\t\t\t_filter_lt\n\t\t)\n\tVAR _ShareOfSomeIndicator = \n\t\tVAR _Nominator = \n\t\tCOUNTROWS(\n\t\t\tFILTER(\n\t\t\t\t_table0, \n\t\t\t\tNOT ISBLANK([@Indicator]) && [@Indicator] > 0\n\t\t\t)\n\t\t)\n\t\tVAR _Denominator = COUNTROWS(_table0)\n\t\tRETURN DIVIDE(_Nominator, _Denominator)\n\tRETURN _ShareOfSomeIndicator\n\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\nRETURN \nCOALESCE(\n\t_res, \"-\")",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_LT_OS[USER_ACCESS_ID]",
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_TRS_Plan[ACCRUAL_ORG_CODE]",
+      "fact_TRS_Plan[IS_ACTUAL]",
+      "fact_TRS_Plan[PAYMENT_PLAN_SUM]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_TRS_Plan",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List",
+      "DM.vw_R27_fact_TRS_Plan_PDP"
+    ],
+    "sourceColumns": [
+      "ACCRUAL_ORG_CODE",
+      "IS_ACTUAL",
+      "Index",
+      "PAYMENT_PLAN_SUM",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "PAYMENT_PLAN_SUM → Річний цільовий дохід; PAYMENT_PLAN_SUM → Розмір фіксованої винагороди плановий, за місяць ПОТОЧНИЙ; PAYMENT_PLAN_SUM → Сума (на поточний момент); PAYMENT_PLAN_SUM → Середній розмір премії за місяць; PAYMENT_PLAN_SUM → Доля учасників із зміною фіксованої винагороди; PAYMENT_PLAN_SUM → Діапазон фіксованої винагороди (план)",
+    "purpose": "PAYMENT_PLAN_SUMх(BONUS_MONTH_SALARY_CNTх12 +BONUS_QUARTER_SALARY_CNTх4+BONUS_YEAR_SALARY_CNT+12) Відібрати записи по працівнику [person_key], періоду [Period], організації [organization_key], підрозділу [division_key], де category_name = Фіксована винагорода, IS_ACTUAL  = \"1\", END_DATE > поточна дата, або END_DATE = \"01.01.2001\". (BONUS_MONTH_SALARY_CNT +BONUS_QUARTER_SALARY_CNT+  <br>BONUS_YEAR_SALARY_CNT)* PAYMENT_PLAN_SUM + (PAYMENT_PLAN_SUM*12) Розрахункове поле.  <br>Потрібно зсумувати значення поля [PAYMENT_PLAN_SUM] по тим членам команди, у яких воно > 0,00  по ACCRUAL_ORG_CODE = 00148",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Деталізація-на-сторінці-Винагорода",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Доопрацювання-сторінки-ТРС",
+      "Командний-профіль/Сторінка-TRS-команди",
+      "Командний-профіль/Сторінка-TRS-команди/Доопрацювання-сторінки-TRS",
+      "Командний-профіль/Сторінка-TRS-команди/Сторінка-Винагорода-групового-профілю#вимоги-до-звіту"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

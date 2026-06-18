@@ -1,0 +1,67 @@
+{
+  "id": "pp-rozmir-merezhi-kadrovyi-pidrozdil-3m",
+  "type": "measure",
+  "name": "PP.Розмір мережі (кадровий підрозділ, 3м)",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Viva\\Viva Networks",
+  "formatString": "#,0.00",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR department = \nFIRSTNONBLANKVALUE(\n\t\tVALUES('dim_Admin_OS'[ORDER_NUM]),\n\t\tCALCULATE(SELECTEDVALUE('dim_Admin_OS'[PERSONNEL_UNIT])))\n\nVAR __val =\nCALCULATE(\n\t[PP.Розмір мережі (Холдинг, 3м)],\n\tdim_Unit[PERSONNEL_UNIT] = department)\n\nRETURN __val",
+  "dependencies": {
+    "measures": [
+      "PP.Розмір мережі (Холдинг, 3м)"
+    ],
+    "columns": [
+      "dim_Admin_OS[ORDER_NUM]",
+      "dim_Admin_OS[PERSONNEL_UNIT]",
+      "dim_Unit[PERSONNEL_UNIT]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "dim_Unit"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List",
+      "DM.vw_R27_dim_Unit"
+    ],
+    "sourceColumns": [
+      "ORDER_NUM",
+      "PERSONNEL_UNIT"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "PERSONNEL_UNIT → Кадровий підрозділ працівника; PERSONNEL_UNIT → Підрозділ кадровий; PERSONNEL_UNIT → Назва попереднього кадрового підрозділу; PERSONNEL_UNIT → Назва поточного кадрового підрозділу; PERSONNEL_UNIT → Команда; PERSONNEL_UNIT → division_person",
+    "purpose": "division_person_id = unit_key Поле зберігається в довіднику [dm.vw_R27_dim_unit]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List], через відповідний зв’язок за ключем [division_key] = [unit_key].  <br>Поле завжди має значення, пусте поле не допускається  <br>Якщо назва не вміщається в одну строку, перенести на іншу Поле зберігається в довіднику [dm.vw_R27_dim_unit]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List_PDP], через відповідний зв’язок за ключем [div",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Індивідуальний-профіль-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Допоміжні-вітрини-для-звіту/Таблиця-періодична-(попередні-12-міс)-для-розрахунку-метрики-Середній-дохід",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Метрики-рекрутингу/ТЗ-на-розробку-вітрин-по-метрикам-рекрутингу",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Сторінка-Картка-команди",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "viva",
+    "viva-networks"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

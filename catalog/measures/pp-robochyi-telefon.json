@@ -1,0 +1,50 @@
+{
+  "id": "pp-robochyi-telefon",
+  "type": "measure",
+  "name": "PP.Робочий телефон",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "COALESCE(\n\tSELECTEDVALUE('fact_Employee_List'[PHONE_WORK]),\n\tSELECTEDVALUE('fact_Employee_List'[PHONE_PERSONAL]),\n\t\"-\"\n)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[PHONE_PERSONAL]",
+      "fact_Employee_List[PHONE_WORK]"
+    ],
+    "tables": [
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "PHONE_PERSONAL",
+      "PHONE_WORK"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "PHONE_WORK → Робочий телефон",
+    "purpose": "Поле зберігається в довіднику [dm.vw_R27_dim_person]<br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List], через відповідний зв’язок за ключем [person_key].<br>Якщо поле робочий телефон (phone_work) має значення, то виводити його. Якщо воно відсутнє (Null), то виводити особистий телефон (phone_personal).Якщо обидва поля відсутні, то показати текст \"Дані відсутні\"",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника"
+    ]
+  },
+  "tags": [
+    "main",
+    "pasport",
+    "pdp",
+    "personal-profile"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

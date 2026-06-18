@@ -1,0 +1,44 @@
+{
+  "id": "date-filters-check",
+  "type": "measure",
+  "name": "date_filters_check",
+  "homeTable": "_Measures",
+  "displayFolder": "_Technical",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _period =                                               //Сюди підставляємо фільтр контексту\n\tVAR __Win =         \n\t\tVAR __EndMonth = EOMONTH( TODAY(), -1 ) \n\tRETURN DATESINPERIOD( dim_Date[Date], __EndMonth, -3, MONTH )\nRETURN \n\tCALCULATETABLE(\n\t\tVALUES('dim_Date'[Date]),\n\t\t__Win\n\t)\nVAR _mind = \n\tCALCULATE(\n\t\tMIN('dim_Date'[Date]),\n\t\t\n\t\t_period\n\t)\nVAR _maxd = \n\tCALCULATE(\n\t\tMAX('dim_Date'[Date]),\n\t\t_period\n\t)\nVAR result = \nFORMAT(_mind, \"dd.mm.yyyy\") & \" - \" & FORMAT(_maxd, \"dd.mm.yyyy\")\nRETURN result",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Date[Date]"
+    ],
+    "tables": [
+      "dim_Date"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "Date"
+    ],
+    "powerQuery": "dim_Date"
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "pdp",
+    "technical"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

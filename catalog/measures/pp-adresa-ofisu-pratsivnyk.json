@@ -1,0 +1,49 @@
+{
+  "id": "pp-adresa-ofisu-pratsivnyk",
+  "type": "measure",
+  "name": "PP.Адреса офісу (працівник)",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "COALESCE(\n\tSELECTEDVALUE('fact_Employee_List'[EMP_OFFICE_ADRESS]),\n\t\"-\"\n)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[EMP_OFFICE_ADRESS]"
+    ],
+    "tables": [
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "EMP_OFFICE_ADRESS"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "Адреса офісу (працівник)",
+    "purpose": "Поле зберігається в довіднику [DM.vw_R27_dim_office]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List_PDP], через відповідний зв’язок за ключем office_on_employee_key = office_key.  <br>Якщо значення в полі відсутнє, то показати текст \"Дані відсутні\"",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Допоміжні-вітрини-для-звіту/Денормалізація-даних-для-вітрини-DM.vw_R27_fact_Employee_List_PDP"
+    ]
+  },
+  "tags": [
+    "main",
+    "pasport",
+    "pdp",
+    "personal-profile"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

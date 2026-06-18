@@ -1,0 +1,59 @@
+{
+  "id": "pp-typ-optsii-po-avto",
+  "type": "measure",
+  "name": "PP.Тип опції по авто",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\TRS",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _employee_id = VALUES('dim_Admin_OS'[EMPLOYEE_ID])\nVAR _result = \nCALCULATE(\n    SELECTEDVALUE('fact_Employees_Attributes'[JOB_TITLE_COMPOSITE_VEHICLE_FORMAT]),\n    ALL('dim_Admin_OS'[USER_ACCESS_ID]),\n    TREATAS(_employee_id, 'fact_Employees_Attributes'[EMPLOYEE_ID])\n)\nRETURN \n    IF(\n        ISBLANK(_result) || _result = \"Не передбачено\",\n        \"Не передбачено\",\n        _result\n    )",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[EMPLOYEE_ID]",
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_Employees_Attributes[EMPLOYEE_ID]",
+      "fact_Employees_Attributes[JOB_TITLE_COMPOSITE_VEHICLE_FORMAT]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_Employees_Attributes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List",
+      "DM.vw_R27_fact_Employees_Attributes"
+    ],
+    "sourceColumns": [
+      "EMPLOYEE_ID",
+      "JOB_TITLE_COMPOSITE_VEHICLE_FORMAT",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "JOB_TITLE_COMPOSITE_VEHICLE_FORMAT → Тип опції по авто по зведеній посаді; JOB_TITLE_COMPOSITE_VEHICLE_FORMAT → Тип опції по авто по зведеній посаді (план); JOB_TITLE_COMPOSITE_VEHICLE_FORMAT → Опція по авто план",
+    "purpose": "Якщо по посаді працівника відсутня зведена посада або по зведеній посаді не прописано формат авто, то проставити лейбл \"Дані відсутні\"",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Доопрацювання-сторінки-ТРС",
+      "Командний-профіль/Сторінка-TRS-команди/Доопрацювання-сторінки-TRS",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,64 @@
+{
+  "id": "gp-serednii-dokhid-z-richnym-bonusom-za-ost-12-mis",
+  "type": "measure",
+  "name": "GP.Середній дохід з річним бонусом (за ост. 12 міс)",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\TRS",
+  "formatString": "#,0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),dim_Admin_OS[USER_ACCESS_ID] )\n\n/* *********** ADMIN *********** */\nVAR _admin =\nCALCULATE(\n    DIVIDE(\n        SUM('fact_Average_Income'[MONTLY_INCOME_WITH_BONUS]),\n        SUM('fact_Average_Income'[FTE_EMPLOYEE]), BLANK()),\n        'fact_Average_Income'[IS_INCLUDED_INTO_CALC] = 1)\n\n/* *********** ADMIN LT *********** */\nVAR _admin_lt =\nCALCULATE(\n    DIVIDE(\n        SUM('fact_Average_Income'[MONTLY_INCOME_WITH_BONUS]),\n        SUM('fact_Average_Income'[FTE_EMPLOYEE]), BLANK()),\n\t_filter_lt,\n    'fact_Average_Income'[IS_INCLUDED_INTO_CALC] = 1)\nVAR _res = \n\tSWITCH(\n\t\t_roleIndex,\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\nRETURN \nCOALESCE(_res, \"-\")",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_LT_OS[USER_ACCESS_ID]",
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_Average_Income[FTE_EMPLOYEE]",
+      "fact_Average_Income[IS_INCLUDED_INTO_CALC]",
+      "fact_Average_Income[MONTLY_INCOME_WITH_BONUS]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_Average_Income",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List",
+      "DM.vw_R27_fact_Average_Income"
+    ],
+    "sourceColumns": [
+      "FTE_EMPLOYEE",
+      "IS_INCLUDED_INTO_CALC",
+      "Index",
+      "MONTLY_INCOME_WITH_BONUS",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "FTE_EMPLOYEE → Зайнятих ставок з відсутностями; FTE_EMPLOYEE → Зайняті ставки; FTE_EMPLOYEE → Кількість зайнятих FTE (факт); MONTLY_INCOME_WITH_BONUS → Середній дохід з річним бонусом (за ост. 12 міс)",
+    "purpose": "Поле завжди має значення, пусте поле не допускається Розрахункове поле.  <br>Потрібно підрахувати кількість фактично зайнятих ставок по штатним посадам по організації (organization_key) та підрозділу (division_key) по працівникам у статусах Активні та Інша відсутність (status_key = 1 або 4)  <br>(Аутсорс поки не входить в розрахунок) Середній дохід з річним бонусом (за ост. 12 міс) = ∑сума нарахувань по всім працівникам підрозділу/команди за попередні 12 міс./∑зайнятих ставок по всім працівника підрозділу/команди за попередні 12 міс.  <br>Потрібно зсумувати значення поля montly_income_with_bon",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Допоміжні-вітрини-для-звіту/Таблиця-періодична-(попередні-12-міс)-для-розрахунку-метрики-Середній-дохід",
+      "Командний-профіль/Сторінка-TRS-команди/Доопрацювання-сторінки-TRS",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

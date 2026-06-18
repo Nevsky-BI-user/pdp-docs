@@ -1,0 +1,42 @@
+{
+  "id": "pp-naiavnist-dovhykh-vidpustok",
+  "type": "measure",
+  "name": "PP.Наявність довгих відпусток",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Здоров'я та благополуччя",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _qty = [PP.Кількість довгих відпусток]\nVAR _days = [PP.Тривалість довгих відпусток]\nVAR _res = \n\t_qty & \n\tIF(\n\t\tOR(ISBLANK(_days), _days = 0), \n\t\tBLANK(), \n\t\t\" (\" & _days & \" дн.)\"\n\t)\nRETURN _res",
+  "dependencies": {
+    "measures": [
+      "PP.Кількість довгих відпусток",
+      "PP.Тривалість довгих відпусток"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zdorovia-ta-blahopoluchchia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

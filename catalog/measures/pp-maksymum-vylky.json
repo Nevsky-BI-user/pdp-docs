@@ -1,0 +1,47 @@
+{
+  "id": "pp-maksymum-vylky",
+  "type": "measure",
+  "name": "PP.Максимум вилки",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\TRS",
+  "formatString": "#,0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "MAX(fact_Employee_List[max_salary_range])",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[max_salary_range]"
+    ],
+    "tables": [
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "max_salary_range"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "max_salary_range → Максимум вилки",
+    "purpose": "Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List]  <br>Якщо значення в полі відсутнє, то показати текст \"Дані відсутні\" або знак \"-\"",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,43 @@
+{
+  "id": "gp-otsinka-rezultatyvnosti-pusto",
+  "type": "measure",
+  "name": "GP.Оцінка результативності пусто",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\SVG",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "IF(\n\tISBLANK([GP.Оцінка результативності попередній рік]) && ISBLANK([GP.Оцінка результативності поточний рік]),\n\t\"Дані\"&UNICHAR(10)&\"відсутні\",\n\t\"\"\n)",
+  "dependencies": {
+    "measures": [
+      "GP.Оцінка результативності попередній рік",
+      "GP.Оцінка результативності поточний рік"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "group-profile",
+    "main",
+    "pdp",
+    "svg"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

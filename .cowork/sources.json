@@ -1,0 +1,22 @@
+{
+  "generatedBy": "cowork pdp-docs generator",
+  "sources": [
+    {
+      "id": "pbip",
+      "type": "pbip",
+      "path": "C:\\PROJECTS\\MHP\\PDP\\GIT_local",
+      "semanticModel": "PDP.SemanticModel",
+      "gitRemote": "",
+      "branch": "local_dev"
+    },
+    {
+      "id": "wiki",
+      "type": "azure-wiki",
+      "path": "C:\\github\\azure-wiki\\PDP.wiki\\Функціональні-вимоги\\Вимоги-до-звіту-People-Digital-Profile",
+      "gitRemote": "",
+      "branch": "wikiMaster"
+    }
+  ],
+  "mapping": {},
+  "scope": "full (усі displayFolder)"
+}

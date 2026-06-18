@@ -1,0 +1,49 @@
+{
+  "id": "pp-trs-category-y-axis-max-value-doplaty-za-sumishchennia",
+  "type": "measure",
+  "name": "PP.TRS_category_Y_axis_max_value_Доплати_за_суміщення",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\TRS",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "    MAXX(\n        VALUES('dim_TRS_categories'[TRS_CATEGORY]),\n        [PP.Доплати за суміщення]\n    ) * 1.3",
+  "dependencies": {
+    "measures": [
+      "PP.Доплати за суміщення"
+    ],
+    "columns": [
+      "dim_TRS_categories[TRS_CATEGORY]"
+    ],
+    "tables": [
+      "dim_TRS_categories"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_TRS_Plan_PDP"
+    ],
+    "sourceColumns": [
+      "TRS_CATEGORY"
+    ],
+    "powerQuery": "dim_TRS_categories"
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

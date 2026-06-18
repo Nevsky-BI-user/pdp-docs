@@ -1,0 +1,202 @@
+{
+  "id": "fact-excel-group-profile-general-metric",
+  "type": "entity",
+  "name": "fact_EXCEL_Group_Profile_General_Metric",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_EXCEL_Group_Profile_General_Metric",
+  "sourceTables": [
+    "DWH.t_SPO_HR_Group_Profile_General_Metric"
+  ],
+  "columns": [
+    {
+      "name": "ID",
+      "dataType": "string",
+      "source": "ID",
+      "isCalculated": false
+    },
+    {
+      "name": "Line_Num",
+      "dataType": "int64",
+      "source": "Line_Num",
+      "isCalculated": false
+    },
+    {
+      "name": "Record_Type",
+      "dataType": "string",
+      "source": "Record_Type",
+      "isCalculated": false
+    },
+    {
+      "name": "Direction_Name",
+      "dataType": "string",
+      "source": "Direction_Name",
+      "isCalculated": false
+    },
+    {
+      "name": "Staffing",
+      "dataType": "double",
+      "source": "Staffing",
+      "isCalculated": false
+    },
+    {
+      "name": "Hiring_Plan",
+      "dataType": "double",
+      "source": "Hiring_Plan",
+      "isCalculated": false
+    },
+    {
+      "name": "Internal_Middle_Level_Fill",
+      "dataType": "double",
+      "source": "Internal_Middle_Level_Fill",
+      "isCalculated": false
+    },
+    {
+      "name": "Internal_Senior_Level_Fill",
+      "dataType": "double",
+      "source": "Internal_Senior_Level_Fill",
+      "isCalculated": false
+    },
+    {
+      "name": "Referral_Hire",
+      "dataType": "double",
+      "source": "Referral_Hire",
+      "isCalculated": false
+    },
+    {
+      "name": "Offer_Acceptance_Rate",
+      "dataType": "double",
+      "source": "Offer_Acceptance_Rate",
+      "isCalculated": false
+    },
+    {
+      "name": "Regretted_Attrition_Rate",
+      "dataType": "double",
+      "source": "Regretted_Attrition_Rate",
+      "isCalculated": false
+    },
+    {
+      "name": "New_Hire_Turnover_Forecast",
+      "dataType": "double",
+      "source": "New_Hire_Turnover_Forecast",
+      "isCalculated": false
+    },
+    {
+      "name": "Talent_Pool",
+      "dataType": "double",
+      "source": "Talent_Pool",
+      "isCalculated": false
+    },
+    {
+      "name": "Created_on_Source_Dttm",
+      "dataType": "dateTime",
+      "source": "Created_on_Source_Dttm",
+      "isCalculated": false
+    },
+    {
+      "name": "TA_File_Name",
+      "dataType": "string",
+      "source": "TA_File_Name",
+      "isCalculated": false
+    },
+    {
+      "name": "is_Deleted",
+      "dataType": "boolean",
+      "source": "is_Deleted",
+      "isCalculated": false
+    },
+    {
+      "name": "Version",
+      "dataType": "string",
+      "source": "Version",
+      "isCalculated": false
+    },
+    {
+      "name": "Source_System_ID",
+      "dataType": "int64",
+      "source": "Source_System_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "Source_Table_ID",
+      "dataType": "int64",
+      "source": "Source_Table_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "Dimension_Check_Sum_SCD_Type_1",
+      "dataType": "int64",
+      "source": "Dimension_Check_Sum_SCD_Type_1",
+      "isCalculated": false
+    },
+    {
+      "name": "Updated_By",
+      "dataType": "string",
+      "source": "Updated_By",
+      "isCalculated": false
+    },
+    {
+      "name": "Session_SID",
+      "dataType": "int64",
+      "source": "Session_SID",
+      "isCalculated": false
+    },
+    {
+      "name": "Load_TimeStamp",
+      "dataType": "dateTime",
+      "source": "Load_TimeStamp",
+      "isCalculated": false
+    },
+    {
+      "name": "Update_TimeStamp",
+      "dataType": "dateTime",
+      "source": "Update_TimeStamp",
+      "isCalculated": false
+    },
+    {
+      "name": "eNPS",
+      "dataType": "double",
+      "source": "eNPS",
+      "isCalculated": false
+    },
+    {
+      "name": "Value_Knowledge",
+      "dataType": "double",
+      "source": "Value_Knowledge",
+      "isCalculated": false
+    },
+    {
+      "name": "Death_Incident_Production",
+      "dataType": "double",
+      "source": "Death_Incident_Production",
+      "isCalculated": false
+    },
+    {
+      "name": "Death_Incident_Total",
+      "dataType": "double",
+      "source": "Death_Incident_Total",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [],
+  "relatedMeasures": [
+    "GP.eNPS (%)",
+    "GP.Закриття позицій Middle внутрішніми кандидатами (%)",
+    "GP.Закриття позицій Senior+ внутрішніми кандидатами (%)",
+    "GP.Охоплення Middle|Senior+ наступниками (%)",
+    "GP.Рівень втрати високорезультативних працівників (%)",
+    "GP.Рівень смертельних виробничих інцидентів за 2025р., шт.",
+    "GP.Рівень смертельних не виробничих інцидентів за 2025р., шт.",
+    "GP.Співробітники, які розуміють та демонструють цінності компанії (%)",
+    "GP.Укомплектованість штату (%)"
+  ],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_EXCEL_Group_Profile_General_Metric.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,63 @@
+{
+  "id": "pp-pozytsiia-v-okladnii-vyltsi",
+  "type": "measure",
+  "name": "PP.Позиція в окладній вилці",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\TRS",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _salary = MAX(fact_Employee_List[MIN_TARIFF_RATE])\nvAR _salary_total = _salary + [PP.Роз'їзний характер роботи, грн] +[PP.Доплата за шкідливі умови праці,грн] + [PP.Премія за місяць, грн]\nVAR _min = MAX(fact_Employee_List[min_salary_range])\nVAR _max = MAX(fact_Employee_List[max_salary_range])\nVAR _mid_range = MAX(fact_Employee_List[AVG_TARIFF_RATE])\nVAR _position =  DIVIDE(_salary - _mid_range, _mid_range)\nVAR _result = \nSWITCH(\n\tTRUE(),\n\t_salary_total < _min, \"Нижче мінімума\",\n    _salary_total > _max, \"Вище максимуму\",\n\t_position <= -0.051, \"Мінімум-середина\",\n\t_position <= 0.05 , \"Cередина\",\n\t_position > 0.05, \"Середина-Максимум\",\n\t\"Дані відсутні\"\n)\nRETURN --_result & \":  \" & \nDIVIDE(_salary_total, _mid_range)",
+  "dependencies": {
+    "measures": [
+      "PP.Доплата за шкідливі умови праці,грн",
+      "PP.Премія за місяць, грн"
+    ],
+    "columns": [
+      "fact_Employee_List[AVG_TARIFF_RATE]",
+      "fact_Employee_List[MIN_TARIFF_RATE]",
+      "fact_Employee_List[max_salary_range]",
+      "fact_Employee_List[min_salary_range]"
+    ],
+    "tables": [
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "AVG_TARIFF_RATE",
+      "MIN_TARIFF_RATE",
+      "max_salary_range",
+      "min_salary_range"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "AVG_TARIFF_RATE → Середина вилки; MIN_TARIFF_RATE → Оклад; MIN_TARIFF_RATE → Позиція в окладній вилці; MIN_TARIFF_RATE → Зарплата (вилки); MIN_TARIFF_RATE → Розподіл за вилкою зарплат; MIN_TARIFF_RATE → Положення у вилці; max_salary_range → Максимум вилки",
+    "purpose": "Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List]  <br>Якщо значення в полі відсутнє, то показати текст \"Дані відсутні\" або знак \"-\" Розрахункове поле.  <br>Потрібно визначити в якому діапазоні знаходиться сума значень (min_tariff_rate + сума доплати за роз'їзний характер роботи+сума доплати за шкідливі умови праці+премія за місяць.)  <br>Сума доплати за роз'їзний характер роботи - значення поля PAYMENT_PLAN_SUM, де  ACCRUAL_ORG_CODE = 00193, IS_ACTUAL  = \"1\", END_DATE > поточна дата, або END_DATE = \"01.01.2001  <br>Сума доплати за",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Доопрацювання-сторінки-ТРС",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Командний-профіль/Сторінка-TRS-команди",
+      "Командний-профіль/Сторінка-TRS-команди/Сторінка-Винагорода-групового-профілю#вимоги-до-звіту",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

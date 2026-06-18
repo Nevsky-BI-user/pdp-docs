@@ -1,0 +1,48 @@
+{
+  "id": "dim-trs-categories",
+  "type": "entity",
+  "name": "dim_TRS_categories",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "dim_TRS_categories",
+  "sourceTables": [
+    "DM.vw_R27_fact_TRS_Plan_PDP"
+  ],
+  "columns": [
+    {
+      "name": "TRS_CATEGORY",
+      "dataType": "string",
+      "source": "TRS_CATEGORY",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "fact_TRS_Plan",
+      "fromColumn": "ACCRUAL_ORG_NAME",
+      "toColumn": "TRS_CATEGORY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_TRS",
+      "fromColumn": "ACCRUAL_TYPE_NAME",
+      "toColumn": "TRS_CATEGORY",
+      "role": "to"
+    }
+  ],
+  "relatedMeasures": [
+    "PP.TRS_category_Y_axis_max_value_Доплати_за_суміщення"
+  ],
+  "requirementRefs": [
+    "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника",
+    "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/dim_TRS_categories.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

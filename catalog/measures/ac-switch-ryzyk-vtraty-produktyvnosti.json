@@ -1,0 +1,54 @@
+{
+  "id": "ac-switch-ryzyk-vtraty-produktyvnosti",
+  "type": "measure",
+  "name": "AC.Switch.Ризик втрати продуктивності",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SWITCH(\n\tSELECTEDVALUE('t_AC Burnout'[Burnout_Indicator]),\n\t\"Оцінка\", [AC.Оцінка.Ризик втрати продуктивності],\n\t\"Дані\", [AC.Дані.Ризик втрати продуктивності]\n)",
+  "dependencies": {
+    "measures": [
+      "AC.Дані.Ризик втрати продуктивності",
+      "AC.Оцінка.Ризик втрати продуктивності"
+    ],
+    "columns": [
+      "t_AC Burnout[Burnout_Indicator]"
+    ],
+    "tables": [
+      "t_AC Burnout"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "Burnout_Indicator"
+    ],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "Ризик втрати продуктивності",
+    "purpose": "",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/Редизайн-паспортної-частини",
+      "Кейс-Втрати-Продуктивності-Працівників",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "analytical-cases",
+    "loss-productivity",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

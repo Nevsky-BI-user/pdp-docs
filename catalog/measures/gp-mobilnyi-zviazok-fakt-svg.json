@@ -1,0 +1,51 @@
+{
+  "id": "gp-mobilnyi-zviazok-fakt-svg",
+  "type": "measure",
+  "name": "'GP.Мобільний зв''язок, % факт.SVG'",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\TRS",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "/* *********** 1. ОТРИМАННЯ ТА ПІДГОТОВКА ДАНИХ *********** */\nVAR _MaxVal = MAXX( ALLSELECTED('fact_Mobile_Limit'[PHONE_PACKAGE_NAME]), [GP.К-ть співробітників, що отримують виплати на мобільний зв’язок] )\n\nVAR _Data = \n    ADDCOLUMNS(\n        VALUES('fact_Mobile_Limit'[PHONE_PACKAGE_NAME]),\n        \"@Val\", [GP.К-ть співробітників, що отримують виплати на мобільний зв’язок]\n    )\n\nVAR _FilteredData = FILTER(_Data, NOT(ISBLANK('fact_Mobile_Limit'[PHONE_PACKAGE_NAME])) && [@Val] > 0)\nVAR _CountItems = COUNTROWS(_FilteredData)\n\nVAR _DataWithRank = \n    GENERATE(\n        _FilteredData,\n        VAR _CurrVal = [@Val]\n        VAR _CurrCat = 'fact_Mobile_Limit'[PHONE_PACKAGE_NAME]\n        VAR _Rank = \n            COUNTROWS(\n                FILTER(\n                    _FilteredData,\n                    [@Val] > _CurrVal || ([@Val] = _CurrVal && 'fact_Mobile_Limit'[PHONE_PACKAGE_NAME] <= _CurrCat)\n                )\n            )\n        RETURN ROW(\"@Rank\", _Rank)\n    )\n\n/* *********** 2. НАЛАШТУВАННЯ *********** */\nVAR _CanvasWidth = 865\nVAR _CanvasHeight = COUNTROWS(_Data) * 30\n\nVAR _BarHeight = 20         -- Робимо бари тоншими у формі пігулки\nVAR _Gap = 8                -- Зменшуємо відступ між барами\nVAR _TopMargin = 15         -- Відступ зверху\nVAR _LeftMargin = 150       -- Збільшено! Тепер є багато місця для довгих назв зліва\nVAR _RightMargin = 40\nVAR _MaxBarWidth = _CanvasWidth - _LeftMargin - _RightMargin\n\nVAR _ColorBar = \"#D9C87C\"   -- Приглушений жовтий\nVAR _ColorTrack = \"#F5F5F5\" -- Світло-сірий фон\nVAR _ColorText = \"#003A5D\"  -- Колір назв\nVAR _ColorValue = \"#1F4E79\" -- Колір цифр\nVAR _Radius = _BarHeight / 2 -- Ідеальне скруглення (8px)\n\n/* *********** 3. ГЕНЕРАЦІЯ ЕЛЕМЕНТІВ *********** */\nVAR _SVG_Bars = \n    CONCATENATEX(\n        _DataWithRank,\n        VAR _YPos = _TopMargin + ([@Rank] - 1) * (_BarHeight + _Gap)\n        VAR _BarW = DIVIDE([@Val], _MaxVal, 0) * _MaxBarWidth\n        VAR _Label = 'fact_Mobile_Limit'[PHONE_PACKAGE_NAME]\n        VAR _ValueFormat = FORMAT([@Val], \"#,0\")\n        \n        RETURN\n        \"<g>\" &\n            -- Назва категорії (вирівнювання праворуч)\n            \"<text x='\" & (_LeftMargin - 10) & \"' y='\" & (_YPos + _BarHeight/2 + 4) & \"' \n                text-anchor='end' font-family='Segoe UI' font-size='12' fill='\" & _ColorText & \"'>\" & _Label & \"</text>\" &\n            \n            -- Фон (сірий трек)\n            \"<rect x='\" & _LeftMargin & \"' y='\" & _YPos & \"' width='\" & _MaxBarWidth & \"' height='\" & _BarHeight & \"' fill='\" & _ColorTrack & \"' rx='\" & _Radius & \"' />\" &\n            \n            -- Бар (факт)\n            IF([@Val] > 0, \n                \"<rect x='\" & _LeftMargin & \"' y='\" & _YPos & \"' width='\" & _BarW & \"' height='\" & _BarHeight & \"' fill='\" & _ColorBar & \"' rx='\" & _Radius & \"' />\", \n                \"\"\n            ) &\n            \n            -- Значення цифра\n            \"<text x='\" & (_LeftMargin + _BarW + 5) & \"' y='\" & (_YPos + _BarHeight/2 + 4) & \"' \n                text-anchor='start' font-family='Segoe UI' font-weight='bold' font-size='11' fill='\" & _ColorValue & \"'>\" & _ValueFormat & \"</text>\" &\n        \"</g>\",\n        \"\",\n        [@Rank], ASC\n    )\n\n/* *********** 4. ФІНАЛЬНИЙ РЕНДЕР *********** */\nVAR _SVG = \n    \"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 \" & _CanvasWidth & \" \" & _CanvasHeight & \"'>\" & \n    _SVG_Bars & \n    \"</svg>\"\n\nRETURN \n    IF(_CountItems > 0, _SVG, BLANK())",
+  "dependencies": {
+    "measures": [
+      "GP.К-ть співробітників, що отримують виплати на мобільний зв’язок"
+    ],
+    "columns": [
+      "fact_Mobile_Limit[PHONE_PACKAGE_NAME]"
+    ],
+    "tables": [
+      "fact_Mobile_Limit"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_Mobile_Limit_PDP"
+    ],
+    "sourceColumns": [
+      "PHONE_PACKAGE_NAME"
+    ],
+    "powerQuery": "fact_Mobile_Limit"
+  },
+  "business": {
+    "definition": "PHONE_PACKAGE_NAME → Мобільний зв'язок - Назва пакету",
+    "purpose": "Потрібно відібрати всі записи по працівнику [person_key], періоду [Period], організації [organization_key]  <br>Якщо значення в полі відсутнє, то показати текст \"Дані відсутні\" або знак \"-\"",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

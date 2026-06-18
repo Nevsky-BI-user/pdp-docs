@@ -1,0 +1,65 @@
+{
+  "id": "gp-seredni-vytraty-na-orendu-zhytla",
+  "type": "measure",
+  "name": "GP.Середні витрати на оренду житла",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\TRS",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),dim_Admin_OS[USER_ACCESS_ID] )\n\n/* *********** ADMIN *********** */\nVAR _admin =\n\tVAR _Employees =VALUES('dim_Admin_OS'[USER_ACCESS_ID])\n\tVAR _table0 = \n\t\tADDCOLUMNS(\n\t\t\t_Employees,\n\t\t\t\"@Indicator\",\n\t\t\tCALCULATE(\n\t\t\t\tMAX( fact_TRS_Plan[INIT_PAYMENT_PLAN_SUM] ),\n\t\t\t\tfact_TRS_Plan[IS_ACTUAL] = TRUE(),\n\t\t\t\tfact_TRS_Plan[ACCRUAL_ORG_CODE] = \"00144\"\n\t\t\t)\n\t\t)\n\tVAR _AverageOfSomeIndicator = \n\t\tAVERAGEX(\n\t\t\tFILTER(\n\t\t\t\t_table0,\n\t\t\t\tNOT ISBLANK([@Indicator]) && [@Indicator] <> 0\n\t\t\t),\n\t\t\t[@Indicator]\n\t\t)\n\tRETURN _AverageOfSomeIndicator\n\n/* *********** LT *********** */\nVAR _admin_lt =\n\tVAR _table0 = \n\t\tCALCULATETABLE(\n\t\t\tADDCOLUMNS(\n\t\t\t\tVALUES( 'dim_Admin_OS'[USER_ACCESS_ID] ),\n\t\t\t\t\"@Indicator\",\n\t\t\t\tCALCULATE(\n\t\t\t\t\tMAX( fact_TRS_Plan[INIT_PAYMENT_PLAN_SUM] ),\n\t\t\t\t\tfact_TRS_Plan[IS_ACTUAL] = TRUE(),\n\t\t\t\t\tfact_TRS_Plan[ACCRUAL_ORG_CODE] = \"00144\"\n\t\t\t\t)\n\t\t\t),\n\t\t\t_filter_lt\n\t\t)\n\tVAR _AverageOfSomeIndicator = \n\t\tAVERAGEX(\n\t\t\tFILTER(\n\t\t\t\t_table0,\n\t\t\t\tNOT ISBLANK([@Indicator]) && [@Indicator] <> 0\n\t\t\t),\n\t\t\t[@Indicator]\n\t\t)\n\tRETURN _AverageOfSomeIndicator\n\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\nRETURN \nCOALESCE(\n\t_res, \"-\")",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_LT_OS[USER_ACCESS_ID]",
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_TRS_Plan[ACCRUAL_ORG_CODE]",
+      "fact_TRS_Plan[INIT_PAYMENT_PLAN_SUM]",
+      "fact_TRS_Plan[IS_ACTUAL]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_TRS_Plan",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List",
+      "DM.vw_R27_fact_TRS_Plan_PDP"
+    ],
+    "sourceColumns": [
+      "ACCRUAL_ORG_CODE",
+      "INIT_PAYMENT_PLAN_SUM",
+      "IS_ACTUAL",
+      "Index",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "INIT_PAYMENT_PLAN_SUM → Цільовий розмір річної винагороди, до оподаткування; INIT_PAYMENT_PLAN_SUM → Оклад по годинах; INIT_PAYMENT_PLAN_SUM → Оклад по днях; INIT_PAYMENT_PLAN_SUM → Премія за місяць, %; INIT_PAYMENT_PLAN_SUM → Доплата за шкідливі умови праці, %; INIT_PAYMENT_PLAN_SUM → Роз'їзний характер роботи, %; INIT_PAYMENT_PLAN_SUM → Оренда житла; INIT_PAYMENT_PLAN_SUM → Середній цільовий розмір річної винагороди, до оподаткування; INIT_PAYMENT_PLAN_SUM → Середня зарплата (оклад); INIT_PAYMENT_PLAN_SUM → Доля команди з премією за місяць, %; INIT_PAYMENT_PLAN_SUM → Доля команди з доплатою за шкідливі умови праці, %; INIT_PAYMENT_PLAN_SUM → Доля команди з доплатою за роз’їзний характер роботи, %; INIT_PAYMENT_PLAN_SUM → Середній розмір доплати за шкідливі умови праці; INIT_PAYMENT_PLAN_SUM → Середній розмір доплати за роз’їзний характер роботи; INIT_PAYMENT_PLAN_SUM → Середні витрати на оренду житла; INIT_PAYMENT_PLAN_SUM → Річний цільовий дохід (РЦД); INIT_PAYMENT_PLAN_SUM → Оклад",
+    "purpose": "Це сума по блокам Фіксована винагорода, всього х 12, Змінна винагорода (Щомісячна премія+ Квартальна премія+ Річний бонус) приведена до річної суми. <br> - **Фіксована винагорода** = Відібрати записи по працівнику [person_key], періоду [Period], організації [organization_key], підрозділу [division_key], де category_name = Фіксована винагорода, IS_ACTUAL  = \"1\",  TARIFF_RATE_TYPE_CODE <> \"СДЕЛЬНАЯ\", END_DATE > поточна дата, або END_DATE = \"01.01.2001\".  <br>Значення брати з INIT_PAYMENT_PLAN_SUM, якщо CALC_TYPE_CODE = \"UAH\", інакше - PAYMENT_PLAN_SUM.  <br> - **Змінна винагорода**(визначається ",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/РВІ.-Зміна-алгоритму-розрахунку-Річного-цільового-доходу",
+      "Командний-профіль/Сторінка-TRS-команди",
+      "Командний-профіль/Сторінка-TRS-команди/Сторінка-Винагорода-групового-профілю#вимоги-до-звіту",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

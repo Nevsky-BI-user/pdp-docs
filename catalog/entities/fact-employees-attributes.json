@@ -1,0 +1,188 @@
+{
+  "id": "fact-employees-attributes",
+  "type": "entity",
+  "name": "fact_Employees_Attributes",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_Employees_Attributes",
+  "sourceTables": [
+    "DM.vw_R27_fact_Employees_Attributes"
+  ],
+  "columns": [
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_ID",
+      "dataType": "string",
+      "source": "EMPLOYEE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_ID",
+      "dataType": "string",
+      "source": "ORGANIZATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "CALC_DATE",
+      "dataType": "dateTime",
+      "source": "CALC_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_KEY",
+      "dataType": "string",
+      "source": "STATUS_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_STATUS",
+      "dataType": "string",
+      "source": "EMPLOYEE_STATUS",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_COMPOSITE",
+      "dataType": "string",
+      "source": "POSITION_COMPOSITE",
+      "isCalculated": false
+    },
+    {
+      "name": "REPLACED_EMPLOYEE",
+      "dataType": "string",
+      "source": "REPLACED_EMPLOYEE",
+      "isCalculated": false
+    },
+    {
+      "name": "WORK_SCHEDULE",
+      "dataType": "string",
+      "source": "WORK_SCHEDULE",
+      "isCalculated": false
+    },
+    {
+      "name": "WORK_SCHEDULE_CLARIFIED",
+      "dataType": "string",
+      "source": "WORK_SCHEDULE_CLARIFIED",
+      "isCalculated": false
+    },
+    {
+      "name": "MILITARY_SERVICE_PLACE",
+      "dataType": "string",
+      "source": "MILITARY_SERVICE_PLACE",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_MILITARY_BP",
+      "dataType": "string",
+      "source": "EMPLOYEE_MILITARY_BP",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_PART_TIME_ID",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_PART_TIME_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_PART_TIME",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_PART_TIME",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_PART_TIME_ID",
+      "dataType": "string",
+      "source": "JOB_TITLE_PART_TIME_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_PART_TIME",
+      "dataType": "string",
+      "source": "JOB_TITLE_PART_TIME",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_PART_TIME_AMT",
+      "dataType": "double",
+      "source": "JOB_TITLE_PART_TIME_AMT",
+      "isCalculated": false
+    },
+    {
+      "name": "PART_TIME_PERIOD",
+      "dataType": "int64",
+      "source": "PART_TIME_PERIOD",
+      "isCalculated": false
+    },
+    {
+      "name": "PART_TIME_PAYMENT_SIZE",
+      "dataType": "double",
+      "source": "PART_TIME_PAYMENT_SIZE",
+      "isCalculated": false
+    },
+    {
+      "name": "CATEGORY_MACHINE_OPERATOR",
+      "dataType": "string",
+      "source": "CATEGORY_MACHINE_OPERATOR",
+      "isCalculated": false
+    },
+    {
+      "name": "WORK_SHIFT",
+      "dataType": "string",
+      "source": "WORK_SHIFT",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_TERM",
+      "dataType": "dateTime",
+      "source": "EMPLOYMENT_TERM",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_COMPOSITE_VEHICLE_FORMAT",
+      "dataType": "string",
+      "source": "JOB_TITLE_COMPOSITE_VEHICLE_FORMAT",
+      "isCalculated": false
+    },
+    {
+      "name": "EMLOYEE_VEHICLE_FORMAT",
+      "dataType": "string",
+      "source": "EMLOYEE_VEHICLE_FORMAT",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_Admin_OS",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "to"
+    }
+  ],
+  "relatedMeasures": [
+    "GP.Опція по авто, % план.SVG",
+    "GP.Опція по авто, % факт.SVG",
+    "PP.Тип опції по авто"
+  ],
+  "requirementRefs": [
+    "Індивідуальний-профіль-працівника/Історія-по-посадам",
+    "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_Employees_Attributes.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

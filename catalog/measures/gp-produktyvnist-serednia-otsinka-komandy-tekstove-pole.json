@@ -1,0 +1,43 @@
+{
+  "id": "gp-produktyvnist-serednia-otsinka-komandy-tekstove-pole",
+  "type": "measure",
+  "name": "GP.Продуктивність.Середня оцінка команди.Текстове поле",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\Продуктивність",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _res = [GP.Продуктивність.Середня оцінка команди.Значення]\nVAR _color = [GP.Продуктивність.Середня оцінка команди.Категорія]\nRETURN \n    --\"Оцінка керівника - \" &\n    IF(\n        ISBLANK(_res),\n        \"Дані відсутні\",\n         _color & \", \" & TRIM(_res)\n    )",
+  "dependencies": {
+    "measures": [
+      "GP.Продуктивність.Середня оцінка команди.Значення",
+      "GP.Продуктивність.Середня оцінка команди.Категорія"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "group-profile",
+    "main",
+    "pdp",
+    "produktyvnist"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

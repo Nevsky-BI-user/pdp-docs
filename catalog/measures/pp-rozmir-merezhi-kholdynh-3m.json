@@ -1,0 +1,58 @@
+{
+  "id": "pp-rozmir-merezhi-kholdynh-3m",
+  "type": "measure",
+  "name": "PP.Розмір мережі (Холдинг, 3м)",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Viva\\Viva Networks",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "// VAR __val = \n//     CALCULATE( \n//         [PP.Розмір мережі (співробітник, 3м)], \n//         REMOVEFILTERS( fact_Metrics )\n//     ) \n\nVAR __val =\nDIVIDE(\n\t\tSUM('fact_Viva_Metrics'[INTERNAL_NETWORK_SIZE]),\n\t\tCALCULATE(COUNTROWS('fact_Viva_Metrics'), NOT ISBLANK('fact_Viva_Metrics'[INTERNAL_NETWORK_SIZE])))\n\nRETURN __val",
+  "dependencies": {
+    "measures": [
+      "PP.Розмір мережі (співробітник, 3м)"
+    ],
+    "columns": [
+      "fact_Viva_Metrics[INTERNAL_NETWORK_SIZE]"
+    ],
+    "tables": [
+      "fact_Viva_Metrics"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "INTERNAL_NETWORK_SIZE"
+    ],
+    "powerQuery": "fact_Viva_Metrics"
+  },
+  "business": {
+    "definition": "INTERNAL_NETWORK_SIZE → Розмір мережі контактів по  <br>співробітнику; INTERNAL_NETWORK_SIZE → Розмір мережі контактів по кадровому підрозділу співробітника; INTERNAL_NETWORK_SIZE → Розмір мережі контактів по напряму співробітника; INTERNAL_NETWORK_SIZE → Розмір мережі контактів по Холдингу; INTERNAL_NETWORK_SIZE → Розмір мережі контактів; INTERNAL_NETWORK_SIZE → internal_network_size_direction; INTERNAL_NETWORK_SIZE → internal_network_size_holding; INTERNAL_NETWORK_SIZE → Розмір мережі контактів по  <br>співробітнику за попередні три місяці; INTERNAL_NETWORK_SIZE → Розмір мережі контактів по  <br>підрозділу (команді); INTERNAL_NETWORK_SIZE → Розмір мережі контактів по напряму команди",
+    "purpose": "Розрахункове значення.  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_dim_Employee_Metric_Health_and_Wellbeing]  <br>Відбір по працівнику на пріортетному місцю роботи USER_ACCESS_ID.  <br>Розраховується як середньомісячне значення за попередні три місяці (розраховано в таблиці).<br>Якщо дані по працівнику у вітрині відсутні, то показати надпис \"Дані відсутні\" (наприклад, якщо немає ліцензії та працівник не користується teams чи outlook Розрахункове значення.  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Сторінка-Ефективність-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Таблиця-vw_R27_calc_Viva_Direction_PDP",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Таблиця-vw_R27_calc_Viva_Holding_PDP",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Командний-профіль/Сторінка-Взаємодія-Viva-та-залученість-команд",
+      "Командний-профіль/Сторінка-Ефективність",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "viva",
+    "viva-networks"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

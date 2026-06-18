@@ -1,0 +1,56 @@
+{
+  "id": "gp-kilkist-zainiatykh-fte-fakt",
+  "type": "measure",
+  "name": "GP.Кількість зайнятих FTE (факт)",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\Загальна інформація",
+  "formatString": "#,0.00;-#,0.00;0.00",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _filter_lt= TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), 'fact_Employee_List'[USER_ACCESS_ID])\nVAR _admin = \n\tCALCULATE(\n\t\tSUM('fact_Employee_List'[FTE_employee]),\n\t\t'fact_Employee_List'[status_key] IN { \"1\", \"4\" },\n\t\t'fact_Employee_List'[FTE_employee] > 0\n\t)\nVAR _admin_lt = \n\tCALCULATE(\n\t\tSUM('fact_Employee_List'[FTE_employee]),\n\t\t'fact_Employee_List'[status_key] IN { \"1\", \"4\" },\n\t\t'fact_Employee_List'[FTE_employee] > 0,\n\t\t_filter_lt\n\t)\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE('t_HierarchyTypes'[Index]),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\nRETURN \n\tTRIM(\n\t\tFORMAT(\n\t\t\t\tCOALESCE(_res, \"-\"), \n\t\t\t\t\"### ###\" \n\t\t) \n\t)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[FTE_employee]",
+      "fact_Employee_List[USER_ACCESS_ID]",
+      "fact_Employee_List[status_key]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "fact_Employee_List",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "FTE_employee",
+      "Index",
+      "USER_ACCESS_ID",
+      "status_key"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "FTE_employee → Зайнятих ставок з відсутностями; FTE_employee → Зайняті ставки; FTE_employee → Кількість зайнятих FTE (факт)",
+    "purpose": "Поле завжди має значення, пусте поле не допускається Розрахункове поле.  <br>Потрібно підрахувати кількість фактично зайнятих ставок по штатним посадам по організації (organization_key) та підрозділу (division_key) по працівникам у статусах Активні та Інша відсутність (status_key = 1 або 4)  <br>(Аутсорс поки не входить в розрахунок)",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Допоміжні-вітрини-для-звіту/Таблиця-періодична-(попередні-12-міс)-для-розрахунку-метрики-Середній-дохід",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

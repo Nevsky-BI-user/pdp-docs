@@ -1,0 +1,62 @@
+{
+  "id": "pp-serednia-otsinka-rezultatyvnosti-richna",
+  "type": "measure",
+  "name": "PP.Середня оцінка результативності річна",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Паспорт\\Spider",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _res = \nLASTNONBLANKVALUE(\n\tVALUES('fact_Employee_Performance'[performance_PBI_order]),\n\tCALCULATE(\n\t\tAVERAGE('fact_Employee_Performance'[Official_Rate]),\n\t\t'fact_Employee_Performance'[Performance_Type] = \"Річна\"\n\t)\n)\nRETURN COALESCE(_res, \"-\")",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_Performance[Official_Rate]",
+      "fact_Employee_Performance[Performance_Type]",
+      "fact_Employee_Performance[performance_PBI_order]"
+    ],
+    "tables": [
+      "fact_Employee_Performance"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_Employee_Performance_PBI"
+    ],
+    "sourceColumns": [
+      "Official_Rate",
+      "Performance_Type",
+      "performance_PBI_order"
+    ],
+    "powerQuery": "fact_Employee_Performance"
+  },
+  "business": {
+    "definition": "Official_Rate → Оцінка керівника (Офіційна оцінка компетенції); Official_Rate → Оцінка кожного індикатора керівником; Performance_Type → Тип оцінки результативності (річна чи піврічна); Performance_Type → Тип оцінки; performance_PBI_order → Сортування (для виведення 4-х останніх періодів)",
+    "purpose": "Останнє доступне значення станом на дату поточного запису, релевантне відповідній оцінці результативності.",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам/Змінити-джерело-даних-для-полів-із-оцінкою-результативності",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Зміна-джерела-даних-для-павутинки-Оцінка-результативності",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/ТЗ-на-побудову-візуала-Павутинка-по-оцінці-результативності-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди"
+    ]
+  },
+  "tags": [
+    "pasport",
+    "pdp",
+    "personal-profile",
+    "spider"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

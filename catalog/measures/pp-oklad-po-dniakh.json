@@ -1,0 +1,60 @@
+{
+  "id": "pp-oklad-po-dniakh",
+  "type": "measure",
+  "name": "PP.Оклад по днях",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\TRS",
+  "formatString": "#,0.00\\ \"₴\";-#,0.00\\ \"₴\";#,0.00\\ \"₴\"",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _v =\n\tCALCULATE(\n\t\tMAX(fact_TRS_Plan[INIT_PAYMENT_PLAN_SUM]),\n\t\tfact_TRS_Plan[IS_ACTUAL]=TRUE(),\n\t\tfact_TRS_Plan[ACCRUAL_ORG_CODE]=\"00001\",\n\t\tfact_TRS_Plan[END_DATE]>TODAY() || fact_TRS_Plan[END_DATE]=DATE(2001,1,1)\n\t)\nRETURN _v",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_TRS_Plan[ACCRUAL_ORG_CODE]",
+      "fact_TRS_Plan[END_DATE]",
+      "fact_TRS_Plan[INIT_PAYMENT_PLAN_SUM]",
+      "fact_TRS_Plan[IS_ACTUAL]"
+    ],
+    "tables": [
+      "fact_TRS_Plan"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_TRS_Plan_PDP"
+    ],
+    "sourceColumns": [
+      "ACCRUAL_ORG_CODE",
+      "END_DATE",
+      "INIT_PAYMENT_PLAN_SUM",
+      "IS_ACTUAL"
+    ],
+    "powerQuery": "fact_TRS_Plan"
+  },
+  "business": {
+    "definition": "END_DATE → Термін без відпустки в днях по пріоритетному місцю роботи на поточну дату; INIT_PAYMENT_PLAN_SUM → Цільовий розмір річної винагороди, до оподаткування; INIT_PAYMENT_PLAN_SUM → Оклад по годинах; INIT_PAYMENT_PLAN_SUM → Оклад по днях; INIT_PAYMENT_PLAN_SUM → Премія за місяць, %; INIT_PAYMENT_PLAN_SUM → Доплата за шкідливі умови праці, %; INIT_PAYMENT_PLAN_SUM → Роз'їзний характер роботи, %; INIT_PAYMENT_PLAN_SUM → Оренда житла; INIT_PAYMENT_PLAN_SUM → Середній цільовий розмір річної винагороди, до оподаткування; INIT_PAYMENT_PLAN_SUM → Середня зарплата (оклад); INIT_PAYMENT_PLAN_SUM → Доля команди з премією за місяць, %; INIT_PAYMENT_PLAN_SUM → Доля команди з доплатою за шкідливі умови праці, %; INIT_PAYMENT_PLAN_SUM → Доля команди з доплатою за роз’їзний характер роботи, %; INIT_PAYMENT_PLAN_SUM → Середній розмір доплати за шкідливі умови праці; INIT_PAYMENT_PLAN_SUM → Середній розмір доплати за роз’їзний характер роботи; INIT_PAYMENT_PLAN_SUM → Середні витрати на оренду житла; INIT_PAYMENT_PLAN_SUM → Річний цільовий дохід (РЦД); INIT_PAYMENT_PLAN_SUM → Оклад",
+    "purpose": "TODAY - остання Дата виходу. Якщо дата виходу майбутня дата, то значення буде від'ємне. Розрахунок вести по пріоритетному місцю роботи. Тобто, якщо у працівника кілька працевлаштувань, по кожному із них будуть відображатися дані по пріоритетному місцю.<br>Аналогічний розрахуноку є в таблиці DM.vw_R27_fact_Vacation_Reserve Це сума по блокам Фіксована винагорода, всього х 12, Змінна винагорода (Щомісячна премія+ Квартальна премія+ Річний бонус) приведена до річної суми. <br> - **Фіксована винагорода** = Відібрати записи по працівнику [person_key], періоду [Period], організації [organization_key]",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/РВІ.-Зміна-алгоритму-розрахунку-Річного-цільового-доходу",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Командний-профіль/Сторінка-TRS-команди",
+      "Командний-профіль/Сторінка-TRS-команди/Сторінка-Винагорода-групового-профілю#вимоги-до-звіту",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

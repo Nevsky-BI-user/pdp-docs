@@ -1,0 +1,53 @@
+{
+  "id": "pp-nastavnytstvo",
+  "type": "measure",
+  "name": "PP.Наставництво",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Viva\\Залученість та інша інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR __val =\n\tVAR __End = TODAY()\n\tVAR __Start = EDATE( __End, -12 )\n\tVAR __has =\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(fact_TRS),\n\t\t\tDATESBETWEEN( dim_Date[Date], __Start, __End ),\n\t\t\tfact_TRS[ACCRUAL_TYPES_KEY] = \"83ce68c2-8a36-d6d5-21bd-27fc6b970114\" \n\t\t)\n\tRETURN\n\t\tIF(\n\t\t\t__has > 0\n\t\t\t, \"Так\"\n\t\t\t, BLANK( )\n\t\t)\nRETURN\n\tIF(\n\t\tISBLANK( __val )\n\t\t, BLANK( )\n\t\t, __val\n\t)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Date[Date]",
+      "fact_TRS[ACCRUAL_TYPES_KEY]"
+    ],
+    "tables": [
+      "dim_Date",
+      "fact_TRS"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_TRS_PDP"
+    ],
+    "sourceColumns": [
+      "ACCRUAL_TYPES_KEY",
+      "Date"
+    ],
+    "powerQuery": "dim_Date"
+  },
+  "business": {
+    "definition": "Наставництво",
+    "purpose": "Потрібно відібрати всі записи по працівнику [person_key], періоду [Period], організації [organization_key] , підрозділу [division_key], посаді [position_key], де  поле accrual_types_key = '83ce68c2-8a36-d6d5-21bd-27fc6b970114'   та category_of_accrual_sort  = '3' за останні 12 місяців, НЕ включаючи поточний.",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Бейджики-під-фото-працівника"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "viva",
+    "zaluchenist-ta-insha-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,58 @@
+{
+  "id": "pp-chastka-okr-za-statusom",
+  "type": "measure",
+  "name": "PP.Частка OKR за статусом",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _employee_id = CALCULATETABLE(VALUES('dim_Admin_OS'[EMPLOYEE_ID]))\nVAR _res = \nCALCULATE(\n    DIVIDE(\n        COUNTROWS(VALUES('fact_OKR_Goals'[OKR_OBJECTIVE_ID])),\n        CALCULATE(\n            COUNTROWS(VALUES('fact_OKR_Goals'[OKR_OBJECTIVE_ID])),\n            ALL(fact_OKR_Goals[FILLING_STATUS])\n        )\n    ),\n    TREATAS(_employee_id,'fact_OKR_Goals'[EMPLOYEE_ID])\n)\nRETURN _res",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[EMPLOYEE_ID]",
+      "fact_OKR_Goals[EMPLOYEE_ID]",
+      "fact_OKR_Goals[FILLING_STATUS]",
+      "fact_OKR_Goals[OKR_OBJECTIVE_ID]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_OKR_Goals"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.R27_fact_OKR_Goals",
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "EMPLOYEE_ID",
+      "FILLING_STATUS",
+      "OKR_OBJECTIVE_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "FILLING_STATUS → Каскадований ОКР; FILLING_STATUS → Лінкований ОКР; FILLING_STATUS → Статус цілі",
+    "purpose": "Якщо поле filling_status= Каскадовано Якщо поле filling_status= З’єднано",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Створити-блок-Виконання-OKR"
+    ]
+  },
+  "tags": [
+    "okr",
+    "pdp",
+    "personal-profile",
+    "rezultatyvnist-ta-otsinka"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

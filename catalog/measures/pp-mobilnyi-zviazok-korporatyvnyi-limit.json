@@ -1,0 +1,52 @@
+{
+  "id": "pp-mobilnyi-zviazok-korporatyvnyi-limit",
+  "type": "measure",
+  "name": "'PP.Мобільний зв''язок - Корпоративний ліміт'",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\TRS",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _lim = MAX(fact_Mobile_Limit[PHONE_CORP_LIMIT])\nRETURN\nIF (\n\t_lim = 99999,\n\t\"Безлімітний\",\n\tIF(\n\t\tISBLANK(_lim),\n\t\tBLANK(),\n\t\t\"Корпоративний ліміт - \" & COALESCE(FORMAT ( _lim, \"#,0.00\" ), 0) & \" грн.\"\n\t)\n)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Mobile_Limit[PHONE_CORP_LIMIT]"
+    ],
+    "tables": [
+      "fact_Mobile_Limit"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_Mobile_Limit_PDP"
+    ],
+    "sourceColumns": [
+      "PHONE_CORP_LIMIT"
+    ],
+    "powerQuery": "fact_Mobile_Limit"
+  },
+  "business": {
+    "definition": "PHONE_CORP_LIMIT → Мобільний зв'язок - Корпоративний ліміт; PHONE_CORP_LIMIT → Середні витрати на мобільний зв’язок; PHONE_CORP_LIMIT → Мобільний зв'язок",
+    "purpose": "Потрібно відібрати всі записи по працівнику [person_key], періоду [Period], організації [organization_key]  <br>Якщо PHONE_CORP_LIMIT = \"99999\", виводимо значення \"Безлімітний\"  <br>Якщо значення в полі відсутнє, то показати текст \"Дані відсутні\" або знак \"-\" Розрахункове.  <br>Потрібно зсумувати значення поля PHONE_CORP_LIMIT ( PHONE_CORP_LIMIT <> '99999') по членам команди, які мають компенсацію мобільного зв'язку, та поділити на кількість таких членів команди.  <br>В деталізацію вивести перелік таких працівників та суму на компенсацію зв'язку та назву пакету (PHONE_PACKAGE_NAME) по кожному ",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника",
+      "Командний-профіль/Сторінка-TRS-команди",
+      "Командний-профіль/Сторінка-TRS-команди/Сторінка-Винагорода-групового-профілю#вимоги-до-звіту",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

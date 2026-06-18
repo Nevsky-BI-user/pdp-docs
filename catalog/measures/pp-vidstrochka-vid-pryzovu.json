@@ -1,0 +1,50 @@
+{
+  "id": "pp-vidstrochka-vid-pryzovu",
+  "type": "measure",
+  "name": "PP.Відстрочка від призову",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "COALESCE(\n\tSELECTEDVALUE('fact_Employee_List'[DEFERMENT_REASON]),\n\t\"-\"\n)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[DEFERMENT_REASON]"
+    ],
+    "tables": [
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "DEFERMENT_REASON"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "DEFERMENT_REASON → Вид відстрочки; DEFERMENT_REASON → Відстрочка від призову; DEFERMENT_REASON → Причина відстрочки",
+    "purpose": "\"За віком\"  <br> \"Троє дітей\"  <br>\"За станом здоров'я\"  <br>\"Бронювання\"  <br>Якщо поле deferment_reason is null, тоді треба перевірити поле is_at_risk. Якщо is_at_risk = 1, тоді \"Під ризиком\", інакше - проставити лейбл \"Дані відсутні\". Якщо значення в полі відсутнє, то показати текст \"Дані відсутні\"  або знак \"-\". \"За віком\"  <br> \"Троє дітей\"  <br>\"За станом здоров'я\"  <br>\"Бронювання\"  <br>Якщо поле deferment_reason is null, тоді треба перевірити поле is_at_risk. Якщо is_at_risk = 1, тоді \"Під ризиком\", інакше - проставити лейбл \"Дані відсутні\". \"За віком\"  <br> \"Троє дітей\"  <br>\"За стано",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/Редизайн-паспортної-частини",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду/Редизайн-сторінки-Загальна-інформація"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

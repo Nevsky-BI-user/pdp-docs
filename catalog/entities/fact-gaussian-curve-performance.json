@@ -1,0 +1,52 @@
+{
+  "id": "fact-gaussian-curve-performance",
+  "type": "entity",
+  "name": "fact_Gaussian_Curve_Performance",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_Gaussian_Curve_Performance",
+  "sourceTables": [
+    "DM.R27_fact_Employee_Performance"
+  ],
+  "columns": [
+    {
+      "name": "General_Performance_Str_Rate",
+      "dataType": "string",
+      "source": "General_Performance_Str_Rate",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_COUNT",
+      "dataType": "int64",
+      "source": "EMPLOYEE_COUNT",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_Performance_Evalution",
+      "fromColumn": "General_Performance_Str_Rate",
+      "toColumn": "General_Performance_Str_Rate",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [
+    "GP.Продуктивність.SVG.Bar chart"
+  ],
+  "requirementRefs": [
+    "Індивідуальний-профіль-працівника/Історія-по-посадам",
+    "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+    "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам/Змінити-джерело-даних-для-полів-із-оцінкою-результативності",
+    "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+    "Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)",
+    "Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)/ТЗ.-Метрика-Небажана-плинність-(regretted-atrition-ratio)"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_Gaussian_Curve_Performance.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

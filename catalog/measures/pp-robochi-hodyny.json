@@ -1,0 +1,48 @@
+{
+  "id": "pp-robochi-hodyny",
+  "type": "measure",
+  "name": "PP.Робочі години",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Паспорт\\_Main",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _v = SELECTEDVALUE('fact_Employee_List'[WORKING_HOURS])\nRETURN \n\tCOALESCE(\n\t\t_v,\n\t\t\"-\"\n\t)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[WORKING_HOURS]"
+    ],
+    "tables": [
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "WORKING_HOURS"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "WORKING_HOURS → Робочі години",
+    "purpose": "",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника"
+    ]
+  },
+  "tags": [
+    "main",
+    "pasport",
+    "pdp",
+    "personal-profile"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

@@ -1,0 +1,83 @@
+{
+  "id": "gp-serednii-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia",
+  "type": "measure",
+  "name": "GP.Середній цільовий розмір річної винагороди, до оподаткування",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\TRS",
+  "formatString": "#,0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),dim_Admin_OS[USER_ACCESS_ID] )\n\n/* *********** ADMIN *********** */\nVAR _admin =      //Fixed * 12 + Variable\nAVERAGEX(\n\tVALUES('dim_Admin_OS'[USER_ACCESS_ID]),\n\tCALCULATE (\n\t\tSUMX (\n\t\t\tfact_TRS_Plan,\n\t\t\tIF (\n\t\t\t\tfact_TRS_Plan[CALC_TYPE_CODE] = \"UAH\",\n\t\t\t\tfact_TRS_Plan[INIT_PAYMENT_PLAN_SUM],\n\t\t\t\tfact_TRS_Plan[PAYMENT_PLAN_SUM]\n\t\t\t)\n\t\t),\n\t\tfact_TRS_Plan[IS_ACTUAL] = TRUE (),\n\t\tfact_TRS_Plan[category_name] = \"Фіксована винагорода\",\n\t\tfact_TRS_Plan[TARIFF_RATE_TYPE_CODE] <> \"СДЕЛЬНАЯ\",\n\t\tfact_TRS_Plan[END_DATE] > TODAY () \n\t\t\t|| fact_TRS_Plan[END_DATE] = DATE (2001, 1, 1)\n\t) * 12 +\n\tCALCULATE (\n\t\tSUM ( fact_TRS_Plan[BONES_SIZE] ),\n\t\tfact_TRS_Plan[IS_ACTUAL] = TRUE (),\n\t\tfact_TRS_Plan[CALC_TYPE_CODE] = \"UAH\",\n\t\tfact_TRS_Plan[category_name] = \"Фіксована винагорода\"\n\t)\n)\n\n/* *********** ADMIN LT *********** */\nVAR _admin_lt = //Fixed * 12 + Variable\nCALCULATE(\n\tAVERAGEX(\n\t\tVALUES('dim_Admin_OS'[USER_ACCESS_ID]),\n\t\tCALCULATE (\n\t\t\tSUMX (\n\t\t\t\tfact_TRS_Plan,\n\t\t\t\tIF (\n\t\t\t\t\tfact_TRS_Plan[CALC_TYPE_CODE] = \"UAH\",\n\t\t\t\t\tfact_TRS_Plan[INIT_PAYMENT_PLAN_SUM],\n\t\t\t\t\tfact_TRS_Plan[PAYMENT_PLAN_SUM]\n\t\t\t\t)\n\t\t\t),\n\t\t\tfact_TRS_Plan[IS_ACTUAL] = TRUE (),\n\t\t\tfact_TRS_Plan[category_name] = \"Фіксована винагорода\",\n\t\t\tfact_TRS_Plan[TARIFF_RATE_TYPE_CODE] <> \"СДЕЛЬНАЯ\",\n\t\t\tfact_TRS_Plan[END_DATE] > TODAY () \n\t\t\t\t|| fact_TRS_Plan[END_DATE] = DATE (2001, 1, 1)\n\t\t) * 12 +\n\t\tCALCULATE (\n\t\t\tSUM ( fact_TRS_Plan[BONES_SIZE] ),\n\t\t\tfact_TRS_Plan[IS_ACTUAL] = TRUE (),\n\t\t\tfact_TRS_Plan[CALC_TYPE_CODE] = \"UAH\",\n\t\t\tfact_TRS_Plan[category_name] = \"Фіксована винагорода\"\n\t\t)\n\t),\n\t_filter_lt\n)\nVAR _res = \n\tSWITCH(\n\t\t_roleIndex,\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\nRETURN \nCOALESCE(_res, \"-\")",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_LT_OS[USER_ACCESS_ID]",
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_TRS_Plan[BONES_SIZE]",
+      "fact_TRS_Plan[CALC_TYPE_CODE]",
+      "fact_TRS_Plan[END_DATE]",
+      "fact_TRS_Plan[INIT_PAYMENT_PLAN_SUM]",
+      "fact_TRS_Plan[IS_ACTUAL]",
+      "fact_TRS_Plan[PAYMENT_PLAN_SUM]",
+      "fact_TRS_Plan[TARIFF_RATE_TYPE_CODE]",
+      "fact_TRS_Plan[category_name]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_TRS_Plan",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List",
+      "DM.vw_R27_fact_TRS_Plan_PDP"
+    ],
+    "sourceColumns": [
+      "BONES_SIZE",
+      "CALC_TYPE_CODE",
+      "END_DATE",
+      "INIT_PAYMENT_PLAN_SUM",
+      "IS_ACTUAL",
+      "Index",
+      "PAYMENT_PLAN_SUM",
+      "TARIFF_RATE_TYPE_CODE",
+      "USER_ACCESS_ID",
+      "category_name"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "BONES_SIZE → Середній розмір щомісячної премії; BONES_SIZE → Середній розмір квартальної премії; BONES_SIZE → Середній розмір річного бонусу; END_DATE → Термін без відпустки в днях по пріоритетному місцю роботи на поточну дату; INIT_PAYMENT_PLAN_SUM → Цільовий розмір річної винагороди, до оподаткування; INIT_PAYMENT_PLAN_SUM → Оклад по годинах; INIT_PAYMENT_PLAN_SUM → Оклад по днях; INIT_PAYMENT_PLAN_SUM → Премія за місяць, %; INIT_PAYMENT_PLAN_SUM → Доплата за шкідливі умови праці, %; INIT_PAYMENT_PLAN_SUM → Роз'їзний характер роботи, %; INIT_PAYMENT_PLAN_SUM → Оренда житла; INIT_PAYMENT_PLAN_SUM → Середній цільовий розмір річної винагороди, до оподаткування; INIT_PAYMENT_PLAN_SUM → Середня зарплата (оклад); INIT_PAYMENT_PLAN_SUM → Доля команди з премією за місяць, %; INIT_PAYMENT_PLAN_SUM → Доля команди з доплатою за шкідливі умови праці, %; INIT_PAYMENT_PLAN_SUM → Доля команди з доплатою за роз’їзний характер роботи, %; INIT_PAYMENT_PLAN_SUM → Середній розмір доплати за шкідливі умови праці; INIT_PAYMENT_PLAN_SUM → Середній розмір доплати за роз’їзний характер роботи; INIT_PAYMENT_PLAN_SUM → Середні витрати на оренду житла; INIT_PAYMENT_PLAN_SUM → Річний цільовий дохід (РЦД); INIT_PAYMENT_PLAN_SUM → Оклад; PAYMENT_PLAN_SUM → Річний цільовий дохід; PAYMENT_PLAN_SUM → Розмір фіксованої винагороди плановий, за місяць ПОТОЧНИЙ; PAYMENT_PLAN_SUM → Сума (на поточний момент); PAYMENT_PLAN_SUM → Середній розмір премії за місяць; PAYMENT_PLAN_SUM → Доля учасників із зміною фіксованої винагороди; PAYMENT_PLAN_SUM → Діапазон фіксованої винагороди (план); TARIFF_RATE_TYPE_CODE → Вид оплати праці (тарифної ставки); TARIFF_RATE_TYPE_CODE → Вид Тарифної Ставки; category_name → Назва блоку",
+    "purpose": "Розрахункове.  <br>Потрібно зсумувати значення поля BONES_SIZE по тим працівникам, для яких BONUS_MONTH_SALARY_CNT>0, IS_ACTUAL  = \"1\", CALC_TYPE_CODE = \"UAH\", category_name = Фіксована винагорода та поділити на кількість членів команди, у яких є такий вид нарахування в планових виплатах.  <br>В деталізацію вивести перелік таких працівників та суму по кожному із них Розрахункове.  <br>Потрібно зсумувати значення поля BONES_SIZE по тим працівникам, для яких BONUS_QUARTER_SALARY_CNT>0, IS_ACTUAL  = \"1\", CALC_TYPE_CODE = \"UAH\", category_name = Фіксована винагорода та поділити на кількість членів ",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Деталізація-на-сторінці-Винагорода",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Доопрацювання-сторінки-ТРС",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/РВІ.-Зміна-алгоритму-розрахунку-Річного-цільового-доходу",
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка/Блок-Оцінка-компетенцій",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Командний-профіль/Сторінка-TRS-команди",
+      "Командний-профіль/Сторінка-TRS-команди/Доопрацювання-сторінки-TRS",
+      "Командний-профіль/Сторінка-TRS-команди/Сторінка-Винагорода-групового-профілю#вимоги-до-звіту",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Блок-Оцінка-компетенцій-(груповий-профіль)"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

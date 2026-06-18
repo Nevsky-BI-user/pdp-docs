@@ -1,0 +1,71 @@
+{
+  "id": "gp-finbp",
+  "type": "measure",
+  "name": "GP.FinBP",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _filter_lt= TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), 'dim_Admin_OS'[USER_ACCESS_ID])\n\n--1. Якщо у вибірку для HR BP потрапляють керівники рівня N-1, то конкатинацію робити лише по категоріях посади Старший менеджмент А, Старший менеджмент А+ і Топ-менеджмент\n\nVAR _sample_of_users = \n    CALCULATETABLE(\n        VALUES('dim_Admin_OS'[USER_ACCESS_ID]),\n        OR(\n            'dim_Admin_OS'[POSITION_CATEGORY_DETAIL] IN {\"Старший менеджмент А\", \"Старший менеджмент А+\", \"Топ-менеджмент\"} && 'dim_Admin_OS'[path_length] = 2,\n            dim_Admin_OS[path_length] > 2\n        )\n    )\nVAR _sample_of_users_lt = \n    CALCULATETABLE(\n        VALUES('dim_Admin_OS'[USER_ACCESS_ID]),\n        OR(\n            'dim_Admin_OS'[POSITION_CATEGORY_DETAIL] IN {\"Старший менеджмент А\", \"Старший менеджмент А+\", \"Топ-менеджмент\"} && 'dim_Admin_OS'[path_length] = 2,\n            dim_Admin_OS[path_length] > 2\n        ),\n        _filter_lt\n    )\n\n--2. Визначення найвищого рівня ієрархії, за яким конкатенується атрибут\n\nVAR _highest_ADMIN_hierarchy_level = CALCULATE(MINX('dim_Admin_OS', 'dim_Admin_OS'[path_length]))\nVAR _highest_ADMIN_hierarchy_level_lt = CALCULATE(MINX('dim_Admin_OS', 'dim_Admin_OS'[path_length]))\nVAR _highest_HRBP_hierarchy_level = CALCULATE(MINX('dim_Admin_OS', 'dim_Admin_OS'[path_length]),_sample_of_users)\nVAR _highest_HRBP_hierarchy_level_lt = CALCULATE(MINX('dim_Admin_OS', 'dim_Admin_OS'[path_length]),_sample_of_users_lt)\n\n--3. Розрахунок метрики для ADMIN ролі\n\nVAR _admin =\n    CALCULATE(\n        CONCATENATEX(\n            VALUES('dim_Admin_OS'[FULL_NAME_FinBP]),\n            'dim_Admin_OS'[FULL_NAME_FinBP],\n            \", \"\n        ),\n        'dim_Admin_OS'[path_length] = _highest_ADMIN_hierarchy_level\n    )\nVAR _admin_lt = \n    CALCULATE(\n        CONCATENATEX(\n            VALUES('dim_Admin_OS'[FULL_NAME_FinBP]),\n            'dim_Admin_OS'[FULL_NAME_FinBP],\n            \", \"\n        ),\n        'dim_Admin_OS'[path_length] = _highest_ADMIN_hierarchy_level_lt\n    )\n\n--4. Розрахунок метрики для HRBP ролі\n\nVAR _HRBP =\n    CALCULATE(\n        CONCATENATEX(\n            VALUES('dim_Admin_OS'[FULL_NAME_FinBP]),\n            'dim_Admin_OS'[FULL_NAME_FinBP],\n            \", \"\n        ),\n        'dim_Admin_OS'[path_length] = _highest_HRBP_hierarchy_level,\n        _sample_of_users\n    )\nVAR _HRBP_lt = \n    CALCULATE(\n        CONCATENATEX(\n            VALUES('dim_Admin_OS'[FULL_NAME_FinBP]),\n            'dim_Admin_OS'[FULL_NAME_FinBP],\n            \", \"\n        ),\n        'dim_Admin_OS'[path_length] = _highest_HRBP_hierarchy_level_lt,\n        _sample_of_users_lt\n    )\n\n--5. Визначення результату\nVAR _res = \n    SWITCH(\n        SELECTEDVALUE('t_HierarchyTypes'[Index]),\n        0, \n        SWITCH(\n            SELECTEDVALUE('dim_Admin_OS'[USER_ROLE]),\n            \"Адміністративний керівник\", _admin_lt,\n            \"HRBP\", _HRBP_lt\n        ),\n        1,\n        SWITCH(\n            SELECTEDVALUE('dim_Admin_OS'[USER_ROLE]),\n            \"Адміністративний керівник\", _admin,\n            \"HRBP\", _HRBP\n        )\n    )\nRETURN COALESCE(_res, \"-\")",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[FULL_NAME_FinBP]",
+      "dim_Admin_OS[POSITION_CATEGORY_DETAIL]",
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "dim_Admin_OS[USER_ROLE]",
+      "dim_Admin_OS[path_length]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "FULL_NAME_FinBP",
+      "Index",
+      "POSITION_CATEGORY_DETAIL",
+      "USER_ACCESS_ID",
+      "USER_ROLE",
+      "path_length"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "POSITION_CATEGORY_DETAIL → Деталізація категорії посади (внутрішня); POSITION_CATEGORY_DETAIL → Категорія посади; POSITION_CATEGORY_DETAIL → Категорія посади (внутрішня); POSITION_CATEGORY_DETAIL → Доля менеджерів серед всіх співробітників (%)",
+    "purpose": "Поле завжди має значення, пусте поле не допускається Назва категорії посади Менеджери - це управлінські категорії.  <br>POSITION_CATEGORY_DETAIL in (Топ-менеджмент, Середній менеджмент, Старший менеджмент А+, Старший менеджмент А, Старший менеджмент В, Старший менеджмент С, Лінійні керівники)",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Ефективність",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+      "Командний-профіль/Сторінка-Навчання-і-розвиток/Блок-Розвиток-сторінки-Навчання-і-розвиток",
+      "Командний-профіль/Сторінка-Плинність-та-Exits/ТЗ-на-вітрину-Exits",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Блок-Додаткові-інструменти"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

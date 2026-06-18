@@ -1,0 +1,209 @@
+{
+  "id": "fact-repayment-credit",
+  "type": "entity",
+  "name": "fact_Repayment_Credit",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_Repayment_Credit",
+  "sourceTables": [
+    "DM.vw_R27_fact_Repayment_Credit_PDP"
+  ],
+  "columns": [
+    {
+      "name": "PERIOD",
+      "dataType": "dateTime",
+      "source": "PERIOD",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_KEY",
+      "dataType": "string",
+      "source": "ORGANIZATION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "PERSON_KEY",
+      "dataType": "string",
+      "source": "PERSON_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "CONTRACT_KEY",
+      "dataType": "string",
+      "source": "CONTRACT_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "BUDGET_ITEM_LOAN_ID",
+      "dataType": "string",
+      "source": "BUDGET_ITEM_LOAN_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "PERSON_NAME",
+      "dataType": "string",
+      "source": "PERSON_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "CONTRACT_NAME",
+      "dataType": "string",
+      "source": "CONTRACT_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "BUDGET_ITEM_CODE",
+      "dataType": "string",
+      "source": "BUDGET_ITEM_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_INCOMING",
+      "dataType": "boolean",
+      "source": "IS_INCOMING",
+      "isCalculated": false
+    },
+    {
+      "name": "ACTION_START_DATE",
+      "dataType": "dateTime",
+      "source": "ACTION_START_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "ACTION_END_DATE",
+      "dataType": "dateTime",
+      "source": "ACTION_END_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "BASE_DEBT_SUM",
+      "dataType": "double",
+      "source": "BASE_DEBT_SUM",
+      "isCalculated": false
+    },
+    {
+      "name": "PERCENT_SUM",
+      "dataType": "double",
+      "source": "PERCENT_SUM",
+      "isCalculated": false
+    },
+    {
+      "name": "LAND_SHARE_CONTRACT_SUM",
+      "dataType": "double",
+      "source": "LAND_SHARE_CONTRACT_SUM",
+      "isCalculated": false
+    },
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CATEGORY_DETAIL",
+      "dataType": "string",
+      "source": "POSITION_CATEGORY_DETAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_TYPE_KEY",
+      "dataType": "string",
+      "source": "EMPLOYMENT_TYPE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_KEY",
+      "dataType": "string",
+      "source": "STATUS_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_ON_POSITION_KEY",
+      "dataType": "string",
+      "source": "OFFICE_ON_POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_KEY",
+      "dataType": "string",
+      "source": "POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "BUDGET_ITEM_NAME",
+      "dataType": "string",
+      "source": "BUDGET_ITEM_NAME",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_Person",
+      "fromColumn": "PERSON_KEY",
+      "toColumn": "PERSON_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Admin_OS",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position_Category",
+      "fromColumn": "POSITION_CATEGORY_DETAIL",
+      "toColumn": "Position_Category_Detail",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employment_Type",
+      "fromColumn": "EMPLOYMENT_TYPE_KEY",
+      "toColumn": "EMPLOYMENT_TYPE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employee_Status",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position",
+      "fromColumn": "POSITION_KEY",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Date",
+      "fromColumn": "PERIOD",
+      "toColumn": "Date",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [
+    "GP.Доля команди з позикою на ноутбук (%) (діюча)",
+    "GP.Доля команди із позиками",
+    "GP.К-ть співробітників, що отримали позику на ноутбук (діюча)",
+    "GP.Середній розмір позики",
+    "PP.Дата доступності позики на ноутбук",
+    "PP.Позика (активна).Сума",
+    "PP.Позика на ноутбук"
+  ],
+  "requirementRefs": [
+    "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_Repayment_Credit.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

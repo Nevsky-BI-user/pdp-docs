@@ -1,0 +1,60 @@
+{
+  "id": "t-ac-burnout",
+  "type": "entity",
+  "name": "t_AC Burnout",
+  "definition": "",
+  "server": "",
+  "db": "",
+  "powerQuery": "",
+  "sourceTables": [],
+  "columns": [
+    {
+      "name": "Burnout_Indicator",
+      "dataType": "string",
+      "source": "Burnout_Indicator",
+      "isCalculated": false
+    },
+    {
+      "name": "Index",
+      "dataType": "string",
+      "source": "Index",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [],
+  "relatedMeasures": [
+    "AC.LP.Rate_color",
+    "AC.Switch.1:1 в сер. на 1 підлеглого, год.",
+    "AC.Switch.Інтервал взаємодії (Viva), год. в день",
+    "AC.Switch.Інтервал взаємодії Тренд (%)",
+    "AC.Switch.Агрегований % непродуктинвих підлеглих для керівників",
+    "AC.Switch.Годин 1:1 в сер. за 3 міс.",
+    "AC.Switch.Годин 1:1 в сер. за 3 міс2",
+    "AC.Switch.Доля взаємодії (Viva) в інтервалі (%)",
+    "AC.Switch.Доля днів польових робіт (%)",
+    "AC.Switch.Зарплата (вилки)",
+    "AC.Switch.Кількість місяців без якісної відпустки за ост. 3 роки",
+    "AC.Switch.Перепрацювання (Viva)",
+    "AC.Switch.Перепрацювання Viva",
+    "AC.Switch.Плинність % по вертикалі",
+    "AC.Switch.Плинність (%)",
+    "AC.Switch.Результативність по KPI (%)",
+    "AC.Switch.Ризик",
+    "AC.Switch.Ризик втрати продуктивності",
+    "AC.Switch.Тренд OKR (%)",
+    "AC.Switch.Тренд Оцінки рез-ті (%)",
+    "AC.Switch.Тренд Результативності по KPI (%)",
+    "AC.Switch.Тренд оцінки OKR",
+    "AC.Switch.Тренд оцінки результативності",
+    "AC.Switch.Чистий час в офісі Тренд (%)",
+    "AC.Switch.Чистий час в офісі, год."
+  ],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/t_AC Burnout.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

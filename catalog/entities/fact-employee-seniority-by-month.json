@@ -1,0 +1,226 @@
+{
+  "id": "fact-employee-seniority-by-month",
+  "type": "entity",
+  "name": "fact_employee_seniority_by_month",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_employee_seniority_by_month",
+  "sourceTables": [
+    "DM.vw_R27_fact_employee_seniority_by_month_PDP"
+  ],
+  "columns": [
+    {
+      "name": "PERIOD",
+      "dataType": "dateTime",
+      "source": "PERIOD",
+      "isCalculated": false
+    },
+    {
+      "name": "PERSON_KEY",
+      "dataType": "string",
+      "source": "PERSON_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_JOB_APPLICATION_KEY",
+      "dataType": "string",
+      "source": "DOC_JOB_APPLICATION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_TYPE_CODE",
+      "dataType": "string",
+      "source": "EMPLOYMENT_TYPE_CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_KEY",
+      "dataType": "string",
+      "source": "ORGANIZATION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_ID",
+      "dataType": "string",
+      "source": "JOB_TITLE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "FIRST_HOLDING_HIRE_DATE",
+      "dataType": "dateTime",
+      "source": "FIRST_HOLDING_HIRE_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "seniority_FIRST_HOLDING_HIRE_DATE",
+      "dataType": "int64",
+      "source": "seniority_FIRST_HOLDING_HIRE_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "LAST_HOLDING_HIRE_DATE",
+      "dataType": "dateTime",
+      "source": "LAST_HOLDING_HIRE_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "seniority_LAST_HOLDING_HIRE_DATE",
+      "dataType": "int64",
+      "source": "seniority_LAST_HOLDING_HIRE_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "LAST_ORGANIZATION_HIRE_DATE",
+      "dataType": "dateTime",
+      "source": "LAST_ORGANIZATION_HIRE_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "seniority_LAST_ORGANIZATION_HIRE_DATE",
+      "dataType": "int64",
+      "source": "seniority_LAST_ORGANIZATION_HIRE_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "LAST_DIVISION_HIRE_DATE",
+      "dataType": "dateTime",
+      "source": "LAST_DIVISION_HIRE_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "seniority_LAST_DIVISION_HIRE_DATE",
+      "dataType": "int64",
+      "source": "seniority_LAST_DIVISION_HIRE_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "LAST_POSITION_HIRE_DATE",
+      "dataType": "dateTime",
+      "source": "LAST_POSITION_HIRE_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "seniority_LAST_POSITION_HIRE_DATE",
+      "dataType": "int64",
+      "source": "seniority_LAST_POSITION_HIRE_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CATEGORY_DETAIL",
+      "dataType": "string",
+      "source": "POSITION_CATEGORY_DETAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_TYPE_KEY",
+      "dataType": "string",
+      "source": "EMPLOYMENT_TYPE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_KEY",
+      "dataType": "string",
+      "source": "STATUS_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_ON_POSITION_KEY",
+      "dataType": "string",
+      "source": "OFFICE_ON_POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_KEY",
+      "dataType": "string",
+      "source": "POSITION_KEY",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_Admin_OS",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position_Category",
+      "fromColumn": "POSITION_CATEGORY_DETAIL",
+      "toColumn": "Position_Category_Detail",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employment_Type",
+      "fromColumn": "EMPLOYMENT_TYPE_KEY",
+      "toColumn": "EMPLOYMENT_TYPE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Office",
+      "fromColumn": "OFFICE_ON_POSITION_KEY",
+      "toColumn": "OFFICE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employee_Status",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position",
+      "fromColumn": "POSITION_KEY",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Unit",
+      "fromColumn": "DIVISION_PERSON_ID",
+      "toColumn": "UNIT_KEY",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [
+    "AC.BR.Стаж в холдингу (неперервний)",
+    "AC.BR.Стаж на посаді (останній)",
+    "AC.LP.Стаж на посаді (останній)",
+    "GP.Середній стаж в команді, років",
+    "PP.Дата прийому в команду (останній)",
+    "PP.Дата прийому в організацію (останній)",
+    "PP.Дата прийому в холдинг (неперервний)",
+    "PP.Дата прийому в холдинг (перервний)",
+    "PP.Дата прийому на посаду (останній)",
+    "PP.Стаж в команді (останній)",
+    "PP.Стаж в організації (останній)",
+    "PP.Стаж в холдингу (неперервний)",
+    "PP.Стаж в холдингу (перервний)",
+    "PP.Стаж на посаді (останній)"
+  ],
+  "requirementRefs": [
+    "Індивідуальний-профіль-працівника/Історія-по-посадам",
+    "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+    "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+    "Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)",
+    "Командний-профіль/Сторінка-Плинність-та-Exits/Плинність-(вітрина)/Додаткові-вимоги-до-вітрини-Плинність"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_employee_seniority_by_month.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

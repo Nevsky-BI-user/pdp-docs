@@ -1,0 +1,48 @@
+{
+  "id": "user-photo",
+  "type": "measure",
+  "name": "user_photo",
+  "homeTable": "_Measures",
+  "displayFolder": "USER",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _url = \n\tFIRSTNONBLANKVALUE(\n\t\tVALUES('dim_Admin_OS'[ORDER_NUM]),\n\t\tCALCULATE(SELECTEDVALUE('dim_Admin_OS'[URL_FOTO]))\n\t)\nRETURN\nIF (\n\tNOT ISBLANK ( _url ),\n\t\"<div style='display:flex;justify-content:center;align-items:center;width:100%;height:100%;'>\n\t\t<img src='\" & _url &\n\t\t\"' width='150' height='150' style='border-radius:8px;object-fit:cover;'/>\n\t</div>\"\n)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[ORDER_NUM]",
+      "dim_Admin_OS[URL_FOTO]"
+    ],
+    "tables": [
+      "dim_Admin_OS"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "ORDER_NUM",
+      "URL_FOTO"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "pdp",
+    "user"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

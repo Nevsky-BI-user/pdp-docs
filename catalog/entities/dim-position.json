@@ -1,0 +1,158 @@
+{
+  "id": "dim-position",
+  "type": "entity",
+  "name": "dim_Position",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "dim_Position",
+  "sourceTables": [
+    "DM.vw_R27_dim_Position"
+  ],
+  "columns": [
+    {
+      "name": "POSITION_CODE_KEY",
+      "dataType": "string",
+      "source": "POSITION_CODE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "CODE",
+      "dataType": "string",
+      "source": "CODE",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION",
+      "dataType": "string",
+      "source": "POSITION",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CODE_STATE",
+      "dataType": "string",
+      "source": "POSITION_CODE_STATE",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_JOB_SPECIFICATION",
+      "dataType": "string",
+      "source": "POSITION_JOB_SPECIFICATION",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CATEGORY_STATE",
+      "dataType": "string",
+      "source": "POSITION_CATEGORY_STATE",
+      "isCalculated": false
+    },
+    {
+      "name": "ID",
+      "dataType": "string",
+      "source": "ID",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "fact_Employee_List",
+      "fromColumn": "POSITION_KEY",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Burnout_Indicators",
+      "fromColumn": "POSITION_KEY",
+      "toColumn": "ID",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_employee_seniority_by_month",
+      "fromColumn": "POSITION_KEY",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Metrics",
+      "fromColumn": "POSITION_KEY",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Mobile_Limit",
+      "fromColumn": "POSITION_KEY",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Monthly_Viva_Insights",
+      "fromColumn": "POSITION_KEY",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Repayment_Credit",
+      "fromColumn": "POSITION_KEY",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Sick_Leaves",
+      "fromColumn": "position_key",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_TRS",
+      "fromColumn": "POSITION_KEY",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_TRS_Plan",
+      "fromColumn": "POSITION_KEY",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Viva_Metrics",
+      "fromColumn": "POSITION_KEY",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Vacation_Reserve",
+      "fromColumn": "JOB_TITLE_ID",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Vacation",
+      "fromColumn": "JOB_TITLE_ID",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "to"
+    },
+    {
+      "toTable": "fact_Loss_of_Productivity",
+      "fromColumn": "JOB_TITLE_ID",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "to"
+    }
+  ],
+  "relatedMeasures": [],
+  "requirementRefs": [
+    "Індивідуальний-профіль-працівника/Історія-по-посадам",
+    "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+    "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника",
+    "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника",
+    "Індивідуальний-профіль-працівника/Сторінка-Індивідуальний-профіль-працівника",
+    "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/dim_Position.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

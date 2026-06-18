@@ -1,0 +1,331 @@
+{
+  "id": "fact-sick-leaves",
+  "type": "entity",
+  "name": "fact_Sick_Leaves",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_Sick_Leaves",
+  "sourceTables": [
+    "DM.vw_R27_fact_Sick_Leaves_PDP"
+  ],
+  "columns": [
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "period",
+      "dataType": "dateTime",
+      "source": "period",
+      "isCalculated": false
+    },
+    {
+      "name": "FTE_num",
+      "dataType": "double",
+      "source": "FTE_num",
+      "isCalculated": false
+    },
+    {
+      "name": "sick_leave_days",
+      "dataType": "int64",
+      "source": "sick_leave_days",
+      "isCalculated": false
+    },
+    {
+      "name": "sick_leave_work_days",
+      "dataType": "double",
+      "source": "sick_leave_work_days",
+      "isCalculated": false
+    },
+    {
+      "name": "FTE_weighted_sick_leave_work_days",
+      "dataType": "double",
+      "source": "FTE_weighted_sick_leave_work_days",
+      "isCalculated": false
+    },
+    {
+      "name": "is_sl_start_month",
+      "dataType": "int64",
+      "source": "is_sl_start_month",
+      "isCalculated": false
+    },
+    {
+      "name": "payments_from_company",
+      "dataType": "double",
+      "source": "payments_from_company",
+      "isCalculated": false
+    },
+    {
+      "name": "company_paid_days",
+      "dataType": "double",
+      "source": "company_paid_days",
+      "isCalculated": false
+    },
+    {
+      "name": "payments_from_FSC",
+      "dataType": "double",
+      "source": "payments_from_FSC",
+      "isCalculated": false
+    },
+    {
+      "name": "FSC_paid_days",
+      "dataType": "double",
+      "source": "FSC_paid_days",
+      "isCalculated": false
+    },
+    {
+      "name": "is_sl_paid",
+      "dataType": "int64",
+      "source": "is_sl_paid",
+      "isCalculated": false
+    },
+    {
+      "name": "organization_key",
+      "dataType": "string",
+      "source": "organization_key",
+      "isCalculated": false
+    },
+    {
+      "name": "person_key",
+      "dataType": "string",
+      "source": "person_key",
+      "isCalculated": false
+    },
+    {
+      "name": "unit_key",
+      "dataType": "string",
+      "source": "unit_key",
+      "isCalculated": false
+    },
+    {
+      "name": "position_key",
+      "dataType": "string",
+      "source": "position_key",
+      "isCalculated": false
+    },
+    {
+      "name": "sick_leave_duration_box_key",
+      "dataType": "string",
+      "source": "sick_leave_duration_box_key",
+      "isCalculated": false
+    },
+    {
+      "name": "sick_leave_id_key",
+      "dataType": "string",
+      "source": "sick_leave_id_key",
+      "isCalculated": false
+    },
+    {
+      "name": "sick_leave_type_key",
+      "dataType": "string",
+      "source": "sick_leave_type_key",
+      "isCalculated": false
+    },
+    {
+      "name": "status_key",
+      "dataType": "int64",
+      "source": "status_key",
+      "isCalculated": false
+    },
+    {
+      "name": "sl_start_date",
+      "dataType": "int64",
+      "source": "sl_start_date",
+      "isCalculated": false
+    },
+    {
+      "name": "sl_end_date",
+      "dataType": "dateTime",
+      "source": "sl_end_date",
+      "isCalculated": false
+    },
+    {
+      "name": "sl_diagnosis",
+      "dataType": "string",
+      "source": "sl_diagnosis",
+      "isCalculated": false
+    },
+    {
+      "name": "is_pregnancy",
+      "dataType": "string",
+      "source": "is_pregnancy",
+      "isCalculated": false
+    },
+    {
+      "name": "emp_head_id",
+      "dataType": "string",
+      "source": "emp_head_id",
+      "isCalculated": false
+    },
+    {
+      "name": "emp_head_admin_id",
+      "dataType": "string",
+      "source": "emp_head_admin_id",
+      "isCalculated": false
+    },
+    {
+      "name": "emp_head_functional_id",
+      "dataType": "string",
+      "source": "emp_head_functional_id",
+      "isCalculated": false
+    },
+    {
+      "name": "emp_hrbp_id",
+      "dataType": "string",
+      "source": "emp_hrbp_id",
+      "isCalculated": false
+    },
+    {
+      "name": "emp_finbp_id",
+      "dataType": "string",
+      "source": "emp_finbp_id",
+      "isCalculated": false
+    },
+    {
+      "name": "tenure_alt_box_key",
+      "dataType": "string",
+      "source": "tenure_alt_box_key",
+      "isCalculated": false
+    },
+    {
+      "name": "age_box_key",
+      "dataType": "string",
+      "source": "age_box_key",
+      "isCalculated": false
+    },
+    {
+      "name": "employment_type_key",
+      "dataType": "string",
+      "source": "employment_type_key",
+      "isCalculated": false
+    },
+    {
+      "name": "permanent_temporary_key",
+      "dataType": "int64",
+      "source": "permanent_temporary_key",
+      "isCalculated": false
+    },
+    {
+      "name": "work_format_on_position_key",
+      "dataType": "int64",
+      "source": "work_format_on_position_key",
+      "isCalculated": false
+    },
+    {
+      "name": "office_on_position_key",
+      "dataType": "string",
+      "source": "office_on_position_key",
+      "isCalculated": false
+    },
+    {
+      "name": "work_format_on_person_key",
+      "dataType": "string",
+      "source": "work_format_on_person_key",
+      "isCalculated": false
+    },
+    {
+      "name": "office_on_person_key",
+      "dataType": "string",
+      "source": "office_on_person_key",
+      "isCalculated": false
+    },
+    {
+      "name": "Employee_ID",
+      "dataType": "string",
+      "source": "Employee_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "Doc_Job_Application_ID",
+      "dataType": "string",
+      "source": "Doc_Job_Application_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CATEGORY_DETAIL",
+      "dataType": "string",
+      "source": "POSITION_CATEGORY_DETAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "sl_status",
+      "dataType": "string",
+      "source": "sl_status",
+      "isCalculated": false
+    },
+    {
+      "name": "FTE_weighted_sick_leave_days",
+      "dataType": "double",
+      "source": "FTE_weighted_sick_leave_days",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_Person",
+      "fromColumn": "person_key",
+      "toColumn": "PERSON_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Unit",
+      "fromColumn": "unit_key",
+      "toColumn": "UNIT_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employee_Status",
+      "fromColumn": "status_key",
+      "toColumn": "STATUS_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Admin_OS",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position_Category",
+      "fromColumn": "POSITION_CATEGORY_DETAIL",
+      "toColumn": "Position_Category_Detail",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employment_Type",
+      "fromColumn": "employment_type_key",
+      "toColumn": "EMPLOYMENT_TYPE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Office",
+      "fromColumn": "office_on_position_key",
+      "toColumn": "OFFICE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position",
+      "fromColumn": "position_key",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Date",
+      "fromColumn": "period",
+      "toColumn": "Date",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_Sick_Leaves.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

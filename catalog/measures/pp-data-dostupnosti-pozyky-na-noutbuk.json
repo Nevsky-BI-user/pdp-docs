@@ -1,0 +1,57 @@
+{
+  "id": "pp-data-dostupnosti-pozyky-na-noutbuk",
+  "type": "measure",
+  "name": "PP.Дата доступності позики на ноутбук",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\TRS",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _last_date = \n\tLASTNONBLANKVALUE(\n\t\tVALUES('dim_Admin_OS'[USER_ACCESS_ID]),\n\t\tCALCULATE(\n\t\t\tMAX('fact_Repayment_Credit'[ACTION_START_DATE]),\n\t\t\t'fact_Repayment_Credit'[BUDGET_ITEM_CODE] = \"0000008240\"\n\t\t)\n\t)\nVAR _result = \nMAX(\n\tTODAY(),\n\tDATE(YEAR(_last_date)+3, MONTH(_last_date), DAY(_last_date) + 1)\n)\nRETURN FORMAT(_result, \"dd.mm.yyyy\")\n\t",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_Repayment_Credit[ACTION_START_DATE]",
+      "fact_Repayment_Credit[BUDGET_ITEM_CODE]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_Repayment_Credit"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List",
+      "DM.vw_R27_fact_Repayment_Credit_PDP"
+    ],
+    "sourceColumns": [
+      "ACTION_START_DATE",
+      "BUDGET_ITEM_CODE",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "ACTION_START_DATE → Період позики; ACTION_START_DATE → Дата доступності позики на ноутбук; ACTION_START_DATE → Позика на ноутбук (дата доступності)",
+    "purpose": "Якщо працівник отримав таку позику, (тобто є запис в таблиці DM.vw_R29_fact_Repayment_Credit де [BUDGET_ITEM_CODE] = '0000008240') то це [ACTION_START_DATE] + 3 роки  <br> Якщо працівник не отримував таку позику, то виводити дату кінця адаптаційного періоду  <br>adaptation_end_date із dm.vw_R27_fact_Employee_List  <br>По пріоритетному місцю роботи в організації (якщо кілька працевлаштувань) Якщо працівник отримав таку позику, (тобто є запис в таблиці DM.vw_R27_fact_Repayment_Credit де [BUDGET_ITEM_CODE] = '0000008240') то це [ACTION_START_DATE] + 3 роки  <br> Якщо працівник не отримував таку п",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Доопрацювання-сторінки-ТРС",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

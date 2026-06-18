@@ -1,0 +1,48 @@
+{
+  "id": "pp-veteran-novachok",
+  "type": "measure",
+  "name": "PP.Ветеран-Новачок",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "COALESCE(\n\tSWITCH(\n\t\tSELECTEDVALUE('fact_Employee_List'[IS_VETERAN_NEWMAN]),\n\t\t1, \"Так\",\n\t\t0, \"Ні\"\n\t),\n\t\"-\"\n)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[IS_VETERAN_NEWMAN]"
+    ],
+    "tables": [
+      "fact_Employee_List"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "IS_VETERAN_NEWMAN"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "IS_VETERAN_NEWMAN → Ветеран-Новачок; IS_VETERAN_NEWMAN → Кількість ветеранів-новачків",
+    "purpose": "Поле зберігається в довіднику dm.vw_R27_dim_person ]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List], через відповідний зв’язок за ключем [person_key].  <br>Якщо 1 - Так, якщо 0 - Ні. Розрахункове поле. Підрахувати скільки працівників у команді, які відповідають умовам:  <br>- має посвідчення УБД Повномасштабної війни чи АТО/ООС, але не були мобілізовані із холдингу протягом повномасштабки (is_veteran_newman);  <br>  - має посвідчення УБД отримане під час повномасштабного вторгнення (war_ubd= Повномасштабне вторгнення);  <br",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду/Редизайн-сторінки-Загальна-інформація"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

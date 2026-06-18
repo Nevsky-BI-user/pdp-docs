@@ -1,0 +1,47 @@
+{
+  "id": "pp-min-y-axis-rcd",
+  "type": "measure",
+  "name": "PP.min_Y_axis_rcd",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Життєвий цикл",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "MINX(\n    VALUES('dim_Date'[Date]),\n    [PP.РЦД]\n) * 0.6",
+  "dependencies": {
+    "measures": [
+      "PP.РЦД"
+    ],
+    "columns": [
+      "dim_Date[Date]"
+    ],
+    "tables": [
+      "dim_Date"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "Date"
+    ],
+    "powerQuery": "dim_Date"
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zhyttievyi-tsykl"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

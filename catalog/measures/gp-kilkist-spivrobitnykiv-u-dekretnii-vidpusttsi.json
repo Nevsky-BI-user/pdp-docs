@@ -1,0 +1,61 @@
+{
+  "id": "gp-kilkist-spivrobitnykiv-u-dekretnii-vidpusttsi",
+  "type": "measure",
+  "name": "GP.Кількість співробітників у декретній відпустці",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\Загальна інформація",
+  "formatString": "0;-0;0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _filter_lt= TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), 'fact_Employee_List'[USER_ACCESS_ID])\nVAR _admin = \nCALCULATE(\n\tCOUNTROWS(VALUES('fact_Employee_List'[person_key])),\n\tALL('dim_Admin_OS'[STATUS_NAME]),\n\tKEEPFILTERS('fact_Employee_List'[is_maternity_leave] = 1)\n)\nVAR _admin_lt = \nCALCULATE(\n\tCOUNTROWS(VALUES('fact_Employee_List'[person_key])),\n\tALL('dim_Admin_OS'[STATUS_NAME]),\n\tKEEPFILTERS('fact_Employee_List'[is_maternity_leave] = 1),\n\t_filter_lt\n)\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE('t_HierarchyTypes'[Index]),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\nRETURN \n\tTRIM(\n\t\tFORMAT(\t\n\t\t\tCOALESCE(_res, \"-\"), \n\t\t\t\"### ###\" \n\t\t) \n\t)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_OS[STATUS_NAME]",
+      "fact_Employee_List[USER_ACCESS_ID]",
+      "fact_Employee_List[is_maternity_leave]",
+      "fact_Employee_List[person_key]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_Employee_List",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "Index",
+      "STATUS_NAME",
+      "USER_ACCESS_ID",
+      "is_maternity_leave",
+      "person_key"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "STATUS_NAME → Статус працівника; STATUS_NAME → Статус співробітника; is_maternity_leave → Кількість співробітників у декретній відпустці",
+    "purpose": "Поле зберігається в довіднику [dm.vw_R27_dim_Employee_Status]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List_PDP], через відповідний зв’язок за ключем [status_key].  <br>Поле Статус не може бути пустим, бо у працівника він завжди є. Розрахункове поле. Підрахувати скільки працівників у команді, де is_maternity_leave = 1  <br>Потрібно рахувати унікальну к-ть, щоб двічі не рахували тих, в кого осн місце і сумісництво.",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

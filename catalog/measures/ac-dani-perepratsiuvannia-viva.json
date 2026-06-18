@@ -1,0 +1,52 @@
+{
+  "id": "ac-dani-perepratsiuvannia-viva",
+  "type": "measure",
+  "name": "AC.Дані.Перепрацювання (Viva)",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Loss_Productivity\\Main",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _res = SELECTEDVALUE('fact_Loss_of_Productivity'[Viva_Overworking])\nRETURN COALESCE(_res, \"—\")",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Loss_of_Productivity[Viva_Overworking]"
+    ],
+    "tables": [
+      "fact_Loss_of_Productivity"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_Loss_of_Productivity"
+    ],
+    "sourceColumns": [
+      "Viva_Overworking"
+    ],
+    "powerQuery": "fact_Loss_of_Productivity"
+  },
+  "business": {
+    "definition": "Viva_Overworking → Перепрацювання (Viva); Viva_Overworking → Чи є ризик вигорання через перепрацювання?; Viva_Overworking → Перепрацювання Viva",
+    "purpose": "<br>**Нові вимоги.**<br>Якщо Viva_Overworking >= 1 год, то Ризик <br>**Старі вимоги.**<br> Визначається за значенням Viva_Overworking в залежності від категорії працівника:  <br>Якщо для position_category_internal_sort in ( 5, 6, 7) поле  Viva_Overworking >= 0,5 год, то Ризик.  <br>Якщо для  position_category_internal_sort in ( 3, 2)поле Viva_Overworking >= 0,75 год, то Ризик.  <br>Якщо для position_category_internal_sort = 1 поле  Viva_Overworking >= 1 год, то Ризик.  <br>Категорія працівника визначається із t_spo_hr_position_category_matrix по ключу position_category_internal_sort.",
+    "requirementRefs": [
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Кейс-Втрати-Продуктивності-Працівників",
+      "Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22"
+    ]
+  },
+  "tags": [
+    "analytical-cases",
+    "loss-productivity",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

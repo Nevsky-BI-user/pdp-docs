@@ -1,0 +1,76 @@
+{
+  "id": "5ac-koefitsiient-absenteizmu",
+  "type": "measure",
+  "name": "5AC.Коефіцієнт абсентеїзму",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\Здоров'я та благополуччя",
+  "formatString": "#,0.00%;-#,0.00%;#,0.00%",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt= TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),'dim_Admin_OS'[USER_ACCESS_ID] )\n\n// //***** HEALTH AND WELLBEING FILTERS ******* \n// VAR _employee_list = VALUES('fact_Employee_List'[EMPLOYEE_ID])\n// VAR _main_position_employees = \n//     CALCULATETABLE(\n//         VALUES('fact_Employee_List'[USER_ACCESS_ID]),\n//         REMOVEFILTERS('fact_Employee_List'), \n//         'fact_Employee_List'[STATUS_KEY] IN {\"1\",\"4\"},\n//         'fact_Employee_List'[EMPLOYEE_ID] IN _employee_list,\n//         'fact_Employee_List'[IS_MAIN_POSITION] = 1\n//     )\n// VAR _filter0 = TREATAS(_main_position_employees, 'dim_Admin_OS'[USER_ACCESS_ID])\n\n/* *********** ADMIN *********** */\nVAR _admin = \n\tCALCULATE(\n\t\tDIVIDE(\n\t\t\tSUM('fact_Metrics'[Sick_Leave_Day_Without_Pregnancy]),\n\t\t\tSUMX(\n\t\t\t\t'fact_Metrics',\n\t\t\t\t'fact_Metrics'[FTE_WEIGHTED_WORK_DAY_FOR_ABSENTEEISM] + 'fact_Metrics'[Sick_Leave_Day_Without_Pregnancy]\n\t\t\t)\n\t\t)\n\t)\n\n/* *********** LT *********** */\nVAR _admin_lt =\n\tCALCULATE(\n\t\tDIVIDE(\n\t\t\tSUM('fact_Metrics'[Sick_Leave_Day_Without_Pregnancy]),\n\t\t\tSUMX(\n\t\t\t\t'fact_Metrics',\n\t\t\t\t'fact_Metrics'[FTE_WEIGHTED_WORK_DAY_FOR_ABSENTEEISM] + 'fact_Metrics'[Sick_Leave_Day_Without_Pregnancy]\n\t\t\t)\n\t\t),\n\t\tREMOVEFILTERS('fact_Metrics'),\n\t\t_filter_lt\n\t)\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\n\nRETURN COALESCE(_res, 0)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_LT_OS[USER_ACCESS_ID]",
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_Employee_List[EMPLOYEE_ID]",
+      "fact_Employee_List[IS_MAIN_POSITION]",
+      "fact_Employee_List[STATUS_KEY]",
+      "fact_Employee_List[USER_ACCESS_ID]",
+      "fact_Metrics[FTE_WEIGHTED_WORK_DAY_FOR_ABSENTEEISM]",
+      "fact_Metrics[Sick_Leave_Day_Without_Pregnancy]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_Employee_List",
+      "fact_Metrics",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "EMPLOYEE_ID",
+      "FTE_WEIGHTED_WORK_DAY_FOR_ABSENTEEISM",
+      "IS_MAIN_POSITION",
+      "Index",
+      "STATUS_KEY",
+      "Sick_Leave_Day_Without_Pregnancy",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position; FTE_WEIGHTED_WORK_DAY_FOR_ABSENTEEISM → Відпрацьовані робочі дні у місяці зважені на FTE_employee; Sick_Leave_Day_Without_Pregnancy → <br>Абсентеїзм; Sick_Leave_Day_Without_Pregnancy → Кількість робочих днів на лікарняному зважена на FTE; Sick_Leave_Day_Without_Pregnancy → Коеф. Абсентеїзму, %; Sick_Leave_Day_Without_Pregnancy → Рівень абсентеїзму (%); Sick_Leave_Day_Without_Pregnancy → Коеф. Абсентизму, %; Sick_Leave_Day_Without_Pregnancy → Абсентеїзм",
+    "purpose": "1 - Так  <br>0 - Ні Коефіцієнт абсентизму розраховується по працівнику за попередні 12 місяців, НЕ включаючи поточний місяць.АБСЕНТИЗМ= (Кількість днів на лікарняному без днів на лікарняному по вагітності та пологам)/(відпрацьовані робочі дні у місяці*FTE_employee + дні на лік-му (без днів на лікарняному по вагітності та пологам)  <br>= Sick_Leave_Day_Without_Pregnancy/(FTE_weighted_work_day_for_absenteeism+Sick_Leave_Day_Without_Pregnancy) За виключенням лікарняних, де is_pregnancy=0 за останні 12 міс, не включаючи поточний Розрахункове поле.  <br>Коефіцієнт абсентизму розраховується по коман",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Деталізація-в-паспортній-частині",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Сторінка-Ефективність-працівника/Вітрина-Відвідування-офісів",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Здоров'я-та-благополуччя-працівника",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Сторінка-Картка-команди",
+      "Командний-профіль/Сторінка-Здоров'я-та-благополуччя-команди",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+      "Командний-профіль/Сторінка-Плинність-та-Exits/ТЗ-на-вітрину-Exits"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "zdorovia-ta-blahopoluchchia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

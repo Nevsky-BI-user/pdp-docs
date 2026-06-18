@@ -1,0 +1,55 @@
+{
+  "id": "gp-kilkist-spivrobitnykiv-vsoho-chol-integer",
+  "type": "measure",
+  "name": "GP.Кількість співробітників всього, чол. - Integer",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+  "formatString": "0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _Admin_lt = \n    CALCULATETABLE(\n        VALUES('dim_Admin_LT_OS'[USER_ACCESS_ID]),\n        'dim_Admin_LT_OS'[USER_ROLE]  = \"Адміністративний керівник\"\n    )\n\nVAR _HRBP_lt = \n    CALCULATETABLE(\n        VALUES(dim_Admin_LT_OS[USER_ACCESS_ID]),\n        'dim_Admin_LT_OS'[USER_ROLE]  = \"HRBP\"\n    )\nVAR _Admin = \n\tSWITCH(\n\t\tSELECTEDVALUE('t_HierarchyTypes'[HierarchyType]),\n\t\t\"Hierarchy\",\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(VALUES('dim_Admin_OS'[USER_ACCESS_ID])),\n            'dim_Admin_OS'[USER_ROLE]  = \"Адміністративний керівник\"\n\t\t),\n\t\t\"Lead Team\",\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(VALUES('dim_Admin_OS'[USER_ACCESS_ID])),\n\t\t\tTREATAS(_Admin_lt, 'dim_Admin_OS'[USER_ACCESS_ID]),\n            'dim_Admin_OS'[USER_ROLE]  = \"Адміністративний керівник\"\n\t\t)\n\t)\n\nVAR _HRBP = \n\tSWITCH(\n\t\tSELECTEDVALUE('t_HierarchyTypes'[HierarchyType]),\n\t\t\"Hierarchy\",\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(VALUES('dim_Admin_OS'[USER_ACCESS_ID])),\n            'dim_Admin_OS'[USER_ROLE]  = \"HRBP\"\n\t\t),\n\t\t\"Lead Team\",\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(VALUES('dim_Admin_OS'[USER_ACCESS_ID])),\n\t\t\tTREATAS(_HRBP_lt, 'dim_Admin_OS'[USER_ACCESS_ID]),\n            'dim_Admin_OS'[USER_ROLE]  = \"HRBP\"\n\t\t)\n\t)\n\nVAR _res = \n    SWITCH(\n        SELECTEDVALUE('dim_Admin_OS'[USER_ROLE]),\n        \"Адміністративний керівник\", _Admin,\n        \"HRBP\", _HRBP\n    )\n\nRETURN _res",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_LT_OS[USER_ACCESS_ID]",
+      "dim_Admin_LT_OS[USER_ROLE]",
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "dim_Admin_OS[USER_ROLE]",
+      "t_HierarchyTypes[HierarchyType]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List"
+    ],
+    "sourceColumns": [
+      "HierarchyType",
+      "USER_ACCESS_ID",
+      "USER_ROLE"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "dani-pro-komandu",
+    "group-profile",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

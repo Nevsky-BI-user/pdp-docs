@@ -1,0 +1,352 @@
+{
+  "id": "fact-monthly-viva-insights",
+  "type": "entity",
+  "name": "fact_Monthly_Viva_Insights",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_Monthly_Viva_Insights",
+  "sourceTables": [
+    "DM.vw_R27_fact_Monthly_Viva_Insights_PDP"
+  ],
+  "columns": [
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "PERSON_KEY",
+      "dataType": "string",
+      "source": "PERSON_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "UNIT_KEY",
+      "dataType": "string",
+      "source": "UNIT_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "PERIOD",
+      "dataType": "dateTime",
+      "source": "PERIOD",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_LOGIN",
+      "dataType": "string",
+      "source": "EMPLOYEE_LOGIN",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_MANAGER_LOGIN",
+      "dataType": "string",
+      "source": "EMPLOYEE_MANAGER_LOGIN",
+      "isCalculated": false
+    },
+    {
+      "name": "SUPERVISOR_INDICATOR",
+      "dataType": "string",
+      "source": "SUPERVISOR_INDICATOR",
+      "isCalculated": false
+    },
+    {
+      "name": "COLLABORATION_SPAN",
+      "dataType": "double",
+      "source": "COLLABORATION_SPAN",
+      "isCalculated": false
+    },
+    {
+      "name": "COLLABORATION_HOUR",
+      "dataType": "double",
+      "source": "COLLABORATION_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "AFTER_HOUR_COLLABORATION_HOUR",
+      "dataType": "double",
+      "source": "AFTER_HOUR_COLLABORATION_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "INTERNAL_NETWORK_SIZE",
+      "dataType": "double",
+      "source": "INTERNAL_NETWORK_SIZE",
+      "isCalculated": false
+    },
+    {
+      "name": "NETWORK_OUTSIDE_ORGANIZATION",
+      "dataType": "double",
+      "source": "NETWORK_OUTSIDE_ORGANIZATION",
+      "isCalculated": false
+    },
+    {
+      "name": "MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR",
+      "dataType": "double",
+      "source": "MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "MEETING_HOUR",
+      "dataType": "double",
+      "source": "MEETING_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "OPEN_ONE_BLOCK_HOUR",
+      "dataType": "double",
+      "source": "OPEN_ONE_BLOCK_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "UNINTERRUPTED_HOUR",
+      "dataType": "double",
+      "source": "UNINTERRUPTED_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "MANAGER_COACHING_ONE_TO_ONE_HOUR",
+      "dataType": "double",
+      "source": "MANAGER_COACHING_ONE_TO_ONE_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "MEETING_AND_CALL_WITH_SKIP_LEVEL_ONE_TO_ONE_HOUR",
+      "dataType": "double",
+      "source": "MEETING_AND_CALL_WITH_SKIP_LEVEL_ONE_TO_ONE_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "CALL_HOUR",
+      "dataType": "double",
+      "source": "CALL_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "CHAT_HOUR",
+      "dataType": "double",
+      "source": "CHAT_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "EMAIL_HOUR",
+      "dataType": "double",
+      "source": "EMAIL_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "CHANNEL_MESSAGE_HOUR",
+      "dataType": "double",
+      "source": "CHANNEL_MESSAGE_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "CONFLICTING_MEETING_HOUR",
+      "dataType": "double",
+      "source": "CONFLICTING_MEETING_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "MEETING_AND_CALL_WITH_MANAGER_HOUR",
+      "dataType": "double",
+      "source": "MEETING_AND_CALL_WITH_MANAGER_HOUR",
+      "isCalculated": false
+    },
+    {
+      "name": "TOTAL_AFTER_HOURS",
+      "dataType": "double",
+      "source": "TOTAL_AFTER_HOURS",
+      "isCalculated": false
+    },
+    {
+      "name": "COLLABORATION_WITH_MANAGER",
+      "dataType": "double",
+      "source": "COLLABORATION_WITH_MANAGER",
+      "isCalculated": false
+    },
+    {
+      "name": "TOTAL_WITHOUT_SICKLEAVES_AND_VACATIONS",
+      "dataType": "int64",
+      "source": "TOTAL_WITHOUT_SICKLEAVES_AND_VACATIONS",
+      "isCalculated": false
+    },
+    {
+      "name": "WORKDAYS_WITHOUT_SICKLEAVES_AND_VACATIONS",
+      "dataType": "int64",
+      "source": "WORKDAYS_WITHOUT_SICKLEAVES_AND_VACATIONS",
+      "isCalculated": false
+    },
+    {
+      "name": "WORKED_ON_WEEKENDS",
+      "dataType": "int64",
+      "source": "WORKED_ON_WEEKENDS",
+      "isCalculated": false
+    },
+    {
+      "name": "WORKED_IN_SICKLEAVES",
+      "dataType": "int64",
+      "source": "WORKED_IN_SICKLEAVES",
+      "isCalculated": false
+    },
+    {
+      "name": "WORKED_IN_VACATION",
+      "dataType": "int64",
+      "source": "WORKED_IN_VACATION",
+      "isCalculated": false
+    },
+    {
+      "name": "VIVA_DAYS",
+      "dataType": "int64",
+      "source": "VIVA_DAYS",
+      "isCalculated": false
+    },
+    {
+      "name": "CALENDAR_DAYS",
+      "dataType": "int64",
+      "source": "CALENDAR_DAYS",
+      "isCalculated": false
+    },
+    {
+      "name": "TOTAL_WORKDAYS",
+      "dataType": "int64",
+      "source": "TOTAL_WORKDAYS",
+      "isCalculated": false
+    },
+    {
+      "name": "TOTAL_WEEKENDS",
+      "dataType": "int64",
+      "source": "TOTAL_WEEKENDS",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_SICKLEAVES",
+      "dataType": "int64",
+      "source": "EMP_SICKLEAVES",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_VACATIONS",
+      "dataType": "int64",
+      "source": "EMP_VACATIONS",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_WORKDAYS",
+      "dataType": "int64",
+      "source": "EMP_WORKDAYS",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_WEEKENDS",
+      "dataType": "int64",
+      "source": "EMP_WEEKENDS",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CATEGORY_DETAIL",
+      "dataType": "string",
+      "source": "POSITION_CATEGORY_DETAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_TYPE_KEY",
+      "dataType": "string",
+      "source": "EMPLOYMENT_TYPE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_KEY",
+      "dataType": "string",
+      "source": "STATUS_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_ON_POSITION_KEY",
+      "dataType": "string",
+      "source": "OFFICE_ON_POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_KEY",
+      "dataType": "string",
+      "source": "POSITION_KEY",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_Person",
+      "fromColumn": "PERSON_KEY",
+      "toColumn": "PERSON_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Unit",
+      "fromColumn": "UNIT_KEY",
+      "toColumn": "UNIT_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Admin_OS",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position_Category",
+      "fromColumn": "POSITION_CATEGORY_DETAIL",
+      "toColumn": "Position_Category_Detail",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employment_Type",
+      "fromColumn": "EMPLOYMENT_TYPE_KEY",
+      "toColumn": "EMPLOYMENT_TYPE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Office",
+      "fromColumn": "OFFICE_ON_POSITION_KEY",
+      "toColumn": "OFFICE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Employee_Status",
+      "fromColumn": "STATUS_KEY",
+      "toColumn": "STATUS_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Position",
+      "fromColumn": "POSITION_KEY",
+      "toColumn": "POSITION_CODE_KEY",
+      "role": "from"
+    },
+    {
+      "toTable": "dim_Date",
+      "fromColumn": "PERIOD",
+      "toColumn": "Date",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [],
+  "requirementRefs": [
+    "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Таблиця-vw_R27_calc_Viva_Direction_PDP",
+    "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Таблиця-vw_R27_calc_Viva_Holding_PDP"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_Monthly_Viva_Insights.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

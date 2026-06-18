@@ -1,0 +1,43 @@
+{
+  "id": "gp-svg-okr-komandy",
+  "type": "measure",
+  "name": "GP.SVG.OKR команди",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\SVG",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "// OKR: бари + колір за відсотком від 5 балів\nVAR _fontFamily      = \"Segoe UI\"\nVAR _labelColor      = \"#222222\"\nVAR _MaxValue        = MAX(100, MAX([GP.OKR  попередній рік], [GP.OKR  поточний рік]) *1.1)\n\n// --- параметри підпису над баром (один рядок) ---\nVAR _ValueFontSize = 11\nVAR _LineH         = 11\nVAR _TopTextH      = 2 * _LineH\n\n// --- дані ---\nVAR _data =\n\tUNION(\n\t\tROW(\"@Year\", INT(YEAR(TODAY())-2), \"Value\", [GP.OKR  попередній рік]),\n\t\tROW(\"@Year\", INT(YEAR(TODAY()))-1,    \"Value\", [GP.OKR  поточний рік])\n\t)\n\n// --- геометрія полотна ---\nVAR _W          = 250\nVAR _H          = 150\nVAR _MarginTop  = 8\nVAR _MarginBot  = 22\nVAR _ChartTop   = _MarginTop + _TopTextH + 2\nVAR _ChartBot   = _H - _MarginBot\nVAR _ChartH     = _ChartBot - _ChartTop\n\nVAR _BarCount   = MAX(1, COUNTROWS(_data))\nVAR _BarWidth   = 20\nVAR _Gap        = 30\nVAR _TotalBarsW = _BarCount * _BarWidth + (_BarCount - 1) * _Gap\nVAR _StartX     = (_W - _TotalBarsW) / 2\nVAR _RX         = _BarWidth / 2\n\n// --- побудова ---\nVAR _BarsSVG =\n\tCONCATENATEX(\n\t\tADDCOLUMNS(\n\t\t\tADDCOLUMNS(_data, \"@i\", RANKX(_data, [@Year], , ASC, Dense) - 1),\n\t\t\t\"@x\",  _StartX + [@i] * (_BarWidth + _Gap),\n\t\t\t\"@cx\", _StartX + [@i] * (_BarWidth + _Gap) + _BarWidth / 2\n\t\t),\n\t\tVAR _x    = [@x]\n\t\tVAR _cx   = [@cx]\n\t\tVAR _v    = [Value]\n\t\tVAR _vmax = _MaxValue\n\n\t\t// відсоток від максимуму у цілих (0–100+)\n\t\tVAR _pct  = 100 * DIVIDE(_v, _vmax, 0)\n\n\t\t// колір за діапазонами: >100; 100–91; 90–75; 74–50; 49–25; 24–0\n\t\tVAR _FillColor =\n\t\t\tSWITCH(\n\t\t\t\tTRUE(),\n\t\t\t\t_v > 100,               \"#2E8B57\",   // більше 100\n\t\t\t\t_v >= 91,               \"#A0E695\",   // 100–91\n\t\t\t\t_v >= 75,               \"#D0E37E\",   // 90–75\n\t\t\t\t_v >= 50,               \"#FFE066\",   // 74–50\n\t\t\t\t_v >= 25,               \"#FFA64D\",   // 49–25\n\t\t\t\t_v >  0,                \"#FF7777\",    // 24–0\n\t\t\t\t\"#222222\"\n\t\t\t\t--\"#F5F5F5\"\n\t\t\t)\n\n\t\t// заповнення\n\t\tVAR _ratio = MIN(DIVIDE(_v, _vmax, 0), 1)\n\t\tVAR _fillH = _ratio * _ChartH\n\t\tVAR _yFill = _ChartBot - _fillH\n\n\t\t// фон бару\n\t\tVAR _bgRect =\n\t\t\t\"<rect x='\" & _x & \"' y='\" & _ChartTop &\n\t\t\t\"' width='\" & _BarWidth & \"' height='\" & _ChartH &\n\t\t\t\"' rx='\" & _RX & \"' ry='\" & _RX &\n\t\t\t\"' fill='\" & _FillColor & \"' fill-opacity='0.15' />\"\n\n\t\t// заповнений бар\n\t\tVAR _fillRect =\n\t\t\t\"<rect x='\" & _x & \"' y='\" & FORMAT(_yFill, \"0.0\") &\n\t\t\t\"' width='\" & _BarWidth & \"' height='\" & FORMAT(_fillH, \"0.0\") &\n\t\t\t\"' rx='\" & _RX & \"' ry='\" & _RX &\n\t\t\t\"' fill='\" & _FillColor & \"' />\"\n\n\t\t// однорядковий підпис над баром (тільки значення)\n\t\tVAR _valueText =\n\t\t\t\"<text x='\" & FORMAT(_cx,\"0.0\") & \"' y='\" & (_MarginTop + _ValueFontSize) &\n\t\t\t\"' text-anchor='middle' style=\"\"font-family:\" & _fontFamily &\n\t\t\t\"; font-size:\" & _ValueFontSize & \"px; fill:\" & _labelColor &\n\t\t\t\"; font-weight:400;\"\">\" &\n\t\t\t\tIF(ISBLANK(_v), \"-\", FORMAT(_v, \"# ##0.0\")) &\n\t\t\t\"</text>\"\n\t\t// VAR _valueText =\n\t\t//     IF(\n\t\t//         NOT ISBLANK(_v),\n\t\t//         \"<text x='\" & FORMAT(_cx,\"0.0\") & \"' y='\" & (_MarginTop + _ValueFontSize) &\n\t\t//         \"' text-anchor='middle' style=\"\"font-family:\" & _fontFamily &\n\t\t//         \"; font-size:\" & _ValueFontSize & \"px; fill:\" & _labelColor &\n\t\t//         \"; font-weight:400;\"\">\" &\n\t\t//             FORMAT(_v, \"# ##0.0\") &\n\t\t//         \"</text>\",\n\t\t//         \"\"\n\t\t//     )\n\n\t\t// підпис року під баром\n\t\tVAR _labelText =\n\t\t\t\"<text x='\" & FORMAT(_cx,\"0.0\") & \"' y='\" & (_H - 4) &\n\t\t\t\"' text-anchor='middle' style=\"\"font-family:\" & _fontFamily &\n\t\t\t\"; font-size:11px; fill:\" & _labelColor & \";\"\">\" &\n\t\t\tSUBSTITUTE([@Year], \"&\", \"&amp;\") & \"</text>\"\n\t\t// VAR _labelText =\n\t\t//     IF(\n\t\t//         NOT ISBLANK(_v),\n\t\t//         \"<text x='\" & FORMAT(_cx,\"0.0\") & \"' y='\" & (_H - 4) &\n\t\t//         \"' text-anchor='middle' style=\"\"font-family:\" & _fontFamily &\n\t\t//         \"; font-size:11px; fill:\" & _labelColor & \";\"\">\" &\n\t\t//         SUBSTITUTE([@Year], \"&\", \"&amp;\") & \"</text>\",\n\t\t//         \"-\"\n\t\t//     )\n\t\tRETURN _bgRect & _fillRect & _valueText & _labelText,\n\t)\n\nRETURN\n\"<svg xmlns='http://www.w3.org/2000/svg' width='\" & _W & \"' height='\" & _H &\n\"' viewBox='0 0 \" & _W & \" \" & _H & \"'>\n<rect x='0' y='0' width='\" & _W & \"' height='\" & _H & \"' fill='white'/>\n\" & _BarsSVG & \"\n</svg>\"",
+  "dependencies": {
+    "measures": [
+      "GP.OKR  попередній рік",
+      "GP.OKR  поточний рік"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "group-profile",
+    "main",
+    "pdp",
+    "svg"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

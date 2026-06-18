@@ -1,0 +1,54 @@
+{
+  "id": "gp-dolia-spivrobitnykiv-komandy-z-naiavnymy-vidpustkamy-ponad-10-dniv",
+  "type": "measure",
+  "name": "GP.Доля співробітників команди з наявними відпустками понад 10 днів",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\Дані про команду",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _filter0 = TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), 'fact_Metrics'[USER_ACCESS_ID])\nVAR _admin =\n\tDIVIDE(\n\t\tCALCULATE(\n\t\t\tCOUNTROWS('fact_Metrics'),\n\t\t\t'fact_Metrics'[LONG_VACATION_BY_MAIN_POSITION] > 0\n\t\t),\n\t\tCALCULATE(COUNTROWS('fact_Metrics'))\n\t)\nVAR _admin_lt =\n\tCALCULATE(\n\t\tDIVIDE(\n\t\t\tCALCULATE(\n\t\t\t\tCOUNTROWS('fact_Metrics'),\n\t\t\t\t'fact_Metrics'[LONG_VACATION_BY_MAIN_POSITION] > 0\n\t\t\t),\n\t\t\tCALCULATE(COUNTROWS('fact_Metrics'))\n\t\t),\n\t\t_filter0\n\t)\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE( t_HierarchyTypes[Index] ),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\nRETURN\n\tTRIM( \n\t\tCOALESCE( \n\t\t\tFORMAT( _res, \"0.00%\" ), \"-\"\n\t\t)\n\t)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Metrics[LONG_VACATION_BY_MAIN_POSITION]",
+      "fact_Metrics[USER_ACCESS_ID]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "fact_Metrics",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "Index",
+      "LONG_VACATION_BY_MAIN_POSITION",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "fact_Metrics"
+  },
+  "business": {
+    "definition": "Доля співробітників команди з наявними відпустками понад 10 днів",
+    "purpose": "Розрахункове поле. Відношення кількості працівників, у яких utilized по кожній окремій відпустці  >=10 за останні 12 місяців (включно із поточним) до загальної кількості працівників Розрахункове поле. Відношення кількості працівників, у яких utilized >=10 за останні 12 місяців до загальної кількості працівників",
+    "requirementRefs": [
+      "Командний-профіль/Паспортна-частина-групового-профілю/Сторінка-Картка-команди",
+      "Командний-профіль/Сторінка-Здоров'я-та-благополуччя-команди"
+    ]
+  },
+  "tags": [
+    "dani-pro-komandu",
+    "group-profile",
+    "main",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

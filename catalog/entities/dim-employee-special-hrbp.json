@@ -1,0 +1,167 @@
+{
+  "id": "dim-employee-special-hrbp",
+  "type": "entity",
+  "name": "dim_Employee_Special_HRBP",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "dim_Employee_Special_HRBP",
+  "sourceTables": [
+    "DM.vw_R27_dim_Employee_Special_Head_HRBP"
+  ],
+  "columns": [
+    {
+      "name": "ID",
+      "dataType": "string",
+      "source": "ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_ID",
+      "dataType": "string",
+      "source": "EMP_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_POSITION_ID",
+      "dataType": "string",
+      "source": "EMP_POSITION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_UNIT_ID",
+      "dataType": "string",
+      "source": "EMP_UNIT_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_ORGANIZATION_ID",
+      "dataType": "string",
+      "source": "EMP_ORGANIZATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HRBP_ID",
+      "dataType": "string",
+      "source": "EMP_HRBP_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HRBP_TAX",
+      "dataType": "string",
+      "source": "EMP_HRBP_TAX",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HRBP_EMAIL",
+      "dataType": "string",
+      "source": "EMP_HRBP_EMAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HRBP_POSITION",
+      "dataType": "string",
+      "source": "EMP_HRBP_POSITION",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HRBP_PERSONNEL_UNIT",
+      "dataType": "string",
+      "source": "EMP_HRBP_PERSONNEL_UNIT",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_HRBP_LAYER",
+      "dataType": "string",
+      "source": "EMP_HRBP_LAYER",
+      "isCalculated": false
+    },
+    {
+      "name": "CALC_DATE",
+      "dataType": "dateTime",
+      "source": "CALC_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_ID",
+      "dataType": "string",
+      "source": "EMPLOYEE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_ID",
+      "dataType": "string",
+      "source": "ORGANIZATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_ID",
+      "dataType": "string",
+      "source": "JOB_TITLE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_AMT",
+      "dataType": "double",
+      "source": "JOB_TITLE_AMT",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_HRBP_ID",
+      "dataType": "string",
+      "source": "EMPLOYEE_HRBP_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_HRBP_ID",
+      "dataType": "string",
+      "source": "DIVISION_HRBP_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_HRBP_ID",
+      "dataType": "string",
+      "source": "JOB_TITLE_HRBP_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "STEP_HRBP",
+      "dataType": "int64",
+      "source": "STEP_HRBP",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "fact_Employee_List",
+      "fromColumn": "EMP_HRBP_ID",
+      "toColumn": "ID",
+      "role": "to"
+    }
+  ],
+  "relatedMeasures": [],
+  "requirementRefs": [
+    "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+    "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+    "Командний-профіль/Сторінка-Загальна-інформація-про-команду"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/dim_Employee_Special_HRBP.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

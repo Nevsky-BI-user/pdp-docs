@@ -1,0 +1,63 @@
+{
+  "id": "dolia-upravlinskykh-katehorii-sered-vsikh-spivrobitnykiv",
+  "type": "measure",
+  "name": "Доля управлінських категорій серед всіх співробітників (%)",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\Загальна інформація",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _filter_lt= TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), 'fact_Employee_List'[USER_ACCESS_ID])\nVAR _admin =\nDIVIDE(\n    CALCULATE(\n        COUNTROWS('fact_Employee_List'),\n        FILTER(\n            'fact_Employee_List', \n            'fact_Employee_List'[POSITION_CATEGORY_DETAIL] IN \n            {\"Топ-менеджмент\", \"Середній менеджмент\", \"Старший менеджмент А+\", \"Старший менеджмент А\", \"Старший менеджмент В\", \"Старший менеджмент С\", \"Лінійні керівники\"})),\n    CALCULATE(\n        COUNTROWS('fact_Employee_List')),\n    BLANK())\n\nVAR _admin_lt = \nDIVIDE(\n    CALCULATE(\n        COUNTROWS('fact_Employee_List'),\n        FILTER(\n            'fact_Employee_List', \n            'fact_Employee_List'[POSITION_CATEGORY_DETAIL] IN \n            {\"Топ-менеджмент\", \"Середній менеджмент\", \"Старший менеджмент А+\", \"Старший менеджмент А\", \"Старший менеджмент В\", \"Старший менеджмент С\", \"Лінійні керівники\"}),\n        _filter_lt),\n    CALCULATE(\n        COUNTROWS('fact_Employee_List'), _filter_lt),\n    BLANK())\n\nVAR _res = \n    SWITCH(\n        SELECTEDVALUE('t_HierarchyTypes'[Index]),\n        0, _admin_lt,\n        1, _admin)\n        \nRETURN \nTRIM(\n    FORMAT(\n        COALESCE(_res, 0), \n        \"0.00%\"))",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[POSITION_CATEGORY_DETAIL]",
+      "fact_Employee_List[USER_ACCESS_ID]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "fact_Employee_List",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "Index",
+      "POSITION_CATEGORY_DETAIL",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "POSITION_CATEGORY_DETAIL → Деталізація категорії посади (внутрішня); POSITION_CATEGORY_DETAIL → Категорія посади; POSITION_CATEGORY_DETAIL → Категорія посади (внутрішня); POSITION_CATEGORY_DETAIL → Доля менеджерів серед всіх співробітників (%)",
+    "purpose": "Поле завжди має значення, пусте поле не допускається Назва категорії посади Менеджери - це управлінські категорії.  <br>POSITION_CATEGORY_DETAIL in (Топ-менеджмент, Середній менеджмент, Старший менеджмент А+, Старший менеджмент А, Старший менеджмент В, Старший менеджмент С, Лінійні керівники)",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника",
+      "Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Сторінка-Ефективність",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+      "Командний-профіль/Сторінка-Навчання-і-розвиток/Блок-Розвиток-сторінки-Навчання-і-розвиток",
+      "Командний-профіль/Сторінка-Плинність-та-Exits/ТЗ-на-вітрину-Exits",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Блок-Додаткові-інструменти"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "zahalna-informatsiia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

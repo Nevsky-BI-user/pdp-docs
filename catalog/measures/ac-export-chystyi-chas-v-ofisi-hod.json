@@ -1,0 +1,50 @@
+{
+  "id": "ac-export-chystyi-chas-v-ofisi-hod",
+  "type": "measure",
+  "name": "AC.Export.Чистий час в офісі, год.",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Loss_Productivity\\Export",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SELECTEDVALUE('fact_Loss_of_Productivity'[Net_Office_Time_AVG_3month])",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Loss_of_Productivity[Net_Office_Time_AVG_3month]"
+    ],
+    "tables": [
+      "fact_Loss_of_Productivity"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_Loss_of_Productivity"
+    ],
+    "sourceColumns": [
+      "Net_Office_Time_AVG_3month"
+    ],
+    "powerQuery": "fact_Loss_of_Productivity"
+  },
+  "business": {
+    "definition": "Net_Office_Time_AVG_3month → Чистий час в офісі, год.",
+    "purpose": "",
+    "requirementRefs": [
+      "Кейс-Втрати-Продуктивності-Працівників"
+    ]
+  },
+  "tags": [
+    "analytical-cases",
+    "export",
+    "loss-productivity",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

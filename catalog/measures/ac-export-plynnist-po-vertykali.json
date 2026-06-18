@@ -1,0 +1,52 @@
+{
+  "id": "ac-export-plynnist-po-vertykali",
+  "type": "measure",
+  "name": "AC.Export.Плинність % по вертикалі",
+  "homeTable": "_Measures",
+  "displayFolder": "Analytical Cases\\Loss_Productivity\\Export",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SELECTEDVALUE('fact_Loss_of_Productivity'[Turnover])",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Loss_of_Productivity[Turnover]"
+    ],
+    "tables": [
+      "fact_Loss_of_Productivity"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_Loss_of_Productivity"
+    ],
+    "sourceColumns": [
+      "Turnover"
+    ],
+    "powerQuery": "fact_Loss_of_Productivity"
+  },
+  "business": {
+    "definition": "Turnover → Плинність % по вертикалі; Turnover → Плинність (%)",
+    "purpose": "Плинність по кадровому підрозділу Щоб порахувати плинність по структурі, яка містить в собі кілька кадрових підрозділів, потрібно показник Fired_Unit_Cnt по кожному підрозділу (не людині) зсумувати та поділити на суму Employee_Unit_Average по кожному підрозділу (не людині). Щоб визначити Fired_Unit_Cnt  та  Employee_Unit_Average по підрозділу, треба взяти їх значення по одному із працівників цього підрозділу, бо плинність по людині рахується по її підрозділу",
+    "requirementRefs": [
+      "Кейс-Втрати-Продуктивності-Працівників",
+      "Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Сторінка-Картка-команди"
+    ]
+  },
+  "tags": [
+    "analytical-cases",
+    "export",
+    "loss-productivity",
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

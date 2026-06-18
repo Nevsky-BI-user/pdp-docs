@@ -1,0 +1,51 @@
+{
+  "id": "pp-okr-kolirna-otsinka-okr",
+  "type": "measure",
+  "name": "PP.OKR.Колірна оцінка OKR",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Результативність та оцінка\\OKR",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "SELECTEDVALUE('fact_OKR_Goals'[OKR_COLOR_RATE])",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_OKR_Goals[OKR_COLOR_RATE]"
+    ],
+    "tables": [
+      "fact_OKR_Goals"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.R27_fact_OKR_Goals"
+    ],
+    "sourceColumns": [
+      "OKR_COLOR_RATE"
+    ],
+    "powerQuery": "fact_OKR_Goals"
+  },
+  "business": {
+    "definition": "OKR_COLOR_RATE → Колірна оцінка ОКР з плану",
+    "purpose": "",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Створити-блок-Виконання-OKR"
+    ]
+  },
+  "tags": [
+    "okr",
+    "pdp",
+    "personal-profile",
+    "rezultatyvnist-ta-otsinka"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

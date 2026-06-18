@@ -1,0 +1,65 @@
+{
+  "id": "pp-misiatsi-bez-vidpustky",
+  "type": "measure",
+  "name": "PP.Місяці без відпустки",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Здоров'я та благополуччя",
+  "formatString": "0;-0;0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _employee_id = SELECTEDVALUE('fact_Employee_List'[EMPLOYEE_ID])\nVAR _main_position = \n\tCALCULATE(\n\t\tVALUES('fact_Employee_List'[USER_ACCESS_ID]),\n\t\tREMOVEFILTERS('fact_Employee_List'),\n\t\t'fact_Employee_List'[EMPLOYEE_ID] = _employee_id,\n\t\t'fact_Employee_List'[IS_MAIN_POSITION] = 1\n\t)\nVAR _filter0 = TREATAS({_main_position}, 'fact_Vacation_Reserve'[USER_ACCESS_ID])\nVAR _res =\nCALCULATE(\n\tLASTNONBLANKVALUE(\n\t\tVALUES('dim_Date'[Date]),\n\t\tCALCULATE(MAX('fact_Vacation_Reserve'[no_vacation_duration_months]))\n\t),\n\tREMOVEFILTERS('fact_Vacation_Reserve'),\n\t_filter0\n)\nRETURN _res",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Date[Date]",
+      "fact_Employee_List[EMPLOYEE_ID]",
+      "fact_Employee_List[IS_MAIN_POSITION]",
+      "fact_Employee_List[USER_ACCESS_ID]",
+      "fact_Vacation_Reserve[USER_ACCESS_ID]",
+      "fact_Vacation_Reserve[no_vacation_duration_months]"
+    ],
+    "tables": [
+      "dim_Date",
+      "fact_Employee_List",
+      "fact_Vacation_Reserve"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_Vacation_Reserve_PDP"
+    ],
+    "sourceColumns": [
+      "Date",
+      "EMPLOYEE_ID",
+      "IS_MAIN_POSITION",
+      "USER_ACCESS_ID",
+      "no_vacation_duration_months"
+    ],
+    "powerQuery": "dim_Date"
+  },
+  "business": {
+    "definition": "IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position; no_vacation_duration_months → Лідер за часом без відпустки",
+    "purpose": "1 - Так  <br>0 - Ні Розрахункове поле.  <br>Відібрати EMPLOYEE_ID, де no_vacation_duration_months має найбільше значення та вивести це значення та ПІБ працівника (full_name)  <br>Якщо є кілька співробітників із однаковим значенням місяців без відпустки, то виводити кожного з них. Виводити максимально моюливу кількість записів списком. Якщо не вміщається, поставити в кінці ..., а по наведенню мишки показувати всіх.  <br>Якщо значення в полі відсутнє, то показати текст \"Дані відсутні\" або знак \"-\".",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Сторінка-Ефективність-працівника/Вітрина-Відвідування-офісів",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Командний-профіль/Сторінка-Здоров'я-та-благополуччя-команди",
+      "Командний-профіль/Сторінка-Плинність-та-Exits/ТЗ-на-вітрину-Exits"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zdorovia-ta-blahopoluchchia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

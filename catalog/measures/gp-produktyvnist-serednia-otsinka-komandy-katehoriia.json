@@ -1,0 +1,42 @@
+{
+  "id": "gp-produktyvnist-serednia-otsinka-komandy-katehoriia",
+  "type": "measure",
+  "name": "GP.Продуктивність.Середня оцінка команди.Категорія",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\_Main\\Продуктивність",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _res = [GP.Продуктивність.Середня оцінка команди.Значення]\nVAR _color = \n    SWITCH(\n        TRUE(),\n        _res >= 4.3, \"Категорія ТОР А\",\n        _res >= 3.90, \"Категорія А\",\n        _res >= 3.4, \"Категорія B\",\n        _res >= 3.0, \"Категорія C\",\n        _res > 0, \"Категорія D\",\n        \"Неоціненно\"\n    )\nRETURN  _color ",
+  "dependencies": {
+    "measures": [
+      "GP.Продуктивність.Середня оцінка команди.Значення"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "definition": "",
+    "purpose": "",
+    "requirementRefs": []
+  },
+  "tags": [
+    "group-profile",
+    "main",
+    "pdp",
+    "produktyvnist"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

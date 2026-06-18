@@ -1,0 +1,118 @@
+{
+  "id": "fact-average-income",
+  "type": "entity",
+  "name": "fact_Average_Income",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_Average_Income",
+  "sourceTables": [
+    "DM.vw_R27_fact_Average_Income"
+  ],
+  "columns": [
+    {
+      "name": "PERIOD",
+      "dataType": "dateTime",
+      "source": "PERIOD",
+      "isCalculated": false
+    },
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_ID",
+      "dataType": "string",
+      "source": "EMPLOYEE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "PREV_DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "PREV_DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "PREV_DIVISION_PERSON_NAME",
+      "dataType": "string",
+      "source": "PREV_DIVISION_PERSON_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "CURRENT_DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "CURRENT_DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "CURRENT_DIVISION_PERSON_NAME",
+      "dataType": "string",
+      "source": "CURRENT_DIVISION_PERSON_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "MONTLY_INCOME_WITH_BONUS",
+      "dataType": "double",
+      "source": "MONTLY_INCOME_WITH_BONUS",
+      "isCalculated": false
+    },
+    {
+      "name": "MONTLY_INCOME_WITHOUT_BONUS",
+      "dataType": "double",
+      "source": "MONTLY_INCOME_WITHOUT_BONUS",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_INCLUDED_INTO_CALC",
+      "dataType": "int64",
+      "source": "IS_INCLUDED_INTO_CALC",
+      "isCalculated": false
+    },
+    {
+      "name": "FTE_EMPLOYEE",
+      "dataType": "double",
+      "source": "FTE_EMPLOYEE",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_RECEIPT_DATE",
+      "dataType": "dateTime",
+      "source": "EMP_RECEIPT_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "EMP_DISMISSAL_DATE",
+      "dataType": "dateTime",
+      "source": "EMP_DISMISSAL_DATE",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_KEY",
+      "dataType": "string",
+      "source": "STATUS_KEY",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_Admin_OS",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "to"
+    }
+  ],
+  "relatedMeasures": [
+    "GP.Середній дохід без річного бонуса (за ост. 12 міс)",
+    "GP.Середній дохід з річним бонусом (за ост. 12 міс)"
+  ],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_Average_Income.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

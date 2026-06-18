@@ -1,0 +1,79 @@
+{
+  "id": "gp-riznytsia-fiksovanoi-vynahorody-plan-maksymalnyi-riven",
+  "type": "measure",
+  "name": "GP.Різниця фіксованої винагороди (план).Максимальний рівень",
+  "homeTable": "_Measures",
+  "displayFolder": "Group_Profile\\TRS",
+  "formatString": "#,0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),dim_Admin_OS[USER_ACCESS_ID] )\n\n/* *********** ADMIN *********** */\nVAR _admin =\n    VAR _Employees = VALUES('dim_Admin_OS'[USER_ACCESS_ID])\n        VAR _table0 = \n            ADDCOLUMNS(\n                _Employees,\n                \"@Indicator\",\n                CALCULATE(\n                    SUM('fact_TRS_Plan'[PAYMENT_PLAN_SUM]),\n                    'fact_TRS_Plan'[CATEGORY_NAME] = \"Фіксована винагорода\",\n                    'fact_TRS_Plan'[IS_ACTUAL] = TRUE(),\n                    ('fact_TRS_Plan'[END_DATE] > TODAY() || 'fact_TRS_Plan'[END_DATE] = DATE(2001, 01, 01)),\n                    'dim_Admin_OS'[IS_MANAGER] = FALSE())\n            )\n        VAR _ShareOfSomeIndicator = \n            MAXX(\n                FILTER(\n                    _table0, \n                    NOT ISBLANK([@Indicator]) && [@Indicator] > 0\n                ), [@Indicator]\n            )\n\n        RETURN _ShareOfSomeIndicator\n\n/* *********** ADMIN LT *********** */\nVAR _admin_lt =\n    VAR _Employees =VALUES('dim_Admin_OS'[USER_ACCESS_ID])\n        VAR _table0 = \n            CALCULATETABLE(\n                ADDCOLUMNS(\n                    _Employees,\n                    \"@Indicator\",\n                    CALCULATE(\n                        SUM('fact_TRS_Plan'[PAYMENT_PLAN_SUM]),\n                        'fact_TRS_Plan'[CATEGORY_NAME] = \"Фіксована винагорода\",\n                        'fact_TRS_Plan'[IS_ACTUAL] = TRUE(),\n                        ('fact_TRS_Plan'[END_DATE] > TODAY() || 'fact_TRS_Plan'[END_DATE] = DATE(2001, 01, 01)),\n                        'dim_Admin_OS'[IS_MANAGER] = FALSE(),\n                        'fact_TRS_Plan'[PAYMENT_PLAN_SUM] > 0)),\n                _filter_lt\n            )\n        VAR _ShareOfSomeIndicator = \n            MAXX(\n                FILTER(\n                    _table0, \n                    NOT ISBLANK([@Indicator]) && [@Indicator] > 0\n                ), [@Indicator]\n            )\n\n        RETURN _ShareOfSomeIndicator\n    \nVAR _res = \n\tSWITCH(\n\t\t_roleIndex,\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\nRETURN _res",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "dim_Admin_LT_OS[USER_ACCESS_ID]",
+      "dim_Admin_OS[IS_MANAGER]",
+      "dim_Admin_OS[USER_ACCESS_ID]",
+      "fact_TRS_Plan[CATEGORY_NAME]",
+      "fact_TRS_Plan[END_DATE]",
+      "fact_TRS_Plan[IS_ACTUAL]",
+      "fact_TRS_Plan[PAYMENT_PLAN_SUM]",
+      "t_HierarchyTypes[Index]"
+    ],
+    "tables": [
+      "dim_Admin_OS",
+      "fact_TRS_Plan",
+      "t_HierarchyTypes"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_dim_Employee_Access_List",
+      "DM.vw_R27_fact_TRS_Plan_PDP"
+    ],
+    "sourceColumns": [
+      "CATEGORY_NAME",
+      "END_DATE",
+      "IS_ACTUAL",
+      "IS_MANAGER",
+      "Index",
+      "PAYMENT_PLAN_SUM",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "dim_Admin_OS"
+  },
+  "business": {
+    "definition": "IS_MANAGER → Кількість керівників; IS_MANAGER → Керівник; IS_MANAGER → Доля керівників серед всіх співробітників (%); IS_MANAGER → Керівник - ПІБ керівника команди; CATEGORY_NAME → Назва блоку; END_DATE → Термін без відпустки в днях по пріоритетному місцю роботи на поточну дату; PAYMENT_PLAN_SUM → Річний цільовий дохід; PAYMENT_PLAN_SUM → Розмір фіксованої винагороди плановий, за місяць ПОТОЧНИЙ; PAYMENT_PLAN_SUM → Сума (на поточний момент); PAYMENT_PLAN_SUM → Середній розмір премії за місяць; PAYMENT_PLAN_SUM → Доля учасників із зміною фіксованої винагороди; PAYMENT_PLAN_SUM → Діапазон фіксованої винагороди (план)",
+    "purpose": "Відібрати із переліку усіх членів команди тих, у кого поле is_manager = 1 Якщо lead team - то ПІБ керівника цієї команди (поточного користувача).  <br>Якщо структурна одиниця- ПІБ керівника визначати по кадровому підрозділу цієї одиниці.  <br>Потрібно відібрати в кадровому підрозділі запис в якому is_manager =true та вивести ПІБ.  <br>Якщо для кадрового підрозділу відсутній такий запис, то вивести \"Дані відсутні\"  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List]. Керівником вважається той працівник, який має підлеглих. TODAY -",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Деталізація-на-сторінці-Винагорода",
+      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Доопрацювання-сторінки-ТРС",
+      "Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка/Блок-Оцінка-компетенцій",
+      "Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю",
+      "Командний-профіль/Паспортна-частина-групового-профілю/Сторінка-Картка-команди",
+      "Командний-профіль/Сторінка-TRS-команди",
+      "Командний-профіль/Сторінка-TRS-команди/Доопрацювання-сторінки-TRS",
+      "Командний-профіль/Сторінка-TRS-команди/Сторінка-Винагорода-групового-профілю#вимоги-до-звіту",
+      "Командний-профіль/Сторінка-Ефективність",
+      "Командний-профіль/Сторінка-Загальна-інформація-про-команду",
+      "Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Блок-Оцінка-компетенцій-(груповий-профіль)"
+    ]
+  },
+  "tags": [
+    "group-profile",
+    "pdp",
+    "trs"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

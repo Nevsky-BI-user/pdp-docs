@@ -1,0 +1,64 @@
+{
+  "id": "pp-dniv-vidpustky-v-robochi-dni",
+  "type": "measure",
+  "name": "PP.% днів відпустки в робочі дні",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Здоров'я та благополуччя",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _employee_id = SELECTEDVALUE('fact_Employee_List'[EMPLOYEE_ID])\nVAR _uaid =\n\tCALCULATE(\n\t\tMAXX(VALUES('fact_Employee_List'[USER_ACCESS_ID]), 'fact_Employee_List'[USER_ACCESS_ID]),\n\t\tREMOVEFILTERS('fact_Employee_List'),\n\t\t'fact_Employee_List'[EMPLOYEE_ID] = _employee_id,\n\t\t'fact_Employee_List'[IS_MAIN_POSITION] = 1\n\t)\n\nVAR _hasUaid = NOT ISBLANK(_uaid)\n\nVAR _den =\n\tCALCULATE(\n\t\tSUM('fact_Metrics'[Vacation_Day]),\n\t\tREMOVEFILTERS('fact_Metrics'),\n\t\tKEEPFILTERS('fact_Metrics'[USER_ACCESS_ID] = _uaid)\n\t)\n\nVAR _num =\n\tCALCULATE(\n\t\tSUMX('fact_Metrics', 'fact_Metrics'[Vacation_Day] - 'fact_Metrics'[WEEKEND_DAY]),\n\t\tREMOVEFILTERS('fact_Metrics'),\n\t\tKEEPFILTERS('fact_Metrics'[USER_ACCESS_ID] = _uaid)\n\t)\n\nVAR _ratio = DIVIDE(_num, _den)\nRETURN\n\tSWITCH(\n\t\tTRUE(),\n\t\tNOT _hasUaid, \"-\",\n\t\tISBLANK(_ratio), \"-\",\n\t\t_ratio = 0, \"0.00%\",\n\t\tFORMAT(_ratio, \"0.00%\")\n\t)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[EMPLOYEE_ID]",
+      "fact_Employee_List[IS_MAIN_POSITION]",
+      "fact_Employee_List[USER_ACCESS_ID]",
+      "fact_Metrics[USER_ACCESS_ID]",
+      "fact_Metrics[Vacation_Day]",
+      "fact_Metrics[WEEKEND_DAY]"
+    ],
+    "tables": [
+      "fact_Employee_List",
+      "fact_Metrics"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "EMPLOYEE_ID",
+      "IS_MAIN_POSITION",
+      "USER_ACCESS_ID",
+      "Vacation_Day",
+      "WEEKEND_DAY"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position; Vacation_Day → % днів відпустки  в робочі дні (за останні 12 місяців); Vacation_Day → Дні відпустки; Vacation_Day → Середня тривалість відпустки; Vacation_Day → Середня кількість днів використаної відпустки співробітником 12 міс.; Vacation_Day → Середня тривалість відпустки співробітника, днів; Vacation_Day → % днів відпустки  в робочі дні; Vacation_Day → % днів відпустки в робочі дні",
+    "purpose": "1 - Так  <br>0 - Ні Показує відсоток днів відпуски, які припадають на робочі дні за останні 12 місяців, включно із поточним.  <br>Розраховується як (Vacation_Day-Weekend_Day)/Vacation_Day  <br>Якщо значення в полі відсутнє, то показати текст \"Дані відсутні\". Розрахункове поле.  <br>Кількість днів відпусток всіх видів, використаних за останні 12 місяців (включно із поточним місяцем) в сумі. Розрахункове поле.  <br>Потрібно кількість днів відпустки за останні 12 місяців поділити на кількість таких відпусток та округлити до десятих = Vacation_Day/Vacation_Number  <br>Якщо значення в полі відсутнє",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Сторінка-Ефективність-працівника/Вітрина-Відвідування-офісів",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Індивідуальний-профіль-працівника/Сторінка-Здоров'я-та-благополуччя-працівника",
+      "Командний-профіль/Сторінка-Здоров'я-та-благополуччя-команди",
+      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту",
+      "Командний-профіль/Сторінка-Плинність-та-Exits/ТЗ-на-вітрину-Exits"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zdorovia-ta-blahopoluchchia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}

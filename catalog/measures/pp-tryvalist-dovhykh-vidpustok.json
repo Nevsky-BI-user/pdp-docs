@@ -1,0 +1,59 @@
+{
+  "id": "pp-tryvalist-dovhykh-vidpustok",
+  "type": "measure",
+  "name": "PP.Тривалість довгих відпусток",
+  "homeTable": "_Measures",
+  "displayFolder": "Personal_Profile\\Здоров'я та благополуччя",
+  "formatString": "0",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _employee_id = SELECTEDVALUE('fact_Employee_List'[EMPLOYEE_ID])\nVAR _main_position = \n\tCALCULATE(\n\t\tVALUES('fact_Employee_List'[USER_ACCESS_ID]),\n\t\tREMOVEFILTERS('fact_Employee_List'),\n\t\t'fact_Employee_List'[EMPLOYEE_ID] = _employee_id,\n\t\t'fact_Employee_List'[IS_MAIN_POSITION] = 1\n\t)\nVAR _filter0 = TREATAS({_main_position}, 'fact_Metrics'[USER_ACCESS_ID])\nVAR _res = \n\tCALCULATE(\n\t\tSUM('fact_Metrics'[LONG_VACATION_TOTAL_DAY]),\n\t\tREMOVEFILTERS('fact_Metrics'),\n\t\t_filter0\n\t)\nRETURN COALESCE(_res,0)",
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_Employee_List[EMPLOYEE_ID]",
+      "fact_Employee_List[IS_MAIN_POSITION]",
+      "fact_Employee_List[USER_ACCESS_ID]",
+      "fact_Metrics[LONG_VACATION_TOTAL_DAY]",
+      "fact_Metrics[USER_ACCESS_ID]"
+    ],
+    "tables": [
+      "fact_Employee_List",
+      "fact_Metrics"
+    ]
+  },
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [
+      "EMPLOYEE_ID",
+      "IS_MAIN_POSITION",
+      "LONG_VACATION_TOTAL_DAY",
+      "USER_ACCESS_ID"
+    ],
+    "powerQuery": "fact_Employee_List"
+  },
+  "business": {
+    "definition": "IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position",
+    "purpose": "1 - Так  <br>0 - Ні",
+    "requirementRefs": [
+      "Індивідуальний-профіль-працівника/Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам",
+      "Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Сторінка-Ефективність-працівника/Вітрина-Відвідування-офісів",
+      "Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника",
+      "Командний-профіль/Сторінка-Плинність-та-Exits/ТЗ-на-вітрину-Exits"
+    ]
+  },
+  "tags": [
+    "pdp",
+    "personal-profile",
+    "zdorovia-ta-blahopoluchchia"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
+    "extractedAt": "2026-06-18T11:59:35+00:00"
+  },
+  "manualNotes": ""
+}
