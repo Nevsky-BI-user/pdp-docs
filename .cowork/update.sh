@@ -7,8 +7,8 @@
 set -euo pipefail
 PBIP_WIN="C:/PROJECTS/MHP/PDP/GIT_local"
 PBIP="/c/PROJECTS/MHP/PDP/GIT_local"
-WIKI_REPO="/c/github/azure-wiki"
-WIKI="$WIKI_REPO/PDP.wiki/Функціональні-вимоги/Вимоги-до-звіту-People-Digital-Profile"
+WIKI_REPO="/c/github/azure-wiki/PDP.wiki"
+WIKI="$WIKI_REPO/Функціональні-вимоги/Вимоги-до-звіту-People-Digital-Profile"
 DOCS="/c/github/pdp-docs"
 git -C "$PBIP" pull --ff-only || true
 git -C "$WIKI_REPO" pull --ff-only || true
