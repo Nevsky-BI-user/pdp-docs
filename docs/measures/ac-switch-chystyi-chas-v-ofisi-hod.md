@@ -2,24 +2,6 @@
 
 *тека `Analytical Cases\Loss_Productivity\Main`*
 
-!!! abstract "Джерела даних"
-    `DM.vw_R27_fact_Loss_of_Productivity`, `DWH.t_SPO_HR_Person_Matrix_with_Coefficient`
-
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-[Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
-
-## Пов'язані міри
-
-**Використовує:** [AC.Дані.Чистий час в офісі, год.](../measures/ac-dani-chystyi-chas-v-ofisi-hod.md), [AC.Оцінка.Чистий час в офісі, год.](../measures/ac-otsinka-chystyi-chas-v-ofisi-hod.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -73,6 +55,21 @@ graph LR
   M --> t_AC_Burnout["t_AC Burnout"]
   M --> t_Loss_Productivity_Metrics_by_Persona["t_Loss_Productivity_Metrics_by_Persona"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
+
+## Пов'язані міри
+
+**Використовує:** [AC.Дані.Чистий час в офісі, год.](../measures/ac-dani-chystyi-chas-v-ofisi-hod.md), [AC.Оцінка.Чистий час в офісі, год.](../measures/ac-otsinka-chystyi-chas-v-ofisi-hod.md)
 
 ## Нотатки
 

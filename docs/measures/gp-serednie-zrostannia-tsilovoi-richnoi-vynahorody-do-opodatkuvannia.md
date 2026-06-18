@@ -2,24 +2,6 @@
 
 *тека `Group_Profile\TRS` · формат `0.00%;-0.00%;0.00%`*
 
-!!! abstract "Джерела даних"
-    `DM.vw_R27_dim_Employee_Access_List`
-
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-[Group Profile](../report/group-profile.md)
-
-## Пов'язані міри
-
-**Використовує:** [PP.Цільовий розмір річної винагороди, до оподаткування](../measures/pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia.md), [PP.Цільовий розмір річної винагороди, до оподаткування (12 місяців назад)](../measures/pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia-12-misiatsiv-nazad.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -112,6 +94,21 @@ graph LR
   M --> dim_Admin_OS["dim_Admin_OS"]
   M --> t_HierarchyTypes["t_HierarchyTypes"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Group Profile](../report/group-profile.md)
+
+## Пов'язані міри
+
+**Використовує:** [PP.Цільовий розмір річної винагороди, до оподаткування](../measures/pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia.md), [PP.Цільовий розмір річної винагороди, до оподаткування (12 місяців назад)](../measures/pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia-12-misiatsiv-nazad.md)
 
 ## Нотатки
 

@@ -2,26 +2,6 @@
 
 *тека `Group_Profile\_Main\Продуктивність` · формат `0`*
 
-!!! abstract "Джерела даних"
-    `DM.vw_R27_dim_Employee_Access_List`, `DM.vw_R27_fact_Employee_Performance_General_PBI`
-
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-_Не використовується на основних сторінках звіту._
-
-## Пов'язані міри
-
-**Використовує:** [GP.Продуктивність.Останній період оцінки](../measures/gp-produktyvnist-ostannii-period-otsinky.md)
-
-**Використовується в:** [GP.Продуктивність.SVG.Bar chart](../measures/gp-produktyvnist-svg-bar-chart.md), [GP.Продуктивність.К-ть співробітників, що оцінюються.Текстове поле](../measures/gp-produktyvnist-k-t-spivrobitnykiv-shcho-otsiniuiutsia-tekstove-pole.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -94,6 +74,23 @@ graph LR
   M --> fact_Employee_Performance_Total["fact_Employee_Performance_Total"]
   M --> t_HierarchyTypes["t_HierarchyTypes"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовує:** [GP.Продуктивність.Останній період оцінки](../measures/gp-produktyvnist-ostannii-period-otsinky.md)
+
+**Використовується в:** [GP.Продуктивність.SVG.Bar chart](../measures/gp-produktyvnist-svg-bar-chart.md), [GP.Продуктивність.К-ть співробітників, що оцінюються.Текстове поле](../measures/gp-produktyvnist-k-t-spivrobitnykiv-shcho-otsiniuiutsia-tekstove-pole.md)
 
 ## Нотатки
 

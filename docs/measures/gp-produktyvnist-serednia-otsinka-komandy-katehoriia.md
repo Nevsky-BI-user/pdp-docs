@@ -2,23 +2,6 @@
 
 *тека `Group_Profile\_Main\Продуктивність`*
 
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-_Не використовується на основних сторінках звіту._
-
-## Пов'язані міри
-
-**Використовує:** [GP.Продуктивність.Середня оцінка команди.Значення](../measures/gp-produktyvnist-serednia-otsinka-komandy-znachennia.md)
-
-**Використовується в:** [GP.Продуктивність.Color.Середня оцінка комади.Текстове поле](../measures/gp-produktyvnist-color-serednia-otsinka-komady-tekstove-pole.md), [GP.Продуктивність.Середня оцінка команди.Текстове поле](../measures/gp-produktyvnist-serednia-otsinka-komandy-tekstove-pole.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -61,6 +44,23 @@ RETURN  _color
 graph LR
   M["GP.Продуктивність.Середня оцінка команди.Категорія"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовує:** [GP.Продуктивність.Середня оцінка команди.Значення](../measures/gp-produktyvnist-serednia-otsinka-komandy-znachennia.md)
+
+**Використовується в:** [GP.Продуктивність.Color.Середня оцінка комади.Текстове поле](../measures/gp-produktyvnist-color-serednia-otsinka-komady-tekstove-pole.md), [GP.Продуктивність.Середня оцінка команди.Текстове поле](../measures/gp-produktyvnist-serednia-otsinka-komandy-tekstove-pole.md)
 
 ## Нотатки
 

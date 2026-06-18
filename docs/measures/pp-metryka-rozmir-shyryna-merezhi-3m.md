@@ -2,21 +2,6 @@
 
 *тека `Personal_Profile\Паспорт\Метрики`*
 
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-[Personal Profile](../report/personal-profile.md)
-
-## Пов'язані міри
-
-**Використовує:** [PP.Розмір мережі (співробітник, 3м)](../measures/pp-rozmir-merezhi-spivrobitnyk-3m.md), [PP.Ширина мережі (співробітник, 3м)](../measures/pp-shyryna-merezhi-spivrobitnyk-3m.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -52,6 +37,21 @@ RETURN
 graph LR
   M["PP.Метрика.Розмір/ширина мережі 3м"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+**Використовує:** [PP.Розмір мережі (співробітник, 3м)](../measures/pp-rozmir-merezhi-spivrobitnyk-3m.md), [PP.Ширина мережі (співробітник, 3м)](../measures/pp-shyryna-merezhi-spivrobitnyk-3m.md)
 
 ## Нотатки
 

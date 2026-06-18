@@ -2,21 +2,6 @@
 
 *тека `Group_Profile\TRS`*
 
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-[Group Profile](../report/group-profile.md)
-
-## Пов'язані міри
-
-**Використовує:** [GP.Різниця фіксованої винагороди (факт).Максимальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-maksymalnyi-riven.md), [GP.Різниця фіксованої винагороди (факт).Мінімальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-minimalnyi-riven.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -48,6 +33,21 @@
 graph LR
   M["GP.Різниця фіксованої винагороди (факт).Різниця"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Group Profile](../report/group-profile.md)
+
+## Пов'язані міри
+
+**Використовує:** [GP.Різниця фіксованої винагороди (факт).Максимальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-maksymalnyi-riven.md), [GP.Різниця фіксованої винагороди (факт).Мінімальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-minimalnyi-riven.md)
 
 ## Нотатки
 

@@ -2,24 +2,6 @@
 
 *тека `Navigation\Group`*
 
-!!! abstract "Джерела даних"
-    `DM.vw_R27_dim_Employee_Access_List`
-
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-[Group Profile](../report/group-profile.md) · [Утримання працівників](../report/utrymannia-pratsivnykiv.md) · [Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
-
-## Пов'язані міри
-
-**Використовує:** [Current_User_Admin_Hierarchy_Level](../measures/current-user-admin-hierarchy-level.md), [Current_user](../measures/current-user.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -85,6 +67,21 @@ graph LR
   M["GP.NavigationButton2"]
   M --> dim_Admin_OS["dim_Admin_OS"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Group Profile](../report/group-profile.md) · [Утримання працівників](../report/utrymannia-pratsivnykiv.md) · [Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
+
+## Пов'язані міри
+
+**Використовує:** [Current_User_Admin_Hierarchy_Level](../measures/current-user-admin-hierarchy-level.md), [Current_user](../measures/current-user.md)
 
 ## Нотатки
 

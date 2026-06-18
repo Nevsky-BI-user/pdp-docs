@@ -2,21 +2,6 @@
 
 *тека `Personal_Profile\Здоров'я та благополуччя`*
 
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-[Personal Profile](../report/personal-profile.md)
-
-## Пов'язані міри
-
-**Використовує:** [PP.Кількість довгих відпусток](../measures/pp-kilkist-dovhykh-vidpustok.md), [PP.Тривалість довгих відпусток](../measures/pp-tryvalist-dovhykh-vidpustok.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -57,6 +42,21 @@ RETURN _res
 graph LR
   M["PP.Наявність довгих відпусток"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+**Використовує:** [PP.Кількість довгих відпусток](../measures/pp-kilkist-dovhykh-vidpustok.md), [PP.Тривалість довгих відпусток](../measures/pp-tryvalist-dovhykh-vidpustok.md)
 
 ## Нотатки
 

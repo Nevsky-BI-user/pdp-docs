@@ -2,24 +2,6 @@
 
 *тека `USER` · формат `0`*
 
-!!! abstract "Джерела даних"
-    `DM.vw_R27_dim_Employee_Access_List`
-
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-_Не використовується на основних сторінках звіту._
-
-## Пов'язані міри
-
-**Використовується в:** [AC.LP.Nav.My_lead_team](../measures/ac-lp-nav-my-lead-team.md), [PP.Nav.My_lead_team](../measures/pp-nav-my-lead-team.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -67,6 +49,21 @@ graph LR
   M["User_Admin_Hierarchy_Level"]
   M --> dim_Admin_OS["dim_Admin_OS"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовується в:** [AC.LP.Nav.My_lead_team](../measures/ac-lp-nav-my-lead-team.md), [PP.Nav.My_lead_team](../measures/pp-nav-my-lead-team.md)
 
 ## Нотатки
 

@@ -2,24 +2,6 @@
 
 *тека `Personal_Profile\Паспорт\Ризики`*
 
-## Бізнес-суть
-
-Абсентеїзм
-
-Sick_Leave_Day_Without_Pregnancy/(FTE_weighted_work_day_for_absenteeism+Sick_Leave_Day_Without_Pregnancy)
-
-**Вимоги:** `Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту`
-
-## На сторінках звіту
-
-[Personal Profile](../report/personal-profile.md)
-
-## Пов'язані міри
-
-**Використовує:** [PP.Абсентеїзм](../measures/pp-absenteizm.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -53,6 +35,24 @@ RETURN
 graph LR
   M["PP.Ризик.Абсентеїзм"]
 ```
+
+---
+
+## Бізнес-суть
+
+Абсентеїзм
+
+Sick_Leave_Day_Without_Pregnancy/(FTE_weighted_work_day_for_absenteeism+Sick_Leave_Day_Without_Pregnancy)
+
+**Вимоги:** `Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту`
+
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+**Використовує:** [PP.Абсентеїзм](../measures/pp-absenteizm.md)
 
 ## Нотатки
 

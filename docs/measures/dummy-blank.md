@@ -2,21 +2,6 @@
 
 *тека `_Technical`*
 
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-[Personal Profile](../report/personal-profile.md) · [Group Profile](../report/group-profile.md) · [Під ризиком мобілізації](../report/pid-ryzykom-mobilizatsii.md) · [Утримання працівників](../report/utrymannia-pratsivnykiv.md) · [Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
-
-## Пов'язані міри
-
-_Прямих зв'язків з іншими мірами немає._
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -48,6 +33,21 @@ _Прямих зв'язків з іншими мірами немає._
 graph LR
   M["dummy_blank"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md) · [Group Profile](../report/group-profile.md) · [Під ризиком мобілізації](../report/pid-ryzykom-mobilizatsii.md) · [Утримання працівників](../report/utrymannia-pratsivnykiv.md) · [Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
 
 ## Нотатки
 

@@ -2,24 +2,6 @@
 
 *тека `USER` · формат `0`*
 
-!!! abstract "Джерела даних"
-    `DM.vw_R27_dim_Employee_Access_List`
-
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-_Не використовується на основних сторінках звіту._
-
-## Пов'язані міри
-
-**Використовується в:** [AC.Nav.My_lead_team](../measures/ac-nav-my-lead-team.md), [GP.NavigationButton2](../measures/gp-navigationbutton2.md), [GP.Start_Page_NavigationButton](../measures/gp-start-page-navigationbutton.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -62,6 +44,21 @@ graph LR
   M["Current_User_Admin_Hierarchy_Level"]
   M --> dim_Admin_OS["dim_Admin_OS"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовується в:** [AC.Nav.My_lead_team](../measures/ac-nav-my-lead-team.md), [GP.NavigationButton2](../measures/gp-navigationbutton2.md), [GP.Start_Page_NavigationButton](../measures/gp-start-page-navigationbutton.md)
 
 ## Нотатки
 

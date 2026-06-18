@@ -2,25 +2,6 @@
 
 *тека `Analytical Cases\Loss_Productivity\Main`*
 
-!!! abstract "Джерела даних"
-    `DM.vw_R27_fact_Loss_of_Productivity`, `DWH.t_SPO_HR_Person_Matrix_with_Coefficient`
-
-## Бізнес-суть
-
-Доля взаємодії (Viva) в інтервалі (%)
-
-**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
-
-## На сторінках звіту
-
-[Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
-
-## Пов'язані міри
-
-**Використовує:** [AC.Дані.Доля взаємодії (Viva) в інтервалі (%)](../measures/ac-dani-dolia-vzaiemodii-viva-v-intervali.md), [AC.Оцінка.Доля взаємодії (Viva) в інтервалі (%)](../measures/ac-otsinka-dolia-vzaiemodii-viva-v-intervali.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -74,6 +55,22 @@ graph LR
   M --> t_AC_Burnout["t_AC Burnout"]
   M --> t_Loss_Productivity_Metrics_by_Persona["t_Loss_Productivity_Metrics_by_Persona"]
 ```
+
+---
+
+## Бізнес-суть
+
+Доля взаємодії (Viva) в інтервалі (%)
+
+**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
+
+## На сторінках звіту
+
+[Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
+
+## Пов'язані міри
+
+**Використовує:** [AC.Дані.Доля взаємодії (Viva) в інтервалі (%)](../measures/ac-dani-dolia-vzaiemodii-viva-v-intervali.md), [AC.Оцінка.Доля взаємодії (Viva) в інтервалі (%)](../measures/ac-otsinka-dolia-vzaiemodii-viva-v-intervali.md)
 
 ## Нотатки
 

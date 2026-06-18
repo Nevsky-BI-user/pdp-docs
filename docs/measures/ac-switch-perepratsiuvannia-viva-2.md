@@ -2,25 +2,6 @@
 
 *тека `Analytical Cases\Loss_Productivity\Main`*
 
-!!! abstract "Джерела даних"
-    `DM.vw_R27_fact_Loss_of_Productivity`, `DWH.t_SPO_HR_Person_Matrix_with_Coefficient`
-
-## Бізнес-суть
-
-Перепрацювання (Viva)
-
-**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
-
-## На сторінках звіту
-
-[Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
-
-## Пов'язані міри
-
-**Використовує:** [AC.Дані.Перепрацювання (Viva)](../measures/ac-dani-perepratsiuvannia-viva.md), [AC.Оцінка.Перепрацювання (Viva)](../measures/ac-otsinka-perepratsiuvannia-viva.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -74,6 +55,22 @@ graph LR
   M --> t_AC_Burnout["t_AC Burnout"]
   M --> t_Loss_Productivity_Metrics_by_Persona["t_Loss_Productivity_Metrics_by_Persona"]
 ```
+
+---
+
+## Бізнес-суть
+
+Перепрацювання (Viva)
+
+**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
+
+## На сторінках звіту
+
+[Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
+
+## Пов'язані міри
+
+**Використовує:** [AC.Дані.Перепрацювання (Viva)](../measures/ac-dani-perepratsiuvannia-viva.md), [AC.Оцінка.Перепрацювання (Viva)](../measures/ac-otsinka-perepratsiuvannia-viva.md)
 
 ## Нотатки
 

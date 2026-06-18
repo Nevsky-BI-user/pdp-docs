@@ -2,24 +2,6 @@
 
 *тека `Group_Profile\Результативність та оцінка\Оцінка OKR` · формат `0`*
 
-!!! abstract "Джерела даних"
-    `DM.R27_fact_OKR_Key_Results`, `DM.vw_R27_dim_Employee_Access_List`
-
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-[Group Profile](../report/group-profile.md)
-
-## Пов'язані міри
-
-**Використовується в:** [GP.Результативність.Оцінка OKR.Середня кількість KR на OKR.CY](../measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-kr-na-okr-cy.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -86,6 +68,21 @@ graph LR
   M --> fact_OKR_Key_Results["fact_OKR_Key_Results"]
   M --> t_HierarchyTypes["t_HierarchyTypes"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Group Profile](../report/group-profile.md)
+
+## Пов'язані міри
+
+**Використовується в:** [GP.Результативність.Оцінка OKR.Середня кількість KR на OKR.CY](../measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-kr-na-okr-cy.md)
 
 ## Нотатки
 

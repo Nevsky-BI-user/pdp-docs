@@ -2,23 +2,6 @@
 
 *тека `Group_Profile\_Main\Дані про команду`*
 
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-[Group Profile](../report/group-profile.md) · [Під ризиком мобілізації](../report/pid-ryzykom-mobilizatsii.md)
-
-## Пов'язані міри
-
-**Використовує:** [GP.Кількість співробітників всього, чол. - Integer](../measures/gp-kilkist-spivrobitnykiv-vsoho-chol-integer.md)
-
-**Використовується в:** [GP.Команда](../measures/gp-komanda.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -55,6 +38,23 @@ TRIM(
 graph LR
   M["GP.Кількість співробітників всього, чол. - String"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Group Profile](../report/group-profile.md) · [Під ризиком мобілізації](../report/pid-ryzykom-mobilizatsii.md)
+
+## Пов'язані міри
+
+**Використовує:** [GP.Кількість співробітників всього, чол. - Integer](../measures/gp-kilkist-spivrobitnykiv-vsoho-chol-integer.md)
+
+**Використовується в:** [GP.Команда](../measures/gp-komanda.md)
 
 ## Нотатки
 

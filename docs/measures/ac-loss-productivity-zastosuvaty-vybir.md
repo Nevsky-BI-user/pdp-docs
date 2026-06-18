@@ -2,24 +2,6 @@
 
 *тека `Analytical Cases\Loss_Productivity\Formatting`*
 
-!!! abstract "Джерела даних"
-    `DM.vw_R27_fact_Loss_of_Productivity`
-
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-[Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
-
-## Пов'язані міри
-
-_Прямих зв'язків з іншими мірами немає._
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -80,6 +62,21 @@ graph LR
   M --> fact_Loss_of_Productivity["fact_Loss_of_Productivity"]
   M --> t_HierarchyTypes["t_HierarchyTypes"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
 
 ## Нотатки
 

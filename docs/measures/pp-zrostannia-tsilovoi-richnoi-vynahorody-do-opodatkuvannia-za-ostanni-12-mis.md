@@ -2,21 +2,6 @@
 
 *тека `Personal_Profile\TRS` · формат `#,0.0%;-#,0.0%;#,0.0%`*
 
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-[Personal Profile](../report/personal-profile.md)
-
-## Пов'язані міри
-
-**Використовує:** [PP.Цільовий розмір річної винагороди, до оподаткування](../measures/pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia.md), [PP.Цільовий розмір річної винагороди, до оподаткування (12 місяців назад)](../measures/pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia-12-misiatsiv-nazad.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -51,6 +36,21 @@ RETURN _res
 graph LR
   M["PP.Зростання цільової річної винагороди, до оподаткування (за останні 12 міс.)"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+**Використовує:** [PP.Цільовий розмір річної винагороди, до оподаткування](../measures/pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia.md), [PP.Цільовий розмір річної винагороди, до оподаткування (12 місяців назад)](../measures/pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia-12-misiatsiv-nazad.md)
 
 ## Нотатки
 

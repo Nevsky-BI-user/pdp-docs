@@ -458,50 +458,21 @@ def ptable(rows):
 
 def write_measure_md(path,o,sm):
     b=o["business"]; dm=o["dependencies"]["measures"]; dt=o["dependencies"]["tables"]
-    dc=o["dependencies"]["columns"]; ub=o.get("usedBy",[]); rp=o.get("reportPages",[])
+    dc=o["dependencies"]["columns"]; ub=o.get("usedBy",[]); rp=o.get("reportPages",[]); lin=o["lineage"]
     def mlink(n): return f"[{n}](../measures/{sm[n]}.md)" if n in sm else f"`{n}`"
     L=[f"# {o['name']}",""]
     sub=[]
     if o["displayFolder"]: sub.append(f"тека `{o['displayFolder']}`")
     if o["formatString"]: sub.append(f"формат `{o['formatString']}`")
     if sub: L+=["*"+" · ".join(sub)+"*",""]
-    # джерела даних — зазначаємо першочергово (звідки фізично беруться дані міри)
-    src=o["lineage"]["sourceTables"]
-    if src: L+=['!!! abstract "Джерела даних"',
-                "    "+", ".join(f"`{t}`" for t in src),""]
-    # 1) бізнес-суть (першочергово)
-    L+=["## Бізнес-суть",""]
-    if b["definition"]:
-        L.append(b["definition"])
-        if b["purpose"]: L+=["", b["purpose"]]
-        if b["requirementRefs"]:
-            L+=["","**Вимоги:** "+", ".join(f"`{r}`" for r in b["requirementRefs"])]
-    else:
-        L+=['!!! note "Бізнес-визначення відсутнє"',
-            "    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`."]
-    L+=[""]
-    # 2) де у звіті
-    L+=["## На сторінках звіту",""]
-    if rp:
-        L.append(" · ".join(f"[{p['display']}](../report/{p['slug']}.md)" for p in rp))
-    else:
-        L.append("_Не використовується на основних сторінках звіту._")
-    L+=[""]
-    # 3) пов'язані міри — двосторонні переходи
-    L+=["## Пов'язані міри",""]
-    if dm: L+=["**Використовує:** "+", ".join(mlink(n) for n in dm),""]
-    if ub:
-        more=(f" … (+{len(ub)-40})" if len(ub)>40 else "")
-        L+=["**Використовується в:** "+", ".join(mlink(n) for n in ub[:40])+more,""]
-    if not dm and not ub: L+=["_Прямих зв'язків з іншими мірами немає._",""]
-    # 4) технічний опис (після бізнес-контексту)
-    L+=["---","","## Технічний опис",""]
+    # 1) технічний опис — першочергово (властивості → DAX → джерела даних → залежності → схема)
+    L+=["## Технічний опис",""]
     L.append(ptable([("Тип","міра"),("Home table",o["homeTable"]),
         ("displayFolder",f"`{o['displayFolder']}`" if o['displayFolder'] else "—"),
         ("formatString",f"`{o['formatString']}`" if o['formatString'] else "—"),
         ("dataType",o["dataType"] or "—"),("Прихована","так" if o["isHidden"] else "ні")]))
     L+=["","### DAX","","```dax",o["dax"] or "—","```",""]
-    lin=o["lineage"]; L+=["### Джерела даних",""]
+    L+=["### Джерела даних",""]
     if lin["sourceTables"]: L.append("Вихідні таблиці: "+", ".join(f"`{t}`" for t in lin["sourceTables"]))
     if lin["sourceColumns"]: L+=["", "Колонки: "+", ".join(f"`{c}`" for c in lin["sourceColumns"])]
     if lin["powerQuery"]: L+=["", f"Power Query: `{lin['powerQuery']}`"]
@@ -512,7 +483,34 @@ def write_measure_md(path,o,sm):
     if not dt and not dc: L.append("—")
     L+=["","### Схема","","```mermaid","graph LR",f'  M["{_mlabel(o["name"])}"]']
     for t in dt: L.append(f'  M --> {_mid(t)}["{_mlabel(t)}"]')
-    L+=["```","","## Нотатки","",o["manualNotes"] if o["manualNotes"] else "_порожньо_"]
+    L+=["```",""]
+    # 2) бізнес-суть
+    L+=["---","","## Бізнес-суть",""]
+    if b["definition"]:
+        L.append(b["definition"])
+        if b["purpose"]: L+=["", b["purpose"]]
+        if b["requirementRefs"]:
+            L+=["","**Вимоги:** "+", ".join(f"`{r}`" for r in b["requirementRefs"])]
+    else:
+        L+=['!!! note "Бізнес-визначення відсутнє"',
+            "    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`."]
+    L+=[""]
+    # 3) де у звіті
+    L+=["## На сторінках звіту",""]
+    if rp:
+        L.append(" · ".join(f"[{p['display']}](../report/{p['slug']}.md)" for p in rp))
+    else:
+        L.append("_Не використовується на основних сторінках звіту._")
+    L+=[""]
+    # 4) пов'язані міри — двосторонні переходи
+    L+=["## Пов'язані міри",""]
+    if dm: L+=["**Використовує:** "+", ".join(mlink(n) for n in dm),""]
+    if ub:
+        more=(f" … (+{len(ub)-40})" if len(ub)>40 else "")
+        L+=["**Використовується в:** "+", ".join(mlink(n) for n in ub[:40])+more,""]
+    if not dm and not ub: L+=["_Прямих зв'язків з іншими мірами немає._",""]
+    # нотатки
+    L+=["## Нотатки","",o["manualNotes"] if o["manualNotes"] else "_порожньо_"]
     open(path,"w",encoding="utf-8").write("\n".join(L)+"\n")
 
 def write_entity_md(path,o,sm):

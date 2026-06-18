@@ -2,23 +2,6 @@
 
 *тека `Group_Profile\_Main\ОКР`*
 
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-_Не використовується на основних сторінках звіту._
-
-## Пов'язані міри
-
-**Використовує:** [GP.ОКР.Середня оцінка команди.Значення](../measures/gp-okr-serednia-otsinka-komandy-znachennia.md)
-
-**Використовується в:** [GP.OKP.Color.Середня оцінка комади.Текстове поле](../measures/gp-okp-color-serednia-otsinka-komady-tekstove-pole.md), [GP.ОКР.Середня оцінка команди.Текстове поле](../measures/gp-okr-serednia-otsinka-komandy-tekstove-pole.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -63,6 +46,23 @@ RETURN  _color
 graph LR
   M["GP.ОКР.Середня оцінка команди.Колір"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовує:** [GP.ОКР.Середня оцінка команди.Значення](../measures/gp-okr-serednia-otsinka-komandy-znachennia.md)
+
+**Використовується в:** [GP.OKP.Color.Середня оцінка комади.Текстове поле](../measures/gp-okp-color-serednia-otsinka-komady-tekstove-pole.md), [GP.ОКР.Середня оцінка команди.Текстове поле](../measures/gp-okr-serednia-otsinka-komandy-tekstove-pole.md)
 
 ## Нотатки
 

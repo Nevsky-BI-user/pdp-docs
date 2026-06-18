@@ -2,21 +2,6 @@
 
 *тека `Personal_Profile\Паспорт\Бейджі`*
 
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-[Personal Profile](../report/personal-profile.md)
-
-## Пов'язані міри
-
-**Використовує:** [PP.Бейдж.Банк ідей](../measures/pp-beidzh-bank-idei.md), [PP.Бейдж.Зірка МХП](../measures/pp-beidzh-zirka-mkhp.md), [PP.Бейдж.Наставництво](../measures/pp-beidzh-nastavnytstvo.md), [PP.Бейдж.Тренерство](../measures/pp-beidzh-trenerstvo.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -183,6 +168,21 @@ RETURN
 graph LR
   M["PP.SVG.Бейджі"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+**Використовує:** [PP.Бейдж.Банк ідей](../measures/pp-beidzh-bank-idei.md), [PP.Бейдж.Зірка МХП](../measures/pp-beidzh-zirka-mkhp.md), [PP.Бейдж.Наставництво](../measures/pp-beidzh-nastavnytstvo.md), [PP.Бейдж.Тренерство](../measures/pp-beidzh-trenerstvo.md)
 
 ## Нотатки
 

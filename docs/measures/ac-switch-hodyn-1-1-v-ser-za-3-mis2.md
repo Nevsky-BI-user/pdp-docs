@@ -2,21 +2,6 @@
 
 *тека `Analytical Cases\Burnout_Risk\Main`*
 
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-[Утримання працівників](../report/utrymannia-pratsivnykiv.md)
-
-## Пов'язані міри
-
-**Використовує:** [AC.Взаємодія з керівником](../measures/ac-vzaiemodiia-z-kerivnykom.md), [AC.Чи є ризик вигорання через відсутність спілкування з керівником?](../measures/ac-chy-ie-ryzyk-vyhorannia-cherez-vidsutnist-spilkuvannia-z-kerivnykom.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -60,6 +45,21 @@ graph LR
   M["AC.Switch.Годин 1:1 в сер. за 3 міс2"]
   M --> t_AC_Burnout["t_AC Burnout"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Утримання працівників](../report/utrymannia-pratsivnykiv.md)
+
+## Пов'язані міри
+
+**Використовує:** [AC.Взаємодія з керівником](../measures/ac-vzaiemodiia-z-kerivnykom.md), [AC.Чи є ризик вигорання через відсутність спілкування з керівником?](../measures/ac-chy-ie-ryzyk-vyhorannia-cherez-vidsutnist-spilkuvannia-z-kerivnykom.md)
 
 ## Нотатки
 

@@ -2,21 +2,6 @@
 
 *тека `Group_Profile\_Main\Продуктивність`*
 
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-[Group Profile](../report/group-profile.md)
-
-## Пов'язані міри
-
-**Використовує:** [GP.Продуктивність.Середня оцінка команди.Значення](../measures/gp-produktyvnist-serednia-otsinka-komandy-znachennia.md), [GP.Продуктивність.Середня оцінка команди.Категорія](../measures/gp-produktyvnist-serednia-otsinka-komandy-katehoriia.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -56,6 +41,21 @@ RETURN
 graph LR
   M["GP.Продуктивність.Середня оцінка команди.Текстове поле"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Group Profile](../report/group-profile.md)
+
+## Пов'язані міри
+
+**Використовує:** [GP.Продуктивність.Середня оцінка команди.Значення](../measures/gp-produktyvnist-serednia-otsinka-komandy-znachennia.md), [GP.Продуктивність.Середня оцінка команди.Категорія](../measures/gp-produktyvnist-serednia-otsinka-komandy-katehoriia.md)
 
 ## Нотатки
 

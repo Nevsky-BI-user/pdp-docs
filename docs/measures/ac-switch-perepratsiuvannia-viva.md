@@ -2,24 +2,6 @@
 
 *тека `Analytical Cases\Burnout_Risk\Main`*
 
-## Бізнес-суть
-
-Перепрацювання Viva
-
-Viva_Overworking = TOTAL_AFTER_HOURS/  <br>workdays_without_sickleaves_and_vacations.<br>**18.05.2026** Якщо поле TOTAL_AFTER_HOURS > 0 і поле workdays_without_sickleaves_and_vacations = 0, то замість workdays_without_sickleaves_and_vacations брати значення поля Viva_days_6month.
-
-**Вимоги:** `Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту`, `Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22`
-
-## На сторінках звіту
-
-[Утримання працівників](../report/utrymannia-pratsivnykiv.md)
-
-## Пов'язані міри
-
-**Використовує:** [AC.Перепрацювання Viva](../measures/ac-perepratsiuvannia-viva.md), [AC.Чи є ризик вигорання через перепрацювання?](../measures/ac-chy-ie-ryzyk-vyhorannia-cherez-perepratsiuvannia.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -59,6 +41,24 @@ graph LR
   M["AC.Switch.Перепрацювання Viva"]
   M --> t_AC_Burnout["t_AC Burnout"]
 ```
+
+---
+
+## Бізнес-суть
+
+Перепрацювання Viva
+
+Viva_Overworking = TOTAL_AFTER_HOURS/  <br>workdays_without_sickleaves_and_vacations.<br>**18.05.2026** Якщо поле TOTAL_AFTER_HOURS > 0 і поле workdays_without_sickleaves_and_vacations = 0, то замість workdays_without_sickleaves_and_vacations брати значення поля Viva_days_6month.
+
+**Вимоги:** `Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту`, `Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22`
+
+## На сторінках звіту
+
+[Утримання працівників](../report/utrymannia-pratsivnykiv.md)
+
+## Пов'язані міри
+
+**Використовує:** [AC.Перепрацювання Viva](../measures/ac-perepratsiuvannia-viva.md), [AC.Чи є ризик вигорання через перепрацювання?](../measures/ac-chy-ie-ryzyk-vyhorannia-cherez-perepratsiuvannia.md)
 
 ## Нотатки
 

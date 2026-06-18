@@ -2,26 +2,6 @@
 
 *тека `Personal_Profile\Viva\Viva Networks` · формат `0`*
 
-!!! abstract "Джерела даних"
-    `DM.vw_R27_dim_Employee_Access_List`
-
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-[Personal Profile](../report/personal-profile.md)
-
-## Пов'язані міри
-
-**Використовує:** [PP.Ширина мережі (Холдинг, 3м)](../measures/pp-shyryna-merezhi-kholdynh-3m.md)
-
-**Використовується в:** [PP.Метрика.Розмір/ширина мережі 3м](../measures/pp-metryka-rozmir-shyryna-merezhi-3m.md), [PP.Метрика.Ширина мережі 3м](../measures/pp-metryka-shyryna-merezhi-3m.md), [PP.Ширина мережі (Холдинг, 3м)](../measures/pp-shyryna-merezhi-kholdynh-3m.md), [PP.Ширина мережі (кадровий підрозділ, 3м)](../measures/pp-shyryna-merezhi-kadrovyi-pidrozdil-3m.md), [PP.Ширина мережі (напрям, 3м)](../measures/pp-shyryna-merezhi-napriam-3m.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -71,6 +51,23 @@ graph LR
   M --> dim_Admin_OS["dim_Admin_OS"]
   M --> fact_Viva_Metrics["fact_Viva_Metrics"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+**Використовує:** [PP.Ширина мережі (Холдинг, 3м)](../measures/pp-shyryna-merezhi-kholdynh-3m.md)
+
+**Використовується в:** [PP.Метрика.Розмір/ширина мережі 3м](../measures/pp-metryka-rozmir-shyryna-merezhi-3m.md), [PP.Метрика.Ширина мережі 3м](../measures/pp-metryka-shyryna-merezhi-3m.md), [PP.Ширина мережі (Холдинг, 3м)](../measures/pp-shyryna-merezhi-kholdynh-3m.md), [PP.Ширина мережі (кадровий підрозділ, 3м)](../measures/pp-shyryna-merezhi-kadrovyi-pidrozdil-3m.md), [PP.Ширина мережі (напрям, 3м)](../measures/pp-shyryna-merezhi-napriam-3m.md)
 
 ## Нотатки
 

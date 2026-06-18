@@ -2,24 +2,6 @@
 
 *тека `Group_Profile\Загальна інформація` · формат `0;-0;0`*
 
-## Бізнес-суть
-
-POSITION_CATEGORY_INTERNAL_SORT → Доля Senior managers (%); POSITION_CATEGORY_INTERNAL_SORT → Доля Middle managers (%); POSITION_CATEGORY_INTERNAL_SORT → Доля Line  (%); POSITION_CATEGORY_INTERNAL_SORT → Доля Specialists (%); POSITION_CATEGORY_INTERNAL_SORT → Доля Workers (%)
-
-Розрахункове поле: відношення кількості Senior managers у команді до загальної кількості працівників.  <br>Відношення кількості працівників, для яких position_category_internal_sort = 2 до загальної чисельності команди (метрика Кількість співробітників всього, чол.) Розрахункове поле: відношення кількості Middle managers у команді до загальної кількості працівників.  <br>Відношення кількості працівників, для яких position_category_internal_sort = 3 до загальної чисельності команди (метрика Кількість співробітників всього, чол.) Розрахункове поле: відношення кількості Line  у команді до загальн
-
-**Вимоги:** `Командний-профіль/Сторінка-Загальна-інформація-про-команду`
-
-## На сторінках звіту
-
-[Group Profile](../report/group-profile.md)
-
-## Пов'язані міри
-
-_Прямих зв'язків з іншими мірами немає._
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -63,6 +45,24 @@ graph LR
   M["GP.Кількість сезонних працівників"]
   M --> fact_Employee_List["fact_Employee_List"]
 ```
+
+---
+
+## Бізнес-суть
+
+POSITION_CATEGORY_INTERNAL_SORT → Доля Senior managers (%); POSITION_CATEGORY_INTERNAL_SORT → Доля Middle managers (%); POSITION_CATEGORY_INTERNAL_SORT → Доля Line  (%); POSITION_CATEGORY_INTERNAL_SORT → Доля Specialists (%); POSITION_CATEGORY_INTERNAL_SORT → Доля Workers (%)
+
+Розрахункове поле: відношення кількості Senior managers у команді до загальної кількості працівників.  <br>Відношення кількості працівників, для яких position_category_internal_sort = 2 до загальної чисельності команди (метрика Кількість співробітників всього, чол.) Розрахункове поле: відношення кількості Middle managers у команді до загальної кількості працівників.  <br>Відношення кількості працівників, для яких position_category_internal_sort = 3 до загальної чисельності команди (метрика Кількість співробітників всього, чол.) Розрахункове поле: відношення кількості Line  у команді до загальн
+
+**Вимоги:** `Командний-профіль/Сторінка-Загальна-інформація-про-команду`
+
+## На сторінках звіту
+
+[Group Profile](../report/group-profile.md)
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
 
 ## Нотатки
 

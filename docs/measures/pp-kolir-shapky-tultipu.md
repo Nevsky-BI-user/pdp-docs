@@ -2,25 +2,6 @@
 
 *тека `Personal_Profile\Життєвий цикл`*
 
-!!! abstract "Джерела даних"
-    `DM.vw_R27_fact_Employee_History_Position`
-
-## Бізнес-суть
-
-IS_APRIL_SALARY_REVIEW → Квітневий перегляд заробітної плати; IS_TECH_POSITION_CHANGE → Технічна зміна посади; IS_TECH_SALARY_TRANSFER → Технічний перелив (з/п)
-
-**Вимоги:** `Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам`
-
-## На сторінках звіту
-
-[Personal Profile](../report/personal-profile.md) · [TT:Життєвий цикл](../report/tt-zhyttievyi-tsykl.md)
-
-## Пов'язані міри
-
-**Використовує:** [PP.РЦД](../measures/pp-rtsd.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -77,6 +58,22 @@ graph LR
   M --> dim_Date["dim_Date"]
   M --> fact_Employee_History_Position["fact_Employee_History_Position"]
 ```
+
+---
+
+## Бізнес-суть
+
+IS_APRIL_SALARY_REVIEW → Квітневий перегляд заробітної плати; IS_TECH_POSITION_CHANGE → Технічна зміна посади; IS_TECH_SALARY_TRANSFER → Технічний перелив (з/п)
+
+**Вимоги:** `Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам`
+
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md) · [TT:Життєвий цикл](../report/tt-zhyttievyi-tsykl.md)
+
+## Пов'язані міри
+
+**Використовує:** [PP.РЦД](../measures/pp-rtsd.md)
 
 ## Нотатки
 

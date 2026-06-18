@@ -2,21 +2,6 @@
 
 *тека `Personal_Profile\TRS` · формат `0.00%;-0.00%;0.00%`*
 
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-[Personal Profile](../report/personal-profile.md) · [TT:Зміна фікс винагороди](../report/tt-zmina-fiks-vynahorody.md)
-
-## Пов'язані міри
-
-**Використовує:** [PP.Розмір фіксованої винагороди плановий, за місяць ПОТОЧНИЙ](../measures/pp-rozmir-fiksovanoi-vynahorody-planovyi-za-misiats-potochnyi.md), [PP.Розмір фіксованої винагороди плановий, за місяць СТАНОМ НА РІК НАЗАД](../measures/pp-rozmir-fiksovanoi-vynahorody-planovyi-za-misiats-stanom-na-rik-nazad.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -51,6 +36,21 @@ RETURN _result
 graph LR
   M["PP.Відсоток зміни фіксованої винагороди"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md) · [TT:Зміна фікс винагороди](../report/tt-zmina-fiks-vynahorody.md)
+
+## Пов'язані міри
+
+**Використовує:** [PP.Розмір фіксованої винагороди плановий, за місяць ПОТОЧНИЙ](../measures/pp-rozmir-fiksovanoi-vynahorody-planovyi-za-misiats-potochnyi.md), [PP.Розмір фіксованої винагороди плановий, за місяць СТАНОМ НА РІК НАЗАД](../measures/pp-rozmir-fiksovanoi-vynahorody-planovyi-za-misiats-stanom-na-rik-nazad.md)
 
 ## Нотатки
 

@@ -2,25 +2,6 @@
 
 *тека `Analytical Cases\Loss_Productivity\Main`*
 
-!!! abstract "Джерела даних"
-    `DM.vw_R27_fact_Loss_of_Productivity`, `DWH.t_SPO_HR_Person_Matrix_with_Coefficient`
-
-## Бізнес-суть
-
-Плинність % по вертикалі
-
-**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
-
-## На сторінках звіту
-
-[Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
-
-## Пов'язані міри
-
-**Використовує:** [AC.Дані.Плинність % по вертикалі](../measures/ac-dani-plynnist-po-vertykali.md), [AC.Оцінка.Плинність % по вертикалі](../measures/ac-otsinka-plynnist-po-vertykali.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -74,6 +55,22 @@ graph LR
   M --> t_AC_Burnout["t_AC Burnout"]
   M --> t_Loss_Productivity_Metrics_by_Persona["t_Loss_Productivity_Metrics_by_Persona"]
 ```
+
+---
+
+## Бізнес-суть
+
+Плинність % по вертикалі
+
+**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
+
+## На сторінках звіту
+
+[Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
+
+## Пов'язані міри
+
+**Використовує:** [AC.Дані.Плинність % по вертикалі](../measures/ac-dani-plynnist-po-vertykali.md), [AC.Оцінка.Плинність % по вертикалі](../measures/ac-otsinka-plynnist-po-vertykali.md)
 
 ## Нотатки
 

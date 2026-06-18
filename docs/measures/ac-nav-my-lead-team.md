@@ -2,24 +2,6 @@
 
 *тека `Analytical Cases\Burnout_Risk\Main` · формат `0`*
 
-!!! abstract "Джерела даних"
-    `DM.vw_R27_dim_Employee_Access_List`
-
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-_Не використовується на основних сторінках звіту._
-
-## Пов'язані міри
-
-**Використовує:** [Current_User_Admin_Hierarchy_Level](../measures/current-user-admin-hierarchy-level.md), [Current_User_HRBP_Hierarchy_Level](../measures/current-user-hrbp-hierarchy-level.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -71,6 +53,21 @@ graph LR
   M --> dim_Admin_OS["dim_Admin_OS"]
   M --> fact_Burnout_Indicators["fact_Burnout_Indicators"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовує:** [Current_User_Admin_Hierarchy_Level](../measures/current-user-admin-hierarchy-level.md), [Current_User_HRBP_Hierarchy_Level](../measures/current-user-hrbp-hierarchy-level.md)
 
 ## Нотатки
 

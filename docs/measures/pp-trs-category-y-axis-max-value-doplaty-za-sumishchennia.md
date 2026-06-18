@@ -2,24 +2,6 @@
 
 *тека `Personal_Profile\TRS`*
 
-!!! abstract "Джерела даних"
-    `DM.vw_R27_fact_TRS_Plan_PDP`
-
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-[TT:Зміна фікс винагороди](../report/tt-zmina-fiks-vynahorody.md)
-
-## Пов'язані міри
-
-**Використовує:** [PP.Доплати за суміщення](../measures/pp-doplaty-za-sumishchennia.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -61,6 +43,21 @@ graph LR
   M["PP.TRS_category_Y_axis_max_value_Доплати_за_суміщення"]
   M --> dim_TRS_categories["dim_TRS_categories"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[TT:Зміна фікс винагороди](../report/tt-zmina-fiks-vynahorody.md)
+
+## Пов'язані міри
+
+**Використовує:** [PP.Доплати за суміщення](../measures/pp-doplaty-za-sumishchennia.md)
 
 ## Нотатки
 

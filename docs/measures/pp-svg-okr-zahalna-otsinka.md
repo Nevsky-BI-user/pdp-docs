@@ -2,27 +2,6 @@
 
 *тека `Personal_Profile\Результативність та оцінка\OKR`*
 
-!!! abstract "Джерела даних"
-    `DM.R27_fact_OKR_Goals`
-
-## Бізнес-суть
-
-CALC_PERFORMANCE_STR_RATE → Загальна оцінка ОКР; CALC_PERFORMANCE_STR_RATE → Загальна оцінка OKR; CALC_PERFORMANCE_STR_RATE → Оцінка OKR
-
-Останнє НЕ пусте актуальне значення на дату (date) поточного запису
-
-**Вимоги:** `Індивідуальний-профіль-працівника/Історія-по-посадам`, `Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам`, `Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка`, `Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю`, `Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту`, `Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Створити-блок-Виконання-OKR`
-
-## На сторінках звіту
-
-[Personal Profile](../report/personal-profile.md)
-
-## Пов'язані міри
-
-**Використовує:** [PP.OKR.Current_user.Загальна  оцінка OKR](../measures/pp-okr-current-user-zahalna-otsinka-okr.md), [PP.OKR.Current_user.Загальна колірна оцінка OKR](../measures/pp-okr-current-user-zahalna-kolirna-otsinka-okr.md), [PP.OKR.Current_user.Коефіцієнт індивідуального бонусу](../measures/pp-okr-current-user-koefitsiient-indyvidualnoho-bonusu.md), [PP.OKR.Current_user.Статус плану](../measures/pp-okr-current-user-status-planu.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -330,6 +309,24 @@ graph LR
   M --> dim_Date["dim_Date"]
   M --> fact_OKR_Goals["fact_OKR_Goals"]
 ```
+
+---
+
+## Бізнес-суть
+
+CALC_PERFORMANCE_STR_RATE → Загальна оцінка ОКР; CALC_PERFORMANCE_STR_RATE → Загальна оцінка OKR; CALC_PERFORMANCE_STR_RATE → Оцінка OKR
+
+Останнє НЕ пусте актуальне значення на дату (date) поточного запису
+
+**Вимоги:** `Індивідуальний-профіль-працівника/Історія-по-посадам`, `Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам`, `Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка`, `Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю`, `Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту`, `Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Створити-блок-Виконання-OKR`
+
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+**Використовує:** [PP.OKR.Current_user.Загальна  оцінка OKR](../measures/pp-okr-current-user-zahalna-otsinka-okr.md), [PP.OKR.Current_user.Загальна колірна оцінка OKR](../measures/pp-okr-current-user-zahalna-kolirna-otsinka-okr.md), [PP.OKR.Current_user.Коефіцієнт індивідуального бонусу](../measures/pp-okr-current-user-koefitsiient-indyvidualnoho-bonusu.md), [PP.OKR.Current_user.Статус плану](../measures/pp-okr-current-user-status-planu.md)
 
 ## Нотатки
 

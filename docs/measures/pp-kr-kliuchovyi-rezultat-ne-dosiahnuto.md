@@ -2,27 +2,6 @@
 
 *тека `Personal_Profile\Результативність та оцінка\OKR` · формат `0`*
 
-!!! abstract "Джерела даних"
-    `DM.R27_fact_OKR_Key_Results`, `DM.vw_R27_dim_Employee_Access_List`
-
-## Бізнес-суть
-
-KR_CHANGE → КР змінено; KR_CHANGE → КР без змін; KR_CHANGE → КР видалено; KR_CHANGE → Новий КР; KR_CHANGE → Ознака зміни KR; KR_COLOR_RATE → КР виконано; KR_COLOR_RATE → КР не виконано; KR_COLOR_RATE → Коефіцієнт колірної оцінки КР з плану; KR_WEIGHT → Вага КР
-
-КР змінено, якщо поле kr_change= CHANGE КР без змін, якщо поле kr_change= NO CHANGE КР видалено, якщо поле kr_change= DELETE КР змінено, якщо поле kr_change= NEW Якщо поле kr_color_rate >= 25 Якщо поле Calc_Performance_Desc_Rate <= 24.99 Якщо поле Calc_Performance_Desc_Rate < 25
-
-**Вимоги:** `Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка`, `Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Створити-блок-Виконання-OKR`
-
-## На сторінках звіту
-
-[Personal Profile](../report/personal-profile.md)
-
-## Пов'язані міри
-
-_Прямих зв'язків з іншими мірами немає._
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -83,6 +62,24 @@ graph LR
   M --> dim_Admin_OS["dim_Admin_OS"]
   M --> fact_OKR_Key_Results["fact_OKR_Key_Results"]
 ```
+
+---
+
+## Бізнес-суть
+
+KR_CHANGE → КР змінено; KR_CHANGE → КР без змін; KR_CHANGE → КР видалено; KR_CHANGE → Новий КР; KR_CHANGE → Ознака зміни KR; KR_COLOR_RATE → КР виконано; KR_COLOR_RATE → КР не виконано; KR_COLOR_RATE → Коефіцієнт колірної оцінки КР з плану; KR_WEIGHT → Вага КР
+
+КР змінено, якщо поле kr_change= CHANGE КР без змін, якщо поле kr_change= NO CHANGE КР видалено, якщо поле kr_change= DELETE КР змінено, якщо поле kr_change= NEW Якщо поле kr_color_rate >= 25 Якщо поле Calc_Performance_Desc_Rate <= 24.99 Якщо поле Calc_Performance_Desc_Rate < 25
+
+**Вимоги:** `Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка`, `Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Створити-блок-Виконання-OKR`
+
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
 
 ## Нотатки
 

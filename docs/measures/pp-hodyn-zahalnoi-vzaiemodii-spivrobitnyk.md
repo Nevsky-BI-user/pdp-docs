@@ -2,26 +2,6 @@
 
 *тека `Personal_Profile\Viva\Viva Collaboration`*
 
-!!! abstract "Джерела даних"
-    `DM.vw_R27_dim_Employee_Access_List`
-
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-[Personal Profile](../report/personal-profile.md)
-
-## Пов'язані міри
-
-**Використовує:** [PP.Годин загальної взаємодії (Холдинг)](../measures/pp-hodyn-zahalnoi-vzaiemodii-kholdynh.md)
-
-**Використовується в:** [PP.Метрика.Години взаємодії 3м](../measures/pp-metryka-hodyny-vzaiemodii-3m.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -71,6 +51,23 @@ graph LR
   M --> dim_Admin_OS["dim_Admin_OS"]
   M --> fact_Viva_Metrics["fact_Viva_Metrics"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+**Використовує:** [PP.Годин загальної взаємодії (Холдинг)](../measures/pp-hodyn-zahalnoi-vzaiemodii-kholdynh.md)
+
+**Використовується в:** [PP.Метрика.Години взаємодії 3м](../measures/pp-metryka-hodyny-vzaiemodii-3m.md)
 
 ## Нотатки
 

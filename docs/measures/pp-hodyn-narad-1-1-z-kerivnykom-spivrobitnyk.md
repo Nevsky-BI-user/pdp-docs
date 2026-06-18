@@ -2,24 +2,6 @@
 
 *тека `Personal_Profile\Viva\Viva management & Coaching`*
 
-!!! abstract "Джерела даних"
-    `DM.vw_R27_dim_Employee_Access_List`
-
-## Бізнес-суть
-
-!!! note "Бізнес-визначення відсутнє"
-    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
-
-## На сторінках звіту
-
-[Personal Profile](../report/personal-profile.md)
-
-## Пов'язані міри
-
-**Використовує:** [PP.Годин нарад 1:1 з керівником (Холдинг)](../measures/pp-hodyn-narad-1-1-z-kerivnykom-kholdynh.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -69,6 +51,21 @@ graph LR
   M --> dim_Admin_OS["dim_Admin_OS"]
   M --> fact_Viva_Metrics["fact_Viva_Metrics"]
 ```
+
+---
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+**Використовує:** [PP.Годин нарад 1:1 з керівником (Холдинг)](../measures/pp-hodyn-narad-1-1-z-kerivnykom-kholdynh.md)
 
 ## Нотатки
 

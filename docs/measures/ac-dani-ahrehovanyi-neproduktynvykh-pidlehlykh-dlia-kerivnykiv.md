@@ -2,25 +2,6 @@
 
 *тека `Analytical Cases\Loss_Productivity\Main`*
 
-!!! abstract "Джерела даних"
-    `DM.vw_R27_fact_Loss_of_Productivity`
-
-## Бізнес-суть
-
-Percentage_Of_Unproductive_Employees → Агрегований % непродуктинвих підлеглих для керівників
-
-**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
-
-## На сторінках звіту
-
-_Не використовується на основних сторінках звіту._
-
-## Пов'язані міри
-
-**Використовується в:** [AC.Switch.Агрегований % непродуктинвих підлеглих для керівників](../measures/ac-switch-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv.md)
-
----
-
 ## Технічний опис
 
 | Властивість | Значення |
@@ -60,6 +41,22 @@ graph LR
   M["AC.Дані.Агрегований % непродуктинвих підлеглих для керівників"]
   M --> fact_Loss_of_Productivity["fact_Loss_of_Productivity"]
 ```
+
+---
+
+## Бізнес-суть
+
+Percentage_Of_Unproductive_Employees → Агрегований % непродуктинвих підлеглих для керівників
+
+**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовується в:** [AC.Switch.Агрегований % непродуктинвих підлеглих для керівників](../measures/ac-switch-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv.md)
 
 ## Нотатки
 
