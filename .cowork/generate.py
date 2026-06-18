@@ -437,7 +437,7 @@ def main():
         write_report_page(os.path.join(doc_r,p["slug"]+".md"),p,minfo)
     write_measures_index(os.path.join(doc_m,"index.md"),measures,slug_m,minfo)
     write_entities_index(os.path.join(doc_e,"index.md"),entities,slug_e)
-    write_model(os.path.join(OUT,"docs","model.md"),entities,rels)
+    write_model(os.path.join(OUT,"docs","model.md"),entities,rels,slug_e)
     write_glossary(os.path.join(OUT,"docs","glossary.md"))
     write_index(os.path.join(OUT,"docs","index.md"),measures,entities,doc_pages)
     write_validation(os.path.join(OUT,"docs","validation.md"),V,len(measures))
@@ -561,16 +561,57 @@ def write_entities_index(path,entities,se):
         L.append(f"| [{tn}](./{se[tn]}.md) | {', '.join('`'+t+'`' for t in e['sourceTables']) or '—'} |")
     open(path,"w",encoding="utf-8").write("\n".join(L)+"\n")
 
-def write_model(path,entities,rels):
-    # mermaid erDiagram: ідентифікатори вузлів мають бути [A-Za-z0-9_]; імена таблиць
-    # із пробілом/крапкою (t_AC Burnout, p_AC.Loss_Productivity) інакше не рендеряться.
-    nid=lambda s: re.sub(r"\W","_",s)
-    L=["# Схема моделі","","Зв'язки таблиць (many → one).","","```mermaid","erDiagram"]
+def write_model(path,entities,rels,slug_e):
+    # Замість однієї велетенської ER-схеми (≈145 зв'язків, нечитабельно) — по одній
+    # зірковій схемі на кожну фактову таблицю + перелік конформованих вимірів.
+    # mermaid id вузла: [A-Za-z0-9_]; імена з пробілом/крапкою інакше не рендеряться.
+    nid=lambda s: re.sub(r"\W","_",s) or "x"
     names=set(entities)
+    rels=[r for r in rels if r["fromTable"] in names and r["toTable"] in names]
+    is_fact=lambda t: t.lower().startswith("fact")
+    is_dim =lambda t: t.lower().startswith("dim")
+    facts=sorted({t for t in names if is_fact(t)})
+    elink=lambda t: f"[`{t}`](entities/{slug_e[t]}.md)" if t in slug_e else f"`{t}`"
+    edge=lambda r: f'  {nid(r["toTable"])} ||--o{{ {nid(r["fromTable"])} : "{r["fromColumn"]}"'
+    # зв'язки, що торкаються кожного факту; і ті, що між не-фактами
+    by_fact={f:[] for f in facts}; other=[]
     for r in rels:
-        if r["fromTable"] in names and r["toTable"] in names:
-            L.append(f'  {nid(r["toTable"])} ||--o{{ {nid(r["fromTable"])} : "{r["fromColumn"]}"')
-    L+=["```"]
+        hit=False
+        if r["fromTable"] in by_fact: by_fact[r["fromTable"]].append(r); hit=True
+        if r["toTable"] in by_fact and r["toTable"]!=r["fromTable"]: by_fact[r["toTable"]].append(r); hit=True
+        if not hit: other.append(r)
+    # конформовані виміри: у скількох фактах використовується кожен вимір
+    dim_facts={}
+    for r in rels:
+        ft,tt=r["fromTable"],r["toTable"]
+        if is_dim(tt) and is_fact(ft): dim_facts.setdefault(tt,set()).add(ft)
+        if is_dim(ft) and is_fact(tt): dim_facts.setdefault(ft,set()).add(tt)
+    L=["# Схема моделі","",
+       f"Модель — це **схема-сузір'я**: **{len(facts)}** фактових таблиць, пов'язаних із вимірами "
+       f"через **{len(rels)}** зв'язків (many → one). Щоб не зливати все в одну нечитабельну "
+       "діаграму, нижче наведено окрему **зіркову схему на кожну фактову таблицю**.",""]
+    conf=sorted(((len(fs),d) for d,fs in dim_facts.items()),key=lambda x:(-x[0],x[1]))
+    if conf:
+        L+=["## Конформовані виміри","",
+            "Виміри, спільні для кількох фактів (число — у скількох фактах використовується). "
+            "Натисніть на таблицю, щоб відкрити її опис.","",
+            "| Вимір | Фактів |","|---|---|"]
+        L+=[f"| {elink(d)} | {cnt} |" for cnt,d in conf]
+        L+=[""]
+    L+=["## Зіркові схеми за фактами","",
+        "У кожній схемі фактова таблиця у центрі, навколо — її виміри; підпис на зв'язку — ключ з'єднання.",""]
+    for f in facts:
+        frs=sorted({(r["toTable"],r["fromTable"],r["fromColumn"]) for r in by_fact.get(f,[])})
+        L+=[f"### {f}","",elink(f),""]
+        if not frs:
+            L+=["_Без зв'язків у моделі._",""]; continue
+        L+=["```mermaid","erDiagram"]
+        L+=[f'  {nid(tt)} ||--o{{ {nid(ft)} : "{col}"' for tt,ft,col in frs]
+        L+=["```",""]
+    if other:
+        L+=["## Інші зв'язки (між вимірами)","","```mermaid","erDiagram"]
+        L+=[edge(r) for r in other]
+        L+=["```",""]
     open(path,"w",encoding="utf-8").write("\n".join(L)+"\n")
 
 def write_glossary(path):
