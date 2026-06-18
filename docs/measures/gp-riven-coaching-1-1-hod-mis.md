@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\_Main\Ризики та фокуси уваги`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин нарад 1:1 з керівником за період від поточної точки до попередньої точки; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин нарад 1:1 з керівником працівника; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин нарад 1:1 з керівником кадровому підрозділу співробітника; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин нарад 1:1 з керівником по напряму співробітника; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин нарад 1:1 з керівником по Холдингу; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → meeting_with_manager_one_to_one_hour_direction; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → meeting_with_manager_one_to_one_hour_cnt; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → meeting_with_manager_one_to_one_hour_holding; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин нарад 1:1 з керівником працівника за 3 попередніх місяці; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Чи є ризик вигорання через недостатню взаємодію з керівником?; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин 1:1 за попередні 3 міс.; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин нарад 1:1 з керівником кадровому підрозділу; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин нарад 1:1 з керівником по напряму команди; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин нарад 1:1 з керівником; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Рівень coaching (1:1), год/міс

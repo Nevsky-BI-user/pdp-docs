@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\Здоров'я та благополуччя`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 EMPLOYEE_NAME → ПІБ співробітника; IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position; VACATION_RESERVE_BY_MAIN_POSITION → Залишок відпустки

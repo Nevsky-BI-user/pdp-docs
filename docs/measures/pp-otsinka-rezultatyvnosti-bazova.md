@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Паспорт\Spider`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Employee_Performance_PBI`
+
 ## Бізнес-суть
 
 Official_Rate → Оцінка керівника (Офіційна оцінка компетенції); Official_Rate → Оцінка кожного індикатора керівником

@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Життєвий цикл` · формат `#,0`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Employee_History_Position`
+
 ## Бізнес-суть
 
 Salary → Оклад

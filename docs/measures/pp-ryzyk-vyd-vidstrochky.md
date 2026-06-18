@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Паспорт\Ризики`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 DEFERMENT_REASON → Вид відстрочки; DEFERMENT_REASON → Відстрочка від призову; DEFERMENT_REASON → Причина відстрочки; IS_AT_RISK → Під ризиком мобілізації; IS_AT_RISK → Ризик мобілізації; IS_AT_RISK → Доля чоловіків під ризиком мобілізації (%)

@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Результативність та оцінка\Результативність`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Employee_Performance_PBI`
+
 ## Бізнес-суть
 
 Salf_Rate → Оцінка кожного індикатора працівником

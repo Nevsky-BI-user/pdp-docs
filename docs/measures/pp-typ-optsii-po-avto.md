@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\TRS`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`, `DM.vw_R27_fact_Employees_Attributes`
+
 ## Бізнес-суть
 
 JOB_TITLE_COMPOSITE_VEHICLE_FORMAT → Тип опції по авто по зведеній посаді; JOB_TITLE_COMPOSITE_VEHICLE_FORMAT → Тип опції по авто по зведеній посаді (план); JOB_TITLE_COMPOSITE_VEHICLE_FORMAT → Опція по авто план

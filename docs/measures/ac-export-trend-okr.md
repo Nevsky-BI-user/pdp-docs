@@ -2,6 +2,9 @@
 
 *тека `Analytical Cases\Loss_Productivity\Export`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Loss_of_Productivity`
+
 ## Бізнес-суть
 
 OKR_LAST_YEAR_RATE → Тренд OKR (%); OKR_LAST_YEAR_RATE → OKR останній рік; OKR_LAST_YEAR_RATE → Значення коефіцієнта індивідуального бонусу за останній період; OKR_LAST_YEAR_RATE → OKR команди за останній рік

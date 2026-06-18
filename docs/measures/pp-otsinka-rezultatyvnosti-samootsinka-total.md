@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Результативність та оцінка\Результативність` · формат `0.00`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Employee_Performance_General_PBI`
+
 ## Бізнес-суть
 
 General_Self_Rate → Загальна самооцінка працівника

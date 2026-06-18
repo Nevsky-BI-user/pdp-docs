@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Паспорт\Spider`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Employee_Performance_PBI`
+
 ## Бізнес-суть
 
 Competency_Name → Назва індикатора оцінки результативності; Competency_Name → Назва компетенції; Performance_Type → Тип оцінки результативності (річна чи піврічна); Performance_Type → Тип оцінки; performance_PBI_order → Сортування (для виведення 4-х останніх періодів)

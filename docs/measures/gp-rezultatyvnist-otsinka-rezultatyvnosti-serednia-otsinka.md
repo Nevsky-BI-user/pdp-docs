@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\Результативність та оцінка\Оцінка результативності`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`, `DM.vw_R27_fact_Employee_Performance_PBI`
+
 ## Бізнес-суть
 
 OFFICIAL_RATE → Оцінка керівника (Офіційна оцінка компетенції); OFFICIAL_RATE → Оцінка кожного індикатора керівником

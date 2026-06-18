@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Результативність та оцінка\OKR`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 KR_DESCRIPTION → Опис КР; PLAN_YEAR → Рік ОКР; PLAN_YEAR → Значення останнього року оцінки ОКР; PLAN_YEAR → Значення передостаннього  року оцінки ОКР

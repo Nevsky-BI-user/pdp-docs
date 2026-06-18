@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\_Main\Ризики та фокуси уваги`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 IS_TOTAL_RISK → Ризик втрати працівника; IS_TOTAL_RISK → Ризик; IS_TOTAL_RISK → Ризик вигорання (%)

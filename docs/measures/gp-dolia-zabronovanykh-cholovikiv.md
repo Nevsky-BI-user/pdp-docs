@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\_Main\Дані про команду`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Person_PDP`
+
 ## Бізнес-суть
 
 GENDER → Стать; IS_RESERVED → Доля заброньованих чоловіків (%); IS_RESERVED → Заброньований

@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Загальна інформація`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_employee_seniority_by_month_PDP`
+
 ## Бізнес-суть
 
 LAST_ORGANIZATION_HIRE_DATE → Стаж в організації (останній)  <br>Дата прийому

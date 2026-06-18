@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Результативність та оцінка\OKR` · формат `0`*
 
+!!! abstract "Джерела даних"
+    `DM.R27_fact_OKR_Key_Results`, `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 KR_CHANGE → КР змінено; KR_CHANGE → КР без змін; KR_CHANGE → КР видалено; KR_CHANGE → Новий КР; KR_CHANGE → Ознака зміни KR; KR_COLOR_RATE → КР виконано; KR_COLOR_RATE → КР не виконано; KR_COLOR_RATE → Коефіцієнт колірної оцінки КР з плану; KR_WEIGHT → Вага КР

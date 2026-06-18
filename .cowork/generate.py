@@ -465,6 +465,10 @@ def write_measure_md(path,o,sm):
     if o["displayFolder"]: sub.append(f"тека `{o['displayFolder']}`")
     if o["formatString"]: sub.append(f"формат `{o['formatString']}`")
     if sub: L+=["*"+" · ".join(sub)+"*",""]
+    # джерела даних — зазначаємо першочергово (звідки фізично беруться дані міри)
+    src=o["lineage"]["sourceTables"]
+    if src: L+=['!!! abstract "Джерела даних"',
+                "    "+", ".join(f"`{t}`" for t in src),""]
     # 1) бізнес-суть (першочергово)
     L+=["## Бізнес-суть",""]
     if b["definition"]:

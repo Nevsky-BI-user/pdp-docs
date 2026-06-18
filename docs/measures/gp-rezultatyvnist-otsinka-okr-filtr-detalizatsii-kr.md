@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\Результативність та оцінка\Оцінка OKR` · формат `0`*
 
+!!! abstract "Джерела даних"
+    `DM.R27_fact_OKR_Key_Results`, `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 !!! note "Бізнес-визначення відсутнє"

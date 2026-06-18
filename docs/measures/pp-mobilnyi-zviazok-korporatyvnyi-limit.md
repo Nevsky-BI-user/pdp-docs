@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\TRS`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Mobile_Limit_PDP`
+
 ## Бізнес-суть
 
 PHONE_CORP_LIMIT → Мобільний зв'язок - Корпоративний ліміт; PHONE_CORP_LIMIT → Середні витрати на мобільний зв’язок; PHONE_CORP_LIMIT → Мобільний зв'язок

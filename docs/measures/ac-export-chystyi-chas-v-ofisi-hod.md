@@ -2,6 +2,9 @@
 
 *тека `Analytical Cases\Loss_Productivity\Export`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Loss_of_Productivity`
+
 ## Бізнес-суть
 
 Net_Office_Time_AVG_3month → Чистий час в офісі, год.

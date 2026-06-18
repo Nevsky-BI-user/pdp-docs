@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\TRS`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_TRS_Plan_PDP`
+
 ## Бізнес-суть
 
 BONUS_YEAR_SALARY_CNT → Премія річна кіл-ть окладів; BONUS_YEAR_SALARY_CNT → Річний бонус; BONUS_YEAR_SALARY_CNT → Доля команди з річним бонусом, %; category_name → Назва блоку

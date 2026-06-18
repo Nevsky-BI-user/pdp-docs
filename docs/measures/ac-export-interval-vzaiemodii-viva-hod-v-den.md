@@ -2,6 +2,9 @@
 
 *тека `Analytical Cases\Loss_Productivity\Export`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Loss_of_Productivity`
+
 ## Бізнес-суть
 
 Collab_Span_Norm_AVG_3month → Інтервал взаємодії (Viva), год. в день

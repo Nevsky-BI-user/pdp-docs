@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\TRS`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 SALARY_RANGE → Зарплата (вилки)

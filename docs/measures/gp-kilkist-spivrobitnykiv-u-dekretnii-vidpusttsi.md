@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\Загальна інформація` · формат `0;-0;0`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 STATUS_NAME → Статус працівника; STATUS_NAME → Статус співробітника; is_maternity_leave → Кількість співробітників у декретній відпустці

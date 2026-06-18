@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\_Main\SVG` · формат `0`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 LAST_YEAR_PERFORMANCE_DESC_RATE → Оцінка результативності за останній рік в цифровому форматі; LAST_YEAR_PERFORMANCE_DESC_RATE → Оцінка результативності (ОР) за останній рік; LAST_YEAR_PERFORMANCE_DESC_RATE → Загальна оцінка співробітника за останній період (рік); LAST_YEAR_PERFORMANCE_DESC_RATE → Середня оцінка результативності команди за останній рік в цифровому форматі

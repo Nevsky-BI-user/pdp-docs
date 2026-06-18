@@ -2,6 +2,9 @@
 
 *тека `Analytical Cases\Loss_Productivity\Main`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Loss_of_Productivity`
+
 ## Бізнес-суть
 
 Fieldwork_Share_by_Norm → Доля днів польових робіт (%)

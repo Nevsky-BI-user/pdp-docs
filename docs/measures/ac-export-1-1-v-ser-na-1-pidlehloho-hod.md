@@ -2,6 +2,9 @@
 
 *тека `Analytical Cases\Loss_Productivity\Export`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Loss_of_Productivity`
+
 ## Бізнес-суть
 
 MANAGER_COACHING_ONE_TO_ONE_HOUR → 1:1 в сер. на 1 підлеглого, год.; MANAGER_COACHING_ONE_TO_ONE_HOUR → Годин керівника на взаємодію із підлеглими за період від поточної точки до попередньої точки; MANAGER_COACHING_ONE_TO_ONE_HOUR → Годин керівника на взаємодію із безпосереднім підлеглим; MANAGER_COACHING_ONE_TO_ONE_HOUR → Годин керівника на взаємодію із безпосередніми підлеглими по кадровому підрозділу; MANAGER_COACHING_ONE_TO_ONE_HOUR → Годин керівника на взаємодію із безпосередніми підлеглими по напряму керівника; MANAGER_COACHING_ONE_TO_ONE_HOUR → Годин керівника на взаємодію із безпосередніми підлеглими   по Холдингу; MANAGER_COACHING_ONE_TO_ONE_HOUR → manager_coaching_one_to_one_hour_direction; MANAGER_COACHING_ONE_TO_ONE_HOUR → manager_coaching_one_to_one_hour_holding; MANAGER_COACHING_ONE_TO_ONE_HOUR → Годин керівника на взаємодію із безпосереднім підлеглим за 3 попередніх місяці; MANAGER_COACHING_ONE_TO_ONE_HOUR → Кількість годин, які Керівник витратив на індивідуальні зустрічі з усіма своїми безпосередніми підлеглими за останні 3 місяці; MANAGER_COACHING_ONE_TO_ONE_HOUR → Годин керівника на взаємодію із підлеглими

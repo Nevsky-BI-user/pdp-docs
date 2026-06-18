@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Результативність та оцінка\OKR`*
 
+!!! abstract "Джерела даних"
+    `DM.R27_fact_OKR_Goals`
+
 ## Бізнес-суть
 
 CALC_PERFORMANCE_STR_RATE → Загальна оцінка ОКР; CALC_PERFORMANCE_STR_RATE → Загальна оцінка OKR; CALC_PERFORMANCE_STR_RATE → Оцінка OKR

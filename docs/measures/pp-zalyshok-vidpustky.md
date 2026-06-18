@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Здоров'я та благополуччя` · формат `0;-0;0`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Vacation_Reserve_PDP`
+
 ## Бізнес-суть
 
 IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position; VACATION_RESERVE_BY_MAIN_POSITION → Залишок відпустки

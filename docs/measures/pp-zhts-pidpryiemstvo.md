@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Життєвий цикл`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Employee_History_Position`
+
 ## Бізнес-суть
 
 ORGANIZATION_NAME → Організація; PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період

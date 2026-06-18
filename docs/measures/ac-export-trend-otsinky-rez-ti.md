@@ -2,6 +2,9 @@
 
 *тека `Analytical Cases\Loss_Productivity\Export`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Loss_of_Productivity`
+
 ## Бізнес-суть
 
 Performance_Rate_Trend → Тренд Оцінки рез-ті (%); Performance_Rate_Trend → Тренд оцінки результативності

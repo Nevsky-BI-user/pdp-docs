@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\Результативність та оцінка\Оцінка результативності` · формат `0`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`, `DM.vw_R27_fact_Employee_Performance_PBI`
+
 ## Бізнес-суть
 
 !!! note "Бізнес-визначення відсутнє"

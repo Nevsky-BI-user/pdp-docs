@@ -2,6 +2,9 @@
 
 *тека `Analytical Cases\Loss_Productivity\Main`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Loss_of_Productivity`, `DWH.t_SPO_HR_Person_Matrix_with_Coefficient`
+
 ## Бізнес-суть
 
 Тренд Результативності по KPI (%)

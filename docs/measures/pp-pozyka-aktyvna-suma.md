@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\TRS` · формат `#,0`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Repayment_Credit_PDP`
+
 ## Бізнес-суть
 
 ACTION_END_DATE → Доля команди із позиками; LAND_SHARE_CONTRACT_SUM → Сума позики; LAND_SHARE_CONTRACT_SUM → Позика на ноутбук (остання); LAND_SHARE_CONTRACT_SUM → Доля команди з позикою на ноутбук (%) (діюча); LAND_SHARE_CONTRACT_SUM → Середній розмір позики; LAND_SHARE_CONTRACT_SUM → Позики

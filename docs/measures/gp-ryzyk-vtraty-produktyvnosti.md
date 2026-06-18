@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\_Main\Ризики та фокуси уваги`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`, `DM.vw_R27_fact_Loss_of_Productivity`
+
 ## Бізнес-суть
 
 Total_Risk_Productive_Name → Ризик втрати продуктивності

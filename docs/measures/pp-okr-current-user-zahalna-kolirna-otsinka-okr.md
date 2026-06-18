@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Результативність та оцінка\OKR`*
 
+!!! abstract "Джерела даних"
+    `DM.R27_fact_OKR_Goals`, `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 Calc_Performance_Desc_Rate → Колірна оцінка ОКР; Calc_Performance_Desc_Rate → Загальна колірна оцінка ОКР; Calc_Performance_Desc_Rate → Загальна колірна оцінка OKR; Calc_Performance_Desc_Rate → Ціль виконана; Calc_Performance_Desc_Rate → Ціль не виконана; Calc_Performance_Desc_Rate → Колірна оцінка OKR за останній період; Calc_Performance_Desc_Rate → Колірна оцінка OKR за передостанній період; Calc_Performance_Desc_Rate → Загальний колір ОКР; Calc_Performance_Desc_Rate → Колірна оцінка OKR

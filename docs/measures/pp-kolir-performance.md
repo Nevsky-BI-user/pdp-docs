@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Життєвий цикл`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Employee_History_Position`
+
 ## Бізнес-суть
 
 GENERAL_PERFORMANCE_DESC_RATE → Бал оцінки результативності; GENERAL_PERFORMANCE_DESC_RATE → Загальна оцінка; GENERAL_PERFORMANCE_DESC_RATE → Загальна оцінка співробітника за останній період (рік); GENERAL_PERFORMANCE_DESC_RATE → Загальна оцінка співробітника за передостанній період (рік); GENERAL_PERFORMANCE_DESC_RATE → Остання доступна оцінка керівника,  бал; PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період

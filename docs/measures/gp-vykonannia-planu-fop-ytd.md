@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\TRS`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`, `DM.vw_R27_fact_TRS_PDP`, `DM.vw_R27_fact_TRS_Plan_PDP`
+
 ## Бізнес-суть
 
 Виконання плану ФОП YTD (%)

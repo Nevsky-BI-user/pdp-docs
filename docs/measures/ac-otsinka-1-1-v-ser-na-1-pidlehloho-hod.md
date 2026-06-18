@@ -2,6 +2,9 @@
 
 *тека `Analytical Cases\Loss_Productivity\Main`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Loss_of_Productivity`
+
 ## Бізнес-суть
 
 Manager_Coaching_per_One_Employee → 1:1 в сер. на 1 підлеглого, год.

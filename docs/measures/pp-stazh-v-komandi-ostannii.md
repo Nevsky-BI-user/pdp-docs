@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Загальна інформація`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_employee_seniority_by_month_PDP`
+
 ## Бізнес-суть
 
 seniority_LAST_DIVISION_HIRE_DATE → Стаж в команді; seniority_LAST_DIVISION_HIRE_DATE → <br>Середній стаж в команді

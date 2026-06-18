@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\TRS` · формат `0.00%;-0.00%;0.00%`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 !!! note "Бізнес-визначення відсутнє"

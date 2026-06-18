@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\_Main\Продуктивність\SVG`*
 
+!!! abstract "Джерела даних"
+    `DM.R27_fact_Employee_Performance`
+
 ## Бізнес-суть
 
 General_Performance_Str_Rate → Категорія оцінки результативнсті; General_Performance_Str_Rate → #71711; General_Performance_Str_Rate → Категорія оцінки співробітника; General_Performance_Str_Rate → Категорія оцінки співробітника за останній період (рік); General_Performance_Str_Rate → Категорія оцінки співробітника за передостанній період (рік); General_Performance_Str_Rate → Керівник з високими/низькими оцінками результативності підлеглих; General_Performance_Str_Rate → Остання доступна оцінка керівника, Категорія

@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Загальна інформація`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Permanent_Temporary`
+
 ## Бізнес-суть
 
 NAME → Назва кадрового підрозділу; NAME → Назва батьківського кадрового підрозділу; NAME → Організація, назва; NAME → Групи віку; NAME → division_person_name

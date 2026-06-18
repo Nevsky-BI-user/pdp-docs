@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\Здоров'я та благополуччя` · формат `#,0.00%;-#,0.00%;#,0.00%`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position; FTE_WEIGHTED_WORK_DAY_FOR_ABSENTEEISM → Відпрацьовані робочі дні у місяці зважені на FTE_employee; Sick_Leave_Day_Without_Pregnancy → <br>Абсентеїзм; Sick_Leave_Day_Without_Pregnancy → Кількість робочих днів на лікарняному зважена на FTE; Sick_Leave_Day_Without_Pregnancy → Коеф. Абсентеїзму, %; Sick_Leave_Day_Without_Pregnancy → Рівень абсентеїзму (%); Sick_Leave_Day_Without_Pregnancy → Коеф. Абсентизму, %; Sick_Leave_Day_Without_Pregnancy → Абсентеїзм

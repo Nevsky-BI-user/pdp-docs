@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\TRS` · формат `#,##0" ₴";-#,##0" ₴";0" ₴"`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_TRS_Plan_PDP`
+
 ## Бізнес-суть
 
 BONUS_QUARTER_SALARY_CNT → Премія квартальна кіл-ть окладів; BONUS_QUARTER_SALARY_CNT → Квартальна премія; BONUS_QUARTER_SALARY_CNT → Доля команди з квартальню премією, %; MIN_TARIFF_RATE → Оклад; MIN_TARIFF_RATE → Позиція в окладній вилці; MIN_TARIFF_RATE → Зарплата (вилки); MIN_TARIFF_RATE → Розподіл за вилкою зарплат; MIN_TARIFF_RATE → Положення у вилці; category_name → Назва блоку

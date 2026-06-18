@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Паспорт\_Main`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 EMPLOYEE_NAME → ПІБ співробітника

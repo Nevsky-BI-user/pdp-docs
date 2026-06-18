@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Життєвий цикл`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Employee_History_Position`
+
 ## Бізнес-суть
 
 COLLABORATION_HOUR → Години загальної взаємодії за період від поточної точки до попередньої точки; COLLABORATION_HOUR → Годин загальної взаємодії  <br>по співробітнику; COLLABORATION_HOUR → Годин загальної взаємодії  <br>по кадровому підрозділу співробітника; COLLABORATION_HOUR → Годин загальної взаємодії  <br>по напряму співробітника; COLLABORATION_HOUR → Годин загальної взаємодії  <br>по Холдингу; COLLABORATION_HOUR → collaboration_hour_direction; COLLABORATION_HOUR → collaboration_hour_holding; COLLABORATION_HOUR → Годин загальної взаємодії  <br>по співробітнику за 3 попередніх місяці; COLLABORATION_HOUR → Годин загальної взаємодії по співробітнику за 3 попередніх місяці; COLLABORATION_HOUR → Годин загальної взаємодії за останній місяць; COLLABORATION_HOUR → Годин загальної взаємодії  <br>по кадровому підрозділу; COLLABORATION_HOUR → Годин загальної взаємодії  <br>по напряму команди; COLLABORATION_HOUR → Годин загальної взаємодії; PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період

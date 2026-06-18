@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Viva\Viva Networks`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 !!! note "Бізнес-визначення відсутнє"

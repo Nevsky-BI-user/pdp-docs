@@ -2,6 +2,9 @@
 
 *тека `Analytical Cases\Loss_Productivity\Main`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Loss_of_Productivity`
+
 ## Бізнес-суть
 
 Viva_Overworking → Перепрацювання (Viva); Viva_Overworking → Чи є ризик вигорання через перепрацювання?; Viva_Overworking → Перепрацювання Viva

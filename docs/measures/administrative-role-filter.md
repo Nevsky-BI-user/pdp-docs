@@ -2,6 +2,9 @@
 
 *тека `_Technical` · формат `0`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 !!! note "Бізнес-визначення відсутнє"

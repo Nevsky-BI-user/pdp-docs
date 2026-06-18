@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Життєвий цикл`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Employee_History_Position`
+
 ## Бізнес-суть
 
 COLLABORATION_SPAN → Довжина (границі) робочого дня за період від поточної точки до попередньої точки; COLLABORATION_SPAN → Довжина (границі) робочого дня  <br>по співробітнику; COLLABORATION_SPAN → Довжина (границі) робочого дня  <br>по кадровому підрозділу співробітника; COLLABORATION_SPAN → Довжина (границі) робочого дня  <br>по напряму співробітника; COLLABORATION_SPAN → Довжина (границі) робочого дня  <br>по Холдингу; COLLABORATION_SPAN → collaboration_span_direction; COLLABORATION_SPAN → collaboration_span_holding; COLLABORATION_SPAN → Довжина (границі) робочого дня  <br>по співробітнику за 3 попередніх місяці; COLLABORATION_SPAN → Довжина (границі) робочого дня по співробітнику за 3 попередніх місяці; COLLABORATION_SPAN → Довжина робочого дня (взаємодія Viva) за останній місяць; COLLABORATION_SPAN → Довжина (границі) робочого дня  <br>по кадровому підрозділу; COLLABORATION_SPAN → Довжина (границі) робочого дня  <br>по напряму команди; COLLABORATION_SPAN → Довжина (границі) робочого дня; PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період

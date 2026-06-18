@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Результативність та оцінка\OKR`*
 
+!!! abstract "Джерела даних"
+    `DM.R27_fact_OKR_Goals`
+
 ## Бізнес-суть
 
 OKR_COLOR_RATE → Колірна оцінка ОКР з плану

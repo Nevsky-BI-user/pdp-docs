@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\TRS`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`, `DM.vw_R27_fact_Repayment_Credit_PDP`
+
 ## Бізнес-суть
 
 ACTION_END_DATE → Доля команди із позиками; land_share_contract_sum → Сума позики; land_share_contract_sum → Позика на ноутбук (остання); land_share_contract_sum → Доля команди з позикою на ноутбук (%) (діюча); land_share_contract_sum → Середній розмір позики; land_share_contract_sum → Позики

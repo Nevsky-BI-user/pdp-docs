@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\TRS` · формат `#,0`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_TRS_PDP`
+
 ## Бізнес-суть
 
 PAYMENTS_PLAN_UAH → Розмір фіксованої винагороди плановий, за місяць СТАНОМ НА РІК НАЗАД; PAYMENTS_PLAN_UAH → Сума (рік тому); PAYMENTS_PLAN_UAH → Оклад по годинам (рік тому); PAYMENTS_PLAN_UAH → % зміни фіксованої винагороди

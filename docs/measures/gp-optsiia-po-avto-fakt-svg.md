@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\TRS`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Employees_Attributes`
+
 ## Бізнес-суть
 
 emloyee_vehicle_format → Тип опції по авто по працівнику; emloyee_vehicle_format → Тип опції по авто по працівнику (факт); emloyee_vehicle_format → Опція по авто факт

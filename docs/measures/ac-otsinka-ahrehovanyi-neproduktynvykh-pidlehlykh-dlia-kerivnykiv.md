@@ -2,6 +2,9 @@
 
 *тека `Analytical Cases\Loss_Productivity\Main`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Loss_of_Productivity`
+
 ## Бізнес-суть
 
 Unproductive_Subordinate_Pct → Агрегований % непродуктинвих підлеглих для керівників

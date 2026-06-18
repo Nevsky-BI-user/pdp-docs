@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\_Main\Дані про команду`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`, `DM.vw_R27_fact_employee_seniority_by_month_PDP`
+
 ## Бізнес-суть
 
 seniority_LAST_DIVISION_HIRE_DATE → Стаж в команді; seniority_LAST_DIVISION_HIRE_DATE → <br>Середній стаж в команді

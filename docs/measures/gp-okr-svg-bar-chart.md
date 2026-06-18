@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\_Main\ОКР\SVG`*
 
+!!! abstract "Джерела даних"
+    `DM.R27_fact_OKR_Goals`
+
 ## Бізнес-суть
 
 CALC_PERFORMANCE_DESC_RATE → Колірна оцінка ОКР; CALC_PERFORMANCE_DESC_RATE → Загальна колірна оцінка ОКР; CALC_PERFORMANCE_DESC_RATE → Загальна колірна оцінка OKR; CALC_PERFORMANCE_DESC_RATE → Ціль виконана; CALC_PERFORMANCE_DESC_RATE → Ціль не виконана; CALC_PERFORMANCE_DESC_RATE → Колірна оцінка OKR за останній період; CALC_PERFORMANCE_DESC_RATE → Колірна оцінка OKR за передостанній період; CALC_PERFORMANCE_DESC_RATE → Загальний колір ОКР; CALC_PERFORMANCE_DESC_RATE → Колірна оцінка OKR

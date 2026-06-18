@@ -2,6 +2,9 @@
 
 *тека `Analytical Cases\Burnout_Risk\Main`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 !!! note "Бізнес-визначення відсутнє"

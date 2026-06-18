@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\TRS`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_TRS_Plan_PDP`
+
 ## Бізнес-суть
 
 !!! note "Бізнес-визначення відсутнє"

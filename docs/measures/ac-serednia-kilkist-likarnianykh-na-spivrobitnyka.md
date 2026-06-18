@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\Здоров'я та благополуччя`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position; sick_leave_id_cnt → #68049; sick_leave_id_cnt → Кількість лікарняних; sick_leave_id_cnt → Середня кількість лікарняних на співробітника; sick_leave_id_cnt → Лікарняні

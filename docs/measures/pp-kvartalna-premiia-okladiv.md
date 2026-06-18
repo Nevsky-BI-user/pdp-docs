@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\TRS`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_TRS_Plan_PDP`
+
 ## Бізнес-суть
 
 BONUS_QUARTER_SALARY_CNT → Премія квартальна кіл-ть окладів; BONUS_QUARTER_SALARY_CNT → Квартальна премія; BONUS_QUARTER_SALARY_CNT → Доля команди з квартальню премією, %; category_name → Назва блоку

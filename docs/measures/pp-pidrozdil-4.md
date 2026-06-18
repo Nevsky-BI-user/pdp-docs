@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Загальна інформація`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 SUBDIVISION_LVL_4 → subdivision_lvl_4

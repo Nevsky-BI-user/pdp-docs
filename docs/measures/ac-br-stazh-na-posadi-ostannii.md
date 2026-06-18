@@ -2,6 +2,9 @@
 
 *тека `Analytical Cases\Burnout_Risk\Export`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_employee_seniority_by_month_PDP`
+
 ## Бізнес-суть
 
 seniority_LAST_POSITION_HIRE_DATE → Стаж на посаді

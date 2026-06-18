@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\TRS` · формат `#,0`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`, `DM.vw_R27_fact_Average_Income`
+
 ## Бізнес-суть
 
 FTE_EMPLOYEE → Зайнятих ставок з відсутностями; FTE_EMPLOYEE → Зайняті ставки; FTE_EMPLOYEE → Кількість зайнятих FTE (факт); MONTLY_INCOME_WITH_BONUS → Середній дохід з річним бонусом (за ост. 12 міс)

@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Результативність та оцінка\OKR`*
 
+!!! abstract "Джерела даних"
+    `DM.R27_fact_OKR_Goals`, `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 PLAN_STATUS → Статус плану ОКР

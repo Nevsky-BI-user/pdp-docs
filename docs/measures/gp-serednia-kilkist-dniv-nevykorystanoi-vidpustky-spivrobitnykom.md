@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\_Main\Дані про команду`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 VACATION_RESERVE_BY_MAIN_POSITION → Залишок відпустки

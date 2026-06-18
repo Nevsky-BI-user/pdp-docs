@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\_Main\SVG`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`
+
 ## Бізнес-суть
 
 PREV_YEAR_PERFORMANCE_DESC_RATE → Оцінка результативності за передостанній рік в цифровому форматі; PREV_YEAR_PERFORMANCE_DESC_RATE → Оцінка результативності (ОР) за попередній рік; PREV_YEAR_PERFORMANCE_DESC_RATE → Загальна оцінка співробітника за передостанній період (рік); PREV_YEAR_PERFORMANCE_DESC_RATE → Середня оцінка результативності команди за передостанній рік в цифровому форматі

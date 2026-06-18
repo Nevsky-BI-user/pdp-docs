@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\_Main\Продуктивність`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Employee_Performance_General_PBI`
+
 ## Бізнес-суть
 
 performance_PBI_order → Сортування (для виведення 4-х останніх періодів)

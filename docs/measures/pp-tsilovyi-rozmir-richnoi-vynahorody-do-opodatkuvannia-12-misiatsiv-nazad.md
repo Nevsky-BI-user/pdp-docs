@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\TRS`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_TRS_PDP`
+
 ## Бізнес-суть
 
 bonus_month_salary_cnt → Премія місячна кіл-ть окладів; bonus_month_salary_cnt → Щомісячна премія; bonus_month_salary_cnt → Доля команди з щомісячною премією, %; bonus_month_salary_cnt → Місячна премія; bonus_quarter_salary_cnt → Премія квартальна кіл-ть окладів; bonus_quarter_salary_cnt → Квартальна премія; bonus_quarter_salary_cnt → Доля команди з квартальню премією, %; bonus_year_salary_cnt → Премія річна кіл-ть окладів; bonus_year_salary_cnt → Річний бонус; bonus_year_salary_cnt → Доля команди з річним бонусом, %; payments_plan_UAH → Розмір фіксованої винагороди плановий, за місяць СТАНОМ НА РІК НАЗАД; payments_plan_UAH → Сума (рік тому); payments_plan_UAH → Оклад по годинам (рік тому); payments_plan_UAH → % зміни фіксованої винагороди

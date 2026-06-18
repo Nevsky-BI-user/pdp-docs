@@ -2,6 +2,9 @@
 
 *тека `Analytical Cases\Loss_Productivity\Formatting`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`, `DM.vw_R27_fact_Loss_of_Productivity`
+
 ## Бізнес-суть
 
 !!! note "Бізнес-визначення відсутнє"

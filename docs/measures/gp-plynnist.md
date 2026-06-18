@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\_Main\Дані про команду`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Status`
+
 ## Бізнес-суть
 
 EMPLOYEE_UNIT_AVERAGE → Середньооблікова чисельність кадрового підрозділу за ост. 12 міс.; FIRED_UNIT_CNT → Кількість звільнених; FIRED_UNIT_CNT → Загальна плинність; FIRED_UNIT_CNT → Прогноз плинності; FIRED_UNIT_CNT → Керівник з високою плинністю

@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Результативність та оцінка\Результативність` · формат `#,0.00`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Employee_Performance_General_PBI`
+
 ## Бізнес-суть
 
 General_Performance_Desc_Rate → Бал оцінки результативності; General_Performance_Desc_Rate → Загальна оцінка; General_Performance_Desc_Rate → Загальна оцінка співробітника за останній період (рік); General_Performance_Desc_Rate → Загальна оцінка співробітника за передостанній період (рік); General_Performance_Desc_Rate → Остання доступна оцінка керівника,  бал

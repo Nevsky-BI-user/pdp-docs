@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Viva\Viva Networks`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Employee_Access_List`, `DM.vw_R27_dim_Unit`
+
 ## Бізнес-суть
 
 DIRECTION → Напрям; DIRECTION → direction_name; DIRECTION → direction

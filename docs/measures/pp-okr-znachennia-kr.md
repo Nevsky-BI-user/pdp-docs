@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Результативність та оцінка\OKR`*
 
+!!! abstract "Джерела даних"
+    `DM.R27_fact_OKR_Key_Results`
+
 ## Бізнес-суть
 
 KR_AVG_RATE → Середньозважена оцінка KR з плану

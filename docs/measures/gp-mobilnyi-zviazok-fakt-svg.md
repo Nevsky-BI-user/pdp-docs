@@ -2,6 +2,9 @@
 
 *тека `Group_Profile\TRS`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Mobile_Limit_PDP`
+
 ## Бізнес-суть
 
 PHONE_PACKAGE_NAME → Мобільний зв'язок - Назва пакету

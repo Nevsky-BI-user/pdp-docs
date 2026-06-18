@@ -2,6 +2,9 @@
 
 *тека `Navigation\Personal`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_dim_Person_PDP`
+
 ## Бізнес-суть
 
 FULL_NAME → ПІБ співробітника; FULL_NAME → Прізвище, ім'я, по-батькові; FULL_NAME → Функціональний керівник; FULL_NAME → HRBP; FULL_NAME → FinBP; FULL_NAME → employee_name; FULL_NAME → ПІБ звільненого працівника

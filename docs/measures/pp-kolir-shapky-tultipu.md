@@ -2,6 +2,9 @@
 
 *тека `Personal_Profile\Життєвий цикл`*
 
+!!! abstract "Джерела даних"
+    `DM.vw_R27_fact_Employee_History_Position`
+
 ## Бізнес-суть
 
 IS_APRIL_SALARY_REVIEW → Квітневий перегляд заробітної плати; IS_TECH_POSITION_CHANGE → Технічна зміна посади; IS_TECH_SALARY_TRANSFER → Технічний перелив (з/п)
