@@ -46,18 +46,19 @@
 
 ## Пов'язані міри
 
-Усього: 11.
-- [GP.Результативність.Оцінка OKR.Загальна кількість KR.CY](../measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-kr-cy.md)
-- [GP.Результативність.Оцінка OKR.Загальна кількість KR.PY](../measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-kr-py.md)
-- [GP.Результативність.Оцінка OKR.Середня кількість KR.PY](../measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-kr-py.md)
-- [GP.Результативність.Оцінка OKR.Фільтр деталізації KR](../measures/gp-rezultatyvnist-otsinka-okr-filtr-detalizatsii-kr.md)
-- [PP.KR.Ключовий результат НЕ досягнуто](../measures/pp-kr-kliuchovyi-rezultat-ne-dosiahnuto.md)
-- [PP.KR.Ключовий результат досягнуто](../measures/pp-kr-kliuchovyi-rezultat-dosiahnuto.md)
-- [PP.OKR.Вага KR](../measures/pp-okr-vaha-kr.md)
-- [PP.OKR.Значення KR](../measures/pp-okr-znachennia-kr.md)
-- [PP.OKR.Колірна оцінка KR](../measures/pp-okr-kolirna-otsinka-kr.md)
-- [PP.OKR.Ціль виконана](../measures/pp-okr-tsil-vykonana.md)
-- [PP.OKR.Ціль не виконана](../measures/pp-okr-tsil-ne-vykonana.md)
+Усього: **11**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Personal Profile](../report/personal-profile.md) — 4
+
+**Результативність та оцінка › OKR.детально:** [PP.KR.Ключовий результат НЕ досягнуто](../measures/pp-kr-kliuchovyi-rezultat-ne-dosiahnuto.md) · [PP.KR.Ключовий результат досягнуто](../measures/pp-kr-kliuchovyi-rezultat-dosiahnuto.md) · [PP.OKR.Ціль виконана](../measures/pp-okr-tsil-vykonana.md) · [PP.OKR.Ціль не виконана](../measures/pp-okr-tsil-ne-vykonana.md)
+
+### [Group Profile](../report/group-profile.md) — 3
+
+**Результативність та оцінка › Оцінка ОКР:** [GP.Результативність.Оцінка OKR.Загальна кількість KR.CY](../measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-kr-cy.md) · [GP.Результативність.Оцінка OKR.Загальна кількість KR.PY](../measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-kr-py.md) · [GP.Результативність.Оцінка OKR.Середня кількість KR.PY](../measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-kr-py.md)
+
+### Поза звітом / службові — 4
+
+[GP.Результативність.Оцінка OKR.Фільтр деталізації KR](../measures/gp-rezultatyvnist-otsinka-okr-filtr-detalizatsii-kr.md) · [PP.OKR.Вага KR](../measures/pp-okr-vaha-kr.md) · [PP.OKR.Значення KR](../measures/pp-okr-znachennia-kr.md) · [PP.OKR.Колірна оцінка KR](../measures/pp-okr-kolirna-otsinka-kr.md)
 
 ## Нотатки
 

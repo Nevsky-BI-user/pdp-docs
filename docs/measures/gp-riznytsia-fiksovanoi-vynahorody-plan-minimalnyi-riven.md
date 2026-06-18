@@ -113,7 +113,8 @@ graph LR
 
 ## На сторінках звіту
 
-[Group Profile](../report/group-profile.md) · [Підсказка "Мін винагорода (план)"](../report/pidskazka-min-vynahoroda-plan.md)
+- [Group Profile](../report/group-profile.md) — TRS
+- [Підсказка "Мін винагорода (план)"](../report/pidskazka-min-vynahoroda-plan.md)
 
 ## Пов'язані міри
 

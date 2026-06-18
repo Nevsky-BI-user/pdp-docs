@@ -67,13 +67,23 @@
 
 ## Пов'язані міри
 
-Усього: 6.
-- [GP.Доля заброньованих чоловіків(%)](../measures/gp-dolia-zabronovanykh-cholovikiv.md)
-- [GP.Доля чоловіків під ризиком мобілізації(%)](../measures/gp-dolia-cholovikiv-pid-ryzykom-mobilizatsii.md)
-- [GP.Кількість Ветеранів](../measures/gp-kilkist-veteraniv.md)
-- [GP.Кількість чоловіків БЕЗ ризику мобілізації(%)](../measures/gp-kilkist-cholovikiv-bez-ryzyku-mobilizatsii.md)
-- [GP.Кількість чоловіків під ризиком мобілізації(%)](../measures/gp-kilkist-cholovikiv-pid-ryzykom-mobilizatsii.md)
-- [button_detalization.Personal_profile](../measures/button-detalization-personal-profile.md)
+Усього: **6**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Group Profile](../report/group-profile.md) — 3
+
+**Інші візуали:** [GP.Доля заброньованих чоловіків(%)](../measures/gp-dolia-zabronovanykh-cholovikiv.md) · [GP.Доля чоловіків під ризиком мобілізації(%)](../measures/gp-dolia-cholovikiv-pid-ryzykom-mobilizatsii.md)
+
+**Версія 1:** [GP.Доля чоловіків під ризиком мобілізації(%)](../measures/gp-dolia-cholovikiv-pid-ryzykom-mobilizatsii.md)
+
+**Загальна інформація:** [GP.Доля заброньованих чоловіків(%)](../measures/gp-dolia-zabronovanykh-cholovikiv.md) · [GP.Доля чоловіків під ризиком мобілізації(%)](../measures/gp-dolia-cholovikiv-pid-ryzykom-mobilizatsii.md) · [GP.Кількість Ветеранів](../measures/gp-kilkist-veteraniv.md)
+
+### [Під ризиком мобілізації](../report/pid-ryzykom-mobilizatsii.md) — 2
+
+**Інші візуали:** [GP.Кількість чоловіків БЕЗ ризику мобілізації(%)](../measures/gp-kilkist-cholovikiv-bez-ryzyku-mobilizatsii.md) · [GP.Кількість чоловіків під ризиком мобілізації(%)](../measures/gp-kilkist-cholovikiv-pid-ryzykom-mobilizatsii.md)
+
+### Поза звітом / службові — 1
+
+[button_detalization.Personal_profile](../measures/button-detalization-personal-profile.md)
 
 ## Нотатки
 

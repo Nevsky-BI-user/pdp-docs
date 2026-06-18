@@ -12,11 +12,15 @@
   "reportPages": [
     {
       "display": "Personal Profile",
-      "slug": "personal-profile"
+      "slug": "personal-profile",
+      "groups": [
+        "Винагорода"
+      ]
     },
     {
       "display": "ТТ:Квартальна премія",
-      "slug": "tt-kvartalna-premiia"
+      "slug": "tt-kvartalna-premiia",
+      "groups": []
     }
   ],
   "dependencies": {

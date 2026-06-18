@@ -112,7 +112,8 @@ graph LR
 
 ## На сторінках звіту
 
-[Group Profile](../report/group-profile.md) · [Підсказка "Макс винагорода (факт)"](../report/pidskazka-maks-vynahoroda-fakt.md)
+- [Group Profile](../report/group-profile.md) — TRS
+- [Підсказка "Макс винагорода (факт)"](../report/pidskazka-maks-vynahoroda-fakt.md)
 
 ## Пов'язані міри
 

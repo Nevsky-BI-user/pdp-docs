@@ -39,22 +39,35 @@
 
 ## Пов'язані міри
 
-Усього: 15.
-- [GP.Результативність.Оцінка результативності.К-ть працівників](../measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-k-t-pratsivnykiv.md)
-- [GP.Результативність.Оцінка результативності.Середня оцінка](../measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-serednia-otsinka.md)
-- [PP.SVG.Оцінка результативності](../measures/pp-svg-otsinka-rezultatyvnosti.md)
-- [PP.Ініціативність при виконанні завдань](../measures/pp-initsiatyvnist-pry-vykonanni-zavdan.md)
-- [PP.Автономність при виконанні завдань](../measures/pp-avtonomnist-pry-vykonanni-zavdan.md)
-- [PP.Виконання завдань у встановлені терміни](../measures/pp-vykonannia-zavdan-u-vstanovleni-terminy.md)
-- [PP.Відповідність кількості виконаних завдань функціоналу](../measures/pp-vidpovidnist-kilkosti-vykonanykh-zavdan-funktsionalu.md)
-- [PP.Націленість на отримання результату](../measures/pp-natsilenist-na-otrymannia-rezultatu.md)
-- [PP.Оцінка результативності базова](../measures/pp-otsinka-rezultatyvnosti-bazova.md)
-- [PP.Оцінка результативності.Керівником](../measures/pp-otsinka-rezultatyvnosti-kerivnykom.md)
-- [PP.Оцінка результативності.Самооцінка](../measures/pp-otsinka-rezultatyvnosti-samootsinka.md)
-- [PP.Подолання перешкод при вирішенні проблем](../measures/pp-podolannia-pereshkod-pry-vyrishenni-problem.md)
-- [PP.Прийняття відповідальності за отриманий результат](../measures/pp-pryiniattia-vidpovidalnosti-za-otrymanyi-rezultat.md)
-- [PP.Середня оцінка результативності річна](../measures/pp-serednia-otsinka-rezultatyvnosti-richna.md)
-- [PP.Якість результату виконаних завдань](../measures/pp-iakist-rezultatu-vykonanykh-zavdan.md)
+Усього: **15**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Personal Profile](../report/personal-profile.md) — 1
+
+**Результативність та оцінка › Результативність:** [PP.SVG.Оцінка результативності](../measures/pp-svg-otsinka-rezultatyvnosti.md)
+
+**Результативність та оцінка › Результативність.Детально › Ініціативність при виконанні завдань:** [PP.SVG.Оцінка результативності](../measures/pp-svg-otsinka-rezultatyvnosti.md)
+
+**Результативність та оцінка › Результативність.Детально › Автономність при виконанні завдань:** [PP.SVG.Оцінка результативності](../measures/pp-svg-otsinka-rezultatyvnosti.md)
+
+**Результативність та оцінка › Результативність.Детально › Виконання завдань у встановлені терміни:** [PP.SVG.Оцінка результативності](../measures/pp-svg-otsinka-rezultatyvnosti.md)
+
+**Результативність та оцінка › Результативність.Детально › Відповідність кількості виконаних завдань функціоналу:** [PP.SVG.Оцінка результативності](../measures/pp-svg-otsinka-rezultatyvnosti.md)
+
+**Результативність та оцінка › Результативність.Детально › Націленість на отримання результату:** [PP.SVG.Оцінка результативності](../measures/pp-svg-otsinka-rezultatyvnosti.md)
+
+**Результативність та оцінка › Результативність.Детально › Подолання перешкод при вирішенні проблем:** [PP.SVG.Оцінка результативності](../measures/pp-svg-otsinka-rezultatyvnosti.md)
+
+**Результативність та оцінка › Результативність.Детально › Прийняття відповідальності за отриманий результат:** [PP.SVG.Оцінка результативності](../measures/pp-svg-otsinka-rezultatyvnosti.md)
+
+**Результативність та оцінка › Результативність.Детально › Якість результату виконаних завдань:** [PP.SVG.Оцінка результативності](../measures/pp-svg-otsinka-rezultatyvnosti.md)
+
+### [Group Profile](../report/group-profile.md) — 1
+
+**Результативність та оцінка › Оцінка результативності › Результативність.Детально:** [GP.Результативність.Оцінка результативності.К-ть працівників](../measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-k-t-pratsivnykiv.md)
+
+### Поза звітом / службові — 13
+
+[GP.Результативність.Оцінка результативності.Середня оцінка](../measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-serednia-otsinka.md) · [PP.Ініціативність при виконанні завдань](../measures/pp-initsiatyvnist-pry-vykonanni-zavdan.md) · [PP.Автономність при виконанні завдань](../measures/pp-avtonomnist-pry-vykonanni-zavdan.md) · [PP.Виконання завдань у встановлені терміни](../measures/pp-vykonannia-zavdan-u-vstanovleni-terminy.md) · [PP.Відповідність кількості виконаних завдань функціоналу](../measures/pp-vidpovidnist-kilkosti-vykonanykh-zavdan-funktsionalu.md) · [PP.Націленість на отримання результату](../measures/pp-natsilenist-na-otrymannia-rezultatu.md) · [PP.Оцінка результативності базова](../measures/pp-otsinka-rezultatyvnosti-bazova.md) · [PP.Оцінка результативності.Керівником](../measures/pp-otsinka-rezultatyvnosti-kerivnykom.md) · [PP.Оцінка результативності.Самооцінка](../measures/pp-otsinka-rezultatyvnosti-samootsinka.md) · [PP.Подолання перешкод при вирішенні проблем](../measures/pp-podolannia-pereshkod-pry-vyrishenni-problem.md) · [PP.Прийняття відповідальності за отриманий результат](../measures/pp-pryiniattia-vidpovidalnosti-za-otrymanyi-rezultat.md) · [PP.Середня оцінка результативності річна](../measures/pp-serednia-otsinka-rezultatyvnosti-richna.md) · [PP.Якість результату виконаних завдань](../measures/pp-iakist-rezultatu-vykonanykh-zavdan.md)
 
 ## Нотатки
 

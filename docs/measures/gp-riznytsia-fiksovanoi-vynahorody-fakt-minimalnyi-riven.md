@@ -112,7 +112,8 @@ graph LR
 
 ## На сторінках звіту
 
-[Group Profile](../report/group-profile.md) · [Підсказка "Мін винагорода (факт)"](../report/pidskazka-min-vynahoroda-fakt.md)
+- [Group Profile](../report/group-profile.md) — TRS
+- [Підсказка "Мін винагорода (факт)"](../report/pidskazka-min-vynahoroda-fakt.md)
 
 ## Пов'язані міри
 

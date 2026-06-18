@@ -97,68 +97,25 @@
 
 ## Пов'язані міри
 
-Усього: 65.
-- [AC.Export.1:1 в сер. на 1 підлеглого, год.](../measures/ac-export-1-1-v-ser-na-1-pidlehloho-hod.md)
-- [AC.Export.Інтервал взаємодії (Viva), год. в день](../measures/ac-export-interval-vzaiemodii-viva-hod-v-den.md)
-- [AC.Export.Інтервал взаємодії Тренд (%)](../measures/ac-export-interval-vzaiemodii-trend.md)
-- [AC.Export.Агрегований % непродуктинвих підлеглих для керівників](../measures/ac-export-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv.md)
-- [AC.Export.Доля взаємодії (Viva) в інтервалі (%)](../measures/ac-export-dolia-vzaiemodii-viva-v-intervali.md)
-- [AC.Export.Доля днів польових робіт (%)](../measures/ac-export-dolia-dniv-polovykh-robit.md)
-- [AC.Export.Перепрацювання (Viva)](../measures/ac-export-perepratsiuvannia-viva.md)
-- [AC.Export.Плинність % по вертикалі](../measures/ac-export-plynnist-po-vertykali.md)
-- [AC.Export.Результативність по KPI (%)](../measures/ac-export-rezultatyvnist-po-kpi.md)
-- [AC.Export.Ризик втрати продуктивності](../measures/ac-export-ryzyk-vtraty-produktyvnosti.md)
-- [AC.Export.Тренд OKR (%)](../measures/ac-export-trend-okr.md)
-- [AC.Export.Тренд Оцінки рез-ті (%)](../measures/ac-export-trend-otsinky-rez-ti.md)
-- [AC.Export.Тренд Результативності по KPI (%)](../measures/ac-export-trend-rezultatyvnosti-po-kpi.md)
-- [AC.Export.Чистий час в офісі Тренд (%)](../measures/ac-export-chystyi-chas-v-ofisi-trend.md)
-- [AC.Export.Чистий час в офісі, год.](../measures/ac-export-chystyi-chas-v-ofisi-hod.md)
-- [AC.LP.Nav.My_lead_team](../measures/ac-lp-nav-my-lead-team.md)
-- [AC.LP.Стаж на посаді (останній)](../measures/ac-lp-stazh-na-posadi-ostannii.md)
-- [AC.Loss_Productivity.Застосувати вибір](../measures/ac-loss-productivity-zastosuvaty-vybir.md)
-- [AC.Loss_Productivity.Панель фільтрів](../measures/ac-loss-productivity-panel-filtriv.md)
-- [AC.Switch.1:1 в сер. на 1 підлеглого, год.](../measures/ac-switch-1-1-v-ser-na-1-pidlehloho-hod.md)
-- [AC.Switch.Інтервал взаємодії (Viva), год. в день](../measures/ac-switch-interval-vzaiemodii-viva-hod-v-den.md)
-- [AC.Switch.Інтервал взаємодії Тренд (%)](../measures/ac-switch-interval-vzaiemodii-trend.md)
-- [AC.Switch.Агрегований % непродуктинвих підлеглих для керівників](../measures/ac-switch-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv.md)
-- [AC.Switch.Доля взаємодії (Viva) в інтервалі (%)](../measures/ac-switch-dolia-vzaiemodii-viva-v-intervali.md)
-- [AC.Switch.Доля днів польових робіт (%)](../measures/ac-switch-dolia-dniv-polovykh-robit.md)
-- [AC.Switch.Перепрацювання (Viva)](../measures/ac-switch-perepratsiuvannia-viva-2.md)
-- [AC.Switch.Плинність % по вертикалі](../measures/ac-switch-plynnist-po-vertykali.md)
-- [AC.Switch.Результативність по KPI (%)](../measures/ac-switch-rezultatyvnist-po-kpi.md)
-- [AC.Switch.Тренд OKR (%)](../measures/ac-switch-trend-okr.md)
-- [AC.Switch.Тренд Оцінки рез-ті (%)](../measures/ac-switch-trend-otsinky-rez-ti.md)
-- [AC.Switch.Тренд Результативності по KPI (%)](../measures/ac-switch-trend-rezultatyvnosti-po-kpi.md)
-- [AC.Switch.Чистий час в офісі Тренд (%)](../measures/ac-switch-chystyi-chas-v-ofisi-trend.md)
-- [AC.Switch.Чистий час в офісі, год.](../measures/ac-switch-chystyi-chas-v-ofisi-hod.md)
-- [AC.Дані.1:1 в сер. на 1 підлеглого, год.](../measures/ac-dani-1-1-v-ser-na-1-pidlehloho-hod.md)
-- [AC.Дані.Інтервал взаємодії (Viva), год. в день](../measures/ac-dani-interval-vzaiemodii-viva-hod-v-den.md)
-- [AC.Дані.Інтервал взаємодії Тренд (%)](../measures/ac-dani-interval-vzaiemodii-trend.md)
-- [AC.Дані.Агрегований % непродуктинвих підлеглих для керівників](../measures/ac-dani-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv.md)
-- [AC.Дані.Доля взаємодії (Viva) в інтервалі (%)](../measures/ac-dani-dolia-vzaiemodii-viva-v-intervali.md)
-- [AC.Дані.Доля днів польових робіт (%)](../measures/ac-dani-dolia-dniv-polovykh-robit.md)
-- [AC.Дані.Перепрацювання (Viva)](../measures/ac-dani-perepratsiuvannia-viva.md)
-- [AC.Дані.Плинність % по вертикалі](../measures/ac-dani-plynnist-po-vertykali.md)
-- [AC.Дані.Результативність по KPI (%)](../measures/ac-dani-rezultatyvnist-po-kpi.md)
-- [AC.Дані.Ризик втрати продуктивності](../measures/ac-dani-ryzyk-vtraty-produktyvnosti.md)
-- [AC.Дані.Тренд OKR (%)](../measures/ac-dani-trend-okr.md)
-- [AC.Дані.Тренд Оцінки рез-ті (%)](../measures/ac-dani-trend-otsinky-rez-ti.md)
-- [AC.Дані.Тренд Результативності по KPI (%)](../measures/ac-dani-trend-rezultatyvnosti-po-kpi.md)
-- [AC.Дані.Чистий час в офісі Тренд (%)](../measures/ac-dani-chystyi-chas-v-ofisi-trend.md)
-- [AC.Дані.Чистий час в офісі, год.](../measures/ac-dani-chystyi-chas-v-ofisi-hod.md)
-- [AC.Оцінка.1:1 в сер. на 1 підлеглого, год.](../measures/ac-otsinka-1-1-v-ser-na-1-pidlehloho-hod.md)
-- [AC.Оцінка.Інтервал взаємодії (Viva), год. в день](../measures/ac-otsinka-interval-vzaiemodii-viva-hod-v-den.md)
-- [AC.Оцінка.Інтервал взаємодії Тренд (%)](../measures/ac-otsinka-interval-vzaiemodii-trend.md)
-- [AC.Оцінка.Агрегований % непродуктинвих підлеглих для керівників](../measures/ac-otsinka-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv.md)
-- [AC.Оцінка.Доля взаємодії (Viva) в інтервалі (%)](../measures/ac-otsinka-dolia-vzaiemodii-viva-v-intervali.md)
-- [AC.Оцінка.Доля днів польових робіт (%)](../measures/ac-otsinka-dolia-dniv-polovykh-robit.md)
-- [AC.Оцінка.Перепрацювання (Viva)](../measures/ac-otsinka-perepratsiuvannia-viva.md)
-- [AC.Оцінка.Плинність % по вертикалі](../measures/ac-otsinka-plynnist-po-vertykali.md)
-- [AC.Оцінка.Результативність по KPI (%)](../measures/ac-otsinka-rezultatyvnist-po-kpi.md)
-- [AC.Оцінка.Ризик втрати продуктивності](../measures/ac-otsinka-ryzyk-vtraty-produktyvnosti.md)
-- [AC.Оцінка.Тренд OKR (%)](../measures/ac-otsinka-trend-okr.md)
-- [AC.Оцінка.Тренд Оцінки рез-ті (%)](../measures/ac-otsinka-trend-otsinky-rez-ti.md)
-- … і ще 5
+Усього: **65**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Personal Profile](../report/personal-profile.md) — 1
+
+**Паспортна частина:** [PP.Ризик.Втрата продуктивності](../measures/pp-ryzyk-vtrata-produktyvnosti.md)
+
+### [Group Profile](../report/group-profile.md) — 1
+
+**Версія 2 › Ризики та фокуси уваги:** [GP.Ризик втрати продуктивності (%)](../measures/gp-ryzyk-vtraty-produktyvnosti.md)
+
+### [Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md) — 32
+
+**Інші візуали:** [AC.Export.1:1 в сер. на 1 підлеглого, год.](../measures/ac-export-1-1-v-ser-na-1-pidlehloho-hod.md) · [AC.Export.Інтервал взаємодії (Viva), год. в день](../measures/ac-export-interval-vzaiemodii-viva-hod-v-den.md) · [AC.Export.Інтервал взаємодії Тренд (%)](../measures/ac-export-interval-vzaiemodii-trend.md) · [AC.Export.Агрегований % непродуктинвих підлеглих для керівників](../measures/ac-export-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv.md) · [AC.Export.Доля взаємодії (Viva) в інтервалі (%)](../measures/ac-export-dolia-vzaiemodii-viva-v-intervali.md) · [AC.Export.Доля днів польових робіт (%)](../measures/ac-export-dolia-dniv-polovykh-robit.md) · [AC.Export.Перепрацювання (Viva)](../measures/ac-export-perepratsiuvannia-viva.md) · [AC.Export.Плинність % по вертикалі](../measures/ac-export-plynnist-po-vertykali.md) · [AC.Export.Результативність по KPI (%)](../measures/ac-export-rezultatyvnist-po-kpi.md) · [AC.Export.Ризик втрати продуктивності](../measures/ac-export-ryzyk-vtraty-produktyvnosti.md) · [AC.Export.Тренд OKR (%)](../measures/ac-export-trend-okr.md) · [AC.Export.Тренд Оцінки рез-ті (%)](../measures/ac-export-trend-otsinky-rez-ti.md) · [AC.Export.Тренд Результативності по KPI (%)](../measures/ac-export-trend-rezultatyvnosti-po-kpi.md) · [AC.Export.Чистий час в офісі Тренд (%)](../measures/ac-export-chystyi-chas-v-ofisi-trend.md) · [AC.Export.Чистий час в офісі, год.](../measures/ac-export-chystyi-chas-v-ofisi-hod.md) · [AC.LP.Стаж на посаді (останній)](../measures/ac-lp-stazh-na-posadi-ostannii.md) · [AC.Loss_Productivity.Панель фільтрів](../measures/ac-loss-productivity-panel-filtriv.md) · [AC.Switch.1:1 в сер. на 1 підлеглого, год.](../measures/ac-switch-1-1-v-ser-na-1-pidlehloho-hod.md) · [AC.Switch.Інтервал взаємодії (Viva), год. в день](../measures/ac-switch-interval-vzaiemodii-viva-hod-v-den.md) · [AC.Switch.Інтервал взаємодії Тренд (%)](../measures/ac-switch-interval-vzaiemodii-trend.md) · [AC.Switch.Агрегований % непродуктинвих підлеглих для керівників](../measures/ac-switch-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv.md) · [AC.Switch.Доля взаємодії (Viva) в інтервалі (%)](../measures/ac-switch-dolia-vzaiemodii-viva-v-intervali.md) · [AC.Switch.Доля днів польових робіт (%)](../measures/ac-switch-dolia-dniv-polovykh-robit.md) · [AC.Switch.Перепрацювання (Viva)](../measures/ac-switch-perepratsiuvannia-viva-2.md) · [AC.Switch.Плинність % по вертикалі](../measures/ac-switch-plynnist-po-vertykali.md) · [AC.Switch.Результативність по KPI (%)](../measures/ac-switch-rezultatyvnist-po-kpi.md) · [AC.Switch.Тренд OKR (%)](../measures/ac-switch-trend-okr.md) · [AC.Switch.Тренд Оцінки рез-ті (%)](../measures/ac-switch-trend-otsinky-rez-ti.md) · [AC.Switch.Тренд Результативності по KPI (%)](../measures/ac-switch-trend-rezultatyvnosti-po-kpi.md) · [AC.Switch.Чистий час в офісі Тренд (%)](../measures/ac-switch-chystyi-chas-v-ofisi-trend.md) · [AC.Switch.Чистий час в офісі, год.](../measures/ac-switch-chystyi-chas-v-ofisi-hod.md)
+
+**Filter Pannel:** [AC.Loss_Productivity.Застосувати вибір](../measures/ac-loss-productivity-zastosuvaty-vybir.md)
+
+### Поза звітом / службові — 31
+
+[AC.LP.Nav.My_lead_team](../measures/ac-lp-nav-my-lead-team.md) · [AC.Дані.1:1 в сер. на 1 підлеглого, год.](../measures/ac-dani-1-1-v-ser-na-1-pidlehloho-hod.md) · [AC.Дані.Інтервал взаємодії (Viva), год. в день](../measures/ac-dani-interval-vzaiemodii-viva-hod-v-den.md) · [AC.Дані.Інтервал взаємодії Тренд (%)](../measures/ac-dani-interval-vzaiemodii-trend.md) · [AC.Дані.Агрегований % непродуктинвих підлеглих для керівників](../measures/ac-dani-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv.md) · [AC.Дані.Доля взаємодії (Viva) в інтервалі (%)](../measures/ac-dani-dolia-vzaiemodii-viva-v-intervali.md) · [AC.Дані.Доля днів польових робіт (%)](../measures/ac-dani-dolia-dniv-polovykh-robit.md) · [AC.Дані.Перепрацювання (Viva)](../measures/ac-dani-perepratsiuvannia-viva.md) · [AC.Дані.Плинність % по вертикалі](../measures/ac-dani-plynnist-po-vertykali.md) · [AC.Дані.Результативність по KPI (%)](../measures/ac-dani-rezultatyvnist-po-kpi.md) · [AC.Дані.Ризик втрати продуктивності](../measures/ac-dani-ryzyk-vtraty-produktyvnosti.md) · [AC.Дані.Тренд OKR (%)](../measures/ac-dani-trend-okr.md) · [AC.Дані.Тренд Оцінки рез-ті (%)](../measures/ac-dani-trend-otsinky-rez-ti.md) · [AC.Дані.Тренд Результативності по KPI (%)](../measures/ac-dani-trend-rezultatyvnosti-po-kpi.md) · [AC.Дані.Чистий час в офісі Тренд (%)](../measures/ac-dani-chystyi-chas-v-ofisi-trend.md) · [AC.Дані.Чистий час в офісі, год.](../measures/ac-dani-chystyi-chas-v-ofisi-hod.md) · [AC.Оцінка.1:1 в сер. на 1 підлеглого, год.](../measures/ac-otsinka-1-1-v-ser-na-1-pidlehloho-hod.md) · [AC.Оцінка.Інтервал взаємодії (Viva), год. в день](../measures/ac-otsinka-interval-vzaiemodii-viva-hod-v-den.md) · [AC.Оцінка.Інтервал взаємодії Тренд (%)](../measures/ac-otsinka-interval-vzaiemodii-trend.md) · [AC.Оцінка.Агрегований % непродуктинвих підлеглих для керівників](../measures/ac-otsinka-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv.md) · [AC.Оцінка.Доля взаємодії (Viva) в інтервалі (%)](../measures/ac-otsinka-dolia-vzaiemodii-viva-v-intervali.md) · [AC.Оцінка.Доля днів польових робіт (%)](../measures/ac-otsinka-dolia-dniv-polovykh-robit.md) · [AC.Оцінка.Перепрацювання (Viva)](../measures/ac-otsinka-perepratsiuvannia-viva.md) · [AC.Оцінка.Плинність % по вертикалі](../measures/ac-otsinka-plynnist-po-vertykali.md) · [AC.Оцінка.Результативність по KPI (%)](../measures/ac-otsinka-rezultatyvnist-po-kpi.md) · [AC.Оцінка.Ризик втрати продуктивності](../measures/ac-otsinka-ryzyk-vtraty-produktyvnosti.md) · [AC.Оцінка.Тренд OKR (%)](../measures/ac-otsinka-trend-okr.md) · [AC.Оцінка.Тренд Оцінки рез-ті (%)](../measures/ac-otsinka-trend-otsinky-rez-ti.md) · [AC.Оцінка.Тренд Результативності по KPI (%)](../measures/ac-otsinka-trend-rezultatyvnosti-po-kpi.md) · [AC.Оцінка.Чистий час в офісі Тренд (%)](../measures/ac-otsinka-chystyi-chas-v-ofisi-trend.md) · [AC.Оцінка.Чистий час в офісі, год.](../measures/ac-otsinka-chystyi-chas-v-ofisi-hod.md)
 
 ## Нотатки
 

@@ -12,7 +12,8 @@
   "reportPages": [
     {
       "display": "Утримання працівників",
-      "slug": "utrymannia-pratsivnykiv"
+      "slug": "utrymannia-pratsivnykiv",
+      "groups": []
     }
   ],
   "dependencies": {

@@ -1,13 +1,13 @@
 # Продуктивність працівників
 
 !!! info "Сторінка звіту"
-    Тип: **Основна сторінка звіту** · мір на сторінці: **36**
+    Тип: **Основна сторінка звіту** · мір: **36** · блоків візуалізації: **3**
 
 [:octicons-arrow-left-24: Усі сторінки звіту](index.md)
 
-## Analytical Cases\Loss_Productivity\Export
+## Інші візуали
 
-| Міра | Формат | Бізнес-суть |
+| Міра | Формат | Бізнес-назва |
 |---|---|---|
 | [AC.Export.1:1 в сер. на 1 підлеглого, год.](../measures/ac-export-1-1-v-ser-na-1-pidlehloho-hod.md) | — | 1:1 в сер. на 1 підлеглого, год. |
 | [AC.Export.Інтервал взаємодії (Viva), год. в день](../measures/ac-export-interval-vzaiemodii-viva-hod-v-den.md) | — | Інтервал взаємодії (Viva), год. в день |
@@ -24,20 +24,9 @@
 | [AC.Export.Тренд Результативності по KPI (%)](../measures/ac-export-trend-rezultatyvnosti-po-kpi.md) | — | Тренд Результативності по KPI (%) |
 | [AC.Export.Чистий час в офісі Тренд (%)](../measures/ac-export-chystyi-chas-v-ofisi-trend.md) | — | Чистий час в офісі Тренд (%) |
 | [AC.Export.Чистий час в офісі, год.](../measures/ac-export-chystyi-chas-v-ofisi-hod.md) | — | Чистий час в офісі, год. |
-| [AC.LP.Стаж на посаді (останній)](../measures/ac-lp-stazh-na-posadi-ostannii.md) | — | — |
-
-## Analytical Cases\Loss_Productivity\Formatting
-
-| Міра | Формат | Бізнес-суть |
-|---|---|---|
 | [AC.LP.Rate_color](../measures/ac-lp-rate-color.md) | — | — |
-| [AC.Loss_Productivity.Застосувати вибір](../measures/ac-loss-productivity-zastosuvaty-vybir.md) | — | — |
+| [AC.LP.Стаж на посаді (останній)](../measures/ac-lp-stazh-na-posadi-ostannii.md) | — | — |
 | [AC.Loss_Productivity.Панель фільтрів](../measures/ac-loss-productivity-panel-filtriv.md) | — | — |
-
-## Analytical Cases\Loss_Productivity\Main
-
-| Міра | Формат | Бізнес-суть |
-|---|---|---|
 | [AC.Switch.1:1 в сер. на 1 підлеглого, год.](../measures/ac-switch-1-1-v-ser-na-1-pidlehloho-hod.md) | — | 1:1 в сер. на 1 підлеглого, год. |
 | [AC.Switch.Інтервал взаємодії (Viva), год. в день](../measures/ac-switch-interval-vzaiemodii-viva-hod-v-den.md) | — | Інтервал взаємодії (Viva), год. в день |
 | [AC.Switch.Інтервал взаємодії Тренд (%)](../measures/ac-switch-interval-vzaiemodii-trend.md) | — | Інтервал взаємодії Тренд (%) |
@@ -54,15 +43,16 @@
 | [AC.Switch.Чистий час в офісі Тренд (%)](../measures/ac-switch-chystyi-chas-v-ofisi-trend.md) | — | Чистий час в офісі Тренд (%) |
 | [AC.Switch.Чистий час в офісі, год.](../measures/ac-switch-chystyi-chas-v-ofisi-hod.md) | — | Чистий час в офісі, год. |
 
-## Navigation\Group
+## Filter Pannel
 
-| Міра | Формат | Бізнес-суть |
+| Міра | Формат | Бізнес-назва |
+|---|---|---|
+| [AC.Loss_Productivity.Застосувати вибір](../measures/ac-loss-productivity-zastosuvaty-vybir.md) | — | — |
+| [dummy_blank](../measures/dummy-blank.md) | — | — |
+
+## Navigation group
+
+| Міра | Формат | Бізнес-назва |
 |---|---|---|
 | [GP.NavigationButton2](../measures/gp-navigationbutton2.md) | — | — |
-
-## _Technical
-
-| Міра | Формат | Бізнес-суть |
-|---|---|---|
-| [dummy_blank](../measures/dummy-blank.md) | — | — |
 

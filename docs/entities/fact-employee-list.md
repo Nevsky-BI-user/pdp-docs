@@ -172,68 +172,37 @@
 
 ## Пов'язані міри
 
-Усього: 120.
-- [5AC.Коефіцієнт абсентеїзму](../measures/5ac-koefitsiient-absenteizmu.md)
-- [AC.Відсоток днів відпустки в робочі дні](../measures/ac-vidsotok-dniv-vidpustky-v-robochi-dni.md)
-- [AC.Доля співробітників з відпустками понад 10 днів](../measures/ac-dolia-spivrobitnykiv-z-vidpustkamy-ponad-10-dniv.md)
-- [AC.Лідер за невикористаними днями відпустки](../measures/ac-lider-za-nevykorystanymy-dniamy-vidpustky.md)
-- [AC.Лідер за часом без відпустки](../measures/ac-lider-za-chasom-bez-vidpustky.md)
-- [AC.Середня кількість днів використаної відпустки](../measures/ac-serednia-kilkist-dniv-vykorystanoi-vidpustky.md)
-- [AC.Середня кількість днів невикористаної відпустки](../measures/ac-serednia-kilkist-dniv-nevykorystanoi-vidpustky.md)
-- [AC.Середня кількість лікарняних на співробітника](../measures/ac-serednia-kilkist-likarnianykh-na-spivrobitnyka.md)
-- [AC.Середня тривалість відпустки співробітника, днів](../measures/ac-serednia-tryvalist-vidpustky-spivrobitnyka-dniv.md)
-- [AC.Середня тривалість лікарняного на співробітника](../measures/ac-serednia-tryvalist-likarnianoho-na-spivrobitnyka.md)
-- [GP.Доля Line (%)](../measures/gp-dolia-line.md)
-- [GP.Доля Middle managers (%)](../measures/gp-dolia-middle-managers.md)
-- [GP.Доля Senior managers (%)](../measures/gp-dolia-senior-managers.md)
-- [GP.Доля Specialists (%)](../measures/gp-dolia-specialists.md)
-- [GP.Доля Workers (%)](../measures/gp-dolia-workers.md)
-- [GP.Доля гібрид онлайн (%)](../measures/gp-dolia-hibryd-onlain.md)
-- [GP.Доля гібрид офлайн (%)](../measures/gp-dolia-hibryd-oflain.md)
-- [GP.Доля заброньованих чоловіків(%)](../measures/gp-dolia-zabronovanykh-cholovikiv.md)
-- [GP.Доля онлайн (%)](../measures/gp-dolia-onlain.md)
-- [GP.Доля операціоністів](../measures/gp-dolia-operatsionistiv.md)
-- [GP.Доля офлайн (%)](../measures/gp-dolia-oflain.md)
-- [GP.Доля польових (%)](../measures/gp-dolia-polovykh.md)
-- [GP.Доля студентів](../measures/gp-dolia-studentiv.md)
-- [GP.Доля чоловіків під ризиком мобілізації(%)](../measures/gp-dolia-cholovikiv-pid-ryzykom-mobilizatsii.md)
-- [GP.Кількість FTE по штату (план)](../measures/gp-kilkist-fte-po-shtatu-plan.md)
-- [GP.Кількість Ветеранів](../measures/gp-kilkist-veteraniv.md)
-- [GP.Кількість зайнятих FTE (факт)](../measures/gp-kilkist-zainiatykh-fte-fakt.md)
-- [GP.Кількість мобілізованих](../measures/gp-kilkist-mobilizovanykh.md)
-- [GP.Кількість основних працівників](../measures/gp-kilkist-osnovnykh-pratsivnykiv.md)
-- [GP.Кількість сезонних працівників](../measures/gp-kilkist-sezonnykh-pratsivnykiv.md)
-- [GP.Кількість співробітників у декретній відпустці](../measures/gp-kilkist-spivrobitnykiv-u-dekretnii-vidpusttsi.md)
-- [GP.Кількість студентів](../measures/gp-kilkist-studentiv.md)
-- [GP.Кількість чоловіків БЕЗ ризику мобілізації(%)](../measures/gp-kilkist-cholovikiv-bez-ryzyku-mobilizatsii.md)
-- [GP.Кількість чоловіків під ризиком мобілізації(%)](../measures/gp-kilkist-cholovikiv-pid-ryzykom-mobilizatsii.md)
-- [GP.Середня кількість днів невикористаної відпустки співробітником](../measures/gp-serednia-kilkist-dniv-nevykorystanoi-vidpustky-spivrobitnykom.md)
-- [GP.Середній вік](../measures/gp-serednii-vik.md)
-- [GP.Укомплектованість штату (%)](../measures/gp-ukomplektovanist-shtatu.md)
-- [PP.% днів відпустки в робочі дні](../measures/pp-dniv-vidpustky-v-robochi-dni.md)
-- [PP.% доплати по суміщенню](../measures/pp-doplaty-po-sumishchenniu.md)
-- [PP.FinBP](../measures/pp-finbp.md)
-- [PP.HRBP](../measures/pp-hrbp.md)
-- [PP.SVG.Позиція в окладній вилці](../measures/pp-svg-pozytsiia-v-okladnii-vyltsi.md)
-- [PP.min_tariff_rate](../measures/pp-min-tariff-rate.md)
-- [PP.ІПН](../measures/pp-ipn.md)
-- [PP.Абсентеїзм](../measures/pp-absenteizm.md)
-- [PP.Агро Хаб](../measures/pp-ahro-khab.md)
-- [PP.Адміністративний керівник](../measures/pp-administratyvnyi-kerivnyk.md)
-- [PP.Адреса офісу (працівник)](../measures/pp-adresa-ofisu-pratsivnyk.md)
-- [PP.Адреса офісу (штат)](../measures/pp-adresa-ofisu-shtat.md)
-- [PP.Бронювання до](../measures/pp-broniuvannia-do.md)
-- [PP.ВНЗ](../measures/pp-vnz.md)
-- [PP.Ветеран-Новачок](../measures/pp-veteran-novachok.md)
-- [PP.Вид зайнятості](../measures/pp-vyd-zainiatosti.md)
-- [PP.Відношення до ВО](../measures/pp-vidnoshennia-do-vo.md)
-- [PP.Відстрочка від призову](../measures/pp-vidstrochka-vid-pryzovu.md)
-- [PP.Військова частина](../measures/pp-viiskova-chastyna.md)
-- [PP.Група інвалідності](../measures/pp-hrupa-invalidnosti.md)
-- [PP.Дата народження](../measures/pp-data-narodzhennia.md)
-- [PP.Дні відпустки](../measures/pp-dni-vidpustky.md)
-- [PP.Дійсність інвалідності до](../measures/pp-diisnist-invalidnosti-do.md)
-- … і ще 60
+Усього: **120**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Personal Profile](../report/personal-profile.md) — 72
+
+**Винагорода:** [PP.SVG.Позиція в окладній вилці](../measures/pp-svg-pozytsiia-v-okladnii-vyltsi.md) · [PP.Діти до 18 років](../measures/pp-dity-do-18-rokiv.md) · [PP.Квартальна премія](../measures/pp-kvartalna-premiia.md) · [PP.Квартальна премія окладів](../measures/pp-kvartalna-premiia-okladiv.md) · [PP.Річний бонус](../measures/pp-richnyi-bonus.md) · [PP.Річний бонус окладів](../measures/pp-richnyi-bonus-okladiv.md) · [PP.Цільовий розмір річної винагороди, до оподаткування](../measures/pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia.md) · [PP.Щомісячна премія](../measures/pp-shchomisiachna-premiia.md) · [PP.Щомісячна премія окладів](../measures/pp-shchomisiachna-premiia-okladiv.md)
+
+**Загальна інформація:** [PP.% доплати по суміщенню](../measures/pp-doplaty-po-sumishchenniu.md) · [PP.FinBP](../measures/pp-finbp.md) · [PP.HRBP](../measures/pp-hrbp.md) · [PP.ІПН](../measures/pp-ipn.md) · [PP.Агро Хаб](../measures/pp-ahro-khab.md) · [PP.Адміністративний керівник](../measures/pp-administratyvnyi-kerivnyk.md) · [PP.Адреса офісу (працівник)](../measures/pp-adresa-ofisu-pratsivnyk.md) · [PP.Адреса офісу (штат)](../measures/pp-adresa-ofisu-shtat.md) · [PP.Бронювання до](../measures/pp-broniuvannia-do.md) · [PP.ВНЗ](../measures/pp-vnz.md) · [PP.Ветеран-Новачок](../measures/pp-veteran-novachok.md) · [PP.Вид зайнятості](../measures/pp-vyd-zainiatosti.md) · [PP.Відношення до ВО](../measures/pp-vidnoshennia-do-vo.md) · [PP.Відстрочка від призову](../measures/pp-vidstrochka-vid-pryzovu.md) · [PP.Військова частина](../measures/pp-viiskova-chastyna.md) · [PP.Група інвалідності](../measures/pp-hrupa-invalidnosti.md) · [PP.Дійсність інвалідності до](../measures/pp-diisnist-invalidnosti-do.md) · [PP.Діти до 14 років](../measures/pp-dity-do-14-rokiv.md) · [PP.Діти до 18 років](../measures/pp-dity-do-18-rokiv.md) · [PP.Зайнятих ставок з відсутностями](../measures/pp-zainiatykh-stavok-z-vidsutnostiamy.md) · [PP.Зайнятих ставок по суміщенню](../measures/pp-zainiatykh-stavok-po-sumishchenniu.md) · [PP.Зайнятих ставок фактично](../measures/pp-zainiatykh-stavok-faktychno.md) · [PP.Категорія механізатора](../measures/pp-katehoriia-mekhanizatora.md) · [PP.Категорія посади](../measures/pp-katehoriia-posady.md) · [PP.Координатор для мобілізованих](../measures/pp-koordynator-dlia-mobilizovanykh.md) · [PP.На чиєму місці сидить](../measures/pp-na-chyiemu-mistsi-sydyt.md) · [PP.Надомний інвалід (квота)](../measures/pp-nadomnyi-invalid-kvota.md) · [PP.Напрям](../measures/pp-napriam.md) · [PP.Організація](../measures/pp-orhanizatsiia.md) · [PP.Освіта](../measures/pp-osvita.md) · [PP.Посада](../measures/pp-posada.md) · [PP.Посада зведена](../measures/pp-posada-zvedena.md) · [PP.Посада по суміщенню](../measures/pp-posada-po-sumishchenniu.md) · [PP.Пріоритетне місце роботи](../measures/pp-priorytetne-mistse-roboty.md) · [PP.Піднапрям](../measures/pp-pidnapriam.md) · [PP.Піднапрям рівень 2](../measures/pp-pidnapriam-riven-2.md) · [PP.Підрозділ кадровий](../measures/pp-pidrozdil-kadrovyi.md) · [PP.Підрозділ кадровий по суміщенню](../measures/pp-pidrozdil-kadrovyi-po-sumishchenniu.md) · [PP.Ризик мобілізації](../measures/pp-ryzyk-mobilizatsii.md) · [PP.Рівень в ієрархії](../measures/pp-riven-v-iierarkhii.md) · [PP.Спеціальність](../measures/pp-spetsialnist.md) · [PP.Статус Ветеран](../measures/pp-status-veteran.md) · [PP.Статус працівника](../measures/pp-status-pratsivnyka.md) · [PP.Строк договору до дати](../measures/pp-strok-dohovoru-do-daty.md) · [PP.Термін суміщення (міс.)](../measures/pp-termin-sumishchennia-mis.md) · [PP.Трудові умови](../measures/pp-trudovi-umovy.md) · [PP.Умови прийому](../measures/pp-umovy-pryiomu.md) · [PP.Уточнення по посаді](../measures/pp-utochnennia-po-posadi.md) · [PP.Уточнення по роботах](../measures/pp-utochnennia-po-robotakh.md) · [PP.Формат роботи (працівник)](../measures/pp-format-roboty-pratsivnyk.md) · [PP.Формат роботи (штат)](../measures/pp-format-roboty-shtat.md) · [PP.Функціональний керівник](../measures/pp-funktsionalnyi-kerivnyk.md)
+
+**Здоров'я та благополуччя:** [PP.% днів відпустки в робочі дні](../measures/pp-dniv-vidpustky-v-robochi-dni.md) · [PP.Абсентеїзм](../measures/pp-absenteizm.md) · [PP.Дні відпустки](../measures/pp-dni-vidpustky.md) · [PP.Залишок відпустки](../measures/pp-zalyshok-vidpustky.md) · [PP.Кількість відпусток](../measures/pp-kilkist-vidpustok.md) · [PP.Кількість довгих відпусток](../measures/pp-kilkist-dovhykh-vidpustok.md) · [PP.Лікарняні](../measures/pp-likarniani.md) · [PP.Місяці без відпустки](../measures/pp-misiatsi-bez-vidpustky.md) · [PP.Середня тривалість відпустки](../measures/pp-serednia-tryvalist-vidpustky.md) · [PP.Середня тривалість лікарняного](../measures/pp-serednia-tryvalist-likarnianoho.md)
+
+**Паспортна частина:** [PP.FinBP](../measures/pp-finbp.md) · [PP.HRBP](../measures/pp-hrbp.md) · [PP.Адміністративний керівник](../measures/pp-administratyvnyi-kerivnyk.md) · [PP.Адреса офісу (працівник)](../measures/pp-adresa-ofisu-pratsivnyk.md) · [PP.Вид зайнятості](../measures/pp-vyd-zainiatosti.md) · [PP.Дата народження](../measures/pp-data-narodzhennia.md) · [PP.Категорія посади](../measures/pp-katehoriia-posady.md) · [PP.Посада](../measures/pp-posada.md) · [PP.Підрозділ кадровий](../measures/pp-pidrozdil-kadrovyi.md) · [PP.Ризик.Вид відстрочки](../measures/pp-ryzyk-vyd-vidstrochky.md) · [PP.Формат роботи (працівник)](../measures/pp-format-roboty-pratsivnyk.md) · [PP.Формат роботи (штат)](../measures/pp-format-roboty-shtat.md) · [PP.Функціональний керівник](../measures/pp-funktsionalnyi-kerivnyk.md)
+
+### [Group Profile](../report/group-profile.md) — 36
+
+**Інші візуали:** [GP.Доля заброньованих чоловіків(%)](../measures/gp-dolia-zabronovanykh-cholovikiv.md) · [GP.Доля чоловіків під ризиком мобілізації(%)](../measures/gp-dolia-cholovikiv-pid-ryzykom-mobilizatsii.md) · [GP.Середня кількість днів невикористаної відпустки співробітником](../measures/gp-serednia-kilkist-dniv-nevykorystanoi-vidpustky-spivrobitnykom.md) · [Доля управлінських категорій серед всіх співробітників (%)](../measures/dolia-upravlinskykh-katehorii-sered-vsikh-spivrobitnykiv.md)
+
+**Версія 1:** [GP.Доля чоловіків під ризиком мобілізації(%)](../measures/gp-dolia-cholovikiv-pid-ryzykom-mobilizatsii.md) · [GP.Середня кількість днів невикористаної відпустки співробітником](../measures/gp-serednia-kilkist-dniv-nevykorystanoi-vidpustky-spivrobitnykom.md)
+
+**Версія 2 › Індикатори здоров'я команди:** [GP.Укомплектованість штату (%)](../measures/gp-ukomplektovanist-shtatu.md)
+
+**Загальна інформація:** [GP.Доля Line (%)](../measures/gp-dolia-line.md) · [GP.Доля Middle managers (%)](../measures/gp-dolia-middle-managers.md) · [GP.Доля Senior managers (%)](../measures/gp-dolia-senior-managers.md) · [GP.Доля Specialists (%)](../measures/gp-dolia-specialists.md) · [GP.Доля Workers (%)](../measures/gp-dolia-workers.md) · [GP.Доля гібрид онлайн (%)](../measures/gp-dolia-hibryd-onlain.md) · [GP.Доля гібрид офлайн (%)](../measures/gp-dolia-hibryd-oflain.md) · [GP.Доля заброньованих чоловіків(%)](../measures/gp-dolia-zabronovanykh-cholovikiv.md) · [GP.Доля онлайн (%)](../measures/gp-dolia-onlain.md) · [GP.Доля операціоністів](../measures/gp-dolia-operatsionistiv.md) · [GP.Доля офлайн (%)](../measures/gp-dolia-oflain.md) · [GP.Доля польових (%)](../measures/gp-dolia-polovykh.md) · [GP.Доля студентів](../measures/gp-dolia-studentiv.md) · [GP.Доля чоловіків під ризиком мобілізації(%)](../measures/gp-dolia-cholovikiv-pid-ryzykom-mobilizatsii.md) · [GP.Кількість FTE по штату (план)](../measures/gp-kilkist-fte-po-shtatu-plan.md) · [GP.Кількість Ветеранів](../measures/gp-kilkist-veteraniv.md) · [GP.Кількість зайнятих FTE (факт)](../measures/gp-kilkist-zainiatykh-fte-fakt.md) · [GP.Кількість мобілізованих](../measures/gp-kilkist-mobilizovanykh.md) · [GP.Кількість основних працівників](../measures/gp-kilkist-osnovnykh-pratsivnykiv.md) · [GP.Кількість сезонних працівників](../measures/gp-kilkist-sezonnykh-pratsivnykiv.md) · [GP.Кількість співробітників у декретній відпустці](../measures/gp-kilkist-spivrobitnykiv-u-dekretnii-vidpusttsi.md) · [GP.Кількість студентів](../measures/gp-kilkist-studentiv.md) · [GP.Середній вік](../measures/gp-serednii-vik.md) · [GP.Укомплектованість штату (%)](../measures/gp-ukomplektovanist-shtatu.md)
+
+**Здоров'я та благополуччя:** [5AC.Коефіцієнт абсентеїзму](../measures/5ac-koefitsiient-absenteizmu.md) · [AC.Відсоток днів відпустки в робочі дні](../measures/ac-vidsotok-dniv-vidpustky-v-robochi-dni.md) · [AC.Доля співробітників з відпустками понад 10 днів](../measures/ac-dolia-spivrobitnykiv-z-vidpustkamy-ponad-10-dniv.md) · [AC.Лідер за невикористаними днями відпустки](../measures/ac-lider-za-nevykorystanymy-dniamy-vidpustky.md) · [AC.Лідер за часом без відпустки](../measures/ac-lider-za-chasom-bez-vidpustky.md) · [AC.Середня кількість днів використаної відпустки](../measures/ac-serednia-kilkist-dniv-vykorystanoi-vidpustky.md) · [AC.Середня кількість днів невикористаної відпустки](../measures/ac-serednia-kilkist-dniv-nevykorystanoi-vidpustky.md) · [AC.Середня кількість лікарняних на співробітника](../measures/ac-serednia-kilkist-likarnianykh-na-spivrobitnyka.md) · [AC.Середня тривалість відпустки співробітника, днів](../measures/ac-serednia-tryvalist-vidpustky-spivrobitnyka-dniv.md) · [AC.Середня тривалість лікарняного на співробітника](../measures/ac-serednia-tryvalist-likarnianoho-na-spivrobitnyka.md)
+
+### [Під ризиком мобілізації](../report/pid-ryzykom-mobilizatsii.md) — 2
+
+**Інші візуали:** [GP.Кількість чоловіків БЕЗ ризику мобілізації(%)](../measures/gp-kilkist-cholovikiv-bez-ryzyku-mobilizatsii.md) · [GP.Кількість чоловіків під ризиком мобілізації(%)](../measures/gp-kilkist-cholovikiv-pid-ryzykom-mobilizatsii.md)
+
+### Поза звітом / службові — 10
+
+[PP.min_tariff_rate](../measures/pp-min-tariff-rate.md) · [PP.Електронна пошта](../measures/pp-elektronna-poshta.md) · [PP.Максимум вилки](../measures/pp-maksymum-vylky.md) · [PP.Мінімум вилки](../measures/pp-minimum-vylky.md) · [PP.Офіс (штат)](../measures/pp-ofis-shtat.md) · [PP.Позиція в окладній вилці](../measures/pp-pozytsiia-v-okladnii-vyltsi.md) · [PP.Робочий телефон](../measures/pp-robochyi-telefon.md) · [PP.Робочі години](../measures/pp-robochi-hodyny.md) · [PP.Середина вилки](../measures/pp-seredyna-vylky.md) · [PP.Тривалість довгих відпусток](../measures/pp-tryvalist-dovhykh-vidpustok.md)
 
 ## Нотатки
 

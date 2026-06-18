@@ -72,7 +72,7 @@ graph LR
 
 ## На сторінках звіту
 
-[Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
+- [Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md) — Filter Pannel
 
 ## Пов'язані міри
 

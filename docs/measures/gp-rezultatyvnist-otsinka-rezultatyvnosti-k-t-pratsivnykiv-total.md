@@ -72,7 +72,7 @@ graph LR
 
 ## На сторінках звіту
 
-[Group Profile](../report/group-profile.md)
+- [Group Profile](../report/group-profile.md) — Результативність та оцінка › Оцінка результативності › Оцінка керівника та самооцінка
 
 ## Пов'язані міри
 

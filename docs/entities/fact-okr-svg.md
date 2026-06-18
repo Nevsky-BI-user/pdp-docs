@@ -142,9 +142,15 @@
 
 ## Пов'язані міри
 
-Усього: 2.
-- [PP.OKR.SVG.IsCurrentEmployee](../measures/pp-okr-svg-iscurrentemployee.md)
-- [PP.SVG.OKR.Детально](../measures/pp-svg-okr-detalno.md)
+Усього: **2**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Personal Profile](../report/personal-profile.md) — 1
+
+**Результативність та оцінка › OKR.детально:** [PP.SVG.OKR.Детально](../measures/pp-svg-okr-detalno.md)
+
+### Поза звітом / службові — 1
+
+[PP.OKR.SVG.IsCurrentEmployee](../measures/pp-okr-svg-iscurrentemployee.md)
 
 ## Нотатки
 

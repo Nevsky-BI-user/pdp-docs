@@ -12,7 +12,11 @@
   "reportPages": [
     {
       "display": "Personal Profile",
-      "slug": "personal-profile"
+      "slug": "personal-profile",
+      "groups": [
+        "Винагорода",
+        "Загальна інформація"
+      ]
     }
   ],
   "dependencies": {

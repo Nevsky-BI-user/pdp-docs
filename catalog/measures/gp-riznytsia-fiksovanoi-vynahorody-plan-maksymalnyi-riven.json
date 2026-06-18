@@ -12,11 +12,15 @@
   "reportPages": [
     {
       "display": "Group Profile",
-      "slug": "group-profile"
+      "slug": "group-profile",
+      "groups": [
+        "TRS"
+      ]
     },
     {
       "display": "Підсказка \"Макc винагорода (план)\"",
-      "slug": "pidskazka-makc-vynahoroda-plan"
+      "slug": "pidskazka-makc-vynahoroda-plan",
+      "groups": []
     }
   ],
   "dependencies": {

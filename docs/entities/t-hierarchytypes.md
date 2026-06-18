@@ -22,68 +22,69 @@
 
 ## Пов'язані міри
 
-Усього: 153.
-- [5AC.Коефіцієнт абсентеїзму](../measures/5ac-koefitsiient-absenteizmu.md)
-- [AC.Burnout_Risk.Панель фільтрів.Звільнені](../measures/ac-burnout-risk-panel-filtriv-zvilneni.md)
-- [AC.Burnout_risk.Застосувати вибір](../measures/ac-burnout-risk-zastosuvaty-vybir.md)
-- [AC.Burnout_risk.Панель фільтрів.Працюючі](../measures/ac-burnout-risk-panel-filtriv-pratsiuiuchi.md)
-- [AC.Loss_Productivity.Застосувати вибір](../measures/ac-loss-productivity-zastosuvaty-vybir.md)
-- [AC.Loss_Productivity.Панель фільтрів](../measures/ac-loss-productivity-panel-filtriv.md)
-- [AC.Відсоток днів відпустки в робочі дні](../measures/ac-vidsotok-dniv-vidpustky-v-robochi-dni.md)
-- [AC.Доля співробітників з відпустками понад 10 днів](../measures/ac-dolia-spivrobitnykiv-z-vidpustkamy-ponad-10-dniv.md)
-- [AC.Лідер за невикористаними днями відпустки](../measures/ac-lider-za-nevykorystanymy-dniamy-vidpustky.md)
-- [AC.Лідер за часом без відпустки](../measures/ac-lider-za-chasom-bez-vidpustky.md)
-- [AC.Середня кількість днів використаної відпустки](../measures/ac-serednia-kilkist-dniv-vykorystanoi-vidpustky.md)
-- [AC.Середня кількість днів невикористаної відпустки](../measures/ac-serednia-kilkist-dniv-nevykorystanoi-vidpustky.md)
-- [AC.Середня кількість лікарняних на співробітника](../measures/ac-serednia-kilkist-likarnianykh-na-spivrobitnyka.md)
-- [AC.Середня тривалість відпустки співробітника, днів](../measures/ac-serednia-tryvalist-vidpustky-spivrobitnyka-dniv.md)
-- [AC.Середня тривалість лікарняного на співробітника](../measures/ac-serednia-tryvalist-likarnianoho-na-spivrobitnyka.md)
-- [GP.FinBP](../measures/gp-finbp.md)
-- [GP.HRBP](../measures/gp-hrbp.md)
-- [GP.Nav.Панель фільтрів](../measures/gp-nav-panel-filtriv.md)
-- [GP.Виконання плану ФОП YTD (%)](../measures/gp-vykonannia-planu-fop-ytd.md)
-- [GP.Доля Line (%)](../measures/gp-dolia-line.md)
-- [GP.Доля Middle managers (%)](../measures/gp-dolia-middle-managers.md)
-- [GP.Доля Senior managers (%)](../measures/gp-dolia-senior-managers.md)
-- [GP.Доля Specialists (%)](../measures/gp-dolia-specialists.md)
-- [GP.Доля Workers (%)](../measures/gp-dolia-workers.md)
-- [GP.Доля гібрид онлайн (%)](../measures/gp-dolia-hibryd-onlain.md)
-- [GP.Доля гібрид офлайн (%)](../measures/gp-dolia-hibryd-oflain.md)
-- [GP.Доля заброньованих чоловіків(%)](../measures/gp-dolia-zabronovanykh-cholovikiv.md)
-- [GP.Доля команди з доплатою за роз’їзний характер роботи, %](../measures/gp-dolia-komandy-z-doplatoiu-za-roziznyi-kharakter-roboty.md)
-- [GP.Доля команди з доплатою за роз’їзний характер роботи, % факт](../measures/gp-dolia-komandy-z-doplatoiu-za-roziznyi-kharakter-roboty-fakt.md)
-- [GP.Доля команди з доплатою за шкідливі умови праці, %](../measures/gp-dolia-komandy-z-doplatoiu-za-shkidlyvi-umovy-pratsi.md)
-- [GP.Доля команди з доплатою за шкідливі умови праці, % факт](../measures/gp-dolia-komandy-z-doplatoiu-za-shkidlyvi-umovy-pratsi-fakt.md)
-- [GP.Доля команди з квартальною премією, % факт](../measures/gp-dolia-komandy-z-kvartalnoiu-premiieiu-fakt.md)
-- [GP.Доля команди з квартальню премією, %](../measures/gp-dolia-komandy-z-kvartalniu-premiieiu.md)
-- [GP.Доля команди з навчанням, %](../measures/gp-dolia-komandy-z-navchanniam.md)
-- [GP.Доля команди з позикою на ноутбук (%) (діюча)](../measures/gp-dolia-komandy-z-pozykoiu-na-noutbuk-diiucha.md)
-- [GP.Доля команди з премією за місяць, %](../measures/gp-dolia-komandy-z-premiieiu-za-misiats.md)
-- [GP.Доля команди з премією за місяць, % факт](../measures/gp-dolia-komandy-z-premiieiu-za-misiats-fakt.md)
-- [GP.Доля команди з річним бонусом, %](../measures/gp-dolia-komandy-z-richnym-bonusom.md)
-- [GP.Доля команди з річними бонусами, % факт](../measures/gp-dolia-komandy-z-richnymy-bonusamy-fakt.md)
-- [GP.Доля команди з соціальними виплатами, %](../measures/gp-dolia-komandy-z-sotsialnymy-vyplatamy.md)
-- [GP.Доля команди з щомісячною премією, %](../measures/gp-dolia-komandy-z-shchomisiachnoiu-premiieiu.md)
-- [GP.Доля команди з щомісячною премією, % факт](../measures/gp-dolia-komandy-z-shchomisiachnoiu-premiieiu-fakt.md)
-- [GP.Доля команди із доплатою за наставництво, %](../measures/gp-dolia-komandy-iz-doplatoiu-za-nastavnytstvo.md)
-- [GP.Доля команди із позиками](../measures/gp-dolia-komandy-iz-pozykamy.md)
-- [GP.Доля команди із премією МХП Зірки, %](../measures/gp-dolia-komandy-iz-premiieiu-mkhp-zirky.md)
-- [GP.Доля команди із премією за Банк ідей, %](../measures/gp-dolia-komandy-iz-premiieiu-za-bank-idei.md)
-- [GP.Доля команди із премією за внутрішнє тренерство, %](../measures/gp-dolia-komandy-iz-premiieiu-za-vnutrishnie-trenerstvo.md)
-- [GP.Доля команди із премією за збереження та розширення земельного банку, %](../measures/gp-dolia-komandy-iz-premiieiu-za-zberezhennia-ta-rozshyrennia-zemelnoho-banku.md)
-- [GP.Доля команди із премією за програмою «Приведи друга», %](../measures/gp-dolia-komandy-iz-premiieiu-za-prohramoiu-pryvedy-druha.md)
-- [GP.Доля команди із премією за сумісництво, факт](../measures/gp-dolia-komandy-iz-premiieiu-za-sumisnytstvo-fakt.md)
-- [GP.Доля команди із проектним бонусом за стратегічні ІТ проєкти, %](../measures/gp-dolia-komandy-iz-proektnym-bonusom-za-stratehichni-it-proiekty.md)
-- [GP.Доля команди із разовою премією за програмою визнання, %](../measures/gp-dolia-komandy-iz-razovoiu-premiieiu-za-prohramoiu-vyznannia.md)
-- [GP.Доля команди із інвестиційним проєктним бонусом, %](../measures/gp-dolia-komandy-iz-investytsiinym-proiektnym-bonusom.md)
-- [GP.Доля онлайн (%)](../measures/gp-dolia-onlain.md)
-- [GP.Доля операціоністів](../measures/gp-dolia-operatsionistiv.md)
-- [GP.Доля офлайн (%)](../measures/gp-dolia-oflain.md)
-- [GP.Доля польових (%)](../measures/gp-dolia-polovykh.md)
-- [GP.Доля співробітників команди з наявними відпустками понад 10 днів](../measures/gp-dolia-spivrobitnykiv-komandy-z-naiavnymy-vidpustkamy-ponad-10-dniv.md)
-- [GP.Доля студентів](../measures/gp-dolia-studentiv.md)
-- [GP.Доля учасників команди із зміною зарплати (окладу), %](../measures/gp-dolia-uchasnykiv-komandy-iz-zminoiu-zarplaty-okladu.md)
-- … і ще 93
+Усього: **153**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Group Profile](../report/group-profile.md) — 126
+
+**Інші візуали:** [GP.FinBP](../measures/gp-finbp.md) · [GP.HRBP](../measures/gp-hrbp.md) · [GP.Доля заброньованих чоловіків(%)](../measures/gp-dolia-zabronovanykh-cholovikiv.md) · [GP.Доля команди з доплатою за шкідливі умови праці, %](../measures/gp-dolia-komandy-z-doplatoiu-za-shkidlyvi-umovy-pratsi.md) · [GP.Доля співробітників команди з наявними відпустками понад 10 днів](../measures/gp-dolia-spivrobitnykiv-komandy-z-naiavnymy-vidpustkamy-ponad-10-dniv.md) · [GP.Доля чоловіків під ризиком мобілізації(%)](../measures/gp-dolia-cholovikiv-pid-ryzykom-mobilizatsii.md) · [GP.Керівник](../measures/gp-kerivnyk.md) · [GP.Команда](../measures/gp-komanda.md) · [GP.Напрям](../measures/gp-napriam.md) · [GP.Плинність (%)](../measures/gp-plynnist.md) · [GP.Піднапрям](../measures/gp-pidnapriam.md) · [GP.Середня заробітна плата](../measures/gp-serednia-zarobitna-plata.md) · [GP.Середня кількість днів невикористаної відпустки співробітником](../measures/gp-serednia-kilkist-dniv-nevykorystanoi-vidpustky-spivrobitnykom.md) · [GP.Середній розмір доплати за шкідливі умови праці](../measures/gp-serednii-rozmir-doplaty-za-shkidlyvi-umovy-pratsi.md) · [GP.Середній стаж в команді, років](../measures/gp-serednii-stazh-v-komandi-rokiv.md) · [Доля керівників серед всіх співробітників (%)](../measures/dolia-kerivnykiv-sered-vsikh-spivrobitnykiv.md) · [Доля управлінських категорій серед всіх співробітників (%)](../measures/dolia-upravlinskykh-katehorii-sered-vsikh-spivrobitnykiv.md)
+
+**TRS:** [GP.Доля команди з доплатою за роз’їзний характер роботи, %](../measures/gp-dolia-komandy-z-doplatoiu-za-roziznyi-kharakter-roboty.md) · [GP.Доля команди з доплатою за роз’їзний характер роботи, % факт](../measures/gp-dolia-komandy-z-doplatoiu-za-roziznyi-kharakter-roboty-fakt.md) · [GP.Доля команди з доплатою за шкідливі умови праці, %](../measures/gp-dolia-komandy-z-doplatoiu-za-shkidlyvi-umovy-pratsi.md) · [GP.Доля команди з доплатою за шкідливі умови праці, % факт](../measures/gp-dolia-komandy-z-doplatoiu-za-shkidlyvi-umovy-pratsi-fakt.md) · [GP.Доля команди з квартальною премією, % факт](../measures/gp-dolia-komandy-z-kvartalnoiu-premiieiu-fakt.md) · [GP.Доля команди з квартальню премією, %](../measures/gp-dolia-komandy-z-kvartalniu-premiieiu.md) · [GP.Доля команди з навчанням, %](../measures/gp-dolia-komandy-z-navchanniam.md) · [GP.Доля команди з позикою на ноутбук (%) (діюча)](../measures/gp-dolia-komandy-z-pozykoiu-na-noutbuk-diiucha.md) · [GP.Доля команди з премією за місяць, %](../measures/gp-dolia-komandy-z-premiieiu-za-misiats.md) · [GP.Доля команди з премією за місяць, % факт](../measures/gp-dolia-komandy-z-premiieiu-za-misiats-fakt.md) · [GP.Доля команди з річним бонусом, %](../measures/gp-dolia-komandy-z-richnym-bonusom.md) · [GP.Доля команди з річними бонусами, % факт](../measures/gp-dolia-komandy-z-richnymy-bonusamy-fakt.md) · [GP.Доля команди з соціальними виплатами, %](../measures/gp-dolia-komandy-z-sotsialnymy-vyplatamy.md) · [GP.Доля команди з щомісячною премією, %](../measures/gp-dolia-komandy-z-shchomisiachnoiu-premiieiu.md) · [GP.Доля команди з щомісячною премією, % факт](../measures/gp-dolia-komandy-z-shchomisiachnoiu-premiieiu-fakt.md) · [GP.Доля команди із доплатою за наставництво, %](../measures/gp-dolia-komandy-iz-doplatoiu-za-nastavnytstvo.md) · [GP.Доля команди із позиками](../measures/gp-dolia-komandy-iz-pozykamy.md) · [GP.Доля команди із премією МХП Зірки, %](../measures/gp-dolia-komandy-iz-premiieiu-mkhp-zirky.md) · [GP.Доля команди із премією за Банк ідей, %](../measures/gp-dolia-komandy-iz-premiieiu-za-bank-idei.md) · [GP.Доля команди із премією за внутрішнє тренерство, %](../measures/gp-dolia-komandy-iz-premiieiu-za-vnutrishnie-trenerstvo.md) · [GP.Доля команди із премією за збереження та розширення земельного банку, %](../measures/gp-dolia-komandy-iz-premiieiu-za-zberezhennia-ta-rozshyrennia-zemelnoho-banku.md) · [GP.Доля команди із премією за програмою «Приведи друга», %](../measures/gp-dolia-komandy-iz-premiieiu-za-prohramoiu-pryvedy-druha.md) · [GP.Доля команди із премією за сумісництво, факт](../measures/gp-dolia-komandy-iz-premiieiu-za-sumisnytstvo-fakt.md) · [GP.Доля команди із проектним бонусом за стратегічні ІТ проєкти, %](../measures/gp-dolia-komandy-iz-proektnym-bonusom-za-stratehichni-it-proiekty.md) · [GP.Доля команди із разовою премією за програмою визнання, %](../measures/gp-dolia-komandy-iz-razovoiu-premiieiu-za-prohramoiu-vyznannia.md) · [GP.Доля команди із інвестиційним проєктним бонусом, %](../measures/gp-dolia-komandy-iz-investytsiinym-proiektnym-bonusom.md) · [GP.Доля учасників команди із зміною зарплати (окладу), %](../measures/gp-dolia-uchasnykiv-komandy-iz-zminoiu-zarplaty-okladu.md) · [GP.К-ть співробітників, що отримали позику на ноутбук (діюча)](../measures/gp-k-t-spivrobitnykiv-shcho-otrymaly-pozyku-na-noutbuk-diiucha.md) · [GP.К-ть співробітників, що отримують виплати на мобільний зв’язок](../measures/gp-k-t-spivrobitnykiv-shcho-otrymuiut-vyplaty-na-mobilnyi-zviazok.md) · [GP.К-ть співробітників, що отримують виплати на оренду житла](../measures/gp-k-t-spivrobitnykiv-shcho-otrymuiut-vyplaty-na-orendu-zhytla.md) · [GP.Розподіл у вилці.SVG](../measures/gp-rozpodil-u-vyltsi-svg.md) · [GP.Різниця фіксованої винагороди (план).Максимальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-plan-maksymalnyi-riven.md) · [GP.Різниця фіксованої винагороди (план).Мінімальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-plan-minimalnyi-riven.md) · [GP.Різниця фіксованої винагороди (факт).Максимальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-maksymalnyi-riven.md) · [GP.Різниця фіксованої винагороди (факт).Мінімальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-minimalnyi-riven.md) · [GP.Середня зарплата (оклад)](../measures/gp-serednia-zarplata-oklad.md) · [GP.Середнє зростання цільової річної винагороди, до оподаткування](../measures/gp-serednie-zrostannia-tsilovoi-richnoi-vynahorody-do-opodatkuvannia.md) · [GP.Середні витрати на мобільний зв’язок](../measures/gp-seredni-vytraty-na-mobilnyi-zviazok.md) · [GP.Середні витрати на оренду житла](../measures/gp-seredni-vytraty-na-orendu-zhytla.md) · [GP.Середній % зростання зарплати (окладу) за 12 міс](../measures/gp-serednii-zrostannia-zarplaty-okladu-za-12-mis.md) · [GP.Середній дохід без річного бонуса (за ост. 12 міс)](../measures/gp-serednii-dokhid-bez-richnoho-bonusa-za-ost-12-mis.md) · [GP.Середній дохід з річним бонусом (за ост. 12 міс)](../measures/gp-serednii-dokhid-z-richnym-bonusom-za-ost-12-mis.md) · [GP.Середній розмір доплат за суміщення, факт](../measures/gp-serednii-rozmir-doplat-za-sumishchennia-fakt.md) · [GP.Середній розмір доплати за наставництво](../measures/gp-serednii-rozmir-doplaty-za-nastavnytstvo.md) · [GP.Середній розмір доплати за роз’їзний характер роботи](../measures/gp-serednii-rozmir-doplaty-za-roziznyi-kharakter-roboty.md) · [GP.Середній розмір доплати за роз’їзний характер роботи, факт](../measures/gp-serednii-rozmir-doplaty-za-roziznyi-kharakter-roboty-fakt.md) · [GP.Середній розмір доплати за шкідливі умови праці](../measures/gp-serednii-rozmir-doplaty-za-shkidlyvi-umovy-pratsi.md) · [GP.Середній розмір доплати за шкідливі умови праці, факт](../measures/gp-serednii-rozmir-doplaty-za-shkidlyvi-umovy-pratsi-fakt.md) · [GP.Середній розмір квартальної премії](../measures/gp-serednii-rozmir-kvartalnoi-premii.md) · [GP.Середній розмір квартальної премії, факт](../measures/gp-serednii-rozmir-kvartalnoi-premii-fakt.md) · [GP.Середній розмір позики](../measures/gp-serednii-rozmir-pozyky.md) · [GP.Середній розмір премії МХП Зірки](../measures/gp-serednii-rozmir-premii-mkhp-zirky.md) · [GP.Середній розмір премії за Банк ідей](../measures/gp-serednii-rozmir-premii-za-bank-idei.md) · [GP.Середній розмір премії за внутрішнє тренерство](../measures/gp-serednii-rozmir-premii-za-vnutrishnie-trenerstvo.md) · [GP.Середній розмір премії за збереження та розширення земельного банку](../measures/gp-serednii-rozmir-premii-za-zberezhennia-ta-rozshyrennia-zemelnoho-banku.md) · [GP.Середній розмір премії за місяць](../measures/gp-serednii-rozmir-premii-za-misiats.md) · [GP.Середній розмір премії за місяць, факт](../measures/gp-serednii-rozmir-premii-za-misiats-fakt.md) · [GP.Середній розмір премії за програмою «Приведи друга»](../measures/gp-serednii-rozmir-premii-za-prohramoiu-pryvedy-druha.md) · [GP.Середній розмір проектного бонус за стратегічні ІТ проєкти](../measures/gp-serednii-rozmir-proektnoho-bonus-za-stratehichni-it-proiekty.md) · [GP.Середній розмір разової премії за програмою визнання](../measures/gp-serednii-rozmir-razovoi-premii-za-prohramoiu-vyznannia.md) · [GP.Середній розмір річного бонусу](../measures/gp-serednii-rozmir-richnoho-bonusu.md) · [GP.Середній розмір річного бонусу, факт](../measures/gp-serednii-rozmir-richnoho-bonusu-fakt.md) · [GP.Середній розмір соціальної підтримки](../measures/gp-serednii-rozmir-sotsialnoi-pidtrymky.md) · [GP.Середній розмір щомісячної премії](../measures/gp-serednii-rozmir-shchomisiachnoi-premii.md) · [GP.Середній розмір щомісячної премії, факт](../measures/gp-serednii-rozmir-shchomisiachnoi-premii-fakt.md) · [GP.Середній розмір інвестиційного проєктного бонусу](../measures/gp-serednii-rozmir-investytsiinoho-proiektnoho-bonusu.md) · [GP.Середній цільовий розмір річної винагороди, до оподаткування](../measures/gp-serednii-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia.md)
+
+**Версія 1:** [GP.Доля співробітників команди з наявними відпустками понад 10 днів](../measures/gp-dolia-spivrobitnykiv-komandy-z-naiavnymy-vidpustkamy-ponad-10-dniv.md) · [GP.Доля чоловіків під ризиком мобілізації(%)](../measures/gp-dolia-cholovikiv-pid-ryzykom-mobilizatsii.md) · [GP.Плинність (%)](../measures/gp-plynnist.md) · [GP.Середня заробітна плата](../measures/gp-serednia-zarobitna-plata.md) · [GP.Середня кількість днів невикористаної відпустки співробітником](../measures/gp-serednia-kilkist-dniv-nevykorystanoi-vidpustky-spivrobitnykom.md) · [GP.Середній стаж в команді, років](../measures/gp-serednii-stazh-v-komandi-rokiv.md)
+
+**Версія 2 › Індикатори здоров'я команди:** [GP.Продуктивність.Середня оцінка команди.Значення](../measures/gp-produktyvnist-serednia-otsinka-komandy-znachennia.md) · [GP.Укомплектованість штату (%)](../measures/gp-ukomplektovanist-shtatu.md)
+
+**Версія 2 › Ризики та фокуси уваги:** [GP.Ризик втрати працівників (%)](../measures/gp-ryzyk-vtraty-pratsivnykiv.md) · [GP.Ризик втрати продуктивності (%)](../measures/gp-ryzyk-vtraty-produktyvnosti.md) · [GP.Рівень coaching (1:1), год/міс](../measures/gp-riven-coaching-1-1-hod-mis.md)
+
+**Загальна інформація:** [GP.FinBP](../measures/gp-finbp.md) · [GP.HRBP](../measures/gp-hrbp.md) · [GP.Доля Line (%)](../measures/gp-dolia-line.md) · [GP.Доля Middle managers (%)](../measures/gp-dolia-middle-managers.md) · [GP.Доля Senior managers (%)](../measures/gp-dolia-senior-managers.md) · [GP.Доля Specialists (%)](../measures/gp-dolia-specialists.md) · [GP.Доля Workers (%)](../measures/gp-dolia-workers.md) · [GP.Доля гібрид онлайн (%)](../measures/gp-dolia-hibryd-onlain.md) · [GP.Доля гібрид офлайн (%)](../measures/gp-dolia-hibryd-oflain.md) · [GP.Доля заброньованих чоловіків(%)](../measures/gp-dolia-zabronovanykh-cholovikiv.md) · [GP.Доля онлайн (%)](../measures/gp-dolia-onlain.md) · [GP.Доля операціоністів](../measures/gp-dolia-operatsionistiv.md) · [GP.Доля офлайн (%)](../measures/gp-dolia-oflain.md) · [GP.Доля польових (%)](../measures/gp-dolia-polovykh.md) · [GP.Доля студентів](../measures/gp-dolia-studentiv.md) · [GP.Доля чоловіків під ризиком мобілізації(%)](../measures/gp-dolia-cholovikiv-pid-ryzykom-mobilizatsii.md) · [GP.Керівник](../measures/gp-kerivnyk.md) · [GP.Команда](../measures/gp-komanda.md) · [GP.Кількість FTE по штату (план)](../measures/gp-kilkist-fte-po-shtatu-plan.md) · [GP.Кількість Ветеранів](../measures/gp-kilkist-veteraniv.md) · [GP.Кількість зайнятих FTE (факт)](../measures/gp-kilkist-zainiatykh-fte-fakt.md) · [GP.Кількість мобілізованих](../measures/gp-kilkist-mobilizovanykh.md) · [GP.Кількість співробітників у декретній відпустці](../measures/gp-kilkist-spivrobitnykiv-u-dekretnii-vidpusttsi.md) · [GP.Напрям](../measures/gp-napriam.md) · [GP.Піднапрям](../measures/gp-pidnapriam.md) · [GP.Середній вік](../measures/gp-serednii-vik.md) · [GP.Середній стаж в команді, років](../measures/gp-serednii-stazh-v-komandi-rokiv.md) · [GP.Укомплектованість штату (%)](../measures/gp-ukomplektovanist-shtatu.md)
+
+**Здоров'я та благополуччя:** [5AC.Коефіцієнт абсентеїзму](../measures/5ac-koefitsiient-absenteizmu.md) · [AC.Відсоток днів відпустки в робочі дні](../measures/ac-vidsotok-dniv-vidpustky-v-robochi-dni.md) · [AC.Доля співробітників з відпустками понад 10 днів](../measures/ac-dolia-spivrobitnykiv-z-vidpustkamy-ponad-10-dniv.md) · [AC.Лідер за невикористаними днями відпустки](../measures/ac-lider-za-nevykorystanymy-dniamy-vidpustky.md) · [AC.Лідер за часом без відпустки](../measures/ac-lider-za-chasom-bez-vidpustky.md) · [AC.Середня кількість днів використаної відпустки](../measures/ac-serednia-kilkist-dniv-vykorystanoi-vidpustky.md) · [AC.Середня кількість днів невикористаної відпустки](../measures/ac-serednia-kilkist-dniv-nevykorystanoi-vidpustky.md) · [AC.Середня кількість лікарняних на співробітника](../measures/ac-serednia-kilkist-likarnianykh-na-spivrobitnyka.md) · [AC.Середня тривалість відпустки співробітника, днів](../measures/ac-serednia-tryvalist-vidpustky-spivrobitnyka-dniv.md) · [AC.Середня тривалість лікарняного на співробітника](../measures/ac-serednia-tryvalist-likarnianoho-na-spivrobitnyka.md)
+
+**Результативність та оцінка › Оцінка ОКР:** [GP.Результативність.Оцінка OKR.Загальна кількість KR.CY](../measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-kr-cy.md) · [GP.Результативність.Оцінка OKR.Загальна кількість KR.PY](../measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-kr-py.md) · [GP.Результативність.Оцінка OKR.Загальна кількість OKR.CY](../measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-okr-cy.md) · [GP.Результативність.Оцінка OKR.Загальна кількість OKR.PY](../measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-okr-py.md) · [GP.Результативність.Оцінка OKR.Кількість співробітників з OKR.CY](../measures/gp-rezultatyvnist-otsinka-okr-kilkist-spivrobitnykiv-z-okr-cy.md) · [GP.Результативність.Оцінка OKR.Середня кількість KR.PY](../measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-kr-py.md) · [GP.Результативність.Оцінка OKR.Середня кількість OKR.CY](../measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-okr-cy.md) · [GP.Результативність.Оцінка OKR.Середня кількість OKR.PY](../measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-okr-py.md)
+
+**Результативність та оцінка › Оцінка результативності › Оцінка керівника та самооцінка:** [GP.Результативність.Оцінка результативності.К-ть працівників.Total](../measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-k-t-pratsivnykiv-total.md)
+
+**Результативність та оцінка › Оцінка результативності › Результативність.Детально:** [GP.Результативність.Оцінка результативності.К-ть працівників](../measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-k-t-pratsivnykiv.md)
+
+**Результативність та оцінка › Траекторія результативності:** [GP.Результативність.Оцінка результативності.Середня оцінка.Total](../measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-serednia-otsinka-total.md)
+
+### [Підсказка "Макc винагорода (план)"](../report/pidskazka-makc-vynahoroda-plan.md) — 1
+
+**Інші візуали:** [GP.Різниця фіксованої винагороди (план).Максимальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-plan-maksymalnyi-riven.md)
+
+### [Підсказка "Мін винагорода (план)"](../report/pidskazka-min-vynahoroda-plan.md) — 1
+
+**Інші візуали:** [GP.Різниця фіксованої винагороди (план).Мінімальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-plan-minimalnyi-riven.md)
+
+### [Підсказка "Макс винагорода (факт)"](../report/pidskazka-maks-vynahoroda-fakt.md) — 1
+
+**Інші візуали:** [GP.Різниця фіксованої винагороди (факт).Максимальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-maksymalnyi-riven.md)
+
+### [Підсказка "Мін винагорода (факт)"](../report/pidskazka-min-vynahoroda-fakt.md) — 1
+
+**Інші візуали:** [GP.Різниця фіксованої винагороди (факт).Мінімальний рівень](../measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-minimalnyi-riven.md)
+
+### [Під ризиком мобілізації](../report/pid-ryzykom-mobilizatsii.md) — 2
+
+**Інші візуали:** [GP.Кількість чоловіків БЕЗ ризику мобілізації(%)](../measures/gp-kilkist-cholovikiv-bez-ryzyku-mobilizatsii.md) · [GP.Кількість чоловіків під ризиком мобілізації(%)](../measures/gp-kilkist-cholovikiv-pid-ryzykom-mobilizatsii.md)
+
+### [Утримання працівників](../report/utrymannia-pratsivnykiv.md) — 3
+
+**Filter Pannel:** [AC.Burnout_risk.Застосувати вибір](../measures/ac-burnout-risk-zastosuvaty-vybir.md)
+
+**Таблиці › Звільнені:** [AC.Burnout_Risk.Панель фільтрів.Звільнені](../measures/ac-burnout-risk-panel-filtriv-zvilneni.md)
+
+**Таблиці › Працюючі:** [AC.Burnout_risk.Панель фільтрів.Працюючі](../measures/ac-burnout-risk-panel-filtriv-pratsiuiuchi.md)
+
+### [Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md) — 2
+
+**Інші візуали:** [AC.Loss_Productivity.Панель фільтрів](../measures/ac-loss-productivity-panel-filtriv.md)
+
+**Filter Pannel:** [AC.Loss_Productivity.Застосувати вибір](../measures/ac-loss-productivity-zastosuvaty-vybir.md)
+
+### Поза звітом / службові — 20
+
+[GP.Nav.Панель фільтрів](../measures/gp-nav-panel-filtriv.md) · [GP.Виконання плану ФОП YTD (%)](../measures/gp-vykonannia-planu-fop-ytd.md) · [GP.Кількість співробітників всього, чол.](../measures/gp-kilkist-spivrobitnykiv-vsoho-chol.md) · [GP.Кількість співробітників всього, чол. - Integer](../measures/gp-kilkist-spivrobitnykiv-vsoho-chol-integer.md) · [GP.ОКР.Кількість співробітників (Останній період оцінки)](../measures/gp-okr-kilkist-spivrobitnykiv-ostannii-period-otsinky.md) · [GP.ОКР.Оцінка керівника.Значення](../measures/gp-okr-otsinka-kerivnyka-znachennia.md) · [GP.ОКР.Середня оцінка команди.Значення](../measures/gp-okr-serednia-otsinka-komandy-znachennia.md) · [GP.Опція по авто, %](../measures/gp-optsiia-po-avto.md) · [GP.Оцінка результативності попередній рік](../measures/gp-otsinka-rezultatyvnosti-poperednii-rik.md) · [GP.Оцінка результативності поточний рік](../measures/gp-otsinka-rezultatyvnosti-potochnyi-rik.md) · [GP.Продуктивність.Кількість співробітників (Останній період оцінки)](../measures/gp-produktyvnist-kilkist-spivrobitnykiv-ostannii-period-otsinky.md) · [GP.Продуктивність.Оцінка керівника.Значення](../measures/gp-produktyvnist-otsinka-kerivnyka-znachennia.md) · [GP.Результативність.Оцінка OKR.Кількість співробітників з OKR.PY](../measures/gp-rezultatyvnist-otsinka-okr-kilkist-spivrobitnykiv-z-okr-py.md) · [GP.Результативність.Оцінка OKR.Фільтр деталізації KR](../measures/gp-rezultatyvnist-otsinka-okr-filtr-detalizatsii-kr.md) · [GP.Результативність.Оцінка OKR.Фільтр деталізації OKR](../measures/gp-rezultatyvnist-otsinka-okr-filtr-detalizatsii-okr.md) · [GP.Результативність.Оцінка результативності.Середня оцінка](../measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-serednia-otsinka.md) · [GP.Розподіл у вилці](../measures/gp-rozpodil-u-vyltsi.md) · [PP.Nav.Застосувати вибір](../measures/pp-nav-zastosuvaty-vybir.md) · [PP.Nav.Панель фільтрів](../measures/pp-nav-panel-filtriv.md) · [Selected.HierarchyType](../measures/selected-hierarchytype.md)
 
 ## Нотатки
 

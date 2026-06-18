@@ -74,29 +74,15 @@
 
 ## Пов'язані міри
 
-Усього: 22.
-- [PP.Годин взаємодії з керівником (Холдинг)](../measures/pp-hodyn-vzaiemodii-z-kerivnykom-kholdynh.md)
-- [PP.Годин взаємодії з керівником (співробітник)](../measures/pp-hodyn-vzaiemodii-z-kerivnykom-spivrobitnyk.md)
-- [PP.Годин взаємодії по нарадах (Холдинг)](../measures/pp-hodyn-vzaiemodii-po-naradakh-kholdynh.md)
-- [PP.Годин взаємодії по нарадах (співробітник)](../measures/pp-hodyn-vzaiemodii-po-naradakh-spivrobitnyk.md)
-- [PP.Годин взаємодії у неробочий час (Холдинг)](../measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-kholdynh.md)
-- [PP.Годин взаємодії у неробочий час (співробітник)](../measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-spivrobitnyk.md)
-- [PP.Годин для фокусної роботи (Холдинг)](../measures/pp-hodyn-dlia-fokusnoi-roboty-kholdynh.md)
-- [PP.Годин для фокусної роботи (співробітник)](../measures/pp-hodyn-dlia-fokusnoi-roboty-spivrobitnyk.md)
-- [PP.Годин загальної взаємодії (Холдинг)](../measures/pp-hodyn-zahalnoi-vzaiemodii-kholdynh.md)
-- [PP.Годин загальної взаємодії (співробітник)](../measures/pp-hodyn-zahalnoi-vzaiemodii-spivrobitnyk.md)
-- [PP.Годин керівника на взаємодію із безпосередніми підлеглими (Холдинг)](../measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-kholdynh.md)
-- [PP.Годин керівника на взаємодію із безпосередніми підлеглими (співробітник)](../measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-spivrobitnyk.md)
-- [PP.Годин нарад 1:1 з керівником (Холдинг)](../measures/pp-hodyn-narad-1-1-z-kerivnykom-kholdynh.md)
-- [PP.Годин нарад 1:1 з керівником (співробітник)](../measures/pp-hodyn-narad-1-1-z-kerivnykom-spivrobitnyk.md)
-- [PP.Довжина (границі) робочого дня (Холдинг)](../measures/pp-dovzhyna-hranytsi-robochoho-dnia-kholdynh.md)
-- [PP.Довжина (границі) робочого дня (співробітник)](../measures/pp-dovzhyna-hranytsi-robochoho-dnia-spivrobitnyk.md)
-- [PP.Доля Conflicting meeting hours (Холдинг)](../measures/pp-dolia-conflicting-meeting-hours-kholdynh.md)
-- [PP.Доля Conflicting meeting hours (співробітник)](../measures/pp-dolia-conflicting-meeting-hours-spivrobitnyk.md)
-- [PP.Розмір мережі (Холдинг, 3м)](../measures/pp-rozmir-merezhi-kholdynh-3m.md)
-- [PP.Розмір мережі (співробітник, 3м)](../measures/pp-rozmir-merezhi-spivrobitnyk-3m.md)
-- [PP.Ширина мережі (Холдинг, 3м)](../measures/pp-shyryna-merezhi-kholdynh-3m.md)
-- [PP.Ширина мережі (співробітник, 3м)](../measures/pp-shyryna-merezhi-spivrobitnyk-3m.md)
+Усього: **22**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Personal Profile](../report/personal-profile.md) — 22
+
+**VIVA › Viva:** [PP.Годин взаємодії з керівником (Холдинг)](../measures/pp-hodyn-vzaiemodii-z-kerivnykom-kholdynh.md) · [PP.Годин взаємодії з керівником (співробітник)](../measures/pp-hodyn-vzaiemodii-z-kerivnykom-spivrobitnyk.md) · [PP.Годин взаємодії по нарадах (Холдинг)](../measures/pp-hodyn-vzaiemodii-po-naradakh-kholdynh.md) · [PP.Годин взаємодії по нарадах (співробітник)](../measures/pp-hodyn-vzaiemodii-po-naradakh-spivrobitnyk.md) · [PP.Годин взаємодії у неробочий час (Холдинг)](../measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-kholdynh.md) · [PP.Годин взаємодії у неробочий час (співробітник)](../measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-spivrobitnyk.md) · [PP.Годин для фокусної роботи (Холдинг)](../measures/pp-hodyn-dlia-fokusnoi-roboty-kholdynh.md) · [PP.Годин для фокусної роботи (співробітник)](../measures/pp-hodyn-dlia-fokusnoi-roboty-spivrobitnyk.md) · [PP.Годин загальної взаємодії (Холдинг)](../measures/pp-hodyn-zahalnoi-vzaiemodii-kholdynh.md) · [PP.Годин загальної взаємодії (співробітник)](../measures/pp-hodyn-zahalnoi-vzaiemodii-spivrobitnyk.md) · [PP.Годин керівника на взаємодію із безпосередніми підлеглими (Холдинг)](../measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-kholdynh.md) · [PP.Годин керівника на взаємодію із безпосередніми підлеглими (співробітник)](../measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-spivrobitnyk.md) · [PP.Годин нарад 1:1 з керівником (Холдинг)](../measures/pp-hodyn-narad-1-1-z-kerivnykom-kholdynh.md) · [PP.Годин нарад 1:1 з керівником (співробітник)](../measures/pp-hodyn-narad-1-1-z-kerivnykom-spivrobitnyk.md) · [PP.Довжина (границі) робочого дня (Холдинг)](../measures/pp-dovzhyna-hranytsi-robochoho-dnia-kholdynh.md) · [PP.Довжина (границі) робочого дня (співробітник)](../measures/pp-dovzhyna-hranytsi-robochoho-dnia-spivrobitnyk.md) · [PP.Доля Conflicting meeting hours (Холдинг)](../measures/pp-dolia-conflicting-meeting-hours-kholdynh.md) · [PP.Доля Conflicting meeting hours (співробітник)](../measures/pp-dolia-conflicting-meeting-hours-spivrobitnyk.md) · [PP.Розмір мережі (Холдинг, 3м)](../measures/pp-rozmir-merezhi-kholdynh-3m.md) · [PP.Розмір мережі (співробітник, 3м)](../measures/pp-rozmir-merezhi-spivrobitnyk-3m.md) · [PP.Ширина мережі (Холдинг, 3м)](../measures/pp-shyryna-merezhi-kholdynh-3m.md) · [PP.Ширина мережі (співробітник, 3м)](../measures/pp-shyryna-merezhi-spivrobitnyk-3m.md)
+
+### [Group Profile](../report/group-profile.md) — 11
+
+**Viva:** [PP.Годин взаємодії з керівником (Холдинг)](../measures/pp-hodyn-vzaiemodii-z-kerivnykom-kholdynh.md) · [PP.Годин взаємодії по нарадах (Холдинг)](../measures/pp-hodyn-vzaiemodii-po-naradakh-kholdynh.md) · [PP.Годин взаємодії у неробочий час (Холдинг)](../measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-kholdynh.md) · [PP.Годин для фокусної роботи (Холдинг)](../measures/pp-hodyn-dlia-fokusnoi-roboty-kholdynh.md) · [PP.Годин загальної взаємодії (Холдинг)](../measures/pp-hodyn-zahalnoi-vzaiemodii-kholdynh.md) · [PP.Годин керівника на взаємодію із безпосередніми підлеглими (Холдинг)](../measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-kholdynh.md) · [PP.Годин нарад 1:1 з керівником (Холдинг)](../measures/pp-hodyn-narad-1-1-z-kerivnykom-kholdynh.md) · [PP.Довжина (границі) робочого дня (Холдинг)](../measures/pp-dovzhyna-hranytsi-robochoho-dnia-kholdynh.md) · [PP.Доля Conflicting meeting hours (Холдинг)](../measures/pp-dolia-conflicting-meeting-hours-kholdynh.md) · [PP.Розмір мережі (Холдинг, 3м)](../measures/pp-rozmir-merezhi-kholdynh-3m.md) · [PP.Ширина мережі (Холдинг, 3м)](../measures/pp-shyryna-merezhi-kholdynh-3m.md)
 
 ## Нотатки
 

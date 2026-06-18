@@ -44,16 +44,23 @@
 
 ## Пов'язані міри
 
-Усього: 9.
-- [GP.Продуктивність.Кількість співробітників (Останній період оцінки)](../measures/gp-produktyvnist-kilkist-spivrobitnykiv-ostannii-period-otsinky.md)
-- [GP.Продуктивність.Останній період оцінки](../measures/gp-produktyvnist-ostannii-period-otsinky.md)
-- [GP.Продуктивність.Оцінка керівника.Значення](../measures/gp-produktyvnist-otsinka-kerivnyka-znachennia.md)
-- [GP.Продуктивність.Середня оцінка команди.Значення](../measures/gp-produktyvnist-serednia-otsinka-komandy-znachennia.md)
-- [GP.Результативність.Оцінка результативності.К-ть працівників.Total](../measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-k-t-pratsivnykiv-total.md)
-- [GP.Результативність.Оцінка результативності.Середня оцінка.Total](../measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-serednia-otsinka-total.md)
-- [PP.SVG.Оцінка результативності.Total](../measures/pp-svg-otsinka-rezultatyvnosti-total.md)
-- [PP.Оцінка результативності.Керівником.Total](../measures/pp-otsinka-rezultatyvnosti-kerivnykom-total.md)
-- [PP.Оцінка результативності.Самооцінка.Total](../measures/pp-otsinka-rezultatyvnosti-samootsinka-total.md)
+Усього: **9**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Personal Profile](../report/personal-profile.md) — 1
+
+**Результативність та оцінка › Результативність:** [PP.SVG.Оцінка результативності.Total](../measures/pp-svg-otsinka-rezultatyvnosti-total.md)
+
+### [Group Profile](../report/group-profile.md) — 3
+
+**Версія 2 › Індикатори здоров'я команди:** [GP.Продуктивність.Середня оцінка команди.Значення](../measures/gp-produktyvnist-serednia-otsinka-komandy-znachennia.md)
+
+**Результативність та оцінка › Оцінка результативності › Оцінка керівника та самооцінка:** [GP.Результативність.Оцінка результативності.К-ть працівників.Total](../measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-k-t-pratsivnykiv-total.md)
+
+**Результативність та оцінка › Траекторія результативності:** [GP.Результативність.Оцінка результативності.Середня оцінка.Total](../measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-serednia-otsinka-total.md)
+
+### Поза звітом / службові — 5
+
+[GP.Продуктивність.Кількість співробітників (Останній період оцінки)](../measures/gp-produktyvnist-kilkist-spivrobitnykiv-ostannii-period-otsinky.md) · [GP.Продуктивність.Останній період оцінки](../measures/gp-produktyvnist-ostannii-period-otsinky.md) · [GP.Продуктивність.Оцінка керівника.Значення](../measures/gp-produktyvnist-otsinka-kerivnyka-znachennia.md) · [PP.Оцінка результативності.Керівником.Total](../measures/pp-otsinka-rezultatyvnosti-kerivnykom-total.md) · [PP.Оцінка результативності.Самооцінка.Total](../measures/pp-otsinka-rezultatyvnosti-samootsinka-total.md)
 
 ## Нотатки
 

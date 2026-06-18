@@ -29,11 +29,11 @@
 
 ## Пов'язані міри
 
-Усього: 4.
-- [GP.ОКР.Кількість співробітників (Останній період оцінки)](../measures/gp-okr-kilkist-spivrobitnykiv-ostannii-period-otsinky.md)
-- [GP.ОКР.Останній рік](../measures/gp-okr-ostannii-rik.md)
-- [GP.ОКР.Оцінка керівника.Значення](../measures/gp-okr-otsinka-kerivnyka-znachennia.md)
-- [GP.ОКР.Середня оцінка команди.Значення](../measures/gp-okr-serednia-otsinka-komandy-znachennia.md)
+Усього: **4**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### Поза звітом / службові — 4
+
+[GP.ОКР.Кількість співробітників (Останній період оцінки)](../measures/gp-okr-kilkist-spivrobitnykiv-ostannii-period-otsinky.md) · [GP.ОКР.Останній рік](../measures/gp-okr-ostannii-rik.md) · [GP.ОКР.Оцінка керівника.Значення](../measures/gp-okr-otsinka-kerivnyka-znachennia.md) · [GP.ОКР.Середня оцінка команди.Значення](../measures/gp-okr-serednia-otsinka-komandy-znachennia.md)
 
 ## Нотатки
 

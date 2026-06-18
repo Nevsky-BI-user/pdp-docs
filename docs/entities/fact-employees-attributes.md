@@ -48,10 +48,15 @@
 
 ## Пов'язані міри
 
-Усього: 3.
-- [GP.Опція по авто, % план.SVG](../measures/gp-optsiia-po-avto-plan-svg.md)
-- [GP.Опція по авто, % факт.SVG](../measures/gp-optsiia-po-avto-fakt-svg.md)
-- [PP.Тип опції по авто](../measures/pp-typ-optsii-po-avto.md)
+Усього: **3**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Personal Profile](../report/personal-profile.md) — 1
+
+**Винагорода:** [PP.Тип опції по авто](../measures/pp-typ-optsii-po-avto.md)
+
+### [Group Profile](../report/group-profile.md) — 2
+
+**TRS:** [GP.Опція по авто, % план.SVG](../measures/gp-optsiia-po-avto-plan-svg.md) · [GP.Опція по авто, % факт.SVG](../measures/gp-optsiia-po-avto-fakt-svg.md)
 
 ## Нотатки
 

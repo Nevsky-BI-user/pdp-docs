@@ -12,11 +12,15 @@
   "reportPages": [
     {
       "display": "Personal Profile",
-      "slug": "personal-profile"
+      "slug": "personal-profile",
+      "groups": [
+        "Винагорода"
+      ]
     },
     {
       "display": "TT:Щомісячна премія",
-      "slug": "tt-shchomisiachna-premiia"
+      "slug": "tt-shchomisiachna-premiia",
+      "groups": []
     }
   ],
   "dependencies": {

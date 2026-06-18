@@ -67,7 +67,7 @@ graph LR
 
 ## На сторінках звіту
 
-[TT:Життєвий цикл](../report/tt-zhyttievyi-tsykl.md)
+- [TT:Життєвий цикл](../report/tt-zhyttievyi-tsykl.md)
 
 ## Пов'язані міри
 

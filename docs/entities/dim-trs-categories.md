@@ -25,8 +25,11 @@
 
 ## Пов'язані міри
 
-Усього: 1.
-- [PP.TRS_category_Y_axis_max_value_Доплати_за_суміщення](../measures/pp-trs-category-y-axis-max-value-doplaty-za-sumishchennia.md)
+Усього: **1**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [TT:Зміна фікс винагороди](../report/tt-zmina-fiks-vynahorody.md) — 1
+
+**Інші візуали:** [PP.TRS_category_Y_axis_max_value_Доплати_за_суміщення](../measures/pp-trs-category-y-axis-max-value-doplaty-za-sumishchennia.md)
 
 ## Нотатки
 

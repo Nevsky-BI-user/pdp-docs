@@ -12,7 +12,11 @@
   "reportPages": [
     {
       "display": "Group Profile",
-      "slug": "group-profile"
+      "slug": "group-profile",
+      "groups": [
+        "Версія 1",
+        "Версія 2 › Індикатори здоров'я команди"
+      ]
     }
   ],
   "dependencies": {

@@ -59,7 +59,7 @@ graph LR
 
 ## На сторінках звіту
 
-[Personal Profile](../report/personal-profile.md)
+- [Personal Profile](../report/personal-profile.md) — Загальна інформація
 
 ## Пов'язані міри
 

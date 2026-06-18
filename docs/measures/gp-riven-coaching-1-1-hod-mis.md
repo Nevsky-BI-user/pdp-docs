@@ -89,7 +89,7 @@ graph LR
 
 ## На сторінках звіту
 
-[Group Profile](../report/group-profile.md)
+- [Group Profile](../report/group-profile.md) — Версія 2 › Ризики та фокуси уваги
 
 ## Пов'язані міри
 

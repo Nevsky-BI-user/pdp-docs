@@ -12,7 +12,8 @@
   "reportPages": [
     {
       "display": "Під ризиком мобілізації",
-      "slug": "pid-ryzykom-mobilizatsii"
+      "slug": "pid-ryzykom-mobilizatsii",
+      "groups": []
     }
   ],
   "dependencies": {

@@ -50,7 +50,8 @@ graph LR
 
 ## На сторінках звіту
 
-[Personal Profile](../report/personal-profile.md) · [TT:Життєвий цикл](../report/tt-zhyttievyi-tsykl.md)
+- [Personal Profile](../report/personal-profile.md) — Життєвий цикл
+- [TT:Життєвий цикл](../report/tt-zhyttievyi-tsykl.md)
 
 ## Пов'язані міри
 

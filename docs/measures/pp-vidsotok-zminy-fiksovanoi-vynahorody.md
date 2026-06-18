@@ -46,7 +46,8 @@ graph LR
 
 ## На сторінках звіту
 
-[Personal Profile](../report/personal-profile.md) · [TT:Зміна фікс винагороди](../report/tt-zmina-fiks-vynahorody.md)
+- [Personal Profile](../report/personal-profile.md) — Винагорода
+- [TT:Зміна фікс винагороди](../report/tt-zmina-fiks-vynahorody.md)
 
 ## Пов'язані міри
 

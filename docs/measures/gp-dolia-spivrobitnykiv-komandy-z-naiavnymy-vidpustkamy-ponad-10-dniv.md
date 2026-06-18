@@ -91,7 +91,7 @@ graph LR
 
 ## На сторінках звіту
 
-[Group Profile](../report/group-profile.md)
+- [Group Profile](../report/group-profile.md) — Версія 1
 
 ## Пов'язані міри
 

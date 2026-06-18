@@ -69,7 +69,8 @@ graph LR
 
 ## На сторінках звіту
 
-[Personal Profile](../report/personal-profile.md) · [ТТ:"Інші доплати"](../report/tt-inshi-doplaty.md)
+- [Personal Profile](../report/personal-profile.md) — Винагорода
+- [ТТ:"Інші доплати"](../report/tt-inshi-doplaty.md)
 
 ## Пов'язані міри
 

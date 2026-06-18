@@ -74,7 +74,7 @@ graph LR
 
 ## На сторінках звіту
 
-[Personal Profile](../report/personal-profile.md)
+- [Personal Profile](../report/personal-profile.md) — Здоров'я та благополуччя
 
 ## Пов'язані міри
 

@@ -55,7 +55,7 @@ graph LR
 
 ## На сторінках звіту
 
-[Group Profile](../report/group-profile.md)
+- [Group Profile](../report/group-profile.md)
 
 ## Пов'язані міри
 

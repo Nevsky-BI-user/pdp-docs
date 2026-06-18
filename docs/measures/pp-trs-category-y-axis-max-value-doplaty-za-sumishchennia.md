@@ -53,7 +53,7 @@ graph LR
 
 ## На сторінках звіту
 
-[TT:Зміна фікс винагороди](../report/tt-zmina-fiks-vynahorody.md)
+- [TT:Зміна фікс винагороди](../report/tt-zmina-fiks-vynahorody.md)
 
 ## Пов'язані міри
 

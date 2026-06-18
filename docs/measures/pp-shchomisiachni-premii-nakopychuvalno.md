@@ -58,7 +58,8 @@ graph LR
 
 ## На сторінках звіту
 
-[Personal Profile](../report/personal-profile.md) · [TT:Щомісячна премія](../report/tt-shchomisiachna-premiia.md)
+- [Personal Profile](../report/personal-profile.md) — Винагорода
+- [TT:Щомісячна премія](../report/tt-shchomisiachna-premiia.md)
 
 ## Пов'язані міри
 

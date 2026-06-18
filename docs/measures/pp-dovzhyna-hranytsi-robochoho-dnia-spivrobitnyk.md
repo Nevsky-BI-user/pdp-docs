@@ -61,7 +61,7 @@ graph LR
 
 ## На сторінках звіту
 
-[Personal Profile](../report/personal-profile.md)
+- [Personal Profile](../report/personal-profile.md) — VIVA › Viva
 
 ## Пов'язані міри
 

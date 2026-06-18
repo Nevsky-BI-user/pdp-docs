@@ -151,7 +151,7 @@ graph LR
 
 ## На сторінках звіту
 
-[Group Profile](../report/group-profile.md)
+- [Group Profile](../report/group-profile.md) — Версія 2 › Індикатори здоров'я команди, Загальна інформація
 
 ## Пов'язані міри
 

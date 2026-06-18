@@ -12,7 +12,10 @@
   "reportPages": [
     {
       "display": "Утримання працівників",
-      "slug": "utrymannia-pratsivnykiv"
+      "slug": "utrymannia-pratsivnykiv",
+      "groups": [
+        "Таблиці › Працюючі"
+      ]
     }
   ],
   "dependencies": {

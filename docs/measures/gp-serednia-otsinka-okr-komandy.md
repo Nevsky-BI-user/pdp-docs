@@ -43,7 +43,7 @@ graph LR
 
 ## На сторінках звіту
 
-[Group Profile](../report/group-profile.md)
+- [Group Profile](../report/group-profile.md) — Версія 2 › Індикатори здоров'я команди
 
 ## Пов'язані міри
 

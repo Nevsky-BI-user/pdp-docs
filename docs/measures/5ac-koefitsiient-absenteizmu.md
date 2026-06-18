@@ -102,7 +102,7 @@ graph LR
 
 ## На сторінках звіту
 
-[Group Profile](../report/group-profile.md)
+- [Group Profile](../report/group-profile.md) — Здоров'я та благополуччя
 
 ## Пов'язані міри
 

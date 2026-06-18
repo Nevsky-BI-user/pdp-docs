@@ -113,7 +113,8 @@ graph LR
 
 ## На сторінках звіту
 
-[Group Profile](../report/group-profile.md) · [Підсказка "Макc винагорода (план)"](../report/pidskazka-makc-vynahoroda-plan.md)
+- [Group Profile](../report/group-profile.md) — TRS
+- [Підсказка "Макc винагорода (план)"](../report/pidskazka-makc-vynahoroda-plan.md)
 
 ## Пов'язані міри
 

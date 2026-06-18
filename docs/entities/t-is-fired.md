@@ -20,9 +20,15 @@
 
 ## Пов'язані міри
 
-Усього: 2.
-- [AC.Burnout_Risk.c_rows](../measures/ac-burnout-risk-c-rows.md)
-- [AC.Burnout_risk.Застосувати вибір](../measures/ac-burnout-risk-zastosuvaty-vybir.md)
+Усього: **2**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Утримання працівників](../report/utrymannia-pratsivnykiv.md) — 1
+
+**Filter Pannel:** [AC.Burnout_risk.Застосувати вибір](../measures/ac-burnout-risk-zastosuvaty-vybir.md)
+
+### Поза звітом / службові — 1
+
+[AC.Burnout_Risk.c_rows](../measures/ac-burnout-risk-c-rows.md)
 
 ## Нотатки
 

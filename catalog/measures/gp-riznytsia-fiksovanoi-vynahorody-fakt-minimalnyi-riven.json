@@ -12,11 +12,15 @@
   "reportPages": [
     {
       "display": "Group Profile",
-      "slug": "group-profile"
+      "slug": "group-profile",
+      "groups": [
+        "TRS"
+      ]
     },
     {
       "display": "Підсказка \"Мін винагорода (факт)\"",
-      "slug": "pidskazka-min-vynahoroda-fakt"
+      "slug": "pidskazka-min-vynahoroda-fakt",
+      "groups": []
     }
   ],
   "dependencies": {

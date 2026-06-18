@@ -102,44 +102,19 @@
 
 ## Пов'язані міри
 
-Усього: 37.
-- [PP.history_position_maxd](../measures/pp-history-position-maxd.md)
-- [PP.Бал](../measures/pp-bal.md)
-- [PP.Бал OKR](../measures/pp-bal-okr.md)
-- [PP.Бонуси Р/К/М](../measures/pp-bonusy-r-k-m.md)
-- [PP.Год. взаємодії](../measures/pp-hod-vzaiemodii.md)
-- [PP.Год. конфліктів](../measures/pp-hod-konfliktiv.md)
-- [PP.Год. нарад](../measures/pp-hod-narad.md)
-- [PP.Год. нероб.](../measures/pp-hod-nerob.md)
-- [PP.Дата події](../measures/pp-data-podii.md)
-- [PP.Довжина дня](../measures/pp-dovzhyna-dnia.md)
-- [PP.ЖЦ_Категорія посади](../measures/pp-zhts-katehoriia-posady.md)
-- [PP.ЖЦ_Напрям](../measures/pp-zhts-napriam.md)
-- [PP.ЖЦ_Посада](../measures/pp-zhts-posada.md)
-- [PP.ЖЦ_Піднапрям](../measures/pp-zhts-pidnapriam.md)
-- [PP.ЖЦ_Підприємство](../measures/pp-zhts-pidpryiemstvo.md)
-- [PP.Зірка МХП](../measures/pp-zirka-mkhp.md)
-- [PP.Кадровий підрозділ](../measures/pp-kadrovyi-pidrozdil.md)
-- [PP.Категорія (Performance)](../measures/pp-katehoriia-performance.md)
-- [PP.Код посади](../measures/pp-kod-posady.md)
-- [PP.Код підрозділу](../measures/pp-kod-pidrozdilu.md)
-- [PP.Коеф. бонусу](../measures/pp-koef-bonusu.md)
-- [PP.Колір (OKR)](../measures/pp-kolir-okr.md)
-- [PP.Колір (Performance)](../measures/pp-kolir-performance.md)
-- [PP.Колір шапки тултіпу](../measures/pp-kolir-shapky-tultipu.md)
-- [PP.Оклад](../measures/pp-oklad.md)
-- [PP.Оклад_detailed](../measures/pp-oklad-detailed.md)
-- [PP.Поточний РЦД](../measures/pp-potochnyi-rtsd.md)
-- [PP.Приріст_РЦД_detailed](../measures/pp-pryrist-rtsd-detailed.md)
-- [PP.Підпис типу події](../measures/pp-pidpys-typu-podii.md)
-- [PP.Підприємство](../measures/pp-pidpryiemstvo.md)
-- [PP.РЦД](../measures/pp-rtsd.md)
-- [PP.РЦД_detailed](../measures/pp-rtsd-detailed.md)
-- [PP.Стаж в холдингу](../measures/pp-stazh-v-kholdynhu.md)
-- [PP.Стаж на посаді](../measures/pp-stazh-na-posadi.md)
-- [PP.Суміщення](../measures/pp-sumishchennia.md)
-- [PP.Тип події](../measures/pp-typ-podii.md)
-- [PP.Форма оплати](../measures/pp-forma-oplaty.md)
+Усього: **37**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Personal Profile](../report/personal-profile.md) — 30
+
+**Життєвий цикл:** [PP.Бал](../measures/pp-bal.md) · [PP.Бал OKR](../measures/pp-bal-okr.md) · [PP.Бонуси Р/К/М](../measures/pp-bonusy-r-k-m.md) · [PP.Год. взаємодії](../measures/pp-hod-vzaiemodii.md) · [PP.Год. конфліктів](../measures/pp-hod-konfliktiv.md) · [PP.Год. нарад](../measures/pp-hod-narad.md) · [PP.Год. нероб.](../measures/pp-hod-nerob.md) · [PP.Дата події](../measures/pp-data-podii.md) · [PP.Довжина дня](../measures/pp-dovzhyna-dnia.md) · [PP.ЖЦ_Категорія посади](../measures/pp-zhts-katehoriia-posady.md) · [PP.ЖЦ_Напрям](../measures/pp-zhts-napriam.md) · [PP.ЖЦ_Посада](../measures/pp-zhts-posada.md) · [PP.ЖЦ_Піднапрям](../measures/pp-zhts-pidnapriam.md) · [PP.ЖЦ_Підприємство](../measures/pp-zhts-pidpryiemstvo.md) · [PP.Зірка МХП](../measures/pp-zirka-mkhp.md) · [PP.Кадровий підрозділ](../measures/pp-kadrovyi-pidrozdil.md) · [PP.Категорія (Performance)](../measures/pp-katehoriia-performance.md) · [PP.Код посади](../measures/pp-kod-posady.md) · [PP.Код підрозділу](../measures/pp-kod-pidrozdilu.md) · [PP.Колір (OKR)](../measures/pp-kolir-okr.md) · [PP.Колір (Performance)](../measures/pp-kolir-performance.md) · [PP.Колір шапки тултіпу](../measures/pp-kolir-shapky-tultipu.md) · [PP.Оклад_detailed](../measures/pp-oklad-detailed.md) · [PP.РЦД](../measures/pp-rtsd.md) · [PP.РЦД_detailed](../measures/pp-rtsd-detailed.md) · [PP.Стаж в холдингу](../measures/pp-stazh-v-kholdynhu.md) · [PP.Стаж на посаді](../measures/pp-stazh-na-posadi.md) · [PP.Суміщення](../measures/pp-sumishchennia.md) · [PP.Тип події](../measures/pp-typ-podii.md) · [PP.Форма оплати](../measures/pp-forma-oplaty.md)
+
+### [TT:Життєвий цикл](../report/tt-zhyttievyi-tsykl.md) — 8
+
+**Інші візуали:** [PP.Год. взаємодії](../measures/pp-hod-vzaiemodii.md) · [PP.Год. конфліктів](../measures/pp-hod-konfliktiv.md) · [PP.Год. нарад](../measures/pp-hod-narad.md) · [PP.ЖЦ_Посада](../measures/pp-zhts-posada.md) · [PP.Колір шапки тултіпу](../measures/pp-kolir-shapky-tultipu.md) · [PP.Оклад](../measures/pp-oklad.md) · [PP.Підпис типу події](../measures/pp-pidpys-typu-podii.md) · [PP.РЦД](../measures/pp-rtsd.md)
+
+### Поза звітом / службові — 5
+
+[PP.history_position_maxd](../measures/pp-history-position-maxd.md) · [PP.Коеф. бонусу](../measures/pp-koef-bonusu.md) · [PP.Поточний РЦД](../measures/pp-potochnyi-rtsd.md) · [PP.Приріст_РЦД_detailed](../measures/pp-pryrist-rtsd-detailed.md) · [PP.Підприємство](../measures/pp-pidpryiemstvo.md)
 
 ## Нотатки
 

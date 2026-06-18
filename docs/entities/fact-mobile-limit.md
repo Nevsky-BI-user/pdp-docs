@@ -49,12 +49,15 @@
 
 ## Пов'язані міри
 
-Усього: 5.
-- ['GP.Мобільний зв''язок, % факт.SVG'](../measures/gp-mobilnyi-zviazok-fakt-svg.md)
-- ['PP.Мобільний зв''язок - Корпоративний ліміт'](../measures/pp-mobilnyi-zviazok-korporatyvnyi-limit.md)
-- ['PP.Мобільний зв''язок - Назва пакету'](../measures/pp-mobilnyi-zviazok-nazva-paketu.md)
-- [GP.К-ть співробітників, що отримують виплати на мобільний зв’язок](../measures/gp-k-t-spivrobitnykiv-shcho-otrymuiut-vyplaty-na-mobilnyi-zviazok.md)
-- [GP.Середні витрати на мобільний зв’язок](../measures/gp-seredni-vytraty-na-mobilnyi-zviazok.md)
+Усього: **5**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Group Profile](../report/group-profile.md) — 2
+
+**TRS:** [GP.К-ть співробітників, що отримують виплати на мобільний зв’язок](../measures/gp-k-t-spivrobitnykiv-shcho-otrymuiut-vyplaty-na-mobilnyi-zviazok.md) · [GP.Середні витрати на мобільний зв’язок](../measures/gp-seredni-vytraty-na-mobilnyi-zviazok.md)
+
+### Поза звітом / службові — 3
+
+['GP.Мобільний зв''язок, % факт.SVG'](../measures/gp-mobilnyi-zviazok-fakt-svg.md) · ['PP.Мобільний зв''язок - Корпоративний ліміт'](../measures/pp-mobilnyi-zviazok-korporatyvnyi-limit.md) · ['PP.Мобільний зв''язок - Назва пакету'](../measures/pp-mobilnyi-zviazok-nazva-paketu.md)
 
 ## Нотатки
 

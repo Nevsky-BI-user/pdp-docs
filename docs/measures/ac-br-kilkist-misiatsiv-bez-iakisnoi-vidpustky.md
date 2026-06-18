@@ -57,7 +57,7 @@ graph LR
 
 ## На сторінках звіту
 
-[Утримання працівників](../report/utrymannia-pratsivnykiv.md)
+- [Утримання працівників](../report/utrymannia-pratsivnykiv.md)
 
 ## Пов'язані міри
 

@@ -89,56 +89,29 @@
 
 ## Пов'язані міри
 
-Усього: 49.
-- [AC.BR.OKR](../measures/ac-br-okr.md)
-- [AC.BR.OKR останній рік](../measures/ac-br-okr-ostannii-rik.md)
-- [AC.BR.OKR попередній рік](../measures/ac-br-okr-poperednii-rik.md)
-- [AC.BR.Годин взаємодії з керівником](../measures/ac-br-hodyn-vzaiemodii-z-kerivnykom.md)
-- [AC.BR.Зарплата вилка](../measures/ac-br-zarplata-vylka.md)
-- [AC.BR.Кількість звільнених](../measures/ac-br-kilkist-zvilnenykh.md)
-- [AC.BR.Кількість місяців без якісної відпустки](../measures/ac-br-kilkist-misiatsiv-bez-iakisnoi-vidpustky.md)
-- [AC.BR.Перепрацювання Viva](../measures/ac-br-perepratsiuvannia-viva.md)
-- [AC.BR.Плинність (%)](../measures/ac-br-plynnist.md)
-- [AC.BR.Ризик втрати](../measures/ac-br-ryzyk-vtraty.md)
-- [AC.BR.Стаж в холдингу (неперервний)](../measures/ac-br-stazh-v-kholdynhu-neperervnyi.md)
-- [AC.BR.Стаж на посаді (останній)](../measures/ac-br-stazh-na-posadi-ostannii.md)
-- [AC.BR.ТОР останній рік](../measures/ac-br-tor-ostannii-rik.md)
-- [AC.BR.ТОР попередній рік](../measures/ac-br-tor-poperednii-rik.md)
-- [AC.BR.Тренд оцінки результативності (ТОР)](../measures/ac-br-trend-otsinky-rezultatyvnosti-tor.md)
-- [AC.Burnout_Risk.c_rows](../measures/ac-burnout-risk-c-rows.md)
-- [AC.Burnout_Risk.Панель фільтрів.Звільнені](../measures/ac-burnout-risk-panel-filtriv-zvilneni.md)
-- [AC.Burnout_risk.Застосувати вибір](../measures/ac-burnout-risk-zastosuvaty-vybir.md)
-- [AC.Burnout_risk.Панель фільтрів.Працюючі](../measures/ac-burnout-risk-panel-filtriv-pratsiuiuchi.md)
-- [AC.Filter](../measures/ac-filter.md)
-- [AC.Nav.My_lead_team](../measures/ac-nav-my-lead-team.md)
-- [AC.Взаємодія з керівником](../measures/ac-vzaiemodiia-z-kerivnykom.md)
-- [AC.Зарплата (вилки)](../measures/ac-zarplata-vylky.md)
-- [AC.Кількість місяців без якісної відпустки](../measures/ac-kilkist-misiatsiv-bez-iakisnoi-vidpustky.md)
-- [AC.Перепрацювання Viva](../measures/ac-perepratsiuvannia-viva.md)
-- [AC.Плинність (%)](../measures/ac-plynnist.md)
-- [AC.Ризик](../measures/ac-ryzyk.md)
-- [AC.Тренд оцінки OKR](../measures/ac-trend-otsinky-okr.md)
-- [AC.Тренд оцінки результативності](../measures/ac-trend-otsinky-rezultatyvnosti.md)
-- [AC.Чи є ризик вигорання по плинності?](../measures/ac-chy-ie-ryzyk-vyhorannia-po-plynnosti.md)
-- [AC.Чи є ризик вигорання по результатам оцінки OKR?](../measures/ac-chy-ie-ryzyk-vyhorannia-po-rezultatam-otsinky-okr.md)
-- [AC.Чи є ризик вигорання по результатам оцінки результативності?](../measures/ac-chy-ie-ryzyk-vyhorannia-po-rezultatam-otsinky-rezultatyvnosti.md)
-- [AC.Чи є ризик вигорання через відсутність відпусток?](../measures/ac-chy-ie-ryzyk-vyhorannia-cherez-vidsutnist-vidpustok.md)
-- [AC.Чи є ризик вигорання через відсутність спілкування з керівником?](../measures/ac-chy-ie-ryzyk-vyhorannia-cherez-vidsutnist-spilkuvannia-z-kerivnykom.md)
-- [AC.Чи є ризик вигорання через перепрацювання?](../measures/ac-chy-ie-ryzyk-vyhorannia-cherez-perepratsiuvannia.md)
-- [AC.Чи є ризик вигорання через рівень оплати праці?](../measures/ac-chy-ie-ryzyk-vyhorannia-cherez-riven-oplaty-pratsi.md)
-- [AC.Чи є ризик?](../measures/ac-chy-ie-ryzyk.md)
-- [GP.OKR  попередній рік](../measures/gp-okr-poperednii-rik.md)
-- [GP.OKR  поточний рік](../measures/gp-okr-potochnyi-rik.md)
-- [GP.Оцінка результативності попередній рік](../measures/gp-otsinka-rezultatyvnosti-poperednii-rik.md)
-- [GP.Оцінка результативності поточний рік](../measures/gp-otsinka-rezultatyvnosti-potochnyi-rik.md)
-- [GP.Ризик втрати працівників (%)](../measures/gp-ryzyk-vtraty-pratsivnykiv.md)
-- [GP.Рік оцінки результативності.Last](../measures/gp-rik-otsinky-rezultatyvnosti-last.md)
-- [GP.Рік оцінки результативності.Prev](../measures/gp-rik-otsinky-rezultatyvnosti-prev.md)
-- [PP.SVG.Performance.Last2Periods](../measures/pp-svg-performance-last2periods.md)
-- [PP.Оцінка результативності попередній рік](../measures/pp-otsinka-rezultatyvnosti-poperednii-rik.md)
-- [PP.Оцінка результативності поточний рік](../measures/pp-otsinka-rezultatyvnosti-potochnyi-rik.md)
-- [PP.Рік оцінки результативності.Last](../measures/pp-rik-otsinky-rezultatyvnosti-last.md)
-- [PP.Рік оцінки результативності.Prev](../measures/pp-rik-otsinky-rezultatyvnosti-prev.md)
+Усього: **49**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Personal Profile](../report/personal-profile.md) — 3
+
+**Паспортна частина:** [PP.SVG.Performance.Last2Periods](../measures/pp-svg-performance-last2periods.md) · [PP.Рік оцінки результативності.Last](../measures/pp-rik-otsinky-rezultatyvnosti-last.md) · [PP.Рік оцінки результативності.Prev](../measures/pp-rik-otsinky-rezultatyvnosti-prev.md)
+
+### [Group Profile](../report/group-profile.md) — 1
+
+**Версія 2 › Ризики та фокуси уваги:** [GP.Ризик втрати працівників (%)](../measures/gp-ryzyk-vtraty-pratsivnykiv.md)
+
+### [Утримання працівників](../report/utrymannia-pratsivnykiv.md) — 18
+
+**Інші візуали:** [AC.BR.OKR](../measures/ac-br-okr.md) · [AC.BR.OKR останній рік](../measures/ac-br-okr-ostannii-rik.md) · [AC.BR.OKR попередній рік](../measures/ac-br-okr-poperednii-rik.md) · [AC.BR.Годин взаємодії з керівником](../measures/ac-br-hodyn-vzaiemodii-z-kerivnykom.md) · [AC.BR.Зарплата вилка](../measures/ac-br-zarplata-vylka.md) · [AC.BR.Кількість звільнених](../measures/ac-br-kilkist-zvilnenykh.md) · [AC.BR.Кількість місяців без якісної відпустки](../measures/ac-br-kilkist-misiatsiv-bez-iakisnoi-vidpustky.md) · [AC.BR.Перепрацювання Viva](../measures/ac-br-perepratsiuvannia-viva.md) · [AC.BR.Плинність (%)](../measures/ac-br-plynnist.md) · [AC.BR.Ризик втрати](../measures/ac-br-ryzyk-vtraty.md) · [AC.BR.Стаж в холдингу (неперервний)](../measures/ac-br-stazh-v-kholdynhu-neperervnyi.md) · [AC.BR.Стаж на посаді (останній)](../measures/ac-br-stazh-na-posadi-ostannii.md) · [AC.BR.ТОР останній рік](../measures/ac-br-tor-ostannii-rik.md) · [AC.BR.ТОР попередній рік](../measures/ac-br-tor-poperednii-rik.md) · [AC.BR.Тренд оцінки результативності (ТОР)](../measures/ac-br-trend-otsinky-rezultatyvnosti-tor.md)
+
+**Filter Pannel:** [AC.Burnout_risk.Застосувати вибір](../measures/ac-burnout-risk-zastosuvaty-vybir.md)
+
+**Таблиці › Звільнені:** [AC.Burnout_Risk.Панель фільтрів.Звільнені](../measures/ac-burnout-risk-panel-filtriv-zvilneni.md)
+
+**Таблиці › Працюючі:** [AC.Burnout_risk.Панель фільтрів.Працюючі](../measures/ac-burnout-risk-panel-filtriv-pratsiuiuchi.md)
+
+### Поза звітом / службові — 27
+
+[AC.Burnout_Risk.c_rows](../measures/ac-burnout-risk-c-rows.md) · [AC.Filter](../measures/ac-filter.md) · [AC.Nav.My_lead_team](../measures/ac-nav-my-lead-team.md) · [AC.Взаємодія з керівником](../measures/ac-vzaiemodiia-z-kerivnykom.md) · [AC.Зарплата (вилки)](../measures/ac-zarplata-vylky.md) · [AC.Кількість місяців без якісної відпустки](../measures/ac-kilkist-misiatsiv-bez-iakisnoi-vidpustky.md) · [AC.Перепрацювання Viva](../measures/ac-perepratsiuvannia-viva.md) · [AC.Плинність (%)](../measures/ac-plynnist.md) · [AC.Ризик](../measures/ac-ryzyk.md) · [AC.Тренд оцінки OKR](../measures/ac-trend-otsinky-okr.md) · [AC.Тренд оцінки результативності](../measures/ac-trend-otsinky-rezultatyvnosti.md) · [AC.Чи є ризик вигорання по плинності?](../measures/ac-chy-ie-ryzyk-vyhorannia-po-plynnosti.md) · [AC.Чи є ризик вигорання по результатам оцінки OKR?](../measures/ac-chy-ie-ryzyk-vyhorannia-po-rezultatam-otsinky-okr.md) · [AC.Чи є ризик вигорання по результатам оцінки результативності?](../measures/ac-chy-ie-ryzyk-vyhorannia-po-rezultatam-otsinky-rezultatyvnosti.md) · [AC.Чи є ризик вигорання через відсутність відпусток?](../measures/ac-chy-ie-ryzyk-vyhorannia-cherez-vidsutnist-vidpustok.md) · [AC.Чи є ризик вигорання через відсутність спілкування з керівником?](../measures/ac-chy-ie-ryzyk-vyhorannia-cherez-vidsutnist-spilkuvannia-z-kerivnykom.md) · [AC.Чи є ризик вигорання через перепрацювання?](../measures/ac-chy-ie-ryzyk-vyhorannia-cherez-perepratsiuvannia.md) · [AC.Чи є ризик вигорання через рівень оплати праці?](../measures/ac-chy-ie-ryzyk-vyhorannia-cherez-riven-oplaty-pratsi.md) · [AC.Чи є ризик?](../measures/ac-chy-ie-ryzyk.md) · [GP.OKR  попередній рік](../measures/gp-okr-poperednii-rik.md) · [GP.OKR  поточний рік](../measures/gp-okr-potochnyi-rik.md) · [GP.Оцінка результативності попередній рік](../measures/gp-otsinka-rezultatyvnosti-poperednii-rik.md) · [GP.Оцінка результативності поточний рік](../measures/gp-otsinka-rezultatyvnosti-potochnyi-rik.md) · [GP.Рік оцінки результативності.Last](../measures/gp-rik-otsinky-rezultatyvnosti-last.md) · [GP.Рік оцінки результативності.Prev](../measures/gp-rik-otsinky-rezultatyvnosti-prev.md) · [PP.Оцінка результативності попередній рік](../measures/pp-otsinka-rezultatyvnosti-poperednii-rik.md) · [PP.Оцінка результативності поточний рік](../measures/pp-otsinka-rezultatyvnosti-potochnyi-rik.md)
 
 ## Нотатки
 

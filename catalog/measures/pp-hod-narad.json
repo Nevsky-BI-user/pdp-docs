@@ -12,11 +12,15 @@
   "reportPages": [
     {
       "display": "Personal Profile",
-      "slug": "personal-profile"
+      "slug": "personal-profile",
+      "groups": [
+        "Життєвий цикл"
+      ]
     },
     {
       "display": "TT:Життєвий цикл",
-      "slug": "tt-zhyttievyi-tsykl"
+      "slug": "tt-zhyttievyi-tsykl",
+      "groups": []
     }
   ],
   "dependencies": {

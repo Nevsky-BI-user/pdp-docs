@@ -12,11 +12,15 @@
   "reportPages": [
     {
       "display": "Group Profile",
-      "slug": "group-profile"
+      "slug": "group-profile",
+      "groups": [
+        "Загальна інформація"
+      ]
     },
     {
       "display": "Під ризиком мобілізації",
-      "slug": "pid-ryzykom-mobilizatsii"
+      "slug": "pid-ryzykom-mobilizatsii",
+      "groups": []
     }
   ],
   "dependencies": {

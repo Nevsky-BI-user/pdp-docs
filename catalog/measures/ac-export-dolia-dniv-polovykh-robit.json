@@ -12,7 +12,8 @@
   "reportPages": [
     {
       "display": "Продуктивність працівників",
-      "slug": "produktyvnist-pratsivnykiv"
+      "slug": "produktyvnist-pratsivnykiv",
+      "groups": []
     }
   ],
   "dependencies": {

@@ -1,13 +1,13 @@
 # TT:Зміна фікс винагороди
 
 !!! info "Сторінка звіту"
-    Тип: **Тултіп / підказка** · мір на сторінці: **4**
+    Тип: **Тултіп / підказка** · мір: **4** · блоків візуалізації: **1**
 
 [:octicons-arrow-left-24: Усі сторінки звіту](index.md)
 
-## Personal_Profile\TRS
+## Інші візуали
 
-| Міра | Формат | Бізнес-суть |
+| Міра | Формат | Бізнес-назва |
 |---|---|---|
 | [PP.TRS_category_Y_axis_max_value_Доплати_за_суміщення](../measures/pp-trs-category-y-axis-max-value-doplaty-za-sumishchennia.md) | — | — |
 | [PP.Відсоток зміни фіксованої винагороди](../measures/pp-vidsotok-zminy-fiksovanoi-vynahorody.md) | `0.00%;-0.00%;0.00%` | — |

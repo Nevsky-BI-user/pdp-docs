@@ -43,7 +43,8 @@ graph LR
 
 ## На сторінках звіту
 
-[Personal Profile](../report/personal-profile.md) · [Group Profile](../report/group-profile.md)
+- [Personal Profile](../report/personal-profile.md) — VIVA
+- [Group Profile](../report/group-profile.md) — Viva
 
 ## Пов'язані міри
 

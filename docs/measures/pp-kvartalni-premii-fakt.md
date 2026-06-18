@@ -58,7 +58,8 @@ graph LR
 
 ## На сторінках звіту
 
-[Personal Profile](../report/personal-profile.md) · [ТТ:Квартальна премія](../report/tt-kvartalna-premiia.md)
+- [Personal Profile](../report/personal-profile.md) — Винагорода
+- [ТТ:Квартальна премія](../report/tt-kvartalna-premiia.md)
 
 ## Пов'язані міри
 

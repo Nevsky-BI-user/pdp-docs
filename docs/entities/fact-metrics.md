@@ -81,33 +81,25 @@
 
 ## Пов'язані міри
 
-Усього: 26.
-- [5AC.Коефіцієнт абсентеїзму](../measures/5ac-koefitsiient-absenteizmu.md)
-- [AC.Відсоток днів відпустки в робочі дні](../measures/ac-vidsotok-dniv-vidpustky-v-robochi-dni.md)
-- [AC.Доля співробітників з відпустками понад 10 днів](../measures/ac-dolia-spivrobitnykiv-z-vidpustkamy-ponad-10-dniv.md)
-- [AC.Лідер за невикористаними днями відпустки](../measures/ac-lider-za-nevykorystanymy-dniamy-vidpustky.md)
-- [AC.Лідер за часом без відпустки](../measures/ac-lider-za-chasom-bez-vidpustky.md)
-- [AC.Середня кількість днів використаної відпустки](../measures/ac-serednia-kilkist-dniv-vykorystanoi-vidpustky.md)
-- [AC.Середня кількість днів невикористаної відпустки](../measures/ac-serednia-kilkist-dniv-nevykorystanoi-vidpustky.md)
-- [AC.Середня кількість лікарняних на співробітника](../measures/ac-serednia-kilkist-likarnianykh-na-spivrobitnyka.md)
-- [AC.Середня тривалість відпустки співробітника, днів](../measures/ac-serednia-tryvalist-vidpustky-spivrobitnyka-dniv.md)
-- [AC.Середня тривалість лікарняного на співробітника](../measures/ac-serednia-tryvalist-likarnianoho-na-spivrobitnyka.md)
-- [GP.Доля співробітників команди з наявними відпустками понад 10 днів](../measures/gp-dolia-spivrobitnykiv-komandy-z-naiavnymy-vidpustkamy-ponad-10-dniv.md)
-- [GP.Плинність (%)](../measures/gp-plynnist.md)
-- [GP.Рівень coaching (1:1), год/міс](../measures/gp-riven-coaching-1-1-hod-mis.md)
-- [GP.Середня заробітна плата](../measures/gp-serednia-zarobitna-plata.md)
-- [GP.Середня кількість днів невикористаної відпустки співробітником](../measures/gp-serednia-kilkist-dniv-nevykorystanoi-vidpustky-spivrobitnykom.md)
-- [PP.% днів відпустки в робочі дні](../measures/pp-dniv-vidpustky-v-robochi-dni.md)
-- [PP.Абсентеїзм](../measures/pp-absenteizm.md)
-- [PP.Дні відпустки](../measures/pp-dni-vidpustky.md)
-- [PP.Залишок відпустки](../measures/pp-zalyshok-vidpustky.md)
-- [PP.Кількість відпусток](../measures/pp-kilkist-vidpustok.md)
-- [PP.Кількість довгих відпусток](../measures/pp-kilkist-dovhykh-vidpustok.md)
-- [PP.Лікарняні](../measures/pp-likarniani.md)
-- [PP.Середня тривалість відпустки](../measures/pp-serednia-tryvalist-vidpustky.md)
-- [PP.Середня тривалість лікарняного](../measures/pp-serednia-tryvalist-likarnianoho.md)
-- [PP.Тривалість довгих відпусток](../measures/pp-tryvalist-dovhykh-vidpustok.md)
-- [PP.Чи виплачено лікарняні від компанії](../measures/pp-chy-vyplacheno-likarniani-vid-kompanii.md)
+Усього: **26**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Personal Profile](../report/personal-profile.md) — 9
+
+**Здоров'я та благополуччя:** [PP.% днів відпустки в робочі дні](../measures/pp-dniv-vidpustky-v-robochi-dni.md) · [PP.Абсентеїзм](../measures/pp-absenteizm.md) · [PP.Дні відпустки](../measures/pp-dni-vidpustky.md) · [PP.Залишок відпустки](../measures/pp-zalyshok-vidpustky.md) · [PP.Кількість відпусток](../measures/pp-kilkist-vidpustok.md) · [PP.Кількість довгих відпусток](../measures/pp-kilkist-dovhykh-vidpustok.md) · [PP.Лікарняні](../measures/pp-likarniani.md) · [PP.Середня тривалість відпустки](../measures/pp-serednia-tryvalist-vidpustky.md) · [PP.Середня тривалість лікарняного](../measures/pp-serednia-tryvalist-likarnianoho.md)
+
+### [Group Profile](../report/group-profile.md) — 15
+
+**Інші візуали:** [GP.Доля співробітників команди з наявними відпустками понад 10 днів](../measures/gp-dolia-spivrobitnykiv-komandy-z-naiavnymy-vidpustkamy-ponad-10-dniv.md) · [GP.Плинність (%)](../measures/gp-plynnist.md) · [GP.Середня заробітна плата](../measures/gp-serednia-zarobitna-plata.md) · [GP.Середня кількість днів невикористаної відпустки співробітником](../measures/gp-serednia-kilkist-dniv-nevykorystanoi-vidpustky-spivrobitnykom.md)
+
+**Версія 1:** [GP.Доля співробітників команди з наявними відпустками понад 10 днів](../measures/gp-dolia-spivrobitnykiv-komandy-z-naiavnymy-vidpustkamy-ponad-10-dniv.md) · [GP.Плинність (%)](../measures/gp-plynnist.md) · [GP.Середня заробітна плата](../measures/gp-serednia-zarobitna-plata.md) · [GP.Середня кількість днів невикористаної відпустки співробітником](../measures/gp-serednia-kilkist-dniv-nevykorystanoi-vidpustky-spivrobitnykom.md)
+
+**Версія 2 › Ризики та фокуси уваги:** [GP.Рівень coaching (1:1), год/міс](../measures/gp-riven-coaching-1-1-hod-mis.md)
+
+**Здоров'я та благополуччя:** [5AC.Коефіцієнт абсентеїзму](../measures/5ac-koefitsiient-absenteizmu.md) · [AC.Відсоток днів відпустки в робочі дні](../measures/ac-vidsotok-dniv-vidpustky-v-robochi-dni.md) · [AC.Доля співробітників з відпустками понад 10 днів](../measures/ac-dolia-spivrobitnykiv-z-vidpustkamy-ponad-10-dniv.md) · [AC.Лідер за невикористаними днями відпустки](../measures/ac-lider-za-nevykorystanymy-dniamy-vidpustky.md) · [AC.Лідер за часом без відпустки](../measures/ac-lider-za-chasom-bez-vidpustky.md) · [AC.Середня кількість днів використаної відпустки](../measures/ac-serednia-kilkist-dniv-vykorystanoi-vidpustky.md) · [AC.Середня кількість днів невикористаної відпустки](../measures/ac-serednia-kilkist-dniv-nevykorystanoi-vidpustky.md) · [AC.Середня кількість лікарняних на співробітника](../measures/ac-serednia-kilkist-likarnianykh-na-spivrobitnyka.md) · [AC.Середня тривалість відпустки співробітника, днів](../measures/ac-serednia-tryvalist-vidpustky-spivrobitnyka-dniv.md) · [AC.Середня тривалість лікарняного на співробітника](../measures/ac-serednia-tryvalist-likarnianoho-na-spivrobitnyka.md)
+
+### Поза звітом / службові — 2
+
+[PP.Тривалість довгих відпусток](../measures/pp-tryvalist-dovhykh-vidpustok.md) · [PP.Чи виплачено лікарняні від компанії](../measures/pp-chy-vyplacheno-likarniani-vid-kompanii.md)
 
 ## Нотатки
 

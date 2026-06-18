@@ -73,7 +73,7 @@ graph LR
 
 ## На сторінках звіту
 
-[Під ризиком мобілізації](../report/pid-ryzykom-mobilizatsii.md)
+- [Під ризиком мобілізації](../report/pid-ryzykom-mobilizatsii.md)
 
 ## Пов'язані міри
 

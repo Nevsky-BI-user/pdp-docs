@@ -47,16 +47,19 @@
 
 ## Пов'язані міри
 
-Усього: 9.
-- [GP.eNPS (%)](../measures/gp-enps.md)
-- [GP.Закриття позицій Middle внутрішніми кандидатами (%)](../measures/gp-zakryttia-pozytsii-middle-vnutrishnimy-kandydatamy.md)
-- [GP.Закриття позицій Senior+ внутрішніми кандидатами (%)](../measures/gp-zakryttia-pozytsii-senior-vnutrishnimy-kandydatamy.md)
-- [GP.Охоплення Middle|Senior+ наступниками (%)](../measures/gp-okhoplennia-middle-senior-nastupnykamy.md)
-- [GP.Рівень втрати високорезультативних працівників (%)](../measures/gp-riven-vtraty-vysokorezultatyvnykh-pratsivnykiv.md)
-- [GP.Рівень смертельних виробничих інцидентів за 2025р., шт.](../measures/gp-riven-smertelnykh-vyrobnychykh-intsydentiv-za-2025r-sht.md)
-- [GP.Рівень смертельних не виробничих інцидентів за 2025р., шт.](../measures/gp-riven-smertelnykh-ne-vyrobnychykh-intsydentiv-za-2025r-sht.md)
-- [GP.Співробітники, які розуміють та демонструють цінності компанії (%)](../measures/gp-spivrobitnyky-iaki-rozumiiut-ta-demonstruiut-tsinnosti-kompanii.md)
-- [GP.Укомплектованість штату (%)](../measures/gp-ukomplektovanist-shtatu.md)
+Усього: **9**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Group Profile](../report/group-profile.md) — 9
+
+**Інші візуали:** [GP.eNPS (%)](../measures/gp-enps.md)
+
+**Версія 1:** [GP.eNPS (%)](../measures/gp-enps.md)
+
+**Версія 2 › Індикатори здоров'я команди:** [GP.eNPS (%)](../measures/gp-enps.md) · [GP.Закриття позицій Middle внутрішніми кандидатами (%)](../measures/gp-zakryttia-pozytsii-middle-vnutrishnimy-kandydatamy.md) · [GP.Закриття позицій Senior+ внутрішніми кандидатами (%)](../measures/gp-zakryttia-pozytsii-senior-vnutrishnimy-kandydatamy.md) · [GP.Охоплення Middle|Senior+ наступниками (%)](../measures/gp-okhoplennia-middle-senior-nastupnykamy.md) · [GP.Співробітники, які розуміють та демонструють цінності компанії (%)](../measures/gp-spivrobitnyky-iaki-rozumiiut-ta-demonstruiut-tsinnosti-kompanii.md) · [GP.Укомплектованість штату (%)](../measures/gp-ukomplektovanist-shtatu.md)
+
+**Версія 2 › Ризики та фокуси уваги:** [GP.Рівень втрати високорезультативних працівників (%)](../measures/gp-riven-vtraty-vysokorezultatyvnykh-pratsivnykiv.md) · [GP.Рівень смертельних виробничих інцидентів за 2025р., шт.](../measures/gp-riven-smertelnykh-vyrobnychykh-intsydentiv-za-2025r-sht.md) · [GP.Рівень смертельних не виробничих інцидентів за 2025р., шт.](../measures/gp-riven-smertelnykh-ne-vyrobnychykh-intsydentiv-za-2025r-sht.md)
+
+**Загальна інформація:** [GP.Укомплектованість штату (%)](../measures/gp-ukomplektovanist-shtatu.md)
 
 ## Нотатки
 

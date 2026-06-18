@@ -25,8 +25,11 @@
 
 ## Пов'язані міри
 
-Усього: 1.
-- [GP.Продуктивність.SVG.Bar chart](../measures/gp-produktyvnist-svg-bar-chart.md)
+Усього: **1**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Group Profile](../report/group-profile.md) — 1
+
+**Інші візуали:** [GP.Продуктивність.SVG.Bar chart](../measures/gp-produktyvnist-svg-bar-chart.md)
 
 ## Нотатки
 

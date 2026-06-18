@@ -12,11 +12,15 @@
   "reportPages": [
     {
       "display": "Personal Profile",
-      "slug": "personal-profile"
+      "slug": "personal-profile",
+      "groups": [
+        "Винагорода"
+      ]
     },
     {
       "display": "ТТ:\"Інші доплати\"",
-      "slug": "tt-inshi-doplaty"
+      "slug": "tt-inshi-doplaty",
+      "groups": []
     }
   ],
   "dependencies": {

@@ -12,11 +12,17 @@
   "reportPages": [
     {
       "display": "Personal Profile",
-      "slug": "personal-profile"
+      "slug": "personal-profile",
+      "groups": [
+        "VIVA › Viva"
+      ]
     },
     {
       "display": "Group Profile",
-      "slug": "group-profile"
+      "slug": "group-profile",
+      "groups": [
+        "Viva"
+      ]
     }
   ],
   "dependencies": {

@@ -53,7 +53,7 @@ graph LR
 
 ## На сторінках звіту
 
-[Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
+- [Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
 
 ## Пов'язані міри
 

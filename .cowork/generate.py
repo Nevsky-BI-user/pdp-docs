@@ -264,24 +264,53 @@ def page_kind(display):
     if dl.startswith("деталізація"): return "drill"
     return "content"
 
+def _group_path(gid, groups):
+    """Breadcrumb назв груп (верх → глибина) для візуала; службові «Група N» відкидаємо."""
+    chain=[]; seen=set()
+    while gid and gid in groups and gid not in seen:
+        seen.add(gid); dn,parent=groups[gid]
+        if dn and not re.fullmatch(r"(Група|Group)\s*\d+", dn, re.I): chain.append(dn)
+        gid=parent
+    return " › ".join(reversed(chain))
+
 def parse_report(path, mnames):
-    """report.json -> впорядкований список сторінок [{display,kind,ordinal,visuals,measures[]}]."""
+    """report.json -> сторінки [{display,kind,ordinal,visuals,measures[],groups{path:[міри]}}].
+       groups — міри, згруповані за блоками візуальних елементів (parentGroupName)."""
     if not os.path.exists(path): return []
     try: rep=json.load(open(path, encoding="utf-8"))
     except Exception: return []
     pages=[]
     for s in rep.get("sections", []):
-        acc=set()
-        for vc in s.get("visualContainers", []):
+        vcs=s.get("visualContainers", [])
+        cfgs=[]
+        for vc in vcs:
+            try: cfgs.append(json.loads(vc.get("config","{}")))
+            except Exception: cfgs.append({})
+        # ієрархія груп: gid -> (displayName, parentGid)
+        groups={}
+        for c in cfgs:
+            svg=c.get("singleVisualGroup")
+            if svg is not None and c.get("name"):
+                groups[c["name"]]=((svg.get("displayName") or "").strip(), c.get("parentGroupName"))
+        acc=set(); page_groups={}
+        for vc,c in zip(vcs,cfgs):
+            if c.get("singleVisualGroup") is not None: continue   # це контейнер-група, не візуал
+            ms=set()
             for key in ("config","query","dataTransforms"):
                 raw=vc.get(key)
                 if not raw: continue
-                try: _walk_measures(json.loads(raw), acc)
+                try: _walk_measures(json.loads(raw), ms)
                 except Exception: pass
+            ms={m for m in ms if m in mnames}
+            if not ms: continue
+            acc|=ms
+            gp=_group_path(c.get("parentGroupName"), groups) or "(без блоку)"
+            page_groups.setdefault(gp,set()).update(ms)
         pages.append({"display":(s.get("displayName") or "").strip(),
                       "ordinal":s.get("ordinal"), "kind":page_kind(s.get("displayName")),
-                      "visuals":len(s.get("visualContainers", [])),
-                      "measures":sorted(m for m in acc if m in mnames)})
+                      "visuals":len(vcs),
+                      "measures":sorted(acc),
+                      "groups":{gp:sorted(ms) for gp,ms in page_groups.items()}})
     pages.sort(key=lambda p:(p["ordinal"] if isinstance(p["ordinal"],int) else 999, p["display"]))
     return pages
 
@@ -352,10 +381,12 @@ def main():
     for p in report_pages:
         if p["kind"] in ("content","tooltip") and p["measures"]:
             p["slug"]=uniq(slugify(p["display"]) or "page",rused); doc_pages.append(p)
-    meas_pages={}  # name -> [(display, slug)]
+    page_order=[p["display"] for p in doc_pages]                 # порядок сторінок (за ordinal)
+    meas_groups={}  # name -> [(page_display, page_slug, group_path)]
     for p in doc_pages:
-        for mn in p["measures"]:
-            meas_pages.setdefault(mn,[]).append((p["display"],p["slug"]))
+        for gp,ms in p.get("groups",{}).items():
+            for mn in ms:
+                meas_groups.setdefault(mn,[]).append((p["display"],p["slug"],gp))
 
     OUT=args.out
     cat_m=os.path.join(OUT,"catalog","measures"); cat_e=os.path.join(OUT,"catalog","entities")
@@ -395,12 +426,18 @@ def main():
         req_refs=[ref_obj(r,wiki_prefix) for r in biz["refs"]]
         slug=slug_m[name]; jpath=os.path.join(cat_m,slug+".json")
         seg=[s for s in m["displayFolder"].split("\\") if s]
-        rpages=meas_pages.get(name,[])
+        # сторінки звіту + блоки візуалізації, де використовується міра (за порядком сторінок)
+        pgmap={}
+        for d,s,gp in meas_groups.get(name,[]):
+            pgmap.setdefault((d,s),set()).add(gp)
+        rpages=[{"display":d,"slug":s,"groups":sorted(x for x in g if x!="(без блоку)")}
+                for (d,s),g in sorted(pgmap.items(),
+                    key=lambda kv: page_order.index(kv[0][0]) if kv[0][0] in page_order else 999)]
         obj={"id":slug,"type":"measure","name":name,"homeTable":"_Measures",
           "displayFolder":m["displayFolder"],"formatString":m["formatString"],
           "dataType":m["dataType"],"isHidden":m["isHidden"],"description":"",
           "dax":m["dax"],
-          "reportPages":[{"display":d,"slug":s} for d,s in rpages],
+          "reportPages":rpages,
           "dependencies":{"measures":um,"columns":c,"tables":t},
           "usedBy":sorted(used_by.get(name,[])),
           "lineage":{"sourceTables":sorted(st),
@@ -449,7 +486,7 @@ def main():
           "manualNotes":manual(jpath)}
         json.dump(obj,open(jpath,"w",encoding="utf-8"),ensure_ascii=False,indent=2)
         index.append({"id":slug,"type":"entity","name":tn,"displayFolder":"","file":f"entities/{slug}.md"})
-        write_entity_md(os.path.join(doc_e,slug+".md"),obj,slug_m)
+        write_entity_md(os.path.join(doc_e,slug+".md"),obj,slug_m,meas_groups,page_order)
 
     json.dump(index,open(os.path.join(OUT,"catalog","_index.json"),"w",encoding="utf-8"),
               ensure_ascii=False,indent=2)
@@ -521,13 +558,16 @@ def write_measure_md(path,o,sm):
     if not has and not b.get("requirementRefs"):
         L+=['!!! note "Бізнес-визначення відсутнє"',
             "    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.",""]
-    # 3) де у звіті
+    # 3) де у звіті — сторінки та блоки візуалізації
     L+=["## На сторінках звіту",""]
     if rp:
-        L.append(" · ".join(f"[{p['display']}](../report/{p['slug']}.md)" for p in rp))
+        for p in rp:
+            grps=p.get("groups",[])
+            tail=(" — "+", ".join(grps)) if grps else ""
+            L.append(f"- [{p['display']}](../report/{p['slug']}.md){tail}")
+        L+=[""]
     else:
-        L.append("_Не використовується на основних сторінках звіту._")
-    L+=[""]
+        L+=["_Не використовується на основних сторінках звіту._",""]
     # 4) пов'язані міри — двосторонні переходи
     L+=["## Пов'язані міри",""]
     if dm: L+=["**Використовує:** "+", ".join(mlink(n) for n in dm),""]
@@ -539,7 +579,9 @@ def write_measure_md(path,o,sm):
     L+=["## Нотатки","",o["manualNotes"] if o["manualNotes"] else "_порожньо_"]
     open(path,"w",encoding="utf-8").write("\n".join(L)+"\n")
 
-def write_entity_md(path,o,sm):
+def write_entity_md(path,o,sm,meas_groups,page_order):
+    mlink=lambda n: f"[{n}](../measures/{sm[n]}.md)" if n in sm else f"`{n}`"
+    gesc=lambda s:("Інші візуали" if (s or "")=="(без блоку)" else (s or "").replace("|","/").strip()) or "Інші візуали"
     L=[f"# {o['name']}",""]
     L.append(ptable([("Тип","бізнес-сутність / таблиця"),
         ("Сервер",f"`{o['server']}`" if o['server'] else "—"),
@@ -557,13 +599,30 @@ def write_entity_md(path,o,sm):
         for r in o["relationships"]:
             L.append(f"| {r['role']} | {r['fromColumn']} | `{r['toTable']}` | {r['toColumn']} |")
     else: L.append("—")
+    # Пов'язані міри — структуровано: сторінка звіту → блок візуальних елементів → міри
+    rm=o["relatedMeasures"]
     L+=["","## Пов'язані міри",""]
-    if o["relatedMeasures"]:
-        L.append(f"Усього: {len(o['relatedMeasures'])}.")
-        L+=[ (f"- [{n}](../measures/{sm[n]}.md)" if n in sm else f"- `{n}`") for n in o["relatedMeasures"][:60]]
-        if len(o["relatedMeasures"])>60: L.append(f"- … і ще {len(o['relatedMeasures'])-60}")
-    else: L.append("—")
-    L+=["","## Нотатки","",o["manualNotes"] if o["manualNotes"] else "_порожньо_"]
+    if rm:
+        L+=[f"Усього: **{len(rm)}**. Згруповано за сторінками звіту та блоками візуальних "
+            "елементів, де ці міри використовуються.",""]
+        bypage={}; placed=set()        # page_display -> (slug, {group_path: set(measures)})
+        for n in rm:
+            for d,s,gp in meas_groups.get(n,[]):
+                slot=bypage.setdefault(d,(s,{}))
+                slot[1].setdefault(gp,set()).add(n); placed.add(n)
+        order=lambda d: page_order.index(d) if d in page_order else 999
+        for d in sorted(bypage,key=order):
+            s,grpmap=bypage[d]
+            cnt=len(set().union(*grpmap.values())) if grpmap else 0
+            L+=[f"### [{d}](../report/{s}.md) — {cnt}",""]
+            for gp in sorted(grpmap):
+                L+=[f"**{gesc(gp)}:** "+" · ".join(mlink(n) for n in sorted(grpmap[gp])),""]
+        rest=sorted(n for n in rm if n not in placed)
+        if rest:
+            L+=[f"### Поза звітом / службові — {len(rest)}","",
+                " · ".join(mlink(n) for n in rest),""]
+    else: L+=["—",""]
+    L+=["## Нотатки","",o["manualNotes"] if o["manualNotes"] else "_порожньо_"]
     open(path,"w",encoding="utf-8").write("\n".join(L)+"\n")
 
 def write_measures_index(path,measures,sm,minfo=None):
@@ -707,21 +766,21 @@ def write_report_index(path,pages,doc_pages):
 def write_report_page(path,p,minfo):
     KL={"content":"Основна сторінка звіту","tooltip":"Тултіп / підказка"}
     esc=lambda s:(s or "").replace("|","\\|").replace("\n"," ")
+    pg=p.get("groups",{}) or {}
     L=[f"# {p['display']}","",
        '!!! info "Сторінка звіту"',
-       f"    Тип: **{KL.get(p['kind'],'сторінка')}** · мір на сторінці: **{len(p['measures'])}**","",
+       f"    Тип: **{KL.get(p['kind'],'сторінка')}** · мір: **{len(p['measures'])}** · "
+       f"блоків візуалізації: **{len(pg)}**","",
        "[:octicons-arrow-left-24: Усі сторінки звіту](index.md)",""]
-    groups={}
-    for mn in p["measures"]:
-        info=minfo.get(mn)
-        if not info: continue
-        groups.setdefault(info["folder"] or "(без теки)",[]).append((mn,info))
-    if not groups: L.append("_Немає задокументованих мір._")
-    for folder in sorted(groups):
-        L+=[f"## {folder}","","| Міра | Формат | Бізнес-суть |","|---|---|---|"]
-        for mn,info in sorted(groups[folder],key=lambda x:x[0]):
+    if not pg: L+=["_Немає задокументованих мір._",""]
+    for gp in sorted(pg):
+        title=esc(gp) if gp!="(без блоку)" else "Інші візуали"
+        L+=[f"## {title}","","| Міра | Формат | Бізнес-назва |","|---|---|---|"]
+        for mn in sorted(pg[gp]):
+            info=minfo.get(mn)
+            if not info: L.append(f"| `{esc(mn)}` | — | — |"); continue
             bd=esc(info["bizdef"]) if info["bizdef"] else "—"
-            if len(bd)>160: bd=bd[:157]+"…"
+            if len(bd)>120: bd=bd[:117]+"…"
             fmt=f"`{info['fmt']}`" if info["fmt"] else "—"
             L.append(f"| [{esc(mn)}](../measures/{info['slug']}.md) | {fmt} | {bd} |")
         L.append("")

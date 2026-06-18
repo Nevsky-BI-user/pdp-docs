@@ -77,7 +77,9 @@ graph LR
 
 ## На сторінках звіту
 
-[Group Profile](../report/group-profile.md) · [Утримання працівників](../report/utrymannia-pratsivnykiv.md) · [Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
+- [Group Profile](../report/group-profile.md) — Navigation
+- [Утримання працівників](../report/utrymannia-pratsivnykiv.md) — Navigation group
+- [Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md) — Navigation group
 
 ## Пов'язані міри
 

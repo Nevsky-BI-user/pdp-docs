@@ -56,61 +56,59 @@
 
 ## Пов'язані міри
 
-Усього: 54.
-- [GP.Доля команди з позикою на ноутбук (%) (діюча)](../measures/gp-dolia-komandy-z-pozykoiu-na-noutbuk-diiucha.md)
-- [GP.Доля команди з соціальними виплатами, %](../measures/gp-dolia-komandy-z-sotsialnymy-vyplatamy.md)
-- [GP.Доля команди із доплатою за наставництво, %](../measures/gp-dolia-komandy-iz-doplatoiu-za-nastavnytstvo.md)
-- [GP.Доля команди із премією МХП Зірки, %](../measures/gp-dolia-komandy-iz-premiieiu-mkhp-zirky.md)
-- [GP.Доля команди із премією за Банк ідей, %](../measures/gp-dolia-komandy-iz-premiieiu-za-bank-idei.md)
-- [GP.Доля команди із премією за збереження та розширення земельного банку, %](../measures/gp-dolia-komandy-iz-premiieiu-za-zberezhennia-ta-rozshyrennia-zemelnoho-banku.md)
-- [GP.Доля команди із премією за програмою «Приведи друга», %](../measures/gp-dolia-komandy-iz-premiieiu-za-prohramoiu-pryvedy-druha.md)
-- [GP.Доля команди із проектним бонусом за стратегічні ІТ проєкти, %](../measures/gp-dolia-komandy-iz-proektnym-bonusom-za-stratehichni-it-proiekty.md)
-- [GP.Доля команди із разовою премією за програмою визнання, %](../measures/gp-dolia-komandy-iz-razovoiu-premiieiu-za-prohramoiu-vyznannia.md)
-- [GP.Доля команди із інвестиційним проєктним бонусом, %](../measures/gp-dolia-komandy-iz-investytsiinym-proiektnym-bonusom.md)
-- [GP.Доля учасників команди із зміною зарплати (окладу), %](../measures/gp-dolia-uchasnykiv-komandy-iz-zminoiu-zarplaty-okladu.md)
-- [GP.Середня заробітна плата](../measures/gp-serednia-zarobitna-plata.md)
-- [GP.Середній % зростання зарплати (окладу) за 12 міс](../measures/gp-serednii-zrostannia-zarplaty-okladu-za-12-mis.md)
-- [GP.Середній розмір доплати за наставництво](../measures/gp-serednii-rozmir-doplaty-za-nastavnytstvo.md)
-- [GP.Середній розмір премії МХП Зірки](../measures/gp-serednii-rozmir-premii-mkhp-zirky.md)
-- [GP.Середній розмір премії за Банк ідей](../measures/gp-serednii-rozmir-premii-za-bank-idei.md)
-- [GP.Середній розмір премії за збереження та розширення земельного банку](../measures/gp-serednii-rozmir-premii-za-zberezhennia-ta-rozshyrennia-zemelnoho-banku.md)
-- [GP.Середній розмір премії за програмою «Приведи друга»](../measures/gp-serednii-rozmir-premii-za-prohramoiu-pryvedy-druha.md)
-- [GP.Середній розмір проектного бонус за стратегічні ІТ проєкти](../measures/gp-serednii-rozmir-proektnoho-bonus-za-stratehichni-it-proiekty.md)
-- [GP.Середній розмір разової премії за програмою визнання](../measures/gp-serednii-rozmir-razovoi-premii-za-prohramoiu-vyznannia.md)
-- [GP.Середній розмір соціальної підтримки](../measures/gp-serednii-rozmir-sotsialnoi-pidtrymky.md)
-- [GP.Середній розмір інвестиційного проєктного бонусу](../measures/gp-serednii-rozmir-investytsiinoho-proiektnoho-bonusu.md)
-- [PP.SVG.OKR.Загальна оцінка](../measures/pp-svg-okr-zahalna-otsinka.md)
-- [PP.Y_axis_rcd](../measures/pp-y-axis-rcd.md)
-- [PP.history_position_maxd](../measures/pp-history-position-maxd.md)
-- [PP.min_Y_axis_rcd](../measures/pp-min-y-axis-rcd.md)
-- [PP.Інвестиційний проєктний бонус](../measures/pp-investytsiinyi-proiektnyi-bonus.md)
-- [PP.Інші доплати](../measures/pp-inshi-doplaty.md)
-- [PP.Доплата за наставництво](../measures/pp-doplata-za-nastavnytstvo.md)
-- [PP.Доплати за суміщення](../measures/pp-doplaty-za-sumishchennia.md)
-- [PP.Квартальні премії факт](../measures/pp-kvartalni-premii-fakt.md)
-- [PP.Колір шапки тултіпу](../measures/pp-kolir-shapky-tultipu.md)
-- [PP.Місяці без відпустки](../measures/pp-misiatsi-bez-vidpustky.md)
-- [PP.Наставництво](../measures/pp-nastavnytstvo.md)
-- [PP.Позика (активна).Сума](../measures/pp-pozyka-aktyvna-suma.md)
-- [PP.Позика на ноутбук](../measures/pp-pozyka-na-noutbuk.md)
-- [PP.Поточний РЦД](../measures/pp-potochnyi-rtsd.md)
-- [PP.Премія МХП Зірки](../measures/pp-premiia-mkhp-zirky.md)
-- [PP.Премія за Банк ідей](../measures/pp-premiia-za-bank-idei.md)
-- [PP.Премія за внутрішнє тренерство](../measures/pp-premiia-za-vnutrishnie-trenerstvo.md)
-- [PP.Премія за збереження та розширення земельного банку](../measures/pp-premiia-za-zberezhennia-ta-rozshyrennia-zemelnoho-banku.md)
-- [PP.Премія за програмою «Приведи друга»](../measures/pp-premiia-za-prohramoiu-pryvedy-druha.md)
-- [PP.Приріст РЦД](../measures/pp-pryrist-rtsd.md)
-- [PP.Приріст окладу](../measures/pp-pryrist-okladu.md)
-- [PP.Проектний бонус за стратегічні ІТ проєкти](../measures/pp-proektnyi-bonus-za-stratehichni-it-proiekty.md)
-- [PP.Разова премія за програмою визнання](../measures/pp-razova-premiia-za-prohramoiu-vyznannia.md)
-- [PP.Розмір фіксованої винагороди плановий, за місяць СТАНОМ НА РІК НАЗАД](../measures/pp-rozmir-fiksovanoi-vynahorody-planovyi-za-misiats-stanom-na-rik-nazad.md)
-- [PP.Річні бонуси](../measures/pp-richni-bonusy.md)
-- [PP.Соціальна підтримка](../measures/pp-sotsialna-pidtrymka.md)
-- [PP.Цільовий розмір річної винагороди, до оподаткування (12 місяців назад)](../measures/pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia-12-misiatsiv-nazad.md)
-- [PP.Щоквартальні премії в середньому за квартал](../measures/pp-shchokvartalni-premii-v-serednomu-za-kvartal.md)
-- [PP.Щомісячні премії накопичувально](../measures/pp-shchomisiachni-premii-nakopychuvalno.md)
-- [PP.Щомісячні премії середньомісячно](../measures/pp-shchomisiachni-premii-serednomisiachno.md)
-- [date_filters_check](../measures/date-filters-check.md)
+Усього: **54**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Personal Profile](../report/personal-profile.md) — 21
+
+**VIVA:** [PP.Наставництво](../measures/pp-nastavnytstvo.md)
+
+**Винагорода:** [PP.Інші доплати](../measures/pp-inshi-doplaty.md) · [PP.Доплата за наставництво](../measures/pp-doplata-za-nastavnytstvo.md) · [PP.Доплати за суміщення](../measures/pp-doplaty-za-sumishchennia.md) · [PP.Квартальні премії факт](../measures/pp-kvartalni-premii-fakt.md) · [PP.Позика (активна).Сума](../measures/pp-pozyka-aktyvna-suma.md) · [PP.Позика на ноутбук](../measures/pp-pozyka-na-noutbuk.md) · [PP.Премія за Банк ідей](../measures/pp-premiia-za-bank-idei.md) · [PP.Премія за внутрішнє тренерство](../measures/pp-premiia-za-vnutrishnie-trenerstvo.md) · [PP.Премія за програмою «Приведи друга»](../measures/pp-premiia-za-prohramoiu-pryvedy-druha.md) · [PP.Разова премія за програмою визнання](../measures/pp-razova-premiia-za-prohramoiu-vyznannia.md) · [PP.Річні бонуси](../measures/pp-richni-bonusy.md) · [PP.Соціальна підтримка](../measures/pp-sotsialna-pidtrymka.md) · [PP.Щоквартальні премії в середньому за квартал](../measures/pp-shchokvartalni-premii-v-serednomu-za-kvartal.md) · [PP.Щомісячні премії накопичувально](../measures/pp-shchomisiachni-premii-nakopychuvalno.md) · [PP.Щомісячні премії середньомісячно](../measures/pp-shchomisiachni-premii-serednomisiachno.md)
+
+**Життєвий цикл:** [PP.Y_axis_rcd](../measures/pp-y-axis-rcd.md) · [PP.Колір шапки тултіпу](../measures/pp-kolir-shapky-tultipu.md) · [PP.Приріст окладу](../measures/pp-pryrist-okladu.md)
+
+**Здоров'я та благополуччя:** [PP.Місяці без відпустки](../measures/pp-misiatsi-bez-vidpustky.md)
+
+**Результативність та оцінка › OKR:** [PP.SVG.OKR.Загальна оцінка](../measures/pp-svg-okr-zahalna-otsinka.md)
+
+### [TT:Життєвий цикл](../report/tt-zhyttievyi-tsykl.md) — 1
+
+**Інші візуали:** [PP.Колір шапки тултіпу](../measures/pp-kolir-shapky-tultipu.md)
+
+### [TT:Зміна фікс винагороди](../report/tt-zmina-fiks-vynahorody.md) — 1
+
+**Інші візуали:** [PP.Розмір фіксованої винагороди плановий, за місяць СТАНОМ НА РІК НАЗАД](../measures/pp-rozmir-fiksovanoi-vynahorody-planovyi-za-misiats-stanom-na-rik-nazad.md)
+
+### [TT:Доплати за суміщення](../report/tt-doplaty-za-sumishchennia.md) — 1
+
+**Інші візуали:** [PP.Доплати за суміщення](../measures/pp-doplaty-za-sumishchennia.md)
+
+### [ТТ:"Інші доплати"](../report/tt-inshi-doplaty.md) — 1
+
+**Інші візуали:** [PP.Інші доплати](../measures/pp-inshi-doplaty.md)
+
+### [TT:Щомісячна премія](../report/tt-shchomisiachna-premiia.md) — 1
+
+**Інші візуали:** [PP.Щомісячні премії накопичувально](../measures/pp-shchomisiachni-premii-nakopychuvalno.md)
+
+### [ТТ:Квартальна премія](../report/tt-kvartalna-premiia.md) — 1
+
+**Інші візуали:** [PP.Квартальні премії факт](../measures/pp-kvartalni-premii-fakt.md)
+
+### [ТТ:Річний бонус](../report/tt-richnyi-bonus.md) — 1
+
+**Інші візуали:** [PP.Річні бонуси](../measures/pp-richni-bonusy.md)
+
+### [Group Profile](../report/group-profile.md) — 22
+
+**Інші візуали:** [GP.Середня заробітна плата](../measures/gp-serednia-zarobitna-plata.md)
+
+**TRS:** [GP.Доля команди з позикою на ноутбук (%) (діюча)](../measures/gp-dolia-komandy-z-pozykoiu-na-noutbuk-diiucha.md) · [GP.Доля команди з соціальними виплатами, %](../measures/gp-dolia-komandy-z-sotsialnymy-vyplatamy.md) · [GP.Доля команди із доплатою за наставництво, %](../measures/gp-dolia-komandy-iz-doplatoiu-za-nastavnytstvo.md) · [GP.Доля команди із премією МХП Зірки, %](../measures/gp-dolia-komandy-iz-premiieiu-mkhp-zirky.md) · [GP.Доля команди із премією за Банк ідей, %](../measures/gp-dolia-komandy-iz-premiieiu-za-bank-idei.md) · [GP.Доля команди із премією за збереження та розширення земельного банку, %](../measures/gp-dolia-komandy-iz-premiieiu-za-zberezhennia-ta-rozshyrennia-zemelnoho-banku.md) · [GP.Доля команди із премією за програмою «Приведи друга», %](../measures/gp-dolia-komandy-iz-premiieiu-za-prohramoiu-pryvedy-druha.md) · [GP.Доля команди із проектним бонусом за стратегічні ІТ проєкти, %](../measures/gp-dolia-komandy-iz-proektnym-bonusom-za-stratehichni-it-proiekty.md) · [GP.Доля команди із разовою премією за програмою визнання, %](../measures/gp-dolia-komandy-iz-razovoiu-premiieiu-za-prohramoiu-vyznannia.md) · [GP.Доля команди із інвестиційним проєктним бонусом, %](../measures/gp-dolia-komandy-iz-investytsiinym-proiektnym-bonusom.md) · [GP.Доля учасників команди із зміною зарплати (окладу), %](../measures/gp-dolia-uchasnykiv-komandy-iz-zminoiu-zarplaty-okladu.md) · [GP.Середній % зростання зарплати (окладу) за 12 міс](../measures/gp-serednii-zrostannia-zarplaty-okladu-za-12-mis.md) · [GP.Середній розмір доплати за наставництво](../measures/gp-serednii-rozmir-doplaty-za-nastavnytstvo.md) · [GP.Середній розмір премії МХП Зірки](../measures/gp-serednii-rozmir-premii-mkhp-zirky.md) · [GP.Середній розмір премії за Банк ідей](../measures/gp-serednii-rozmir-premii-za-bank-idei.md) · [GP.Середній розмір премії за збереження та розширення земельного банку](../measures/gp-serednii-rozmir-premii-za-zberezhennia-ta-rozshyrennia-zemelnoho-banku.md) · [GP.Середній розмір премії за програмою «Приведи друга»](../measures/gp-serednii-rozmir-premii-za-prohramoiu-pryvedy-druha.md) · [GP.Середній розмір проектного бонус за стратегічні ІТ проєкти](../measures/gp-serednii-rozmir-proektnoho-bonus-za-stratehichni-it-proiekty.md) · [GP.Середній розмір разової премії за програмою визнання](../measures/gp-serednii-rozmir-razovoi-premii-za-prohramoiu-vyznannia.md) · [GP.Середній розмір соціальної підтримки](../measures/gp-serednii-rozmir-sotsialnoi-pidtrymky.md) · [GP.Середній розмір інвестиційного проєктного бонусу](../measures/gp-serednii-rozmir-investytsiinoho-proiektnoho-bonusu.md)
+
+**Версія 1:** [GP.Середня заробітна плата](../measures/gp-serednia-zarobitna-plata.md)
+
+### Поза звітом / службові — 10
+
+[PP.history_position_maxd](../measures/pp-history-position-maxd.md) · [PP.min_Y_axis_rcd](../measures/pp-min-y-axis-rcd.md) · [PP.Інвестиційний проєктний бонус](../measures/pp-investytsiinyi-proiektnyi-bonus.md) · [PP.Поточний РЦД](../measures/pp-potochnyi-rtsd.md) · [PP.Премія МХП Зірки](../measures/pp-premiia-mkhp-zirky.md) · [PP.Премія за збереження та розширення земельного банку](../measures/pp-premiia-za-zberezhennia-ta-rozshyrennia-zemelnoho-banku.md) · [PP.Приріст РЦД](../measures/pp-pryrist-rtsd.md) · [PP.Проектний бонус за стратегічні ІТ проєкти](../measures/pp-proektnyi-bonus-za-stratehichni-it-proiekty.md) · [PP.Цільовий розмір річної винагороди, до оподаткування (12 місяців назад)](../measures/pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia-12-misiatsiv-nazad.md) · [date_filters_check](../measures/date-filters-check.md)
 
 ## Нотатки
 

@@ -12,11 +12,15 @@
   "reportPages": [
     {
       "display": "Group Profile",
-      "slug": "group-profile"
+      "slug": "group-profile",
+      "groups": [
+        "TRS"
+      ]
     },
     {
       "display": "Підсказка \"Макс винагорода (факт)\"",
-      "slug": "pidskazka-maks-vynahoroda-fakt"
+      "slug": "pidskazka-maks-vynahoroda-fakt",
+      "groups": []
     }
   ],
   "dependencies": {

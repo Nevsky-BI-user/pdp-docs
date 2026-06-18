@@ -35,9 +35,11 @@
 
 ## Пов'язані міри
 
-Усього: 2.
-- [GP.Середній дохід без річного бонуса (за ост. 12 міс)](../measures/gp-serednii-dokhid-bez-richnoho-bonusa-za-ost-12-mis.md)
-- [GP.Середній дохід з річним бонусом (за ост. 12 міс)](../measures/gp-serednii-dokhid-z-richnym-bonusom-za-ost-12-mis.md)
+Усього: **2**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Group Profile](../report/group-profile.md) — 2
+
+**TRS:** [GP.Середній дохід без річного бонуса (за ост. 12 міс)](../measures/gp-serednii-dokhid-bez-richnoho-bonusa-za-ost-12-mis.md) · [GP.Середній дохід з річним бонусом (за ост. 12 міс)](../measures/gp-serednii-dokhid-z-richnym-bonusom-za-ost-12-mis.md)
 
 ## Нотатки
 

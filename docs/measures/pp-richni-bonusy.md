@@ -64,7 +64,8 @@ graph LR
 
 ## На сторінках звіту
 
-[Personal Profile](../report/personal-profile.md) · [ТТ:Річний бонус](../report/tt-richnyi-bonus.md)
+- [Personal Profile](../report/personal-profile.md) — Винагорода
+- [ТТ:Річний бонус](../report/tt-richnyi-bonus.md)
 
 ## Пов'язані міри
 

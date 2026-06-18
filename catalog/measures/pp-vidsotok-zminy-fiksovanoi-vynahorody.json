@@ -12,11 +12,15 @@
   "reportPages": [
     {
       "display": "Personal Profile",
-      "slug": "personal-profile"
+      "slug": "personal-profile",
+      "groups": [
+        "Винагорода"
+      ]
     },
     {
       "display": "TT:Зміна фікс винагороди",
-      "slug": "tt-zmina-fiks-vynahorody"
+      "slug": "tt-zmina-fiks-vynahorody",
+      "groups": []
     }
   ],
   "dependencies": {

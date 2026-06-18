@@ -48,7 +48,8 @@ graph LR
 
 ## На сторінках звіту
 
-[Group Profile](../report/group-profile.md) · [Під ризиком мобілізації](../report/pid-ryzykom-mobilizatsii.md)
+- [Group Profile](../report/group-profile.md) — Загальна інформація
+- [Під ризиком мобілізації](../report/pid-ryzykom-mobilizatsii.md)
 
 ## Пов'язані міри
 

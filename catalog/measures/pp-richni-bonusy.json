@@ -12,11 +12,15 @@
   "reportPages": [
     {
       "display": "Personal Profile",
-      "slug": "personal-profile"
+      "slug": "personal-profile",
+      "groups": [
+        "Винагорода"
+      ]
     },
     {
       "display": "ТТ:Річний бонус",
-      "slug": "tt-richnyi-bonus"
+      "slug": "tt-richnyi-bonus",
+      "groups": []
     }
   ],
   "dependencies": {

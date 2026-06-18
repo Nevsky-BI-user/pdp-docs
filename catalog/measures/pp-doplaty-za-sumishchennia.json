@@ -12,11 +12,15 @@
   "reportPages": [
     {
       "display": "Personal Profile",
-      "slug": "personal-profile"
+      "slug": "personal-profile",
+      "groups": [
+        "Винагорода"
+      ]
     },
     {
       "display": "TT:Доплати за суміщення",
-      "slug": "tt-doplaty-za-sumishchennia"
+      "slug": "tt-doplaty-za-sumishchennia",
+      "groups": []
     }
   ],
   "dependencies": {

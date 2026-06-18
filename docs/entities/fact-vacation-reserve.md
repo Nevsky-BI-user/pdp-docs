@@ -68,9 +68,11 @@
 
 ## Пов'язані міри
 
-Усього: 2.
-- [PP.Залишок відпустки](../measures/pp-zalyshok-vidpustky.md)
-- [PP.Місяці без відпустки](../measures/pp-misiatsi-bez-vidpustky.md)
+Усього: **2**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Personal Profile](../report/personal-profile.md) — 2
+
+**Здоров'я та благополуччя:** [PP.Залишок відпустки](../measures/pp-zalyshok-vidpustky.md) · [PP.Місяці без відпустки](../measures/pp-misiatsi-bez-vidpustky.md)
 
 ## Нотатки
 

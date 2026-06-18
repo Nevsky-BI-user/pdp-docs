@@ -12,7 +12,10 @@
   "reportPages": [
     {
       "display": "Personal Profile",
-      "slug": "personal-profile"
+      "slug": "personal-profile",
+      "groups": [
+        "Результативність та оцінка › OKR"
+      ]
     }
   ],
   "dependencies": {

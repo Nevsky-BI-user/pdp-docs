@@ -100,35 +100,23 @@
 
 ## Пов'язані міри
 
-Усього: 28.
-- [GP.Результативність.Оцінка OKR.Загальна кількість KR.PY](../measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-kr-py.md)
-- [GP.Результативність.Оцінка OKR.Загальна кількість OKR.CY](../measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-okr-cy.md)
-- [GP.Результативність.Оцінка OKR.Загальна кількість OKR.PY](../measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-okr-py.md)
-- [GP.Результативність.Оцінка OKR.Кількість співробітників з OKR.CY](../measures/gp-rezultatyvnist-otsinka-okr-kilkist-spivrobitnykiv-z-okr-cy.md)
-- [GP.Результативність.Оцінка OKR.Кількість співробітників з OKR.PY](../measures/gp-rezultatyvnist-otsinka-okr-kilkist-spivrobitnykiv-z-okr-py.md)
-- [GP.Результативність.Оцінка OKR.Середня кількість KR.PY](../measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-kr-py.md)
-- [GP.Результативність.Оцінка OKR.Середня кількість OKR.CY](../measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-okr-cy.md)
-- [GP.Результативність.Оцінка OKR.Середня кількість OKR.PY](../measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-okr-py.md)
-- [GP.Результативність.Оцінка OKR.Фільтр деталізації OKR](../measures/gp-rezultatyvnist-otsinka-okr-filtr-detalizatsii-okr.md)
-- [PP.OKR.Current_user.Загальна  оцінка OKR](../measures/pp-okr-current-user-zahalna-otsinka-okr.md)
-- [PP.OKR.Current_user.Загальна колірна оцінка OKR](../measures/pp-okr-current-user-zahalna-kolirna-otsinka-okr.md)
-- [PP.OKR.Current_user.Коефіцієнт індивідуального бонусу](../measures/pp-okr-current-user-koefitsiient-indyvidualnoho-bonusu.md)
-- [PP.OKR.Current_user.Статус плану](../measures/pp-okr-current-user-status-planu.md)
-- [PP.OKR.IsCurrentEmployee](../measures/pp-okr-iscurrentemployee.md)
-- [PP.OKR.SVG.Last2Periods](../measures/pp-okr-svg-last2periods.md)
-- [PP.OKR.Вага OKR](../measures/pp-okr-vaha-okr.md)
-- [PP.OKR.Загальна колірна оцінка OKR](../measures/pp-okr-zahalna-kolirna-otsinka-okr.md)
-- [PP.OKR.Загальна оцінка OKR](../measures/pp-okr-zahalna-otsinka-okr.md)
-- [PP.OKR.Значення OKR](../measures/pp-okr-znachennia-okr.md)
-- [PP.OKR.Колірна оцінка OKR](../measures/pp-okr-kolirna-otsinka-okr.md)
-- [PP.OKR.Ціль виконана](../measures/pp-okr-tsil-vykonana.md)
-- [PP.OKR.Ціль не виконана](../measures/pp-okr-tsil-ne-vykonana.md)
-- [PP.SVG.OKR.Загальна оцінка](../measures/pp-svg-okr-zahalna-otsinka.md)
-- [PP.Частка KR за наявністю змін](../measures/pp-chastka-kr-za-naiavnistiu-zmin.md)
-- [PP.Частка OKR за кросфункційністю](../measures/pp-chastka-okr-za-krosfunktsiinistiu.md)
-- [PP.Частка OKR за наявністю змін](../measures/pp-chastka-okr-za-naiavnistiu-zmin.md)
-- [PP.Частка OKR за статусом](../measures/pp-chastka-okr-za-statusom.md)
-- [PP.Частка OKR за типом цілі](../measures/pp-chastka-okr-za-typom-tsili.md)
+Усього: **28**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Personal Profile](../report/personal-profile.md) — 8
+
+**Паспортна частина:** [PP.OKR.SVG.Last2Periods](../measures/pp-okr-svg-last2periods.md)
+
+**Результативність та оцінка › OKR:** [PP.SVG.OKR.Загальна оцінка](../measures/pp-svg-okr-zahalna-otsinka.md)
+
+**Результативність та оцінка › OKR.детально:** [PP.OKR.Ціль виконана](../measures/pp-okr-tsil-vykonana.md) · [PP.OKR.Ціль не виконана](../measures/pp-okr-tsil-ne-vykonana.md) · [PP.Частка KR за наявністю змін](../measures/pp-chastka-kr-za-naiavnistiu-zmin.md) · [PP.Частка OKR за кросфункційністю](../measures/pp-chastka-okr-za-krosfunktsiinistiu.md) · [PP.Частка OKR за наявністю змін](../measures/pp-chastka-okr-za-naiavnistiu-zmin.md) · [PP.Частка OKR за типом цілі](../measures/pp-chastka-okr-za-typom-tsili.md)
+
+### [Group Profile](../report/group-profile.md) — 7
+
+**Результативність та оцінка › Оцінка ОКР:** [GP.Результативність.Оцінка OKR.Загальна кількість KR.PY](../measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-kr-py.md) · [GP.Результативність.Оцінка OKR.Загальна кількість OKR.CY](../measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-okr-cy.md) · [GP.Результативність.Оцінка OKR.Загальна кількість OKR.PY](../measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-okr-py.md) · [GP.Результативність.Оцінка OKR.Кількість співробітників з OKR.CY](../measures/gp-rezultatyvnist-otsinka-okr-kilkist-spivrobitnykiv-z-okr-cy.md) · [GP.Результативність.Оцінка OKR.Середня кількість KR.PY](../measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-kr-py.md) · [GP.Результативність.Оцінка OKR.Середня кількість OKR.CY](../measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-okr-cy.md) · [GP.Результативність.Оцінка OKR.Середня кількість OKR.PY](../measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-okr-py.md)
+
+### Поза звітом / службові — 13
+
+[GP.Результативність.Оцінка OKR.Кількість співробітників з OKR.PY](../measures/gp-rezultatyvnist-otsinka-okr-kilkist-spivrobitnykiv-z-okr-py.md) · [GP.Результативність.Оцінка OKR.Фільтр деталізації OKR](../measures/gp-rezultatyvnist-otsinka-okr-filtr-detalizatsii-okr.md) · [PP.OKR.Current_user.Загальна  оцінка OKR](../measures/pp-okr-current-user-zahalna-otsinka-okr.md) · [PP.OKR.Current_user.Загальна колірна оцінка OKR](../measures/pp-okr-current-user-zahalna-kolirna-otsinka-okr.md) · [PP.OKR.Current_user.Коефіцієнт індивідуального бонусу](../measures/pp-okr-current-user-koefitsiient-indyvidualnoho-bonusu.md) · [PP.OKR.Current_user.Статус плану](../measures/pp-okr-current-user-status-planu.md) · [PP.OKR.IsCurrentEmployee](../measures/pp-okr-iscurrentemployee.md) · [PP.OKR.Вага OKR](../measures/pp-okr-vaha-okr.md) · [PP.OKR.Загальна колірна оцінка OKR](../measures/pp-okr-zahalna-kolirna-otsinka-okr.md) · [PP.OKR.Загальна оцінка OKR](../measures/pp-okr-zahalna-otsinka-okr.md) · [PP.OKR.Значення OKR](../measures/pp-okr-znachennia-okr.md) · [PP.OKR.Колірна оцінка OKR](../measures/pp-okr-kolirna-otsinka-okr.md) · [PP.Частка OKR за статусом](../measures/pp-chastka-okr-za-statusom.md)
 
 ## Нотатки
 

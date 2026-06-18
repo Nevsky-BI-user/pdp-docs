@@ -25,8 +25,11 @@
 
 ## Пов'язані міри
 
-Усього: 1.
-- [GP.OKR.SVG.Bar chart](../measures/gp-okr-svg-bar-chart.md)
+Усього: **1**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Group Profile](../report/group-profile.md) — 1
+
+**Інші візуали:** [GP.OKR.SVG.Bar chart](../measures/gp-okr-svg-bar-chart.md)
 
 ## Нотатки
 

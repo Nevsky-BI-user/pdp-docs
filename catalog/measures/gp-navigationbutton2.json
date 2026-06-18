@@ -12,15 +12,24 @@
   "reportPages": [
     {
       "display": "Group Profile",
-      "slug": "group-profile"
+      "slug": "group-profile",
+      "groups": [
+        "Navigation"
+      ]
     },
     {
       "display": "Утримання працівників",
-      "slug": "utrymannia-pratsivnykiv"
+      "slug": "utrymannia-pratsivnykiv",
+      "groups": [
+        "Navigation group"
+      ]
     },
     {
       "display": "Продуктивність працівників",
-      "slug": "produktyvnist-pratsivnykiv"
+      "slug": "produktyvnist-pratsivnykiv",
+      "groups": [
+        "Navigation group"
+      ]
     }
   ],
   "dependencies": {

@@ -69,7 +69,8 @@ graph LR
 
 ## На сторінках звіту
 
-[Personal Profile](../report/personal-profile.md) · [TT:Доплати за суміщення](../report/tt-doplaty-za-sumishchennia.md)
+- [Personal Profile](../report/personal-profile.md) — Винагорода
+- [TT:Доплати за суміщення](../report/tt-doplaty-za-sumishchennia.md)
 
 ## Пов'язані міри
 

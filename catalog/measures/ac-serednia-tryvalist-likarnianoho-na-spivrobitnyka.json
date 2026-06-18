@@ -12,7 +12,10 @@
   "reportPages": [
     {
       "display": "Group Profile",
-      "slug": "group-profile"
+      "slug": "group-profile",
+      "groups": [
+        "Здоров'я та благополуччя"
+      ]
     }
   ],
   "dependencies": {

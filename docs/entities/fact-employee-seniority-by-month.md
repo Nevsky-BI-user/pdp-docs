@@ -52,21 +52,27 @@
 
 ## Пов'язані міри
 
-Усього: 14.
-- [AC.BR.Стаж в холдингу (неперервний)](../measures/ac-br-stazh-v-kholdynhu-neperervnyi.md)
-- [AC.BR.Стаж на посаді (останній)](../measures/ac-br-stazh-na-posadi-ostannii.md)
-- [AC.LP.Стаж на посаді (останній)](../measures/ac-lp-stazh-na-posadi-ostannii.md)
-- [GP.Середній стаж в команді, років](../measures/gp-serednii-stazh-v-komandi-rokiv.md)
-- [PP.Дата прийому в команду (останній)](../measures/pp-data-pryiomu-v-komandu-ostannii.md)
-- [PP.Дата прийому в організацію (останній)](../measures/pp-data-pryiomu-v-orhanizatsiiu-ostannii.md)
-- [PP.Дата прийому в холдинг (неперервний)](../measures/pp-data-pryiomu-v-kholdynh-neperervnyi.md)
-- [PP.Дата прийому в холдинг (перервний)](../measures/pp-data-pryiomu-v-kholdynh-perervnyi.md)
-- [PP.Дата прийому на посаду (останній)](../measures/pp-data-pryiomu-na-posadu-ostannii.md)
-- [PP.Стаж в команді (останній)](../measures/pp-stazh-v-komandi-ostannii.md)
-- [PP.Стаж в організації (останній)](../measures/pp-stazh-v-orhanizatsii-ostannii.md)
-- [PP.Стаж в холдингу (неперервний)](../measures/pp-stazh-v-kholdynhu-neperervnyi.md)
-- [PP.Стаж в холдингу (перервний)](../measures/pp-stazh-v-kholdynhu-perervnyi.md)
-- [PP.Стаж на посаді (останній)](../measures/pp-stazh-na-posadi-ostannii.md)
+Усього: **14**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Personal Profile](../report/personal-profile.md) — 10
+
+**Життєвий цикл:** [PP.Дата прийому в команду (останній)](../measures/pp-data-pryiomu-v-komandu-ostannii.md) · [PP.Дата прийому в організацію (останній)](../measures/pp-data-pryiomu-v-orhanizatsiiu-ostannii.md) · [PP.Дата прийому в холдинг (неперервний)](../measures/pp-data-pryiomu-v-kholdynh-neperervnyi.md) · [PP.Дата прийому в холдинг (перервний)](../measures/pp-data-pryiomu-v-kholdynh-perervnyi.md) · [PP.Дата прийому на посаду (останній)](../measures/pp-data-pryiomu-na-posadu-ostannii.md) · [PP.Стаж в команді (останній)](../measures/pp-stazh-v-komandi-ostannii.md) · [PP.Стаж в організації (останній)](../measures/pp-stazh-v-orhanizatsii-ostannii.md) · [PP.Стаж в холдингу (неперервний)](../measures/pp-stazh-v-kholdynhu-neperervnyi.md) · [PP.Стаж в холдингу (перервний)](../measures/pp-stazh-v-kholdynhu-perervnyi.md) · [PP.Стаж на посаді (останній)](../measures/pp-stazh-na-posadi-ostannii.md)
+
+### [Group Profile](../report/group-profile.md) — 1
+
+**Інші візуали:** [GP.Середній стаж в команді, років](../measures/gp-serednii-stazh-v-komandi-rokiv.md)
+
+**Версія 1:** [GP.Середній стаж в команді, років](../measures/gp-serednii-stazh-v-komandi-rokiv.md)
+
+**Загальна інформація:** [GP.Середній стаж в команді, років](../measures/gp-serednii-stazh-v-komandi-rokiv.md)
+
+### [Утримання працівників](../report/utrymannia-pratsivnykiv.md) — 2
+
+**Інші візуали:** [AC.BR.Стаж в холдингу (неперервний)](../measures/ac-br-stazh-v-kholdynhu-neperervnyi.md) · [AC.BR.Стаж на посаді (останній)](../measures/ac-br-stazh-na-posadi-ostannii.md)
+
+### [Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md) — 1
+
+**Інші візуали:** [AC.LP.Стаж на посаді (останній)](../measures/ac-lp-stazh-na-posadi-ostannii.md)
 
 ## Нотатки
 

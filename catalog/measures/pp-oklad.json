@@ -12,7 +12,8 @@
   "reportPages": [
     {
       "display": "TT:Життєвий цикл",
-      "slug": "tt-zhyttievyi-tsykl"
+      "slug": "tt-zhyttievyi-tsykl",
+      "groups": []
     }
   ],
   "dependencies": {

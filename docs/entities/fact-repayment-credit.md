@@ -51,14 +51,15 @@
 
 ## Пов'язані міри
 
-Усього: 7.
-- [GP.Доля команди з позикою на ноутбук (%) (діюча)](../measures/gp-dolia-komandy-z-pozykoiu-na-noutbuk-diiucha.md)
-- [GP.Доля команди із позиками](../measures/gp-dolia-komandy-iz-pozykamy.md)
-- [GP.К-ть співробітників, що отримали позику на ноутбук (діюча)](../measures/gp-k-t-spivrobitnykiv-shcho-otrymaly-pozyku-na-noutbuk-diiucha.md)
-- [GP.Середній розмір позики](../measures/gp-serednii-rozmir-pozyky.md)
-- [PP.Дата доступності позики на ноутбук](../measures/pp-data-dostupnosti-pozyky-na-noutbuk.md)
-- [PP.Позика (активна).Сума](../measures/pp-pozyka-aktyvna-suma.md)
-- [PP.Позика на ноутбук](../measures/pp-pozyka-na-noutbuk.md)
+Усього: **7**. Згруповано за сторінками звіту та блоками візуальних елементів, де ці міри використовуються.
+
+### [Personal Profile](../report/personal-profile.md) — 3
+
+**Винагорода:** [PP.Дата доступності позики на ноутбук](../measures/pp-data-dostupnosti-pozyky-na-noutbuk.md) · [PP.Позика (активна).Сума](../measures/pp-pozyka-aktyvna-suma.md) · [PP.Позика на ноутбук](../measures/pp-pozyka-na-noutbuk.md)
+
+### [Group Profile](../report/group-profile.md) — 4
+
+**TRS:** [GP.Доля команди з позикою на ноутбук (%) (діюча)](../measures/gp-dolia-komandy-z-pozykoiu-na-noutbuk-diiucha.md) · [GP.Доля команди із позиками](../measures/gp-dolia-komandy-iz-pozykamy.md) · [GP.К-ть співробітників, що отримали позику на ноутбук (діюча)](../measures/gp-k-t-spivrobitnykiv-shcho-otrymaly-pozyku-na-noutbuk-diiucha.md) · [GP.Середній розмір позики](../measures/gp-serednii-rozmir-pozyky.md)
 
 ## Нотатки
 
