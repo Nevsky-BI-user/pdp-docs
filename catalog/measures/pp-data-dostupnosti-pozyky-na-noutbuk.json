@@ -41,12 +41,36 @@
     "powerQuery": "dim_Admin_OS"
   },
   "business": {
-    "definition": "ACTION_START_DATE → Період позики; ACTION_START_DATE → Дата доступності позики на ноутбук; ACTION_START_DATE → Позика на ноутбук (дата доступності)",
-    "purpose": "Якщо працівник отримав таку позику, (тобто є запис в таблиці DM.vw_R29_fact_Repayment_Credit де [BUDGET_ITEM_CODE] = '0000008240') то це [ACTION_START_DATE] + 3 роки  <br> Якщо працівник не отримував таку позику, то виводити дату кінця адаптаційного періоду  <br>adaptation_end_date із dm.vw_R27_fact_Employee_List  <br>По пріоритетному місцю роботи в організації (якщо кілька працевлаштувань) Якщо працівник отримав таку позику, (тобто є запис в таблиці DM.vw_R27_fact_Repayment_Credit де [BUDGET_ITEM_CODE] = '0000008240') то це [ACTION_START_DATE] + 3 роки  <br> Якщо працівник не отримував таку п",
+    "name": "Дата доступності позики на ноутбук",
+    "logic": [
+      "Якщо працівник отримав таку позику, (тобто є запис в таблиці DM.vw_R29_fact_Repayment_Credit де [BUDGET_ITEM_CODE] = '0000008240') то це [ACTION_START_DATE] + 3 роки  <br> Якщо працівник не отримував таку позику, то виводити дату кінця адаптаційного періоду  <br>adaptation_end_date із dm.vw_R27_fact_Employee_List  <br>По пріоритетному місцю роботи в організації (якщо кілька працевлаштувань)"
+    ],
+    "fieldMetrics": [
+      [
+        "ACTION_START_DATE",
+        [
+          "Період позики",
+          "Дата доступності позики на ноутбук",
+          "Позика на ноутбук (дата доступності)"
+        ]
+      ]
+    ],
     "requirementRefs": [
-      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника",
-      "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Доопрацювання-сторінки-ТРС",
-      "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+      {
+        "label": "Індивідуальний профіль працівника › Сторінка Винагорода працівника",
+        "url": "https://dev.azure.com/MHPITDepProjects/People%20Digital%20Profile%20%28PDP%29/_wiki/wikis/PDP.wiki?pagePath=/%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D1%96%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%96%20%D0%B2%D0%B8%D0%BC%D0%BE%D0%B3%D0%B8/%D0%92%D0%B8%D0%BC%D0%BE%D0%B3%D0%B8%20%D0%B4%D0%BE%20%D0%B7%D0%B2%D1%96%D1%82%D1%83%20People%20Digital%20Profile/%D0%86%D0%BD%D0%B4%D0%B8%D0%B2%D1%96%D0%B4%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%84%D1%96%D0%BB%D1%8C%20%D0%BF%D1%80%D0%B0%D1%86%D1%96%D0%B2%D0%BD%D0%B8%D0%BA%D0%B0/%D0%A1%D1%82%D0%BE%D1%80%D1%96%D0%BD%D0%BA%D0%B0%20%D0%92%D0%B8%D0%BD%D0%B0%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0%20%D0%BF%D1%80%D0%B0%D1%86%D1%96%D0%B2%D0%BD%D0%B8%D0%BA%D0%B0",
+        "path": "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника"
+      },
+      {
+        "label": "Індивідуальний профіль працівника › Сторінка Винагорода працівника › Доопрацювання сторінки ТРС",
+        "url": "https://dev.azure.com/MHPITDepProjects/People%20Digital%20Profile%20%28PDP%29/_wiki/wikis/PDP.wiki?pagePath=/%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D1%96%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%96%20%D0%B2%D0%B8%D0%BC%D0%BE%D0%B3%D0%B8/%D0%92%D0%B8%D0%BC%D0%BE%D0%B3%D0%B8%20%D0%B4%D0%BE%20%D0%B7%D0%B2%D1%96%D1%82%D1%83%20People%20Digital%20Profile/%D0%86%D0%BD%D0%B4%D0%B8%D0%B2%D1%96%D0%B4%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%84%D1%96%D0%BB%D1%8C%20%D0%BF%D1%80%D0%B0%D1%86%D1%96%D0%B2%D0%BD%D0%B8%D0%BA%D0%B0/%D0%A1%D1%82%D0%BE%D1%80%D1%96%D0%BD%D0%BA%D0%B0%20%D0%92%D0%B8%D0%BD%D0%B0%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0%20%D0%BF%D1%80%D0%B0%D1%86%D1%96%D0%B2%D0%BD%D0%B8%D0%BA%D0%B0/%D0%94%D0%BE%D0%BE%D0%BF%D1%80%D0%B0%D1%86%D1%8E%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F%20%D1%81%D1%82%D0%BE%D1%80%D1%96%D0%BD%D0%BA%D0%B8%20%D0%A2%D0%A0%D0%A1",
+        "path": "Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Доопрацювання-сторінки-ТРС"
+      },
+      {
+        "label": "Командний профіль › Сторінка Моя команда › ТЗ. Деталізація метрик групового профілю звіту",
+        "url": "https://dev.azure.com/MHPITDepProjects/People%20Digital%20Profile%20%28PDP%29/_wiki/wikis/PDP.wiki?pagePath=/%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D1%96%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%96%20%D0%B2%D0%B8%D0%BC%D0%BE%D0%B3%D0%B8/%D0%92%D0%B8%D0%BC%D0%BE%D0%B3%D0%B8%20%D0%B4%D0%BE%20%D0%B7%D0%B2%D1%96%D1%82%D1%83%20People%20Digital%20Profile/%D0%9A%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%BD%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%84%D1%96%D0%BB%D1%8C/%D0%A1%D1%82%D0%BE%D1%80%D1%96%D0%BD%D0%BA%D0%B0%20%D0%9C%D0%BE%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0/%D0%A2%D0%97.%20%D0%94%D0%B5%D1%82%D0%B0%D0%BB%D1%96%D0%B7%D0%B0%D1%86%D1%96%D1%8F%20%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D0%BA%20%D0%B3%D1%80%D1%83%D0%BF%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%20%D0%BF%D1%80%D0%BE%D1%84%D1%96%D0%BB%D1%8E%20%D0%B7%D0%B2%D1%96%D1%82%D1%83",
+        "path": "Командний-профіль/Сторінка-Моя-команда/ТЗ.-Деталізація-метрик-групового-профілю-звіту"
+      }
     ]
   },
   "tags": [

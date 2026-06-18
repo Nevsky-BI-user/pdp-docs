@@ -10,13 +10,13 @@
 | Міра | Формат | Бізнес-суть |
 |---|---|---|
 | [GP.Кількість співробітників всього, чол. - String](../measures/gp-kilkist-spivrobitnykiv-vsoho-chol-string.md) | — | — |
-| [GP.Кількість чоловіків під ризиком мобілізації(%)](../measures/gp-kilkist-cholovikiv-pid-ryzykom-mobilizatsii.md) | `#,0` | GENDER → Стать; IS_AT_RISK → Під ризиком мобілізації; IS_AT_RISK → Ризик мобілізації; IS_AT_RISK → Доля чоловіків під ризиком мобілізації (%) |
+| [GP.Кількість чоловіків під ризиком мобілізації(%)](../measures/gp-kilkist-cholovikiv-pid-ryzykom-mobilizatsii.md) | `#,0` | 1 - під ризиком. 0 - ризик відсутній |
 
 ## Group_Profile\Загальна інформація
 
 | Міра | Формат | Бізнес-суть |
 |---|---|---|
-| [GP.Кількість чоловіків БЕЗ ризику мобілізації(%)](../measures/gp-kilkist-cholovikiv-bez-ryzyku-mobilizatsii.md) | `#,0` | GENDER → Стать; IS_AT_RISK → Під ризиком мобілізації; IS_AT_RISK → Ризик мобілізації; IS_AT_RISK → Доля чоловіків під ризиком мобілізації (%) |
+| [GP.Кількість чоловіків БЕЗ ризику мобілізації(%)](../measures/gp-kilkist-cholovikiv-bez-ryzyku-mobilizatsii.md) | `#,0` | 1 - під ризиком. 0 - ризик відсутній |
 
 ## _Technical
 

@@ -28,8 +28,9 @@
     "powerQuery": "dim_Date"
   },
   "business": {
-    "definition": "",
-    "purpose": "",
+    "name": "",
+    "logic": [],
+    "fieldMetrics": [],
     "requirementRefs": []
   },
   "tags": [

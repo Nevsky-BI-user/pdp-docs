@@ -28,8 +28,9 @@
     "powerQuery": "t_HierarchyTypes"
   },
   "business": {
-    "definition": "",
-    "purpose": "",
+    "name": "",
+    "logic": [],
+    "fieldMetrics": [],
     "requirementRefs": []
   },
   "tags": [

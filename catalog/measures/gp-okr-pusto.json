@@ -25,8 +25,9 @@
     "powerQuery": ""
   },
   "business": {
-    "definition": "",
-    "purpose": "",
+    "name": "",
+    "logic": [],
+    "fieldMetrics": [],
     "requirementRefs": []
   },
   "tags": [

@@ -9,5 +9,5 @@
 
 | Міра | Формат | Бізнес-суть |
 |---|---|---|
-| [PP.Інші доплати](../measures/pp-inshi-doplaty.md) | `#,0` | PAYMENTS_FACT_UAH → Зірка МХП; PAYMENTS_FACT_UAH → Наставництво (ост. 12 міс); PAYMENTS_FACT_UAH → Доплати за суміщення; PAYMENTS_FACT_UAH → Щомісячні премії… |
+| [PP.Інші доплати](../measures/pp-inshi-doplaty.md) | `#,0` | Інші доплати |
 

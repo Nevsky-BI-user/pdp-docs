@@ -9,5 +9,5 @@
 
 | Міра | Формат | Бізнес-суть |
 |---|---|---|
-| [PP.Квартальні премії факт](../measures/pp-kvartalni-premii-fakt.md) | `#,0` | PAYMENTS_FACT_UAH → Зірка МХП; PAYMENTS_FACT_UAH → Наставництво (ост. 12 міс); PAYMENTS_FACT_UAH → Доплати за суміщення; PAYMENTS_FACT_UAH → Щомісячні премії… |
+| [PP.Квартальні премії факт](../measures/pp-kvartalni-premii-fakt.md) | `#,0` | Потрібно відібрати останній запис по працівнику на дату, де  поле accrual_types_key = '9781d4aa-3a0d-1458-623a-7a93e90a2284'   та category_of_accrual_sort  =… |
 

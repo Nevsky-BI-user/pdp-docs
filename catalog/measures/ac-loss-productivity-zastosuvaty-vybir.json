@@ -38,8 +38,9 @@
     "powerQuery": "fact_Loss_of_Productivity"
   },
   "business": {
-    "definition": "",
-    "purpose": "",
+    "name": "",
+    "logic": [],
+    "fieldMetrics": [],
     "requirementRefs": []
   },
   "tags": [
