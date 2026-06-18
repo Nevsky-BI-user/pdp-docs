@@ -264,7 +264,11 @@ def main():
     mfile=os.path.join(tdir,"_Measures.tmdl")
     try: commit=subprocess.check_output(["git","-C",args.pbip,"rev-parse","HEAD"],text=True).strip()
     except Exception: commit=""
-    now=datetime.datetime.now().astimezone().isoformat(timespec="seconds")
+    # extractedAt прив'язуємо до дати коміту джерела (а не wall-clock), щоб повторна
+    # генерація без змін у джерелі давала байт-ідентичний вихід — ідемпотентність
+    # щоденного автооновлення (Task C): commit || "no changes" спрацьовує коректно.
+    try: now=subprocess.check_output(["git","-C",args.pbip,"show","-s","--format=%cI","HEAD"],text=True).strip()
+    except Exception: now=datetime.datetime.now().astimezone().isoformat(timespec="seconds")
 
     measures=parse_measures(mfile)
     if args.folder: measures=[m for m in measures if m["displayFolder"]==args.folder]
@@ -454,11 +458,14 @@ def write_entities_index(path,entities,se):
     open(path,"w",encoding="utf-8").write("\n".join(L)+"\n")
 
 def write_model(path,entities,rels):
+    # mermaid erDiagram: ідентифікатори вузлів мають бути [A-Za-z0-9_]; імена таблиць
+    # із пробілом/крапкою (t_AC Burnout, p_AC.Loss_Productivity) інакше не рендеряться.
+    nid=lambda s: re.sub(r"\W","_",s)
     L=["# Схема моделі","","Зв'язки таблиць (many → one).","","```mermaid","erDiagram"]
     names=set(entities)
     for r in rels:
         if r["fromTable"] in names and r["toTable"] in names:
-            L.append(f'  {r["toTable"]} ||--o{{ {r["fromTable"]} : "{r["fromColumn"]}"')
+            L.append(f'  {nid(r["toTable"])} ||--o{{ {nid(r["fromTable"])} : "{r["fromColumn"]}"')
     L+=["```"]
     open(path,"w",encoding="utf-8").write("\n".join(L)+"\n")
 
@@ -499,10 +506,14 @@ def write_validation(path,v,total):
     open(path,"w",encoding="utf-8").write("\n".join(L)+"\n")
 
 def append_changelog(path,now,nm,ne,commit):
-    head="# Журнал змін\n\n" if not os.path.exists(path) else ""
-    with open(path,"a",encoding="utf-8") as f:
-        if head: f.write(head)
-        f.write(f"- {now} — регенерація: {nm} мір, {ne} сутностей (PBIP commit `{commit[:8]}`).\n")
+    line=f"- {now} — регенерація: {nm} мір, {ne} сутностей (PBIP commit `{commit[:8]}`).\n"
+    if os.path.exists(path):
+        existing=open(path,encoding="utf-8").read()
+        # ідемпотентність: не дублювати запис, якщо джерело не змінилося (той самий останній рядок)
+        if existing.rstrip().endswith(line.rstrip()): return
+        with open(path,"a",encoding="utf-8") as f: f.write(line)
+    else:
+        with open(path,"w",encoding="utf-8") as f: f.write("# Журнал змін\n\n"+line)
 
 if __name__=="__main__":
     main()
