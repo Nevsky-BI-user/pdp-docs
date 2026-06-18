@@ -1,0 +1,5127 @@
+
+<!doctype html>
+<html lang="uk" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Документація семантичної моделі Power BI People Digital Profile — метрики за сторінками звіту, бізнес-суть, залежності.">
+      
+      
+      
+        <link rel="canonical" href="https://nevsky-bi-user.github.io/pdp-docs/report/personal-profile/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../group-profile/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Personal Profile - People Digital Profile — документація моделі</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#personal-profile" class="md-skip">
+          Перейти до змісту
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Хедер">
+    <a href="../.." title="People Digital Profile — документація моделі" class="md-header__button md-logo" aria-label="People Digital Profile — документація моделі" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            People Digital Profile — документація моделі
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Personal Profile
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Темна тема"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Темна тема" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Світла тема"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Світла тема" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Пошук" placeholder="Пошук" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Шукати">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Поділитись" aria-label="Поділитись" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистити" aria-label="Очистити" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Пошук розпочато
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Nevsky-BI-user/pdp-docs" title="Перейти до вихідного коду" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Nevsky-BI-user/pdp-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Головна
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Звіт
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../measures/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Каталог мір
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../entities/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Бізнес-сутності
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../model/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Модель даних
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Глосарій
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../validation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Якість і валідація
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../changelog/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Журнал змін
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навігація" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="People Digital Profile — документація моделі" class="md-nav__button md-logo" aria-label="People Digital Profile — документація моделі" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    People Digital Profile — документація моделі
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Nevsky-BI-user/pdp-docs" title="Перейти до вихідного коду" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Nevsky-BI-user/pdp-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Головна
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Звіт
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Звіт
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personal Profile
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personal Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigationgroup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation\Group
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profiletrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\TRS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profilevivaviva-collaboration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Viva\Viva Collaboration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profilevivaviva-meetings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Viva\Viva Meetings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profilevivaviva-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Viva\Viva Networks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profilevivaviva-management-coaching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Viva\Viva management &amp; Coaching
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profileviva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Viva\Залученість та інша інформація
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Життєвий цикл
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profile_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Загальна інформація
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profile_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Здоров'я та благополуччя
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profileokr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Паспорт\OKR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profilespider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Паспорт\Spider
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profile_main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Паспорт_Main
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profile_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Паспорт\Бейджі
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profile_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Паспорт\Метрики
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profile_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Паспорт\Результативність
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profile_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Паспорт\Ризики
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profile-okr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Результативність та оцінка\OKR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profile_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Результативність та оцінка\Результативність
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_technical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        _Technical
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../group-profile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Group Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pid-ryzykom-mobilizatsii/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Під ризиком мобілізації
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utrymannia-pratsivnykiv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Утримання працівників
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../produktyvnist-pratsivnykiv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Продуктивність працівників
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тултіпи та підказки
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Тултіпи та підказки
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tt-zhyttievyi-tsykl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TT:Життєвий цикл
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tt-zmina-fiks-vynahorody/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TT:Зміна фікс винагороди
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tt-doplaty-za-sumishchennia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TT:Доплати за суміщення
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tt-inshi-doplaty/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ТТ:"Інші доплати"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tt-shchomisiachna-premiia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TT:Щомісячна премія
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tt-kvartalna-premiia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ТТ:Квартальна премія
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tt-richnyi-bonus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ТТ:Річний бонус
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pidskazka-makc-vynahoroda-plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Підсказка "Макc винагорода (план)"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pidskazka-min-vynahoroda-plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Підсказка "Мін винагорода (план)"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pidskazka-maks-vynahoroda-fakt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Підсказка "Макс винагорода (факт)"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pidskazka-min-vynahoroda-fakt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Підсказка "Мін винагорода (факт)"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../measures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Каталог мір
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../entities/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Бізнес-сутності
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Бізнес-сутності
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/cg-event-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CG_Event_Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/measures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    _Measures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-admin-os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_Admin_OS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-date/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_Date
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-divisions-hierarchy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_Divisions_Hierarchy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-employee-special-finbp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_Employee_Special_FinBP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-employee-special-hrbp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_Employee_Special_HRBP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-employee-special-head-admin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_Employee_Special_Head_admin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-employee-special-head-functional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_Employee_Special_Head_functional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-employee-status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_Employee_Status
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-employment-type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_Employment_Type
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-lp-risks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_LP_risks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-okr-evalution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_OKR_Evalution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-office/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_Office
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-organization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_Organization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-performance-evalution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_Performance_Evalution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-permanent-temporary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_Permanent_Temporary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-person/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_Person
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-position/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_Position
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-position-category/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_Position_Category
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-trs-categories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_TRS_categories
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-unit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_Unit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-work-format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim_Work_Format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/dim-hrbp-os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dim__HRBP_OS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-average-income/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_Average_Income
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-burnout-indicators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_Burnout_Indicators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-excel-group-profile-general-metric/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_EXCEL_Group_Profile_General_Metric
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-employee-history-position/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_Employee_History_Position
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-employee-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_Employee_List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-employee-okr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_Employee_OKR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-employee-performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_Employee_Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-employee-performance-total/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_Employee_Performance_Total
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-employees-attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_Employees_Attributes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-gaussian-curve-okr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_Gaussian_Curve_OKR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-gaussian-curve-performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_Gaussian_Curve_Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-loss-of-productivity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_Loss_of_Productivity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-metrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_Metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-mobile-limit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_Mobile_Limit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-monthly-viva-insights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_Monthly_Viva_Insights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-okr-goals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_OKR_Goals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-okr-key-results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_OKR_Key_Results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-okr-svg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_OKR_SVG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-repayment-credit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_Repayment_Credit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-sick-leaves/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_Sick_Leaves
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-trs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_TRS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-trs-plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_TRS_Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-trs-plan-fact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_TRS_plan_fact
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-vacancy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_Vacancy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-vacation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_Vacation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-vacation-reserve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_Vacation_Reserve
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-viva-metrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_Viva_Metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-employee-seniority-by-month/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_employee_seniority_by_month
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/p-ac-loss-productivity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    p_AC.Loss_Productivity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/t-ac-burnout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    t_AC Burnout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/t-flagdim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    t_FlagDim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/t-hierarchytypes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    t_HierarchyTypes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/t-is-fired/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    t_IS_FIRED
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/t-loss-productivity-metrics-by-persona/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    t_Loss_Productivity_Metrics_by_Persona
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/t-user-roles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    t_user_roles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Модель даних
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Глосарій
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../validation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Якість і валідація
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Журнал змін
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigationgroup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation\Group
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profiletrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\TRS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profilevivaviva-collaboration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Viva\Viva Collaboration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profilevivaviva-meetings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Viva\Viva Meetings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profilevivaviva-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Viva\Viva Networks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profilevivaviva-management-coaching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Viva\Viva management &amp; Coaching
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profileviva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Viva\Залученість та інша інформація
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Життєвий цикл
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profile_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Загальна інформація
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profile_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Здоров'я та благополуччя
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profileokr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Паспорт\OKR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profilespider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Паспорт\Spider
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profile_main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Паспорт_Main
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profile_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Паспорт\Бейджі
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profile_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Паспорт\Метрики
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profile_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Паспорт\Результативність
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profile_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Паспорт\Ризики
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profile-okr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Результативність та оцінка\OKR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal_profile_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal_Profile\Результативність та оцінка\Результативність
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_technical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        _Technical
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="personal-profile">Personal Profile<a class="headerlink" href="#personal-profile" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Сторінка звіту</p>
+<p>Тип: <strong>Основна сторінка звіту</strong> · мір на сторінці: <strong>236</strong></p>
+</div>
+<p><a href="../"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.78 19.03a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06l6.25-6.25a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734L5.81 11.5h14.44a.75.75 0 0 1 0 1.5H5.81l4.97 4.97a.75.75 0 0 1 0 1.06"/></svg></span> Усі сторінки звіту</a></p>
+<h2 id="navigationgroup">Navigation\Group<a class="headerlink" href="#navigationgroup" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Міра</th>
+<th>Формат</th>
+<th>Бізнес-суть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../measures/gp-start-page-navigationbutton/">GP.Start_Page_NavigationButton</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="personal_profiletrs">Personal_Profile\TRS<a class="headerlink" href="#personal_profiletrs" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Міра</th>
+<th>Формат</th>
+<th>Бізнес-суть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../measures/pp-svg-pozytsiia-v-okladnii-vyltsi/">PP.SVG.Позиція в окладній вилці</a></td>
+<td>—</td>
+<td>MIN_TARIFF_RATE → Оклад; MIN_TARIFF_RATE → Позиція в окладній вилці; MIN_TARIFF_RATE → Зарплата (вилки); MIN_TARIFF_RATE → Розподіл за вилкою зарплат; MIN_TA…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-inshi-doplaty/">PP.Інші доплати</a></td>
+<td><code>#,0</code></td>
+<td>PAYMENTS_FACT_UAH → Зірка МХП; PAYMENTS_FACT_UAH → Наставництво (ост. 12 міс); PAYMENTS_FACT_UAH → Доплати за суміщення; PAYMENTS_FACT_UAH → Щомісячні премії…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-bal-okr/">PP.Бал OKR</a></td>
+<td>—</td>
+<td>General_Performance_Desc_Rate → Бал оцінки результативності; General_Performance_Desc_Rate → Загальна оцінка; General_Performance_Desc_Rate → Загальна оцінка…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-vidsotok-zminy-fiksovanoi-vynahorody/">PP.Відсоток зміни фіксованої винагороди</a></td>
+<td><code>0.00%;-0.00%;0.00%</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-data-dostupnosti-pozyky-na-noutbuk/">PP.Дата доступності позики на ноутбук</a></td>
+<td>—</td>
+<td>ACTION_START_DATE → Період позики; ACTION_START_DATE → Дата доступності позики на ноутбук; ACTION_START_DATE → Позика на ноутбук (дата доступності)</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-doplata-za-nastavnytstvo/">PP.Доплата за наставництво</a></td>
+<td><code>0</code></td>
+<td>payments_fact_UAH → Зірка МХП; payments_fact_UAH → Наставництво (ост. 12 міс); payments_fact_UAH → Доплати за суміщення; payments_fact_UAH → Щомісячні премії…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-doplata-za-shkidlyvi-umovy-pratsi/">PP.Доплата за шкідливі умови праці, %</a></td>
+<td><code>0%;-0%;0%</code></td>
+<td>INIT_PAYMENT_PLAN_SUM → Цільовий розмір річної винагороди, до оподаткування; INIT_PAYMENT_PLAN_SUM → Оклад по годинах; INIT_PAYMENT_PLAN_SUM → Оклад по днях;…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-doplata-za-shkidlyvi-umovy-pratsi-hrn/">PP.Доплата за шкідливі умови праці,грн</a></td>
+<td>—</td>
+<td>PAYMENT_PLAN_SUM → Річний цільовий дохід; PAYMENT_PLAN_SUM → Розмір фіксованої винагороди плановий, за місяць ПОТОЧНИЙ; PAYMENT_PLAN_SUM → Сума (на поточний …</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-doplaty-za-sumishchennia/">PP.Доплати за суміщення</a></td>
+<td><code>#,0</code></td>
+<td>PAYMENTS_FACT_UAH → Зірка МХП; PAYMENTS_FACT_UAH → Наставництво (ост. 12 міс); PAYMENTS_FACT_UAH → Доплати за суміщення; PAYMENTS_FACT_UAH → Щомісячні премії…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-zrostannia-tsilovoi-richnoi-vynahorody-do-opodatkuvannia-za-ostanni-12-mis/">PP.Зростання цільової річної винагороди, до оподаткування (за останні 12 міс.)</a></td>
+<td><code>#,0.0%;-#,0.0%;#,0.0%</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-kvartalna-premiia/">PP.Квартальна премія</a></td>
+<td><code>#,##0" ₴";-#,##0" ₴";0" ₴"</code></td>
+<td>BONUS_QUARTER_SALARY_CNT → Премія квартальна кіл-ть окладів; BONUS_QUARTER_SALARY_CNT → Квартальна премія; BONUS_QUARTER_SALARY_CNT → Доля команди з кварталь…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-kvartalna-premiia-okladiv/">PP.Квартальна премія окладів</a></td>
+<td>—</td>
+<td>BONUS_QUARTER_SALARY_CNT → Премія квартальна кіл-ть окладів; BONUS_QUARTER_SALARY_CNT → Квартальна премія; BONUS_QUARTER_SALARY_CNT → Доля команди з кварталь…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-kvartalni-premii-fakt/">PP.Квартальні премії факт</a></td>
+<td><code>#,0</code></td>
+<td>PAYMENTS_FACT_UAH → Зірка МХП; PAYMENTS_FACT_UAH → Наставництво (ост. 12 міс); PAYMENTS_FACT_UAH → Доплати за суміщення; PAYMENTS_FACT_UAH → Щомісячні премії…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-oklad-po-hodynakh/">PP.Оклад по годинах</a></td>
+<td><code>#,0.00 "грн."; -#,0.00 "грн."</code></td>
+<td>END_DATE → Термін без відпустки в днях по пріоритетному місцю роботи на поточну дату; INIT_PAYMENT_PLAN_SUM → Цільовий розмір річної винагороди, до оподаткув…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-oklad-detailed/">PP.Оклад_detailed</a></td>
+<td>—</td>
+<td>PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період; SALARY → Оклад</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-orenda-zhytla/">PP.Оренда житла</a></td>
+<td><code>0</code></td>
+<td>INIT_PAYMENT_PLAN_SUM → Цільовий розмір річної винагороди, до оподаткування; INIT_PAYMENT_PLAN_SUM → Оклад по годинах; INIT_PAYMENT_PLAN_SUM → Оклад по днях;…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-pozyka-aktyvna-suma/">PP.Позика (активна).Сума</a></td>
+<td><code>#,0</code></td>
+<td>ACTION_END_DATE → Доля команди із позиками; LAND_SHARE_CONTRACT_SUM → Сума позики; LAND_SHARE_CONTRACT_SUM → Позика на ноутбук (остання); LAND_SHARE_CONTRACT…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-pozyka-na-noutbuk/">PP.Позика на ноутбук</a></td>
+<td>—</td>
+<td>LAND_SHARE_CONTRACT_SUM → Сума позики; LAND_SHARE_CONTRACT_SUM → Позика на ноутбук (остання); LAND_SHARE_CONTRACT_SUM → Доля команди з позикою на ноутбук (%)…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-premiia-za-bank-idei/">PP.Премія за Банк ідей</a></td>
+<td><code>0</code></td>
+<td>payments_fact_UAH → Зірка МХП; payments_fact_UAH → Наставництво (ост. 12 міс); payments_fact_UAH → Доплати за суміщення; payments_fact_UAH → Щомісячні премії…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-premiia-za-vnutrishnie-trenerstvo/">PP.Премія за внутрішнє тренерство</a></td>
+<td><code>0</code></td>
+<td>payments_fact_UAH → Зірка МХП; payments_fact_UAH → Наставництво (ост. 12 міс); payments_fact_UAH → Доплати за суміщення; payments_fact_UAH → Щомісячні премії…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-premiia-za-misiats/">PP.Премія за місяць, %</a></td>
+<td><code>0%;-0%;0%</code></td>
+<td>END_DATE → Термін без відпустки в днях по пріоритетному місцю роботи на поточну дату; INIT_PAYMENT_PLAN_SUM → Цільовий розмір річної винагороди, до оподаткув…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-premiia-za-misiats-hrn/">PP.Премія за місяць, грн</a></td>
+<td>—</td>
+<td>END_DATE → Термін без відпустки в днях по пріоритетному місцю роботи на поточну дату; PAYMENT_PLAN_SUM → Річний цільовий дохід; PAYMENT_PLAN_SUM → Розмір фік…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-premiia-za-prohramoiu-pryvedy-druha/">PP.Премія за програмою «Приведи друга»</a></td>
+<td><code>0</code></td>
+<td>payments_fact_UAH → Зірка МХП; payments_fact_UAH → Наставництво (ост. 12 міс); payments_fact_UAH → Доплати за суміщення; payments_fact_UAH → Щомісячні премії…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-pryrist-okladu/">PP.Приріст окладу</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-rtsd-detailed/">PP.РЦД_detailed</a></td>
+<td>—</td>
+<td>ANNUAL_TARGET_INCOME → Відсоток приросту річного цільового доходу (РЦД); PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахуван…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-razova-premiia-za-prohramoiu-vyznannia/">PP.Разова премія за програмою визнання</a></td>
+<td><code>0</code></td>
+<td>payments_fact_UAH → Зірка МХП; payments_fact_UAH → Наставництво (ост. 12 міс); payments_fact_UAH → Доплати за суміщення; payments_fact_UAH → Щомісячні премії…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-richnyi-bonus/">PP.Річний бонус</a></td>
+<td><code>#,##0" ₴";-#,##0" ₴";0" ₴"</code></td>
+<td>BONUS_YEAR_SALARY_CNT → Премія річна кіл-ть окладів; BONUS_YEAR_SALARY_CNT → Річний бонус; BONUS_YEAR_SALARY_CNT → Доля команди з річним бонусом, %; MIN_TARI…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-richnyi-bonus-okladiv/">PP.Річний бонус окладів</a></td>
+<td>—</td>
+<td>BONUS_YEAR_SALARY_CNT → Премія річна кіл-ть окладів; BONUS_YEAR_SALARY_CNT → Річний бонус; BONUS_YEAR_SALARY_CNT → Доля команди з річним бонусом, %; category…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-richni-bonusy/">PP.Річні бонуси</a></td>
+<td><code>#,0</code></td>
+<td>PAYMENTS_FACT_UAH → Зірка МХП; PAYMENTS_FACT_UAH → Наставництво (ост. 12 міс); PAYMENTS_FACT_UAH → Доплати за суміщення; PAYMENTS_FACT_UAH → Щомісячні премії…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-sotsialna-pidtrymka/">PP.Соціальна підтримка</a></td>
+<td><code>0</code></td>
+<td>payments_fact_UAH → Зірка МХП; payments_fact_UAH → Наставництво (ост. 12 міс); payments_fact_UAH → Доплати за суміщення; payments_fact_UAH → Щомісячні премії…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-typ-optsii-po-avto/">PP.Тип опції по авто</a></td>
+<td>—</td>
+<td>JOB_TITLE_COMPOSITE_VEHICLE_FORMAT → Тип опції по авто по зведеній посаді; JOB_TITLE_COMPOSITE_VEHICLE_FORMAT → Тип опції по авто по зведеній посаді (план); …</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia/">PP.Цільовий розмір річної винагороди, до оподаткування</a></td>
+<td><code>#,0.00 "грн."; -#,0.00 "грн."</code></td>
+<td>BONUS_MONTH_SALARY_CNT → Премія місячна кіл-ть окладів; BONUS_MONTH_SALARY_CNT → Щомісячна премія; BONUS_MONTH_SALARY_CNT → Доля команди з щомісячною премією…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-shchokvartalni-premii-v-serednomu-za-kvartal/">PP.Щоквартальні премії в середньому за квартал</a></td>
+<td>—</td>
+<td>PAYMENTS_FACT_UAH → Зірка МХП; PAYMENTS_FACT_UAH → Наставництво (ост. 12 міс); PAYMENTS_FACT_UAH → Доплати за суміщення; PAYMENTS_FACT_UAH → Щомісячні премії…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-shchomisiachna-premiia/">PP.Щомісячна премія</a></td>
+<td><code>#,##0" ₴";-#,##0" ₴";0" ₴"</code></td>
+<td>BONUS_MONTH_SALARY_CNT → Премія місячна кіл-ть окладів; BONUS_MONTH_SALARY_CNT → Щомісячна премія; BONUS_MONTH_SALARY_CNT → Доля команди з щомісячною премією…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-shchomisiachna-premiia-okladiv/">PP.Щомісячна премія окладів</a></td>
+<td>—</td>
+<td>BONUS_MONTH_SALARY_CNT → Премія місячна кіл-ть окладів; BONUS_MONTH_SALARY_CNT → Щомісячна премія; BONUS_MONTH_SALARY_CNT → Доля команди з щомісячною премією…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-shchomisiachni-premii-nakopychuvalno/">PP.Щомісячні премії накопичувально</a></td>
+<td><code>#,0</code></td>
+<td>PAYMENTS_FACT_UAH → Зірка МХП; PAYMENTS_FACT_UAH → Наставництво (ост. 12 міс); PAYMENTS_FACT_UAH → Доплати за суміщення; PAYMENTS_FACT_UAH → Щомісячні премії…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-shchomisiachni-premii-serednomisiachno/">PP.Щомісячні премії середньомісячно</a></td>
+<td>—</td>
+<td>PAYMENTS_FACT_UAH → Зірка МХП; PAYMENTS_FACT_UAH → Наставництво (ост. 12 міс); PAYMENTS_FACT_UAH → Доплати за суміщення; PAYMENTS_FACT_UAH → Щомісячні премії…</td>
+</tr>
+</tbody>
+</table>
+<h2 id="personal_profilevivaviva-collaboration">Personal_Profile\Viva\Viva Collaboration<a class="headerlink" href="#personal_profilevivaviva-collaboration" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Міра</th>
+<th>Формат</th>
+<th>Бізнес-суть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-kholdynh/">PP.Годин взаємодії у неробочий час (Холдинг)</a></td>
+<td>—</td>
+<td>TOTAL_AFTER_HOUR → Годин взаємодії у неробочий час  <br>по співробітнику; TOTAL_AFTER_HOUR → Годин взаємодії у неробочий час  <br>кадровому підрозділу співро…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-kadrovyi-pidrozdil/">PP.Годин взаємодії у неробочий час (кадровий підрозділ)</a></td>
+<td>—</td>
+<td>PERSONNEL_UNIT → Кадровий підрозділ працівника; PERSONNEL_UNIT → Підрозділ кадровий; PERSONNEL_UNIT → Назва попереднього кадрового підрозділу; PERSONNEL_UNIT…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-napriam/">PP.Годин взаємодії у неробочий час (напрям)</a></td>
+<td>—</td>
+<td>DIRECTION → Напрям; DIRECTION → direction_name; DIRECTION → direction</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-spivrobitnyk/">PP.Годин взаємодії у неробочий час (співробітник)</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-dlia-fokusnoi-roboty-kholdynh/">PP.Годин для фокусної роботи (Холдинг)</a></td>
+<td>—</td>
+<td>UNINTERRUPTED_HOUR → Годин для фокусної роботи  <br>співробітника; UNINTERRUPTED_HOUR → Годин для фокусної роботи  <br>по кадровому підрозділу співробітника;…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-dlia-fokusnoi-roboty-kadrovyi-pidrozdil/">PP.Годин для фокусної роботи (кадровий підрозділ)</a></td>
+<td>—</td>
+<td>PERSONNEL_UNIT → Кадровий підрозділ працівника; PERSONNEL_UNIT → Підрозділ кадровий; PERSONNEL_UNIT → Назва попереднього кадрового підрозділу; PERSONNEL_UNIT…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-dlia-fokusnoi-roboty-napriam/">PP.Годин для фокусної роботи (напрям)</a></td>
+<td>—</td>
+<td>DIRECTION → Напрям; DIRECTION → direction_name; DIRECTION → direction</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-dlia-fokusnoi-roboty-spivrobitnyk/">PP.Годин для фокусної роботи (співробітник)</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-zahalnoi-vzaiemodii-kholdynh/">PP.Годин загальної взаємодії (Холдинг)</a></td>
+<td>—</td>
+<td>COLLABORATION_HOUR → Години загальної взаємодії за період від поточної точки до попередньої точки; COLLABORATION_HOUR → Годин загальної взаємодії  <br>по спі…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-zahalnoi-vzaiemodii-kadrovyi-pidrozdil/">PP.Годин загальної взаємодії (кадровий підрозділ)</a></td>
+<td>—</td>
+<td>PERSONNEL_UNIT → Кадровий підрозділ працівника; PERSONNEL_UNIT → Підрозділ кадровий; PERSONNEL_UNIT → Назва попереднього кадрового підрозділу; PERSONNEL_UNIT…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-zahalnoi-vzaiemodii-napriam/">PP.Годин загальної взаємодії (напрям)</a></td>
+<td>—</td>
+<td>DIRECTION → Напрям; DIRECTION → direction_name; DIRECTION → direction</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-zahalnoi-vzaiemodii-spivrobitnyk/">PP.Годин загальної взаємодії (співробітник)</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-dovzhyna-hranytsi-robochoho-dnia-kholdynh/">PP.Довжина (границі) робочого дня (Холдинг)</a></td>
+<td>—</td>
+<td>COLLABORATION_SPAN → Довжина (границі) робочого дня за період від поточної точки до попередньої точки; COLLABORATION_SPAN → Довжина (границі) робочого дня  &lt;…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-dovzhyna-hranytsi-robochoho-dnia-kadrovyi-pidrozdil/">PP.Довжина (границі) робочого дня (кадровий підрозділ)</a></td>
+<td>—</td>
+<td>PERSONNEL_UNIT → Кадровий підрозділ працівника; PERSONNEL_UNIT → Підрозділ кадровий; PERSONNEL_UNIT → Назва попереднього кадрового підрозділу; PERSONNEL_UNIT…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-dovzhyna-hranytsi-robochoho-dnia-napriam/">PP.Довжина (границі) робочого дня (напрям)</a></td>
+<td>—</td>
+<td>DIRECTION → Напрям; DIRECTION → direction_name; DIRECTION → direction</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-dovzhyna-hranytsi-robochoho-dnia-spivrobitnyk/">PP.Довжина (границі) робочого дня (співробітник)</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="personal_profilevivaviva-meetings">Personal_Profile\Viva\Viva Meetings<a class="headerlink" href="#personal_profilevivaviva-meetings" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Міра</th>
+<th>Формат</th>
+<th>Бізнес-суть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../measures/pp-hodyn-vzaiemodii-po-naradakh-kholdynh/">PP.Годин взаємодії по нарадах (Холдинг)</a></td>
+<td>—</td>
+<td>MEETING_HOUR → Годин взаємодії по нарадах за період від поточної точки до попередньої точки; MEETING_HOUR → Годин взаємодії по нарадах співробітника; MEETING…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-vzaiemodii-po-naradakh-kadrovyi-pidrozdil/">PP.Годин взаємодії по нарадах (кадровий підрозділ)</a></td>
+<td>—</td>
+<td>PERSONNEL_UNIT → Кадровий підрозділ працівника; PERSONNEL_UNIT → Підрозділ кадровий; PERSONNEL_UNIT → Назва попереднього кадрового підрозділу; PERSONNEL_UNIT…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-vzaiemodii-po-naradakh-napriam/">PP.Годин взаємодії по нарадах (напрям)</a></td>
+<td><code>0.00</code></td>
+<td>DIRECTION → Напрям; DIRECTION → direction_name; DIRECTION → direction</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-vzaiemodii-po-naradakh-spivrobitnyk/">PP.Годин взаємодії по нарадах (співробітник)</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-dolia-conflicting-meeting-hours-kholdynh/">PP.Доля Conflicting meeting hours (Холдинг)</a></td>
+<td><code>0.00%;-0.00%;0.00%</code></td>
+<td>CONFLICTING_MEETING_HOUR → Годин зустрічей з конфліктами за період від поточної точки до попередньої точки; CONFLICTING_MEETING_HOUR → Доля Conflicting meeti…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-dolia-conflicting-meeting-hours-kadrovyi-pidrozdil/">PP.Доля Conflicting meeting hours (кадровий підрозділ)</a></td>
+<td><code>0.00%;-0.00%;0.00%</code></td>
+<td>PERSONNEL_UNIT → Кадровий підрозділ працівника; PERSONNEL_UNIT → Підрозділ кадровий; PERSONNEL_UNIT → Назва попереднього кадрового підрозділу; PERSONNEL_UNIT…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-dolia-conflicting-meeting-hours-napriam/">PP.Доля Conflicting meeting hours (напрям)</a></td>
+<td><code>0.00%;-0.00%;0.00%</code></td>
+<td>DIRECTION → Напрям; DIRECTION → direction_name; DIRECTION → direction</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-dolia-conflicting-meeting-hours-spivrobitnyk/">PP.Доля Conflicting meeting hours (співробітник)</a></td>
+<td><code>0.00%;-0.00%;0.00%</code></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="personal_profilevivaviva-networks">Personal_Profile\Viva\Viva Networks<a class="headerlink" href="#personal_profilevivaviva-networks" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Міра</th>
+<th>Формат</th>
+<th>Бізнес-суть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../measures/pp-rozmir-merezhi-kholdynh-3m/">PP.Розмір мережі (Холдинг, 3м)</a></td>
+<td>—</td>
+<td>INTERNAL_NETWORK_SIZE → Розмір мережі контактів по  <br>співробітнику; INTERNAL_NETWORK_SIZE → Розмір мережі контактів по кадровому підрозділу співробітника;…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-rozmir-merezhi-kadrovyi-pidrozdil-3m/">PP.Розмір мережі (кадровий підрозділ, 3м)</a></td>
+<td><code>#,0.00</code></td>
+<td>PERSONNEL_UNIT → Кадровий підрозділ працівника; PERSONNEL_UNIT → Підрозділ кадровий; PERSONNEL_UNIT → Назва попереднього кадрового підрозділу; PERSONNEL_UNIT…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-rozmir-merezhi-napriam-3m/">PP.Розмір мережі (напрям, 3м)</a></td>
+<td>—</td>
+<td>DIRECTION → Напрям; DIRECTION → direction_name; DIRECTION → direction</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-rozmir-merezhi-spivrobitnyk-3m/">PP.Розмір мережі (співробітник, 3м)</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-shyryna-merezhi-kholdynh-3m/">PP.Ширина мережі (Холдинг, 3м)</a></td>
+<td>—</td>
+<td>NETWORK_OUTSIDE_ORGANIZATION → Ширина мережі контактів по  <br>співробітнику; NETWORK_OUTSIDE_ORGANIZATION → Ширина мережі контактів по кадровому підрозділу …</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-shyryna-merezhi-kadrovyi-pidrozdil-3m/">PP.Ширина мережі (кадровий підрозділ, 3м)</a></td>
+<td>—</td>
+<td>PERSONNEL_UNIT → Кадровий підрозділ працівника; PERSONNEL_UNIT → Підрозділ кадровий; PERSONNEL_UNIT → Назва попереднього кадрового підрозділу; PERSONNEL_UNIT…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-shyryna-merezhi-napriam-3m/">PP.Ширина мережі (напрям, 3м)</a></td>
+<td>—</td>
+<td>DIRECTION → Напрям; DIRECTION → direction_name; DIRECTION → direction</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-shyryna-merezhi-spivrobitnyk-3m/">PP.Ширина мережі (співробітник, 3м)</a></td>
+<td><code>0</code></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="personal_profilevivaviva-management-coaching">Personal_Profile\Viva\Viva management &amp; Coaching<a class="headerlink" href="#personal_profilevivaviva-management-coaching" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Міра</th>
+<th>Формат</th>
+<th>Бізнес-суть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../measures/pp-hodyn-vzaiemodii-z-kerivnykom-kholdynh/">PP.Годин взаємодії з керівником (Холдинг)</a></td>
+<td>—</td>
+<td>MEETING_AND_CALL_WITH_MANAGER_HOUR → meeting_and_call_with_manager_hour_direction; MEETING_AND_CALL_WITH_MANAGER_HOUR → meeting_and_call_with_manager_hour_cn…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-vzaiemodii-z-kerivnykom-kadrovyi-pidrozdil/">PP.Годин взаємодії з керівником (кадровий підрозділ)</a></td>
+<td>—</td>
+<td>PERSONNEL_UNIT → Кадровий підрозділ працівника; PERSONNEL_UNIT → Підрозділ кадровий; PERSONNEL_UNIT → Назва попереднього кадрового підрозділу; PERSONNEL_UNIT…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-vzaiemodii-z-kerivnykom-napriam/">PP.Годин взаємодії з керівником (напрям)</a></td>
+<td>—</td>
+<td>DIRECTION → Напрям; DIRECTION → direction_name; DIRECTION → direction</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-vzaiemodii-z-kerivnykom-spivrobitnyk/">PP.Годин взаємодії з керівником (співробітник)</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-kholdynh/">PP.Годин керівника на взаємодію із безпосередніми підлеглими (Холдинг)</a></td>
+<td>—</td>
+<td>MANAGER_COACHING_ONE_TO_ONE_HOUR → 1:1 в сер. на 1 підлеглого, год.; MANAGER_COACHING_ONE_TO_ONE_HOUR → Годин керівника на взаємодію із підлеглими за період …</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-kadrovyi-pidrozdil/">PP.Годин керівника на взаємодію із безпосередніми підлеглими (кадровий підрозділ)</a></td>
+<td>—</td>
+<td>PERSONNEL_UNIT → Кадровий підрозділ працівника; PERSONNEL_UNIT → Підрозділ кадровий; PERSONNEL_UNIT → Назва попереднього кадрового підрозділу; PERSONNEL_UNIT…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-napriam/">PP.Годин керівника на взаємодію із безпосередніми підлеглими (напрям)</a></td>
+<td>—</td>
+<td>DIRECTION → Напрям; DIRECTION → direction_name; DIRECTION → direction</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-spivrobitnyk/">PP.Годин керівника на взаємодію із безпосередніми підлеглими (співробітник)</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-narad-1-1-z-kerivnykom-kholdynh/">PP.Годин нарад 1:1 з керівником (Холдинг)</a></td>
+<td>—</td>
+<td>MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR → Годин нарад 1:1 з керівником за період від поточної точки до попередньої точки; MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR →…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-narad-1-1-z-kerivnykom-kadrovyi-pidrozdil/">PP.Годин нарад 1:1 з керівником (кадровий підрозділ)</a></td>
+<td>—</td>
+<td>PERSONNEL_UNIT → Кадровий підрозділ працівника; PERSONNEL_UNIT → Підрозділ кадровий; PERSONNEL_UNIT → Назва попереднього кадрового підрозділу; PERSONNEL_UNIT…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-narad-1-1-z-kerivnykom-napriam/">PP.Годин нарад 1:1 з керівником (напрям)</a></td>
+<td>—</td>
+<td>DIRECTION → Напрям; DIRECTION → direction_name; DIRECTION → direction</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hodyn-narad-1-1-z-kerivnykom-spivrobitnyk/">PP.Годин нарад 1:1 з керівником (співробітник)</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="personal_profileviva">Personal_Profile\Viva\Залученість та інша інформація<a class="headerlink" href="#personal_profileviva" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Міра</th>
+<th>Формат</th>
+<th>Бізнес-суть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../measures/pp-mentorstvo-studentiv/">PP.Менторство студентів</a></td>
+<td><code>0</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-nastavnytstvo/">PP.Наставництво</a></td>
+<td>—</td>
+<td>Наставництво</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-trener-ekspert/">PP.Тренер-експерт</a></td>
+<td><code>0</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-uchast-u-banku-idei/">PP.Участь у Банку ідей</a></td>
+<td><code>0</code></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="personal_profile">Personal_Profile\Життєвий цикл<a class="headerlink" href="#personal_profile" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Міра</th>
+<th>Формат</th>
+<th>Бізнес-суть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../measures/pp-y-axis-rcd/">PP.Y_axis_rcd</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-bal/">PP.Бал</a></td>
+<td>—</td>
+<td>General_Performance_Desc_Rate → Бал оцінки результативності; General_Performance_Desc_Rate → Загальна оцінка; General_Performance_Desc_Rate → Загальна оцінка…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-bonusy-r-k-m/">PP.Бонуси Р/К/М</a></td>
+<td>—</td>
+<td>BONUS_YEAR_SALARY_CNT → Премія річна кіл-ть окладів; BONUS_YEAR_SALARY_CNT → Річний бонус; BONUS_YEAR_SALARY_CNT → Доля команди з річним бонусом, %; PERIOD →…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hod-vzaiemodii/">PP.Год. взаємодії</a></td>
+<td>—</td>
+<td>COLLABORATION_HOUR → Години загальної взаємодії за період від поточної точки до попередньої точки; COLLABORATION_HOUR → Годин загальної взаємодії  <br>по спі…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hod-konfliktiv/">PP.Год. конфліктів</a></td>
+<td>—</td>
+<td>CONFLICTING_MEETING_HOUR → Годин зустрічей з конфліктами за період від поточної точки до попередньої точки; CONFLICTING_MEETING_HOUR → Доля Conflicting meeti…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hod-narad/">PP.Год. нарад</a></td>
+<td>—</td>
+<td>MEETING_HOUR → Годин взаємодії по нарадах за період від поточної точки до попередньої точки; MEETING_HOUR → Годин взаємодії по нарадах співробітника; MEETING…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hod-nerob/">PP.Год. нероб.</a></td>
+<td>—</td>
+<td>PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період; TOTAL_AFTER_HOURS → Годин взаємодії в неробочий час …</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-data-podii/">PP.Дата події</a></td>
+<td>—</td>
+<td>PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-dovzhyna-dnia/">PP.Довжина дня</a></td>
+<td>—</td>
+<td>COLLABORATION_SPAN → Довжина (границі) робочого дня за період від поточної точки до попередньої точки; COLLABORATION_SPAN → Довжина (границі) робочого дня  &lt;…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-zhts-katehoriia-posady/">PP.ЖЦ_Категорія посади</a></td>
+<td>—</td>
+<td>PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період; POSITION_CATEGORY_DETAIL → Деталізація категорії пос…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-zhts-napriam/">PP.ЖЦ_Напрям</a></td>
+<td>—</td>
+<td>DIRECTION → Напрям; DIRECTION → direction_name; DIRECTION → direction; PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-zhts-posada/">PP.ЖЦ_Посада</a></td>
+<td>—</td>
+<td>JOB_TITLE_NAME → Посада; PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-zhts-pidnapriam/">PP.ЖЦ_Піднапрям</a></td>
+<td>—</td>
+<td>PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період; SUB_DIRECTION → Піднапрям; SUB_DIRECTION → subdirect…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-zhts-pidpryiemstvo/">PP.ЖЦ_Підприємство</a></td>
+<td>—</td>
+<td>ORGANIZATION_NAME → Організація; PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-zirka-mkhp/">PP.Зірка МХП</a></td>
+<td>—</td>
+<td>PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період; mhp_star → Зірка МХП</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-kadrovyi-pidrozdil/">PP.Кадровий підрозділ</a></td>
+<td>—</td>
+<td>DIVISION_PERSON_NAME → Кадровий підрозділ працівника; PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-katehoriia-performance/">PP.Категорія (Performance)</a></td>
+<td>—</td>
+<td>CALC_PERFORMANCE_STR_RATE → Загальна оцінка ОКР; CALC_PERFORMANCE_STR_RATE → Загальна оцінка OKR; CALC_PERFORMANCE_STR_RATE → Оцінка OKR; PERIOD → Дата нарах…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-kod-posady/">PP.Код посади</a></td>
+<td>—</td>
+<td>JOB_TITLE_CODE → Код ЦБ посади; PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-kod-pidrozdilu/">PP.Код підрозділу</a></td>
+<td>—</td>
+<td>DIVISION_PERSON_CODE → Код ЦБ кадрового підрозділу працівника; PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-kolir-okr/">PP.Колір (OKR)</a></td>
+<td>—</td>
+<td>Calc_Performance_Desc_Rate → Колірна оцінка ОКР; Calc_Performance_Desc_Rate → Загальна колірна оцінка ОКР; Calc_Performance_Desc_Rate → Загальна колірна оцін…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-kolir-performance/">PP.Колір (Performance)</a></td>
+<td>—</td>
+<td>GENERAL_PERFORMANCE_DESC_RATE → Бал оцінки результативності; GENERAL_PERFORMANCE_DESC_RATE → Загальна оцінка; GENERAL_PERFORMANCE_DESC_RATE → Загальна оцінка…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-kolir-pryrostu-rtsd/">PP.Колір приросту РЦД</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-kolir-shapky-tultipu/">PP.Колір шапки тултіпу</a></td>
+<td>—</td>
+<td>IS_APRIL_SALARY_REVIEW → Квітневий перегляд заробітної плати; IS_TECH_POSITION_CHANGE → Технічна зміна посади; IS_TECH_SALARY_TRANSFER → Технічний перелив (з/п)</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-leibl-pryrostu-rtsd/">PP.Лейбл приросту РЦД</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-rtsd/">PP.РЦД</a></td>
+<td><code>#,0</code></td>
+<td>ANNUAL_TARGET_INCOME → Відсоток приросту річного цільового доходу (РЦД)</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-rozmir-merezhi/">PP.Розмір мережі</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-stazh-v-kholdynhu/">PP.Стаж в холдингу</a></td>
+<td>—</td>
+<td>PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період; seniority_LAST_HOLDING_HIRE_DATE → Стаж в холдингу о…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-stazh-na-posadi/">PP.Стаж на посаді</a></td>
+<td>—</td>
+<td>PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період; seniority_LAST_POSITION_HIRE_DATE → Стаж на посаді</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-sumishchennia/">PP.Суміщення</a></td>
+<td>—</td>
+<td>JOB_TITLE_PART_TIME_NAME → Посада по суміщенню; PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-typ-podii/">PP.Тип події</a></td>
+<td>—</td>
+<td>PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-forma-oplaty/">PP.Форма оплати</a></td>
+<td>—</td>
+<td>PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період; TARIFF_RATE_TYPE_CODE → Вид оплати праці (тарифної с…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-shyryna-merezhi/">PP.Ширина мережі</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="personal_profile_1">Personal_Profile\Загальна інформація<a class="headerlink" href="#personal_profile_1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Міра</th>
+<th>Формат</th>
+<th>Бізнес-суть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../measures/pp-doplaty-po-sumishchenniu/">PP.% доплати по суміщенню</a></td>
+<td>—</td>
+<td>EMPLOYEE_ADMIN_NAME → Адміністративний керівник</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-finbp/">PP.FinBP</a></td>
+<td>—</td>
+<td>FinBP</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hrbp/">PP.HRBP</a></td>
+<td>—</td>
+<td>HRBP</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-ipn/">PP.ІПН</a></td>
+<td>—</td>
+<td>TAX_CODE → ІПН</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-ahro-khab/">PP.Агро Хаб</a></td>
+<td>—</td>
+<td>HAB_FOR_AGRO → Агро Хаб</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-administratyvnyi-kerivnyk/">PP.Адміністративний керівник</a></td>
+<td>—</td>
+<td>EMPLOYEE_ADMIN_NAME → Адміністративний керівник</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-adresa-ofisu-shtat/">PP.Адреса офісу (штат)</a></td>
+<td>—</td>
+<td>Адреса офісу (штат)</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-broniuvannia-do/">PP.Бронювання до</a></td>
+<td>—</td>
+<td>IS_AT_RISK → Під ризиком мобілізації; IS_AT_RISK → Ризик мобілізації; IS_AT_RISK → Доля чоловіків під ризиком мобілізації (%); RESERVATION_END_DATE → Бронюва…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-vnz/">PP.ВНЗ</a></td>
+<td>—</td>
+<td>UNIVERSITY → Назва ВНЗ (останній); UNIVERSITY → Навчальний заклад</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-veteran-novachok/">PP.Ветеран-Новачок</a></td>
+<td>—</td>
+<td>IS_VETERAN_NEWMAN → Ветеран-Новачок; IS_VETERAN_NEWMAN → Кількість ветеранів-новачків</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-vyd-zainiatosti/">PP.Вид зайнятості</a></td>
+<td>—</td>
+<td>EMPLOYMENT_TYPE → Вид зайнятості</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-vidviduvanist-tso/">PP.Відвідуваність ЦО (%)</a></td>
+<td>—</td>
+<td>Відвідуваність ЦО (%)</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-vidnoshennia-do-vo/">PP.Відношення до ВО</a></td>
+<td>—</td>
+<td>MILITARY_REGISTRATION_UKR → Відношення до ВО</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-vidstrochka-vid-pryzovu/">PP.Відстрочка від призову</a></td>
+<td>—</td>
+<td>DEFERMENT_REASON → Вид відстрочки; DEFERMENT_REASON → Відстрочка від призову; DEFERMENT_REASON → Причина відстрочки</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-viiskova-chastyna/">PP.Військова частина</a></td>
+<td>—</td>
+<td>Військова частина</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hrafik-roboty/">PP.Графік роботи</a></td>
+<td>—</td>
+<td>Графік роботи</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-hrupa-invalidnosti/">PP.Група інвалідності</a></td>
+<td><code>0</code></td>
+<td>DISABILITY_GROUP → Група інвалідності</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-data-pryiomu-v-komandu-ostannii/">PP.Дата прийому в команду (останній)</a></td>
+<td>—</td>
+<td>LAST_DIVISION_HIRE_DATE → Стаж в команді (останній)  <br>Дата прийому</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-data-pryiomu-v-orhanizatsiiu-ostannii/">PP.Дата прийому в організацію (останній)</a></td>
+<td>—</td>
+<td>LAST_ORGANIZATION_HIRE_DATE → Стаж в організації (останній)  <br>Дата прийому</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-data-pryiomu-v-kholdynh-neperervnyi/">PP.Дата прийому в холдинг (неперервний)</a></td>
+<td>—</td>
+<td>LAST_HOLDING_HIRE_DATE → Дата останнього прийому працівника у холдинг; LAST_HOLDING_HIRE_DATE → Стаж в холдингу (останній)  <br>Дата прийому</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-data-pryiomu-v-kholdynh-perervnyi/">PP.Дата прийому в холдинг (перервний)</a></td>
+<td>—</td>
+<td>FIRST_HOLDING_HIRE_DATE → Стаж в холдингу (загальний)  <br>Дата прийому</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-data-pryiomu-na-posadu-ostannii/">PP.Дата прийому на посаду (останній)</a></td>
+<td>—</td>
+<td>LAST_POSITION_HIRE_DATE → Стаж на посаді (останній)  <br>Дата прийому</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-diisnist-invalidnosti-do/">PP.Дійсність інвалідності до</a></td>
+<td>—</td>
+<td>DISABILITY_VALIDITY → Дійсність інвалідності до</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-dity-do-14-rokiv/">PP.Діти до 14 років</a></td>
+<td>—</td>
+<td>CHILDREN_AMOUNT_UNDER_14 → Діти до 14 років</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-dity-do-18-rokiv/">PP.Діти до 18 років</a></td>
+<td><code>0</code></td>
+<td>Діти до 18 років</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-zainiatykh-stavok-z-vidsutnostiamy/">PP.Зайнятих ставок з відсутностями</a></td>
+<td>—</td>
+<td>FTE_EMPLOYEE → Зайнятих ставок з відсутностями; FTE_EMPLOYEE → Зайняті ставки; FTE_EMPLOYEE → Кількість зайнятих FTE (факт)</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-zainiatykh-stavok-po-sumishchenniu/">PP.Зайнятих ставок по суміщенню</a></td>
+<td>—</td>
+<td>EMPLOYEE_ADMIN_NAME → Адміністративний керівник</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-zainiatykh-stavok-faktychno/">PP.Зайнятих ставок фактично</a></td>
+<td>—</td>
+<td>FTE_FACT → Зайнятих ставок фактично</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-zmina/">PP.Зміна</a></td>
+<td>—</td>
+<td>Зміна</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-katehoriia-mekhanizatora/">PP.Категорія механізатора</a></td>
+<td>—</td>
+<td>EMPLOYEE_ADMIN_NAME → Адміністративний керівник</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-koordynator-dlia-mobilizovanykh/">PP.Координатор для мобілізованих</a></td>
+<td>—</td>
+<td>Координатор для мобілізованих</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-materialna-vidpovidalnist/">PP.Матеріальна відповідальність</a></td>
+<td>—</td>
+<td>Матеріальна відповідальність</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-na-chyiemu-mistsi-sydyt/">PP.На чиєму місці сидить</a></td>
+<td>—</td>
+<td>EMPLOYEE_ADMIN_NAME → Адміністративний керівник</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-nadomnyi-invalid-kvota/">PP.Надомний інвалід (квота)</a></td>
+<td>—</td>
+<td>Надомний інвалід (квота)</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-napriam/">PP.Напрям</a></td>
+<td>—</td>
+<td>DIRECTION → Напрям; DIRECTION → direction_name; DIRECTION → direction</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-orhanizatsiia/">PP.Організація</a></td>
+<td>—</td>
+<td>ORGANIZATION → Організація</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-osvita/">PP.Освіта</a></td>
+<td>—</td>
+<td>EDUCATION_LVL → Освіта; EDUCATION_LVL → Рівень освіти</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-posada-zvedena/">PP.Посада зведена</a></td>
+<td>—</td>
+<td>EMPLOYEE_ADMIN_NAME → Адміністративний керівник</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-posada-po-sumishchenniu/">PP.Посада по суміщенню</a></td>
+<td>—</td>
+<td>EMPLOYEE_ADMIN_NAME → Адміністративний керівник</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-priorytetne-mistse-roboty/">PP.Пріоритетне місце роботи</a></td>
+<td>—</td>
+<td>IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-pidnapriam/">PP.Піднапрям</a></td>
+<td>—</td>
+<td>SUB_DIRECTION → Піднапрям; SUB_DIRECTION → subdirection; SUB_DIRECTION → sub_direction</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-pidnapriam-riven-2/">PP.Піднапрям рівень 2</a></td>
+<td>—</td>
+<td>SUB_DIRECTION_LVL_3 → Піднапрям рівень 2</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-pidrozdil-1/">PP.Підрозділ 1</a></td>
+<td>—</td>
+<td>SUBDIVISION_LVL_1 → subdivision_lvl_1</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-pidrozdil-2/">PP.Підрозділ 2</a></td>
+<td>—</td>
+<td>SUBDIVISION_LVL_2 → subdivision_lvl_2</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-pidrozdil-3/">PP.Підрозділ 3</a></td>
+<td>—</td>
+<td>SUBDIVISION_LVL_3 → subdivision_lvl_3</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-pidrozdil-4/">PP.Підрозділ 4</a></td>
+<td>—</td>
+<td>SUBDIVISION_LVL_4 → subdivision_lvl_4</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-pidrozdil-5/">PP.Підрозділ 5</a></td>
+<td>—</td>
+<td>SUBDIVISION_LVL_5 → subdivision_lvl_5</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-pidrozdil-kadrovyi-po-sumishchenniu/">PP.Підрозділ кадровий по суміщенню</a></td>
+<td>—</td>
+<td>EMPLOYEE_ADMIN_NAME → Адміністративний керівник</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-ryzyk-mobilizatsii/">PP.Ризик мобілізації</a></td>
+<td>—</td>
+<td>IS_AT_RISK → Під ризиком мобілізації; IS_AT_RISK → Ризик мобілізації; IS_AT_RISK → Доля чоловіків під ризиком мобілізації (%)</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-riven-v-iierarkhii/">PP.Рівень в ієрархії</a></td>
+<td>—</td>
+<td>EMP_HIERARCHY_LEVEL → Рівень в ієрархії; HIERARCHY_LEVEL → Рівень посади працівника в ієрархії; HIERARCHY_LEVEL → Рівень в ієрархії</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-spetsialnist/">PP.Спеціальність</a></td>
+<td>—</td>
+<td>EDUCATION → Спеціальність</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-stazh-v-komandi-ostannii/">PP.Стаж в команді (останній)</a></td>
+<td>—</td>
+<td>seniority_LAST_DIVISION_HIRE_DATE → Стаж в команді; seniority_LAST_DIVISION_HIRE_DATE → <br>Середній стаж в команді</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-stazh-v-orhanizatsii-ostannii/">PP.Стаж в організації (останній)</a></td>
+<td>—</td>
+<td>seniority_LAST_ORGANIZATION_HIRE_DATE → Стаж в організації</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-stazh-v-kholdynhu-neperervnyi/">PP.Стаж в холдингу (неперервний)</a></td>
+<td>—</td>
+<td>seniority_LAST_HOLDING_HIRE_DATE → Стаж в холдингу останній; seniority_LAST_HOLDING_HIRE_DATE → Стаж в холдингу; seniority_LAST_HOLDING_HIRE_DATE → Стаж в хо…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-stazh-v-kholdynhu-perervnyi/">PP.Стаж в холдингу (перервний)</a></td>
+<td>—</td>
+<td>seniority_FIRST_HOLDING_HIRE_DATE → Стаж в холдингу загальний; seniority_FIRST_HOLDING_HIRE_DATE → Стаж в холдингу; seniority_FIRST_HOLDING_HIRE_DATE → Стаж …</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-stazh-na-posadi-ostannii/">PP.Стаж на посаді (останній)</a></td>
+<td>—</td>
+<td>seniority_LAST_POSITION_HIRE_DATE → Стаж на посаді</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-status-veteran/">PP.Статус Ветеран</a></td>
+<td>—</td>
+<td>IS_VETERAN → Статус Ветеран; IS_VETERAN → Кількість Ветеранів; IS_VETERAN → Кількість демобілізованих</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-status-pratsivnyka/">PP.Статус працівника</a></td>
+<td>—</td>
+<td>STATUS_NAME → Статус працівника; STATUS_NAME → Статус співробітника</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-strok-dohovoru-do-daty/">PP.Строк договору до дати</a></td>
+<td>—</td>
+<td>EMPLOYEE_ADMIN_NAME → Адміністративний керівник</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-termin-sumishchennia-mis/">PP.Термін суміщення (міс.)</a></td>
+<td>—</td>
+<td>EMPLOYEE_ADMIN_NAME → Адміністративний керівник</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-trudovi-umovy/">PP.Трудові умови</a></td>
+<td>—</td>
+<td>NAME → Назва кадрового підрозділу; NAME → Назва батьківського кадрового підрозділу; NAME → Організація, назва; NAME → Групи віку; NAME → division_person_name</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-umovy-pryiomu/">PP.Умови прийому</a></td>
+<td>—</td>
+<td>Умови прийому</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-utochnennia-po-posadi/">PP.Уточнення по посаді</a></td>
+<td>—</td>
+<td>POSITION_SPECIFICATION → Уточнення по посаді</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-utochnennia-po-robotakh/">PP.Уточнення по роботах</a></td>
+<td>—</td>
+<td>POSITION_JOB_SPECIFICATION → Уточнення по роботам</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-uchast-u-proiektakh-pmo/">PP.Участь у проєктах PMO (%)</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-format-roboty-pratsivnyk/">PP.Формат роботи (працівник)</a></td>
+<td>—</td>
+<td>EMP_WORK_FORMAT → Формат роботи</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-funktsionalnyi-kerivnyk/">PP.Функціональний керівник</a></td>
+<td>—</td>
+<td>Функціональний керівник</td>
+</tr>
+</tbody>
+</table>
+<h2 id="personal_profile_2">Personal_Profile\Здоров'я та благополуччя<a class="headerlink" href="#personal_profile_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Міра</th>
+<th>Формат</th>
+<th>Бізнес-суть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../measures/pp-dniv-vidpustky-v-robochi-dni/">PP.% днів відпустки в робочі дні</a></td>
+<td>—</td>
+<td>IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position; Vacation_Day → % днів відпустки  в робочі дні (за останні 12 місяців); Vaca…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-intsydenty-z-travmatyzmom/">PP.Інциденти з травматизмом</a></td>
+<td><code>0</code></td>
+<td>Інциденти з травматизмом</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-absenteizm/">PP.Абсентеїзм</a></td>
+<td>—</td>
+<td>FTE_WEIGHTED_WORK_DAY_FOR_ABSENTEEISM → Відпрацьовані робочі дні у місяці зважені на FTE_employee; Sick_Leave_Day_Without_Pregnancy → <br>Абсентеїзм; Sick_Le…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-dni-vidpustky/">PP.Дні відпустки</a></td>
+<td><code>0</code></td>
+<td>IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position; VACATION_DAY → % днів відпустки  в робочі дні (за останні 12 місяців); VACA…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-zalyshok-vidpustky/">PP.Залишок відпустки</a></td>
+<td><code>0;-0;0</code></td>
+<td>IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position; VACATION_RESERVE_BY_MAIN_POSITION → Залишок відпустки</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-kilkist-vidpustok/">PP.Кількість відпусток</a></td>
+<td><code>0</code></td>
+<td>IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position; Vacation_Number → Кількість відпусток</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-kilkist-dovhykh-vidpustok/">PP.Кількість довгих відпусток</a></td>
+<td><code>0</code></td>
+<td>IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position; Long_Vacation → Наявність довгих відпусток (більше 10 днів); Long_Vacation …</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-likarniani/">PP.Лікарняні</a></td>
+<td>—</td>
+<td>IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position; SICK_LEAVE_DAY_TOTAL → Середня тривалість лікарняного; SICK_LEAVE_DAY_TOTAL…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-misiatsi-bez-vidpustky/">PP.Місяці без відпустки</a></td>
+<td><code>0;-0;0</code></td>
+<td>IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position; no_vacation_duration_months → Лідер за часом без відпустки</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-naiavnist-dovhykh-vidpustok/">PP.Наявність довгих відпусток</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-serednia-tryvalist-vidpustky/">PP.Середня тривалість відпустки</a></td>
+<td><code>0.0;-0.0;0.0</code></td>
+<td>IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position; Vacation_Day → % днів відпустки  в робочі дні (за останні 12 місяців); Vaca…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-serednia-tryvalist-likarnianoho/">PP.Середня тривалість лікарняного</a></td>
+<td><code>0.0</code></td>
+<td>IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position; SICK_LEAVE_DAY_TOTAL → Середня тривалість лікарняного; SICK_LEAVE_DAY_TOTAL…</td>
+</tr>
+</tbody>
+</table>
+<h2 id="personal_profileokr">Personal_Profile\Паспорт\OKR<a class="headerlink" href="#personal_profileokr" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Міра</th>
+<th>Формат</th>
+<th>Бізнес-суть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../measures/pp-okr-svg-last2periods/">PP.OKR.SVG.Last2Periods</a></td>
+<td>—</td>
+<td>Calc_Performance_Desc_Rate → Колірна оцінка ОКР; Calc_Performance_Desc_Rate → Загальна колірна оцінка ОКР; Calc_Performance_Desc_Rate → Загальна колірна оцін…</td>
+</tr>
+</tbody>
+</table>
+<h2 id="personal_profilespider">Personal_Profile\Паспорт\Spider<a class="headerlink" href="#personal_profilespider" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Міра</th>
+<th>Формат</th>
+<th>Бізнес-суть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../measures/pp-svg-spiderwebvisual/">PP.SVG.SpiderwebVisual</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="personal_profile_main">Personal_Profile\Паспорт_Main<a class="headerlink" href="#personal_profile_main" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Міра</th>
+<th>Формат</th>
+<th>Бізнес-суть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../measures/pp-pib/">PP.PIB</a></td>
+<td>—</td>
+<td>EMPLOYEE_NAME → ПІБ співробітника</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-adresa-ofisu-pratsivnyk/">PP.Адреса офісу (працівник)</a></td>
+<td>—</td>
+<td>Адреса офісу (працівник)</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-data-narodzhennia/">PP.Дата народження</a></td>
+<td>—</td>
+<td>Дата народження</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-katehoriia-posady/">PP.Категорія посади</a></td>
+<td>—</td>
+<td>POSITION_CATEGORY_DETAIL → Деталізація категорії посади (внутрішня); POSITION_CATEGORY_DETAIL → Категорія посади; POSITION_CATEGORY_DETAIL → Категорія посади…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-posada/">PP.Посада</a></td>
+<td>—</td>
+<td>POSITION → Посада; POSITION → Назва посади</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-pidrozdil-kadrovyi/">PP.Підрозділ кадровий</a></td>
+<td>—</td>
+<td>PERSONNEL_UNIT → Кадровий підрозділ працівника; PERSONNEL_UNIT → Підрозділ кадровий; PERSONNEL_UNIT → Назва попереднього кадрового підрозділу; PERSONNEL_UNIT…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-format-roboty-shtat/">PP.Формат роботи (штат)</a></td>
+<td>—</td>
+<td>Формат роботи (штат)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="personal_profile_3">Personal_Profile\Паспорт\Бейджі<a class="headerlink" href="#personal_profile_3" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Міра</th>
+<th>Формат</th>
+<th>Бізнес-суть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../measures/pp-svg-beidzhi/">PP.SVG.Бейджі</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="personal_profile_4">Personal_Profile\Паспорт\Метрики<a class="headerlink" href="#personal_profile_4" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Міра</th>
+<th>Формат</th>
+<th>Бізнес-суть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../measures/pp-metryka-9-boxes/">PP.Метрика.9 boxes</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-metryka-talent-council/">PP.Метрика.Talent Council</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-metryka-hodyny-vzaiemodii-3m/">PP.Метрика.Години взаємодії 3м</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-metryka-kilkist-nastupnykiv/">PP.Метрика.Кількість наступників</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-metryka-produktyvnist-metryky/">PP.Метрика.Продуктивність метрики</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-metryka-rozmir-shyryna-merezhi-3m/">PP.Метрика.Розмір/ширина мережі 3м</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="personal_profile_5">Personal_Profile\Паспорт\Результативність<a class="headerlink" href="#personal_profile_5" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Міра</th>
+<th>Формат</th>
+<th>Бізнес-суть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../measures/pp-svg-performance-last2periods/">PP.SVG.Performance.Last2Periods</a></td>
+<td>—</td>
+<td>LAST_YEAR_PERFORMANCE → Значення останнього року оцінки результативності; PREV_YEAR_PERFORMANCE → Значення передостаннього  року оцінки результативності; PRE…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-otsinka-rezultatyvnosti-dani-vidsutni/">PP.Оцінка результативності.Дані відсутні</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-rik-otsinky-rezultatyvnosti-last/">PP.Рік оцінки результативності.Last</a></td>
+<td>—</td>
+<td>LAST_YEAR_PERFORMANCE → Значення останнього року оцінки результативності</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-rik-otsinky-rezultatyvnosti-prev/">PP.Рік оцінки результативності.Prev</a></td>
+<td>—</td>
+<td>PREV_YEAR_PERFORMANCE → Значення передостаннього  року оцінки результативності; PREV_YEAR_PERFORMANCE → Значення передостанній  року оцінки результативності</td>
+</tr>
+</tbody>
+</table>
+<h2 id="personal_profile_6">Personal_Profile\Паспорт\Ризики<a class="headerlink" href="#personal_profile_6" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Міра</th>
+<th>Формат</th>
+<th>Бізнес-суть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../measures/pp-ryzyk-absenteizm/">PP.Ризик.Абсентеїзм</a></td>
+<td>—</td>
+<td>Абсентеїзм</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-ryzyk-vyd-vidstrochky/">PP.Ризик.Вид відстрочки</a></td>
+<td>—</td>
+<td>DEFERMENT_REASON → Вид відстрочки; DEFERMENT_REASON → Відстрочка від призову; DEFERMENT_REASON → Причина відстрочки; IS_AT_RISK → Під ризиком мобілізації; IS…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-ryzyk-vtrata-pratsivnyka/">PP.Ризик.Втрата працівника</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-ryzyk-vtrata-produktyvnosti/">PP.Ризик.Втрата продуктивності</a></td>
+<td>—</td>
+<td>Total_Risk_Productive_Name → Ризик втрати продуктивності</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-ryzyk-dovhi-vidpustky-12m/">PP.Ризик.Довгі відпустки 12м</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-ryzyk-komplaiens/">PP.Ризик.Комплаєнс</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="personal_profile-okr">Personal_Profile\Результативність та оцінка\OKR<a class="headerlink" href="#personal_profile-okr" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Міра</th>
+<th>Формат</th>
+<th>Бізнес-суть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../measures/pp-kr-kliuchovyi-rezultat-ne-dosiahnuto/">PP.KR.Ключовий результат НЕ досягнуто</a></td>
+<td><code>0</code></td>
+<td>KR_CHANGE → КР змінено; KR_CHANGE → КР без змін; KR_CHANGE → КР видалено; KR_CHANGE → Новий КР; KR_CHANGE → Ознака зміни KR; KR_COLOR_RATE → КР виконано; KR_…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-kr-kliuchovyi-rezultat-dosiahnuto/">PP.KR.Ключовий результат досягнуто</a></td>
+<td><code>0</code></td>
+<td>KR_COLOR_RATE → КР виконано; KR_COLOR_RATE → КР не виконано; KR_COLOR_RATE → Коефіцієнт колірної оцінки КР з плану; KR_WEIGHT → Вага КР</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-okr-tsil-vykonana/">PP.OKR.Ціль виконана</a></td>
+<td><code>0</code></td>
+<td>CALC_PERFORMANCE_STR_RATE → Загальна оцінка ОКР; CALC_PERFORMANCE_STR_RATE → Загальна оцінка OKR; CALC_PERFORMANCE_STR_RATE → Оцінка OKR; Calc_Performance_De…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-okr-tsil-ne-vykonana/">PP.OKR.Ціль не виконана</a></td>
+<td><code>0</code></td>
+<td>Calc_Performance_Desc_Rate → Колірна оцінка ОКР; Calc_Performance_Desc_Rate → Загальна колірна оцінка ОКР; Calc_Performance_Desc_Rate → Загальна колірна оцін…</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-svg-okr-detalno/">PP.SVG.OKR.Детально</a></td>
+<td>—</td>
+<td>KR_DESCRIPTION → Опис КР; PLAN_YEAR → Рік ОКР; PLAN_YEAR → Значення останнього року оцінки ОКР; PLAN_YEAR → Значення передостаннього  року оцінки ОКР</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-svg-okr-zahalna-otsinka/">PP.SVG.OKR.Загальна оцінка</a></td>
+<td>—</td>
+<td>CALC_PERFORMANCE_STR_RATE → Загальна оцінка ОКР; CALC_PERFORMANCE_STR_RATE → Загальна оцінка OKR; CALC_PERFORMANCE_STR_RATE → Оцінка OKR</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-chastka-kr-za-naiavnistiu-zmin/">PP.Частка KR за наявністю змін</a></td>
+<td><code>0</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-chastka-okr-za-krosfunktsiinistiu/">PP.Частка OKR за кросфункційністю</a></td>
+<td><code>0</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-chastka-okr-za-naiavnistiu-zmin/">PP.Частка OKR за наявністю змін</a></td>
+<td><code>0</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-chastka-okr-za-typom-tsili/">PP.Частка OKR за типом цілі</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="personal_profile_7">Personal_Profile\Результативність та оцінка\Результативність<a class="headerlink" href="#personal_profile_7" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Міра</th>
+<th>Формат</th>
+<th>Бізнес-суть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../measures/pp-svg-otsinka-rezultatyvnosti/">PP.SVG.Оцінка результативності</a></td>
+<td>—</td>
+<td>performance_PBI_order → Сортування (для виведення 4-х останніх періодів)</td>
+</tr>
+<tr>
+<td><a href="../../measures/pp-svg-otsinka-rezultatyvnosti-total/">PP.SVG.Оцінка результативності.Total</a></td>
+<td>—</td>
+<td>performance_PBI_order → Сортування (для виведення 4-х останніх періодів)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_technical">_Technical<a class="headerlink" href="#_technical" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Міра</th>
+<th>Формат</th>
+<th>Бізнес-суть</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../measures/dummy-blank/">dummy_blank</a></td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Повернутись нагору
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Футер" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Назад: Огляд звіту">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              <div class="md-ellipsis">
+                Огляд звіту
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../group-profile/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Group Profile">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Вперед
+              </span>
+              <div class="md-ellipsis">
+                Group Profile
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.instant", "navigation.instant.progress", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
