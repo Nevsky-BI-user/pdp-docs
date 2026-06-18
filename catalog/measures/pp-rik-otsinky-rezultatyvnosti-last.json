@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "\"Динаміка OKR\" \n--AVERAGE('fact_Burnout_Indicators'[LAST_YEAR_PERFORMANCE])",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +24,7 @@
       "fact_Burnout_Indicators"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

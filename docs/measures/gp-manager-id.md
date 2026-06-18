@@ -1,5 +1,24 @@
 # GP._Manager_ID
 
+*тека `Group_Profile\Загальна інформація`*
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовується в:** [GP.OKR  попередній рік](../measures/gp-okr-poperednii-rik.md), [GP.OKR  поточний рік](../measures/gp-okr-potochnyi-rik.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +28,7 @@
 | dataType | — |
 | Прихована | так |
 
-## DAX
+### DAX
 
 ```dax
 			
@@ -19,7 +38,7 @@ FIRSTNONBLANKVALUE(
 )
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_dim_Employee_Access_List`
 
@@ -27,23 +46,18 @@ FIRSTNONBLANKVALUE(
 
 Power Query: `dim_Admin_OS`
 
-## Бізнес-суть
-
-!!! warning "Без бізнес-визначення"
-    Поля міри не знайдено у wiki «Таблицях джерел даних». Заповніть `manualNotes`.
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `dim_Admin_OS`
 
 Колонки: `dim_Admin_OS[ORDER_NUM_2]`, `dim_Admin_OS[USER_ACCESS_ID]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["GP._Manager_ID"]
-  M --> dim_Admin_OS
+  M --> dim_Admin_OS["dim_Admin_OS"]
 ```
 
 ## Нотатки

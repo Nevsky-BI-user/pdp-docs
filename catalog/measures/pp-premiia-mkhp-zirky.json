@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "CALCULATE(\n\tSUM(fact_TRS[payments_fact_UAH]),\n\tfact_TRS[accrual_types_key]=\"9781d4aa-3a0d-1458-623a-7a93e90a2284\",\n\tfact_TRS[category_of_accrual_sort]=2,\n\tDATESINPERIOD('dim_Date'[Date],EOMONTH(TODAY(),-1),-12,MONTH)\n)",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -22,6 +23,7 @@
       "fact_TRS"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_TRS_PDP"

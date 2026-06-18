@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _filter_lt= TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), 'fact_Employee_List'[USER_ACCESS_ID])\nVAR _admin = \n\tDIVIDE(\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(VALUES('fact_Employee_List'[EMPLOYEE_ID])),\n\t\t\t'fact_Employee_List'[IS_RESERVED] = 1,\n\t\t\t'dim_Person'[GENDER] = \"ЧОЛОВІКИ\"\n\t\t),\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(VALUES('fact_Employee_List'[EMPLOYEE_ID])),\n\t\t\t'dim_Person'[GENDER] = \"ЧОЛОВІКИ\"\n\t\t)\n\t)\nVAR _admin_lt = \n\tDIVIDE(\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(VALUES('fact_Employee_List'[EMPLOYEE_ID])),\n\t\t\t'fact_Employee_List'[IS_RESERVED] = 1,\n\t\t\t'dim_Person'[GENDER] = \"ЧОЛОВІКИ\",\n\t\t\t_filter_lt\n\t\t),\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(VALUES('fact_Employee_List'[EMPLOYEE_ID])),\n\t\t\t'dim_Person'[GENDER] = \"ЧОЛОВІКИ\",\n\t\t\t_filter_lt\n\t\t)\n\t)\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE('t_HierarchyTypes'[Index]),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\nRETURN  \n\tTRIM(\n\t\tFORMAT(\n\t\t\tCOALESCE(_res, \"-\"),\n\t\t\t\"0.00%\"\n\t\t) \n\t)\n\t",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -24,6 +30,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Person_PDP"

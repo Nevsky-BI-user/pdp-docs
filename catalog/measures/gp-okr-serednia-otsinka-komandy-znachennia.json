@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "//************* ROLE FILTERS **************\nVAR _filter_lt = TREATAS(VALUES(dim_Admin_LT_OS[USER_ACCESS_ID]), 'dim_Admin_OS'[USER_ACCESS_ID])\n\nVAR LastYears = [GP.ОКР.Останній рік]\n    // SUMMARIZE(\n    //     'fact_Employee_OKR', \n    //     'fact_Employee_OKR'[USER_ACCESS_ID], \n    //     \"MaxYear\", MAX('fact_Employee_OKR'[PLAN_YEAR])\n    // )\n/* *********** ADMIN *********** */\nVAR _admin = \n    CALCULATE(\n            AVERAGE('fact_Employee_OKR'[CALC_PERFORMANCE_STR_RATE]),\n            'fact_Employee_OKR'[PLAN_YEAR] = LastYears\n            // TREATAS(LastYearsPerPerson, 'fact_Employee_OKR'[USER_ACCESS_ID], 'fact_Employee_OKR'[PLAN_YEAR])\n        )\n\n/* *********** ADMIN LT *********** */\nVAR _admin_lt = \n    CALCULATE(\n            AVERAGE('fact_Employee_OKR'[CALC_PERFORMANCE_STR_RATE]),\n            'fact_Employee_OKR'[PLAN_YEAR] = LastYears,\n            // TREATAS(LastYearsPerPerson, 'fact_Employee_OKR'[USER_ACCESS_ID], 'fact_Employee_OKR'[PLAN_YEAR]),\n            _filter_lt\n        )\n\n/* *********** RESULT *********** */\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE( t_HierarchyTypes[Index] ),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\n\nRETURN\nROUND(_res, 2)",
+  "reportPages": [],
   "dependencies": {
     "measures": [
       "GP.ОКР.Останній рік"
@@ -26,6 +27,11 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [
+    "GP.ОКР.Середня Оцінка.Formated",
+    "GP.ОКР.Середня оцінка команди.Колір",
+    "GP.ОКР.Середня оцінка команди.Текстове поле"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.R27_fact_OKR_Goals",

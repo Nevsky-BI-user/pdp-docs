@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _date = SELECTEDVALUE(fact_Employee_List[DISABILITY_VALIDITY])\nRETURN\nCOALESCE(\n\tSWITCH(\n\t\tTRUE(),\n\t\t_date = DATE(1900,1,1), \"Безстроково\",\n\t\tNOT ISBLANK(_date), FORMAT(_date, \"dd.mm.yyyy\"),\n\t\t\"-\"\n\t),\n\t\"-\"\n)",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +24,7 @@
       "fact_Employee_List"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

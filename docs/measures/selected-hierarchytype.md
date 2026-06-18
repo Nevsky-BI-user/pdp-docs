@@ -1,5 +1,24 @@
 # Selected.HierarchyType
 
+*тека `Hierarchy`*
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,36 +28,31 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 SELECTEDVALUE('t_HierarchyTypes'[Hierarchy_Type_Name])
 ```
 
-## Джерела
+### Джерела даних
 
 
 Колонки: `Hierarchy_Type_Name`
 
 Power Query: `t_HierarchyTypes`
 
-## Бізнес-суть
-
-!!! warning "Без бізнес-визначення"
-    Поля міри не знайдено у wiki «Таблицях джерел даних». Заповніть `manualNotes`.
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `t_HierarchyTypes`
 
 Колонки: `t_HierarchyTypes[Hierarchy_Type_Name]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["Selected.HierarchyType"]
-  M --> t_HierarchyTypes
+  M --> t_HierarchyTypes["t_HierarchyTypes"]
 ```
 
 ## Нотатки

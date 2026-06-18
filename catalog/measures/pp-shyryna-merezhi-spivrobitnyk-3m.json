@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR employee = \nFIRSTNONBLANKVALUE(\n\t\tVALUES('dim_Admin_OS'[ORDER_NUM]),\n\t\tCALCULATE(SELECTEDVALUE('dim_Admin_OS'[EMPLOYEE_ID])))\n\nVAR __val =\nCALCULATE(\n\t[PP.Ширина мережі (Холдинг, 3м)],\n\tfact_Viva_Metrics[EMPLOYEE_ID] = employee)\n\nRETURN __val",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "PP.Ширина мережі (Холдинг, 3м)"
@@ -23,6 +29,13 @@
       "fact_Viva_Metrics"
     ]
   },
+  "usedBy": [
+    "PP.Метрика.Розмір/ширина мережі 3м",
+    "PP.Метрика.Ширина мережі 3м",
+    "PP.Ширина мережі (Холдинг, 3м)",
+    "PP.Ширина мережі (кадровий підрозділ, 3м)",
+    "PP.Ширина мережі (напрям, 3м)"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

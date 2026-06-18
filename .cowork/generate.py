@@ -250,11 +250,56 @@ def business_for(cols, name, by_field, by_metric):
     purpose_txt=" ".join(dict.fromkeys(purpose))[:600]
     return definition, purpose_txt, sorted(refs)
 
+# ---------------------------------------------------------------- report (PBIR report.json)
+def _walk_measures(o, acc):
+    """Рекурсивно збирає назви мір ("Measure":{...,"Property":"X"}) з конфігу візуала."""
+    if isinstance(o, dict):
+        mm=o.get("Measure")
+        if isinstance(mm, dict) and "Property" in mm: acc.add(mm["Property"])
+        for v in o.values(): _walk_measures(v, acc)
+    elif isinstance(o, list):
+        for v in o: _walk_measures(v, acc)
+
+def page_kind(display):
+    d=(display or "").strip(); du=d.upper(); dl=d.lower()
+    if d in ("DEV","Test_new_features"): return "dev"
+    if du.startswith(("TT:","ТТ:")) or dl.startswith(("підказка","підсказка")): return "tooltip"
+    if "NAV" in du or "navigation" in dl or d=="Start Page": return "nav"
+    if dl.startswith("деталізація"): return "drill"
+    return "content"
+
+def parse_report(path, mnames):
+    """report.json -> впорядкований список сторінок [{display,kind,ordinal,visuals,measures[]}]."""
+    if not os.path.exists(path): return []
+    try: rep=json.load(open(path, encoding="utf-8"))
+    except Exception: return []
+    pages=[]
+    for s in rep.get("sections", []):
+        acc=set()
+        for vc in s.get("visualContainers", []):
+            for key in ("config","query","dataTransforms"):
+                raw=vc.get(key)
+                if not raw: continue
+                try: _walk_measures(json.loads(raw), acc)
+                except Exception: pass
+        pages.append({"display":(s.get("displayName") or "").strip(),
+                      "ordinal":s.get("ordinal"), "kind":page_kind(s.get("displayName")),
+                      "visuals":len(s.get("visualContainers", [])),
+                      "measures":sorted(m for m in acc if m in mnames)})
+    pages.sort(key=lambda p:(p["ordinal"] if isinstance(p["ordinal"],int) else 999, p["display"]))
+    return pages
+
+# ---------------------------------------------------------------- mermaid / yaml helpers
+def _mid(s):   return re.sub(r"\W","_",s) or "x"     # безпечний id вузла mermaid
+def _mlabel(s):return (s or "").replace('"',"'")     # підпис вузла без лапок
+def yq(s):     return '"'+(s or "").replace("\\","\\\\").replace('"','\\"')+'"'  # YAML double-quoted
+
 # ---------------------------------------------------------------- main
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--pbip",default="/sessions/modest-charming-shannon/mnt/GIT_local")
     ap.add_argument("--sm",default="PDP.SemanticModel")
+    ap.add_argument("--report",default="PDP.Report")
     ap.add_argument("--wiki",default="/sessions/modest-charming-shannon/mnt/azure-wiki/PDP.wiki/Функціональні-вимоги/Вимоги-до-звіту-People-Digital-Profile")
     ap.add_argument("--out",default="/tmp/pdp-docs")
     ap.add_argument("--folder",default="")  # порожньо = усі displayFolder
@@ -281,10 +326,22 @@ def main():
     rels=parse_relationships(os.path.join(defn,"relationships.tmdl"))
     rels_for=lambda tn:[r for r in rels if r["fromTable"]==tn or r["toTable"]==tn]
 
+    # ---- звіт: сторінки та зіставлення міра -> сторінки ----
+    report_pages=parse_report(os.path.join(args.pbip,args.report,"report.json"),mnames)
+    rused=set(); doc_pages=[]
+    for p in report_pages:
+        if p["kind"] in ("content","tooltip") and p["measures"]:
+            p["slug"]=uniq(slugify(p["display"]) or "page",rused); doc_pages.append(p)
+    meas_pages={}  # name -> [(display, slug)]
+    for p in doc_pages:
+        for mn in p["measures"]:
+            meas_pages.setdefault(mn,[]).append((p["display"],p["slug"]))
+
     OUT=args.out
     cat_m=os.path.join(OUT,"catalog","measures"); cat_e=os.path.join(OUT,"catalog","entities")
     doc_m=os.path.join(OUT,"docs","measures");    doc_e=os.path.join(OUT,"docs","entities")
-    for d in (cat_m,cat_e,doc_m,doc_e): os.makedirs(d,exist_ok=True)
+    doc_r=os.path.join(OUT,"docs","report")
+    for d in (cat_m,cat_e,doc_m,doc_e,doc_r): os.makedirs(d,exist_ok=True)
     def manual(path):
         if os.path.exists(path):
             try: return json.load(open(path,encoding="utf-8")).get("manualNotes","")
@@ -294,27 +351,37 @@ def main():
     used=set(); index=[]; V={"no_business":[],"broken_dep":[],"orphan_cols":[],"no_wiki":[]}
     rel_meas={tn:[] for tn in entities}
 
-    # ---- міри ----
+    # ---- міри (двопрохідно: спершу залежності+зворотні зв'язки, далі запис) ----
     slug_m={}
     for m in measures: slug_m[m["name"]]=uniq(slugify(m["name"]),used)
+    dep_cache={}            # name -> (columns, tables, used_measures)
+    used_by={n:set() for n in mnames}   # name -> {міри, що її використовують}
     for m in measures:
         c,t,um=deps(m["dax"],mnames,tnames)
+        dep_cache[m["name"]]=(c,t,um)
         for tn in t:
             if tn in rel_meas: rel_meas[tn].append(m["name"])
         for dep in um:
-            if dep not in mnames: V["broken_dep"].append(f"{m['name']} → {dep}")
+            if dep in used_by: used_by[dep].add(m["name"])
+            else: V["broken_dep"].append(f"{m['name']} → {dep}")
+    minfo={}               # name -> {slug, folder, fmt, bizdef} (для сторінок звіту)
+    for m in measures:
+        name=m["name"]; c,t,um=dep_cache[name]
         st=set()
         for tn in t:
             e=entities.get(tn)
             if e: st|=set(e["sourceTables"])
-        define,purpose,refs=business_for(c,m["name"],by_field,by_metric)
-        slug=slug_m[m["name"]]; jpath=os.path.join(cat_m,slug+".json")
+        define,purpose,refs=business_for(c,name,by_field,by_metric)
+        slug=slug_m[name]; jpath=os.path.join(cat_m,slug+".json")
         seg=[s for s in m["displayFolder"].split("\\") if s]
-        obj={"id":slug,"type":"measure","name":m["name"],"homeTable":"_Measures",
+        rpages=meas_pages.get(name,[])
+        obj={"id":slug,"type":"measure","name":name,"homeTable":"_Measures",
           "displayFolder":m["displayFolder"],"formatString":m["formatString"],
           "dataType":m["dataType"],"isHidden":m["isHidden"],"description":"",
           "dax":m["dax"],
+          "reportPages":[{"display":d,"slug":s} for d,s in rpages],
           "dependencies":{"measures":um,"columns":c,"tables":t},
+          "usedBy":sorted(used_by.get(name,[])),
           "lineage":{"sourceTables":sorted(st),
                      "sourceColumns":sorted({x.split('[',1)[1][:-1] for x in c}),
                      "powerQuery":(entities[t[0]]["powerQuery"] if t else "")},
@@ -324,10 +391,11 @@ def main():
                     "commit":commit,"extractedAt":now},
           "manualNotes":manual(jpath)}
         json.dump(obj,open(jpath,"w",encoding="utf-8"),ensure_ascii=False,indent=2)
-        index.append({"id":slug,"type":"measure","name":m["name"],
+        index.append({"id":slug,"type":"measure","name":name,
                       "displayFolder":m["displayFolder"],"file":f"measures/{slug}.md"})
-        if not define: V["no_business"].append(m["name"]);
-        if not refs: V["no_wiki"].append(m["name"])
+        minfo[name]={"slug":slug,"folder":m["displayFolder"],"fmt":m["formatString"],"bizdef":define}
+        if not define: V["no_business"].append(name)
+        if not refs: V["no_wiki"].append(name)
         write_measure_md(os.path.join(doc_m,slug+".md"),obj,slug_m)
 
     # ---- сутності ----
@@ -363,53 +431,83 @@ def main():
 
     json.dump(index,open(os.path.join(OUT,"catalog","_index.json"),"w",encoding="utf-8"),
               ensure_ascii=False,indent=2)
-    write_measures_index(os.path.join(doc_m,"index.md"),measures,slug_m)
+    # ---- сторінки звіту (першочергово) ----
+    write_report_index(os.path.join(doc_r,"index.md"),report_pages,doc_pages)
+    for p in doc_pages:
+        write_report_page(os.path.join(doc_r,p["slug"]+".md"),p,minfo)
+    write_measures_index(os.path.join(doc_m,"index.md"),measures,slug_m,minfo)
     write_entities_index(os.path.join(doc_e,"index.md"),entities,slug_e)
     write_model(os.path.join(OUT,"docs","model.md"),entities,rels)
     write_glossary(os.path.join(OUT,"docs","glossary.md"))
-    write_index(os.path.join(OUT,"docs","index.md"),measures,entities)
+    write_index(os.path.join(OUT,"docs","index.md"),measures,entities,doc_pages)
     write_validation(os.path.join(OUT,"docs","validation.md"),V,len(measures))
     append_changelog(os.path.join(OUT,"docs","changelog.md"),now,len(measures),len(entities),commit)
+    write_mkdocs_yml(os.path.join(OUT,"mkdocs.yml"),doc_pages,measures,slug_m,entities,slug_e)
     state={"pbip":{"commit":commit,"extractedAt":now,"measures":len(measures),"entities":len(entities),
                    "wiki_fields_indexed":len(by_field)}}
     json.dump(state,open(os.path.join(OUT,".cowork","state.json"),"w",encoding="utf-8"),
               ensure_ascii=False,indent=2)
     cov=len(measures)-len(V["no_business"])
-    print(f"OK: {len(measures)} measures, {len(entities)} entities, business={cov}/{len(measures)}, wiki_fields={len(by_field)}, commit={commit[:8]}")
+    on_report=len(set().union(*[set(p["measures"]) for p in doc_pages])) if doc_pages else 0
+    print(f"OK: {len(measures)} measures, {len(entities)} entities, business={cov}/{len(measures)}, "
+          f"report_pages={len(doc_pages)} (measures_on_report={on_report}), wiki_fields={len(by_field)}, commit={commit[:8]}")
 
 # ---------------------------------------------------------------- MD writers
 def ptable(rows):
     return "\n".join(["| Властивість | Значення |","|---|---|"]+[f"| {k} | {v} |" for k,v in rows])
 
 def write_measure_md(path,o,sm):
+    b=o["business"]; dm=o["dependencies"]["measures"]; dt=o["dependencies"]["tables"]
+    dc=o["dependencies"]["columns"]; ub=o.get("usedBy",[]); rp=o.get("reportPages",[])
+    def mlink(n): return f"[{n}](../measures/{sm[n]}.md)" if n in sm else f"`{n}`"
     L=[f"# {o['name']}",""]
-    L.append(ptable([("Тип","міра"),("Home table",o["homeTable"]),
-        ("displayFolder",f"`{o['displayFolder']}`"),
-        ("formatString",f"`{o['formatString']}`" if o['formatString'] else "—"),
-        ("dataType",o["dataType"] or "—"),("Прихована","так" if o["isHidden"] else "ні")]))
-    L+=["","## DAX","","```dax",o["dax"] or "—","```",""]
-    lin=o["lineage"]; L+=["## Джерела",""]
-    if lin["sourceTables"]: L.append("Вихідні таблиці: "+", ".join(f"`{t}`" for t in lin["sourceTables"]))
-    if lin["sourceColumns"]: L+=["", "Колонки: "+", ".join(f"`{c}`" for c in lin["sourceColumns"])]
-    if lin["powerQuery"]: L+=["", f"Power Query: `{lin['powerQuery']}`"]
-    if not (lin["sourceTables"] or lin["sourceColumns"]): L.append("—")
-    b=o["business"]; L+=["","## Бізнес-суть",""]
+    sub=[]
+    if o["displayFolder"]: sub.append(f"тека `{o['displayFolder']}`")
+    if o["formatString"]: sub.append(f"формат `{o['formatString']}`")
+    if sub: L+=["*"+" · ".join(sub)+"*",""]
+    # 1) бізнес-суть (першочергово)
+    L+=["## Бізнес-суть",""]
     if b["definition"]:
         L.append(b["definition"])
         if b["purpose"]: L+=["", b["purpose"]]
         if b["requirementRefs"]:
             L+=["","**Вимоги:** "+", ".join(f"`{r}`" for r in b["requirementRefs"])]
     else:
-        L+=['!!! warning "Без бізнес-визначення"',
-            "    Поля міри не знайдено у wiki «Таблицях джерел даних». Заповніть `manualNotes`."]
-    L+=["","## Залежності",""]
-    dm=o["dependencies"]["measures"]; dt=o["dependencies"]["tables"]
-    if dm: L+=["Міри: "+", ".join(f"[{n}](../measures/{sm[n]}.md)" if n in sm else f"`{n}`" for n in dm),""]
+        L+=['!!! note "Бізнес-визначення відсутнє"',
+            "    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`."]
+    L+=[""]
+    # 2) де у звіті
+    L+=["## На сторінках звіту",""]
+    if rp:
+        L.append(" · ".join(f"[{p['display']}](../report/{p['slug']}.md)" for p in rp))
+    else:
+        L.append("_Не використовується на основних сторінках звіту._")
+    L+=[""]
+    # 3) пов'язані міри — двосторонні переходи
+    L+=["## Пов'язані міри",""]
+    if dm: L+=["**Використовує:** "+", ".join(mlink(n) for n in dm),""]
+    if ub:
+        more=(f" … (+{len(ub)-40})" if len(ub)>40 else "")
+        L+=["**Використовується в:** "+", ".join(mlink(n) for n in ub[:40])+more,""]
+    if not dm and not ub: L+=["_Прямих зв'язків з іншими мірами немає._",""]
+    # 4) технічний опис (після бізнес-контексту)
+    L+=["---","","## Технічний опис",""]
+    L.append(ptable([("Тип","міра"),("Home table",o["homeTable"]),
+        ("displayFolder",f"`{o['displayFolder']}`" if o['displayFolder'] else "—"),
+        ("formatString",f"`{o['formatString']}`" if o['formatString'] else "—"),
+        ("dataType",o["dataType"] or "—"),("Прихована","так" if o["isHidden"] else "ні")]))
+    L+=["","### DAX","","```dax",o["dax"] or "—","```",""]
+    lin=o["lineage"]; L+=["### Джерела даних",""]
+    if lin["sourceTables"]: L.append("Вихідні таблиці: "+", ".join(f"`{t}`" for t in lin["sourceTables"]))
+    if lin["sourceColumns"]: L+=["", "Колонки: "+", ".join(f"`{c}`" for c in lin["sourceColumns"])]
+    if lin["powerQuery"]: L+=["", f"Power Query: `{lin['powerQuery']}`"]
+    if not (lin["sourceTables"] or lin["sourceColumns"]): L.append("—")
+    L+=["","### Залежності (таблиці й колонки)",""]
     if dt: L+=["Таблиці: "+", ".join(f"`{t}`" for t in dt),""]
-    if o["dependencies"]["columns"]: L.append("Колонки: "+", ".join(f"`{c}`" for c in o["dependencies"]["columns"]))
-    if not (dm or dt): L.append("—")
-    L+=["","## Схема","","```mermaid","graph LR",f'  M["{o["name"]}"]']
-    for t in dt: L.append(f"  M --> {t}")
+    if dc: L.append("Колонки: "+", ".join(f"`{c}`" for c in dc))
+    if not dt and not dc: L.append("—")
+    L+=["","### Схема","","```mermaid","graph LR",f'  M["{_mlabel(o["name"])}"]']
+    for t in dt: L.append(f'  M --> {_mid(t)}["{_mlabel(t)}"]')
     L+=["```","","## Нотатки","",o["manualNotes"] if o["manualNotes"] else "_порожньо_"]
     open(path,"w",encoding="utf-8").write("\n".join(L)+"\n")
 
@@ -440,14 +538,20 @@ def write_entity_md(path,o,sm):
     L+=["","## Нотатки","",o["manualNotes"] if o["manualNotes"] else "_порожньо_"]
     open(path,"w",encoding="utf-8").write("\n".join(L)+"\n")
 
-def write_measures_index(path,measures,sm):
+def write_measures_index(path,measures,sm,minfo=None):
+    minfo=minfo or {}
+    esc=lambda s:(s or "").replace("|","\\|").replace("\n"," ")
     groups={}
     for m in measures: groups.setdefault(m["displayFolder"] or "(без теки)",[]).append(m)
-    L=["# Міри",f"","Усього: **{len(measures)}**.",""]
+    L=["# Каталог мір","",f"Усього: **{len(measures)}** мір за {len(groups)} теками. "
+       "Для перегляду за сторінками звіту див. [Звіт](../report/index.md).",""]
     for df in sorted(groups):
-        L+=[f"## {df}","","| Міра | formatString |","|---|---|"]
+        L+=[f"## {df}","","| Міра | Формат | Бізнес-суть |","|---|---|---|"]
         for m in sorted(groups[df],key=lambda x:x["name"]):
-            L.append(f"| [{m['name']}](./{sm[m['name']]}.md) | `{m['formatString']}` |")
+            bd=esc((minfo.get(m["name"],{}) or {}).get("bizdef",""))
+            if len(bd)>140: bd=bd[:137]+"…"
+            fmt=f"`{m['formatString']}`" if m['formatString'] else "—"
+            L.append(f"| [{esc(m['name'])}](./{sm[m['name']]}.md) | {fmt} | {bd or '—'} |")
         L.append("")
     open(path,"w",encoding="utf-8").write("\n".join(L)+"\n")
 
@@ -481,16 +585,158 @@ def write_glossary(path):
        "- **DAX / TMDL** — мова виразів / текстовий формат моделі Power BI."]
     open(path,"w",encoding="utf-8").write("\n".join(L)+"\n")
 
-def write_index(path,measures,entities):
-    L=["# People Digital Profile — документація моделі","",
-       "Пошуковий каталог мір і бізнес-сутностей семантичної моделі PDP.","",
-       f"**Обсяг:** {len(measures)} мір, {len(entities)} сутностей.","",
-       "## Розділи","",
-       "- [Міри](measures/index.md)","- [Бізнес-сутності](entities/index.md)",
-       "- [Схема моделі](model.md)","- [Глосарій](glossary.md)",
-       "- [Валідація](validation.md)","- [Журнал змін](changelog.md)","",
-       "Пошук — у верхньому рядку (вбудований, клієнтський)."]
+def write_index(path,measures,entities,doc_pages):
+    npages=len(doc_pages)
+    on_report=len(set().union(*[set(p["measures"]) for p in doc_pages])) if doc_pages else 0
+    def card(icon,title,body,link,label):
+        return [f"-   {icon}{{ .lg .middle }} **{title}**","","    ---","",f"    {body}","",
+                f"    [:octicons-arrow-right-24: {label}]({link})",""]
+    L=["# People Digital Profile","",
+       "Документація семантичної моделі Power BI **People Digital Profile**, організована "
+       "**навколо звіту**: метрики згруповано за сторінками звіту, з бізнес-суттю та переходами "
+       "між пов'язаними мірами.","",
+       '<div class="grid cards" markdown>',""]
+    L+=card(":material-file-chart:","Звіт за сторінками",
+            f"{npages} сторінок звіту · {on_report} мір з контекстом.","report/index.md","До звіту")
+    L+=card(":material-table:","Каталог мір",
+            f"Повний перелік усіх {len(measures)} мір за теками.","measures/index.md","Каталог мір")
+    L+=card(":material-database:","Бізнес-сутності",
+            f"{len(entities)} таблиць моделі: колонки, зв'язки, джерела.","entities/index.md","Сутності")
+    L+=card(":material-sitemap:","Модель даних","Схема зв'язків таблиць (ER-діаграма).","model.md","Модель")
+    L+=["</div>","",
+        "## Як користуватися","",
+        "- **Звіт** — почніть звідси: оберіть сторінку звіту й побачите її метрики з описом.",
+        "- **Пошук** (угорі) — миттєвий пошук за назвою міри, таблиці чи бізнес-терміном.",
+        "- На сторінці міри спершу **бізнес-суть** і **де у звіті**, далі **пов'язані міри**, "
+        "потім технічний опис (DAX, джерела).","",
+        "Додатково: [Глосарій](glossary.md) · [Якість і валідація](validation.md) · "
+        "[Журнал змін](changelog.md)"]
     open(path,"w",encoding="utf-8").write("\n".join(L)+"\n")
+
+def write_report_index(path,pages,doc_pages):
+    KL={"content":"основна","tooltip":"тултіп"}
+    esc=lambda s:(s or "").replace("|","\\|")
+    L=["# Звіт People Digital Profile","",
+       "Документацію організовано **за сторінками звіту**. Оберіть сторінку, щоб побачити її "
+       "метрики з бізнес-суттю та переходами до деталей кожної міри.",""]
+    def section(title,kinds):
+        rows=[p for p in doc_pages if p["kind"] in kinds]
+        if not rows: return []
+        out=[f"## {title}","","| Сторінка | Мір | Тип |","|---|---|---|"]
+        for p in rows:
+            out.append(f"| [{esc(p['display'])}]({p['slug']}.md) | {len(p['measures'])} | {KL.get(p['kind'],p['kind'])} |")
+        return out+[""]
+    L+=section("Основні сторінки",("content",))
+    L+=section("Тултіпи та підказки",("tooltip",))
+    others=[p for p in pages if "slug" not in p and p.get("display")]
+    if others:
+        L+=["## Службові сторінки","",
+            "Навігаційні, деталізаційні та технічні сторінки — без окремої деталізації мір:","",
+            ", ".join(f"{esc(p['display'])} ({len(p['measures'])})" for p in others),""]
+    open(path,"w",encoding="utf-8").write("\n".join(L)+"\n")
+
+def write_report_page(path,p,minfo):
+    KL={"content":"Основна сторінка звіту","tooltip":"Тултіп / підказка"}
+    esc=lambda s:(s or "").replace("|","\\|").replace("\n"," ")
+    L=[f"# {p['display']}","",
+       '!!! info "Сторінка звіту"',
+       f"    Тип: **{KL.get(p['kind'],'сторінка')}** · мір на сторінці: **{len(p['measures'])}**","",
+       "[:octicons-arrow-left-24: Усі сторінки звіту](index.md)",""]
+    groups={}
+    for mn in p["measures"]:
+        info=minfo.get(mn)
+        if not info: continue
+        groups.setdefault(info["folder"] or "(без теки)",[]).append((mn,info))
+    if not groups: L.append("_Немає задокументованих мір._")
+    for folder in sorted(groups):
+        L+=[f"## {folder}","","| Міра | Формат | Бізнес-суть |","|---|---|---|"]
+        for mn,info in sorted(groups[folder],key=lambda x:x[0]):
+            bd=esc(info["bizdef"]) if info["bizdef"] else "—"
+            if len(bd)>160: bd=bd[:157]+"…"
+            fmt=f"`{info['fmt']}`" if info["fmt"] else "—"
+            L.append(f"| [{esc(mn)}](../measures/{info['slug']}.md) | {fmt} | {bd} |")
+        L.append("")
+    open(path,"w",encoding="utf-8").write("\n".join(L)+"\n")
+
+MKDOCS_HEAD='''site_name: People Digital Profile — документація моделі
+site_url: https://nevsky-bi-user.github.io/pdp-docs/
+site_description: Документація семантичної моделі Power BI People Digital Profile — метрики за сторінками звіту, бізнес-суть, залежності.
+repo_url: https://github.com/Nevsky-BI-user/pdp-docs
+repo_name: Nevsky-BI-user/pdp-docs
+theme:
+  name: material
+  language: uk
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Темна тема
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Світла тема
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - navigation.instant
+    - navigation.instant.progress
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tooltips
+    - navigation.footer
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+'''
+
+def write_mkdocs_yml(path,doc_pages,measures,slug_m,entities,slug_e):
+    content=[p for p in doc_pages if p["kind"]=="content"]
+    tips=[p for p in doc_pages if p["kind"]=="tooltip"]
+    nav=["nav:","  - Головна: index.md","  - Звіт:","      - Огляд звіту: report/index.md"]
+    for p in content: nav.append(f"      - {yq(p['display'])}: report/{p['slug']}.md")
+    if tips:
+        nav.append("      - Тултіпи та підказки:")
+        for p in tips: nav.append(f"          - {yq(p['display'])}: report/{p['slug']}.md")
+    nav.append("  - Каталог мір: measures/index.md")
+    nav.append("  - Бізнес-сутності:")
+    nav.append("      - Усі сутності: entities/index.md")
+    for tn in sorted(entities): nav.append(f"      - {yq(tn)}: entities/{slug_e[tn]}.md")
+    nav+=["  - Модель даних: model.md","  - Глосарій: glossary.md",
+          "  - Якість і валідація: validation.md","  - Журнал змін: changelog.md"]
+    body=MKDOCS_HEAD+"\n".join(nav)+"\n\nnot_in_nav: |\n  measures/*.md\n"
+    open(path,"w",encoding="utf-8").write(body)
 
 def write_validation(path,v,total):
     def block(title,items):

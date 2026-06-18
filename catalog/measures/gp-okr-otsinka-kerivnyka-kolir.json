@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _rate_value = [GP.ОКР.Оцінка керівника.Значення]\nVAR _color = \n    SWITCH(\n        TRUE(),\n        ISBLANK(_rate_value), \"Дані відсутні\",\n        _rate_value >= 101, \"Суперзелений\",\n        _rate_value >= 91, \"Зелений\",\n        _rate_value >= 75, \"Жовто-Зелений\",\n        _rate_value >= 50, \"Жовтий\",\n        _rate_value >= 25, \"Жовто-червоний\",\n        _rate_value >= 0, \"Червоний\"\n    )\n\nRETURN _color",
+  "reportPages": [],
   "dependencies": {
     "measures": [
       "GP.ОКР.Оцінка керівника.Значення"
@@ -16,6 +17,10 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [
+    "GP.OKP.Color.Оцінка керівника.Текстове поле",
+    "GP.ОКР.Оцінка керівника.Текстове поле"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

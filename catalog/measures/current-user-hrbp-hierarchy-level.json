@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "CALCULATE(\n    MINX('dim_Admin_OS','dim_Admin_OS'[path_length_rls]),\n    TREATAS({USERPRINCIPALNAME()},'dim_Admin_OS'[EMPLOYEE_EMAIL]),\n    'dim_Admin_OS'[USER_ROLE] = \"HRBP\"\n) - 1",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -20,6 +21,9 @@
       "dim_Admin_OS"
     ]
   },
+  "usedBy": [
+    "AC.Nav.My_lead_team"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

@@ -1,5 +1,25 @@
 # AC.Тренд оцінки результативності
 
+*тека `Analytical Cases\Burnout_Risk\Main`*
+
+## Бізнес-суть
+
+PERFORMANCE_RATE_TREND → Тренд Оцінки рез-ті (%); PERFORMANCE_RATE_TREND → Тренд оцінки результативності
+
+**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`, `Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22`
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовується в:** [AC.Switch.Тренд оцінки результативності](../measures/ac-switch-trend-otsinky-rezultatyvnosti.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +29,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 VAR _v = SELECTEDVALUE('fact_Burnout_Indicators'[PERFORMANCE_RATE_TREND])
@@ -103,31 +123,25 @@ VAR _res =
 RETURN _res
 ```
 
-## Джерела
+### Джерела даних
 
 
 Колонки: `PERFORMANCE_RATE_TREND`
 
 Power Query: `fact_Burnout_Indicators`
 
-## Бізнес-суть
-
-PERFORMANCE_RATE_TREND → Тренд Оцінки рез-ті (%); PERFORMANCE_RATE_TREND → Тренд оцінки результативності
-
-**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`, `Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22`
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Burnout_Indicators`
 
 Колонки: `fact_Burnout_Indicators[PERFORMANCE_RATE_TREND]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Тренд оцінки результативності"]
-  M --> fact_Burnout_Indicators
+  M --> fact_Burnout_Indicators["fact_Burnout_Indicators"]
 ```
 
 ## Нотатки

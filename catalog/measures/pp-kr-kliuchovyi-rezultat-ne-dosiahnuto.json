@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _employee_id = SELECTEDVALUE('dim_Admin_OS'[EMPLOYEE_ID])\nVAR _main_position = \n\tCALCULATE(\n\t\tVALUES('fact_OKR_Key_Results'[USER_ACCESS_ID]),\n\t\tREMOVEFILTERS('fact_OKR_Key_Results'),\n\t\t'fact_OKR_Key_Results'[EMPLOYEE_ID] = _employee_id\n\t)\nVAR _filter0 = TREATAS({_main_position}, 'fact_OKR_Key_Results'[USER_ACCESS_ID])\nVAR _res = \n\tCALCULATE(\n        COUNTROWS('fact_OKR_Key_Results'),\n        'fact_OKR_Key_Results'[KR_COLOR_RATE] < 25,\n        'fact_OKR_Key_Results'[KR_WEIGHT] >0,\n        'fact_OKR_Key_Results'[KR_CHANGE] <> \"DELETE\",\n\t\t_filter0\n\t)\nVAR _blank_check = \nCALCULATE(\n    COUNTROWS('fact_OKR_Key_Results'),\n    'fact_OKR_Key_Results'[KR_COLOR_RATE] < 25\n)\nRETURN IF(NOT(ISBLANK(_blank_check)), _res)",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -24,6 +30,7 @@
       "fact_OKR_Key_Results"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.R27_fact_OKR_Key_Results",

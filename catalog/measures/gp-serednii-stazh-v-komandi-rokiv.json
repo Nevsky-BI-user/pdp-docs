@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),dim_Admin_OS[USER_ACCESS_ID] )\n\n/* *********** ADMIN *********** */\nVAR _admin = \n\tCALCULATE(\n\t\tAVERAGEX(\n\t\t\tVALUES('dim_Admin_OS'[USER_ACCESS_ID]),\n\t\t\tCALCULATE(AVERAGE(fact_employee_seniority_by_month[seniority_LAST_DIVISION_HIRE_DATE]))\n\t\t)\n\t)\n\n/* *********** LT *********** */\nVAR _admin_lt = \n\tCALCULATE(\n\t\tAVERAGEX(\n\t\t\tVALUES('dim_Admin_OS'[USER_ACCESS_ID]),\n\t\t\tCALCULATE(AVERAGE(fact_employee_seniority_by_month[seniority_LAST_DIVISION_HIRE_DATE]))\n\t\t),\n\t\t_filter_lt\n\t)\n\t\nVAR _seniority =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\nVAR _years = IF(_seniority/12 < 1, BLANK(), ROUNDDOWN(_seniority/12,0))\nVAR _month = _seniority - COALESCE(_years,0) * 12\nVAR _res = \n\tIF(\n\t\tNOT ISBLANK( _seniority ),\n\t\tIF(\n\t\t\tNOT ISBLANK( _years ),\n\t\t\t_years & \" р.\"\n\t\t) & \" \" &\n\t\tIF(\n\t\t\tNOT ISBLANK( _month ) && _month <> 0,\n\t\t\tROUNDDOWN(_month,0) & \" міс.\"\n\t\t)\n\t)\nRETURN \n\tCOALESCE(\n\t\tTRIM(_res),\n\t\t\"-\"\n\t)",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -23,6 +29,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List",

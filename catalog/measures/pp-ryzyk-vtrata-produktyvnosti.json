@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _employee_id = SELECTEDVALUE('dim_Admin_OS'[EMPLOYEE_ID])\nVAR _v =\n\tCALCULATE(\n\t\tSELECTEDVALUE('fact_Loss_of_Productivity'[Total_Risk_Productive_Name]),\n\t\t'fact_Loss_of_Productivity'[EMPLOYEE_ID] = _employee_id\n\t)\nRETURN COALESCE(_v, \"Дані відсутні\")",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -21,6 +27,7 @@
       "fact_Loss_of_Productivity"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List",

@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "LASTNONBLANKVALUE(\n\tVALUES('fact_Employee_Performance'[performance_PBI_order]),\n\tCALCULATE(\n\t\t[PP.Оцінка результативності базова],\n\t\t'fact_Employee_Performance'[Competency_Name] = \"Прийняття відповідальності за отриманий результат\",\n\t\t'fact_Employee_Performance'[Performance_Type] = \"Річна\"\n\t)\n)",
+  "reportPages": [],
   "dependencies": {
     "measures": [
       "PP.Оцінка результативності базова"
@@ -22,6 +23,9 @@
       "fact_Employee_Performance"
     ]
   },
+  "usedBy": [
+    "PP.SVG.SpiderwebVisual"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_Employee_Performance_PBI"

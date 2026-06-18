@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "CALCULATE(\n    LASTNONBLANKVALUE(\n        'dim_Date'[Date],\n        CALCULATE(SUM(fact_Repayment_Credit[LAND_SHARE_CONTRACT_SUM]))\n    ),\n    'fact_Repayment_Credit'[IS_INCOMING] = TRUE(),\n    'fact_Repayment_Credit'[ACTION_END_DATE] >= EDATE(TODAY(), -12)\n)",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -22,6 +28,7 @@
       "fact_Repayment_Credit"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_Repayment_Credit_PDP"

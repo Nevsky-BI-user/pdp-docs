@@ -1,5 +1,24 @@
 # AC.Loss_Productivity.Застосувати вибір
 
+*тека `Analytical Cases\Loss_Productivity\Formatting`*
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +28,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 VAR _v = 
@@ -36,7 +55,7 @@ RETURN
 	& ")"
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_fact_Loss_of_Productivity`
 
@@ -44,24 +63,19 @@ RETURN
 
 Power Query: `fact_Loss_of_Productivity`
 
-## Бізнес-суть
-
-!!! warning "Без бізнес-визначення"
-    Поля міри не знайдено у wiki «Таблицях джерел даних». Заповніть `manualNotes`.
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Loss_of_Productivity`, `t_HierarchyTypes`
 
 Колонки: `fact_Loss_of_Productivity[USER_ACCESS_ID]`, `t_HierarchyTypes[HierarchyType]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Loss_Productivity.Застосувати вибір"]
-  M --> fact_Loss_of_Productivity
-  M --> t_HierarchyTypes
+  M --> fact_Loss_of_Productivity["fact_Loss_of_Productivity"]
+  M --> t_HierarchyTypes["t_HierarchyTypes"]
 ```
 
 ## Нотатки

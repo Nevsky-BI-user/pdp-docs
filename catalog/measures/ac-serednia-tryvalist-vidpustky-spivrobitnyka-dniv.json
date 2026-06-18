@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt= TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),'dim_Admin_OS'[USER_ACCESS_ID] )\n\n//***** HEALTH AND WELLBEING FILTERS ******* \nVAR _employee_list = VALUES('fact_Employee_List'[EMPLOYEE_ID])\nVAR _main_position_employees = \n\tCALCULATETABLE(\n\t\tVALUES('fact_Employee_List'[USER_ACCESS_ID]),\n\t\tREMOVEFILTERS('fact_Employee_List'), \n\t\t'fact_Employee_List'[EMPLOYEE_ID] IN _employee_list,\n\t\t'fact_Employee_List'[IS_MAIN_POSITION] = 1\n\t)\nVAR _filter0 = TREATAS(_main_position_employees, 'dim_Admin_OS'[USER_ACCESS_ID])\n\n/* *********** ADMIN *********** */\nVAR _admin = \n\tCALCULATE(\n\t\tAVERAGEX( \n\t\t\tVALUES( dim_Admin_OS[USER_ACCESS_ID] ), \n\t\t\tCALCULATE( \n\t\t\t\tDIVIDE(\n\t\t\t\t\tSUM('fact_Metrics'[Vacation_Day]),\n\t\t\t\t\tSUM('fact_Metrics'[Vacation_Number])\n\t\t\t\t)\n\t\t\t)\n\t\t),\n\t\tREMOVEFILTERS('fact_Vacation_Reserve'),\n\t\t_filter0\n\t)\n/* *********** LT *********** */\nVAR _admin_lt =\n\tCALCULATE(\n\t\tAVERAGEX( \n\t\t\tVALUES( dim_Admin_OS[USER_ACCESS_ID] ), \n\t\t\tCALCULATE( \n\t\t\t\tDIVIDE(\n\t\t\t\t\tSUM('fact_Metrics'[Vacation_Day]),\n\t\t\t\t\tSUM('fact_Metrics'[Vacation_Number])\n\t\t\t\t)\n\t\t\t)\n\t\t),\n\t\tREMOVEFILTERS('fact_Metrics'),\n\t\t_filter0,\n\t\t_filter_lt\n\t)\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\n\nRETURN _res",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -28,6 +34,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

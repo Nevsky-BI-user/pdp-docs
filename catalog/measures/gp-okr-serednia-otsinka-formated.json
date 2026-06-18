@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _res = [GP.ОКР.Середня оцінка команди.Значення]\n\nRETURN\nTRIM( \n        COALESCE( \n            SUBSTITUTE(FORMAT( _res, \"#,0.00\" ), \",\", \" \"), \"-\"\n        )\n    )",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "GP.ОКР.Середня оцінка команди.Значення"
@@ -16,6 +22,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

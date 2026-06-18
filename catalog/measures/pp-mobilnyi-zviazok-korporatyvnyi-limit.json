@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _lim = MAX(fact_Mobile_Limit[PHONE_CORP_LIMIT])\nRETURN\nIF (\n\t_lim = 99999,\n\t\"Безлімітний\",\n\tIF(\n\t\tISBLANK(_lim),\n\t\tBLANK(),\n\t\t\"Корпоративний ліміт - \" & COALESCE(FORMAT ( _lim, \"#,0.00\" ), 0) & \" грн.\"\n\t)\n)",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,7 @@
       "fact_Mobile_Limit"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_Mobile_Limit_PDP"

@@ -1,5 +1,24 @@
 # GP.Результативність.Оцінка OKR.Фільтр деталізації KR
 
+*тека `Group_Profile\Результативність та оцінка\Оцінка OKR` · формат `0`*
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +28,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 VAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin
@@ -41,7 +60,7 @@ VAR _res =
 RETURN _res
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.R27_fact_OKR_Key_Results`, `DM.vw_R27_dim_Employee_Access_List`
 
@@ -49,25 +68,20 @@ RETURN _res
 
 Power Query: `dim_Admin_OS`
 
-## Бізнес-суть
-
-!!! warning "Без бізнес-визначення"
-    Поля міри не знайдено у wiki «Таблицях джерел даних». Заповніть `manualNotes`.
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `dim_Admin_OS`, `fact_OKR_Key_Results`, `t_HierarchyTypes`
 
 Колонки: `dim_Admin_OS[EMPLOYEE_ID]`, `dim_Admin_OS[USER_ACCESS_ID]`, `fact_OKR_Key_Results[EMPLOYEE_ID]`, `t_HierarchyTypes[Index]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["GP.Результативність.Оцінка OKR.Фільтр деталізації KR"]
-  M --> dim_Admin_OS
-  M --> fact_OKR_Key_Results
-  M --> t_HierarchyTypes
+  M --> dim_Admin_OS["dim_Admin_OS"]
+  M --> fact_OKR_Key_Results["fact_OKR_Key_Results"]
+  M --> t_HierarchyTypes["t_HierarchyTypes"]
 ```
 
 ## Нотатки

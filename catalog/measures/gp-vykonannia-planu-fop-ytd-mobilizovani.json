@@ -9,11 +9,13 @@
   "isHidden": false,
   "description": "",
   "dax": "\"В розробці\"",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

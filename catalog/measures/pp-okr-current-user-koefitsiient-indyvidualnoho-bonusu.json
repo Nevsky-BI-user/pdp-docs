@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _employee_id = SELECTEDVALUE('dim_Admin_OS'[EMPLOYEE_ID])\nVAR _main_position = \n\tCALCULATE(\n\t\tVALUES('fact_OKR_Goals'[USER_ACCESS_ID]),\n\t\tREMOVEFILTERS('fact_OKR_Goals'),\n\t\t'fact_OKR_Goals'[EMPLOYEE_ID] = _employee_id\n\t)\nVAR _filter0 = TREATAS({_main_position}, 'fact_OKR_Goals'[USER_ACCESS_ID])\nVAR _res = \n\tCALCULATE(\n\t\tAVERAGE('fact_OKR_Goals'[Ind_Bonus_Rate]),\n\t\t_filter0\n\t)\nRETURN _res",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -22,6 +23,9 @@
       "fact_OKR_Goals"
     ]
   },
+  "usedBy": [
+    "PP.SVG.OKR.Загальна оцінка"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.R27_fact_OKR_Goals",

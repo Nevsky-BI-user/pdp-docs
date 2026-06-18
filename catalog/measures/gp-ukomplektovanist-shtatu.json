@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "// VAR _current_direction = \n// \tFIRSTNONBLANKVALUE(\n// \t\t'dim_Admin_OS'[ORDER_NUM_2],\n// \t\tMIN('dim_Admin_OS'[DIRECTION])\n// \t)\n\n// VAR _current_sub_direction = \n// \tFIRSTNONBLANKVALUE(\n// \t\t'dim_Admin_OS'[ORDER_NUM_2],\n// \t\tMIN('dim_Admin_OS'[SUB_DIRECTION])\n// \t)\n\n// VAR _current_email = \n// \tFIRSTNONBLANKVALUE(\n// \t\t'dim_Admin_OS'[ORDER_NUM_2],\n// \t\tMIN('dim_Admin_OS'[EMPLOYEE_EMAIL])\n// \t)\n\n// VAR _direction_res = \n// CALCULATE(\n// \tSUM('fact_EXCEL_Group_Profile_General_Metric'[Staffing]),\n// \tFILTER(\n// \t\t'fact_EXCEL_Group_Profile_General_Metric',\n// \t\t'fact_EXCEL_Group_Profile_General_Metric'[Record_Type] = \"DIRECTION\"\n// \t\t&&'fact_EXCEL_Group_Profile_General_Metric'[Direction_Name] = _current_direction))\n\n// VAR _sub_direction_res = \n// CALCULATE(\n// \tSUM('fact_EXCEL_Group_Profile_General_Metric'[Staffing]),\n// \tFILTER(\n// \t\t'fact_EXCEL_Group_Profile_General_Metric',\n// \t\tfact_EXCEL_Group_Profile_General_Metric[Record_Type] = \"SUBDIRECTION\"\n// \t\t&& 'fact_EXCEL_Group_Profile_General_Metric'[Direction_Name] = _current_sub_direction))\n\n// VAR top_employee_list = \n// SELECTCOLUMNS(\n// \tFILTER(\n// \t'dim_Admin_OS', \n// \t'dim_Admin_OS'[POSITION_CATEGORY_DETAIL] = \"Топ-менеджмент\" \n// \t|| 'dim_Admin_OS'[EMPLOYEE_EMAIL] in \n// \t\t{\"d.konogray@mhp.com.ua\",\n// \t\t\"r.zvonenko@mhp.com.ua\",\n// \t\t\"s.p.nikolaiev@mhp.com.ua\",\n// \t\t\"a.evshel@mhp.com.ua\",\n// \t\t\"t.sakhno@mhp.com.ua\",\n// \t\t\"i.zakharchuk@mhp.com.ua\",\n// \t\t\"yu.polovyna@mhp.com.ua\",\n// \t\t\"a.gromova@mhp.com.ua\"}),\n// \t\"EmailColumn\", 'dim_Admin_OS'[EMPLOYEE_EMAIL])\n\n// VAR _res =\n// IF(_current_email in top_employee_list, _direction_res, _sub_direction_res)\n\n// RETURN \n// IF(\n//     ISBLANK(_res),\n//     \"-\", \n//     TRIM(_res) & \"%\") & \", (>=88%)\"\n\nVAR _filter_lt= TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), 'fact_Employee_List'[USER_ACCESS_ID])\nVAR _admin = \nCALCULATE(\n    DIVIDE(\n        SUM('fact_Vacancy'[CLOSE_VACANCY_COUNT]),\n        SUM('fact_Vacancy'[TOTAL_VACANCY]),\n        BLANK())\n)\n\nVAR _admin_lt = \nCALCULATE(\n    DIVIDE(\n        SUM('fact_Vacancy'[CLOSE_VACANCY_COUNT]),\n        SUM('fact_Vacancy'[TOTAL_VACANCY]),\n        BLANK()),\n    _filter_lt\n)\nVAR _res = \n    SWITCH(\n        SELECTEDVALUE('t_HierarchyTypes'[Index]),\n        0, _admin_lt,\n        1, _admin\n    )\n\nRETURN \nTRIM(\n    FORMAT(\n        COALESCE(_res, \"-\"), \n        \"##%\"))",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -33,6 +39,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List",

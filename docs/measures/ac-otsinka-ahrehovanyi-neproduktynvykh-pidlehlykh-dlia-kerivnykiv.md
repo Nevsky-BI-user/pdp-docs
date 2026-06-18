@@ -1,5 +1,25 @@
 # AC.Оцінка.Агрегований % непродуктинвих підлеглих для керівників
 
+*тека `Analytical Cases\Loss_Productivity\Main`*
+
+## Бізнес-суть
+
+Unproductive_Subordinate_Pct → Агрегований % непродуктинвих підлеглих для керівників
+
+**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовується в:** [AC.Switch.Агрегований % непродуктинвих підлеглих для керівників](../measures/ac-switch-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +29,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 //НЕ видаляти пробіли для ✅
@@ -24,7 +44,7 @@ VAR _res =
 RETURN COALESCE( _res, "-" )
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_fact_Loss_of_Productivity`
 
@@ -32,24 +52,18 @@ RETURN COALESCE( _res, "-" )
 
 Power Query: `fact_Loss_of_Productivity`
 
-## Бізнес-суть
-
-Unproductive_Subordinate_Pct → Агрегований % непродуктинвих підлеглих для керівників
-
-**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Loss_of_Productivity`
 
 Колонки: `fact_Loss_of_Productivity[Unproductive_Subordinate_Pct]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Оцінка.Агрегований % непродуктинвих підлеглих для керівників"]
-  M --> fact_Loss_of_Productivity
+  M --> fact_Loss_of_Productivity["fact_Loss_of_Productivity"]
 ```
 
 ## Нотатки

@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "FIRSTNONBLANKVALUE(\n\t'dim_Admin_OS'[ORDER_NUM_2],\n\tMIN('dim_Admin_OS'[EMP_HIERARCHY_LEVEL])\n)",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -19,6 +25,7 @@
       "dim_Admin_OS"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

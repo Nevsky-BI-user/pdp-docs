@@ -9,6 +9,16 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR __val =\nDIVIDE(\n\tSUM( 'fact_Viva_Metrics'[TOTAL_AFTER_HOUR] ),\n\tSUM( 'fact_Viva_Metrics'[WORKDAY_WITHOUT_SICKLEAVE_AND_VACATION] )\n)\n\nRETURN __val",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    },
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -19,6 +29,11 @@
       "fact_Viva_Metrics"
     ]
   },
+  "usedBy": [
+    "PP.Годин взаємодії у неробочий час (кадровий підрозділ)",
+    "PP.Годин взаємодії у неробочий час (напрям)",
+    "PP.Годин взаємодії у неробочий час (співробітник)"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "[PP.Оцінка результативності.Керівником] + [PP.Оцінка результативності.Самооцінка]",
+  "reportPages": [],
   "dependencies": {
     "measures": [
       "PP.Оцінка результативності.Керівником",
@@ -17,6 +18,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

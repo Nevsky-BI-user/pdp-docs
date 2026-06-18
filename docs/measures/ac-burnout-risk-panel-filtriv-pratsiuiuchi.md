@@ -1,5 +1,24 @@
 # AC.Burnout_risk.Панель фільтрів.Працюючі
 
+*тека `Analytical Cases\Burnout_Risk\Main`*
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Утримання працівників](../report/utrymannia-pratsivnykiv.md)
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +28,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 VAR _Admin_lt = 
@@ -80,7 +99,7 @@ RETURN
 	& ")"
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_dim_Employee_Access_List`
 
@@ -88,25 +107,20 @@ RETURN
 
 Power Query: `dim_Admin_OS`
 
-## Бізнес-суть
-
-!!! warning "Без бізнес-визначення"
-    Поля міри не знайдено у wiki «Таблицях джерел даних». Заповніть `manualNotes`.
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `dim_Admin_OS`, `fact_Burnout_Indicators`, `t_HierarchyTypes`
 
 Колонки: `dim_Admin_LT_OS[USER_ROLE]`, `dim_Admin_OS[USER_ROLE]`, `fact_Burnout_Indicators[IS_FIRED]`, `fact_Burnout_Indicators[USER_ACCESS_ID]`, `t_HierarchyTypes[HierarchyType]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Burnout_risk.Панель фільтрів.Працюючі"]
-  M --> dim_Admin_OS
-  M --> fact_Burnout_Indicators
-  M --> t_HierarchyTypes
+  M --> dim_Admin_OS["dim_Admin_OS"]
+  M --> fact_Burnout_Indicators["fact_Burnout_Indicators"]
+  M --> t_HierarchyTypes["t_HierarchyTypes"]
 ```
 
 ## Нотатки

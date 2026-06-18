@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _filter_lt= TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), 'dim_Admin_OS'[USER_ACCESS_ID])\nVAR _admin =\nDIVIDE(\n    CALCULATE(\n        COUNTROWS('dim_Admin_OS'),\n        FILTER(\n            'dim_Admin_OS', \n            'dim_Admin_OS'[IS_MANAGER] = TRUE())),\n    CALCULATE(\n        COUNTROWS('dim_Admin_OS')),\n    BLANK())\n\nVAR _admin_lt = \nDIVIDE(\n    CALCULATE(\n        COUNTROWS('dim_Admin_OS'),\n        FILTER(\n            'dim_Admin_OS', \n            'dim_Admin_OS'[IS_MANAGER] = TRUE()),\n        _filter_lt),\n    CALCULATE(\n        COUNTROWS('dim_Admin_OS'), _filter_lt),\n    BLANK())\n\nVAR _res = \n    SWITCH(\n        SELECTEDVALUE('t_HierarchyTypes'[Index]),\n        0, _admin_lt,\n        1, _admin)\n        \nRETURN \nTRIM(\n    FORMAT(\n        COALESCE(_res, 0), \n        \"0.00%\"))",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -21,6 +27,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

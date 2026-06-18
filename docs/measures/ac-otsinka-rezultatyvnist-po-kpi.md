@@ -1,5 +1,25 @@
 # AC.Оцінка.Результативність по KPI (%)
 
+*тека `Analytical Cases\Loss_Productivity\Main`*
+
+## Бізнес-суть
+
+Award_Norm → Результативність по KPI (%)
+
+**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовується в:** [AC.Switch.Результативність по KPI (%)](../measures/ac-switch-rezultatyvnist-po-kpi.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +29,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 //НЕ видаляти пробіли для ✅
@@ -24,7 +44,7 @@ VAR _res =
 RETURN COALESCE( _res, "-" )
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_fact_Loss_of_Productivity`
 
@@ -32,24 +52,18 @@ RETURN COALESCE( _res, "-" )
 
 Power Query: `fact_Loss_of_Productivity`
 
-## Бізнес-суть
-
-Award_Norm → Результативність по KPI (%)
-
-**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Loss_of_Productivity`
 
 Колонки: `fact_Loss_of_Productivity[Award_Norm]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Оцінка.Результативність по KPI (%)"]
-  M --> fact_Loss_of_Productivity
+  M --> fact_Loss_of_Productivity["fact_Loss_of_Productivity"]
 ```
 
 ## Нотатки

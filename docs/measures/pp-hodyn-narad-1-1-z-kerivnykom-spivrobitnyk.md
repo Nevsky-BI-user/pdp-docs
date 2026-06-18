@@ -1,5 +1,24 @@
 # PP.Годин нарад 1:1 з керівником (співробітник)
 
+*тека `Personal_Profile\Viva\Viva management & Coaching`*
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+**Використовує:** [PP.Годин нарад 1:1 з керівником (Холдинг)](../measures/pp-hodyn-narad-1-1-z-kerivnykom-kholdynh.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +28,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 VAR employee = 
@@ -25,7 +44,7 @@ CALCULATE(
 RETURN __val
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_dim_Employee_Access_List`
 
@@ -33,26 +52,19 @@ RETURN __val
 
 Power Query: `dim_Admin_OS`
 
-## Бізнес-суть
-
-!!! warning "Без бізнес-визначення"
-    Поля міри не знайдено у wiki «Таблицях джерел даних». Заповніть `manualNotes`.
-
-## Залежності
-
-Міри: [PP.Годин нарад 1:1 з керівником (Холдинг)](../measures/pp-hodyn-narad-1-1-z-kerivnykom-kholdynh.md)
+### Залежності (таблиці й колонки)
 
 Таблиці: `dim_Admin_OS`, `fact_Viva_Metrics`
 
 Колонки: `dim_Admin_OS[EMPLOYEE_ID]`, `dim_Admin_OS[ORDER_NUM]`, `fact_Viva_Metrics[EMPLOYEE_ID]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["PP.Годин нарад 1:1 з керівником (співробітник)"]
-  M --> dim_Admin_OS
-  M --> fact_Viva_Metrics
+  M --> dim_Admin_OS["dim_Admin_OS"]
+  M --> fact_Viva_Metrics["fact_Viva_Metrics"]
 ```
 
 ## Нотатки

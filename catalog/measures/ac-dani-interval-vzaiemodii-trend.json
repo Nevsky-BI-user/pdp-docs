@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _res = SELECTEDVALUE('fact_Loss_of_Productivity'[Collab_Span_Trend])\nRETURN COALESCE(_res, \"—\")",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,9 @@
       "fact_Loss_of_Productivity"
     ]
   },
+  "usedBy": [
+    "AC.Switch.Інтервал взаємодії Тренд (%)"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_Loss_of_Productivity"

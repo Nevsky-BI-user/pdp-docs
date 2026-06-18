@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _employee_id = SELECTEDVALUE('fact_Employee_List'[EMPLOYEE_ID])\nVAR _ratio = \nCALCULATE(\n\tDIVIDE(\n\t\tSUM('fact_Metrics'[Sick_Leave_Day_Without_Pregnancy]),\n\t\tSUMX(\n\t\t\t'fact_Metrics',\n\t\t\t'fact_Metrics'[FTE_WEIGHTED_WORK_DAY_FOR_ABSENTEEISM] + 'fact_Metrics'[Sick_Leave_Day_Without_Pregnancy]\n\t\t)\n\t)\n)\nRETURN \n\tSWITCH(\n\t\tTRUE(),\n\t\tISBLANK(_ratio), \"0.00%\",\n\t\t_ratio = 0, \"0.00%\",\n\t\tFORMAT(_ratio, \"0.00%\")\n\t)",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -21,6 +27,9 @@
       "fact_Metrics"
     ]
   },
+  "usedBy": [
+    "PP.Ризик.Абсентеїзм"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

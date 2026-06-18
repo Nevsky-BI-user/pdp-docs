@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "AVERAGE('fact_OKR_Key_Results'[KR_COLOR_RATE])",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,7 @@
       "fact_OKR_Key_Results"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.R27_fact_OKR_Key_Results"

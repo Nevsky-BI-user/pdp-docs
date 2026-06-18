@@ -1,5 +1,24 @@
 # AC.LP.Nav.My_lead_team
 
+*тека `Analytical Cases\Loss_Productivity\Formatting` · формат `0`*
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовує:** [User_Admin_Hierarchy_Level](../measures/user-admin-hierarchy-level.md), [User_HRBP_Hierarchy_Level](../measures/user-hrbp-hierarchy-level.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +28,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 SWITCH(
@@ -27,7 +46,7 @@ SWITCH(
 )
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_dim_Employee_Access_List`, `DM.vw_R27_fact_Loss_of_Productivity`
 
@@ -35,26 +54,19 @@ SWITCH(
 
 Power Query: `dim_Admin_OS`
 
-## Бізнес-суть
-
-!!! warning "Без бізнес-визначення"
-    Поля міри не знайдено у wiki «Таблицях джерел даних». Заповніть `manualNotes`.
-
-## Залежності
-
-Міри: [User_Admin_Hierarchy_Level](../measures/user-admin-hierarchy-level.md), [User_HRBP_Hierarchy_Level](../measures/user-hrbp-hierarchy-level.md)
+### Залежності (таблиці й колонки)
 
 Таблиці: `dim_Admin_OS`, `fact_Loss_of_Productivity`
 
 Колонки: `dim_Admin_OS[USER_ACCESS_ID]`, `dim_Admin_OS[USER_ROLE]`, `dim_Admin_OS[path_length_rls]`, `fact_Loss_of_Productivity[USER_ACCESS_ID]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.LP.Nav.My_lead_team"]
-  M --> dim_Admin_OS
-  M --> fact_Loss_of_Productivity
+  M --> dim_Admin_OS["dim_Admin_OS"]
+  M --> fact_Loss_of_Productivity["fact_Loss_of_Productivity"]
 ```
 
 ## Нотатки

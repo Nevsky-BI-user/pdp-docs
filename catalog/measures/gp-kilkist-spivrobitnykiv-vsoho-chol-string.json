@@ -9,6 +9,16 @@
   "isHidden": false,
   "description": "",
   "dax": "\t\t\t\nTRIM(\n\tFORMAT(\n\t\tCOALESCE([GP.Кількість співробітників всього, чол. - Integer], \"-\"),\n\t\t\"### ###\"\n\t))",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    },
+    {
+      "display": "Під ризиком мобілізації",
+      "slug": "pid-ryzykom-mobilizatsii"
+    }
+  ],
   "dependencies": {
     "measures": [
       "GP.Кількість співробітників всього, чол. - Integer"
@@ -16,6 +26,9 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [
+    "GP.Команда"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

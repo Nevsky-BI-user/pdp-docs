@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "IF(\n\tISBLANK([PP.Оцінка результативності попередній рік]),\n\t\"Дані\"&UNICHAR(10)&\"відсутні\",\n\t\"\"\n)",
+  "reportPages": [],
   "dependencies": {
     "measures": [
       "PP.Оцінка результативності попередній рік"
@@ -16,6 +17,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

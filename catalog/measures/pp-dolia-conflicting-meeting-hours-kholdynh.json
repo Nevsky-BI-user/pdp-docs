@@ -9,6 +9,16 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR __val =\n\tDIVIDE(\n\t\tSUM( 'fact_Viva_Metrics'[CONFLICTING_MEETING_HOUR] ),\n\t\tSUM( 'fact_Viva_Metrics'[WORKDAY_WITHOUT_SICKLEAVE_AND_VACATION] )\n\t)\n\t\nRETURN __val",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    },
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -19,6 +29,11 @@
       "fact_Viva_Metrics"
     ]
   },
+  "usedBy": [
+    "PP.Доля Conflicting meeting hours (кадровий підрозділ)",
+    "PP.Доля Conflicting meeting hours (напрям)",
+    "PP.Доля Conflicting meeting hours (співробітник)"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

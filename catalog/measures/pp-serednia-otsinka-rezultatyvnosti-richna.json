@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _res = \nLASTNONBLANKVALUE(\n\tVALUES('fact_Employee_Performance'[performance_PBI_order]),\n\tCALCULATE(\n\t\tAVERAGE('fact_Employee_Performance'[Official_Rate]),\n\t\t'fact_Employee_Performance'[Performance_Type] = \"Річна\"\n\t)\n)\nRETURN COALESCE(_res, \"-\")",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -20,6 +21,7 @@
       "fact_Employee_Performance"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_Employee_Performance_PBI"

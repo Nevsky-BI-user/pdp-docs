@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR employee = \nFIRSTNONBLANKVALUE(\n\t\tVALUES('dim_Admin_OS'[ORDER_NUM]),\n\t\tCALCULATE(SELECTEDVALUE('dim_Admin_OS'[EMPLOYEE_ID])))\n\nVAR __val =\nCALCULATE(\n\t[PP.Годин нарад 1:1 з керівником (Холдинг)],\n\tfact_Viva_Metrics[EMPLOYEE_ID] = employee)\n\nRETURN __val",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "PP.Годин нарад 1:1 з керівником (Холдинг)"
@@ -23,6 +29,7 @@
       "fact_Viva_Metrics"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

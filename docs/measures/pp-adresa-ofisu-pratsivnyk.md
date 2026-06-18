@@ -1,29 +1,6 @@
 # PP.Адреса офісу (працівник)
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Personal_Profile\Паспорт\_Main` |
-| formatString | — |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-COALESCE(
-	SELECTEDVALUE('fact_Employee_List'[EMP_OFFICE_ADRESS]),
-	"-"
-)
-```
-
-## Джерела
-
-
-Колонки: `EMP_OFFICE_ADRESS`
-
-Power Query: `fact_Employee_List`
+*тека `Personal_Profile\Паспорт\_Main`*
 
 ## Бізнес-суть
 
@@ -33,18 +10,55 @@ Power Query: `fact_Employee_List`
 
 **Вимоги:** `Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника`, `Допоміжні-вітрини-для-звіту/Денормалізація-даних-для-вітрини-DM.vw_R27_fact_Employee_List_PDP`
 
-## Залежності
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Personal_Profile\Паспорт\_Main` |
+| formatString | — |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+COALESCE(
+	SELECTEDVALUE('fact_Employee_List'[EMP_OFFICE_ADRESS]),
+	"-"
+)
+```
+
+### Джерела даних
+
+
+Колонки: `EMP_OFFICE_ADRESS`
+
+Power Query: `fact_Employee_List`
+
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Employee_List`
 
 Колонки: `fact_Employee_List[EMP_OFFICE_ADRESS]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["PP.Адреса офісу (працівник)"]
-  M --> fact_Employee_List
+  M --> fact_Employee_List["fact_Employee_List"]
 ```
 
 ## Нотатки

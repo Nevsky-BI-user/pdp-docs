@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "CALCULATE(\n\tSUM('fact_Burnout_Indicators'[OKR_LAST_YEAR_RATE]),\n\tTREATAS({[GP._Manager_ID]}, 'fact_Burnout_Indicators'[USER_ACCESS_ID])\n)",
+  "reportPages": [],
   "dependencies": {
     "measures": [
       "GP._Manager_ID"
@@ -21,6 +22,10 @@
       "fact_Burnout_Indicators"
     ]
   },
+  "usedBy": [
+    "GP.OKR пусто",
+    "GP.SVG.OKR команди"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

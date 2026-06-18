@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _Fixed =\n\tCALCULATE (\n\t\tSUMX (\n\t\t\tfact_TRS_Plan,\n\t\t\tIF (\n\t\t\t\tfact_TRS_Plan[CALC_TYPE_CODE] = \"UAH\",\n\t\t\t\tfact_TRS_Plan[INIT_PAYMENT_PLAN_SUM],\n\t\t\t\tfact_TRS_Plan[PAYMENT_PLAN_SUM]\n\t\t\t)\n\t\t),\n\t\tfact_TRS_Plan[IS_ACTUAL] = TRUE (),\n\t\tfact_TRS_Plan[category_name] = \"Фіксована винагорода\",\n\t\tfact_TRS_Plan[TARIFF_RATE_TYPE_CODE] <> \"СДЕЛЬНАЯ\",\n\t\tfact_TRS_Plan[END_DATE] > TODAY () \t|| fact_TRS_Plan[END_DATE] = DATE (2001, 1, 1)\n\t)\n\nVAR _Variable = \n\tSUMX(\n\t\t'fact_Employee_List',\n\t\t'fact_Employee_List'[MIN_TARIFF_RATE] * 'fact_Employee_List'[BONUS_MONTH_SALARY_CNT] * 12\n\t\t+\n\t\t'fact_Employee_List'[MIN_TARIFF_RATE] * 'fact_Employee_List'[BONUS_QUARTER_SALARY_CNT] * 4\n\t\t+\n\t\t'fact_Employee_List'[MIN_TARIFF_RATE] * 'fact_Employee_List'[BONUS_YEAR_SALARY_CNT])\n\n// VAR _Variable =\n//     CALCULATE (\n//         SUM ( fact_TRS_Plan[BONES_SIZE] ),\n//         fact_TRS_Plan[IS_ACTUAL] = TRUE (),\n//         fact_TRS_Plan[CALC_TYPE_CODE] = \"UAH\",\n//         fact_TRS_Plan[category_name] = \"Фіксована винагорода\"\n//     )\nRETURN\n\t_Fixed * 12 + _Variable",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -30,6 +36,11 @@
       "fact_TRS_Plan"
     ]
   },
+  "usedBy": [
+    "GP.Виконання плану ФОП YTD (%)",
+    "GP.Середнє зростання цільової річної винагороди, до оподаткування",
+    "PP.Зростання цільової річної винагороди, до оподаткування (за останні 12 міс.)"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_TRS_Plan_PDP"

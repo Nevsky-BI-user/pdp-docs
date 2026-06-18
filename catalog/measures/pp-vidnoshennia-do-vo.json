@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "COALESCE(\n\tFORMAT(\n\t\tSELECTEDVALUE('fact_Employee_List'[MILITARY_REGISTRATION_UKR]),\n\t\t\"0\"\n\t),\n\t\"-\"\n)",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +24,7 @@
       "fact_Employee_List"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

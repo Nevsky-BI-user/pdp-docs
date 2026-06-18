@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR __val =\n\tVAR __End = TODAY()\n\tVAR __Start = EDATE( __End, -12 )\n\tVAR __has =\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(fact_TRS),\n\t\t\tDATESBETWEEN( dim_Date[Date], __Start, __End ),\n\t\t\tfact_TRS[ACCRUAL_TYPES_KEY] = \"83ce68c2-8a36-d6d5-21bd-27fc6b970114\" \n\t\t)\n\tRETURN\n\t\tIF(\n\t\t\t__has > 0\n\t\t\t, \"Так\"\n\t\t\t, BLANK( )\n\t\t)\nRETURN\n\tIF(\n\t\tISBLANK( __val )\n\t\t, BLANK( )\n\t\t, __val\n\t)",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -20,6 +26,7 @@
       "fact_TRS"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_TRS_PDP"

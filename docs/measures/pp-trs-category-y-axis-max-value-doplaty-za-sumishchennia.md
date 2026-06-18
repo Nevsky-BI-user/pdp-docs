@@ -1,5 +1,24 @@
 # PP.TRS_category_Y_axis_max_value_Доплати_за_суміщення
 
+*тека `Personal_Profile\TRS`*
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[TT:Зміна фікс винагороди](../report/tt-zmina-fiks-vynahorody.md)
+
+## Пов'язані міри
+
+**Використовує:** [PP.Доплати за суміщення](../measures/pp-doplaty-za-sumishchennia.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +28,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
     MAXX(
@@ -18,7 +37,7 @@
     ) * 1.3
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_fact_TRS_Plan_PDP`
 
@@ -26,25 +45,18 @@
 
 Power Query: `dim_TRS_categories`
 
-## Бізнес-суть
-
-!!! warning "Без бізнес-визначення"
-    Поля міри не знайдено у wiki «Таблицях джерел даних». Заповніть `manualNotes`.
-
-## Залежності
-
-Міри: [PP.Доплати за суміщення](../measures/pp-doplaty-za-sumishchennia.md)
+### Залежності (таблиці й колонки)
 
 Таблиці: `dim_TRS_categories`
 
 Колонки: `dim_TRS_categories[TRS_CATEGORY]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["PP.TRS_category_Y_axis_max_value_Доплати_за_суміщення"]
-  M --> dim_TRS_categories
+  M --> dim_TRS_categories["dim_TRS_categories"]
 ```
 
 ## Нотатки

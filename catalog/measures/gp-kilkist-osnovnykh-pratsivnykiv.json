@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "\"В розробці\"\n//VAR _res  = \n//    CALCULATE(\n//        COUNTROWS('fact_Employee_List'), \n//        'fact_Employee_List'[POSITION_CATEGORY_INTERNAL_SORT] IN { 8, 2, 3, 6, 11}\n//    )\n//RETURN FORMAT(COALESCE(_res, \"-\"), \"0\")",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +24,7 @@
       "fact_Employee_List"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

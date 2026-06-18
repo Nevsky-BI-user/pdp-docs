@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _admin = \nCALCULATE(\n\tDIVIDE(\n\t\tCALCULATE(\n\t\t\tCOUNTROWS('fact_Employee_List'), \n\t\t\t'fact_Employee_List'[WORK_FORMAT_ON_EMPLOYEE_KEY] = \"1\"\n\t\t),\n\t\tCOUNTROWS('fact_Employee_List')\n\t)\n)\nVAR _admin_lt = \n\tCALCULATE(\n\t\tDIVIDE(\n\t\t\tCALCULATE(\n\t\t\t\tCOUNTROWS('fact_Employee_List'), \n\t\t\t\t'fact_Employee_List'[WORK_FORMAT_ON_EMPLOYEE_KEY] = \"1\"\n\t\t\t),\n\t\t\tCOUNTROWS('fact_Employee_List')\n\t\t),\n\t\tTREATAS( VALUES( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ), fact_Employee_List[USER_ACCESS_ID] )\n\t) \nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE('t_HierarchyTypes'[Index]),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\nRETURN \n\tTRIM(\n\t\tFORMAT(\n\t\t\tCOALESCE(_res, \"-\"),\n\t\t\t\"0.00%\"\n\t\t) \n\t)",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -22,6 +28,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

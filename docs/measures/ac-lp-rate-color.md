@@ -1,5 +1,24 @@
 # AC.LP.Rate_color
 
+*тека `Analytical Cases\Loss_Productivity\Formatting`*
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +28,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 VAR _indicator = SELECTEDVALUE('t_AC Burnout'[Burnout_Indicator])
@@ -18,28 +37,23 @@ RETURN
 _color
 ```
 
-## Джерела
+### Джерела даних
 
 
 Колонки: `Burnout_Indicator`
 
-## Бізнес-суть
-
-!!! warning "Без бізнес-визначення"
-    Поля міри не знайдено у wiki «Таблицях джерел даних». Заповніть `manualNotes`.
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `t_AC Burnout`
 
 Колонки: `t_AC Burnout[Burnout_Indicator]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.LP.Rate_color"]
-  M --> t_AC Burnout
+  M --> t_AC_Burnout["t_AC Burnout"]
 ```
 
 ## Нотатки

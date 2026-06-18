@@ -9,6 +9,16 @@
   "isHidden": false,
   "description": "",
   "dax": "CALCULATE(\n\tSUM(fact_TRS[PAYMENTS_FACT_UAH]),\n\tfact_TRS[ACCRUAL_TYPES_KEY] IN {\n\t\t\"80c8007c-3a14-a5d2-ee1d-54a8aee2ab94\",\n\t\t\"88c53d62-248c-8c56-33b5-3ff1a33a1bd3\",\n\t\t\"f7234f48-59a7-9dec-7315-6a280641d79d\",\n\t\t\"9a83c0c7-fa2c-fe89-d90c-c963dadf74d4\"\n\t},\n\tISBLANK(fact_TRS[TAX_PIT_ID]),\n\tDATESINPERIOD('dim_Date'[Date], EOMONTH(TODAY(), -1), -12, MONTH)\n)",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    },
+    {
+      "display": "ТТ:\"Інші доплати\"",
+      "slug": "tt-inshi-doplaty"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -22,6 +32,7 @@
       "fact_TRS"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_TRS_PDP"

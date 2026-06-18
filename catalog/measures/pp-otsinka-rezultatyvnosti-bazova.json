@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "AVERAGE('fact_Employee_Performance'[Official_Rate])",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,16 @@
       "fact_Employee_Performance"
     ]
   },
+  "usedBy": [
+    "PP.Ініціативність при виконанні завдань",
+    "PP.Автономність при виконанні завдань",
+    "PP.Виконання завдань у встановлені терміни",
+    "PP.Відповідність кількості виконаних завдань функціоналу",
+    "PP.Націленість на отримання результату",
+    "PP.Подолання перешкод при вирішенні проблем",
+    "PP.Прийняття відповідальності за отриманий результат",
+    "PP.Якість результату виконаних завдань"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_Employee_Performance_PBI"

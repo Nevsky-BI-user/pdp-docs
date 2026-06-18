@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "COALESCE(\n\tSELECTEDVALUE('fact_Employee_List'[PHONE_WORK]),\n\tSELECTEDVALUE('fact_Employee_List'[PHONE_PERSONAL]),\n\t\"-\"\n)",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -19,6 +20,7 @@
       "fact_Employee_List"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

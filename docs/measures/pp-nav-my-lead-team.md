@@ -1,5 +1,24 @@
 # PP.Nav.My_lead_team
 
+*тека `Navigation\Personal` · формат `0`*
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовує:** [User_Admin_Hierarchy_Level](../measures/user-admin-hierarchy-level.md), [User_HRBP_Hierarchy_Level](../measures/user-hrbp-hierarchy-level.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +28,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 VAR _res = 
@@ -26,7 +45,7 @@ IF(
 RETURN _res
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_dim_Employee_Access_List`
 
@@ -34,25 +53,18 @@ RETURN _res
 
 Power Query: `dim_Admin_OS`
 
-## Бізнес-суть
-
-!!! warning "Без бізнес-визначення"
-    Поля міри не знайдено у wiki «Таблицях джерел даних». Заповніть `manualNotes`.
-
-## Залежності
-
-Міри: [User_Admin_Hierarchy_Level](../measures/user-admin-hierarchy-level.md), [User_HRBP_Hierarchy_Level](../measures/user-hrbp-hierarchy-level.md)
+### Залежності (таблиці й колонки)
 
 Таблиці: `dim_Admin_OS`
 
 Колонки: `dim_Admin_OS[USER_ROLE]`, `dim_Admin_OS[path_length_rls]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["PP.Nav.My_lead_team"]
-  M --> dim_Admin_OS
+  M --> dim_Admin_OS["dim_Admin_OS"]
 ```
 
 ## Нотатки

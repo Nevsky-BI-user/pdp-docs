@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "CALCULATE(MAX('fact_Employee_OKR'[PLAN_YEAR]), ALL('dim_OKR_Evalution'))",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,12 @@
       "fact_Employee_OKR"
     ]
   },
+  "usedBy": [
+    "GP.ОКР.Кількість співробітників (Останній період оцінки)",
+    "GP.ОКР.Назва графіка",
+    "GP.ОКР.Оцінка керівника.Значення",
+    "GP.ОКР.Середня оцінка команди.Значення"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.R27_fact_OKR_Goals"

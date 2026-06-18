@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _res = SUM(fact_Burnout_Indicators[NO_QUALITY_VACATION_MONTHS])\nRETURN _res",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,9 @@
       "fact_Burnout_Indicators"
     ]
   },
+  "usedBy": [
+    "AC.Switch.Кількість місяців без якісної відпустки за ост. 3 роки"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

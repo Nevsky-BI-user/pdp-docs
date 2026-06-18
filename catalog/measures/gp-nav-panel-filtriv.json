@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _Admin_lt = \n    CALCULATETABLE(\n        VALUES(dim_Admin_LT_OS[USER_ACCESS_ID]),\n        'dim_Admin_LT_OS'[USER_ROLE]  = \"Адміністративний керівник\"\n    )\n\nVAR _HRBP_lt = \n    CALCULATETABLE(\n        VALUES(dim_Admin_LT_OS[USER_ACCESS_ID]),\n        'dim_Admin_LT_OS'[USER_ROLE]  = \"HRBP\"\n    )\nVAR _Admin = \n\tSWITCH(\n\t\tSELECTEDVALUE('t_HierarchyTypes'[HierarchyType]),\n\t\t\"Hierarchy\",\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(VALUES('dim_Admin_OS'[USER_ACCESS_ID])),\n            'dim_Admin_OS'[USER_ROLE]  = \"Адміністративний керівник\"\n\t\t),\n\t\t\"Lead Team\",\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(VALUES('dim_Admin_OS'[USER_ACCESS_ID])),\n\t\t\tTREATAS(_Admin_lt, 'dim_Admin_OS'[USER_ACCESS_ID]),\n            'dim_Admin_OS'[USER_ROLE]  = \"Адміністративний керівник\"\n\t\t)\n\t)\n\nVAR _HRBP = \n\tSWITCH(\n\t\tSELECTEDVALUE('t_HierarchyTypes'[HierarchyType]),\n\t\t\"Hierarchy\",\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(VALUES('dim_Admin_OS'[USER_ACCESS_ID])),\n            'dim_Admin_OS'[USER_ROLE]  = \"HRBP\"\n\t\t),\n\t\t\"Lead Team\",\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(VALUES('dim_Admin_OS'[USER_ACCESS_ID])),\n\t\t\tTREATAS(_HRBP_lt, 'dim_Admin_OS'[USER_ACCESS_ID]),\n            'dim_Admin_OS'[USER_ROLE]  = \"HRBP\"\n\t\t)\n\t)\n\nVAR _v = \n SWITCH(\n    SELECTEDVALUE('dim_Admin_OS'[USER_ROLE]),\n    \"Адміністративний керівник\", _Admin,\n    \"HRBP\", _HRBP\n )\n \nRETURN \n\t\"Панель фільтрів (\"& \n\t\tCOALESCE(\n\t\t\tTRIM(\n\t\t\t\tFORMAT(\n\t\t\t\t\t_v, \n\t\t\t\t\t\"[uk-UA]# ##0\"\n\t\t\t\t)\n\t\t\t),\n\t\t\t0\n\t\t) \n\t& \")\"",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -22,6 +23,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

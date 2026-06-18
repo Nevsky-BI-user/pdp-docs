@@ -1,5 +1,24 @@
 # AC.Burnout_Risk.c_rows
 
+*тека `Analytical Cases\Burnout_Risk\Main` · формат `0`*
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +28,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 SWITCH(
@@ -27,31 +46,26 @@ SWITCH(
 )
 ```
 
-## Джерела
+### Джерела даних
 
 
 Колонки: `IS_FIRED`
 
 Power Query: `fact_Burnout_Indicators`
 
-## Бізнес-суть
-
-!!! warning "Без бізнес-визначення"
-    Поля міри не знайдено у wiki «Таблицях джерел даних». Заповніть `manualNotes`.
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Burnout_Indicators`, `t_IS_FIRED`
 
 Колонки: `fact_Burnout_Indicators[IS_FIRED]`, `t_IS_FIRED[IS_FIRED]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Burnout_Risk.c_rows"]
-  M --> fact_Burnout_Indicators
-  M --> t_IS_FIRED
+  M --> fact_Burnout_Indicators["fact_Burnout_Indicators"]
+  M --> t_IS_FIRED["t_IS_FIRED"]
 ```
 
 ## Нотатки

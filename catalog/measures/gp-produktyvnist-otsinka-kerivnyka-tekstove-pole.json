@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _category = [GP.Продуктивність.Оцінка керівника.Категорія]\nVAR _rate_value = [GP.Продуктивність.Оцінка керівника.Значення]\nRETURN \n    --\"Оцінка керівника - \" &\n    IF(\n        ISBLANK(_rate_value),\n        \"Дані відсутні\",\n         _category & \", \" & ROUND(_rate_value,2)\n    )",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "GP.Продуктивність.Оцінка керівника.Значення",
@@ -17,6 +23,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

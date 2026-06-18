@@ -9,6 +9,16 @@
   "isHidden": false,
   "description": "",
   "dax": "SUM('fact_Employee_History_Position'[ANNUAL_TARGET_INCOME])",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    },
+    {
+      "display": "TT:Життєвий цикл",
+      "slug": "tt-zhyttievyi-tsykl"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +28,13 @@
       "fact_Employee_History_Position"
     ]
   },
+  "usedBy": [
+    "PP.Y_axis_rcd",
+    "PP.min_Y_axis_rcd",
+    "PP.Колір шапки тултіпу",
+    "PP.Поточний РЦД",
+    "PP.Приріст РЦД"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_Employee_History_Position"

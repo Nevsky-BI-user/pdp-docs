@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt= TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), 'dim_Admin_OS'[USER_ACCESS_ID])\n\nVAR _admin = \nCALCULATE(\n    DISTINCTCOUNT('fact_Employee_Performance_Total'[USER_ACCESS_ID]))\n\nVAR _admin_lt = \nCALCULATE(\n    DISTINCTCOUNT('fact_Employee_Performance_Total'[USER_ACCESS_ID]),\n    _filter_lt)\n\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\n\nRETURN _res",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -22,6 +28,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List",

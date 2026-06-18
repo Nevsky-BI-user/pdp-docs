@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "CALCULATE(\n    [PP.РЦД],\n    'dim_Date'[Date] = MAX('fact_Employee_History_Position'[PERIOD])\n)",
+  "reportPages": [],
   "dependencies": {
     "measures": [
       "PP.РЦД"
@@ -22,6 +23,7 @@
       "fact_Employee_History_Position"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_Employee_History_Position"

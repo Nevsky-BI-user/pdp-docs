@@ -1,5 +1,25 @@
 # AC.Дані.Чистий час в офісі Тренд (%)
 
+*тека `Analytical Cases\Loss_Productivity\Main`*
+
+## Бізнес-суть
+
+Trend_Net_Office_Time_Pct → Чистий час в офісі Тренд (%)
+
+**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовується в:** [AC.Switch.Чистий час в офісі Тренд (%)](../measures/ac-switch-chystyi-chas-v-ofisi-trend.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,14 +29,14 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 VAR _res = SELECTEDVALUE('fact_Loss_of_Productivity'[Trend_Net_Office_Time_Pct])
 RETURN COALESCE(_res, "—")
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_fact_Loss_of_Productivity`
 
@@ -24,24 +44,18 @@ RETURN COALESCE(_res, "—")
 
 Power Query: `fact_Loss_of_Productivity`
 
-## Бізнес-суть
-
-Trend_Net_Office_Time_Pct → Чистий час в офісі Тренд (%)
-
-**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Loss_of_Productivity`
 
 Колонки: `fact_Loss_of_Productivity[Trend_Net_Office_Time_Pct]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Дані.Чистий час в офісі Тренд (%)"]
-  M --> fact_Loss_of_Productivity
+  M --> fact_Loss_of_Productivity["fact_Loss_of_Productivity"]
 ```
 
 ## Нотатки

@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "SWITCH(\n    [GP.ОКР.Оцінка керівника.Колір],\n    \"Супер зелений\", \"#006B3D\",\n    \"Зелений\", \"#028A2E\",\n    \"Жовто-зелений\", \"#8BA620\",\n    \"Жовтий\", \"#C4A800\",\n    \"Жовто-червоний\", \"#CC6500\",\n    \"Червоний\", \"#C42A0D\",\n    \"#252423\"\n)",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "GP.ОКР.Оцінка керівника.Колір"
@@ -16,6 +22,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

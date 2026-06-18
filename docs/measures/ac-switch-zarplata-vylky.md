@@ -1,28 +1,6 @@
 # AC.Switch.Зарплата (вилки)
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Analytical Cases\Burnout_Risk\Main` |
-| formatString | — |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-SWITCH(
-	SELECTEDVALUE('t_AC Burnout'[Burnout_Indicator]),
-	"Оцінка", [AC.Чи є ризик вигорання через рівень оплати праці?],
-	"Дані", [AC.Зарплата (вилки)]
-)
-```
-
-## Джерела
-
-
-Колонки: `Burnout_Indicator`
+*тека `Analytical Cases\Burnout_Risk\Main`*
 
 ## Бізнес-суть
 
@@ -32,20 +10,54 @@ SWITCH(
 
 **Вимоги:** `Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту`, `Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22`
 
-## Залежності
+## На сторінках звіту
 
-Міри: [AC.Зарплата (вилки)](../measures/ac-zarplata-vylky.md), [AC.Чи є ризик вигорання через рівень оплати праці?](../measures/ac-chy-ie-ryzyk-vyhorannia-cherez-riven-oplaty-pratsi.md)
+[Утримання працівників](../report/utrymannia-pratsivnykiv.md)
+
+## Пов'язані міри
+
+**Використовує:** [AC.Зарплата (вилки)](../measures/ac-zarplata-vylky.md), [AC.Чи є ризик вигорання через рівень оплати праці?](../measures/ac-chy-ie-ryzyk-vyhorannia-cherez-riven-oplaty-pratsi.md)
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Analytical Cases\Burnout_Risk\Main` |
+| formatString | — |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+SWITCH(
+	SELECTEDVALUE('t_AC Burnout'[Burnout_Indicator]),
+	"Оцінка", [AC.Чи є ризик вигорання через рівень оплати праці?],
+	"Дані", [AC.Зарплата (вилки)]
+)
+```
+
+### Джерела даних
+
+
+Колонки: `Burnout_Indicator`
+
+### Залежності (таблиці й колонки)
 
 Таблиці: `t_AC Burnout`
 
 Колонки: `t_AC Burnout[Burnout_Indicator]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Switch.Зарплата (вилки)"]
-  M --> t_AC Burnout
+  M --> t_AC_Burnout["t_AC Burnout"]
 ```
 
 ## Нотатки

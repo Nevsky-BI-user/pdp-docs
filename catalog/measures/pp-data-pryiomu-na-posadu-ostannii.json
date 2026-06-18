@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _res = SELECTEDVALUE('fact_employee_seniority_by_month'[LAST_POSITION_HIRE_DATE])\nRETURN \n\tCOALESCE(\n\t\tFORMAT(\n\t\t\t_res,\n\t\t\t\"dd.mm.yyyy\"\n\t\t),\n\t\t\"-\"\n\t)",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +24,7 @@
       "fact_employee_seniority_by_month"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_employee_seniority_by_month_PDP"

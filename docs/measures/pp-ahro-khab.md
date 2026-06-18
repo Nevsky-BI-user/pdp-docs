@@ -1,29 +1,6 @@
 # PP.Агро Хаб
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Personal_Profile\Загальна інформація` |
-| formatString | — |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-COALESCE(
-	SELECTEDVALUE('fact_Employee_List'[HAB_FOR_AGRO]),
-	"-"
-)
-```
-
-## Джерела
-
-
-Колонки: `HAB_FOR_AGRO`
-
-Power Query: `fact_Employee_List`
+*тека `Personal_Profile\Загальна інформація`*
 
 ## Бізнес-суть
 
@@ -33,18 +10,55 @@ HAB_FOR_AGRO → Агро Хаб
 
 **Вимоги:** `Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника`
 
-## Залежності
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Personal_Profile\Загальна інформація` |
+| formatString | — |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+COALESCE(
+	SELECTEDVALUE('fact_Employee_List'[HAB_FOR_AGRO]),
+	"-"
+)
+```
+
+### Джерела даних
+
+
+Колонки: `HAB_FOR_AGRO`
+
+Power Query: `fact_Employee_List`
+
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Employee_List`
 
 Колонки: `fact_Employee_List[HAB_FOR_AGRO]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["PP.Агро Хаб"]
-  M --> fact_Employee_List
+  M --> fact_Employee_List["fact_Employee_List"]
 ```
 
 ## Нотатки

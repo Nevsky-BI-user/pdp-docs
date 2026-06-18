@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _v = SELECTEDVALUE('fact_Employee_List'[WORKING_HOURS])\nRETURN \n\tCOALESCE(\n\t\t_v,\n\t\t\"-\"\n\t)",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,7 @@
       "fact_Employee_List"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

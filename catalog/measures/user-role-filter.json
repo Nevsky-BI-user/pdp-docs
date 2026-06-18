@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": " VAR _selected_role = SELECTEDVALUE('dim_Admin_OS'[USER_ROLE])\n VAR _is_HRBP = \n    IF(\n        CALCULATE(\n            COUNTROWS('dim_Admin_OS'),\n            'dim_Admin_OS'[USER_ROLE] = \"HRBP\"\n        ) > 1,\n        1\n    )\n VAR _is_administrative_manager = \n     IF(\n        CALCULATE(\n            COUNTROWS('dim_Admin_OS'),\n            'dim_Admin_OS'[USER_ROLE] = \"Адміністративний керівник\"\n        ) >= 1,\n        1\n    )\nVAR _res = \n    SWITCH(\n        SELECTEDVALUE('dim_Admin_OS'[USER_ROLE]),\n        \"HRBP\", IF(_is_HRBP = 1,1),\n        IF(_is_administrative_manager = 1,1)\n    )\nRETURN _res",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,7 @@
       "dim_Admin_OS"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

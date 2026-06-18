@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _res = \n\tSWITCH(\n\t\tTRUE(),\n\t\tISSELECTEDMEASURE([AC.Ризик]), \"Підказка\"\n\t)\nRETURN COALESCE(_res, \"\")",
+  "reportPages": [],
   "dependencies": {
     "measures": [
       "AC.Ризик"
@@ -16,6 +17,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

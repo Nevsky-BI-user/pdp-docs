@@ -9,11 +9,16 @@
   "isHidden": false,
   "description": "",
   "dax": "USERPRINCIPALNAME()",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [],
     "tables": []
   },
+  "usedBy": [
+    "GP.NavigationButton2",
+    "GP.Start_Page_NavigationButton"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

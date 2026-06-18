@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "\"В розробці\"\n// //************* ROLE FILTERS **************\n// VAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\n// VAR _filter_lt = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ), 'fact_metrics'[USER_ACCESS_ID] )\n\n// /* *********** ADMIN *********** */\n// VAR _admin = \n// CALCULATE(\n//     DIVIDE(\n//         SUM(fact_Metrics[FIRED_UNIT_CNT]),\n//         SUMX(\n//             VALUES(fact_Metrics[DIVISION_PERSON_ID]),\n//             CALCULATE(AVERAGE(fact_Metrics[EMPLOYEE_UNIT_AVERAGE]))\n//         )\n//     ),\n//     'dim_Employee_Status'[STATUS_KEY] IN {\"1\", \"4\"}\n// )\n// VAR _admin_lt = \n//     CALCULATE(\n//         DIVIDE(\n//             SUM(fact_Metrics[FIRED_UNIT_CNT]),\n//             SUMX(\n//                 VALUES(fact_Metrics[DIVISION_PERSON_ID]),\n//                 CALCULATE(AVERAGE(fact_Metrics[EMPLOYEE_UNIT_AVERAGE]))\n//             )\n//         ),\n//         'dim_Employee_Status'[STATUS_KEY] IN {\"1\", \"4\"},\n//         _filter_lt\n//     )\n// VAR _res = \n//     SWITCH(\n//         SELECTEDVALUE('t_HierarchyTypes'[Index]),\n//         0, _admin_lt,\n//         1, _admin\n//     )\n// RETURN \n// \tTRIM(\n// \t\tFORMAT(\n// \t\t\tCOALESCE(_res, \"-\"),\n// \t\t\t\"0.00%\"\n// \t\t) \n// \t)",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -26,6 +32,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Status"

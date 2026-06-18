@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt_plan_trs = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),'fact_TRS_Plan'[USER_ACCESS_ID] )\nVAR _filter_lt_fact_trs = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),'fact_TRS'[USER_ACCESS_ID] )\n\n/* *********** ADMIN *********** */\nVAR _admin =\n\tVAR _Employees =VALUES('dim_Admin_OS'[USER_ACCESS_ID])\n\tVAR _EmployeesSalary = \n\t\tADDCOLUMNS(\n\t\t\t_Employees,\n\t\t\t\"@Now\",\n\t\t\tCALCULATE(\n\t\t\t\tMAX(fact_TRS_Plan[PAYMENT_PLAN_SUM]),\n\t\t\t\tfact_TRS_Plan[IS_ACTUAL]=TRUE(),\n\t\t\t\tfact_TRS_Plan[ACCRUAL_ORG_BASE_CODE] IN { \"00002\",\"00001\" }\n\t\t\t),\n\t\t\t\"@YearAgo\",\n\t\t\t\tVAR _CurrMonthStart =\n\t\t\t\t\tDATE ( YEAR ( TODAY() ), MONTH ( TODAY() ), 1 )\n\t\t\t\tVAR _PrevYearSameMonthStart =\n\t\t\t\t\tEDATE ( _CurrMonthStart, -12 )\n\t\t\t\tVAR _prev_year = \n\t\t\t\t\tCALCULATE(\n\t\t\t\t\t\tAVERAGE(fact_TRS[PAYMENTS_PLAN_UAH]),\n\t\t\t\t\t\tfact_TRS[ACCRUAL_TYPES_KEY] IN { \"5e416521-f6d6-80e3-bcde-48aec8a474fe\", \"5b975c51-df44-fbad-4b67-73abd98b7e0e\" },\n\t\t\t\t\t\tTREATAS({_PrevYearSameMonthStart}, 'dim_Date'[Date])\n\t\t\t\t\t)\n\t\t\t\tRETURN _prev_year\n\t\t)\n\tVAR _ShareOfEmployeesWithSalaryChange = \n\t\tVAR _isTrue = \n\t\tCOUNTROWS(\n\t\t\tFILTER(\n\t\t\t\t_EmployeesSalary, \n\t\t\t\tNOT ISBLANK([@YearAgo]) && [@Now] - [@YearAgo] > 0\n\t\t\t)\n\t\t)\n\t\tVAR _Total = \n\t\t\tCOUNTROWS(\n\t\t\t\tFILTER(\n\t\t\t\t\t_EmployeesSalary, \n\t\t\t\t\tNOT ISBLANK([@YearAgo])\n\t\t\t\t)\n\t\t\t)\n\t\tRETURN DIVIDE(_isTrue, _Total)\n\tRETURN _ShareOfEmployeesWithSalaryChange\n\n/* *********** LT *********** */\nVAR _admin_lt =\n\tVAR _Employees =VALUES('dim_Admin_OS'[USER_ACCESS_ID])\n\tVAR _EmployeesSalary = \n\t\tADDCOLUMNS(\n\t\t\t_Employees,\n\t\t\t\"@Now\",\n\t\t\tCALCULATE(\n\t\t\t\tMAX(fact_TRS_Plan[PAYMENT_PLAN_SUM]),\n\t\t\t\tfact_TRS_Plan[IS_ACTUAL]=TRUE(),\n\t\t\t\tfact_TRS_Plan[ACCRUAL_ORG_BASE_CODE] IN { \"00002\",\"00001\" },\n\t\t\t\t_filter_lt_plan_trs\n\t\t\t),\n\t\t\t\"@YearAgo\",\n\t\t\t\tVAR _CurrMonthStart =\n\t\t\t\t\tDATE ( YEAR ( TODAY() ), MONTH ( TODAY() ), 1 )\n\t\t\t\tVAR _PrevYearSameMonthStart =\n\t\t\t\t\tEDATE ( _CurrMonthStart, -12 )\n\t\t\t\tVAR _prev_year = \n\t\t\t\t\tCALCULATE(\n\t\t\t\t\t\tAVERAGE(fact_TRS[PAYMENTS_PLAN_UAH]),\n\t\t\t\t\t\tfact_TRS[ACCRUAL_TYPES_KEY] IN { \"5e416521-f6d6-80e3-bcde-48aec8a474fe\", \"5b975c51-df44-fbad-4b67-73abd98b7e0e\" },\n\t\t\t\t\t\tTREATAS({_PrevYearSameMonthStart}, 'dim_Date'[Date]),\n\t\t\t\t\t\t_filter_lt_fact_trs\n\t\t\t\t\t)\n\t\t\t\tRETURN _prev_year\n\t\t)\n\tVAR _ShareOfEmployeesWithSalaryChange = \n\t\tVAR _isTrue = \n\t\tCOUNTROWS(\n\t\t\tFILTER(\n\t\t\t\t_EmployeesSalary, \n\t\t\t\tNOT ISBLANK([@YearAgo]) && [@Now] - [@YearAgo] > 0\n\t\t\t)\n\t\t)\n\t\tVAR _Total = \n\t\t\tCOUNTROWS(\n\t\t\t\tFILTER(\n\t\t\t\t\t_EmployeesSalary, \n\t\t\t\t\tNOT ISBLANK([@YearAgo])\n\t\t\t\t)\n\t\t\t)\n\t\tRETURN DIVIDE(_isTrue, _Total)\n\tRETURN _ShareOfEmployeesWithSalaryChange\n\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\nRETURN \nCOALESCE(\n\t_res, \"-\")",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -32,6 +38,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List",

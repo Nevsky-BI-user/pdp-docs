@@ -1,26 +1,6 @@
 # AC.BR.OKR останній рік
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Analytical Cases\Burnout_Risk\Export` |
-| formatString | `#,0.00` |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-SELECTEDVALUE('fact_Burnout_Indicators'[OKR_LAST_YEAR_RATE])
-```
-
-## Джерела
-
-
-Колонки: `OKR_LAST_YEAR_RATE`
-
-Power Query: `fact_Burnout_Indicators`
+*тека `Analytical Cases\Burnout_Risk\Export` · формат `#,0.00`*
 
 ## Бізнес-суть
 
@@ -30,18 +10,52 @@ OKR_LAST_YEAR_RATE → Тренд OKR (%); OKR_LAST_YEAR_RATE → OKR остан
 
 **Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`, `Кейс-Втрати-Продуктивності-Працівників/Деталізація-метрик-в-кейсі-Продуктивність`, `Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22`, `Командний-профіль/Паспортна-частина-групового-профілю/Додати-інформацію-про-ОКР-команди-та-середню-оцінку-результативності-по-команді`
 
-## Залежності
+## На сторінках звіту
+
+[Утримання працівників](../report/utrymannia-pratsivnykiv.md)
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Analytical Cases\Burnout_Risk\Export` |
+| formatString | `#,0.00` |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+SELECTEDVALUE('fact_Burnout_Indicators'[OKR_LAST_YEAR_RATE])
+```
+
+### Джерела даних
+
+
+Колонки: `OKR_LAST_YEAR_RATE`
+
+Power Query: `fact_Burnout_Indicators`
+
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Burnout_Indicators`
 
 Колонки: `fact_Burnout_Indicators[OKR_LAST_YEAR_RATE]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.BR.OKR останній рік"]
-  M --> fact_Burnout_Indicators
+  M --> fact_Burnout_Indicators["fact_Burnout_Indicators"]
 ```
 
 ## Нотатки

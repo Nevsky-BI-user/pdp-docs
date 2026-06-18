@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _employee_id = CALCULATETABLE(VALUES('dim_Admin_OS'[EMPLOYEE_ID]))\nVAR _res = \nCALCULATE(\n    DIVIDE(\n        COUNTROWS(VALUES('fact_OKR_Goals'[OKR_OBJECTIVE_ID])),\n        CALCULATE(\n            COUNTROWS(VALUES('fact_OKR_Goals'[OKR_OBJECTIVE_ID])),\n            ALL(fact_OKR_Goals[FILLING_STATUS])\n        )\n    ),\n    TREATAS(_employee_id,'fact_OKR_Goals'[EMPLOYEE_ID])\n)\nRETURN _res",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -22,6 +23,7 @@
       "fact_OKR_Goals"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.R27_fact_OKR_Goals",

@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _subperson = SELECTEDVALUE('fact_Loss_of_Productivity'[Person_Name])\nVAR _metric_relevance = \n    CALCULATE(\n        MIN('t_Loss_Productivity_Metrics_by_Persona'[Value]),\n        't_Loss_Productivity_Metrics_by_Persona'[SubPerson] = _subperson,\n        't_Loss_Productivity_Metrics_by_Persona'[Metric_Name] = \"Collab_Span_Trend_Pct\"\n    )\nVAR _result = \n    SWITCH(\n        SELECTEDVALUE('t_AC Burnout'[Burnout_Indicator]),\n        \"Оцінка\", [AC.Оцінка.Інтервал взаємодії Тренд (%)],\n        \"Дані\", [AC.Дані.Інтервал взаємодії Тренд (%)]\n    )\nRETURN IF(_metric_relevance = \"NA\", \"NA\", _result)",
+  "reportPages": [
+    {
+      "display": "Продуктивність працівників",
+      "slug": "produktyvnist-pratsivnykiv"
+    }
+  ],
   "dependencies": {
     "measures": [
       "AC.Дані.Інтервал взаємодії Тренд (%)",
@@ -27,6 +33,7 @@
       "t_Loss_Productivity_Metrics_by_Persona"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_Loss_of_Productivity",

@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _employee_id = SELECTEDVALUE('fact_Employee_List'[EMPLOYEE_ID])\nVAR _main_position = \n\tCALCULATE(\n\t\tVALUES('fact_Employee_List'[USER_ACCESS_ID]),\n\t\tREMOVEFILTERS('fact_Employee_List'),\n\t\t'fact_Employee_List'[EMPLOYEE_ID] = _employee_id,\n\t\t'fact_Employee_List'[IS_MAIN_POSITION] = 1\n\t)\nVAR _filter0 = TREATAS({_main_position}, 'fact_Metrics'[USER_ACCESS_ID])\nVAR _sick_leaves_cnt = \n\tCALCULATE(\n\t\tSUM('fact_Metrics'[sick_leave_id_cnt]),\n\t\tREMOVEFILTERS(fact_Metrics),\n\t\t_filter0\n\t)\nVAR _sick_leaves_days = \n\tCALCULATE(\n\t\tSUM('fact_Metrics'[SICK_LEAVE_DAY_TOTAL]),\n\t\tREMOVEFILTERS(fact_Metrics),\n\t\t_filter0\n\t)\nVAR _result = \n\tIF(\n\t\tNOT(ISBLANK(_sick_leaves_days)),\n\t\t_sick_leaves_cnt & \" шт (\" & _sick_leaves_days & \" дн.)\"\n\t)\nRETURN COALESCE(_result, \"-\")",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -24,6 +30,9 @@
       "fact_Metrics"
     ]
   },
+  "usedBy": [
+    "PP.Чи виплачено лікарняні від компанії"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

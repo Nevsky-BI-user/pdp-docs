@@ -9,11 +9,13 @@
   "isHidden": false,
   "description": "",
   "dax": "4.3",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

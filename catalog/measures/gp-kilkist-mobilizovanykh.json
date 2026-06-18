@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _filter_lt= TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), 'fact_Employee_List'[USER_ACCESS_ID])\nVAR _admin = \n\tCALCULATE(\n\t\tCOUNTROWS(VALUES('fact_Employee_List'[person_key])),\n\t\tALL('dim_Admin_OS'[STATUS_NAME]),\n\t\tKEEPFILTERS('fact_Employee_List'[is_mobilized] = 1)\n\t)\nVAR _admin_lt = \n\tCALCULATE(\n\t\tCOUNTROWS(VALUES('fact_Employee_List'[person_key])),\n\t\tKEEPFILTERS('fact_Employee_List'[is_mobilized] = 1),\n\t\tALL('dim_Admin_OS'[STATUS_NAME]),\n\t\t_filter_lt\n\t)\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE('t_HierarchyTypes'[Index]),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\nRETURN \n\tTRIM(\n\t\tFORMAT(\t\n\t\t\tCOALESCE(_res, \"-\"), \n\t\t\t\"### ###\" \n\t\t) \n\t)\n\t\t",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -24,6 +30,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

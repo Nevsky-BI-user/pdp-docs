@@ -1,5 +1,24 @@
 # PP.Nav.Застосувати вибір
 
+*тека `Navigation\Personal`*
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +28,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 VAR _Admin_lt = 
@@ -76,7 +95,7 @@ RETURN
 	& ")"
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_dim_Employee_Access_List`
 
@@ -84,24 +103,19 @@ RETURN
 
 Power Query: `dim_Admin_OS`
 
-## Бізнес-суть
-
-!!! warning "Без бізнес-визначення"
-    Поля міри не знайдено у wiki «Таблицях джерел даних». Заповніть `manualNotes`.
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `dim_Admin_OS`, `t_HierarchyTypes`
 
 Колонки: `dim_Admin_LT_OS[USER_ROLE]`, `dim_Admin_OS[USER_ACCESS_ID]`, `dim_Admin_OS[USER_ROLE]`, `t_HierarchyTypes[HierarchyType]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["PP.Nav.Застосувати вибір"]
-  M --> dim_Admin_OS
-  M --> t_HierarchyTypes
+  M --> dim_Admin_OS["dim_Admin_OS"]
+  M --> t_HierarchyTypes["t_HierarchyTypes"]
 ```
 
 ## Нотатки

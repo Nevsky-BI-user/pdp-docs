@@ -1,5 +1,24 @@
 # PP.Зростання цільової річної винагороди, до оподаткування (за останні 12 міс.)
 
+*тека `Personal_Profile\TRS` · формат `#,0.0%;-#,0.0%;#,0.0%`*
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+**Використовує:** [PP.Цільовий розмір річної винагороди, до оподаткування](../measures/pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia.md), [PP.Цільовий розмір річної винагороди, до оподаткування (12 місяців назад)](../measures/pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia-12-misiatsiv-nazad.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +28,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 VAR _Now = [PP.Цільовий розмір річної винагороди, до оподаткування]
@@ -18,21 +37,15 @@ VAR _res = DIVIDE(_Now-COALESCE(_Prev, _Now),_Prev, "Дані відсутні")
 RETURN _res
 ```
 
-## Джерела
+### Джерела даних
 
 —
 
-## Бізнес-суть
+### Залежності (таблиці й колонки)
 
-!!! warning "Без бізнес-визначення"
-    Поля міри не знайдено у wiki «Таблицях джерел даних». Заповніть `manualNotes`.
+—
 
-## Залежності
-
-Міри: [PP.Цільовий розмір річної винагороди, до оподаткування](../measures/pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia.md), [PP.Цільовий розмір річної винагороди, до оподаткування (12 місяців назад)](../measures/pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia-12-misiatsiv-nazad.md)
-
-
-## Схема
+### Схема
 
 ```mermaid
 graph LR

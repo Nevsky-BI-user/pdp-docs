@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "IF(NOT(ISBLANK([AC.BR.Кількість місяців без якісної відпустки])),\">9\")",
+  "reportPages": [
+    {
+      "display": "Утримання працівників",
+      "slug": "utrymannia-pratsivnykiv"
+    }
+  ],
   "dependencies": {
     "measures": [
       "AC.BR.Кількість місяців без якісної відпустки"
@@ -16,6 +22,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

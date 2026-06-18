@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "COALESCE(\n\tSELECTEDVALUE('fact_Employee_List'[DEFERMENT_REASON]),\n\t\"-\"\n)",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +24,7 @@
       "fact_Employee_List"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

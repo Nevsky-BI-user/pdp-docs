@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "IF(NOT(ISBLANK([AC.BR.Годин взаємодії з керівником])),\"<= 30 хв\")",
+  "reportPages": [
+    {
+      "display": "Утримання працівників",
+      "slug": "utrymannia-pratsivnykiv"
+    }
+  ],
   "dependencies": {
     "measures": [
       "AC.BR.Годин взаємодії з керівником"
@@ -16,6 +22,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

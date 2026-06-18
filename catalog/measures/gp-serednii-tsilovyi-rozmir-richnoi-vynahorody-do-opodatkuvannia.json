@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),dim_Admin_OS[USER_ACCESS_ID] )\n\n/* *********** ADMIN *********** */\nVAR _admin =      //Fixed * 12 + Variable\nAVERAGEX(\n\tVALUES('dim_Admin_OS'[USER_ACCESS_ID]),\n\tCALCULATE (\n\t\tSUMX (\n\t\t\tfact_TRS_Plan,\n\t\t\tIF (\n\t\t\t\tfact_TRS_Plan[CALC_TYPE_CODE] = \"UAH\",\n\t\t\t\tfact_TRS_Plan[INIT_PAYMENT_PLAN_SUM],\n\t\t\t\tfact_TRS_Plan[PAYMENT_PLAN_SUM]\n\t\t\t)\n\t\t),\n\t\tfact_TRS_Plan[IS_ACTUAL] = TRUE (),\n\t\tfact_TRS_Plan[category_name] = \"Фіксована винагорода\",\n\t\tfact_TRS_Plan[TARIFF_RATE_TYPE_CODE] <> \"СДЕЛЬНАЯ\",\n\t\tfact_TRS_Plan[END_DATE] > TODAY () \n\t\t\t|| fact_TRS_Plan[END_DATE] = DATE (2001, 1, 1)\n\t) * 12 +\n\tCALCULATE (\n\t\tSUM ( fact_TRS_Plan[BONES_SIZE] ),\n\t\tfact_TRS_Plan[IS_ACTUAL] = TRUE (),\n\t\tfact_TRS_Plan[CALC_TYPE_CODE] = \"UAH\",\n\t\tfact_TRS_Plan[category_name] = \"Фіксована винагорода\"\n\t)\n)\n\n/* *********** ADMIN LT *********** */\nVAR _admin_lt = //Fixed * 12 + Variable\nCALCULATE(\n\tAVERAGEX(\n\t\tVALUES('dim_Admin_OS'[USER_ACCESS_ID]),\n\t\tCALCULATE (\n\t\t\tSUMX (\n\t\t\t\tfact_TRS_Plan,\n\t\t\t\tIF (\n\t\t\t\t\tfact_TRS_Plan[CALC_TYPE_CODE] = \"UAH\",\n\t\t\t\t\tfact_TRS_Plan[INIT_PAYMENT_PLAN_SUM],\n\t\t\t\t\tfact_TRS_Plan[PAYMENT_PLAN_SUM]\n\t\t\t\t)\n\t\t\t),\n\t\t\tfact_TRS_Plan[IS_ACTUAL] = TRUE (),\n\t\t\tfact_TRS_Plan[category_name] = \"Фіксована винагорода\",\n\t\t\tfact_TRS_Plan[TARIFF_RATE_TYPE_CODE] <> \"СДЕЛЬНАЯ\",\n\t\t\tfact_TRS_Plan[END_DATE] > TODAY () \n\t\t\t\t|| fact_TRS_Plan[END_DATE] = DATE (2001, 1, 1)\n\t\t) * 12 +\n\t\tCALCULATE (\n\t\t\tSUM ( fact_TRS_Plan[BONES_SIZE] ),\n\t\t\tfact_TRS_Plan[IS_ACTUAL] = TRUE (),\n\t\t\tfact_TRS_Plan[CALC_TYPE_CODE] = \"UAH\",\n\t\t\tfact_TRS_Plan[category_name] = \"Фіксована винагорода\"\n\t\t)\n\t),\n\t_filter_lt\n)\nVAR _res = \n\tSWITCH(\n\t\t_roleIndex,\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\nRETURN \nCOALESCE(_res, \"-\")",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -30,6 +36,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List",

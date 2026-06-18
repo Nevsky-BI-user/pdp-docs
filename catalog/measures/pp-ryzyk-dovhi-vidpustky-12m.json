@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _v = [PP.Кількість довгих відпусток]\nRETURN\n\tIF(ISBLANK(_v) || _v = 0, \"Дані відсутні\", FORMAT(_v, \"0\") & \" шт.\")",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "PP.Кількість довгих відпусток"
@@ -16,6 +22,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

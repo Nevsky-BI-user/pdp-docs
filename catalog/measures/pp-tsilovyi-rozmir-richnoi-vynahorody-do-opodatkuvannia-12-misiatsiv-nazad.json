@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _CurrMonthStart =  DATE ( YEAR ( TODAY() ), MONTH ( TODAY() ), 1 )\nVAR _PrevYearSameMonthStart =  EDATE ( _CurrMonthStart, -12 )\nVAR _Fixed =\n\tCALCULATE (\n\t\tSUMX(\n\t\t\t'fact_TRS',\n\t\t\t'fact_TRS'[payments_plan_UAH]\n\t\t),\n\t\t'fact_TRS'[CATEGORY_OF_ACCRUAL_SORT] = 1,\n\t\t'fact_TRS'[wage_rate_type] <> \"СДЕЛЬНАЯ\",\n\t\tTREATAS ( { _PrevYearSameMonthStart }, 'dim_Date'[Date] )\n\t)\nVAR _Variable =\n\tCALCULATE (\n\t\tAVERAGEX(\n\t\t\t'fact_TRS',\n\t\t\t('fact_TRS'[bonus_month_salary_cnt] * 12 + 'fact_TRS'[bonus_quarter_salary_cnt] * 4 + 'fact_TRS'[bonus_year_salary_cnt])  * 'fact_TRS'[wage_rate]\n\t\t),\n\t\tTREATAS ( { _PrevYearSameMonthStart }, 'dim_Date'[Date] )\n\t)\nRETURN _Fixed * 12 + _Variable",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -26,6 +27,11 @@
       "fact_TRS"
     ]
   },
+  "usedBy": [
+    "GP.Виконання плану ФОП YTD (%)",
+    "GP.Середнє зростання цільової річної винагороди, до оподаткування",
+    "PP.Зростання цільової річної винагороди, до оподаткування (за останні 12 міс.)"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_TRS_PDP"

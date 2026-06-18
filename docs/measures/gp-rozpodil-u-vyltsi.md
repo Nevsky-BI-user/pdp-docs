@@ -1,5 +1,25 @@
 # GP.Розподіл у вилці
 
+*тека `Group_Profile\TRS`*
+
+## Бізнес-суть
+
+SALARY_RANGE → Зарплата (вилки)
+
+**Вимоги:** `Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22`
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +29,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 VAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin
@@ -74,7 +94,7 @@ COALESCE(
 	_res, "-")
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_dim_Employee_Access_List`
 
@@ -82,25 +102,19 @@ COALESCE(
 
 Power Query: `dim_Admin_OS`
 
-## Бізнес-суть
-
-SALARY_RANGE → Зарплата (вилки)
-
-**Вимоги:** `Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22`
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `dim_Admin_OS`, `t_HierarchyTypes`
 
 Колонки: `Fact_Burnout_Indicators[SALARY_RANGE]`, `dim_Admin_LT_OS[USER_ACCESS_ID]`, `dim_Admin_OS[USER_ACCESS_ID]`, `t_HierarchyTypes[Index]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["GP.Розподіл у вилці"]
-  M --> dim_Admin_OS
-  M --> t_HierarchyTypes
+  M --> dim_Admin_OS["dim_Admin_OS"]
+  M --> t_HierarchyTypes["t_HierarchyTypes"]
 ```
 
 ## Нотатки

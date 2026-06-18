@@ -9,11 +9,13 @@
   "isHidden": false,
   "description": "",
   "dax": "COUNTROWS('fact_Employee_List')",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

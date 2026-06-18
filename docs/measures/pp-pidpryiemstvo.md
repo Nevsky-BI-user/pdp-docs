@@ -1,27 +1,6 @@
 # PP.Підприємство
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Personal_Profile\Життєвий цикл` |
-| formatString | — |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-SELECTEDVALUE(fact_Employee_History_Position[organization])
-```
-
-## Джерела
-
-Вихідні таблиці: `DM.vw_R27_fact_Employee_History_Position`
-
-Колонки: `organization`
-
-Power Query: `fact_Employee_History_Position`
+*тека `Personal_Profile\Життєвий цикл`*
 
 ## Бізнес-суть
 
@@ -31,18 +10,53 @@ organization_key=organization_id Поле зберігається в довід
 
 **Вимоги:** `Індивідуальний-профіль-працівника/Історія-по-посадам`, `Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам`, `Індивідуальний-профіль-працівника/Сторінка-Індивідуальний-профіль-працівника`, `Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника`, `Командний-профіль/Паспортна-частина-групового-профілю/Метрики-рекрутингу`
 
-## Залежності
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Personal_Profile\Життєвий цикл` |
+| formatString | — |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+SELECTEDVALUE(fact_Employee_History_Position[organization])
+```
+
+### Джерела даних
+
+Вихідні таблиці: `DM.vw_R27_fact_Employee_History_Position`
+
+Колонки: `organization`
+
+Power Query: `fact_Employee_History_Position`
+
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Employee_History_Position`
 
 Колонки: `fact_Employee_History_Position[organization]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["PP.Підприємство"]
-  M --> fact_Employee_History_Position
+  M --> fact_Employee_History_Position["fact_Employee_History_Position"]
 ```
 
 ## Нотатки

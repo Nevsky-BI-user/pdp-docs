@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "GrowthLabel([PP.Приріст РЦД])",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "PP.Приріст РЦД"
@@ -16,6 +22,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

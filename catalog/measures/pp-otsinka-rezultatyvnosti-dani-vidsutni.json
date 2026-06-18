@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "IF(\n    ISBLANK([PP.Оцінка результативності.Керівником.Total])\n    && ISBLANK([PP.Оцінка результативності.Керівником])\n    && ISBLANK([PP.Оцінка результативності.Самооцінка.Total])\n    && ISBLANK([PP.Оцінка результативності.Самооцінка]), \n    \"Дані відсутні\", \n    \"\"\n)",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "PP.Оцінка результативності.Керівником",
@@ -19,6 +25,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

@@ -9,6 +9,16 @@
   "isHidden": false,
   "description": "",
   "dax": "// VAR __val = \n//     CALCULATE( \n//         [PP.Розмір мережі (співробітник, 3м)], \n//         REMOVEFILTERS( fact_Metrics )\n//     ) \n\nVAR __val =\nDIVIDE(\n\t\tSUM('fact_Viva_Metrics'[INTERNAL_NETWORK_SIZE]),\n\t\tCALCULATE(COUNTROWS('fact_Viva_Metrics'), NOT ISBLANK('fact_Viva_Metrics'[INTERNAL_NETWORK_SIZE])))\n\nRETURN __val",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    },
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "PP.Розмір мережі (співробітник, 3м)"
@@ -20,6 +30,11 @@
       "fact_Viva_Metrics"
     ]
   },
+  "usedBy": [
+    "PP.Розмір мережі (кадровий підрозділ, 3м)",
+    "PP.Розмір мережі (напрям, 3м)",
+    "PP.Розмір мережі (співробітник, 3м)"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

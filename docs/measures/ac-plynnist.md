@@ -1,27 +1,6 @@
 # AC.Плинність (%)
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Analytical Cases\Burnout_Risk\Main` |
-| formatString | `#,0.00` |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-VAR _res = SUM(fact_Burnout_Indicators[TURNOVER])
-RETURN  _res/100
-```
-
-## Джерела
-
-
-Колонки: `TURNOVER`
-
-Power Query: `fact_Burnout_Indicators`
+*тека `Analytical Cases\Burnout_Risk\Main` · формат `#,0.00`*
 
 ## Бізнес-суть
 
@@ -31,18 +10,53 @@ TURNOVER → Плинність % по вертикалі; TURNOVER → Плин
 
 **Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`, `Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22`, `Командний-профіль/Паспортна-частина-групового-профілю/Сторінка-Картка-команди`
 
-## Залежності
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовується в:** [AC.Switch.Плинність (%)](../measures/ac-switch-plynnist.md)
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Analytical Cases\Burnout_Risk\Main` |
+| formatString | `#,0.00` |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+VAR _res = SUM(fact_Burnout_Indicators[TURNOVER])
+RETURN  _res/100
+```
+
+### Джерела даних
+
+
+Колонки: `TURNOVER`
+
+Power Query: `fact_Burnout_Indicators`
+
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Burnout_Indicators`
 
 Колонки: `fact_Burnout_Indicators[TURNOVER]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Плинність (%)"]
-  M --> fact_Burnout_Indicators
+  M --> fact_Burnout_Indicators["fact_Burnout_Indicators"]
 ```
 
 ## Нотатки

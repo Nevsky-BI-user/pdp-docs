@@ -1,30 +1,6 @@
 # PP.Робочий телефон
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Personal_Profile\Паспорт\_Main` |
-| formatString | — |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-COALESCE(
-	SELECTEDVALUE('fact_Employee_List'[PHONE_WORK]),
-	SELECTEDVALUE('fact_Employee_List'[PHONE_PERSONAL]),
-	"-"
-)
-```
-
-## Джерела
-
-
-Колонки: `PHONE_PERSONAL`, `PHONE_WORK`
-
-Power Query: `fact_Employee_List`
+*тека `Personal_Profile\Паспорт\_Main`*
 
 ## Бізнес-суть
 
@@ -34,18 +10,56 @@ PHONE_WORK → Робочий телефон
 
 **Вимоги:** `Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника`
 
-## Залежності
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Personal_Profile\Паспорт\_Main` |
+| formatString | — |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+COALESCE(
+	SELECTEDVALUE('fact_Employee_List'[PHONE_WORK]),
+	SELECTEDVALUE('fact_Employee_List'[PHONE_PERSONAL]),
+	"-"
+)
+```
+
+### Джерела даних
+
+
+Колонки: `PHONE_PERSONAL`, `PHONE_WORK`
+
+Power Query: `fact_Employee_List`
+
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Employee_List`
 
 Колонки: `fact_Employee_List[PHONE_PERSONAL]`, `fact_Employee_List[PHONE_WORK]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["PP.Робочий телефон"]
-  M --> fact_Employee_List
+  M --> fact_Employee_List["fact_Employee_List"]
 ```
 
 ## Нотатки

@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "MINX(\n    VALUES('dim_Date'[Date]),\n    [PP.РЦД]\n) * 0.6",
+  "reportPages": [],
   "dependencies": {
     "measures": [
       "PP.РЦД"
@@ -20,6 +21,7 @@
       "dim_Date"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

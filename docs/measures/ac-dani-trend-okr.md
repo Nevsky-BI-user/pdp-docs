@@ -1,28 +1,6 @@
 # AC.Дані.Тренд OKR (%)
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Analytical Cases\Loss_Productivity\Main` |
-| formatString | — |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-VAR _res = SELECTEDVALUE('fact_Loss_of_Productivity'[OKR_LAST_YEAR_RATE])
-RETURN COALESCE(_res, "—")
-```
-
-## Джерела
-
-Вихідні таблиці: `DM.vw_R27_fact_Loss_of_Productivity`
-
-Колонки: `OKR_LAST_YEAR_RATE`
-
-Power Query: `fact_Loss_of_Productivity`
+*тека `Analytical Cases\Loss_Productivity\Main`*
 
 ## Бізнес-суть
 
@@ -32,18 +10,54 @@ OKR_LAST_YEAR_RATE → Тренд OKR (%); OKR_LAST_YEAR_RATE → OKR остан
 
 **Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`, `Кейс-Втрати-Продуктивності-Працівників/Деталізація-метрик-в-кейсі-Продуктивність`, `Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22`, `Командний-профіль/Паспортна-частина-групового-профілю/Додати-інформацію-про-ОКР-команди-та-середню-оцінку-результативності-по-команді`
 
-## Залежності
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовується в:** [AC.Switch.Тренд OKR (%)](../measures/ac-switch-trend-okr.md)
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Analytical Cases\Loss_Productivity\Main` |
+| formatString | — |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+VAR _res = SELECTEDVALUE('fact_Loss_of_Productivity'[OKR_LAST_YEAR_RATE])
+RETURN COALESCE(_res, "—")
+```
+
+### Джерела даних
+
+Вихідні таблиці: `DM.vw_R27_fact_Loss_of_Productivity`
+
+Колонки: `OKR_LAST_YEAR_RATE`
+
+Power Query: `fact_Loss_of_Productivity`
+
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Loss_of_Productivity`
 
 Колонки: `fact_Loss_of_Productivity[OKR_LAST_YEAR_RATE]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Дані.Тренд OKR (%)"]
-  M --> fact_Loss_of_Productivity
+  M --> fact_Loss_of_Productivity["fact_Loss_of_Productivity"]
 ```
 
 ## Нотатки

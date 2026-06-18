@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _res = \nIF(\n\tSELECTEDVALUE('dim_Admin_OS'[path_length_rls]) <= \n    SWITCH(\n        SELECTEDVALUE('dim_Admin_OS'[USER_ROLE]),\n        \"Адміністративний керівник\", [User_Admin_Hierarchy_Level],\n        \"HRBP\", [User_HRBP_Hierarchy_Level]\n    ) + 2,\n\t1,\n\t0\n)\nRETURN _res",
+  "reportPages": [],
   "dependencies": {
     "measures": [
       "User_Admin_Hierarchy_Level",
@@ -22,6 +23,7 @@
       "dim_Admin_OS"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

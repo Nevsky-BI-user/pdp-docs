@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _admin = \n\tCALCULATE(\n\t\tCOUNTROWS(VALUES('fact_Employee_List'[EMPLOYEE_ID])),\n\t\t'fact_Employee_List'[IS_AT_RISK] = 1,\n\t\t'dim_Person'[GENDER] = \"ЧОЛОВІКИ\"\n\t)\nVAR _admin_lt = \n\tCALCULATE(\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(VALUES('fact_Employee_List'[EMPLOYEE_ID])),\n\t\t\t'fact_Employee_List'[IS_AT_RISK] = 1,\n\t\t\t'dim_Person'[GENDER] = \"ЧОЛОВІКИ\"\n\t\t),\n\t\tTREATAS( VALUES( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ), fact_Employee_List[USER_ACCESS_ID] )\n\t) \nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE('t_HierarchyTypes'[Index]),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\nRETURN COALESCE(_res, 0)",
+  "reportPages": [
+    {
+      "display": "Під ризиком мобілізації",
+      "slug": "pid-ryzykom-mobilizatsii"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -25,6 +31,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Person_PDP"

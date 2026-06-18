@@ -1,5 +1,25 @@
 # AC.Дані.Інтервал взаємодії (Viva), год. в день
 
+*тека `Analytical Cases\Loss_Productivity\Main`*
+
+## Бізнес-суть
+
+Collab_Span_Norm_AVG_3month → Інтервал взаємодії (Viva), год. в день
+
+**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовується в:** [AC.Switch.Інтервал взаємодії (Viva), год. в день](../measures/ac-switch-interval-vzaiemodii-viva-hod-v-den.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,14 +29,14 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 VAR _res = SELECTEDVALUE('fact_Loss_of_Productivity'[Collab_Span_Norm_AVG_3month])
 RETURN COALESCE(_res, "—")
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_fact_Loss_of_Productivity`
 
@@ -24,24 +44,18 @@ RETURN COALESCE(_res, "—")
 
 Power Query: `fact_Loss_of_Productivity`
 
-## Бізнес-суть
-
-Collab_Span_Norm_AVG_3month → Інтервал взаємодії (Viva), год. в день
-
-**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Loss_of_Productivity`
 
 Колонки: `fact_Loss_of_Productivity[Collab_Span_Norm_AVG_3month]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Дані.Інтервал взаємодії (Viva), год. в день"]
-  M --> fact_Loss_of_Productivity
+  M --> fact_Loss_of_Productivity["fact_Loss_of_Productivity"]
 ```
 
 ## Нотатки

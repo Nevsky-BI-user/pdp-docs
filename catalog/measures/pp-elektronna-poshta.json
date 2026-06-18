@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "COALESCE(\n\tSELECTEDVALUE('fact_Employee_List'[EMAIL]),\n\t\"-\"\n)",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,7 @@
       "fact_Employee_List"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

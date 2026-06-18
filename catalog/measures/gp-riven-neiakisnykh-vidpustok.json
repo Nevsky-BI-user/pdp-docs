@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _res = 1 - [AC.Доля співробітників з відпустками понад 10 днів]\n\nRETURN \nTRIM(COALESCE(FORMAT(_res, \"##%\"), 0))",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "AC.Доля співробітників з відпустками понад 10 днів"
@@ -16,6 +22,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

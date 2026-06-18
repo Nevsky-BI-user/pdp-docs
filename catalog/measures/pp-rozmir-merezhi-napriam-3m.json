@@ -9,6 +9,16 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR direction = \nFIRSTNONBLANKVALUE(\n\t\tVALUES('dim_Admin_OS'[ORDER_NUM]),\n\t\tCALCULATE(SELECTEDVALUE('dim_Admin_OS'[DIRECTION])))\n\nVAR __val =\nCALCULATE(\n\t[PP.Розмір мережі (Холдинг, 3м)],\n\tdim_Unit[DIRECTION] = direction)\n\nRETURN __val",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    },
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "PP.Розмір мережі (Холдинг, 3м)"
@@ -23,6 +33,7 @@
       "dim_Unit"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List",

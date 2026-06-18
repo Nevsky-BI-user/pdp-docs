@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "MAX(fact_Employee_List[avg_tariff_rate])",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,7 @@
       "fact_Employee_List"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

@@ -1,28 +1,6 @@
 # PP.Уточнення по роботах
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Personal_Profile\Загальна інформація` |
-| formatString | — |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-IF(
-	SELECTEDVALUE('fact_Employee_List'[POSITION_JOB_SPECIFICATION]) = "",
-	"-")
-```
-
-## Джерела
-
-
-Колонки: `POSITION_JOB_SPECIFICATION`
-
-Power Query: `fact_Employee_List`
+*тека `Personal_Profile\Загальна інформація`*
 
 ## Бізнес-суть
 
@@ -32,18 +10,54 @@ POSITION_JOB_SPECIFICATION → Уточнення по роботам
 
 **Вимоги:** `Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника`
 
-## Залежності
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Personal_Profile\Загальна інформація` |
+| formatString | — |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+IF(
+	SELECTEDVALUE('fact_Employee_List'[POSITION_JOB_SPECIFICATION]) = "",
+	"-")
+```
+
+### Джерела даних
+
+
+Колонки: `POSITION_JOB_SPECIFICATION`
+
+Power Query: `fact_Employee_List`
+
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Employee_List`
 
 Колонки: `fact_Employee_List[POSITION_JOB_SPECIFICATION]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["PP.Уточнення по роботах"]
-  M --> fact_Employee_List
+  M --> fact_Employee_List["fact_Employee_List"]
 ```
 
 ## Нотатки

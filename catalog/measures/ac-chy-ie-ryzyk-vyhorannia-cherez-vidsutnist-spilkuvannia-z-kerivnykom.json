@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "//НЕ видаляти пробіли для ✅\nVAR _res = \nSWITCH(\n\tSELECTEDVALUE('fact_Burnout_Indicators'[IS_MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR_RISK]),\n\t\"Ризик\", \"❌\",\n\t\"Відсутній\", \" ✅ \",\n\t\"━\"\n)\nRETURN COALESCE( _res, \"-\" )",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,10 @@
       "fact_Burnout_Indicators"
     ]
   },
+  "usedBy": [
+    "AC.Switch.Годин 1:1 в сер. за 3 міс.",
+    "AC.Switch.Годин 1:1 в сер. за 3 міс2"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

@@ -1,29 +1,6 @@
 # PP.Формат роботи (штат)
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Personal_Profile\Паспорт\_Main` |
-| formatString | — |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-COALESCE(
-	SELECTEDVALUE('fact_Employee_List'[POSITION_WORK_FORMAT]),
-	"-"
-)
-```
-
-## Джерела
-
-
-Колонки: `POSITION_WORK_FORMAT`
-
-Power Query: `fact_Employee_List`
+*тека `Personal_Profile\Паспорт\_Main`*
 
 ## Бізнес-суть
 
@@ -33,18 +10,55 @@ Power Query: `fact_Employee_List`
 
 **Вимоги:** `Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника`, `Допоміжні-вітрини-для-звіту/Денормалізація-даних-для-вітрини-DM.vw_R27_fact_Employee_List_PDP`
 
-## Залежності
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Personal_Profile\Паспорт\_Main` |
+| formatString | — |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+COALESCE(
+	SELECTEDVALUE('fact_Employee_List'[POSITION_WORK_FORMAT]),
+	"-"
+)
+```
+
+### Джерела даних
+
+
+Колонки: `POSITION_WORK_FORMAT`
+
+Power Query: `fact_Employee_List`
+
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Employee_List`
 
 Колонки: `fact_Employee_List[POSITION_WORK_FORMAT]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["PP.Формат роботи (штат)"]
-  M --> fact_Employee_List
+  M --> fact_Employee_List["fact_Employee_List"]
 ```
 
 ## Нотатки

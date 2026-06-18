@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _current = SELECTEDVALUE('dim_Admin_OS'[EMPLOYEE_ID])\nRETURN\n    IF(\n        CALCULATE(\n            COUNTROWS('fact_OKR_Goals'),\n            TREATAS({_current}, 'fact_OKR_Goals'[EMPLOYEE_ID])\n        ) > 0,\n        1\n    )",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -20,6 +21,7 @@
       "fact_OKR_Goals"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.R27_fact_OKR_Goals",

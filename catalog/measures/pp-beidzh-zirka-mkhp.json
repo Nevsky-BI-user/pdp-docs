@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _yearsTbl =\n\tCALCULATETABLE(\n\t\tVALUES('fact_TRS'[PERIOD]),\n\t\t'fact_TRS'[ACCRUAL_TYPES_KEY] = \"9781d4aa-3a0d-1458-623a-7a93e90a2284\",\n\t\t'fact_TRS'[CATEGORY_OF_ACCRUAL_SORT] = 2,\n\t\t'fact_TRS'[PAYMENTS_FACT_UAH] > 0\n\t)\nVAR _years =\n\tDISTINCT(SELECTCOLUMNS(_yearsTbl, \"@y\", YEAR([PERIOD])))\nVAR _last2 = TOPN(2, _years, [@y], DESC)\nVAR _yearsText = CONCATENATEX(_last2, [@y], \", \", [@y], ASC)\nRETURN\n\tIF(ISBLANK(_yearsText), \"Дані відсутні\", _yearsText)",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -21,6 +22,9 @@
       "fact_TRS"
     ]
   },
+  "usedBy": [
+    "PP.SVG.Бейджі"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_TRS_PDP"

@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _employee_id = SELECTEDVALUE('fact_Employee_List'[EMPLOYEE_ID])\nVAR _main_position = \n\tCALCULATE(\n\t\tVALUES('fact_Employee_List'[USER_ACCESS_ID]),\n\t\tREMOVEFILTERS('fact_Employee_List'),\n\t\t'fact_Employee_List'[EMPLOYEE_ID] = _employee_id,\n\t\t'fact_Employee_List'[IS_MAIN_POSITION] = 1\n\t)\nVAR _filter0 = TREATAS({_main_position}, 'fact_Metrics'[USER_ACCESS_ID])\nVAR _res = \n\tCALCULATE(\n\t\tSUM('fact_Metrics'[Long_Vacation]),\n\t\tREMOVEFILTERS('fact_Metrics'),\n\t\t_filter0\n\t)\nRETURN COALESCE(_res,0)",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -23,6 +29,10 @@
       "fact_Metrics"
     ]
   },
+  "usedBy": [
+    "PP.Наявність довгих відпусток",
+    "PP.Ризик.Довгі відпустки 12м"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "//************* ROLE FILTERS **************\nVAR _filter_lt = TREATAS(VALUES(dim_Admin_LT_OS[USER_ACCESS_ID]), 'dim_Admin_OS'[USER_ACCESS_ID])\n\n/* *********** ADMIN *********** */\nVAR _admin =\nCALCULATE(\n\tDIVIDE(\n\t\tSUM('fact_Metrics'[MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR]),\n\t\tCOUNT('fact_Metrics'[MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR]), \"-\"),\n\tFILTER('fact_Metrics', 'fact_Metrics'[IS_MAIN_POSITION] = TRUE()))\n\n/* *********** ADMIN LT *********** */\nVAR _admin_lt =\nCALCULATE(\n\tDIVIDE(\n\t\tSUM('fact_Metrics'[MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR]),\n\t\tCOUNT('fact_Metrics'[MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR]), \"-\"),\n\tFILTER('fact_Metrics', 'fact_Metrics'[IS_MAIN_POSITION] = TRUE()),\n\t_filter_lt)\n\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE( t_HierarchyTypes[Index] ),\n\t\t0, DIVIDE(_admin_lt, 3, BLANK()),\n\t\t1, DIVIDE(_admin, 3, BLANK())\n\t)\n\n/* *********** RESULT *********** */\nRETURN \nTRIM(\n    COALESCE(ROUND(_res, 2), 0))",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -23,6 +29,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

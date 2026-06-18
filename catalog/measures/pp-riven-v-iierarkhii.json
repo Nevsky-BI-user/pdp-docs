@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _value = SELECTEDVALUE('dim_Admin_OS'[EMP_HIERARCHY_LEVEL])\n--SELECTEDVALUE('fact_Employee_List'[HIERARCHY_LEVEL])\n\nRETURN IF(_value = \"\", \"-\", _value)",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -20,6 +26,7 @@
       "fact_Employee_List"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

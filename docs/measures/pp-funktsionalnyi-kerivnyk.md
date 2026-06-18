@@ -1,29 +1,6 @@
 # PP.Функціональний керівник
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Personal_Profile\Загальна інформація` |
-| formatString | — |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-COALESCE(
-	SELECTEDVALUE('fact_Employee_List'[EMPLOYEE_FUNC_NAME]),
-	"-"
-)
-```
-
-## Джерела
-
-
-Колонки: `EMPLOYEE_FUNC_NAME`
-
-Power Query: `fact_Employee_List`
+*тека `Personal_Profile\Загальна інформація`*
 
 ## Бізнес-суть
 
@@ -33,18 +10,55 @@ Power Query: `fact_Employee_List`
 
 **Вимоги:** `Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника`, `Допоміжні-вітрини-для-звіту/Денормалізація-даних-для-вітрини-DM.vw_R27_fact_Employee_List_PDP`
 
-## Залежності
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Personal_Profile\Загальна інформація` |
+| formatString | — |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+COALESCE(
+	SELECTEDVALUE('fact_Employee_List'[EMPLOYEE_FUNC_NAME]),
+	"-"
+)
+```
+
+### Джерела даних
+
+
+Колонки: `EMPLOYEE_FUNC_NAME`
+
+Power Query: `fact_Employee_List`
+
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Employee_List`
 
 Колонки: `fact_Employee_List[EMPLOYEE_FUNC_NAME]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["PP.Функціональний керівник"]
-  M --> fact_Employee_List
+  M --> fact_Employee_List["fact_Employee_List"]
 ```
 
 ## Нотатки

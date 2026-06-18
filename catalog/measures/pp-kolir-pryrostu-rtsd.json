@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _Val = [PP.Приріст РЦД]\nRETURN\n    SWITCH(\n        TRUE(),\n        _Val > 0, \"#1F7A47\",\n        _Val < 0, \"#A82828\",\n        \"#6B7B8E\"\n    )",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "PP.Приріст РЦД"
@@ -16,6 +22,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

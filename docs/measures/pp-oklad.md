@@ -1,5 +1,25 @@
 # PP.Оклад
 
+*тека `Personal_Profile\Життєвий цикл` · формат `#,0`*
+
+## Бізнес-суть
+
+Salary → Оклад
+
+**Вимоги:** `Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам`
+
+## На сторінках звіту
+
+[TT:Життєвий цикл](../report/tt-zhyttievyi-tsykl.md)
+
+## Пов'язані міри
+
+**Використовується в:** [PP.Приріст окладу](../measures/pp-pryrist-okladu.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,13 +29,13 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 SUM(fact_Employee_History_Position[Salary])
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_fact_Employee_History_Position`
 
@@ -23,24 +43,18 @@ SUM(fact_Employee_History_Position[Salary])
 
 Power Query: `fact_Employee_History_Position`
 
-## Бізнес-суть
-
-Salary → Оклад
-
-**Вимоги:** `Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам`
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Employee_History_Position`
 
 Колонки: `fact_Employee_History_Position[Salary]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["PP.Оклад"]
-  M --> fact_Employee_History_Position
+  M --> fact_Employee_History_Position["fact_Employee_History_Position"]
 ```
 
 ## Нотатки

@@ -9,6 +9,16 @@
   "isHidden": false,
   "description": "",
   "dax": "CALCULATE(\n\tSUM(fact_TRS[PAYMENTS_FACT_UAH]),\n\tfact_TRS[ACCRUAL_TYPES_KEY] IN {\n\t\t\"00b34057-6d79-2141-77d6-3f280e312196\",\n\t\t\"e48a6efe-4040-3d6c-4fab-7d9671f8a6c6\",\n\t\t\"0b8a5246-2403-aea0-b64c-a76dfc32b115\",\n\t\t\"fbffac97-52df-2478-0a58-c4b4fe8f25a4\"\n\t},\n\tISBLANK(fact_TRS[TAX_PIT_ID]),\n\tDATESINPERIOD('dim_Date'[Date], EOMONTH(TODAY(), -1), -12, MONTH)\n)",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    },
+    {
+      "display": "TT:Доплати за суміщення",
+      "slug": "tt-doplaty-za-sumishchennia"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -22,6 +32,9 @@
       "fact_TRS"
     ]
   },
+  "usedBy": [
+    "PP.TRS_category_Y_axis_max_value_Доплати_за_суміщення"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_TRS_PDP"

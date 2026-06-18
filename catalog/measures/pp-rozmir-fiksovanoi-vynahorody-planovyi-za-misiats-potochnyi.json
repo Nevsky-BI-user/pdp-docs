@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "CALCULATE(\n\t\tMAX(fact_TRS_Plan[INIT_PAYMENT_PLAN_SUM]),\n\t\tfact_TRS_Plan[IS_ACTUAL]=TRUE(),\n\t\tfact_TRS_Plan[CATEGORY_NAME] = \"Фіксована винагорода\",\n        'fact_TRS_Plan'[END_DATE] > TODAY() || 'fact_TRS_Plan'[END_DATE] = DATE(2001,1,1)\n    )",
+  "reportPages": [
+    {
+      "display": "TT:Зміна фікс винагороди",
+      "slug": "tt-zmina-fiks-vynahorody"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -21,6 +27,9 @@
       "fact_TRS_Plan"
     ]
   },
+  "usedBy": [
+    "PP.Відсоток зміни фіксованої винагороди"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_TRS_Plan_PDP"

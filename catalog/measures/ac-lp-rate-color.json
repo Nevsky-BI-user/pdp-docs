@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _indicator = SELECTEDVALUE('t_AC Burnout'[Burnout_Indicator])\nVAR _color = IF(_indicator = \"Дані\", \"#F9F8F8\", \"#00FFFFFF\")\nRETURN\n_color",
+  "reportPages": [
+    {
+      "display": "Продуктивність працівників",
+      "slug": "produktyvnist-pratsivnykiv"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +24,7 @@
       "t_AC Burnout"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

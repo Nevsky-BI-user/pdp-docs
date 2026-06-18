@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _qty = [PP.Кількість довгих відпусток]\nVAR _days = [PP.Тривалість довгих відпусток]\nVAR _res = \n\t_qty & \n\tIF(\n\t\tOR(ISBLANK(_days), _days = 0), \n\t\tBLANK(), \n\t\t\" (\" & _days & \" дн.)\"\n\t)\nRETURN _res",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "PP.Кількість довгих відпусток",
@@ -17,6 +23,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

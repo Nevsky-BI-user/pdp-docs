@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "CALCULATE(AVERAGE('fact_Employee_Performance'[Official_Rate]))",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,11 @@
       "fact_Employee_Performance"
     ]
   },
+  "usedBy": [
+    "PP.SVG.Оцінка результативності",
+    "PP.Оцінка результативності",
+    "PP.Оцінка результативності.Дані відсутні"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_Employee_Performance_PBI"

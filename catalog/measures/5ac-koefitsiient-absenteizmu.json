@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt= TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),'dim_Admin_OS'[USER_ACCESS_ID] )\n\n// //***** HEALTH AND WELLBEING FILTERS ******* \n// VAR _employee_list = VALUES('fact_Employee_List'[EMPLOYEE_ID])\n// VAR _main_position_employees = \n//     CALCULATETABLE(\n//         VALUES('fact_Employee_List'[USER_ACCESS_ID]),\n//         REMOVEFILTERS('fact_Employee_List'), \n//         'fact_Employee_List'[STATUS_KEY] IN {\"1\",\"4\"},\n//         'fact_Employee_List'[EMPLOYEE_ID] IN _employee_list,\n//         'fact_Employee_List'[IS_MAIN_POSITION] = 1\n//     )\n// VAR _filter0 = TREATAS(_main_position_employees, 'dim_Admin_OS'[USER_ACCESS_ID])\n\n/* *********** ADMIN *********** */\nVAR _admin = \n\tCALCULATE(\n\t\tDIVIDE(\n\t\t\tSUM('fact_Metrics'[Sick_Leave_Day_Without_Pregnancy]),\n\t\t\tSUMX(\n\t\t\t\t'fact_Metrics',\n\t\t\t\t'fact_Metrics'[FTE_WEIGHTED_WORK_DAY_FOR_ABSENTEEISM] + 'fact_Metrics'[Sick_Leave_Day_Without_Pregnancy]\n\t\t\t)\n\t\t)\n\t)\n\n/* *********** LT *********** */\nVAR _admin_lt =\n\tCALCULATE(\n\t\tDIVIDE(\n\t\t\tSUM('fact_Metrics'[Sick_Leave_Day_Without_Pregnancy]),\n\t\t\tSUMX(\n\t\t\t\t'fact_Metrics',\n\t\t\t\t'fact_Metrics'[FTE_WEIGHTED_WORK_DAY_FOR_ABSENTEEISM] + 'fact_Metrics'[Sick_Leave_Day_Without_Pregnancy]\n\t\t\t)\n\t\t),\n\t\tREMOVEFILTERS('fact_Metrics'),\n\t\t_filter_lt\n\t)\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\n\nRETURN COALESCE(_res, 0)",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -29,6 +35,9 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [
+    "GP.Рівень абсентеїзму (%)"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

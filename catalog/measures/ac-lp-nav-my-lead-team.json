@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "SWITCH(\n\tCALCULATE(\n\t\tSELECTEDVALUE('dim_Admin_OS'[path_length_rls]),\n\t\tTREATAS(VALUES('fact_Loss_of_Productivity'[USER_ACCESS_ID]), 'dim_Admin_OS'[USER_ACCESS_ID])\n\t)  <= \n    SWITCH(\n        SELECTEDVALUE('dim_Admin_OS'[USER_ROLE]),\n        \"Адміністративний керівник\", [User_Admin_Hierarchy_Level],\n        \"HRBP\", [User_HRBP_Hierarchy_Level]\n    ) + 2,\n\tTRUE(), 1,\n\t0\n)",
+  "reportPages": [],
   "dependencies": {
     "measures": [
       "User_Admin_Hierarchy_Level",
@@ -25,6 +26,7 @@
       "fact_Loss_of_Productivity"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List",

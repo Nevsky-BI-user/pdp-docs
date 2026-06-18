@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _v =\n\tCALCULATE(\n\t\tMAX(fact_TRS_Plan[INIT_PAYMENT_PLAN_SUM])\n\t\t// ,fact_TRS_Plan[IS_ACTUAL]=TRUE(),\n\t\t// ,fact_TRS_Plan[ACCRUAL_ORG_CODE]=\"00002\"\n\t\t// ,fact_TRS_Plan[END_DATE]>TODAY() || fact_TRS_Plan[END_DATE]=DATE(2001,1,1)\n\t)\nRETURN _v",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -21,6 +27,7 @@
       "fact_TRS_Plan"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_TRS_Plan_PDP"

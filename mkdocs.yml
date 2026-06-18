@@ -1,19 +1,52 @@
 site_name: People Digital Profile — документація моделі
+site_url: https://nevsky-bi-user.github.io/pdp-docs/
+site_description: Документація семантичної моделі Power BI People Digital Profile — метрики за сторінками звіту, бізнес-суть, залежності.
+repo_url: https://github.com/Nevsky-BI-user/pdp-docs
+repo_name: Nevsky-BI-user/pdp-docs
 theme:
   name: material
   language: uk
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Темна тема
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Світла тема
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
   features:
-    - navigation.indexes
+    - navigation.tabs
     - navigation.sections
+    - navigation.indexes
     - navigation.top
+    - navigation.tracking
+    - navigation.instant
+    - navigation.instant.progress
+    - toc.follow
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
+    - content.tooltips
+    - navigation.footer
 plugins:
   - search
 markdown_extensions:
   - admonition
   - attr_list
+  - md_in_html
   - tables
   - toc:
       permalink: true
@@ -23,3 +56,96 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+nav:
+  - Головна: index.md
+  - Звіт:
+      - Огляд звіту: report/index.md
+      - "Personal Profile": report/personal-profile.md
+      - "Group Profile": report/group-profile.md
+      - "Під ризиком мобілізації": report/pid-ryzykom-mobilizatsii.md
+      - "Утримання працівників": report/utrymannia-pratsivnykiv.md
+      - "Продуктивність працівників": report/produktyvnist-pratsivnykiv.md
+      - Тултіпи та підказки:
+          - "TT:Життєвий цикл": report/tt-zhyttievyi-tsykl.md
+          - "TT:Зміна фікс винагороди": report/tt-zmina-fiks-vynahorody.md
+          - "TT:Доплати за суміщення": report/tt-doplaty-za-sumishchennia.md
+          - "ТТ:\"Інші доплати\"": report/tt-inshi-doplaty.md
+          - "TT:Щомісячна премія": report/tt-shchomisiachna-premiia.md
+          - "ТТ:Квартальна премія": report/tt-kvartalna-premiia.md
+          - "ТТ:Річний бонус": report/tt-richnyi-bonus.md
+          - "Підсказка \"Макc винагорода (план)\"": report/pidskazka-makc-vynahoroda-plan.md
+          - "Підсказка \"Мін винагорода (план)\"": report/pidskazka-min-vynahoroda-plan.md
+          - "Підсказка \"Макс винагорода (факт)\"": report/pidskazka-maks-vynahoroda-fakt.md
+          - "Підсказка \"Мін винагорода (факт)\"": report/pidskazka-min-vynahoroda-fakt.md
+  - Каталог мір: measures/index.md
+  - Бізнес-сутності:
+      - Усі сутності: entities/index.md
+      - "CG_Event_Types": entities/cg-event-types.md
+      - "_Measures": entities/measures.md
+      - "dim_Admin_OS": entities/dim-admin-os.md
+      - "dim_Date": entities/dim-date.md
+      - "dim_Divisions_Hierarchy": entities/dim-divisions-hierarchy.md
+      - "dim_Employee_Special_FinBP": entities/dim-employee-special-finbp.md
+      - "dim_Employee_Special_HRBP": entities/dim-employee-special-hrbp.md
+      - "dim_Employee_Special_Head_admin": entities/dim-employee-special-head-admin.md
+      - "dim_Employee_Special_Head_functional": entities/dim-employee-special-head-functional.md
+      - "dim_Employee_Status": entities/dim-employee-status.md
+      - "dim_Employment_Type": entities/dim-employment-type.md
+      - "dim_LP_risks": entities/dim-lp-risks.md
+      - "dim_OKR_Evalution": entities/dim-okr-evalution.md
+      - "dim_Office": entities/dim-office.md
+      - "dim_Organization": entities/dim-organization.md
+      - "dim_Performance_Evalution": entities/dim-performance-evalution.md
+      - "dim_Permanent_Temporary": entities/dim-permanent-temporary.md
+      - "dim_Person": entities/dim-person.md
+      - "dim_Position": entities/dim-position.md
+      - "dim_Position_Category": entities/dim-position-category.md
+      - "dim_TRS_categories": entities/dim-trs-categories.md
+      - "dim_Unit": entities/dim-unit.md
+      - "dim_Work_Format": entities/dim-work-format.md
+      - "dim__HRBP_OS": entities/dim-hrbp-os.md
+      - "fact_Average_Income": entities/fact-average-income.md
+      - "fact_Burnout_Indicators": entities/fact-burnout-indicators.md
+      - "fact_EXCEL_Group_Profile_General_Metric": entities/fact-excel-group-profile-general-metric.md
+      - "fact_Employee_History_Position": entities/fact-employee-history-position.md
+      - "fact_Employee_List": entities/fact-employee-list.md
+      - "fact_Employee_OKR": entities/fact-employee-okr.md
+      - "fact_Employee_Performance": entities/fact-employee-performance.md
+      - "fact_Employee_Performance_Total": entities/fact-employee-performance-total.md
+      - "fact_Employees_Attributes": entities/fact-employees-attributes.md
+      - "fact_Gaussian_Curve_OKR": entities/fact-gaussian-curve-okr.md
+      - "fact_Gaussian_Curve_Performance": entities/fact-gaussian-curve-performance.md
+      - "fact_Loss_of_Productivity": entities/fact-loss-of-productivity.md
+      - "fact_Metrics": entities/fact-metrics.md
+      - "fact_Mobile_Limit": entities/fact-mobile-limit.md
+      - "fact_Monthly_Viva_Insights": entities/fact-monthly-viva-insights.md
+      - "fact_OKR_Goals": entities/fact-okr-goals.md
+      - "fact_OKR_Key_Results": entities/fact-okr-key-results.md
+      - "fact_OKR_SVG": entities/fact-okr-svg.md
+      - "fact_Repayment_Credit": entities/fact-repayment-credit.md
+      - "fact_Sick_Leaves": entities/fact-sick-leaves.md
+      - "fact_TRS": entities/fact-trs.md
+      - "fact_TRS_Plan": entities/fact-trs-plan.md
+      - "fact_TRS_plan_fact": entities/fact-trs-plan-fact.md
+      - "fact_Vacancy": entities/fact-vacancy.md
+      - "fact_Vacation": entities/fact-vacation.md
+      - "fact_Vacation_Reserve": entities/fact-vacation-reserve.md
+      - "fact_Viva_Metrics": entities/fact-viva-metrics.md
+      - "fact_employee_seniority_by_month": entities/fact-employee-seniority-by-month.md
+      - "p_AC.Loss_Productivity": entities/p-ac-loss-productivity.md
+      - "t_AC Burnout": entities/t-ac-burnout.md
+      - "t_FlagDim": entities/t-flagdim.md
+      - "t_HierarchyTypes": entities/t-hierarchytypes.md
+      - "t_IS_FIRED": entities/t-is-fired.md
+      - "t_Loss_Productivity_Metrics_by_Persona": entities/t-loss-productivity-metrics-by-persona.md
+      - "t_user_roles": entities/t-user-roles.md
+  - Модель даних: model.md
+  - Глосарій: glossary.md
+  - Якість і валідація: validation.md
+  - Журнал змін: changelog.md
+
+not_in_nav: |
+  measures/*.md

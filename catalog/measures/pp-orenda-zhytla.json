@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "CALCULATE(\n\tMAX(fact_TRS_Plan[INIT_PAYMENT_PLAN_SUM]),\n\tfact_TRS_Plan[IS_ACTUAL]=TRUE(),\n\tfact_TRS_Plan[ACCRUAL_ORG_CODE]=\"00144\"\n)",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -20,6 +26,7 @@
       "fact_TRS_Plan"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_TRS_Plan_PDP"

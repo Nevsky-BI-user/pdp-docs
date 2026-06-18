@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "CALCULATE(\n    MAX('fact_Employee_History_Position'[PERIOD]),\n    ALLSELECTED('dim_Date'[Date])\n)",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -20,6 +21,36 @@
       "fact_Employee_History_Position"
     ]
   },
+  "usedBy": [
+    "PP.Бал",
+    "PP.Бал OKR",
+    "PP.Бонуси Р/К/М",
+    "PP.Год. взаємодії",
+    "PP.Год. конфліктів",
+    "PP.Год. нарад",
+    "PP.Год. нероб.",
+    "PP.Довжина дня",
+    "PP.ЖЦ_Категорія посади",
+    "PP.ЖЦ_Напрям",
+    "PP.ЖЦ_Посада",
+    "PP.ЖЦ_Піднапрям",
+    "PP.ЖЦ_Підприємство",
+    "PP.Зірка МХП",
+    "PP.Кадровий підрозділ",
+    "PP.Категорія (Performance)",
+    "PP.Код посади",
+    "PP.Код підрозділу",
+    "PP.Колір (OKR)",
+    "PP.Колір (Performance)",
+    "PP.Оклад_detailed",
+    "PP.Приріст_РЦД_detailed",
+    "PP.РЦД_detailed",
+    "PP.Стаж в холдингу",
+    "PP.Стаж на посаді",
+    "PP.Суміщення",
+    "PP.Тип події",
+    "PP.Форма оплати"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_Employee_History_Position"

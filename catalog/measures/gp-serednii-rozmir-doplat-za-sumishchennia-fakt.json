@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),dim_Admin_OS[USER_ACCESS_ID] )\n\n/* *********** ADMIN *********** */\nVAR _admin = \nCALCULATE(\n    AVERAGE('fact_TRS'[PAYMENTS_FACT_UAH]),\n    'fact_TRS'[PAYMENTS_FACT_UAH] > 0,\n    'fact_TRS'[ACCRUAL_TYPES_KEY] IN { \"00b34057-6d79-2141-77d6-3f280e312196\", \"e48a6efe-4040-3d6c-4fab-7d9671f8a6c6\",  \"0b8a5246-2403-aea0-b64c-a76dfc32b115\", \"fbffac97-52df-2478-0a58-c4b4fe8f25a4\"},\n    'fact_TRS'[TAX_PIT_ID] = BLANK(),\n    DATESINPERIOD( 'fact_TRS'[PERIOD], EOMONTH( TODAY(), - 1 ), - 12, MONTH ))\n\n/* *********** LT *********** */\nVAR _admin_lt =\nCALCULATE(\n    AVERAGE('fact_TRS'[PAYMENTS_FACT_UAH]),\n    'fact_TRS'[PAYMENTS_FACT_UAH] > 0,\n    'fact_TRS'[ACCRUAL_TYPES_KEY] IN { \"00b34057-6d79-2141-77d6-3f280e312196\", \"e48a6efe-4040-3d6c-4fab-7d9671f8a6c6\",  \"0b8a5246-2403-aea0-b64c-a76dfc32b115\", \"fbffac97-52df-2478-0a58-c4b4fe8f25a4\"},\n    'fact_TRS'[TAX_PIT_ID] = BLANK(),\n    DATESINPERIOD( 'fact_TRS'[PERIOD], EOMONTH( TODAY(), - 1 ), - 12, MONTH ),\n    _filter_lt)\n\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\nRETURN \nCOALESCE(_res, \"-\")",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -26,6 +32,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List",

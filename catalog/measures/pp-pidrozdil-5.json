@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "COALESCE(\n\tSELECTEDVALUE('dim_Admin_OS'[SUBDIVISION_LVL_5]),\n\t\"-\"\n)",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +24,7 @@
       "dim_Admin_OS"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

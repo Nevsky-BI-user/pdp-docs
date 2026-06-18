@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _maxd = [PP.history_position_maxd]\nVAR _res = \n    CALCULATE(\n        SELECTEDVALUE(fact_Employee_History_Position[DIRECTION]),\n        'fact_Employee_History_Position'[PERIOD] = _maxd\n    )\nRETURN _res",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "PP.history_position_maxd"
@@ -21,6 +27,7 @@
       "fact_Employee_History_Position"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_Employee_History_Position"

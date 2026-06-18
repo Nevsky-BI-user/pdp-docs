@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "SWITCH(\n\tSELECTEDVALUE('t_IS_FIRED'[IS_FIRED]),\n\t0, \n\tCALCULATE(\n\t\tCOUNTROWS('fact_Burnout_Indicators'),\n\t\t'fact_Burnout_Indicators'[IS_FIRED] = FALSE()\n\t),\n\t1,\n\tCALCULATE(\n\t\tCOUNTROWS('fact_Burnout_Indicators'),\n\t\t'fact_Burnout_Indicators'[IS_FIRED] = TRUE()\n\t)\n)",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -20,6 +21,7 @@
       "t_IS_FIRED"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

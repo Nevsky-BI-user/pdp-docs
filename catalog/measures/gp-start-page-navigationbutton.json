@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _min = CALCULATE(MIN('dim_Admin_OS'[path_length]))\nVAR _max = CALCULATE(MAX('dim_Admin_OS'[path_length]))\nVAR _res = \n\tIF(\n\t\t_max - _min = 1,\n\t\t\"Group Profile\",\n\t\tIF(\n\t\t\t[Current_user] IN \n\t\t\t\t{\n\t\t\t\t\"yu.kosyuk@mhp.com.ua\",\n\t\t\t\t\"andriy.bulakh@mhp.com.ua\",\n\t\t\t\t\"a.h.bulakh@mhp.com.ua\",\n\t\t\t\t\"a.gromova@mhp.com.ua\",\n\t\t\t\t\"o.tsaltsalko@mhp.com.ua\",\n\t\t\t\t\"a.androsiuk@mhp.com.ua\",\n\t\t\t\t\"a.horbenko@mhp.com.ua\",\n\t\t\t\t\"o.sulima@mhp.com.ua\",\n\t\t\t\t\"v.alimov@mhp.com.ua\",\n\t\t\t\t\"v.korinevskyi@mhp.com.ua\",\n\t\t\t\t\"a.domanskyi@mhp.com.ua\"\n\t\t\t\t} ||   SELECTEDVALUE('dim_Admin_OS'[USER_ROLE]) = \"HRBP\",\n\t\t\t\"GP.NAV-0\",\n\t\t\tSWITCH(\n\t\t\t\t[Current_User_Admin_Hierarchy_Level],\n\t\t\t\t1, \"GP.NAV-1\",\n\t\t\t\t2, \"GP.NAV-1\",\n\t\t\t\t3, \"GP.NAV-1\",\n\t\t\t\t4, \"GP.NAV-1\",\n\t\t\t\t5, \"GP.NAV-1\",\n\t\t\t\t6, \"GP.NAV-1\",\n\t\t\t\t7, \"GP.NAV-1\",\n\t\t\t\t8, \"GP.NAV-1\"\n\t\t\t)\n\t\t)\n\t)\nRETURN _res",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "Current_User_Admin_Hierarchy_Level",
@@ -22,6 +28,7 @@
       "dim_Admin_OS"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

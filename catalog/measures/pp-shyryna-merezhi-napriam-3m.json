@@ -9,6 +9,16 @@
   "isHidden": false,
   "description": "",
   "dax": "// VAR __val =\n// CALCULATE(\n//     [PP.Ширина мережі (співробітник, 3м)],\n//     VALUES('dim_Unit'[DIRECTION]),\n//     REMOVEFILTERS('fact_Metrics')\n// )\n\nVAR direction = \nFIRSTNONBLANKVALUE(\n\t\tVALUES('dim_Admin_OS'[ORDER_NUM]),\n\t\tCALCULATE(SELECTEDVALUE('dim_Admin_OS'[DIRECTION])))\n\nVAR __val =\nCALCULATE(\n\t[PP.Ширина мережі (Холдинг, 3м)],\n\tdim_Unit[DIRECTION] = direction)\n\nRETURN __val",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    },
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "PP.Ширина мережі (Холдинг, 3м)",
@@ -24,6 +34,7 @@
       "dim_Unit"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List",

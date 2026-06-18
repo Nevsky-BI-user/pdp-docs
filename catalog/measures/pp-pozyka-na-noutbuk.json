@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "CALCULATE(\n\tLASTNONBLANKVALUE(\n\t\tVALUES('dim_Date'[Date]),\n\t\tCALCULATE(SUM('fact_Repayment_Credit'[LAND_SHARE_CONTRACT_SUM]))\n\t),\n\tfact_Repayment_Credit[BUDGET_ITEM_CODE]=\"0000008240\",\n\t'fact_Repayment_Credit'[IS_INCOMING] = TRUE()\n)",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -22,6 +28,7 @@
       "fact_Repayment_Credit"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_Repayment_Credit_PDP"

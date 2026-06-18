@@ -1,5 +1,25 @@
 # AC.Оцінка.Тренд Оцінки рез-ті (%)
 
+*тека `Analytical Cases\Loss_Productivity\Main`*
+
+## Бізнес-суть
+
+Trend_Rate_Pct → Тренд Оцінки рез-ті (%)
+
+**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовується в:** [AC.Switch.Тренд Оцінки рез-ті (%)](../measures/ac-switch-trend-otsinky-rez-ti.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +29,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 //НЕ видаляти пробіли для ✅
@@ -77,7 +97,7 @@ VAR _res =
 RETURN _res
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_fact_Loss_of_Productivity`
 
@@ -85,24 +105,18 @@ RETURN _res
 
 Power Query: `fact_Loss_of_Productivity`
 
-## Бізнес-суть
-
-Trend_Rate_Pct → Тренд Оцінки рез-ті (%)
-
-**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Loss_of_Productivity`
 
 Колонки: `fact_Loss_of_Productivity[Trend_Rate_Pct]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Оцінка.Тренд Оцінки рез-ті (%)"]
-  M --> fact_Loss_of_Productivity
+  M --> fact_Loss_of_Productivity["fact_Loss_of_Productivity"]
 ```
 
 ## Нотатки

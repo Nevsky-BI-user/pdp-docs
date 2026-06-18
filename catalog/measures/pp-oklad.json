@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "SUM(fact_Employee_History_Position[Salary])",
+  "reportPages": [
+    {
+      "display": "TT:Життєвий цикл",
+      "slug": "tt-zhyttievyi-tsykl"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +24,9 @@
       "fact_Employee_History_Position"
     ]
   },
+  "usedBy": [
+    "PP.Приріст окладу"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_Employee_History_Position"

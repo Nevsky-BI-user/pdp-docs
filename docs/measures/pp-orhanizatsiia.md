@@ -1,29 +1,6 @@
 # PP.Організація
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Personal_Profile\Загальна інформація` |
-| formatString | — |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-COALESCE(
-	SELECTEDVALUE('fact_Employee_List'[ORGANIZATION]),
-	"-"
-)
-```
-
-## Джерела
-
-
-Колонки: `ORGANIZATION`
-
-Power Query: `fact_Employee_List`
+*тека `Personal_Profile\Загальна інформація`*
 
 ## Бізнес-суть
 
@@ -33,18 +10,55 @@ organization_key=organization_id Поле зберігається в довід
 
 **Вимоги:** `Індивідуальний-профіль-працівника/Історія-по-посадам`, `Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам`, `Індивідуальний-профіль-працівника/Сторінка-Індивідуальний-профіль-працівника`, `Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника`, `Командний-профіль/Паспортна-частина-групового-профілю/Метрики-рекрутингу`
 
-## Залежності
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Personal_Profile\Загальна інформація` |
+| formatString | — |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+COALESCE(
+	SELECTEDVALUE('fact_Employee_List'[ORGANIZATION]),
+	"-"
+)
+```
+
+### Джерела даних
+
+
+Колонки: `ORGANIZATION`
+
+Power Query: `fact_Employee_List`
+
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Employee_List`
 
 Колонки: `fact_Employee_List[ORGANIZATION]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["PP.Організація"]
-  M --> fact_Employee_List
+  M --> fact_Employee_List["fact_Employee_List"]
 ```
 
 ## Нотатки

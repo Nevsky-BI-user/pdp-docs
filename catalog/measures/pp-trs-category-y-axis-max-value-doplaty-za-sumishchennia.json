@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "    MAXX(\n        VALUES('dim_TRS_categories'[TRS_CATEGORY]),\n        [PP.Доплати за суміщення]\n    ) * 1.3",
+  "reportPages": [
+    {
+      "display": "TT:Зміна фікс винагороди",
+      "slug": "tt-zmina-fiks-vynahorody"
+    }
+  ],
   "dependencies": {
     "measures": [
       "PP.Доплати за суміщення"
@@ -20,6 +26,7 @@
       "dim_TRS_categories"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_TRS_Plan_PDP"

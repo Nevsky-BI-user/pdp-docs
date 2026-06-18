@@ -1,5 +1,27 @@
 # GP.Середній вік
 
+*тека `Group_Profile\Загальна інформація` · формат `#,0.00;-#,0.00;0.00`*
+
+## Бізнес-суть
+
+age → Середній вік
+
+Розрахункове поле: Середній вік = (age1 +age2 + age3.... + agen )/С, де: - age1, age2,age3... agen - вік кожного працівника; - С - кількість працівників в команді
+
+**Вимоги:** `Командний-профіль/Сторінка-Загальна-інформація-про-команду`
+
+## На сторінках звіту
+
+[Group Profile](../report/group-profile.md)
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +31,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 //************* ROLE FILTERS **************
@@ -42,34 +64,26 @@ VAR _res =
 RETURN COALESCE(_res, "-")
 ```
 
-## Джерела
+### Джерела даних
 
 
 Колонки: `Index`, `PERSON_KEY`, `USER_ACCESS_ID`, `age`
 
 Power Query: `fact_Employee_List`
 
-## Бізнес-суть
-
-age → Середній вік
-
-Розрахункове поле: Середній вік = (age1 +age2 + age3.... + agen )/С, де: - age1, age2,age3... agen - вік кожного працівника; - С - кількість працівників в команді
-
-**Вимоги:** `Командний-профіль/Сторінка-Загальна-інформація-про-команду`
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Employee_List`, `t_HierarchyTypes`
 
 Колонки: `dim_Admin_LT_OS[USER_ACCESS_ID]`, `fact_Employee_List[PERSON_KEY]`, `fact_Employee_List[USER_ACCESS_ID]`, `fact_Employee_List[age]`, `t_HierarchyTypes[Index]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["GP.Середній вік"]
-  M --> fact_Employee_List
-  M --> t_HierarchyTypes
+  M --> fact_Employee_List["fact_Employee_List"]
+  M --> t_HierarchyTypes["t_HierarchyTypes"]
 ```
 
 ## Нотатки

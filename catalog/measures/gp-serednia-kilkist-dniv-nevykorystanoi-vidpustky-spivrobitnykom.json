@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "TRIM( \n\t\tCOALESCE( \n\t\t\tFORMAT( [AC.Середня кількість днів невикористаної відпустки], \"0.00\" ), \"-\"\n\t\t)\n\t)\n\n// VAR _admin =\n//     AVERAGEX( \n//         VALUES( dim_Admin_OS[USER_ACCESS_ID] ), \n//         CALCULATE( \n//             SUM('fact_Metrics'[VACATION_RESERVE_BY_MAIN_POSITION])\n//         )\n//     )\n// VAR _admin_lt =\n//     CALCULATE(\n//         AVERAGEX( \n//             VALUES( dim_Admin_OS[USER_ACCESS_ID] ), \n//             CALCULATE( \n//                 SUM('fact_Metrics'[VACATION_RESERVE_BY_MAIN_POSITION])\n//             )\n//         ),\n//         TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), fact_Employee_List[USER_ACCESS_ID])\n//     )\n// VAR _res = \n//     SWITCH(\n//         SELECTEDVALUE( t_HierarchyTypes[Index] ),\n//         0, _admin_lt,\n//         1, _admin\n//     )\n// RETURN\n//     TRIM( \n//         COALESCE( \n//             FORMAT( _res, \"0.00\" ), \"-\"\n//         )\n//     )",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "AC.Середня кількість днів невикористаної відпустки"
@@ -26,6 +32,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _res =\nDIVIDE(\n    [GP.Результативність.Оцінка OKR.Загальна кількість KR.CY], \n    [GP.Результативність.Оцінка OKR.Загальна кількість OKR.CY], BLANK())\n\nRETURN _res",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "GP.Результативність.Оцінка OKR.Загальна кількість KR.CY",
@@ -17,6 +23,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

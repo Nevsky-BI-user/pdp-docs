@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt= TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),'dim_Admin_OS'[USER_ACCESS_ID] )\n\n//***** HEALTH AND WELLBEING FILTERS ******* \nVAR _employee_list = VALUES('fact_Employee_List'[EMPLOYEE_ID])\nVAR _main_position_employees = \n\tCALCULATETABLE(\n\t\tVALUES('fact_Employee_List'[USER_ACCESS_ID]),\n\t\tREMOVEFILTERS('fact_Employee_List'), \n\t\t'fact_Employee_List'[EMPLOYEE_ID] IN _employee_list,\n\t\t'fact_Employee_List'[IS_MAIN_POSITION] = 1\n\t)\nVAR _filter0 = TREATAS(_main_position_employees, 'dim_Admin_OS'[USER_ACCESS_ID])\n\n/* *********** ADMIN *********** */\nVAR _admin = \n\tVAR _vac_reserve =\n\t\tCALCULATETABLE(\n\t\t\tADDCOLUMNS(\n\t\t\t\tVALUES(dim_Admin_OS[USER_ACCESS_ID]),\n\t\t\t\t\"@reserve\",\n\t\t\t\tCALCULATE(\n\t\t\t\t\tSUM('fact_Metrics'[NO_VACATION_DURATION_BY_MAIN_POSITION])\n\t\t\t\t)\n\t\t\t)--,\n\t\t\t--REMOVEFILTERS(fact_Vacation_Reserve),\n\t\t\t--_filter0\n\t\t)\n\tVAR _top1 =\n\t\tTOPN(\n\t\t\t1,\n\t\t\t_vac_reserve,\n\t\t\t[@reserve],\n\t\t\tDESC\n\t\t)\n\n\tVAR _topUser = \n\t\tLOOKUPVALUE(\n\t\t\t'dim_Admin_OS'[EMPLOYEE_NAME],\n\t\t\t'dim_Admin_OS'[USER_ACCESS_ID],\n\t\t\tMAXX(_top1, dim_Admin_OS[USER_ACCESS_ID])\n\t\t)\n\tVAR _topReserve = MAXX(_top1, [@reserve]) / 30\n\tRETURN FORMAT(_topReserve, \"0\") & \" - \" & _topUser\n\t\n/* *********** LT *********** */\nVAR _admin_lt =\n\tVAR _vac_reserve =\n\t\tCALCULATETABLE(\n\t\t\tADDCOLUMNS(\n\t\t\t\tVALUES(dim_Admin_OS[USER_ACCESS_ID]),\n\t\t\t\t\"@reserve\",\n\t\t\t\tCALCULATE(\n\t\t\t\t\tSUM('fact_Metrics'[NO_VACATION_DURATION_BY_MAIN_POSITION])\n\t\t\t\t)\n\t\t\t),\n\t\t\t--REMOVEFILTERS(fact_Vacation_Reserve),\n\t\t\t--_filter0,\n\t\t\t_filter_lt\n\t\t)\n\tVAR _top1 =\n\t\tTOPN(\n\t\t\t1,\n\t\t\t_vac_reserve,\n\t\t\t[@reserve],\n\t\t\tDESC\n\t\t)\n\n\tVAR _topUser = \n\t\tLOOKUPVALUE(\n\t\t\t'dim_Admin_OS'[EMPLOYEE_NAME],\n\t\t\t'dim_Admin_OS'[USER_ACCESS_ID],\n\t\t\tMAXX(_top1, dim_Admin_OS[USER_ACCESS_ID])\n\t\t)\n\tVAR _topReserve = MAXX(_top1, [@reserve]) / 30\n\tRETURN FORMAT(_topReserve, \"0\") & \" - \" & _topUser\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\n\nRETURN _res",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -28,6 +34,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

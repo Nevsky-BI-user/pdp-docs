@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _employee_id = SELECTEDVALUE('dim_Admin_OS'[EMPLOYEE_ID])\nVAR _reason =\n\tCALCULATE(\n\t\tSELECTEDVALUE('fact_Employee_List'[DEFERMENT_REASON]),\n\t\t'fact_Employee_List'[EMPLOYEE_ID] = _employee_id\n\t)\nVAR _atRisk =\n\tCALCULATE(\n\t\tSELECTEDVALUE('fact_Employee_List'[IS_AT_RISK]),\n\t\t'fact_Employee_List'[EMPLOYEE_ID] = _employee_id\n\t)\nRETURN\n\tSWITCH(\n\t\tTRUE(),\n\t\tNOT ISBLANK(_reason), _reason,\n\t\t_atRisk = 1, \"Під ризиком мобілізації\",\n\t\t\"Дані відсутні\"\n\t)",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -22,6 +28,7 @@
       "fact_Employee_List"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

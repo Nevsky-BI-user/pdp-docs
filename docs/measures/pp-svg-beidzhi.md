@@ -1,5 +1,24 @@
 # PP.SVG.Бейджі
 
+*тека `Personal_Profile\Паспорт\Бейджі`*
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+**Використовує:** [PP.Бейдж.Банк ідей](../measures/pp-beidzh-bank-idei.md), [PP.Бейдж.Зірка МХП](../measures/pp-beidzh-zirka-mkhp.md), [PP.Бейдж.Наставництво](../measures/pp-beidzh-nastavnytstvo.md), [PP.Бейдж.Тренерство](../measures/pp-beidzh-trenerstvo.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +28,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 VAR _fontFamily = "Segoe UI, sans-serif"
@@ -150,21 +169,15 @@ RETURN
     IF(_Count = 0, BLANK(), _SVG)
 ```
 
-## Джерела
+### Джерела даних
 
 —
 
-## Бізнес-суть
+### Залежності (таблиці й колонки)
 
-!!! warning "Без бізнес-визначення"
-    Поля міри не знайдено у wiki «Таблицях джерел даних». Заповніть `manualNotes`.
+—
 
-## Залежності
-
-Міри: [PP.Бейдж.Банк ідей](../measures/pp-beidzh-bank-idei.md), [PP.Бейдж.Зірка МХП](../measures/pp-beidzh-zirka-mkhp.md), [PP.Бейдж.Наставництво](../measures/pp-beidzh-nastavnytstvo.md), [PP.Бейдж.Тренерство](../measures/pp-beidzh-trenerstvo.md)
-
-
-## Схема
+### Схема
 
 ```mermaid
 graph LR

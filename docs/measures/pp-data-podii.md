@@ -1,28 +1,6 @@
 # PP.Дата події
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Personal_Profile\Життєвий цикл` |
-| formatString | — |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-VAR _maxd = MAX('fact_Employee_History_Position'[PERIOD])
-RETURN FORMAT(_maxd, "dd.mm.yyyy")
-```
-
-## Джерела
-
-Вихідні таблиці: `DM.vw_R27_fact_Employee_History_Position`
-
-Колонки: `PERIOD`
-
-Power Query: `fact_Employee_History_Position`
+*тека `Personal_Profile\Життєвий цикл`*
 
 ## Бізнес-суть
 
@@ -32,18 +10,54 @@ PERIOD → Дата нарахування премії Зірка МХП; PERIO
 
 **Вимоги:** `Індивідуальний-профіль-працівника/Історія-по-посадам`, `Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам`, `Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника/Деталізація-на-сторінці-Винагорода`, `Допоміжні-вітрини-для-звіту/Таблиця-(вью)-для-розрахунку-метрики-Укомплектованість-штату`, `Допоміжні-вітрини-для-звіту/Таблиця-періодична-(попередні-12-міс)-для-розрахунку-метрики-Середній-дохід`
 
-## Залежності
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Personal_Profile\Життєвий цикл` |
+| formatString | — |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+VAR _maxd = MAX('fact_Employee_History_Position'[PERIOD])
+RETURN FORMAT(_maxd, "dd.mm.yyyy")
+```
+
+### Джерела даних
+
+Вихідні таблиці: `DM.vw_R27_fact_Employee_History_Position`
+
+Колонки: `PERIOD`
+
+Power Query: `fact_Employee_History_Position`
+
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Employee_History_Position`
 
 Колонки: `fact_Employee_History_Position[PERIOD]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["PP.Дата події"]
-  M --> fact_Employee_History_Position
+  M --> fact_Employee_History_Position["fact_Employee_History_Position"]
 ```
 
 ## Нотатки

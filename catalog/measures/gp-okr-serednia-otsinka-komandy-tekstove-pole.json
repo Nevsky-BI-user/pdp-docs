@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _rate_value = [GP.ОКР.Середня оцінка команди.Значення]\n\nVAR _color = [GP.ОКР.Середня оцінка команди.Колір]\nRETURN \n    IF(\n        ISBLANK(_rate_value),\n        \"Дані відсутні\",\n         _color & \", \" & TRIM(_rate_value)\n    )",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "GP.ОКР.Середня оцінка команди.Значення",
@@ -17,6 +23,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _v = [PP.Годин загальної взаємодії (співробітник)]\nRETURN\n\tIF(ISBLANK(_v), \"Дані відсутні\", FORMAT(_v, \"0.0\") & \" год\")",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "PP.Годин загальної взаємодії (співробітник)"
@@ -16,6 +22,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

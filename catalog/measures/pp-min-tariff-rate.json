@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "SUM('fact_Employee_List'[MIN_TARIFF_RATE])",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,7 @@
       "fact_Employee_List"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

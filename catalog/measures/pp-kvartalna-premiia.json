@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "CALCULATE(\n\tSUMX(\n\t\t'fact_Employee_List',\n\t\t'fact_Employee_List'[MIN_TARIFF_RATE] * 'fact_Employee_List'[BONUS_QUARTER_SALARY_CNT]\n\t)\n)\n\n// CALCULATE(\n//     SUMX(\n//         'fact_TRS_Plan',\n//         fact_TRS_Plan[MIN_TARIFF_RATE] * 'fact_TRS_Plan'[BONUS_QUARTER_SALARY_CNT]\n//     ),\n//     fact_TRS_Plan[IS_ACTUAL]=TRUE(),\n//     fact_TRS_Plan[CALC_TYPE_CODE]=\"UAH\",\n//     fact_TRS_Plan[category_name]=\"Фіксована винагорода\"\n// )",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -25,6 +31,7 @@
       "fact_TRS_Plan"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_TRS_Plan_PDP"

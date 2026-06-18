@@ -1,5 +1,25 @@
 # AC.Оцінка.1:1 в сер. на 1 підлеглого, год.
 
+*тека `Analytical Cases\Loss_Productivity\Main`*
+
+## Бізнес-суть
+
+Manager_Coaching_per_One_Employee → 1:1 в сер. на 1 підлеглого, год.
+
+**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовується в:** [AC.Switch.1:1 в сер. на 1 підлеглого, год.](../measures/ac-switch-1-1-v-ser-na-1-pidlehloho-hod.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +29,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 //НЕ видаляти пробіли для ✅
@@ -24,7 +44,7 @@ VAR _res =
 RETURN COALESCE( _res, "-" )
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_fact_Loss_of_Productivity`
 
@@ -32,24 +52,18 @@ RETURN COALESCE( _res, "-" )
 
 Power Query: `fact_Loss_of_Productivity`
 
-## Бізнес-суть
-
-Manager_Coaching_per_One_Employee → 1:1 в сер. на 1 підлеглого, год.
-
-**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Loss_of_Productivity`
 
 Колонки: `fact_Loss_of_Productivity[Manager_Coaching_per_One_Employee]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Оцінка.1:1 в сер. на 1 підлеглого, год."]
-  M --> fact_Loss_of_Productivity
+  M --> fact_Loss_of_Productivity["fact_Loss_of_Productivity"]
 ```
 
 ## Нотатки

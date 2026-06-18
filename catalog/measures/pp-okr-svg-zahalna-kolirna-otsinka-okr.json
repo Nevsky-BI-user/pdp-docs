@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _fontFamily = \"Segoe UI\"\nVAR _MaxValue = 100\n\nVAR _Value = [PP.OKR.Current_user.Загальна  оцінка OKR]\nVAR _CatName = [PP.OKR.Current_user.Загальна колірна оцінка OKR]\n\nVAR _ColorFill = SWITCH(_CatName,\n    \"Супер зелений\", \"#009051\",\n    \"Зелений\", \"#02BD3D\",\n    \"Жовто-зелений\", \"#C2E330\",\n    \"Жовтий\", \"#FFE521\",\n    \"Жовто-червоний\", \"#FF7E0D\",\n    \"Червоний\", \"#F23711\",\n    \"#CDE58E\"\n)\n\nVAR _ColorText = SWITCH(_CatName,\n    \"Супер зелений\", \"#005C33\",\n    \"Зелений\", \"#017A27\",\n    \"Жовто-зелений\", \"#5C6B00\",\n    \"Жовтий\", \"#7A6D00\",\n    \"Жовто-червоний\", \"#994B00\",\n    \"Червоний\", \"#991500\",\n    \"#5C5C5C\"\n)\n\nVAR _W = 300\nVAR _BarMaxW = 150\nVAR _H = 14\nVAR _RX = _H / 2\nVAR _BarW = MIN(DIVIDE(_Value, _MaxValue, 0), 1) * _BarMaxW\n\nVAR _BgBar = \"<rect x='0' y='0' width='\" & _BarMaxW & \"' height='\" & _H & \"' rx='\" & _RX & \"' ry='\" & _RX & \"' fill='\" & _ColorFill & \"' fill-opacity='0.15' />\"\nVAR _FillBar = \"<rect x='0' y='0' width='\" & FORMAT(_BarW, \"0.0\") & \"' height='\" & _H & \"' rx='\" & _RX & \"' ry='\" & _RX & \"' fill='\" & _ColorFill & \"' />\"\nVAR _Label = \"<text x='\" & (_BarMaxW + 6) & \"' y='\" & (_H / 2 + 4) & \"' style='font-family:\" & _fontFamily & \"; font-size:11px; fill:\" & _ColorText & \";'>\" & _CatName & \"</text>\"\n\nVAR _SVG = \n    \"<svg xmlns='http://www.w3.org/2000/svg' width='\" & _W & \"' height='\" & _H & \"' viewBox='0 0 \" & _W & \" \" & _H & \"'>\" &\n        _BgBar & _FillBar & _Label &\n    \"</svg>\"\n\nRETURN\nIF(\n    ISBLANK(_Value),\n    BLANK(),\n    \"data:image/svg+xml;utf8,\" & _SVG\n)",
+  "reportPages": [],
   "dependencies": {
     "measures": [
       "PP.OKR.Current_user.Загальна  оцінка OKR",
@@ -17,6 +18,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

@@ -1,27 +1,6 @@
 # GP.Рік оцінки результативності.Prev
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Group_Profile\_Main\SVG` |
-| formatString | — |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-"Оцінка результативності " &
-AVERAGE('fact_Burnout_Indicators'[PREV_YEAR_PERFORMANCE])
-```
-
-## Джерела
-
-
-Колонки: `PREV_YEAR_PERFORMANCE`
-
-Power Query: `fact_Burnout_Indicators`
+*тека `Group_Profile\_Main\SVG`*
 
 ## Бізнес-суть
 
@@ -31,18 +10,53 @@ PREV_YEAR_PERFORMANCE → Значення передостаннього  ро
 
 **Вимоги:** `Індивідуальний-профіль-працівника/Паспортна-частина-індивідуального-профілю-співробітника/Сторінка-Картка-(паспорт)-працівника/Додати-інформацію-про-оцінку-результативності-працівника-в-Картку-працівника`, `Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22`, `Командний-профіль/Паспортна-частина-групового-профілю/Додати-інформацію-про-ОКР-команди-та-середню-оцінку-результативності-по-команді`
 
-## Залежності
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Group_Profile\_Main\SVG` |
+| formatString | — |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+"Оцінка результативності " &
+AVERAGE('fact_Burnout_Indicators'[PREV_YEAR_PERFORMANCE])
+```
+
+### Джерела даних
+
+
+Колонки: `PREV_YEAR_PERFORMANCE`
+
+Power Query: `fact_Burnout_Indicators`
+
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Burnout_Indicators`
 
 Колонки: `fact_Burnout_Indicators[PREV_YEAR_PERFORMANCE]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["GP.Рік оцінки результативності.Prev"]
-  M --> fact_Burnout_Indicators
+  M --> fact_Burnout_Indicators["fact_Burnout_Indicators"]
 ```
 
 ## Нотатки

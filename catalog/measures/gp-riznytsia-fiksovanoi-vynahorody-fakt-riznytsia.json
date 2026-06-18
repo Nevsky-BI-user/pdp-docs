@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "[GP.Різниця фіксованої винагороди (факт).Максимальний рівень] - [GP.Різниця фіксованої винагороди (факт).Мінімальний рівень]",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "GP.Різниця фіксованої винагороди (факт).Максимальний рівень",
@@ -17,6 +23,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

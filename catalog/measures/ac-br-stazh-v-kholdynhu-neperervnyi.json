@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _user = VALUES('fact_Burnout_Indicators'[USER_ACCESS_ID])\nVAR _seniority = \n\tCALCULATE(\n\t\tSELECTEDVALUE(fact_employee_seniority_by_month[seniority_LAST_HOLDING_HIRE_DATE]),\n\t\tTREATAS(_user, 'fact_employee_seniority_by_month'[USER_ACCESS_ID])\n\t)\nVAR _years = ROUNDDOWN(_seniority/12,0)\nVAR _month = _seniority - _years *12\nVAR _res = \n\tIF(\n\t\tNOT ISBLANK( _seniority ),\n\t\tIF(\n\t\t\tNOT ISBLANK( _years ),\n\t\t\t_years & \" р.\"\n\t\t) & \" \" &\n\t\tIF(\n\t\t\tNOT ISBLANK( _month ) && _month <> 0,\n\t\t\t_month & \" міс.\"\n\t\t)\n\t)\nRETURN _res",
+  "reportPages": [
+    {
+      "display": "Утримання працівників",
+      "slug": "utrymannia-pratsivnykiv"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -21,6 +27,7 @@
       "fact_employee_seniority_by_month"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_employee_seniority_by_month_PDP"

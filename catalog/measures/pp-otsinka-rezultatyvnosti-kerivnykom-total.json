@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "CALCULATE(AVERAGE('fact_Employee_Performance_Total'[General_Performance_Desc_Rate]))",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,10 @@
       "fact_Employee_Performance_Total"
     ]
   },
+  "usedBy": [
+    "PP.SVG.Оцінка результативності.Total",
+    "PP.Оцінка результативності.Дані відсутні"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_Employee_Performance_General_PBI"

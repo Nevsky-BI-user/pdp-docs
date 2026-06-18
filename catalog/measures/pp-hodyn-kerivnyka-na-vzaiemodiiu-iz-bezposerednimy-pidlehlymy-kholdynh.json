@@ -9,6 +9,16 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR __val =\nDIVIDE(\n\tSUM( 'fact_Viva_Metrics'[MANAGER_COACHING_ONE_TO_ONE_HOUR] ),\n\tCALCULATE(\n\t\tCOUNTROWS('fact_Viva_Metrics'),\n\t\tNOT(ISBLANK('fact_Viva_Metrics'[MANAGER_COACHING_ONE_TO_ONE_HOUR]))))\n\nRETURN __val",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    },
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +28,11 @@
       "fact_Viva_Metrics"
     ]
   },
+  "usedBy": [
+    "PP.Годин керівника на взаємодію із безпосередніми підлеглими (кадровий підрозділ)",
+    "PP.Годин керівника на взаємодію із безпосередніми підлеглими (напрям)",
+    "PP.Годин керівника на взаємодію із безпосередніми підлеглими (співробітник)"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

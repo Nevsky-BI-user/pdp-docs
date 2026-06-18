@@ -1,5 +1,25 @@
 # PP.OKR.Current_user.Статус плану
 
+*тека `Personal_Profile\Результативність та оцінка\OKR`*
+
+## Бізнес-суть
+
+PLAN_STATUS → Статус плану ОКР
+
+**Вимоги:** `Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка`, `Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Створити-блок-Виконання-OKR`
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовується в:** [PP.SVG.OKR.Загальна оцінка](../measures/pp-svg-okr-zahalna-otsinka.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +29,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 VAR _employee_id = SELECTEDVALUE('dim_Admin_OS'[EMPLOYEE_ID])
@@ -28,7 +48,7 @@ VAR _res =
 RETURN _res
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.R27_fact_OKR_Goals`, `DM.vw_R27_dim_Employee_Access_List`
 
@@ -36,25 +56,19 @@ RETURN _res
 
 Power Query: `dim_Admin_OS`
 
-## Бізнес-суть
-
-PLAN_STATUS → Статус плану ОКР
-
-**Вимоги:** `Індивідуальний-профіль-працівника/Сторінка-Результативність-та-оцінка`, `Командний-профіль/Сторінка-Результативність-та-оцінка-команди/Створити-блок-Виконання-OKR`
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `dim_Admin_OS`, `fact_OKR_Goals`
 
 Колонки: `dim_Admin_OS[EMPLOYEE_ID]`, `fact_OKR_Goals[EMPLOYEE_ID]`, `fact_OKR_Goals[PLAN_STATUS]`, `fact_OKR_Goals[USER_ACCESS_ID]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["PP.OKR.Current_user.Статус плану"]
-  M --> dim_Admin_OS
-  M --> fact_OKR_Goals
+  M --> dim_Admin_OS["dim_Admin_OS"]
+  M --> fact_OKR_Goals["fact_OKR_Goals"]
 ```
 
 ## Нотатки

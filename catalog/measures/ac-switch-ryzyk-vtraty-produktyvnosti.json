@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "SWITCH(\n\tSELECTEDVALUE('t_AC Burnout'[Burnout_Indicator]),\n\t\"Оцінка\", [AC.Оцінка.Ризик втрати продуктивності],\n\t\"Дані\", [AC.Дані.Ризик втрати продуктивності]\n)",
+  "reportPages": [
+    {
+      "display": "Продуктивність працівників",
+      "slug": "produktyvnist-pratsivnykiv"
+    }
+  ],
   "dependencies": {
     "measures": [
       "AC.Дані.Ризик втрати продуктивності",
@@ -21,6 +27,7 @@
       "t_AC Burnout"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

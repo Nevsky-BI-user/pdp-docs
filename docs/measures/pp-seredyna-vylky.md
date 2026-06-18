@@ -1,26 +1,6 @@
 # PP.Середина вилки
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Personal_Profile\TRS` |
-| formatString | `#,0` |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-MAX(fact_Employee_List[avg_tariff_rate])
-```
-
-## Джерела
-
-
-Колонки: `avg_tariff_rate`
-
-Power Query: `fact_Employee_List`
+*тека `Personal_Profile\TRS` · формат `#,0`*
 
 ## Бізнес-суть
 
@@ -30,18 +10,52 @@ avg_tariff_rate → Середина вилки
 
 **Вимоги:** `Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника`
 
-## Залежності
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Personal_Profile\TRS` |
+| formatString | `#,0` |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+MAX(fact_Employee_List[avg_tariff_rate])
+```
+
+### Джерела даних
+
+
+Колонки: `avg_tariff_rate`
+
+Power Query: `fact_Employee_List`
+
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Employee_List`
 
 Колонки: `fact_Employee_List[avg_tariff_rate]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["PP.Середина вилки"]
-  M --> fact_Employee_List
+  M --> fact_Employee_List["fact_Employee_List"]
 ```
 
 ## Нотатки

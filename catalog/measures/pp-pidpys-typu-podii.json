@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _maxd = \n    CALCULATE(\n        MAX('fact_Employee_History_Position'[PERIOD]),\n        ALLSELECTED('dim_Date')\n    )\nVAR _mind = \n    CALCULATE(\n        MIN('fact_Employee_History_Position'[PERIOD]),\n        ALLSELECTED('dim_Date')\n    )\nVAR _result = \n    SWITCH(\n        TRUE(),\n        SELECTEDVALUE('fact_Employee_History_Position'[PERIOD]) = _maxd, \"Кінцева точка\",\n        SELECTEDVALUE('fact_Employee_History_Position'[PERIOD]) = _mind, \"Стартова точка\",\n        SELECTEDVALUE('fact_Employee_History_Position'[EVENT_LIST])\n    )\nRETURN SELECTEDVALUE('fact_Employee_History_Position'[EVENT_LIST])",
+  "reportPages": [
+    {
+      "display": "TT:Життєвий цикл",
+      "slug": "tt-zhyttievyi-tsykl"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -19,6 +25,7 @@
       "fact_Employee_History_Position"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_Employee_History_Position"

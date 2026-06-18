@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "SWITCH(\n\tSELECTEDVALUE('t_AC Burnout'[Burnout_Indicator]),\n\t\"Оцінка\", [AC.Чи є ризик вигорання по результатам оцінки OKR?],\n\t\"Дані\", [AC.Тренд оцінки OKR]\n)",
+  "reportPages": [
+    {
+      "display": "Утримання працівників",
+      "slug": "utrymannia-pratsivnykiv"
+    }
+  ],
   "dependencies": {
     "measures": [
       "AC.Тренд оцінки OKR",
@@ -21,6 +27,7 @@
       "t_AC Burnout"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

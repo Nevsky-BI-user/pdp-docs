@@ -9,11 +9,15 @@
   "isHidden": false,
   "description": "",
   "dax": "\"В розробці\"",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [],
     "tables": []
   },
+  "usedBy": [
+    "PP.SVG.Бейджі"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

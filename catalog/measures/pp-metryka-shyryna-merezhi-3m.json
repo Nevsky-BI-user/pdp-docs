@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _v = [PP.Ширина мережі (співробітник, 3м)]\nRETURN\n\tIF(ISBLANK(_v), \"Дані відсутні\", FORMAT(_v, \"0\"))",
+  "reportPages": [],
   "dependencies": {
     "measures": [
       "PP.Ширина мережі (співробітник, 3м)"
@@ -16,6 +17,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),'fact_Employee_List'[USER_ACCESS_ID] )\n\n/* *********** ADMIN *********** */\nVAR _admin =\n\tAVERAGEX(\n\t\tVALUES('fact_Employee_List'[PERSON_KEY]),\n\t\tCALCULATE(AVERAGE('fact_Employee_List'[age]))\n\t)\n\n/* *********** LT *********** */\nVAR _admin_lt =\nCALCULATE(\n\tAVERAGEX(\n\t\tVALUES('fact_Employee_List'[PERSON_KEY]),\n\t\tCALCULATE(AVERAGE('fact_Employee_List'[age]))\n\t),\n\t_filter_lt\n)\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\nRETURN COALESCE(_res, \"-\")",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -23,6 +29,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

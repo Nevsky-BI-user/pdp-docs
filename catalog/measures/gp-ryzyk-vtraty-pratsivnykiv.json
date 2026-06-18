@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "//************* ROLE FILTERS **************\nVAR _filter_lt = TREATAS(VALUES(dim_Admin_LT_OS[USER_ACCESS_ID]), 'dim_Admin_OS'[USER_ACCESS_ID])\n\n/* *********** ADMIN *********** */\nVAR _count_risked_employee = \nCALCULATE(\n\tCOUNTA('fact_Burnout_Indicators'[USER_ACCESS_ID]),\n\t'fact_Burnout_Indicators'[IS_FIRED] = FALSE(),\n\t'fact_Burnout_Indicators'[IS_TOTAL_RISK] = \"Потребує уваги\")\n\nVAR _count_all_employee = \nCALCULATE(\n\tCOUNTA('fact_Burnout_Indicators'[USER_ACCESS_ID]),\n\tFILTER(\n\t\t'fact_Burnout_Indicators',\n\t\t'fact_Burnout_Indicators'[IS_FIRED] = FALSE()))\n\nVAR _admin =\nCALCULATE(\n\tDIVIDE(\n\t\t_count_risked_employee,\n\t\t_count_all_employee, BLANK()))\n\n/* *********** ADMIN LT *********** */\nVAR _count_risked_employee_lt = \nCALCULATE(\n\tCOUNTA('fact_Burnout_Indicators'[USER_ACCESS_ID]),\n\t'fact_Burnout_Indicators'[IS_FIRED] = FALSE(),\n\t'fact_Burnout_Indicators'[IS_TOTAL_RISK] = \"Потребує уваги\",\n\t_filter_lt)\n\nVAR _count_all_employee_lt = \nCALCULATE(\n\tCOUNTA('fact_Burnout_Indicators'[USER_ACCESS_ID]),\n\t'fact_Burnout_Indicators'[IS_FIRED] = FALSE(),\n\t_filter_lt)\n\nVAR _admin_lt =\nCALCULATE(\n\tDIVIDE(\n\t\t_count_risked_employee_lt,\n\t\t_count_all_employee_lt, BLANK()))\n\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE( t_HierarchyTypes[Index] ),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\n\n/* *********** RESULT *********** */\nRETURN \nTRIM(\n\tFORMAT(\n\t\tCOALESCE(_res, 0),\n\t\t\"0.00%\"\n\t) \n)",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -24,6 +30,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

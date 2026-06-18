@@ -1,5 +1,25 @@
 # AC.Дані.Тренд Оцінки рез-ті (%)
 
+*тека `Analytical Cases\Loss_Productivity\Main`*
+
+## Бізнес-суть
+
+Performance_Rate_Trend → Тренд Оцінки рез-ті (%); Performance_Rate_Trend → Тренд оцінки результативності
+
+**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`, `Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22`
+
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовується в:** [AC.Switch.Тренд Оцінки рез-ті (%)](../measures/ac-switch-trend-otsinky-rez-ti.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +29,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 VAR _v= SELECTEDVALUE('fact_Loss_of_Productivity'[Performance_Rate_Trend])
@@ -102,7 +122,7 @@ VAR _res =
 RETURN _res
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_fact_Loss_of_Productivity`
 
@@ -110,24 +130,18 @@ RETURN _res
 
 Power Query: `fact_Loss_of_Productivity`
 
-## Бізнес-суть
-
-Performance_Rate_Trend → Тренд Оцінки рез-ті (%); Performance_Rate_Trend → Тренд оцінки результативності
-
-**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`, `Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22`
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Loss_of_Productivity`
 
 Колонки: `fact_Loss_of_Productivity[Performance_Rate_Trend]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Дані.Тренд Оцінки рез-ті (%)"]
-  M --> fact_Loss_of_Productivity
+  M --> fact_Loss_of_Productivity["fact_Loss_of_Productivity"]
 ```
 
 ## Нотатки

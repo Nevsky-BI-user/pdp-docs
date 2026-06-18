@@ -1,5 +1,25 @@
 # PP.Колір шапки тултіпу
 
+*тека `Personal_Profile\Життєвий цикл`*
+
+## Бізнес-суть
+
+IS_APRIL_SALARY_REVIEW → Квітневий перегляд заробітної плати; IS_TECH_POSITION_CHANGE → Технічна зміна посади; IS_TECH_SALARY_TRANSFER → Технічний перелив (з/п)
+
+**Вимоги:** `Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам`
+
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md) · [TT:Життєвий цикл](../report/tt-zhyttievyi-tsykl.md)
+
+## Пов'язані міри
+
+**Використовує:** [PP.РЦД](../measures/pp-rtsd.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +29,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 VAR _first_date = 
@@ -32,7 +52,7 @@ VAR _result =
 RETURN _result
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_fact_Employee_History_Position`
 
@@ -40,27 +60,19 @@ RETURN _result
 
 Power Query: `dim_Date`
 
-## Бізнес-суть
-
-IS_APRIL_SALARY_REVIEW → Квітневий перегляд заробітної плати; IS_TECH_POSITION_CHANGE → Технічна зміна посади; IS_TECH_SALARY_TRANSFER → Технічний перелив (з/п)
-
-**Вимоги:** `Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам`
-
-## Залежності
-
-Міри: [PP.РЦД](../measures/pp-rtsd.md)
+### Залежності (таблиці й колонки)
 
 Таблиці: `dim_Date`, `fact_Employee_History_Position`
 
 Колонки: `dim_Date[Date]`, `fact_Employee_History_Position[IS_APRIL_SALARY_REVIEW]`, `fact_Employee_History_Position[IS_TECH_POSITION_CHANGE]`, `fact_Employee_History_Position[IS_TECH_SALARY_TRANSFER]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["PP.Колір шапки тултіпу"]
-  M --> dim_Date
-  M --> fact_Employee_History_Position
+  M --> dim_Date["dim_Date"]
+  M --> fact_Employee_History_Position["fact_Employee_History_Position"]
 ```
 
 ## Нотатки

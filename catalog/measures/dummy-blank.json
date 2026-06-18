@@ -9,11 +9,34 @@
   "isHidden": false,
   "description": "",
   "dax": "\"\"",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    },
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    },
+    {
+      "display": "Під ризиком мобілізації",
+      "slug": "pid-ryzykom-mobilizatsii"
+    },
+    {
+      "display": "Утримання працівників",
+      "slug": "utrymannia-pratsivnykiv"
+    },
+    {
+      "display": "Продуктивність працівників",
+      "slug": "produktyvnist-pratsivnykiv"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

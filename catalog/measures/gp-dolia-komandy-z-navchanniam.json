@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "\"В розробці\"\n////************* ROLE FILTERS **************\n//VAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\n//VAR _filter_lt_plan_trs = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),'fact_TRS_Plan'[USER_ACCESS_ID] )\n//\n///* *********** ADMIN *********** */\n//VAR _admin =\n//    VAR _Employees =\n//        SUMMARIZE ( ALLSELECTED ( 'dim_Admin_OS'[USER_ACCESS_ID] ),\n//                    'dim_Admin_OS'[USER_ACCESS_ID] )\n//    VAR _table0 = \n//        ADDCOLUMNS(\n//            _Employees,\n//            \"@Indicator\",\n//            CALCULATE(\n//                MAX(fact_TRS_Plan[PAYMENT_PLAN_SUM]),\n//                fact_TRS_Plan[IS_ACTUAL]=TRUE(),\n//                fact_TRS_Plan[ACCRUAL_ORG_CODE]=\"00148\",\n//                fact_TRS_Plan[END_DATE]>TODAY() || fact_TRS_Plan[END_DATE]=DATE(2001,1,1)\n//            )\n//        )\n//    VAR _ShareOfSomeIndicator = \n//        VAR _Nominator = \n//        COUNTROWS(\n//            FILTER(\n//                _table0, \n//                NOT ISBLANK([@Indicator]) && [@Indicator] > 0\n//            )\n//        )\n//        VAR _Denominator = COUNTROWS(_table0)\n//        RETURN DIVIDE(_Nominator, _Denominator)\n//    RETURN _ShareOfSomeIndicator\n//\n///* *********** LT *********** */\n//VAR _admin_lt =\n//    VAR _Employees =\n//        SUMMARIZE ( ALLSELECTED ( 'dim_Admin_OS'[USER_ACCESS_ID] ),\n//                    'dim_Admin_OS'[USER_ACCESS_ID] )\n//    VAR _table0 = \n//        ADDCOLUMNS(\n//            _Employees,\n//            \"@Indicator\",\n//            CALCULATE(\n//                MAX(fact_TRS_Plan[PAYMENT_PLAN_SUM]),\n//                fact_TRS_Plan[IS_ACTUAL]=TRUE(),\n//                fact_TRS_Plan[ACCRUAL_ORG_CODE]=\"00148\",\n//                fact_TRS_Plan[END_DATE]>TODAY() || fact_TRS_Plan[END_DATE]=DATE(2001,1,1),\n//                _filter_lt_plan_trs\n//            )\n//        )\n//    VAR _ShareOfSomeIndicator = \n//        VAR _Nominator = \n//        COUNTROWS(\n//            FILTER(\n//                _table0, \n//                NOT ISBLANK([@Indicator]) && [@Indicator] > 0\n//            )\n//        )\n//        VAR _Denominator = COUNTROWS(_table0)\n//        RETURN DIVIDE(_Nominator, _Denominator)\n//    RETURN _ShareOfSomeIndicator\n//\n//VAR _res =\n//    SWITCH (\n//        _roleIndex,\n//        0, _admin_lt,    -- LT\n//        1, _admin,       -- Admin\n//        _admin\n//    )\n//RETURN _res",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -27,6 +33,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List",

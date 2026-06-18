@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _res = SUM('fact_Burnout_Indicators'[MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR])\nRETURN _res",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,10 @@
       "fact_Burnout_Indicators"
     ]
   },
+  "usedBy": [
+    "AC.Switch.Годин 1:1 в сер. за 3 міс.",
+    "AC.Switch.Годин 1:1 в сер. за 3 міс2"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

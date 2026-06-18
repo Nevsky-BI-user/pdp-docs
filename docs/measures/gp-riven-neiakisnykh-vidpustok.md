@@ -1,26 +1,6 @@
 # GP.Рівень неякісних відпусток (%)
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Group_Profile\_Main\Ризики та фокуси уваги` |
-| formatString | — |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-VAR _res = 1 - [AC.Доля співробітників з відпустками понад 10 днів]
-
-RETURN 
-TRIM(COALESCE(FORMAT(_res, "##%"), 0))
-```
-
-## Джерела
-
-—
+*тека `Group_Profile\_Main\Ризики та фокуси уваги`*
 
 ## Бізнес-суть
 
@@ -30,12 +10,45 @@ TRIM(COALESCE(FORMAT(_res, "##%"), 0))
 
 **Вимоги:** `Командний-профіль/Паспортна-частина-групового-профілю/Редизайн-паспортної-частини-групового-профілю`
 
-## Залежності
+## На сторінках звіту
 
-Міри: [AC.Доля співробітників з відпустками понад 10 днів](../measures/ac-dolia-spivrobitnykiv-z-vidpustkamy-ponad-10-dniv.md)
+[Group Profile](../report/group-profile.md)
 
+## Пов'язані міри
 
-## Схема
+**Використовує:** [AC.Доля співробітників з відпустками понад 10 днів](../measures/ac-dolia-spivrobitnykiv-z-vidpustkamy-ponad-10-dniv.md)
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Group_Profile\_Main\Ризики та фокуси уваги` |
+| formatString | — |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+VAR _res = 1 - [AC.Доля співробітників з відпустками понад 10 днів]
+
+RETURN 
+TRIM(COALESCE(FORMAT(_res, "##%"), 0))
+```
+
+### Джерела даних
+
+—
+
+### Залежності (таблиці й колонки)
+
+—
+
+### Схема
 
 ```mermaid
 graph LR

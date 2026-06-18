@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _res = [GP.ОКР.Кількість співробітників (Останній період оцінки)]\n\nRETURN \n    --\"К-ть співробітників, що оцінюються - \" & \n    TRIM(_res)",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "GP.ОКР.Кількість співробітників (Останній період оцінки)"
@@ -16,6 +22,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

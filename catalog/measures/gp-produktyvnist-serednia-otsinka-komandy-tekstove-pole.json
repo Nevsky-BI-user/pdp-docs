@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _res = [GP.Продуктивність.Середня оцінка команди.Значення]\nVAR _color = [GP.Продуктивність.Середня оцінка команди.Категорія]\nRETURN \n    --\"Оцінка керівника - \" &\n    IF(\n        ISBLANK(_res),\n        \"Дані відсутні\",\n         _color & \", \" & TRIM(_res)\n    )",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "GP.Продуктивність.Середня оцінка команди.Значення",
@@ -17,6 +23,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

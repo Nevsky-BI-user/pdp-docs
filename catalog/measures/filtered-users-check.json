@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _users_list =\n\tSUMMARIZE(\n\t\t'dim_Admin_OS',\n\t\t'dim_Admin_OS'[FULL_NAME],\n\t\t'dim_Admin_OS'[ORDER_NUM_2]\n\t)\nVAR _res =\n\tCONCATENATEX (\n\t\t_users_list,\n\t\t'dim_Admin_OS'[FULL_NAME],\n\t\t\", \" & UNICHAR(10),\n\t\t'dim_Admin_OS'[ORDER_NUM_2],\n\t\tASC\n\t)\nRETURN\n\t_res",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -19,6 +20,7 @@
       "dim_Admin_OS"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

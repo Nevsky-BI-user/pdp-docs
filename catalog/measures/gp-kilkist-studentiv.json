@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "\"В розробці\"\n// VAR _set =\n//  CALCULATE(\n//     COUNTROWS(VALUES('fact_Employee_List'[person_key])),\n//     KEEPFILTERS('fact_Employee_List'[STATUS_KEY] = 11)\n// )",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -19,6 +25,7 @@
       "fact_Employee_List"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

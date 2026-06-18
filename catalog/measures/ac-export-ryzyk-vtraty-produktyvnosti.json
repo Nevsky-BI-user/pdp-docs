@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "SELECTEDVALUE('fact_Loss_of_Productivity'[Total_Risk_Productive_Name])",
+  "reportPages": [
+    {
+      "display": "Продуктивність працівників",
+      "slug": "produktyvnist-pratsivnykiv"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +24,7 @@
       "fact_Loss_of_Productivity"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_Loss_of_Productivity"

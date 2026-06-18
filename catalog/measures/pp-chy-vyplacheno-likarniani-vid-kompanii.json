@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _HasData =\n\tCOALESCE([PP.Лікарняні], 0) > 0        -- числова версія, BLANK коли даних нема\nVAR _Paid =\n\tCALCULATE(\n\t\tCOUNTROWS(\n\t\t\tFILTER('fact_Metrics', 'fact_Metrics'[IS_SICK_LEAVE_PAID] = TRUE())\n\t\t)\n\t) \nRETURN\nSWITCH(\n\tTRUE(),\n\t_Paid = 0, \"-\",\n\t_Paid >0 , \"Так\",\n\t\"Ні\"\n)",
+  "reportPages": [],
   "dependencies": {
     "measures": [
       "PP.Лікарняні"
@@ -20,6 +21,7 @@
       "fact_Metrics"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

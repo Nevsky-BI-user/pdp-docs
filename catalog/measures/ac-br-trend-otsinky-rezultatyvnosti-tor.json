@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "SELECTEDVALUE('fact_Burnout_Indicators'[PERFORMANCE_RATE_TREND])",
+  "reportPages": [
+    {
+      "display": "Утримання працівників",
+      "slug": "utrymannia-pratsivnykiv"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +24,7 @@
       "fact_Burnout_Indicators"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

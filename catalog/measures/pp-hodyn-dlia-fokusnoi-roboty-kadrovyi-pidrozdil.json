@@ -9,6 +9,16 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR department = \nFIRSTNONBLANKVALUE(\n\t\tVALUES('dim_Admin_OS'[ORDER_NUM]),\n\t\tCALCULATE(SELECTEDVALUE('dim_Admin_OS'[PERSONNEL_UNIT])))\n\nVAR __val =\nCALCULATE(\n\t[PP.Годин для фокусної роботи (Холдинг)],\n\tdim_Unit[PERSONNEL_UNIT] = department)\n\nRETURN __val",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    },
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "PP.Годин для фокусної роботи (Холдинг)"
@@ -23,6 +33,7 @@
       "dim_Unit"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List",

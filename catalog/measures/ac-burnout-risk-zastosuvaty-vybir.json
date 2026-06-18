@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _v = \nSWITCH(\n\tSELECTEDVALUE('t_IS_FIRED'[IS_FIRED]),\n\t1,\n\tCALCULATE(\n\t\tCOUNTROWS(\n\t\t\tVALUES('fact_Burnout_Indicators'[USER_ACCESS_ID])\n\t\t),\n\t\t'fact_Burnout_Indicators'[IS_FIRED] = TRUE()\n\t),\n\t0,\n\tSWITCH(\n\t\tSELECTEDVALUE('t_HierarchyTypes'[HierarchyType]),\n\t\t\"Hierarchy\",\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(VALUES('fact_Burnout_Indicators'[USER_ACCESS_ID])),\n\t\t\t'fact_Burnout_Indicators'[IS_FIRED] = FALSE()\n\t\t),\n\t\t\"Lead Team\",\n\t\tCALCULATE(\n\t\t\tCOUNTROWS(VALUES('fact_Burnout_Indicators'[USER_ACCESS_ID])),\n\t\t\t'fact_Burnout_Indicators'[IS_FIRED] = FALSE(),\n\t\t\tTREATAS(VALUES(dim_Admin_LT_OS[USER_ACCESS_ID]), 'fact_Burnout_Indicators'[USER_ACCESS_ID])\n\t\t)\n\t)\n)\nRETURN \n\t\"Застосувати вибір (\"& \n\t\tCOALESCE(\n\t\t\tTRIM(\n\t\t\t\tFORMAT(\n\t\t\t\t\tCOALESCE(_v, 0),\n\t\t\t\t\t\"[uk-UA]# ##0\"\n\t\t\t\t)\n\t\t\t),\n\t\t\t0\n\t\t) \n\t& \")\"",
+  "reportPages": [
+    {
+      "display": "Утримання працівників",
+      "slug": "utrymannia-pratsivnykiv"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -23,6 +29,7 @@
       "t_IS_FIRED"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

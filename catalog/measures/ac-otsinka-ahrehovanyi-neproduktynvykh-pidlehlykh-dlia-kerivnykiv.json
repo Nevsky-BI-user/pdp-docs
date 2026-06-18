@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "//НЕ видаляти пробіли для ✅\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE('fact_Loss_of_Productivity'[Unproductive_Subordinate_Pct]),\n\t\t0, \" ✅ \",\n\t\t0.5, \" ⚠️ \",\n\t\t1, \"❌\",\n\t\t\"━\"\n\t)\nRETURN COALESCE( _res, \"-\" )",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,9 @@
       "fact_Loss_of_Productivity"
     ]
   },
+  "usedBy": [
+    "AC.Switch.Агрегований % непродуктинвих підлеглих для керівників"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_Loss_of_Productivity"

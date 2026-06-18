@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _rate_value = [GP.Продуктивність.Оцінка керівника.Значення]\nVAR _category = \n    SWITCH(\n        TRUE(),\n        _rate_value > 4.3, \"Категорія ТОР А\",\n        _rate_value > 3.90, \"Категорія А\",\n        _rate_value > 3.4, \"Категорія B\",\n        _rate_value > 3.0, \"Категорія C\",\n        _rate_value > 0, \"Категорія D\"\n    )\n\nRETURN _category",
+  "reportPages": [],
   "dependencies": {
     "measures": [
       "GP.Продуктивність.Оцінка керівника.Значення"
@@ -16,6 +17,10 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [
+    "GP.Продуктивність.Color.Оцінка керівника.Текстове поле",
+    "GP.Продуктивність.Оцінка керівника.Текстове поле"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

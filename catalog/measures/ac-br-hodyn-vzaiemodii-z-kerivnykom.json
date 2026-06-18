@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "SUM('fact_Burnout_Indicators'[MEETING_WITH_MANAGER_ONE_TO_ONE_HOUR])",
+  "reportPages": [
+    {
+      "display": "Утримання працівників",
+      "slug": "utrymannia-pratsivnykiv"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +24,9 @@
       "fact_Burnout_Indicators"
     ]
   },
+  "usedBy": [
+    "AC.BR.Референтне значення.Взаємодія з керівником"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

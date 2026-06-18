@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\n\nVAR _filter_admin = VALUES('dim_Admin_OS'[EMPLOYEE_ID])\nVAR _filter_lt = \nCALCULATETABLE(\n    VALUES('dim_Admin_OS'[EMPLOYEE_ID]), \n    TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), 'dim_Admin_OS'[USER_ACCESS_ID]))\n\nVAR _admin = \nCALCULATE(\n    COUNTA('fact_OKR_Goals'[OKR_OBJECTIVE_ID]),\n    TREATAS(_filter_admin, 'fact_OKR_Goals'[EMPLOYEE_ID]),\n    SELECTEDVALUE('fact_OKR_Goals'[PLAN_YEAR]) - 1 = 'fact_OKR_Goals'[PLAN_YEAR])\n\nVAR _admin_lt = \nCALCULATE(\n    COUNTA('fact_OKR_Goals'[OKR_OBJECTIVE_ID]),\n    TREATAS(_filter_lt, 'fact_OKR_Goals'[EMPLOYEE_ID]),\n    SELECTEDVALUE('fact_OKR_Goals'[PLAN_YEAR]) - 1 = 'fact_OKR_Goals'[PLAN_YEAR])\n\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\n\nRETURN _res",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -25,6 +31,10 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [
+    "GP.Результативність.Оцінка OKR.Середня кількість KR.PY",
+    "GP.Результативність.Оцінка OKR.Середня кількість OKR.PY"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.R27_fact_OKR_Goals",

@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "//************* ROLE FILTERS **************\nVAR _filter_lt = TREATAS(VALUES(dim_Admin_LT_OS[USER_ACCESS_ID]), 'dim_Admin_OS'[USER_ACCESS_ID])\n\n/* *********** ADMIN *********** */\nVAR _admin =\n\tCALCULATE(\n\t\tAVERAGEX(\n\t\t\tVALUES('dim_Admin_OS'[USER_ACCESS_ID]),\n\t\t\tDIVIDE(\n\t\t\t\tCALCULATE(\n\t\t\t\t\tSUM('fact_TRS'[PAYMENTS_FACT_UAH])\n\t\t\t\t),\n\t\t\t\tCALCULATE(\n\t\t\t\t\tSUMX(\n\t\t\t\t\t\t'fact_Metrics',\n\t\t\t\t\t\t'fact_Metrics'[FTE_WEIGHTED_WORK_DAY_FOR_ABSENTEEISM] / 'fact_Metrics'[FTE_WEIGHTED_WORK_DAYS_PER_MONTH_YEAR_CNT]\n\t\t\t\t\t)\n\t\t\t\t)\n\t\t\t)\n\t\t),\n\t\t'fact_trs'[Tax_Pit_ID] <> \"be804a94-651b-a8c1-c2aa-8a8740b17002\",\n\t\tDATESINPERIOD('dim_Date'[Date],EOMONTH(TODAY(),-1),-12,MONTH)\n\t) / 12\nVAR _admin_lt =\n\tCALCULATE(\n\t\tAVERAGEX(\n\t\t\tVALUES('dim_Admin_OS'[USER_ACCESS_ID]),\n\t\t\tDIVIDE(\n\t\t\t\tCALCULATE(\n\t\t\t\t\tSUM('fact_TRS'[PAYMENTS_FACT_UAH])\n\t\t\t\t),\n\t\t\t\tCALCULATE(\n\t\t\t\t\tSUMX(\n\t\t\t\t\t\t'fact_Metrics',\n\t\t\t\t\t\t'fact_Metrics'[FTE_WEIGHTED_WORK_DAY_FOR_ABSENTEEISM] / 'fact_Metrics'[FTE_WEIGHTED_WORK_DAYS_PER_MONTH_YEAR_CNT]\n\t\t\t\t\t)\n\t\t\t\t)\n\t\t\t)\n\t\t),\n\t\t'fact_trs'[Tax_Pit_ID] <> \"be804a94-651b-a8c1-c2aa-8a8740b17002\",\n\t\tDATESINPERIOD('dim_Date'[Date],EOMONTH(TODAY(),-1),-12,MONTH),\n\t\t_filter_lt\n\t) / 12\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE( t_HierarchyTypes[Index] ),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\nRETURN\n\tTRIM( \n\t\tCOALESCE( \n\t\t\tSUBSTITUTE(FORMAT( _res, \"#,0.00\" ), \",\", \" \"), \"-\"\n\t\t)\n\t)",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -28,6 +34,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List",

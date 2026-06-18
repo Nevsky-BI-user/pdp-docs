@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _current_direction = \n\tFIRSTNONBLANKVALUE(\n\t\t'dim_Admin_OS'[ORDER_NUM_2],\n\t\tMIN('dim_Admin_OS'[DIRECTION])\n\t)\n\nVAR _current_sub_direction = \n\tFIRSTNONBLANKVALUE(\n\t\t'dim_Admin_OS'[ORDER_NUM_2],\n\t\tMIN('dim_Admin_OS'[SUB_DIRECTION])\n\t)\n\nVAR _current_email = \n\tFIRSTNONBLANKVALUE(\n\t\t'dim_Admin_OS'[ORDER_NUM_2],\n\t\tMIN('dim_Admin_OS'[EMPLOYEE_EMAIL])\n\t)\nVAR _current_user = USERPRINCIPALNAME()\n\nVAR _direction_res = \nCALCULATE(\n\tSUM('fact_EXCEL_Group_Profile_General_Metric'[Value_Knowledge]),\n\tFILTER(\n\t\t'fact_EXCEL_Group_Profile_General_Metric',\n\t\t'fact_EXCEL_Group_Profile_General_Metric'[Record_Type] = \"DIRECTION\"\n\t\t&&'fact_EXCEL_Group_Profile_General_Metric'[Direction_Name] = _current_direction))\n\nVAR _sub_direction_res = \nCALCULATE(\n\tSUM('fact_EXCEL_Group_Profile_General_Metric'[Value_Knowledge]),\n\tFILTER(\n\t\t'fact_EXCEL_Group_Profile_General_Metric',\n\t\tfact_EXCEL_Group_Profile_General_Metric[Record_Type] = \"SUBDIRECTION\"\n\t\t&& 'fact_EXCEL_Group_Profile_General_Metric'[Direction_Name] = _current_sub_direction))\n\nVAR top_employee_list = \nSELECTCOLUMNS(\n\tFILTER(\n\tALL('dim_Admin_OS'), \n\t'dim_Admin_OS'[POSITION_CATEGORY_DETAIL] = \"Топ-менеджмент\" \n\t|| 'dim_Admin_OS'[EMPLOYEE_EMAIL] in \n        {\n            \"yu.kosyuk@mhp.com.ua\",\n            \"andriy.bulakh@mhp.com.ua\",\n            \"a.h.bulakh@mhp.com.ua\",\n            \"a.gromova@mhp.com.ua\",\n            \"o.tsaltsalko@mhp.com.ua\",\n            \"a.androsiuk@mhp.com.ua\",\n            \"a.horbenko@mhp.com.ua\",\n            \"o.sulima@mhp.com.ua\",\n            \"v.alimov@mhp.com.ua\",\n            \"v.korinevskyi@mhp.com.ua\",\n            \"a.domanskyi@mhp.com.ua\",\n            \"d.konogray@mhp.com.ua\",\n            \"r.zvonenko@mhp.com.ua\",\n            \"s.p.nikolaiev@mhp.com.ua\",\n            \"a.evshel@mhp.com.ua\",\n            \"t.sakhno@mhp.com.ua\",\n            \"i.zakharchuk@mhp.com.ua\",\n            \"yu.polovyna@mhp.com.ua\",\n            \"o.neskromnyy@mhp.com.ua\",\n            \"n.heizburh@mhp.com.ua\",\n            \"ole.va.moroz@mhp.com.ua\",\n            \"i.savinska@mhp.com.ua\",\n            \"v.malakhova@mhp.com.ua\",\n            \"a.kiriiak@mhp.com.ua\",\n            \"t.hrytseniuk@mhp.com.ua\",\n            \"s.perepichka@mhp.com.ua\",\n            \"o.pasko@mhp.com.ua\",\n            \"m.vyshnevetskyi@mhp.com.ua\",\n            \"ka.m.shevchenko@mhp.com.ua\",\n            \"i.tverdokhlib@mhp.com.ua\",\n            \"d.i.mazurenko@mhp.com.ua\",\n            \"d.bohdanova@mhp.com.ua\",\n            \"v.o.gusak@mhp.com.ua\",\n            \"v.vorontsov@mhp.com.ua\",\n            \"srv_powerbi_ebitda@mhp.com.ua\",\n            \"o.tsaltsalko0@mhpo365.onmicrosoft.com\"\n        }),\n\t\"EmailColumn\", 'dim_Admin_OS'[EMPLOYEE_EMAIL])\n\nVAR _res =\nIF(_current_user in top_employee_list, _direction_res)\n\nRETURN\nIF(\n\tISBLANK(_res),\n\t\"-\", \n\tTRIM(_res) & \"%\"\n)",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -26,6 +32,7 @@
       "fact_EXCEL_Group_Profile_General_Metric"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List",

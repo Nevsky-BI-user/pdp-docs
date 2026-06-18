@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "[GP.Доля чоловіків під ризиком мобілізації(%)]",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "GP.Доля чоловіків під ризиком мобілізації(%)"
@@ -16,6 +22,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

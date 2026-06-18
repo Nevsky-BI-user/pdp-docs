@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "IF(\n\tISBLANK(COUNTROWS('fact_Employee_List')),\n\t\"ПОПЕРЕДЖЕННЯ! Застосовано некоректні відбори. Будь ласка, скиньте фільтр в рядку пошуку\",\n\tIF(\n\t\tHASONEVALUE('dim_Person'[FULL_NAME]),\n\t\t\"Перейти до персонального профілю \"&SELECTEDVALUE('dim_Person'[FULL_NAME]),\n\t\t\"Для переходу в персональний профіль, оберіть працівника зі списку\"\n\t)\n)",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,7 @@
       "dim_Person"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Person_PDP"

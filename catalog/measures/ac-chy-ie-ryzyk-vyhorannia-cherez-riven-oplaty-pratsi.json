@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "//НЕ видаляти пробіли для ✅\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE('fact_Burnout_Indicators'[IS_SALARY_RISK]),\n\t\t\"Ризик\", \"❌\",\n\t\t\"Відсутній\", \" ✅ \",\n\t\t\"━\"\n\t)\nRETURN COALESCE( _res, \"-\" )",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,9 @@
       "fact_Burnout_Indicators"
     ]
   },
+  "usedBy": [
+    "AC.Switch.Зарплата (вилки)"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _maxd = MAX('fact_Employee_History_Position'[PERIOD])\nRETURN FORMAT(_maxd, \"dd.mm.yyyy\")",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +24,7 @@
       "fact_Employee_History_Position"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_Employee_History_Position"

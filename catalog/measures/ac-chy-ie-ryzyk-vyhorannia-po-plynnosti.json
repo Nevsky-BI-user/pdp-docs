@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "//НЕ видаляти пробіли для ✅\nVAR _res = \n\nSWITCH(\n\tSELECTEDVALUE('fact_Burnout_Indicators'[IS_TURNOVER_RISK]),\n\t\"Ризик\", \"❌\",\n\t\"Відсутній\", \" ✅ \",\n\t\"━\"\n)\nRETURN COALESCE( _res, \"-\" )",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,9 @@
       "fact_Burnout_Indicators"
     ]
   },
+  "usedBy": [
+    "AC.Switch.Плинність (%)"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

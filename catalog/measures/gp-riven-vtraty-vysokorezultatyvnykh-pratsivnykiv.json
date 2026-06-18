@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _current_direction = \n\tFIRSTNONBLANKVALUE(\n\t\t'dim_Admin_OS'[ORDER_NUM_2],\n\t\tMIN('dim_Admin_OS'[DIRECTION])\n\t)\n\nVAR _current_sub_direction = \n\tFIRSTNONBLANKVALUE(\n\t\t'dim_Admin_OS'[ORDER_NUM_2],\n\t\tMIN('dim_Admin_OS'[SUB_DIRECTION])\n\t)\n\nVAR _current_email = \n\tFIRSTNONBLANKVALUE(\n\t\t'dim_Admin_OS'[ORDER_NUM_2],\n\t\tMIN('dim_Admin_OS'[EMPLOYEE_EMAIL])\n\t)\n\nVAR _direction_res = \nCALCULATE(\n\tSUM('fact_EXCEL_Group_Profile_General_Metric'[Regretted_Attrition_Rate]),\n\tFILTER(\n\t\t'fact_EXCEL_Group_Profile_General_Metric',\n\t\t'fact_EXCEL_Group_Profile_General_Metric'[Record_Type] = \"DIRECTION\"\n\t\t&&'fact_EXCEL_Group_Profile_General_Metric'[Direction_Name] = _current_direction))\n\nVAR _sub_direction_res = \nCALCULATE(\n\tSUM('fact_EXCEL_Group_Profile_General_Metric'[Regretted_Attrition_Rate]),\n\tFILTER(\n\t\t'fact_EXCEL_Group_Profile_General_Metric',\n\t\tfact_EXCEL_Group_Profile_General_Metric[Record_Type] = \"SUBDIRECTION\"\n\t\t&& 'fact_EXCEL_Group_Profile_General_Metric'[Direction_Name] = _current_sub_direction))\n\nVAR top_employee_list = \nSELECTCOLUMNS(\n\tFILTER(\n\t'dim_Admin_OS', \n\t'dim_Admin_OS'[POSITION_CATEGORY_DETAIL] = \"Топ-менеджмент\" \n\t|| 'dim_Admin_OS'[EMPLOYEE_EMAIL] in \n\t\t{\"d.konogray@mhp.com.ua\",\n\t\t\"r.zvonenko@mhp.com.ua\",\n\t\t\"s.p.nikolaiev@mhp.com.ua\",\n\t\t\"a.evshel@mhp.com.ua\",\n\t\t\"t.sakhno@mhp.com.ua\",\n\t\t\"i.zakharchuk@mhp.com.ua\",\n\t\t\"yu.polovyna@mhp.com.ua\",\n\t\t\"a.gromova@mhp.com.ua\"}),\n\t\"EmailColumn\", 'dim_Admin_OS'[EMPLOYEE_EMAIL])\n\nVAR _res =\nIF(_current_email in top_employee_list, _direction_res, _sub_direction_res)\n\nRETURN \nIF(\n    ISBLANK(_res),\n    \"-\", \n    COALESCE(TRIM(_res), 0) & \"%\"\n) ",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -26,6 +32,7 @@
       "fact_EXCEL_Group_Profile_General_Metric"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List",

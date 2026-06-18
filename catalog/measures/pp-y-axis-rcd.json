@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "MAXX(\n    VALUES('dim_Date'[Date]),\n    [PP.РЦД]\n) * 1.3",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "PP.РЦД"
@@ -20,6 +26,7 @@
       "dim_Date"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

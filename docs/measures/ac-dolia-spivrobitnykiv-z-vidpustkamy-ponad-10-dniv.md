@@ -1,5 +1,27 @@
 # AC.Доля співробітників з відпустками понад 10 днів
 
+*тека `Group_Profile\Здоров'я та благополуччя`*
+
+## Бізнес-суть
+
+IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position
+
+1 - Так  <br>0 - Ні
+
+**Вимоги:** `Індивідуальний-профіль-працівника/Історія-по-посадам`, `Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам`, `Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Сторінка-Ефективність-працівника/Вітрина-Відвідування-офісів`, `Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника`, `Командний-профіль/Сторінка-Плинність-та-Exits/ТЗ-на-вітрину-Exits`
+
+## На сторінках звіту
+
+[Group Profile](../report/group-profile.md)
+
+## Пов'язані міри
+
+**Використовується в:** [GP.Рівень неякісних відпусток (%)](../measures/gp-riven-neiakisnykh-vidpustok.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +31,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 //************* ROLE FILTERS **************
@@ -90,7 +112,7 @@ VAR _res =
 RETURN COALESCE(_res, 0)
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_dim_Employee_Access_List`
 
@@ -98,29 +120,21 @@ RETURN COALESCE(_res, 0)
 
 Power Query: `dim_Admin_OS`
 
-## Бізнес-суть
-
-IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position
-
-1 - Так  <br>0 - Ні
-
-**Вимоги:** `Індивідуальний-профіль-працівника/Історія-по-посадам`, `Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам`, `Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Сторінка-Ефективність-працівника/Вітрина-Відвідування-офісів`, `Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника`, `Командний-профіль/Сторінка-Плинність-та-Exits/ТЗ-на-вітрину-Exits`
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `dim_Admin_OS`, `fact_Employee_List`, `fact_Metrics`, `t_HierarchyTypes`
 
 Колонки: `dim_Admin_LT_OS[USER_ACCESS_ID]`, `dim_Admin_OS[USER_ACCESS_ID]`, `fact_Employee_List[EMPLOYEE_ID]`, `fact_Employee_List[IS_MAIN_POSITION]`, `fact_Employee_List[USER_ACCESS_ID]`, `fact_Metrics[LONG_VACATION_TOTAL_DAY_BY_MAIN_POSITION]`, `t_HierarchyTypes[Index]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Доля співробітників з відпустками понад 10 днів"]
-  M --> dim_Admin_OS
-  M --> fact_Employee_List
-  M --> fact_Metrics
-  M --> t_HierarchyTypes
+  M --> dim_Admin_OS["dim_Admin_OS"]
+  M --> fact_Employee_List["fact_Employee_List"]
+  M --> fact_Metrics["fact_Metrics"]
+  M --> t_HierarchyTypes["t_HierarchyTypes"]
 ```
 
 ## Нотатки

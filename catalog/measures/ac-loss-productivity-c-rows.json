@@ -9,11 +9,13 @@
   "isHidden": false,
   "description": "",
   "dax": "COUNTROWS('fact_Loss_of_Productivity')",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "COALESCE(\n\t\tSWITCH(\n\t\t\tSELECTEDVALUE('fact_Employee_List'[IS_VETERAN]),\n\t\t\t0, \"Ні\",\n\t\t\t1, \"Так\"\n\t\t),\n\t\"-\"\n)",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +24,7 @@
       "fact_Employee_List"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

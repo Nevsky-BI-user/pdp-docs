@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),dim_Admin_OS[USER_ACCESS_ID] )\n\n/* *********** ADMIN *********** */\nVAR _admin = \nDIVIDE(\n    CALCULATE(\n        DISTINCTCOUNT('fact_TRS'[USER_ACCESS_ID]),\n        'fact_TRS'[PAYMENTS_FACT_UAH] > 0,\n        'fact_TRS'[TRS_CATEGORY] = \"Змінна винагорода\",\n        'fact_TRS'[SUBCATEGORY_OF_ACCRUAL_TYPE] = \"Квартальні премії\",\n        DATESINPERIOD( 'fact_TRS'[PERIOD], EOMONTH( TODAY(), - 1 ), - 12, MONTH )),\n    [GP.Кількість співробітників всього, чол. - Integer])\n\n/* *********** LT *********** */\nVAR _admin_lt =\nDIVIDE(\n    CALCULATE(\n        DISTINCTCOUNT('fact_TRS'[USER_ACCESS_ID]),\n        'fact_TRS'[PAYMENTS_FACT_UAH] > 0,\n        'fact_TRS'[TRS_CATEGORY] = \"Змінна винагорода\",\n        'fact_TRS'[SUBCATEGORY_OF_ACCRUAL_TYPE] = \"Квартальні премії\",\n        DATESINPERIOD( 'fact_TRS'[PERIOD], EOMONTH( TODAY(), - 1 ), - 12, MONTH ),\n        _filter_lt),\n    [GP.Кількість співробітників всього, чол. - Integer])\n\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\nRETURN \nCOALESCE(_res, \"-\")",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "GP.Кількість співробітників всього, чол. - Integer"
@@ -29,6 +35,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List",

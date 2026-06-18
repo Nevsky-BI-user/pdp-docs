@@ -1,27 +1,6 @@
 # AC.Export.1:1 в сер. на 1 підлеглого, год.
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Analytical Cases\Loss_Productivity\Export` |
-| formatString | — |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-SELECTEDVALUE('fact_Loss_of_Productivity'[MANAGER_COACHING_ONE_TO_ONE_HOUR])
-```
-
-## Джерела
-
-Вихідні таблиці: `DM.vw_R27_fact_Loss_of_Productivity`
-
-Колонки: `MANAGER_COACHING_ONE_TO_ONE_HOUR`
-
-Power Query: `fact_Loss_of_Productivity`
+*тека `Analytical Cases\Loss_Productivity\Export`*
 
 ## Бізнес-суть
 
@@ -31,18 +10,53 @@ MANAGER_COACHING_ONE_TO_ONE_HOUR → 1:1 в сер. на 1 підлеглого,
 
 **Вимоги:** `Індивідуальний-профіль-працівника/Історія-по-посадам`, `Індивідуальний-профіль-працівника/Історія-по-посадам/Реліз-1.-Історія-по-посадам`, `Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника`, `Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Сторінка-Ефективність-працівника`, `Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Таблиця-vw_R27_calc_Viva_Direction_PDP`, `Індивідуальний-профіль-працівника/Сторінка-Взаємодія-Viva-та-залученість-працівника/Таблиця-vw_R27_calc_Viva_Holding_PDP`, `Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту`, `Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту/Зміна-алгоритму-розрахунку-метрик-по-Viva-з-урахуванням-дати-завантаження-даних-до-DWH`, `Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту/Змінити-період-розрахунку-середніх-значень-по-Віва`, `Кейс-Втрати-Продуктивності-Працівників`, `Кейс-Втрати-Продуктивності-Працівників/Деталізація-метрик-в-кейсі-Продуктивність`, `Командний-профіль/Сторінка-Взаємодія-Viva-та-залученість-команд`, `Командний-профіль/Сторінка-Ефективність`
 
-## Залежності
+## На сторінках звіту
+
+[Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Analytical Cases\Loss_Productivity\Export` |
+| formatString | — |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+SELECTEDVALUE('fact_Loss_of_Productivity'[MANAGER_COACHING_ONE_TO_ONE_HOUR])
+```
+
+### Джерела даних
+
+Вихідні таблиці: `DM.vw_R27_fact_Loss_of_Productivity`
+
+Колонки: `MANAGER_COACHING_ONE_TO_ONE_HOUR`
+
+Power Query: `fact_Loss_of_Productivity`
+
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Loss_of_Productivity`
 
 Колонки: `fact_Loss_of_Productivity[MANAGER_COACHING_ONE_TO_ONE_HOUR]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Export.1:1 в сер. на 1 підлеглого, год."]
-  M --> fact_Loss_of_Productivity
+  M --> fact_Loss_of_Productivity["fact_Loss_of_Productivity"]
 ```
 
 ## Нотатки

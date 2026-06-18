@@ -1,5 +1,24 @@
 # GP.NavigationButton2
 
+*тека `Navigation\Group`*
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Group Profile](../report/group-profile.md) · [Утримання працівників](../report/utrymannia-pratsivnykiv.md) · [Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
+
+## Пов'язані міри
+
+**Використовує:** [Current_User_Admin_Hierarchy_Level](../measures/current-user-admin-hierarchy-level.md), [Current_user](../measures/current-user.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +28,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 IF(
@@ -42,7 +61,7 @@ IF(
 )
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_dim_Employee_Access_List`
 
@@ -50,25 +69,18 @@ IF(
 
 Power Query: `dim_Admin_OS`
 
-## Бізнес-суть
-
-!!! warning "Без бізнес-визначення"
-    Поля міри не знайдено у wiki «Таблицях джерел даних». Заповніть `manualNotes`.
-
-## Залежності
-
-Міри: [Current_User_Admin_Hierarchy_Level](../measures/current-user-admin-hierarchy-level.md), [Current_user](../measures/current-user.md)
+### Залежності (таблиці й колонки)
 
 Таблиці: `dim_Admin_OS`
 
 Колонки: `dim_Admin_OS[USER_ROLE]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["GP.NavigationButton2"]
-  M --> dim_Admin_OS
+  M --> dim_Admin_OS["dim_Admin_OS"]
 ```
 
 ## Нотатки

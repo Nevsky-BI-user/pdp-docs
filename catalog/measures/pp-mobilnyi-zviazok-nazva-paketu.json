@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _lim = MAX(fact_Mobile_Limit[PHONE_CORP_LIMIT])\nVAR _person = VALUES('fact_Mobile_Limit'[PERSON_KEY])\nRETURN\nCALCULATE(\n\tIF(\n\t\tISBLANK(_lim),\n\t\t\"Відсутній\",\n\t\tLASTNONBLANKVALUE(\n\t\t\t'fact_Mobile_Limit'[PERIOD],\n\t\t\tCALCULATE(MAX(fact_Mobile_Limit[PHONE_PACKAGE_NAME]))\n\t\t) &\" - \" &\n\t\tIF (\n\t\t\t_lim = 99999,\n\t\t\t\"Безлімітний\",\n\t\t\tLASTNONBLANKVALUE(\n\t\t\t\t'fact_Mobile_Limit'[PERIOD],\n\t\t\t\tCALCULATE(MAX(fact_Mobile_Limit[PHONE_CORP_LIMIT]))\n\t\t\t)\n\t\t)\n\t),\n\tALL('fact_Mobile_Limit'[USER_ACCESS_ID]), ALL('dim_Admin_OS'[USER_ACCESS_ID]),\n\tTREATAS(_person, 'fact_Mobile_Limit'[PERSON_KEY])\n)",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -24,6 +25,7 @@
       "fact_Mobile_Limit"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List",

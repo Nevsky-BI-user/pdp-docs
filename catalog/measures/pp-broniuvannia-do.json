@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR __val =\nCOALESCE(\n\tIF(\n\t\tNOT(ISBLANK(SELECTEDVALUE('fact_Employee_List'[RESERVATION_END_DATE]))) \n\t\t&& SELECTEDVALUE('fact_Employee_List'[IS_AT_RISK]) = 1 \n\t\t&& ABS(\n\t\t\t\tDATEDIFF(\n\t\t\t\t\tSELECTEDVALUE('fact_Employee_List'[RESERVATION_END_DATE]), \n\t\t\t\t\tTODAY(),\n\t\t\t\t\tDAY\n\t\t\t\t)\n\t\t\t) < 30,\n\t\t\"⚠️\" \n\t\t&\n\t\tSELECTEDVALUE('fact_Employee_List'[RESERVATION_END_DATE])\n\t, SELECTEDVALUE('fact_Employee_List'[RESERVATION_END_DATE])),\n\t\"-\"\n)\n\nRETURN __val",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -19,6 +25,7 @@
       "fact_Employee_List"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

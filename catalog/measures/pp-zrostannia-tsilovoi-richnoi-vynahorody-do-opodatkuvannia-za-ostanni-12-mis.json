@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _Now = [PP.Цільовий розмір річної винагороди, до оподаткування]\nVAR _Prev =  [PP.Цільовий розмір річної винагороди, до оподаткування (12 місяців назад)]\nVAR _res = DIVIDE(_Now-COALESCE(_Prev, _Now),_Prev, \"Дані відсутні\")\nRETURN _res",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "PP.Цільовий розмір річної винагороди, до оподаткування",
@@ -17,6 +23,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

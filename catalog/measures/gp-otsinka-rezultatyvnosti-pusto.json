@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "IF(\n\tISBLANK([GP.Оцінка результативності попередній рік]) && ISBLANK([GP.Оцінка результативності поточний рік]),\n\t\"Дані\"&UNICHAR(10)&\"відсутні\",\n\t\"\"\n)",
+  "reportPages": [],
   "dependencies": {
     "measures": [
       "GP.Оцінка результативності попередній рік",
@@ -17,6 +18,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

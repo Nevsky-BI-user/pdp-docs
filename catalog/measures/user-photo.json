@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _url = \n\tFIRSTNONBLANKVALUE(\n\t\tVALUES('dim_Admin_OS'[ORDER_NUM]),\n\t\tCALCULATE(SELECTEDVALUE('dim_Admin_OS'[URL_FOTO]))\n\t)\nRETURN\nIF (\n\tNOT ISBLANK ( _url ),\n\t\"<div style='display:flex;justify-content:center;align-items:center;width:100%;height:100%;'>\n\t\t<img src='\" & _url &\n\t\t\"' width='150' height='150' style='border-radius:8px;object-fit:cover;'/>\n\t</div>\"\n)",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -19,6 +25,7 @@
       "dim_Admin_OS"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

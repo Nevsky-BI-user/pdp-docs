@@ -1,27 +1,6 @@
 # AC.Export.Плинність % по вертикалі
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Analytical Cases\Loss_Productivity\Export` |
-| formatString | — |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-SELECTEDVALUE('fact_Loss_of_Productivity'[Turnover])
-```
-
-## Джерела
-
-Вихідні таблиці: `DM.vw_R27_fact_Loss_of_Productivity`
-
-Колонки: `Turnover`
-
-Power Query: `fact_Loss_of_Productivity`
+*тека `Analytical Cases\Loss_Productivity\Export`*
 
 ## Бізнес-суть
 
@@ -31,18 +10,53 @@ Turnover → Плинність % по вертикалі; Turnover → Плин
 
 **Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`, `Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22`, `Командний-профіль/Паспортна-частина-групового-профілю/Сторінка-Картка-команди`
 
-## Залежності
+## На сторінках звіту
+
+[Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Analytical Cases\Loss_Productivity\Export` |
+| formatString | — |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+SELECTEDVALUE('fact_Loss_of_Productivity'[Turnover])
+```
+
+### Джерела даних
+
+Вихідні таблиці: `DM.vw_R27_fact_Loss_of_Productivity`
+
+Колонки: `Turnover`
+
+Power Query: `fact_Loss_of_Productivity`
+
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Loss_of_Productivity`
 
 Колонки: `fact_Loss_of_Productivity[Turnover]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Export.Плинність % по вертикалі"]
-  M --> fact_Loss_of_Productivity
+  M --> fact_Loss_of_Productivity["fact_Loss_of_Productivity"]
 ```
 
 ## Нотатки

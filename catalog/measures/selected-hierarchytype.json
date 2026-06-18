@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "SELECTEDVALUE('t_HierarchyTypes'[Hierarchy_Type_Name])",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

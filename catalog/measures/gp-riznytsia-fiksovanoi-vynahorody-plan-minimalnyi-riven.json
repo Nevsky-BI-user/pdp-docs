@@ -9,6 +9,16 @@
   "isHidden": false,
   "description": "",
   "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),dim_Admin_OS[USER_ACCESS_ID] )\n\n/* *********** ADMIN *********** */\nVAR _admin =\n    VAR _Employees =VALUES('dim_Admin_OS'[USER_ACCESS_ID])\n        VAR _table0 = \n            ADDCOLUMNS(\n                _Employees,\n                \"@Indicator\",\n                CALCULATE(\n                    SUM('fact_TRS_Plan'[PAYMENT_PLAN_SUM]),\n                    'fact_TRS_Plan'[CATEGORY_NAME] = \"Фіксована винагорода\",\n                    'fact_TRS_Plan'[IS_ACTUAL] = TRUE(),\n                    ('fact_TRS_Plan'[END_DATE] > TODAY() || 'fact_TRS_Plan'[END_DATE] = DATE(2001, 01, 01)),\n                    'dim_Admin_OS'[IS_MANAGER] = FALSE())\n            )\n        VAR _ShareOfSomeIndicator = \n            MINX(\n                FILTER(\n                    _table0, \n                    NOT ISBLANK([@Indicator]) && [@Indicator] > 0\n                ), [@Indicator]\n            )\n\n        RETURN _ShareOfSomeIndicator\n\n/* *********** ADMIN LT *********** */\nVAR _admin_lt =\n    VAR _Employees =VALUES('dim_Admin_OS'[USER_ACCESS_ID])\n        VAR _table0 = \n            CALCULATETABLE(\n                ADDCOLUMNS(\n                    _Employees,\n                    \"@Indicator\",\n                    CALCULATE(\n                        SUM('fact_TRS_Plan'[PAYMENT_PLAN_SUM]),\n                        'fact_TRS_Plan'[CATEGORY_NAME] = \"Фіксована винагорода\",\n                        'fact_TRS_Plan'[IS_ACTUAL] = TRUE(),\n                        ('fact_TRS_Plan'[END_DATE] > TODAY() || 'fact_TRS_Plan'[END_DATE] = DATE(2001, 01, 01)),\n                        'dim_Admin_OS'[IS_MANAGER] = FALSE())),\n                _filter_lt\n            )\n        VAR _ShareOfSomeIndicator = \n            MINX(\n                FILTER(\n                    _table0, \n                    NOT ISBLANK([@Indicator]) && [@Indicator] > 0\n                ), [@Indicator]\n            )\n\n        RETURN _ShareOfSomeIndicator\n    \nVAR _res = \n\tSWITCH(\n\t\t_roleIndex,\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\nRETURN \nCOALESCE(_res, \"-\")",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    },
+    {
+      "display": "Підсказка \"Мін винагорода (план)\"",
+      "slug": "pidskazka-min-vynahoroda-plan"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -27,6 +37,9 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [
+    "GP.Різниця фіксованої винагороди (план).Різниця"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List",

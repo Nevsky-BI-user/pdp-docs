@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR birthDay = SELECTEDVALUE('fact_Employee_List'[EMP_BIRTH_DATE])\nVAR age = \nYEAR(TODAY()) - YEAR(birthDay) - \nIF(FORMAT(TODAY(), \"MMDD\") < FORMAT(birthDay, \"MMDD\"), 1, 0)\n\nVAR __val =\nFORMAT(birthDay, \"dd.mm.yyyy\")\n\t& \" - \" \n\t& age\n\t& \"р.\"\n\nRETURN __val",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +24,7 @@
       "fact_Employee_List"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

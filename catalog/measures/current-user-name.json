@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _fullname =\n    CALCULATE(\n        VALUES('dim_Admin_OS'[EMPLOYEE_NAME]),\n        'dim_Admin_OS'[EMPLOYEE_EMAIL] = USERPRINCIPALNAME()\n    )\nVAR _pos1 = FIND(\" \", _fullname, 1, LEN(_fullname))\nVAR _curr_time = HOUR(UTCNOW()+2)\nVAR _intro =\n    SWITCH(\n        TRUE(),\n        _curr_time < 10, \", доброго ранку!\",\n        _curr_time < 17, \", доброго дня!\",\n        \", доброго вечора!\"\n    )\nRETURN \nIF(\n    NOT ISBLANK(_fullname),\n    MID(_fullname, _pos1 + 1, LEN(_fullname)) & _intro,\n    \"\"\n)",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -19,6 +20,7 @@
       "dim_Admin_OS"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "LEN([PP.SVG.OKR.Детально])",
+  "reportPages": [],
   "dependencies": {
     "measures": [
       "PP.SVG.OKR.Детально"
@@ -16,6 +17,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

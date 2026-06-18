@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _filter_lt= TREATAS(VALUES( dim_Admin_LT_OS[USER_ACCESS_ID] ), 'fact_Employee_List'[USER_ACCESS_ID])\nVAR _admin =\nDIVIDE(\n    CALCULATE(\n        COUNTROWS('fact_Employee_List'),\n        FILTER(\n            'fact_Employee_List', \n            'fact_Employee_List'[POSITION_CATEGORY_DETAIL] IN \n            {\"Топ-менеджмент\", \"Середній менеджмент\", \"Старший менеджмент А+\", \"Старший менеджмент А\", \"Старший менеджмент В\", \"Старший менеджмент С\", \"Лінійні керівники\"})),\n    CALCULATE(\n        COUNTROWS('fact_Employee_List')),\n    BLANK())\n\nVAR _admin_lt = \nDIVIDE(\n    CALCULATE(\n        COUNTROWS('fact_Employee_List'),\n        FILTER(\n            'fact_Employee_List', \n            'fact_Employee_List'[POSITION_CATEGORY_DETAIL] IN \n            {\"Топ-менеджмент\", \"Середній менеджмент\", \"Старший менеджмент А+\", \"Старший менеджмент А\", \"Старший менеджмент В\", \"Старший менеджмент С\", \"Лінійні керівники\"}),\n        _filter_lt),\n    CALCULATE(\n        COUNTROWS('fact_Employee_List'), _filter_lt),\n    BLANK())\n\nVAR _res = \n    SWITCH(\n        SELECTEDVALUE('t_HierarchyTypes'[Index]),\n        0, _admin_lt,\n        1, _admin)\n        \nRETURN \nTRIM(\n    FORMAT(\n        COALESCE(_res, 0), \n        \"0.00%\"))",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -21,6 +27,7 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

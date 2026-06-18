@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _salary = MAX(fact_Employee_List[MIN_TARIFF_RATE])\nvAR _salary_total = _salary + [PP.Роз'їзний характер роботи, грн] +[PP.Доплата за шкідливі умови праці,грн] + [PP.Премія за місяць, грн]\nVAR _min = MAX(fact_Employee_List[min_salary_range])\nVAR _max = MAX(fact_Employee_List[max_salary_range])\nVAR _mid_range = MAX(fact_Employee_List[AVG_TARIFF_RATE])\nVAR _position =  DIVIDE(_salary - _mid_range, _mid_range)\nVAR _result = \nSWITCH(\n\tTRUE(),\n\t_salary_total < _min, \"Нижче мінімума\",\n    _salary_total > _max, \"Вище максимуму\",\n\t_position <= -0.051, \"Мінімум-середина\",\n\t_position <= 0.05 , \"Cередина\",\n\t_position > 0.05, \"Середина-Максимум\",\n\t\"Дані відсутні\"\n)\nRETURN --_result & \":  \" & \nDIVIDE(_salary_total, _mid_range)",
+  "reportPages": [],
   "dependencies": {
     "measures": [
       "PP.Доплата за шкідливі умови праці,грн",
@@ -24,6 +25,9 @@
       "fact_Employee_List"
     ]
   },
+  "usedBy": [
+    "PP.SVG.Позиція в окладній вилці"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

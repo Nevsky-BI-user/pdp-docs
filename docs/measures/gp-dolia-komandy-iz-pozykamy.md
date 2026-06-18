@@ -1,5 +1,27 @@
 # GP.Доля команди із позиками
 
+*тека `Group_Profile\TRS` · формат `0.00%;-0.00%;0.00%`*
+
+## Бізнес-суть
+
+ACTION_END_DATE → Доля команди із позиками
+
+Потрібно підрахувати кількість працівників у команді, по яким є записи в таблиці DM.vw_R27_fact_Repayment_Credit_PDP та поле action_end_date>поточна дата (діюча позика) та поділити на поточну кількість членів команди. В деталізацію вивести ПІБ таких працівників, вид і розмір позики, дати видачі та погашення.
+
+**Вимоги:** `Командний-профіль/Сторінка-TRS-команди/Доопрацювання-сторінки-TRS`
+
+## На сторінках звіту
+
+[Group Profile](../report/group-profile.md)
+
+## Пов'язані міри
+
+**Використовує:** [GP.Кількість співробітників всього, чол. - Integer](../measures/gp-kilkist-spivrobitnykiv-vsoho-chol-integer.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +31,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 //************* ROLE FILTERS **************
@@ -44,7 +66,7 @@ RETURN
 COALESCE(_res, "-")
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_dim_Employee_Access_List`, `DM.vw_R27_fact_Repayment_Credit_PDP`
 
@@ -52,30 +74,20 @@ COALESCE(_res, "-")
 
 Power Query: `dim_Admin_OS`
 
-## Бізнес-суть
-
-ACTION_END_DATE → Доля команди із позиками
-
-Потрібно підрахувати кількість працівників у команді, по яким є записи в таблиці DM.vw_R27_fact_Repayment_Credit_PDP та поле action_end_date>поточна дата (діюча позика) та поділити на поточну кількість членів команди. В деталізацію вивести ПІБ таких працівників, вид і розмір позики, дати видачі та погашення.
-
-**Вимоги:** `Командний-профіль/Сторінка-TRS-команди/Доопрацювання-сторінки-TRS`
-
-## Залежності
-
-Міри: [GP.Кількість співробітників всього, чол. - Integer](../measures/gp-kilkist-spivrobitnykiv-vsoho-chol-integer.md)
+### Залежності (таблиці й колонки)
 
 Таблиці: `dim_Admin_OS`, `fact_Repayment_Credit`, `t_HierarchyTypes`
 
 Колонки: `dim_Admin_LT_OS[USER_ACCESS_ID]`, `dim_Admin_OS[USER_ACCESS_ID]`, `fact_Repayment_Credit[ACTION_END_DATE]`, `fact_Repayment_Credit[USER_ACCESS_ID]`, `t_HierarchyTypes[Index]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["GP.Доля команди із позиками"]
-  M --> dim_Admin_OS
-  M --> fact_Repayment_Credit
-  M --> t_HierarchyTypes
+  M --> dim_Admin_OS["dim_Admin_OS"]
+  M --> fact_Repayment_Credit["fact_Repayment_Credit"]
+  M --> t_HierarchyTypes["t_HierarchyTypes"]
 ```
 
 ## Нотатки

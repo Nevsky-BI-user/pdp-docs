@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "SWITCH(\n\tSELECTEDVALUE('t_AC Burnout'[Burnout_Indicator]),\n\t\"Оцінка\", [AC.Чи є ризик вигорання через перепрацювання?],\n\t\"Дані\", COALESCE([AC.Перепрацювання Viva],0)\n)",
+  "reportPages": [
+    {
+      "display": "Утримання працівників",
+      "slug": "utrymannia-pratsivnykiv"
+    }
+  ],
   "dependencies": {
     "measures": [
       "AC.Перепрацювання Viva",
@@ -21,6 +27,7 @@
       "t_AC Burnout"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

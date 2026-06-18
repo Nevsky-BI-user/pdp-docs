@@ -1,23 +1,6 @@
 # AC.BR.Трешхолд. Плинність (%)
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Analytical Cases\Burnout_Risk\Export` |
-| formatString | — |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-IF(NOT(ISBLANK([AC.BR.Плинність (%)])),">=15%")
-```
-
-## Джерела
-
-—
+*тека `Analytical Cases\Burnout_Risk\Export`*
 
 ## Бізнес-суть
 
@@ -27,12 +10,42 @@ IF(NOT(ISBLANK([AC.BR.Плинність (%)])),">=15%")
 
 **Вимоги:** `Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22`, `Командний-профіль/Паспортна-частина-групового-профілю/Сторінка-Картка-команди`
 
-## Залежності
+## На сторінках звіту
 
-Міри: [AC.BR.Плинність (%)](../measures/ac-br-plynnist.md)
+[Утримання працівників](../report/utrymannia-pratsivnykiv.md)
 
+## Пов'язані міри
 
-## Схема
+**Використовує:** [AC.BR.Плинність (%)](../measures/ac-br-plynnist.md)
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Analytical Cases\Burnout_Risk\Export` |
+| formatString | — |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+IF(NOT(ISBLANK([AC.BR.Плинність (%)])),">=15%")
+```
+
+### Джерела даних
+
+—
+
+### Залежності (таблиці й колонки)
+
+—
+
+### Схема
 
 ```mermaid
 graph LR

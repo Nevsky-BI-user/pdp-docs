@@ -1,28 +1,6 @@
 # AC.Switch.Тренд оцінки результативності
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Analytical Cases\Burnout_Risk\Main` |
-| formatString | — |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-SWITCH(
-	SELECTEDVALUE('t_AC Burnout'[Burnout_Indicator]),
-	"Оцінка", [AC.Чи є ризик вигорання по результатам оцінки результативності?],
-	"Дані", [AC.Тренд оцінки результативності]
-)
-```
-
-## Джерела
-
-
-Колонки: `Burnout_Indicator`
+*тека `Analytical Cases\Burnout_Risk\Main`*
 
 ## Бізнес-суть
 
@@ -32,20 +10,54 @@ SWITCH(
 
 **Вимоги:** `Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту`, `Допоміжні-вітрини-для-звіту/Таблиця-для-розрахунку-агрегованих-метрик-по-звіту/Змінити-логіку-визначення-тренду-оцінки-результативності`, `Кейс-Утримання-працівників/Опис-джерел-для-сторінки-%22Кейс-звільнення-(вигорання)%22`
 
-## Залежності
+## На сторінках звіту
 
-Міри: [AC.Тренд оцінки результативності](../measures/ac-trend-otsinky-rezultatyvnosti.md), [AC.Чи є ризик вигорання по результатам оцінки результативності?](../measures/ac-chy-ie-ryzyk-vyhorannia-po-rezultatam-otsinky-rezultatyvnosti.md)
+[Утримання працівників](../report/utrymannia-pratsivnykiv.md)
+
+## Пов'язані міри
+
+**Використовує:** [AC.Тренд оцінки результативності](../measures/ac-trend-otsinky-rezultatyvnosti.md), [AC.Чи є ризик вигорання по результатам оцінки результативності?](../measures/ac-chy-ie-ryzyk-vyhorannia-po-rezultatam-otsinky-rezultatyvnosti.md)
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Analytical Cases\Burnout_Risk\Main` |
+| formatString | — |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+SWITCH(
+	SELECTEDVALUE('t_AC Burnout'[Burnout_Indicator]),
+	"Оцінка", [AC.Чи є ризик вигорання по результатам оцінки результативності?],
+	"Дані", [AC.Тренд оцінки результативності]
+)
+```
+
+### Джерела даних
+
+
+Колонки: `Burnout_Indicator`
+
+### Залежності (таблиці й колонки)
 
 Таблиці: `t_AC Burnout`
 
 Колонки: `t_AC Burnout[Burnout_Indicator]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Switch.Тренд оцінки результативності"]
-  M --> t_AC Burnout
+  M --> t_AC_Burnout["t_AC Burnout"]
 ```
 
 ## Нотатки

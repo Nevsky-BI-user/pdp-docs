@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _CurrentRCD = [PP.РЦД]\nVAR _CurrentDate = MAX ( 'dim_Date'[Date] )\nVAR _PrevDate =\n    CALCULATE (\n        LASTNONBLANK ( 'dim_Date'[Date], [PP.РЦД] ),\n        FILTER (\n            ALLSELECTED ( 'dim_Date'[Date] ),\n            'dim_Date'[Date] < _CurrentDate\n        )\n    )\nVAR _IsFirstPoint = ISBLANK ( _PrevDate )\nVAR _PrevRCD =\n    CALCULATE (\n        [PP.РЦД],\n        'dim_Date'[Date] = _PrevDate\n    )\nVAR _GrowthPct =\n    ( DIVIDE ( _CurrentRCD, _PrevRCD ) - 1 ) * 100\nVAR _Result =\n    SWITCH (\n        TRUE (),\n        ISBLANK ( _CurrentRCD ), BLANK (),\n        _IsFirstPoint, 0,\n        ISBLANK ( _PrevRCD ) || _PrevRCD = 0, BLANK (),\n        _GrowthPct\n    )\nRETURN\n    _Result",
+  "reportPages": [],
   "dependencies": {
     "measures": [
       "PP.РЦД"
@@ -20,6 +21,10 @@
       "dim_Date"
     ]
   },
+  "usedBy": [
+    "PP.Колір приросту РЦД",
+    "PP.Лейбл приросту РЦД"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

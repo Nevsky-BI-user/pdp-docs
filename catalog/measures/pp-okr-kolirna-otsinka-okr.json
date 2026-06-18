@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "SELECTEDVALUE('fact_OKR_Goals'[OKR_COLOR_RATE])",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,7 @@
       "fact_OKR_Goals"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.R27_fact_OKR_Goals"

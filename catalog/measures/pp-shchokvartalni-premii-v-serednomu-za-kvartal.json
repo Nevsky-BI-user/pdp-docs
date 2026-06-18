@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _res = \nCALCULATE(\n\tAVERAGEX(\n        VALUES('dim_Date'[Quarter and Year]),\n        CALCULATE(\n            SUM(fact_TRS[PAYMENTS_FACT_UAH]),\n            fact_TRS[TRS_CATEGORY] = \"Змінна винагорода\",\n            fact_TRS[SUBCATEGORY_OF_ACCRUAL_TYPE] = \"Квартальні премії\"\n        )\n    ),\n\tDATESINPERIOD('dim_Date'[Date], EOMONTH(TODAY(), -1), -12, MONTH)\n)\nRETURN COALESCE(_res,0)",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -23,6 +29,7 @@
       "fact_TRS"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_TRS_PDP"

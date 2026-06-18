@@ -9,6 +9,16 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _Now = [PP.Розмір фіксованої винагороди плановий, за місяць ПОТОЧНИЙ]\nVAR _YearAgo = [PP.Розмір фіксованої винагороди плановий, за місяць СТАНОМ НА РІК НАЗАД]\nVAR _result = DIVIDE(_Now-COALESCE(_YearAgo, _Now),_YearAgo, \"Дані відсутні\")\nRETURN _result",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile"
+    },
+    {
+      "display": "TT:Зміна фікс винагороди",
+      "slug": "tt-zmina-fiks-vynahorody"
+    }
+  ],
   "dependencies": {
     "measures": [
       "PP.Розмір фіксованої винагороди плановий, за місяць ПОТОЧНИЙ",
@@ -17,6 +27,7 @@
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

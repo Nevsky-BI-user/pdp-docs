@@ -1,5 +1,24 @@
 # AC.Switch.Кількість місяців без якісної відпустки за ост. 3 роки
 
+*тека `Analytical Cases\Burnout_Risk\Main`*
+
+## Бізнес-суть
+
+!!! note "Бізнес-визначення відсутнє"
+    Поля міри не зіставлено з wiki «Таблицями джерел даних». Можна заповнити вручну в `manualNotes`.
+
+## На сторінках звіту
+
+[Утримання працівників](../report/utrymannia-pratsivnykiv.md)
+
+## Пов'язані міри
+
+**Використовує:** [AC.Кількість місяців без якісної відпустки](../measures/ac-kilkist-misiatsiv-bez-iakisnoi-vidpustky.md), [AC.Чи є ризик вигорання через відсутність відпусток?](../measures/ac-chy-ie-ryzyk-vyhorannia-cherez-vidsutnist-vidpustok.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +28,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 SWITCH(
@@ -19,30 +38,23 @@ SWITCH(
 )
 ```
 
-## Джерела
+### Джерела даних
 
 
 Колонки: `Burnout_Indicator`
 
-## Бізнес-суть
-
-!!! warning "Без бізнес-визначення"
-    Поля міри не знайдено у wiki «Таблицях джерел даних». Заповніть `manualNotes`.
-
-## Залежності
-
-Міри: [AC.Кількість місяців без якісної відпустки](../measures/ac-kilkist-misiatsiv-bez-iakisnoi-vidpustky.md), [AC.Чи є ризик вигорання через відсутність відпусток?](../measures/ac-chy-ie-ryzyk-vyhorannia-cherez-vidsutnist-vidpustok.md)
+### Залежності (таблиці й колонки)
 
 Таблиці: `t_AC Burnout`
 
 Колонки: `t_AC Burnout[Burnout_Indicator]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Switch.Кількість місяців без якісної відпустки за ост. 3 роки"]
-  M --> t_AC Burnout
+  M --> t_AC_Burnout["t_AC Burnout"]
 ```
 
 ## Нотатки

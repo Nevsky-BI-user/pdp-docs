@@ -9,11 +9,13 @@
   "isHidden": false,
   "description": "",
   "dax": "\"#8AB6F9\"",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

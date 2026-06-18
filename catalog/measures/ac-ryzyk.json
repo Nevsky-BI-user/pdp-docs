@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _val = SELECTEDVALUE('fact_Burnout_Indicators'[IS_TOTAL_RISK])\nVAR _txt = COALESCE(_val, \"Не визначено\")\n\nVAR _fill =\n\tSWITCH(\n\t\t_txt,\n\t\t\"Потребує уваги\", \"#FDE0D0\",\n\t\t\"Показники в нормі\", \"#D0E8F2\",\n\t\t\"#C9CFD6\"\n\t)\nVAR _textColor =\n\tSWITCH(\n\t\t_txt,\n\t\t\"Потребує уваги\", \"#A63D00\",\n\t\t\"Показники в нормі\", \"#004D73\",\n\t\t\"#3B4552\"\n\t)\nVAR _stroke =\n\tSWITCH(\n\t\t_txt,\n\t\t\"Потребує уваги\", \"#D55E00\",\n\t\t\"Показники в нормі\", \"#0072B2\",\n\t\t\"#AEB6BF\"\n\t)\n\nVAR _rectW = 110\nVAR _rectH = 16\nVAR _r = 8\nVAR _font = 10\nVAR _centerX = _rectW / 2\n\nRETURN\n\"data:image/svg+xml;utf8,\" &\n\"<svg xmlns='http://www.w3.org/2000/svg' width='\" & _rectW & \"' height='\" & _rectH & \"'>\n<rect x='0' y='0' rx='\"&_r&\"' ry='\"&_r&\"' width='\"&_rectW&\"' height='\"&_rectH&\"' fill='\"&_fill&\"' stroke='\"&_stroke&\"' stroke-width='0.8'/>\n<text x='\"&_centerX&\"' y='\"&(_rectH/2)&\"' font-size='\"&_font&\"px' font-family='Segoe UI' font-weight='500' text-anchor='middle' dominant-baseline='central' fill='\"&_textColor&\"'>\"&_txt&\"</text>\n</svg>\"",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,10 @@
       "fact_Burnout_Indicators"
     ]
   },
+  "usedBy": [
+    "AC.Burnout.Tooltip",
+    "AC.Switch.Ризик"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

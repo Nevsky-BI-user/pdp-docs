@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "SWITCH(\n\tSELECTEDVALUE('t_AC Burnout'[Burnout_Indicator]),\n\t\"Оцінка\", [AC.Чи є ризик?],\n\t\"Дані\", [AC.Ризик]\n)",
+  "reportPages": [
+    {
+      "display": "Утримання працівників",
+      "slug": "utrymannia-pratsivnykiv"
+    }
+  ],
   "dependencies": {
     "measures": [
       "AC.Ризик",
@@ -21,6 +27,7 @@
       "t_AC Burnout"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

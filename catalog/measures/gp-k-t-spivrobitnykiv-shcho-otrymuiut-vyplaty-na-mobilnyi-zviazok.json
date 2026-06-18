@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "//************* ROLE FILTERS **************\nVAR _roleIndex = SELECTEDVALUE ( 't_HierarchyTypes'[Index], 1 )   -- 0 = LT, 1 = Admin\nVAR _filter_lt = TREATAS ( VALUES ( 'dim_Admin_LT_OS'[USER_ACCESS_ID] ),dim_Admin_OS[USER_ACCESS_ID] )\n\n/* *********** ADMIN *********** */\nVAR _admin =\nCALCULATE(\n    COUNTA('fact_Mobile_Limit'[USER_ACCESS_ID]),\n    FILTER(\n        'fact_Mobile_Limit',\n        NOT ISBLANK('fact_Mobile_Limit'[PHONE_CORP_LIMIT]) && 'fact_Mobile_Limit'[PHONE_CORP_LIMIT] <> 0))\n        \n/* *********** LT *********** */\nVAR _admin_lt =\n    CALCULATE(\n        COUNTA('fact_Mobile_Limit'[USER_ACCESS_ID]),\n        FILTER(\n            'fact_Mobile_Limit',\n            NOT ISBLANK('fact_Mobile_Limit'[PHONE_CORP_LIMIT]) && 'fact_Mobile_Limit'[PHONE_CORP_LIMIT] <> 0),\n            _filter_lt)\n\nVAR _res =\n\tSWITCH (\n\t\t_roleIndex,\n\t\t0, _admin_lt,    -- LT\n\t\t1, _admin,       -- Admin\n\t\t_admin\n\t)\nRETURN _res",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -24,6 +30,9 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [
+    "'GP.Мобільний зв''язок, % факт.SVG'"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List",

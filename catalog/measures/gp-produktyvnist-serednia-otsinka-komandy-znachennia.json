@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "//************* ROLE FILTERS **************\nVAR _filter_lt = TREATAS(VALUES(dim_Admin_LT_OS[USER_ACCESS_ID]), 'dim_Admin_OS'[USER_ACCESS_ID])\n\nVAR LastPeriod = [GP.Продуктивність.Останній період оцінки]\n    // SUMMARIZE(\n    //     'fact_Employee_Performance_Total', \n    //     'fact_Employee_Performance_Total'[USER_ACCESS_ID], \n    //     \"MaxYear\", MAX('fact_Employee_Performance_Total'[performance_PBI_order])\n    // )\n/* *********** ADMIN *********** */\nVAR _admin = \n    CALCULATE(\n            AVERAGE('fact_Employee_Performance_Total'[General_Performance_Desc_Rate]),\n            'fact_Employee_Performance_Total'[performence_period] = LastPeriod\n            // TREATAS(LastYearsPerPerson, 'fact_Employee_Performance_Total'[USER_ACCESS_ID], 'fact_Employee_Performance_Total'[performance_PBI_order])\n        )\n\n/* *********** ADMIN LT *********** */\nVAR _admin_lt = \n    CALCULATE(\n            AVERAGE('fact_Employee_Performance_Total'[General_Performance_Desc_Rate]),\n            'fact_Employee_Performance_Total'[performence_period] = LastPeriod,\n            // TREATAS(LastYearsPerPerson, 'fact_Employee_Performance_Total'[USER_ACCESS_ID], 'fact_Employee_Performance_Total'[performance_PBI_order]),\n            _filter_lt\n        )\n\n/* *********** RESULT *********** */\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE( t_HierarchyTypes[Index] ),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\n\nRETURN ROUND(_res, 2)",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    }
+  ],
   "dependencies": {
     "measures": [
       "GP.Продуктивність.Останній період оцінки"
@@ -27,6 +33,11 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [
+    "GP.Продуктивність.Середня Оцінка.Formeted",
+    "GP.Продуктивність.Середня оцінка команди.Категорія",
+    "GP.Продуктивність.Середня оцінка команди.Текстове поле"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List",

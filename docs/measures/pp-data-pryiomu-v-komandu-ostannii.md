@@ -1,5 +1,25 @@
 # PP.Дата прийому в команду (останній)
 
+*тека `Personal_Profile\Загальна інформація`*
+
+## Бізнес-суть
+
+LAST_DIVISION_HIRE_DATE → Стаж в команді (останній)  <br>Дата прийому
+
+**Вимоги:** `Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника`
+
+## На сторінках звіту
+
+[Personal Profile](../report/personal-profile.md)
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +29,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 VAR _res = SELECTEDVALUE('fact_employee_seniority_by_month'[LAST_DIVISION_HIRE_DATE])
@@ -23,7 +43,7 @@ RETURN
 	)
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_fact_employee_seniority_by_month_PDP`
 
@@ -31,24 +51,18 @@ RETURN
 
 Power Query: `fact_employee_seniority_by_month`
 
-## Бізнес-суть
-
-LAST_DIVISION_HIRE_DATE → Стаж в команді (останній)  <br>Дата прийому
-
-**Вимоги:** `Індивідуальний-профіль-працівника/Сторінка-Загальна-інформація-про-працівника`
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_employee_seniority_by_month`
 
 Колонки: `fact_employee_seniority_by_month[LAST_DIVISION_HIRE_DATE]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["PP.Дата прийому в команду (останній)"]
-  M --> fact_employee_seniority_by_month
+  M --> fact_employee_seniority_by_month["fact_employee_seniority_by_month"]
 ```
 
 ## Нотатки

@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "//************* ROLE FILTERS **************\nVAR _filter_lt = TREATAS(VALUES(dim_Admin_LT_OS[USER_ACCESS_ID]), 'dim_Admin_OS'[USER_ACCESS_ID])\n\nVAR lastYear = [GP.ОКР.Останній рік]\n/* *********** ADMIN *********** */\nVAR _admin =\nCALCULATE(\n        DISTINCTCOUNT('fact_Employee_OKR'[USER_ACCESS_ID]),\n        'fact_Employee_OKR'[PLAN_YEAR] = lastYear)\n        // FILTER(\n        //     'fact_Employee_OKR',\n        //     'fact_Employee_OKR'[order] = 1))\n\n/* *********** ADMIN LT *********** */\nVAR _admin_lt =\nCALCULATE(\n        DISTINCTCOUNT('fact_Employee_OKR'[USER_ACCESS_ID]),\n        'fact_Employee_OKR'[PLAN_YEAR] = lastYear,\n        // FILTER(\n        //     'fact_Employee_OKR',\n        //     'fact_Employee_OKR'[order] = 1),\n        _filter_lt)\n\nVAR _res = \n\tSWITCH(\n\t\tSELECTEDVALUE( t_HierarchyTypes[Index] ),\n\t\t0, _admin_lt,\n\t\t1, _admin\n\t)\n\n/* *********** RESULT *********** */\nRETURN COALESCE(_res, 0)",
+  "reportPages": [],
   "dependencies": {
     "measures": [
       "GP.ОКР.Останній рік"
@@ -26,6 +27,10 @@
       "t_HierarchyTypes"
     ]
   },
+  "usedBy": [
+    "GP.OKR.SVG.Bar chart",
+    "GP.ОКР.К-ть співробітників, що оцінюються.Текстове поле"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.R27_fact_OKR_Goals",

@@ -1,26 +1,6 @@
 # PP.Мінімум вилки
 
-| Властивість | Значення |
-|---|---|
-| Тип | міра |
-| Home table | _Measures |
-| displayFolder | `Personal_Profile\TRS` |
-| formatString | `#,0` |
-| dataType | — |
-| Прихована | ні |
-
-## DAX
-
-```dax
-MAX(fact_Employee_List[min_salary_range])
-```
-
-## Джерела
-
-
-Колонки: `min_salary_range`
-
-Power Query: `fact_Employee_List`
+*тека `Personal_Profile\TRS` · формат `#,0`*
 
 ## Бізнес-суть
 
@@ -30,18 +10,52 @@ Power Query: `fact_Employee_List`
 
 **Вимоги:** `Індивідуальний-профіль-працівника/Сторінка-Винагорода-працівника`
 
-## Залежності
+## На сторінках звіту
+
+_Не використовується на основних сторінках звіту._
+
+## Пов'язані міри
+
+**Використовується в:** [PP.SVG.Позиція в окладній вилці](../measures/pp-svg-pozytsiia-v-okladnii-vyltsi.md)
+
+---
+
+## Технічний опис
+
+| Властивість | Значення |
+|---|---|
+| Тип | міра |
+| Home table | _Measures |
+| displayFolder | `Personal_Profile\TRS` |
+| formatString | `#,0` |
+| dataType | — |
+| Прихована | ні |
+
+### DAX
+
+```dax
+MAX(fact_Employee_List[min_salary_range])
+```
+
+### Джерела даних
+
+
+Колонки: `min_salary_range`
+
+Power Query: `fact_Employee_List`
+
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Employee_List`
 
 Колонки: `fact_Employee_List[min_salary_range]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["PP.Мінімум вилки"]
-  M --> fact_Employee_List
+  M --> fact_Employee_List["fact_Employee_List"]
 ```
 
 ## Нотатки

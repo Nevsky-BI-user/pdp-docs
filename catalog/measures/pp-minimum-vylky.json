@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "MAX(fact_Employee_List[min_salary_range])",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,9 @@
       "fact_Employee_List"
     ]
   },
+  "usedBy": [
+    "PP.SVG.Позиція в окладній вилці"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

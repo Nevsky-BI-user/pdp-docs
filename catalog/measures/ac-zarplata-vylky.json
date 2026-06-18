@@ -9,6 +9,7 @@
   "isHidden": false,
   "description": "",
   "dax": "VAR _res = \n\tCALCULATE(\n\t\tSELECTEDVALUE('fact_Burnout_Indicators'[SALARY_RANGE])\n\t)\nRETURN IF(_res = \"Дані відсутні\", \"—\", _res )",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -18,6 +19,9 @@
       "fact_Burnout_Indicators"
     ]
   },
+  "usedBy": [
+    "AC.Switch.Зарплата (вилки)"
+  ],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [

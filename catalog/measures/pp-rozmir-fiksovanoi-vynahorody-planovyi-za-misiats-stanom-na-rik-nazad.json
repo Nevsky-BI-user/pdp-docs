@@ -9,6 +9,12 @@
   "isHidden": false,
   "description": "",
   "dax": "\tVAR _CurrMonthStart =\n\t\tDATE ( YEAR ( TODAY() ), MONTH ( TODAY() ), 1 )\n\tVAR _PrevYearSameMonthStart =\n\t\tEDATE ( _CurrMonthStart, -12 )\n\tVAR _prev_year = \n\t\tCALCULATE(\n\t\t\tAVERAGE(fact_TRS[PAYMENTS_PLAN_UAH]),\n\t\t\tfact_TRS[TRS_CATEGORY] = \"Фіксована винагорода\",\n            'fact_TRS'[IS_PAYMENTS_PLAN] = 1,\n\t\t\tTREATAS({_PrevYearSameMonthStart}, 'dim_Date'[Date])\n\t\t)\n\tRETURN _prev_year",
+  "reportPages": [
+    {
+      "display": "TT:Зміна фікс винагороди",
+      "slug": "tt-zmina-fiks-vynahorody"
+    }
+  ],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -22,6 +28,9 @@
       "fact_TRS"
     ]
   },
+  "usedBy": [
+    "PP.Відсоток зміни фіксованої винагороди"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_fact_TRS_PDP"

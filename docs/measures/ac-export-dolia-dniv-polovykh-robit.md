@@ -1,5 +1,25 @@
 # AC.Export.Доля днів польових робіт (%)
 
+*тека `Analytical Cases\Loss_Productivity\Export`*
+
+## Бізнес-суть
+
+Fieldwork_Share → Доля днів польових робіт (%)
+
+**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
+
+## На сторінках звіту
+
+[Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
+
+## Пов'язані міри
+
+_Прямих зв'язків з іншими мірами немає._
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,13 +29,13 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 SELECTEDVALUE('fact_Loss_of_Productivity'[Fieldwork_Share])
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_fact_Loss_of_Productivity`
 
@@ -23,24 +43,18 @@ SELECTEDVALUE('fact_Loss_of_Productivity'[Fieldwork_Share])
 
 Power Query: `fact_Loss_of_Productivity`
 
-## Бізнес-суть
-
-Fieldwork_Share → Доля днів польових робіт (%)
-
-**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
-
-## Залежності
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Loss_of_Productivity`
 
 Колонки: `fact_Loss_of_Productivity[Fieldwork_Share]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Export.Доля днів польових робіт (%)"]
-  M --> fact_Loss_of_Productivity
+  M --> fact_Loss_of_Productivity["fact_Loss_of_Productivity"]
 ```
 
 ## Нотатки

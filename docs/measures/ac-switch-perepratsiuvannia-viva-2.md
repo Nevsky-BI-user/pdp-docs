@@ -1,5 +1,25 @@
 # AC.Switch.Перепрацювання (Viva)
 
+*тека `Analytical Cases\Loss_Productivity\Main`*
+
+## Бізнес-суть
+
+Перепрацювання (Viva)
+
+**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
+
+## На сторінках звіту
+
+[Продуктивність працівників](../report/produktyvnist-pratsivnykiv.md)
+
+## Пов'язані міри
+
+**Використовує:** [AC.Дані.Перепрацювання (Viva)](../measures/ac-dani-perepratsiuvannia-viva.md), [AC.Оцінка.Перепрацювання (Viva)](../measures/ac-otsinka-perepratsiuvannia-viva.md)
+
+---
+
+## Технічний опис
+
 | Властивість | Значення |
 |---|---|
 | Тип | міра |
@@ -9,7 +29,7 @@
 | dataType | — |
 | Прихована | ні |
 
-## DAX
+### DAX
 
 ```dax
 VAR _subperson = SELECTEDVALUE('fact_Loss_of_Productivity'[Person_Name])
@@ -28,7 +48,7 @@ VAR _result =
 RETURN IF(_metric_relevance = "NA", "NA", _result)
 ```
 
-## Джерела
+### Джерела даних
 
 Вихідні таблиці: `DM.vw_R27_fact_Loss_of_Productivity`, `DWH.t_SPO_HR_Person_Matrix_with_Coefficient`
 
@@ -36,28 +56,20 @@ RETURN IF(_metric_relevance = "NA", "NA", _result)
 
 Power Query: `fact_Loss_of_Productivity`
 
-## Бізнес-суть
-
-Перепрацювання (Viva)
-
-**Вимоги:** `Кейс-Втрати-Продуктивності-Працівників`
-
-## Залежності
-
-Міри: [AC.Дані.Перепрацювання (Viva)](../measures/ac-dani-perepratsiuvannia-viva.md), [AC.Оцінка.Перепрацювання (Viva)](../measures/ac-otsinka-perepratsiuvannia-viva.md)
+### Залежності (таблиці й колонки)
 
 Таблиці: `fact_Loss_of_Productivity`, `t_AC Burnout`, `t_Loss_Productivity_Metrics_by_Persona`
 
 Колонки: `fact_Loss_of_Productivity[Person_Name]`, `t_AC Burnout[Burnout_Indicator]`, `t_Loss_Productivity_Metrics_by_Persona[Metric_Name]`, `t_Loss_Productivity_Metrics_by_Persona[SubPerson]`, `t_Loss_Productivity_Metrics_by_Persona[Value]`
 
-## Схема
+### Схема
 
 ```mermaid
 graph LR
   M["AC.Switch.Перепрацювання (Viva)"]
-  M --> fact_Loss_of_Productivity
-  M --> t_AC Burnout
-  M --> t_Loss_Productivity_Metrics_by_Persona
+  M --> fact_Loss_of_Productivity["fact_Loss_of_Productivity"]
+  M --> t_AC_Burnout["t_AC Burnout"]
+  M --> t_Loss_Productivity_Metrics_by_Persona["t_Loss_Productivity_Metrics_by_Persona"]
 ```
 
 ## Нотатки

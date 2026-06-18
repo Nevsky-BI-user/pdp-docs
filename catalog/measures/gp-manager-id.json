@@ -9,6 +9,7 @@
   "isHidden": true,
   "description": "",
   "dax": "\t\t\t\nFIRSTNONBLANKVALUE(\n\t'dim_Admin_OS'[ORDER_NUM_2],\n\tMIN('dim_Admin_OS'[USER_ACCESS_ID])\n)",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [
@@ -19,6 +20,10 @@
       "dim_Admin_OS"
     ]
   },
+  "usedBy": [
+    "GP.OKR  попередній рік",
+    "GP.OKR  поточний рік"
+  ],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"

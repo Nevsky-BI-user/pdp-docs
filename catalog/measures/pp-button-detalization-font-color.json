@@ -9,11 +9,13 @@
   "isHidden": false,
   "description": "",
   "dax": "IF(\n\tISBLANK(COUNTROWS('fact_Employee_List')),\n\t\"#9A0303\",\n\t\"#003A5D\"\n)",
+  "reportPages": [],
   "dependencies": {
     "measures": [],
     "columns": [],
     "tables": []
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [],
     "sourceColumns": [],

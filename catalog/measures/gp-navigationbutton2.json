@@ -9,6 +9,20 @@
   "isHidden": false,
   "description": "",
   "dax": "IF(\n\t[Current_user] IN \n\t\t{\n\t\t\"yu.kosyuk@mhp.com.ua\",\n\t\t\"andriy.bulakh@mhp.com.ua\",\n\t\t\"a.h.bulakh@mhp.com.ua\",\n\t\t\"a.gromova@mhp.com.ua\",\n\t\t\"o.tsaltsalko@mhp.com.ua\",\n\t\t\"a.androsiuk@mhp.com.ua\",\n\t\t\"a.horbenko@mhp.com.ua\",\n\t\t\"o.sulima@mhp.com.ua\",\n\t\t\"v.alimov@mhp.com.ua\",\n\t\t\"v.korinevskyi@mhp.com.ua\",\n\t\t\"a.domanskyi@mhp.com.ua\"\n\t\t} ||   SELECTEDVALUE('dim_Admin_OS'[USER_ROLE]) = \"HRBP\",\n\t\"GP.NAV-0\",\n\tSWITCH(\n\t\t[Current_User_Admin_Hierarchy_Level],\n\t\t1, \"GP.NAV-1\",\n\t\t2, \"GP.NAV-1\",\n\t\t3, \"GP.NAV-1\",\n\t\t4, \"GP.NAV-1\",\n\t\t5, \"GP.NAV-1\",\n\t\t6, \"GP.NAV-1\",\n\t\t7, \"GP.NAV-1\",\n\t\t8, \"GP.NAV-1\"\n\t)\n)",
+  "reportPages": [
+    {
+      "display": "Group Profile",
+      "slug": "group-profile"
+    },
+    {
+      "display": "Утримання працівників",
+      "slug": "utrymannia-pratsivnykiv"
+    },
+    {
+      "display": "Продуктивність працівників",
+      "slug": "produktyvnist-pratsivnykiv"
+    }
+  ],
   "dependencies": {
     "measures": [
       "Current_User_Admin_Hierarchy_Level",
@@ -21,6 +35,7 @@
       "dim_Admin_OS"
     ]
   },
+  "usedBy": [],
   "lineage": {
     "sourceTables": [
       "DM.vw_R27_dim_Employee_Access_List"
