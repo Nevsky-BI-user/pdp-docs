@@ -3200,6 +3200,10 @@
 
 <h1 id="pp">PP.Дата доступності позики на ноутбук<a class="headerlink" href="#pp" title="Permanent link">&para;</a></h1>
 <p><em>тека <code>Personal_Profile\TRS</code></em></p>
+<div class="admonition abstract">
+<p class="admonition-title">Джерела даних</p>
+<p><code>DM.vw_R27_dim_Employee_Access_List</code>, <code>DM.vw_R27_fact_Repayment_Credit_PDP</code></p>
+</div>
 <h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
 <p>ACTION_START_DATE → Період позики; ACTION_START_DATE → Дата доступності позики на ноутбук; ACTION_START_DATE → Позика на ноутбук (дата доступності)</p>
 <p>Якщо працівник отримав таку позику, (тобто є запис в таблиці DM.vw_R29_fact_Repayment_Credit де [BUDGET_ITEM_CODE] = '0000008240') то це [ACTION_START_DATE] + 3 роки  <br> Якщо працівник не отримував таку позику, то виводити дату кінця адаптаційного періоду  <br>adaptation_end_date із dm.vw_R27_fact_Employee_List  <br>По пріоритетному місцю роботи в організації (якщо кілька працевлаштувань) Якщо працівник отримав таку позику, (тобто є запис в таблиці DM.vw_R27_fact_Repayment_Credit де [BUDGET_ITEM_CODE] = '0000008240') то це [ACTION_START_DATE] + 3 роки  <br> Якщо працівник не отримував таку п</p>

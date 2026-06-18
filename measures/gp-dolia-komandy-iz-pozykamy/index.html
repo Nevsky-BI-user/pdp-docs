@@ -3200,6 +3200,10 @@
 
 <h1 id="gp">GP.Доля команди із позиками<a class="headerlink" href="#gp" title="Permanent link">&para;</a></h1>
 <p><em>тека <code>Group_Profile\TRS</code> · формат <code>0.00%;-0.00%;0.00%</code></em></p>
+<div class="admonition abstract">
+<p class="admonition-title">Джерела даних</p>
+<p><code>DM.vw_R27_dim_Employee_Access_List</code>, <code>DM.vw_R27_fact_Repayment_Credit_PDP</code></p>
+</div>
 <h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
 <p>ACTION_END_DATE → Доля команди із позиками</p>
 <p>Потрібно підрахувати кількість працівників у команді, по яким є записи в таблиці DM.vw_R27_fact_Repayment_Credit_PDP та поле action_end_date&gt;поточна дата (діюча позика) та поділити на поточну кількість членів команди. В деталізацію вивести ПІБ таких працівників, вид і розмір позики, дати видачі та погашення.</p>

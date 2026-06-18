@@ -3200,6 +3200,10 @@
 
 <h1 id="gp">GP.Доля команди з щомісячною премією, %<a class="headerlink" href="#gp" title="Permanent link">&para;</a></h1>
 <p><em>тека <code>Group_Profile\TRS</code> · формат <code>0.00%;-0.00%;0.00%</code></em></p>
+<div class="admonition abstract">
+<p class="admonition-title">Джерела даних</p>
+<p><code>DM.vw_R27_dim_Employee_Access_List</code>, <code>DM.vw_R27_fact_TRS_Plan_PDP</code></p>
+</div>
 <h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
 <p>BONUS_MONTH_SALARY_CNT → Премія місячна кіл-ть окладів; BONUS_MONTH_SALARY_CNT → Щомісячна премія; BONUS_MONTH_SALARY_CNT → Доля команди з щомісячною премією, %; BONUS_MONTH_SALARY_CNT → Місячна премія; MIN_TARIFF_RATE → Оклад; MIN_TARIFF_RATE → Позиція в окладній вилці; MIN_TARIFF_RATE → Зарплата (вилки); MIN_TARIFF_RATE → Розподіл за вилкою зарплат; MIN_TARIFF_RATE → Положення у вилці; category_name → Назва блоку</p>
 <p>Станом на дату події <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_fact_Employee_List_PDP]  <br>Відібрати записи по працівнику по працівнику [person_key], періоду [Period], організації [organization_key], підрозділу [division_key], посаді [position_key]<br>BONUS_MONTH_SALARY_CNT  - кількість окладів  <br>Розмір премії = Min_Tariff_Rate помножити на BONUS_MONTH_SALARY_CNT - сума (к-сть окладів*оклад)  <br>Якщо по працівнику записи відсутні, то показати прочерк "-" <br>Відбір робити за період станом на 12 міс. тому  <br>BONUS_MONTH_SALARY_CNT  -</p>

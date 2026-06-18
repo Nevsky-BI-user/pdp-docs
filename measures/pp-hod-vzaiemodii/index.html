@@ -3200,6 +3200,10 @@
 
 <h1 id="pp">PP.Год. взаємодії<a class="headerlink" href="#pp" title="Permanent link">&para;</a></h1>
 <p><em>тека <code>Personal_Profile\Життєвий цикл</code></em></p>
+<div class="admonition abstract">
+<p class="admonition-title">Джерела даних</p>
+<p><code>DM.vw_R27_fact_Employee_History_Position</code></p>
+</div>
 <h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
 <p>COLLABORATION_HOUR → Години загальної взаємодії за період від поточної точки до попередньої точки; COLLABORATION_HOUR → Годин загальної взаємодії  <br>по співробітнику; COLLABORATION_HOUR → Годин загальної взаємодії  <br>по кадровому підрозділу співробітника; COLLABORATION_HOUR → Годин загальної взаємодії  <br>по напряму співробітника; COLLABORATION_HOUR → Годин загальної взаємодії  <br>по Холдингу; COLLABORATION_HOUR → collaboration_hour_direction; COLLABORATION_HOUR → collaboration_hour_holding; COLLABORATION_HOUR → Годин загальної взаємодії  <br>по співробітнику за 3 попередніх місяці; COLLABORATION_HOUR → Годин загальної взаємодії по співробітнику за 3 попередніх місяці; COLLABORATION_HOUR → Годин загальної взаємодії за останній місяць; COLLABORATION_HOUR → Годин загальної взаємодії  <br>по кадровому підрозділу; COLLABORATION_HOUR → Годин загальної взаємодії  <br>по напряму команди; COLLABORATION_HOUR → Годин загальної взаємодії; PERIOD → Дата нарахування премії Зірка МХП; PERIOD → Дата; PERIOD → Період нарахування; PERIOD → Період</p>
 <p>Розрахункове значення.  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [DM.vw_R27_dim_Employee_Metric_Health_and_Wellbeing]   <br>Відбір по працівнику [person_key], періоду [PERIOD], документу прийому [DOC_JOB_APPLICATION_ID].  <br>Розраховується як середньоденне значення за попередній місяць. Потрібно значення поля collaboration_hour поділити на кількість робочих днів в тому місяці. Якщо працівник пропрацював менше місяця, то рахувати за фактично відпрацьований період.  <br>Кількість робочих днів місяця це поле [workdays_without_sickleaves_and_vacations]</p>

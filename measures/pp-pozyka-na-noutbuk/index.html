@@ -3200,6 +3200,10 @@
 
 <h1 id="pp">PP.Позика на ноутбук<a class="headerlink" href="#pp" title="Permanent link">&para;</a></h1>
 <p><em>тека <code>Personal_Profile\TRS</code></em></p>
+<div class="admonition abstract">
+<p class="admonition-title">Джерела даних</p>
+<p><code>DM.vw_R27_fact_Repayment_Credit_PDP</code></p>
+</div>
 <h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
 <p>LAND_SHARE_CONTRACT_SUM → Сума позики; LAND_SHARE_CONTRACT_SUM → Позика на ноутбук (остання); LAND_SHARE_CONTRACT_SUM → Доля команди з позикою на ноутбук (%) (діюча); LAND_SHARE_CONTRACT_SUM → Середній розмір позики; LAND_SHARE_CONTRACT_SUM → Позики</p>
 <p>Потрібно відібрати всі записи по працівнику [person_key], періоду [Period], організації [organization_key] ,  договору [CONTRACT_KEY], де [BUDGET_ITEM_CODE] = '0000008240'  <br>Якщо по працівнику не знайшлося запису, то вивести прочерк "-" Розрахункове поле: відношення кількості працівників із діючою на поточний день позикою на ноутбук до загальної чисельності команди Потрібно зсумувати значення поля land_share_contract_sum по всім працівникам із діючою позикою та подялити на кількість таких працівників.</p>

@@ -3200,6 +3200,10 @@
 
 <h1 id="ac">AC.Середня тривалість лікарняного на співробітника<a class="headerlink" href="#ac" title="Permanent link">&para;</a></h1>
 <p><em>тека <code>Group_Profile\Здоров'я та благополуччя</code></em></p>
+<div class="admonition abstract">
+<p class="admonition-title">Джерела даних</p>
+<p><code>DM.vw_R27_dim_Employee_Access_List</code></p>
+</div>
 <h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
 <p>IS_MAIN_POSITION → Пріоритетне місце роботи; IS_MAIN_POSITION → is_main_position; sick_leave_day_Total → Середня тривалість лікарняного; sick_leave_day_Total → Тривалість лікарняного (зважена на ФТЕ); sick_leave_day_Total → Середня тривалість лікарняного на співробітника; sick_leave_id_cnt → #68049; sick_leave_id_cnt → Кількість лікарняних; sick_leave_id_cnt → Середня кількість лікарняних на співробітника; sick_leave_id_cnt → Лікарняні</p>
 <p>1 - Так  <br>0 - Ні Розраховується шляхом ділення загальної кількості днів на лікарняному за останні 12 місяців, НЕ включаючи поточний місяць, на кількість унікальних лікарняних листів.  <br> = sick_leave_day_Total/sick_leave_id_cnt Розрахункове поле.  <br>Відношення загальної кількості днів лікарняних (крім по вагітності та пологам) до кількості унікальних оформлених лікарняних на команду.  <br>Цифру округлювати до десятих, в більшу сторону, якщо друга цифра після коми 5-9, і в меншу сторону, якщо друга цифра після коми 0-4. sick_leave_day_Total/sick_leave_id_cnt Розрахункове поле.  <br>Вивод</p>

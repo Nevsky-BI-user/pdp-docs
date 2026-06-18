@@ -3200,6 +3200,10 @@
 
 <h1 id="pp">PP.Ризик.Вид відстрочки<a class="headerlink" href="#pp" title="Permanent link">&para;</a></h1>
 <p><em>тека <code>Personal_Profile\Паспорт\Ризики</code></em></p>
+<div class="admonition abstract">
+<p class="admonition-title">Джерела даних</p>
+<p><code>DM.vw_R27_dim_Employee_Access_List</code></p>
+</div>
 <h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
 <p>DEFERMENT_REASON → Вид відстрочки; DEFERMENT_REASON → Відстрочка від призову; DEFERMENT_REASON → Причина відстрочки; IS_AT_RISK → Під ризиком мобілізації; IS_AT_RISK → Ризик мобілізації; IS_AT_RISK → Доля чоловіків під ризиком мобілізації (%)</p>
 <p>"За віком"  <br> "Троє дітей"  <br>"За станом здоров'я"  <br>"Бронювання"  <br>Якщо поле deferment_reason is null, тоді треба перевірити поле is_at_risk. Якщо is_at_risk = 1, тоді "Під ризиком", інакше - проставити лейбл "Дані відсутні". Якщо значення в полі відсутнє, то показати текст "Дані відсутні"  або знак "-". "За віком"  <br> "Троє дітей"  <br>"За станом здоров'я"  <br>"Бронювання"  <br>Якщо поле deferment_reason is null, тоді треба перевірити поле is_at_risk. Якщо is_at_risk = 1, тоді "Під ризиком", інакше - проставити лейбл "Дані відсутні". "За віком"  <br> "Троє дітей"  <br>"За стано</p>

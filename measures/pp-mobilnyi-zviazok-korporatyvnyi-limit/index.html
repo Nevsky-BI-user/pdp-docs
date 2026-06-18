@@ -3200,6 +3200,10 @@
 
 <h1 id="pp-">'PP.Мобільний зв''язок - Корпоративний ліміт'<a class="headerlink" href="#pp-" title="Permanent link">&para;</a></h1>
 <p><em>тека <code>Personal_Profile\TRS</code></em></p>
+<div class="admonition abstract">
+<p class="admonition-title">Джерела даних</p>
+<p><code>DM.vw_R27_fact_Mobile_Limit_PDP</code></p>
+</div>
 <h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
 <p>PHONE_CORP_LIMIT → Мобільний зв'язок - Корпоративний ліміт; PHONE_CORP_LIMIT → Середні витрати на мобільний зв’язок; PHONE_CORP_LIMIT → Мобільний зв'язок</p>
 <p>Потрібно відібрати всі записи по працівнику [person_key], періоду [Period], організації [organization_key]  <br>Якщо PHONE_CORP_LIMIT = "99999", виводимо значення "Безлімітний"  <br>Якщо значення в полі відсутнє, то показати текст "Дані відсутні" або знак "-" Розрахункове.  <br>Потрібно зсумувати значення поля PHONE_CORP_LIMIT ( PHONE_CORP_LIMIT &lt;&gt; '99999') по членам команди, які мають компенсацію мобільного зв'язку, та поділити на кількість таких членів команди.  <br>В деталізацію вивести перелік таких працівників та суму на компенсацію зв'язку та назву пакету (PHONE_PACKAGE_NAME) по кожному </p>

@@ -3200,6 +3200,10 @@
 
 <h1 id="gp">GP.Кількість Ветеранів<a class="headerlink" href="#gp" title="Permanent link">&para;</a></h1>
 <p><em>тека <code>Group_Profile\Загальна інформація</code> · формат <code>0;-0;0</code></em></p>
+<div class="admonition abstract">
+<p class="admonition-title">Джерела даних</p>
+<p><code>DM.vw_R27_dim_Employee_Access_List</code>, <code>DM.vw_R27_dim_Person_PDP</code></p>
+</div>
 <h2 id="-">Бізнес-суть<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
 <p>STATUS_NAME → Статус працівника; STATUS_NAME → Статус співробітника; IS_VETERAN → Статус Ветеран; IS_VETERAN → Кількість Ветеранів; IS_VETERAN → Кількість демобілізованих</p>
 <p>Поле зберігається в довіднику [dm.vw_R27_dim_Employee_Status]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List_PDP], через відповідний зв’язок за ключем [status_key].  <br>Поле Статус не може бути пустим, бо у працівника він завжди є. Поле зберігається в довіднику dm.vw_R27_dim_person ]  <br>Це поле має бути доступне у візуалізаціях, побудованих на основі фактової таблиці [dm.vw_R27_fact_Employee_List], через відповідний зв’язок за ключем [person_key].  <br>Якщо 1 - Так, якщо 0 - Ні. Розрахункове поле. Підрахувати скільки прац</p>
