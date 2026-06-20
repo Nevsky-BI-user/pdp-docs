@@ -3246,7 +3246,7 @@
 <span class="w">    </span><span class="nb">VAR</span><span class="w"> </span>_Perionds = VALUES(&#39;fact_TRS&#39;[PERIOD])
 <span class="w">    </span><span class="nb">VAR</span><span class="w"> </span>_table0 = 
 <span class="w">        </span><span class="nf">ADDCOLUMNS</span><span class="p">(</span>
-<span class="w">            </span><span class="nf">CROSSJOIN</span><span class="p">(</span>_Employees, _Perionds),
+<span class="w">            </span>_Employees,
 <span class="w">            </span><span class="s">&quot;@Indicator&quot;</span><span class="p">,</span>
 <span class="w">            </span><span class="nf">CALCULATE</span><span class="p">(</span>
 <span class="w">                </span><span class="nf">SUM</span><span class="p">(</span><span class="na">&#39;fact_TRS&#39;[PAYMENTS_FACT_UAH]</span><span class="p">),</span>
@@ -3272,7 +3272,7 @@
 <span class="w">    </span><span class="nb">VAR</span><span class="w"> </span>_table0 = 
 <span class="w">        </span><span class="nf">CALCULATETABLE</span><span class="p">(</span>
 <span class="w">            </span><span class="nf">ADDCOLUMNS</span><span class="p">(</span>
-<span class="w">                </span><span class="nf">CROSSJOIN</span><span class="p">(</span>_Employees, _Perionds),
+<span class="w">                </span>_Employees,
 <span class="w">                </span><span class="s">&quot;@Indicator&quot;</span><span class="p">,</span>
 <span class="w">                </span><span class="nf">CALCULATE</span><span class="p">(</span>
 <span class="w">                    </span><span class="nf">SUM</span><span class="p">(</span><span class="na">&#39;fact_TRS&#39;[PAYMENTS_FACT_UAH]</span><span class="p">),</span>
