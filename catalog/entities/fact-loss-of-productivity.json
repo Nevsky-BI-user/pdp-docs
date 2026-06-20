@@ -539,8 +539,8 @@
   "source": {
     "repo": "PDP",
     "file": "PDP.SemanticModel/definition/tables/fact_Loss_of_Productivity.tmdl",
-    "commit": "49026f60ce142a123a0fccf34706eb5469dd2423",
-    "extractedAt": "2026-06-15T12:18:32+03:00"
+    "commit": "6fe45c40f472d1b6afb7c8e683e258b115d5e842",
+    "extractedAt": "2026-06-19T16:48:19+03:00"
   },
   "manualNotes": ""
 }
