@@ -28,6 +28,8 @@
 | [dim_Unit](./dim-unit.md) | `DM.vw_R27_dim_Unit` |
 | [dim_Work_Format](./dim-work-format.md) | `DM.vw_R27_dim_Work_Format` |
 | [dim__HRBP_OS](./dim-hrbp-os.md) | — |
+| [fact_360_Assessment](./fact-360-assessment.md) | `DM.vw_R27_fact_360_Assessment` |
+| [fact_360_Behavior_Indicator](./fact-360-behavior-indicator.md) | `DM.vw_R27_fact_360_Behavior_Indicator` |
 | [fact_Average_Income](./fact-average-income.md) | `DM.vw_R27_fact_Average_Income` |
 | [fact_Burnout_Indicators](./fact-burnout-indicators.md) | — |
 | [fact_EXCEL_Group_Profile_General_Metric](./fact-excel-group-profile-general-metric.md) | `DWH.t_SPO_HR_Group_Profile_General_Metric` |
@@ -57,9 +59,11 @@
 | [fact_Viva_Metrics](./fact-viva-metrics.md) | — |
 | [fact_employee_seniority_by_month](./fact-employee-seniority-by-month.md) | `DM.vw_R27_fact_employee_seniority_by_month_PDP` |
 | [p_AC.Loss_Productivity](./p-ac-loss-productivity.md) | — |
+| [t_360_Assessment](./t-360-assessment.md) | — |
 | [t_AC Burnout](./t-ac-burnout.md) | — |
 | [t_FlagDim](./t-flagdim.md) | — |
 | [t_HierarchyTypes](./t-hierarchytypes.md) | — |
 | [t_IS_FIRED](./t-is-fired.md) | — |
 | [t_Loss_Productivity_Metrics_by_Persona](./t-loss-productivity-metrics-by-persona.md) | `DWH.t_SPO_HR_Person_Matrix_with_Coefficient` |
+| [t_Participant_Categories](./t-participant-categories.md) | — |
 | [t_user_roles](./t-user-roles.md) | — |

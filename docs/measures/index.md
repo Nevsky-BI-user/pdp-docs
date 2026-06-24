@@ -1,6 +1,27 @@
 # Каталог мір
 
-Усього: **729** мір за 42 теками. Для перегляду за сторінками звіту див. [Звіт](../report/index.md).
+Усього: **745** мір за 43 теками. Для перегляду за сторінками звіту див. [Звіт](../report/index.md).
+
+## (без теки)
+
+| Міра | Формат | Бізнес-суть |
+|---|---|---|
+| [Competency Comment (SVG)](./competency-comment-svg.md) | — | — |
+| [PP.SVG.Оцінка компетенцій.Загальна](./pp-svg-otsinka-kompetentsii-zahalna.md) | — | — |
+| [PP.SVG.Оцінка компетенцій.Загальна по блоках](./pp-svg-otsinka-kompetentsii-zahalna-po-blokakh.md) | — | — |
+| [PP.SVG.Оцінка компетенцій.Компетенція](./pp-svg-otsinka-kompetentsii-kompetentsiia.md) | — | — |
+| [PP.SVG.Оцінка компетенцій.Хітмап по блоках](./pp-svg-otsinka-kompetentsii-khitmap-po-blokakh.md) | — | — |
+| [PP.SVG.Приховані можливості](./pp-svg-prykhovani-mozhlyvosti.md) | — | — |
+| [PP.SVG.Сліпі плями](./pp-svg-slipi-pliamy.md) | — | — |
+| [PP.Оцінка компетенцій.Барчарт](./pp-otsinka-kompetentsii-barchart.md) | — | — |
+| [PP.Оцінка компетенцій.Експертна оцінка](./pp-otsinka-kompetentsii-ekspertna-otsinka.md) | — | — |
+| [PP.Оцінка компетенцій.Загальна](./pp-otsinka-kompetentsii-zahalna.md) | — | — |
+| [PP.Оцінка компетенцій.Оцінка 360](./pp-otsinka-kompetentsii-otsinka-360.md) | — | — |
+| [PP.Оцінка компетенцій.Оцінка керівника](./pp-otsinka-kompetentsii-otsinka-kerivnyka.md) | — | — |
+| [PP.Оцінка компетенцій.Оцінка колег](./pp-otsinka-kompetentsii-otsinka-koleh.md) | — | — |
+| [PP.Оцінка компетенцій.Оцінка крос-колег](./pp-otsinka-kompetentsii-otsinka-kros-koleh.md) | — | — |
+| [PP.Оцінка компетенцій.Оцінка підлеглих](./pp-otsinka-kompetentsii-otsinka-pidlehlykh.md) | — | — |
+| [PP.Оцінка компетенцій.Самооцінка](./pp-otsinka-kompetentsii-samootsinka.md) | — | — |
 
 ## Analytical Cases\Burnout_Risk\Export
 

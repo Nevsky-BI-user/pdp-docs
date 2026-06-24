@@ -1,0 +1,70 @@
+{
+  "id": "pp-svg-otsinka-kompetentsii-khitmap-po-blokakh",
+  "type": "measure",
+  "name": "PP.SVG.Оцінка компетенцій.Хітмап по блоках",
+  "homeTable": "_Measures",
+  "displayFolder": "",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _ff = \"Segoe UI\"\n\n-- ── Палітра грейдів (єдина точка редагування кольорів) ──\nVAR _cTopA  = \"#16C8E8\"   // TOP A — бірюзовий\nVAR _cA     = \"#2EA84F\"   // A — зелений\nVAR _cB     = \"#F2B100\"   // B — жовтий\nVAR _cC     = \"#9A9A9A\"   // C — сірий\nVAR _cD     = \"#E2231A\"   // D — червоний\nVAR _cBlank = \"#F0F0F0\"   // немає значення\nVAR _hdrColor = \"#3A4660\" // підписи рядків/стовпців/легенди\n\n-- ── Розмір візуала (підставити з Формат → Розмір і розташування) ──\nVAR _canvasW = 1285       // Ширина візуала\nVAR _canvasH = 198        // Висота візуала\n\n-- ── Розміри шрифтів (єдина точка налаштування) ──\nVAR _fsLabel  = 11        // назви блоків\nVAR _fsHeader = 11        // заголовки стовпців\nVAR _fsValue  = 10        // значення в клітинці\nVAR _fsLegend = 11       // легенда\nVAR _charRatio = 0.58     // приблизна ширина символу кирилиці відносно кегля (для ширини колонки підписів)\n\n-- ── Стовпці = вибрані рядки параметра поля t_360_Assessment ──\n-- складений ключ field-параметра = [t_360_Assessment] + [t_360_Assessment Поля] → у SUMMARIZE обовʼязкові обидва\nVAR _fieldRaw =\n    SUMMARIZE(\n        t_360_Assessment,\n        t_360_Assessment[t_360_Assessment],            -- назва поля (заголовок)\n        t_360_Assessment[t_360_Assessment Поля],       -- частина складеного ключа (не використовується, лише для коректності)\n        t_360_Assessment[t_360_Assessment Замовлення]  -- порядок із параметра\n    )\nVAR _fields =\n    ADDCOLUMNS(\n        _fieldRaw,\n        \"@col\", RANKX(_fieldRaw, t_360_Assessment[t_360_Assessment Замовлення], , ASC, Dense) - 1\n    )\nVAR _nCols = COUNTROWS(_fields)\n\n-- ── Рядки = блоки ──\nVAR _catRaw = SUMMARIZE('fact_360_Assessment', 'fact_360_Assessment'[Category_Name])\nVAR _cats =\n    ADDCOLUMNS(_catRaw, \"@r\", RANKX(_catRaw, 'fact_360_Assessment'[Category_Name], , ASC, Dense))\nVAR _rowCount = COUNTROWS(_cats)\n\n-- ── Клітинки: значення обраної параметром міри під фільтром категорії ──\nVAR _cells =\n    ADDCOLUMNS(\n        CROSSJOIN(_cats, _fields),\n        \"Val\",\n            VAR _cat  = 'fact_360_Assessment'[Category_Name]\n            VAR _disp = t_360_Assessment[t_360_Assessment]\n            RETURN\n                CALCULATE(\n                    SWITCH(\n                        _disp,\n                        \"Самооцінка\",       [PP.Оцінка компетенцій.Самооцінка],\n                        \"Експертна оцінка\", [PP.Оцінка компетенцій.Експертна оцінка],\n                        \"Оцінка 360\",       [PP.Оцінка компетенцій.Оцінка 360],\n                        \"Керівник\",         [PP.Оцінка компетенцій.Оцінка керівника],\n                        \"Колеги\",           [PP.Оцінка компетенцій.Оцінка колег],\n                        \"Крос-колеги\",      [PP.Оцінка компетенцій.Оцінка крос-колег],\n                        \"Підлеглі\",         [PP.Оцінка компетенцій.Оцінка підлеглих]\n                    ),\n                    'fact_360_Assessment'[Category_Name] = _cat\n                )\n    )\n\n-- ── Геометрія: клітинки заповнюють фіксоване полотно _canvasW × _canvasH ──\nVAR _maxLen = MAXX(_cats, LEN('fact_360_Assessment'[Category_Name]))\nVAR _labelW = ROUNDUP(4 + _maxLen * _fsLabel * _charRatio + 8, 0)   -- ліва колонка під назви блоків\nVAR _legendW   = 70                                                 -- права колонка під легенду\nVAR _legendGap = 12\nVAR _gap       = 6                                                  -- проміжок між клітинками\n-- горизонталь: клітинки на всю ширину між підписами й легендою\nVAR _plotW = _canvasW - _labelW - _legendGap - _legendW\nVAR _cellW = DIVIDE(_plotW - MAX(_nCols - 1, 0) * _gap, MAX(_nCols, 1))\nVAR _legX  = _labelW + _plotW + _legendGap                         // = _canvasW - _legendW\n-- вертикаль: рядки на всю висоту під заголовком\nVAR _headerY = 16                                                  // базова лінія заголовків стовпців\nVAR _gridTop = 24                                                  // верх першого рядка\nVAR _botPad  = 8\nVAR _rowGap  = 6\nVAR _availH   = _canvasH - _gridTop - _botPad\nVAR _rowPitch = DIVIDE(_availH, MAX(_rowCount, 1))                 // крок рядка від висоти полотна\nVAR _cellH    = (_rowPitch - _rowGap) * 0.8\n-- легенда: вертикальний стек, центрований по фактичній висоті сітки\nVAR _gridH     = _rowCount * _rowPitch - _rowGap\nVAR _legPitch  = 20\nVAR _legBlockH = 5 * _legPitch\nVAR _legTop    = _gridTop + MAX(0, (_gridH - _legBlockH) / 2)\n\n-- ── Заголовки стовпців (з параметра поля) ──\nVAR _ColHeaders =\n    CONCATENATEX(\n        _fields,\n        VAR _hx = _labelW + [@col] * (_cellW + _gap) + _cellW / 2\n        RETURN\n            \"<text x='\" & FORMAT(_hx, \"0.0\", \"en-US\") & \"' y='\" & _headerY & \"' text-anchor='middle' style='font-family:\" & _ff & \"; font-size:\" & _fsHeader & \"px; fill:\" & _hdrColor & \"; font-weight:600;'>\" & SUBSTITUTE(t_360_Assessment[t_360_Assessment], \"&\", \"&amp;\") & \"</text>\",\n        \"\",\n        [@col], ASC\n    )\n\n-- ── Назви блоків (ліва колонка, один рядок) ──\nVAR _RowLabels =\n    CONCATENATEX(\n        _cats,\n        VAR _cat = 'fact_360_Assessment'[Category_Name]\n        VAR _yc  = _gridTop + ([@r] - 1) * _rowPitch + _cellH / 2 + _fsLabel * 0.35\n        RETURN\n            \"<text x='4' y='\" & FORMAT(_yc, \"0.0\", \"en-US\") & \"' style='font-family:\" & _ff & \"; font-size:\" & _fsLabel & \"px; fill:\" & _hdrColor & \"; font-weight:600;'>\" & SUBSTITUTE(_cat, \"&\", \"&amp;\") & \"</text>\",\n        \"\",\n        [@r], ASC\n    )\n\n-- ── Клітинки хітмапу ──\nVAR _cellsSvg =\n    CONCATENATEX(\n        _cells,\n        VAR _v = [Val]\n        VAR _class =\n            SWITCH(\n                TRUE(),\n                ISBLANK(_v), \"\",\n                _v < 3,    \"D\",\n                _v < 3.4,  \"C\",\n                _v < 3.75, \"B\",\n                _v <= 4.25,\"A\",\n                \"TOP A\"\n            )\n        VAR _col =\n            SWITCH(_class, \"TOP A\",_cTopA, \"A\",_cA, \"B\",_cB, \"C\",_cC, \"D\",_cD, _cBlank)\n        VAR _txtCol = SWITCH(_class, \"A\",\"#FFFFFF\", \"D\",\"#FFFFFF\", \"#1F2A44\")\n        VAR _label  = IF(ISBLANK(_v), \"—\", FORMAT(_v, \"0.00\") & \" (\" & _class & \")\")\n        VAR _x  = _labelW + [@col] * (_cellW + _gap)\n        VAR _y  = _gridTop + ([@r] - 1) * _rowPitch\n        VAR _cx = _x + _cellW / 2\n        VAR _cy = _y + _cellH / 2 + _fsValue * 0.35\n        RETURN\n            \"<rect x='\" & FORMAT(_x, \"0.0\", \"en-US\") & \"' y='\" & FORMAT(_y, \"0.0\", \"en-US\") & \"' width='\" & FORMAT(_cellW, \"0.0\", \"en-US\") & \"' height='\" & FORMAT(_cellH, \"0.0\", \"en-US\") & \"' rx='6' fill='\" & _col & \"'/>\" &\n            \"<text x='\" & FORMAT(_cx, \"0.0\", \"en-US\") & \"' y='\" & FORMAT(_cy, \"0.0\", \"en-US\") & \"' text-anchor='middle' style='font-family:\" & _ff & \"; font-size:\" & _fsValue & \"px; fill:\" & _txtCol & \"; font-weight:700;'>\" & _label & \"</text>\",\n        \"\",\n        [@r], ASC, [@col], ASC\n    )\n\n-- ── Легенда грейдів праворуч (вертикальний стек) ──\nVAR _legendTbl =\n    UNION(\n        ROW(\"Lbl\",\"TOP A\",\"Clr\",_cTopA,\"Ord\",0),\n        ROW(\"Lbl\",\"A\",    \"Clr\",_cA,   \"Ord\",1),\n        ROW(\"Lbl\",\"B\",    \"Clr\",_cB,   \"Ord\",2),\n        ROW(\"Lbl\",\"C\",    \"Clr\",_cC,   \"Ord\",3),\n        ROW(\"Lbl\",\"D\",    \"Clr\",_cD,   \"Ord\",4)\n    )\nVAR _legendSvg =\n    CONCATENATEX(\n        _legendTbl,\n        VAR _sqY  = _legTop + [Ord] * _legPitch + (_legPitch - 11) / 2\n        VAR _txtY = _legTop + [Ord] * _legPitch + _legPitch / 2 + _fsLegend * 0.35\n        RETURN\n            \"<rect x='\" & FORMAT(_legX, \"0.0\", \"en-US\") & \"' y='\" & FORMAT(_sqY, \"0.0\", \"en-US\") & \"' width='11' height='11' rx='3' fill='\" & [Clr] & \"'/>\" &\n            \"<text x='\" & FORMAT(_legX + 15, \"0.0\", \"en-US\") & \"' y='\" & FORMAT(_txtY, \"0.0\", \"en-US\") & \"' style='font-family:\" & _ff & \"; font-size:\" & _fsLegend & \"px; fill:\" & _hdrColor & \"; font-weight:600;'>\" & [Lbl] & \"</text>\",\n        \"\",\n        [Ord], ASC\n    )\n\nRETURN\n\"<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 \" & FORMAT(_canvasW, \"0\") & \" \" & FORMAT(_canvasH, \"0\") & \"' preserveAspectRatio='xMidYMid meet'>\"\n& _ColHeaders\n& _RowLabels\n& _cellsSvg\n& _legendSvg\n& \"</svg>\"",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile",
+      "groups": [
+        "Результативність та оцінка › Оцінка компет.Детально"
+      ]
+    }
+  ],
+  "dependencies": {
+    "measures": [
+      "PP.Оцінка компетенцій.Експертна оцінка",
+      "PP.Оцінка компетенцій.Оцінка 360",
+      "PP.Оцінка компетенцій.Оцінка керівника",
+      "PP.Оцінка компетенцій.Оцінка колег",
+      "PP.Оцінка компетенцій.Оцінка крос-колег",
+      "PP.Оцінка компетенцій.Оцінка підлеглих",
+      "PP.Оцінка компетенцій.Самооцінка"
+    ],
+    "columns": [
+      "fact_360_Assessment[Category_Name]",
+      "t_360_Assessment[t_360_Assessment Замовлення]",
+      "t_360_Assessment[t_360_Assessment Поля]",
+      "t_360_Assessment[t_360_Assessment]"
+    ],
+    "tables": [
+      "fact_360_Assessment",
+      "t_360_Assessment"
+    ]
+  },
+  "usedBy": [],
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_360_Assessment"
+    ],
+    "sourceColumns": [
+      "Category_Name",
+      "t_360_Assessment",
+      "t_360_Assessment Замовлення",
+      "t_360_Assessment Поля"
+    ],
+    "powerQuery": "fact_360_Assessment"
+  },
+  "business": {
+    "name": "",
+    "logic": [],
+    "requirementRefs": []
+  },
+  "tags": [
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "a424d2059f3e196794146c8cef8009884c9a1c9b",
+    "extractedAt": "2026-06-23T15:19:29+03:00"
+  },
+  "manualNotes": ""
+}

@@ -278,8 +278,17 @@ VAR _refLine =
         ""
     )
 
+// ─── Масштаб до цільової ширини 423 ───
+// _viewBox лишається у внутрішніх координатах _W × _H; атрибути width/height —
+// це РОЗМІР ВІДОБРАЖЕННЯ. Рендер вписує _W у 423px, тому весь малюнок
+// масштабується рівномірно з коефіцієнтом _Scale; висота множиться на той самий
+// коефіцієнт, щоб не було спотворення пропорцій і порожніх полів.
+VAR _TargetW = 423
+VAR _Scale = DIVIDE(_TargetW, _W, 1)
+VAR _DisplayH = _H * _Scale
+
 RETURN
-"<svg xmlns='http://www.w3.org/2000/svg' width='" & FORMAT(_W, "0") & "' height='" & FORMAT(_H, "0") & "' viewBox='0 0 " & FORMAT(_W, "0") & " " & FORMAT(_H, "0") & "'>"
+"<svg xmlns='http://www.w3.org/2000/svg' width='" & FORMAT(_TargetW, "0") & "' height='" & FORMAT(_DisplayH, "0") & "' viewBox='0 0 " & FORMAT(_W, "0") & " " & FORMAT(_H, "0") & "'>"
 & _Defs
 & _Legend
 & _refLine

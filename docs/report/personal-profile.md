@@ -1,7 +1,7 @@
 # Personal Profile
 
 !!! info "Сторінка звіту"
-    Тип: **Основна сторінка звіту** · мір: **236** · блоків візуалізації: **20**
+    Тип: **Основна сторінка звіту** · мір: **247** · блоків візуалізації: **22**
 
 [:octicons-arrow-left-24: Усі сторінки звіту](index.md)
 
@@ -311,6 +311,27 @@
 | [PP.Частка OKR за наявністю змін](../measures/pp-chastka-okr-za-naiavnistiu-zmin.md) | `0` | — |
 | [PP.Частка OKR за типом цілі](../measures/pp-chastka-okr-za-typom-tsili.md) | — | — |
 | [dummy_blank](../measures/dummy-blank.md) | — | — |
+
+## Результативність та оцінка › Оцінка компет.Детально
+
+| Міра | Формат | Бізнес-назва |
+|---|---|---|
+| [PP.SVG.Оцінка компетенцій.Компетенція](../measures/pp-svg-otsinka-kompetentsii-kompetentsiia.md) | — | — |
+| [PP.SVG.Оцінка компетенцій.Хітмап по блоках](../measures/pp-svg-otsinka-kompetentsii-khitmap-po-blokakh.md) | — | — |
+| [PP.SVG.Приховані можливості](../measures/pp-svg-prykhovani-mozhlyvosti.md) | — | — |
+| [PP.SVG.Сліпі плями](../measures/pp-svg-slipi-pliamy.md) | — | — |
+| [PP.Оцінка компетенцій.Барчарт](../measures/pp-otsinka-kompetentsii-barchart.md) | — | — |
+| [PP.Оцінка компетенцій.Оцінка керівника](../measures/pp-otsinka-kompetentsii-otsinka-kerivnyka.md) | — | — |
+| [PP.Оцінка компетенцій.Оцінка колег](../measures/pp-otsinka-kompetentsii-otsinka-koleh.md) | — | — |
+| [PP.Оцінка компетенцій.Оцінка крос-колег](../measures/pp-otsinka-kompetentsii-otsinka-kros-koleh.md) | — | — |
+| [PP.Оцінка компетенцій.Оцінка підлеглих](../measures/pp-otsinka-kompetentsii-otsinka-pidlehlykh.md) | — | — |
+| [PP.Оцінка компетенцій.Самооцінка](../measures/pp-otsinka-kompetentsii-samootsinka.md) | — | — |
+
+## Результативність та оцінка › Оцінка компетенцій
+
+| Міра | Формат | Бізнес-назва |
+|---|---|---|
+| [PP.SVG.Оцінка компетенцій.Загальна](../measures/pp-svg-otsinka-kompetentsii-zahalna.md) | — | — |
 
 ## Результативність та оцінка › Результативність
 

@@ -1,0 +1,42 @@
+{
+  "id": "t-360-assessment",
+  "type": "entity",
+  "name": "t_360_Assessment",
+  "definition": "",
+  "server": "",
+  "db": "",
+  "powerQuery": "t_360_Assessment",
+  "sourceTables": [],
+  "columns": [
+    {
+      "name": "t_360_Assessment",
+      "dataType": "",
+      "source": "[Value1]",
+      "isCalculated": false
+    },
+    {
+      "name": "t_360_Assessment Поля",
+      "dataType": "",
+      "source": "[Value2]",
+      "isCalculated": false
+    },
+    {
+      "name": "t_360_Assessment Замовлення",
+      "dataType": "",
+      "source": "[Value3]",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [],
+  "relatedMeasures": [
+    "PP.SVG.Оцінка компетенцій.Хітмап по блоках"
+  ],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/t_360_Assessment.tmdl",
+    "commit": "a424d2059f3e196794146c8cef8009884c9a1c9b",
+    "extractedAt": "2026-06-23T15:19:29+03:00"
+  },
+  "manualNotes": ""
+}

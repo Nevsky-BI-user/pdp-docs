@@ -35,7 +35,7 @@ VAR _data_sup = SUMMARIZE(
 )
 
 // --- Геометрія полотна ---
-VAR _W = 640
+VAR _W = 381                       // 423 × 0.9 — ширина відображення із запасом 10% (без прокрутки)
 VAR _H = 150
 VAR _MarginTop = 8
 VAR _MarginLR = 40
@@ -43,13 +43,22 @@ VAR _ChartTop = _MarginTop + _TopTextH
 VAR _ChartBot = _H - _BottomMargin
 VAR _ChartH = _ChartBot - _ChartTop
 
+// --- Рядки підписів значень (два рядки замість одного) ---
+VAR _Label1Y = _MarginTop + 6      // 14 — верхній рядок (Керівником, жирний)
+VAR _Label2Y = _MarginTop + 19     // 27 — нижній рядок (Самооцінка)
+
 VAR _BarCount = COUNTROWS(_data_sup)
-VAR _BarWidth = 20
-VAR _BarGap = 10
+VAR _BarWidth = 14
+VAR _BarGap = 8
 VAR _GroupWidth = (_BarWidth * 2) + _BarGap
 VAR _AvailableW = _W - 2 * _MarginLR
-VAR _GroupGap = IF(_BarCount > 1, (_AvailableW - _BarCount * _GroupWidth) / (_BarCount - 1), 0)
-VAR _StartX = _MarginLR
+
+// --- Центрування блоку груп ---
+VAR _GroupGapDesired = 48
+VAR _MaxGapThatFits = IF(_BarCount > 1, (_AvailableW - _BarCount * _GroupWidth) / (_BarCount - 1), 0)
+VAR _GroupGap = MAX(0, MIN(_GroupGapDesired, _MaxGapThatFits))
+VAR _TotalContentWidth = _BarCount * _GroupWidth + (_BarCount - 1) * _GroupGap
+VAR _StartX = (_W - _TotalContentWidth) / 2
 
 // --- Побудова ---
 VAR _BarsSVG = CONCATENATEX(
@@ -112,18 +121,17 @@ VAR _BarsSVG = CONCATENATEX(
 	VAR _y2 = _ChartBot - _h2
 
 	VAR _rects =
-		"<rect x='" & _x1 & "' y='" & _ChartTop & "' width='" & _BarWidth & "' height='" & _ChartH & "' fill='" & _ColorFill1 & "' fill-opacity='0.1' stroke='" & _ColorFill1 & "' stroke-width='1' stroke-opacity='0.3' />" &
-		"<rect x='" & _x2 & "' y='" & _ChartTop & "' width='" & _BarWidth & "' height='" & _ChartH & "' fill='" & _ColorFill2 & "' fill-opacity='0.1' />" &
-		"<rect x='" & _x1 & "' y='" & FORMAT(_y1, "0.0") & "' width='" & _BarWidth & "' height='" & FORMAT(_h1, "0.0") & "' fill='" & _ColorFill1 & "' stroke='" & _ColorFill1 & "' stroke-width='1' />" &
-		"<rect x='" & _x2 & "' y='" & FORMAT(_y2, "0.0") & "' width='" & _BarWidth & "' height='" & FORMAT(_h2, "0.0") & "' fill='" & _ColorFill2 & "' fill-opacity='0.7' />"
+		"<rect x='" & FORMAT(_x1, "0.0", "en-US") & "' y='" & _ChartTop & "' width='" & _BarWidth & "' height='" & _ChartH & "' fill='" & _ColorFill1 & "' fill-opacity='0.1' stroke='" & _ColorFill1 & "' stroke-width='1' stroke-opacity='0.3' />" &
+		"<rect x='" & FORMAT(_x2, "0.0", "en-US") & "' y='" & _ChartTop & "' width='" & _BarWidth & "' height='" & _ChartH & "' fill='" & _ColorFill2 & "' fill-opacity='0.1' />" &
+		"<rect x='" & FORMAT(_x1, "0.0", "en-US") & "' y='" & FORMAT(_y1, "0.0", "en-US") & "' width='" & _BarWidth & "' height='" & FORMAT(_h1, "0.0", "en-US") & "' fill='" & _ColorFill1 & "' stroke='" & _ColorFill1 & "' stroke-width='1' />" &
+		"<rect x='" & FORMAT(_x2, "0.0", "en-US") & "' y='" & FORMAT(_y2, "0.0", "en-US") & "' width='" & _BarWidth & "' height='" & FORMAT(_h2, "0.0", "en-US") & "' fill='" & _ColorFill2 & "' fill-opacity='0.7' />"
 
-	VAR _labelMidX = _x1 + _BarWidth + (_BarGap / 2)
 	VAR _labels =
-		"<text x='" & (_labelMidX - 3) & "' y='" & (_ChartTop - 12) & "' text-anchor='end' style='font-family:" & _fontFamily & "; font-size:" & _ValueFontSize & "px; fill:" & _labelColor & "; font-weight:700;'>" & _label1 & "</text>" &
-		"<text x='" & (_labelMidX + 3) & "' y='" & (_ChartTop - 12) & "' text-anchor='start' style='font-family:" & _fontFamily & "; font-size:" & _ValueFontSize & "px; fill:" & _labelColor & ";'>" & _label2 & "</text>"
+		"<text x='" & FORMAT(_cx, "0.0", "en-US") & "' y='" & _Label1Y & "' text-anchor='middle' style='font-family:" & _fontFamily & "; font-size:" & _ValueFontSize & "px; fill:" & _labelColor & "; font-weight:700;'>" & _label1 & "</text>" &
+		"<text x='" & FORMAT(_cx, "0.0", "en-US") & "' y='" & _Label2Y & "' text-anchor='middle' style='font-family:" & _fontFamily & "; font-size:" & _ValueFontSize & "px; fill:" & _labelColor & ";'>" & _label2 & "</text>"
 
 	VAR _periodLabel =
-		"<text x='" & _cx & "' y='" & (_H - 5) & "' text-anchor='middle' style='font-family:" & _fontFamily & "; font-size:12px; fill:" & _labelColor & "; font-weight:600;'>" &
+		"<text x='" & FORMAT(_cx, "0.0", "en-US") & "' y='" & (_H - 5) & "' text-anchor='middle' style='font-family:" & _fontFamily & "; font-size:12px; fill:" & _labelColor & "; font-weight:600;'>" &
 		SUBSTITUTE([performence_period], "&", "&amp;") &
 		"</text>"
 
@@ -133,7 +141,7 @@ VAR _BarsSVG = CONCATENATEX(
 )
 
 RETURN
-"<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='" & _H & "' viewBox='0 0 " & _W & " " & _H & "' preserveAspectRatio='xMinYMid meet'>
+"<svg xmlns='http://www.w3.org/2000/svg' width='" & _W & "' height='" & _H & "' viewBox='0 0 " & _W & " " & _H & "' preserveAspectRatio='xMidYMid meet'>
 	" & _BarsSVG & "
 </svg>"
 ```

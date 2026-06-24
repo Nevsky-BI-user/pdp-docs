@@ -106,6 +106,8 @@
 | from | USER_ACCESS_ID | `fact_Average_Income` | USER_ACCESS_ID |
 | from | USER_ACCESS_ID | `fact_Employees_Attributes` | USER_ACCESS_ID |
 | to | USER_ACCESS_ID | `fact_Employee_History_Position` | USER_ACCESS_ID |
+| to | USER_ACCESS_ID | `fact_360_Assessment` | USER_ACCESS_ID |
+| to | USER_ACCESS_ID | `fact_360_Behavior_Indicator` | USER_ACCESS_ID |
 
 ## Пов'язані міри
 

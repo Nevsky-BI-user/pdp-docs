@@ -107,6 +107,8 @@ nav:
       - "dim_Unit": entities/dim-unit.md
       - "dim_Work_Format": entities/dim-work-format.md
       - "dim__HRBP_OS": entities/dim-hrbp-os.md
+      - "fact_360_Assessment": entities/fact-360-assessment.md
+      - "fact_360_Behavior_Indicator": entities/fact-360-behavior-indicator.md
       - "fact_Average_Income": entities/fact-average-income.md
       - "fact_Burnout_Indicators": entities/fact-burnout-indicators.md
       - "fact_EXCEL_Group_Profile_General_Metric": entities/fact-excel-group-profile-general-metric.md
@@ -136,11 +138,13 @@ nav:
       - "fact_Viva_Metrics": entities/fact-viva-metrics.md
       - "fact_employee_seniority_by_month": entities/fact-employee-seniority-by-month.md
       - "p_AC.Loss_Productivity": entities/p-ac-loss-productivity.md
+      - "t_360_Assessment": entities/t-360-assessment.md
       - "t_AC Burnout": entities/t-ac-burnout.md
       - "t_FlagDim": entities/t-flagdim.md
       - "t_HierarchyTypes": entities/t-hierarchytypes.md
       - "t_IS_FIRED": entities/t-is-fired.md
       - "t_Loss_Productivity_Metrics_by_Persona": entities/t-loss-productivity-metrics-by-persona.md
+      - "t_Participant_Categories": entities/t-participant-categories.md
       - "t_user_roles": entities/t-user-roles.md
   - Модель даних: model.md
   - Глосарій: glossary.md

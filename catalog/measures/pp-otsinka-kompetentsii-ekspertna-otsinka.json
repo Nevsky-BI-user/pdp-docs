@@ -1,0 +1,53 @@
+{
+  "id": "pp-otsinka-kompetentsii-ekspertna-otsinka",
+  "type": "measure",
+  "name": "PP.Оцінка компетенцій.Експертна оцінка",
+  "homeTable": "_Measures",
+  "displayFolder": "",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "AVERAGE('fact_360_Assessment'[HR_Assessment])",
+  "reportPages": [],
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_360_Assessment[HR_Assessment]"
+    ],
+    "tables": [
+      "fact_360_Assessment"
+    ]
+  },
+  "usedBy": [
+    "PP.SVG.Оцінка компетенцій.Загальна по блоках",
+    "PP.SVG.Оцінка компетенцій.Компетенція",
+    "PP.SVG.Оцінка компетенцій.Хітмап по блоках",
+    "PP.SVG.Приховані можливості",
+    "PP.SVG.Сліпі плями"
+  ],
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_360_Assessment"
+    ],
+    "sourceColumns": [
+      "HR_Assessment"
+    ],
+    "powerQuery": "fact_360_Assessment"
+  },
+  "business": {
+    "name": "",
+    "logic": [],
+    "requirementRefs": []
+  },
+  "tags": [
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "a424d2059f3e196794146c8cef8009884c9a1c9b",
+    "extractedAt": "2026-06-23T15:19:29+03:00"
+  },
+  "manualNotes": ""
+}

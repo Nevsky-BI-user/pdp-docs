@@ -5103,6 +5103,118 @@
     "file": "measures/pp-shchokvartalni-premii-v-serednomu-za-kvartal.md"
   },
   {
+    "id": "pp-otsinka-kompetentsii-zahalna",
+    "type": "measure",
+    "name": "PP.Оцінка компетенцій.Загальна",
+    "displayFolder": "",
+    "file": "measures/pp-otsinka-kompetentsii-zahalna.md"
+  },
+  {
+    "id": "pp-svg-otsinka-kompetentsii-zahalna",
+    "type": "measure",
+    "name": "PP.SVG.Оцінка компетенцій.Загальна",
+    "displayFolder": "",
+    "file": "measures/pp-svg-otsinka-kompetentsii-zahalna.md"
+  },
+  {
+    "id": "pp-otsinka-kompetentsii-samootsinka",
+    "type": "measure",
+    "name": "PP.Оцінка компетенцій.Самооцінка",
+    "displayFolder": "",
+    "file": "measures/pp-otsinka-kompetentsii-samootsinka.md"
+  },
+  {
+    "id": "pp-otsinka-kompetentsii-ekspertna-otsinka",
+    "type": "measure",
+    "name": "PP.Оцінка компетенцій.Експертна оцінка",
+    "displayFolder": "",
+    "file": "measures/pp-otsinka-kompetentsii-ekspertna-otsinka.md"
+  },
+  {
+    "id": "pp-otsinka-kompetentsii-otsinka-360",
+    "type": "measure",
+    "name": "PP.Оцінка компетенцій.Оцінка 360",
+    "displayFolder": "",
+    "file": "measures/pp-otsinka-kompetentsii-otsinka-360.md"
+  },
+  {
+    "id": "pp-otsinka-kompetentsii-otsinka-koleh",
+    "type": "measure",
+    "name": "PP.Оцінка компетенцій.Оцінка колег",
+    "displayFolder": "",
+    "file": "measures/pp-otsinka-kompetentsii-otsinka-koleh.md"
+  },
+  {
+    "id": "pp-otsinka-kompetentsii-otsinka-kerivnyka",
+    "type": "measure",
+    "name": "PP.Оцінка компетенцій.Оцінка керівника",
+    "displayFolder": "",
+    "file": "measures/pp-otsinka-kompetentsii-otsinka-kerivnyka.md"
+  },
+  {
+    "id": "pp-otsinka-kompetentsii-otsinka-pidlehlykh",
+    "type": "measure",
+    "name": "PP.Оцінка компетенцій.Оцінка підлеглих",
+    "displayFolder": "",
+    "file": "measures/pp-otsinka-kompetentsii-otsinka-pidlehlykh.md"
+  },
+  {
+    "id": "pp-otsinka-kompetentsii-otsinka-kros-koleh",
+    "type": "measure",
+    "name": "PP.Оцінка компетенцій.Оцінка крос-колег",
+    "displayFolder": "",
+    "file": "measures/pp-otsinka-kompetentsii-otsinka-kros-koleh.md"
+  },
+  {
+    "id": "pp-svg-otsinka-kompetentsii-zahalna-po-blokakh",
+    "type": "measure",
+    "name": "PP.SVG.Оцінка компетенцій.Загальна по блоках",
+    "displayFolder": "",
+    "file": "measures/pp-svg-otsinka-kompetentsii-zahalna-po-blokakh.md"
+  },
+  {
+    "id": "pp-svg-otsinka-kompetentsii-kompetentsiia",
+    "type": "measure",
+    "name": "PP.SVG.Оцінка компетенцій.Компетенція",
+    "displayFolder": "",
+    "file": "measures/pp-svg-otsinka-kompetentsii-kompetentsiia.md"
+  },
+  {
+    "id": "pp-svg-prykhovani-mozhlyvosti",
+    "type": "measure",
+    "name": "PP.SVG.Приховані можливості",
+    "displayFolder": "",
+    "file": "measures/pp-svg-prykhovani-mozhlyvosti.md"
+  },
+  {
+    "id": "pp-svg-slipi-pliamy",
+    "type": "measure",
+    "name": "PP.SVG.Сліпі плями",
+    "displayFolder": "",
+    "file": "measures/pp-svg-slipi-pliamy.md"
+  },
+  {
+    "id": "pp-otsinka-kompetentsii-barchart",
+    "type": "measure",
+    "name": "PP.Оцінка компетенцій.Барчарт",
+    "displayFolder": "",
+    "file": "measures/pp-otsinka-kompetentsii-barchart.md"
+  },
+  {
+    "id": "competency-comment-svg",
+    "type": "measure",
+    "name": "Competency Comment (SVG)",
+    "displayFolder": "",
+    "file": "measures/competency-comment-svg.md"
+  },
+  {
+    "id": "pp-svg-otsinka-kompetentsii-khitmap-po-blokakh",
+    "type": "measure",
+    "name": "PP.SVG.Оцінка компетенцій.Хітмап по блоках",
+    "displayFolder": "",
+    "file": "measures/pp-svg-otsinka-kompetentsii-khitmap-po-blokakh.md"
+  },
+  {
     "id": "cg-event-types",
     "type": "entity",
     "name": "CG_Event_Types",
@@ -5262,6 +5374,20 @@
     "name": "dim__HRBP_OS",
     "displayFolder": "",
     "file": "entities/dim-hrbp-os.md"
+  },
+  {
+    "id": "fact-360-assessment",
+    "type": "entity",
+    "name": "fact_360_Assessment",
+    "displayFolder": "",
+    "file": "entities/fact-360-assessment.md"
+  },
+  {
+    "id": "fact-360-behavior-indicator",
+    "type": "entity",
+    "name": "fact_360_Behavior_Indicator",
+    "displayFolder": "",
+    "file": "entities/fact-360-behavior-indicator.md"
   },
   {
     "id": "fact-average-income",
@@ -5467,6 +5593,13 @@
     "file": "entities/p-ac-loss-productivity.md"
   },
   {
+    "id": "t-360-assessment",
+    "type": "entity",
+    "name": "t_360_Assessment",
+    "displayFolder": "",
+    "file": "entities/t-360-assessment.md"
+  },
+  {
     "id": "t-ac-burnout",
     "type": "entity",
     "name": "t_AC Burnout",
@@ -5500,6 +5633,13 @@
     "name": "t_Loss_Productivity_Metrics_by_Persona",
     "displayFolder": "",
     "file": "entities/t-loss-productivity-metrics-by-persona.md"
+  },
+  {
+    "id": "t-participant-categories",
+    "type": "entity",
+    "name": "t_Participant_Categories",
+    "displayFolder": "",
+    "file": "entities/t-participant-categories.md"
   },
   {
     "id": "t-user-roles",

@@ -26,7 +26,7 @@ VAR _admin =
     VAR _Perionds = VALUES('fact_TRS'[PERIOD])
 	VAR _table0 = 
 		ADDCOLUMNS(
-			_Employees,
+			CROSSJOIN(_Employees, _Perionds),
 			"@Indicator",
 			CALCULATE(
 				SUM('fact_TRS'[PAYMENTS_FACT_UAH]),
@@ -52,7 +52,7 @@ VAR _admin_lt =
 	VAR _table0 = 
 		CALCULATETABLE(
 			ADDCOLUMNS(
-				_Employees,
+				CROSSJOIN(_Employees, _Perionds),
 				"@Indicator",
 				CALCULATE(
 					MAX('fact_TRS'[PAYMENTS_FACT_UAH]),

@@ -65,8 +65,8 @@
   "source": {
     "repo": "PDP",
     "file": "PDP.SemanticModel/definition/tables/dim_Permanent_Temporary.tmdl",
-    "commit": "6fe45c40f472d1b6afb7c8e683e258b115d5e842",
-    "extractedAt": "2026-06-19T16:48:19+03:00"
+    "commit": "a424d2059f3e196794146c8cef8009884c9a1c9b",
+    "extractedAt": "2026-06-23T15:19:29+03:00"
   },
   "manualNotes": ""
 }

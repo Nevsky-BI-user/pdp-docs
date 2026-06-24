@@ -1,0 +1,263 @@
+{
+  "id": "fact-360-assessment",
+  "type": "entity",
+  "name": "fact_360_Assessment",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_360_Assessment",
+  "sourceTables": [
+    "DM.vw_R27_fact_360_Assessment"
+  ],
+  "columns": [
+    {
+      "name": "Employee_ID",
+      "dataType": "string",
+      "source": "Employee_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_NAME",
+      "dataType": "string",
+      "source": "EMPLOYEE_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_ID",
+      "dataType": "string",
+      "source": "ORGANIZATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_ID",
+      "dataType": "string",
+      "source": "JOB_TITLE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_TYPE_KEY",
+      "dataType": "string",
+      "source": "EMPLOYMENT_TYPE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_ON_POSITION_KEY",
+      "dataType": "string",
+      "source": "OFFICE_ON_POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CATEGORY_DETAIL",
+      "dataType": "string",
+      "source": "POSITION_CATEGORY_DETAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_MAIN_POSITION",
+      "dataType": "int64",
+      "source": "IS_MAIN_POSITION",
+      "isCalculated": false
+    },
+    {
+      "name": "WORK_FORMAT_ON_EMPLOYEE_KEY",
+      "dataType": "string",
+      "source": "WORK_FORMAT_ON_EMPLOYEE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_KEY",
+      "dataType": "string",
+      "source": "STATUS_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "Form_Template_ID",
+      "dataType": "string",
+      "source": "Form_Template_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "Form_Template_Name",
+      "dataType": "string",
+      "source": "Form_Template_Name",
+      "isCalculated": false
+    },
+    {
+      "name": "Competency_ID",
+      "dataType": "string",
+      "source": "Competency_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "Competency_Name",
+      "dataType": "string",
+      "source": "Competency_Name",
+      "isCalculated": false
+    },
+    {
+      "name": "Category_Name",
+      "dataType": "string",
+      "source": "Category_Name",
+      "isCalculated": false
+    },
+    {
+      "name": "Manager_Assessment",
+      "dataType": "double",
+      "source": "Manager_Assessment",
+      "isCalculated": false
+    },
+    {
+      "name": "Subordinate_Assessment",
+      "dataType": "double",
+      "source": "Subordinate_Assessment",
+      "isCalculated": false
+    },
+    {
+      "name": "Peer_Assessment",
+      "dataType": "double",
+      "source": "Peer_Assessment",
+      "isCalculated": false
+    },
+    {
+      "name": "Cross_Peer_Assessment",
+      "dataType": "double",
+      "source": "Cross_Peer_Assessment",
+      "isCalculated": false
+    },
+    {
+      "name": "Self_Assessment",
+      "dataType": "double",
+      "source": "Self_Assessment",
+      "isCalculated": false
+    },
+    {
+      "name": "HR_Assessment",
+      "dataType": "double",
+      "source": "HR_Assessment",
+      "isCalculated": false
+    },
+    {
+      "name": "Competency_Rate",
+      "dataType": "double",
+      "source": "Competency_Rate",
+      "isCalculated": false
+    },
+    {
+      "name": "Competency_Total",
+      "dataType": "double",
+      "source": "Competency_Total",
+      "isCalculated": false
+    },
+    {
+      "name": "Category_average",
+      "dataType": "double",
+      "source": "Category_average",
+      "isCalculated": false
+    },
+    {
+      "name": "Total_Assessment_Rate",
+      "dataType": "double",
+      "source": "Total_Assessment_Rate",
+      "isCalculated": false
+    },
+    {
+      "name": "Competency_Comment",
+      "dataType": "string",
+      "source": "Competency_Comment",
+      "isCalculated": false
+    },
+    {
+      "name": "Form_Create_Date",
+      "dataType": "dateTime",
+      "source": "Form_Create_Date",
+      "isCalculated": false
+    },
+    {
+      "name": "End_Fact_Date",
+      "dataType": "dateTime",
+      "source": "End_Fact_Date",
+      "isCalculated": false
+    },
+    {
+      "name": "Form_Last_Modify_Date",
+      "dataType": "dateTime",
+      "source": "Form_Last_Modify_Date",
+      "isCalculated": false
+    },
+    {
+      "name": "Assessment_Year",
+      "dataType": "string",
+      "source": "Assessment_Year",
+      "isCalculated": false
+    },
+    {
+      "name": "Employee_Category",
+      "dataType": "string",
+      "source": "Employee_Category",
+      "isCalculated": false
+    },
+    {
+      "name": "Form_Employee_ID",
+      "dataType": "string",
+      "source": "Form_Employee_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "Form_Code",
+      "dataType": "string",
+      "source": "Form_Code",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_Admin_OS",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [
+    "Competency Comment (SVG)",
+    "PP.SVG.Оцінка компетенцій.Загальна",
+    "PP.SVG.Оцінка компетенцій.Загальна по блоках",
+    "PP.SVG.Оцінка компетенцій.Компетенція",
+    "PP.SVG.Оцінка компетенцій.Хітмап по блоках",
+    "PP.SVG.Приховані можливості",
+    "PP.SVG.Сліпі плями",
+    "PP.Оцінка компетенцій.Експертна оцінка",
+    "PP.Оцінка компетенцій.Загальна",
+    "PP.Оцінка компетенцій.Оцінка 360",
+    "PP.Оцінка компетенцій.Оцінка керівника",
+    "PP.Оцінка компетенцій.Оцінка колег",
+    "PP.Оцінка компетенцій.Оцінка крос-колег",
+    "PP.Оцінка компетенцій.Оцінка підлеглих",
+    "PP.Оцінка компетенцій.Самооцінка"
+  ],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_360_Assessment.tmdl",
+    "commit": "a424d2059f3e196794146c8cef8009884c9a1c9b",
+    "extractedAt": "2026-06-23T15:19:29+03:00"
+  },
+  "manualNotes": ""
+}

@@ -33,7 +33,7 @@ VAR _result =
         SELECTEDVALUE('fact_Employee_History_Position'[PERIOD]) = _mind, "Стартова точка",
         SELECTEDVALUE('fact_Employee_History_Position'[EVENT_LIST])
     )
-RETURN _result
+RETURN SELECTEDVALUE('fact_Employee_History_Position'[EVENT_LIST])
 ```
 
 ### Джерела даних

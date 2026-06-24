@@ -1,0 +1,51 @@
+{
+  "id": "pp-otsinka-kompetentsii-otsinka-360",
+  "type": "measure",
+  "name": "PP.Оцінка компетенцій.Оцінка 360",
+  "homeTable": "_Measures",
+  "displayFolder": "",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "AVERAGE('fact_360_Assessment'[Competency_Rate])",
+  "reportPages": [],
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_360_Assessment[Competency_Rate]"
+    ],
+    "tables": [
+      "fact_360_Assessment"
+    ]
+  },
+  "usedBy": [
+    "PP.SVG.Оцінка компетенцій.Загальна по блоках",
+    "PP.SVG.Оцінка компетенцій.Компетенція",
+    "PP.SVG.Оцінка компетенцій.Хітмап по блоках"
+  ],
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_360_Assessment"
+    ],
+    "sourceColumns": [
+      "Competency_Rate"
+    ],
+    "powerQuery": "fact_360_Assessment"
+  },
+  "business": {
+    "name": "",
+    "logic": [],
+    "requirementRefs": []
+  },
+  "tags": [
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "a424d2059f3e196794146c8cef8009884c9a1c9b",
+    "extractedAt": "2026-06-23T15:19:29+03:00"
+  },
+  "manualNotes": ""
+}

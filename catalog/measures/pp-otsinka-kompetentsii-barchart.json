@@ -1,0 +1,53 @@
+{
+  "id": "pp-otsinka-kompetentsii-barchart",
+  "type": "measure",
+  "name": "PP.Оцінка компетенцій.Барчарт",
+  "homeTable": "_Measures",
+  "displayFolder": "",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "// 1. Значення 5 мір. COALESCE замінює BLANK на 0\nVAR _v1 = COALESCE ( [PP.Оцінка компетенцій.Самооцінка], 0 )\nVAR _v2 = COALESCE ( [PP.Оцінка компетенцій.Оцінка керівника], 0 )\nVAR _v3 = COALESCE ( [PP.Оцінка компетенцій.Оцінка підлеглих], 0 )\nVAR _v4 = COALESCE ( [PP.Оцінка компетенцій.Оцінка колег], 0 )\nVAR _v5 = COALESCE ( [PP.Оцінка компетенцій.Оцінка крос-колег], 0 )\n\n// 2. Віртуальна таблиця: рядок = (порядок, підпис із екрана, значення)\nVAR _data =\n    UNION (\n        ROW ( \"Idx\", 1, \"Label\", \"Самооцінка\",  \"Val\", _v1 ),\n        ROW ( \"Idx\", 2, \"Label\", \"Керівник\",    \"Val\", _v2 ),\n        ROW ( \"Idx\", 3, \"Label\", \"Підлеглі\",    \"Val\", _v3 ),\n        ROW ( \"Idx\", 4, \"Label\", \"Колеги\",      \"Val\", _v4 ),\n        ROW ( \"Idx\", 5, \"Label\", \"Крос-колеги\", \"Val\", _v5 )\n    )\n\n// 3. Масштаб довжини бару (найдовший = повна довжина треку).\n//    Для пропорцій від нуля до фіксованої межі — заміни _dataMax на число (напр. 5 або 100).\nVAR _dataMax  = MAXX ( _data, [Val] )\nVAR _scaleMax = IF ( _dataMax = 0, 1, _dataMax )\n\n// 4. Внутрішня система координат = пропорції об'єкта 262 × 230.\n//    width/height=100% + viewBox → адаптивність під контейнер.\nVAR _vbW       = 262\nVAR _vbH       = 230\nVAR _barTrackW = 150   // макс. довжина бару; решта ширини — під мітку (категорія + значення)\nVAR _barH      = 28    // товщина бару\nVAR _lblGap    = 5     // відступ мітки від кінця бару\nVAR _fLbl      = 18    // шрифт мітки\n\n// Вертикальне розкладання: відступ зверху ЗБЕРІГАЄТЬСЯ, відступ знизу = 0.\n// Проміжки між барами рахуються так, щоб нижній край останнього бару = _vbH.\nVAR _n   = COUNTROWS ( _data )\nVAR _top = 14                                          // відступ зверху (підлаштуй за потреби)\nVAR _gap = ( _vbH - _top - _n * _barH ) / ( _n - 1 )  // рівні проміжки між барами; знизу 0\n\n// 5. Один прохід: бар (прямий лівий край від x=0, заокруглений правий) + мітка \"Категорія Значення\"\nVAR _bars =\n    CONCATENATEX (\n        _data,\n        VAR _yTop = _top + ( [Idx] - 1 ) * ( _barH + _gap )\n        VAR _yBot = _yTop + _barH\n        VAR _yc   = _yTop + _barH / 2\n        VAR _r    = _barH / 2                  // радіус правого півкола\n        VAR _w0   = _barTrackW * DIVIDE ( [Val], _scaleMax )\n        VAR _w    = MAX ( _w0, _r )            // ширина >= радіус → валідний path\n        VAR _xArc = _w - _r                    // початок правої дуги\n        VAR _txt  = FORMAT ( [Val], \"0.0\", \"en-US\" )   // формат значення: \"0\"=ціле, \"0.0%\"=відсоток\n        RETURN\n            \"<path d='M 0 \" & FORMAT ( _yTop, \"0.0\", \"en-US\" )\n                & \" L \" & FORMAT ( _xArc, \"0.0\", \"en-US\" ) & \" \" & FORMAT ( _yTop, \"0.0\", \"en-US\" )\n                & \" A \" & FORMAT ( _r, \"0.0\", \"en-US\" ) & \" \" & FORMAT ( _r, \"0.0\", \"en-US\" )\n                    & \" 0 0 1 \" & FORMAT ( _xArc, \"0.0\", \"en-US\" ) & \" \" & FORMAT ( _yBot, \"0.0\", \"en-US\" )\n                & \" L 0 \" & FORMAT ( _yBot, \"0.0\", \"en-US\" )\n                & \" Z' fill='#2D7FF9'/>\"\n            & \"<text x='\" & FORMAT ( _w + _lblGap, \"0.0\", \"en-US\" ) & \"' y='\" & FORMAT ( _yc, \"0.0\", \"en-US\" )\n                & \"' font-family='Segoe UI, sans-serif' font-size='\" & _fLbl & \"' fill='#333333'\"\n                & \" text-anchor='start' dominant-baseline='central'>\" & [Label] & \" \" & _txt & \"</text>\",\n        \"\",\n        [Idx], ASC\n    )\n\n// 6. Складання SVG. width/height=100% + viewBox у пропорціях об'єкта\nVAR _svg =\n    \"<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'\"\n        & \" viewBox='0 0 \" & _vbW & \" \" & _vbH & \"' preserveAspectRatio='xMidYMid meet'>\"\n        & \"<rect x='0' y='0' width='\" & _vbW & \"' height='\" & _vbH & \"' fill='#FFFFFF'/>\"\n        & _bars\n        & \"</svg>\"\n\n// 7. Прямий SVG-візуал: сира розмітка без префікса й без екранування\nRETURN\n    _svg",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile",
+      "groups": [
+        "Результативність та оцінка › Оцінка компет.Детально"
+      ]
+    }
+  ],
+  "dependencies": {
+    "measures": [
+      "PP.Оцінка компетенцій.Оцінка керівника",
+      "PP.Оцінка компетенцій.Оцінка колег",
+      "PP.Оцінка компетенцій.Оцінка крос-колег",
+      "PP.Оцінка компетенцій.Оцінка підлеглих",
+      "PP.Оцінка компетенцій.Самооцінка"
+    ],
+    "columns": [],
+    "tables": []
+  },
+  "usedBy": [],
+  "lineage": {
+    "sourceTables": [],
+    "sourceColumns": [],
+    "powerQuery": ""
+  },
+  "business": {
+    "name": "",
+    "logic": [],
+    "requirementRefs": []
+  },
+  "tags": [
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "a424d2059f3e196794146c8cef8009884c9a1c9b",
+    "extractedAt": "2026-06-23T15:19:29+03:00"
+  },
+  "manualNotes": ""
+}

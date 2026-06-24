@@ -1,0 +1,50 @@
+{
+  "id": "pp-otsinka-kompetentsii-zahalna",
+  "type": "measure",
+  "name": "PP.Оцінка компетенцій.Загальна",
+  "homeTable": "_Measures",
+  "displayFolder": "",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "AVERAGE('fact_360_Assessment'[Total_Assessment_Rate])",
+  "reportPages": [],
+  "dependencies": {
+    "measures": [],
+    "columns": [
+      "fact_360_Assessment[Total_Assessment_Rate]"
+    ],
+    "tables": [
+      "fact_360_Assessment"
+    ]
+  },
+  "usedBy": [
+    "PP.SVG.Оцінка компетенцій.Загальна",
+    "PP.SVG.Оцінка компетенцій.Загальна по блоках"
+  ],
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_360_Assessment"
+    ],
+    "sourceColumns": [
+      "Total_Assessment_Rate"
+    ],
+    "powerQuery": "fact_360_Assessment"
+  },
+  "business": {
+    "name": "",
+    "logic": [],
+    "requirementRefs": []
+  },
+  "tags": [
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "a424d2059f3e196794146c8cef8009884c9a1c9b",
+    "extractedAt": "2026-06-23T15:19:29+03:00"
+  },
+  "manualNotes": ""
+}

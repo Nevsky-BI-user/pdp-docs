@@ -1,0 +1,217 @@
+{
+  "id": "fact-360-behavior-indicator",
+  "type": "entity",
+  "name": "fact_360_Behavior_Indicator",
+  "definition": "",
+  "server": "mhpsynapsedev01.sql.azuresynapse.net",
+  "db": "mhpdwhdev01",
+  "powerQuery": "fact_360_Behavior_Indicator",
+  "sourceTables": [
+    "DM.vw_R27_fact_360_Behavior_Indicator"
+  ],
+  "columns": [
+    {
+      "name": "Employee_ID",
+      "dataType": "string",
+      "source": "Employee_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYEE_NAME",
+      "dataType": "string",
+      "source": "EMPLOYEE_NAME",
+      "isCalculated": false
+    },
+    {
+      "name": "DOC_JOB_APPLICATION_ID",
+      "dataType": "string",
+      "source": "DOC_JOB_APPLICATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "ORGANIZATION_ID",
+      "dataType": "string",
+      "source": "ORGANIZATION_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "JOB_TITLE_ID",
+      "dataType": "string",
+      "source": "JOB_TITLE_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "DIVISION_PERSON_ID",
+      "dataType": "string",
+      "source": "DIVISION_PERSON_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "EMPLOYMENT_TYPE_KEY",
+      "dataType": "string",
+      "source": "EMPLOYMENT_TYPE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "OFFICE_ON_POSITION_KEY",
+      "dataType": "string",
+      "source": "OFFICE_ON_POSITION_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "POSITION_CATEGORY_DETAIL",
+      "dataType": "string",
+      "source": "POSITION_CATEGORY_DETAIL",
+      "isCalculated": false
+    },
+    {
+      "name": "IS_MAIN_POSITION",
+      "dataType": "int64",
+      "source": "IS_MAIN_POSITION",
+      "isCalculated": false
+    },
+    {
+      "name": "WORK_FORMAT_ON_EMPLOYEE_KEY",
+      "dataType": "string",
+      "source": "WORK_FORMAT_ON_EMPLOYEE_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "STATUS_KEY",
+      "dataType": "string",
+      "source": "STATUS_KEY",
+      "isCalculated": false
+    },
+    {
+      "name": "USER_ACCESS_ID",
+      "dataType": "string",
+      "source": "USER_ACCESS_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "Form_Template_ID",
+      "dataType": "string",
+      "source": "Form_Template_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "Form_Template_Name",
+      "dataType": "string",
+      "source": "Form_Template_Name",
+      "isCalculated": false
+    },
+    {
+      "name": "Competency_ID",
+      "dataType": "string",
+      "source": "Competency_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "Competency_Name",
+      "dataType": "string",
+      "source": "Competency_Name",
+      "isCalculated": false
+    },
+    {
+      "name": "Behavior_ID",
+      "dataType": "string",
+      "source": "Behavior_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "Behavior_Name",
+      "dataType": "string",
+      "source": "Behavior_Name",
+      "isCalculated": false
+    },
+    {
+      "name": "Assessment_Type_Code",
+      "dataType": "string",
+      "source": "Assessment_Type_Code",
+      "isCalculated": false
+    },
+    {
+      "name": "Participant_Category",
+      "dataType": "string",
+      "source": "Participant_Category",
+      "isCalculated": false
+    },
+    {
+      "name": "Employee_Participant_ID",
+      "dataType": "string",
+      "source": "Employee_Participant_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "Behavior_Rate",
+      "dataType": "double",
+      "source": "Behavior_Rate",
+      "isCalculated": false
+    },
+    {
+      "name": "Competency_Rate",
+      "dataType": "double",
+      "source": "Competency_Rate",
+      "isCalculated": false
+    },
+    {
+      "name": "Comment",
+      "dataType": "string",
+      "source": "Comment",
+      "isCalculated": false
+    },
+    {
+      "name": "Section_Custom_Field_ID",
+      "dataType": "string",
+      "source": "Section_Custom_Field_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "Question_Title",
+      "dataType": "string",
+      "source": "Question_Title",
+      "isCalculated": false
+    },
+    {
+      "name": "Value_Str",
+      "dataType": "string",
+      "source": "Value_Str",
+      "isCalculated": false
+    },
+    {
+      "name": "Assessment_Year",
+      "dataType": "string",
+      "source": "Assessment_Year",
+      "isCalculated": false
+    },
+    {
+      "name": "Form_Employee_ID",
+      "dataType": "string",
+      "source": "Form_Employee_ID",
+      "isCalculated": false
+    },
+    {
+      "name": "Form_Code",
+      "dataType": "string",
+      "source": "Form_Code",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [
+    {
+      "toTable": "dim_Admin_OS",
+      "fromColumn": "USER_ACCESS_ID",
+      "toColumn": "USER_ACCESS_ID",
+      "role": "from"
+    }
+  ],
+  "relatedMeasures": [],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/fact_360_Behavior_Indicator.tmdl",
+    "commit": "a424d2059f3e196794146c8cef8009884c9a1c9b",
+    "extractedAt": "2026-06-23T15:19:29+03:00"
+  },
+  "manualNotes": ""
+}

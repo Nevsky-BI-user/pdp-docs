@@ -1,6 +1,6 @@
 # Схема моделі
 
-Модель — це **схема-сузір'я**: **28** фактових таблиць, пов'язаних із вимірами через **145** зв'язків (many → one). Щоб не зливати все в одну нечитабельну діаграму, нижче наведено окрему **зіркову схему на кожну фактову таблицю**.
+Модель — це **схема-сузір'я**: **30** фактових таблиць, пов'язаних із вимірами через **147** зв'язків (many → one). Щоб не зливати все в одну нечитабельну діаграму, нижче наведено окрему **зіркову схему на кожну фактову таблицю**.
 
 ## Конформовані виміри
 
@@ -8,7 +8,7 @@
 
 | Вимір | Фактів |
 |---|---|
-| [`dim_Admin_OS`](entities/dim-admin-os.md) | 20 |
+| [`dim_Admin_OS`](entities/dim-admin-os.md) | 22 |
 | [`dim_Employee_Status`](entities/dim-employee-status.md) | 14 |
 | [`dim_Employment_Type`](entities/dim-employment-type.md) | 14 |
 | [`dim_Position`](entities/dim-position.md) | 14 |
@@ -32,6 +32,24 @@
 ## Зіркові схеми за фактами
 
 У кожній схемі фактова таблиця у центрі, навколо — її виміри; підпис на зв'язку — ключ з'єднання.
+
+### fact_360_Assessment
+
+[`fact_360_Assessment`](entities/fact-360-assessment.md)
+
+```mermaid
+erDiagram
+  dim_Admin_OS ||--o{ fact_360_Assessment : "USER_ACCESS_ID"
+```
+
+### fact_360_Behavior_Indicator
+
+[`fact_360_Behavior_Indicator`](entities/fact-360-behavior-indicator.md)
+
+```mermaid
+erDiagram
+  dim_Admin_OS ||--o{ fact_360_Behavior_Indicator : "USER_ACCESS_ID"
+```
 
 ### fact_Average_Income
 

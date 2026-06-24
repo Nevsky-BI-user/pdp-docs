@@ -6,7 +6,7 @@
 
 | Сторінка | Мір | Тип |
 |---|---|---|
-| [Personal Profile](personal-profile.md) | 236 | основна |
+| [Personal Profile](personal-profile.md) | 247 | основна |
 | [Group Profile](group-profile.md) | 216 | основна |
 | [Під ризиком мобілізації](pid-ryzykom-mobilizatsii.md) | 4 | основна |
 | [Утримання працівників](utrymannia-pratsivnykiv.md) | 33 | основна |

@@ -1,0 +1,34 @@
+{
+  "id": "t-participant-categories",
+  "type": "entity",
+  "name": "t_Participant_Categories",
+  "definition": "",
+  "server": "",
+  "db": "",
+  "powerQuery": "t_Participant_Categories",
+  "sourceTables": [],
+  "columns": [
+    {
+      "name": "Index",
+      "dataType": "int64",
+      "source": "Index",
+      "isCalculated": false
+    },
+    {
+      "name": "Participant_category",
+      "dataType": "string",
+      "source": "Participant_category",
+      "isCalculated": false
+    }
+  ],
+  "relationships": [],
+  "relatedMeasures": [],
+  "requirementRefs": [],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/t_Participant_Categories.tmdl",
+    "commit": "a424d2059f3e196794146c8cef8009884c9a1c9b",
+    "extractedAt": "2026-06-23T15:19:29+03:00"
+  },
+  "manualNotes": ""
+}

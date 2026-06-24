@@ -1,0 +1,57 @@
+{
+  "id": "pp-svg-otsinka-kompetentsii-zahalna",
+  "type": "measure",
+  "name": "PP.SVG.Оцінка компетенцій.Загальна",
+  "homeTable": "_Measures",
+  "displayFolder": "",
+  "formatString": "",
+  "dataType": "",
+  "isHidden": false,
+  "description": "",
+  "dax": "VAR _fontFamily = \"Segoe UI\"\nVAR _labelColor = \"#003A5D\"\nVAR _MaxValue = 5\nVAR _TrackOpacity = \"0.15\"          // прозорість світлої доріжки за стовпцем\n\n// --- Дані: середня оцінка по роках ---\nVAR _data = SUMMARIZE(\n\t'fact_360_Assessment',\n\t'fact_360_Assessment'[Assessment_Year],\n\t\"Value\", [PP.Оцінка компетенцій.Загальна]\n)\n\n// --- Геометрія полотна ---\nVAR _W = 369                        // 410 × 0.9 — ширина із запасом 10%\nVAR _H = 202                        // 224 × 0.9 — висота із запасом 10%\nVAR _MarginLR = 4\n\n// --- Бар (капсула) ---\nVAR _BarWidth = 26\nVAR _BarRadius = _BarWidth / 2      // 13 — повне округлення торців\n\n// --- Бейдж року (пігулка) ---\nVAR _BadgeW = 88\nVAR _BadgeH = 32\nVAR _BadgeRadius = _BadgeH / 2      // 16\nVAR _BadgeTop = 8\nVAR _BadgeTextBaseY = 30\n\n// --- Підпис значення ---\nVAR _ValueFontSize = 13\nVAR _ValueBaseY = 60\n\n// --- Доріжка (трек) і висота заливки ---\nVAR _TrackTop = 74\nVAR _TrackBottom = _H - 8           // 194\nVAR _TrackHeight = _TrackBottom - _TrackTop   // 120\n\n// --- Центрування блоку ---\nVAR _BarCount = COUNTROWS(_data)\nVAR _GroupWidth = 96                // слот року: резервує ширину підпису, щоб сусідні не накладались\nVAR _AvailableW = _W - 2 * _MarginLR\nVAR _GroupGapDesired = 16\nVAR _MaxGapThatFits = IF(_BarCount > 1, (_AvailableW - _BarCount * _GroupWidth) / (_BarCount - 1), 0)\nVAR _GroupGap = MAX(0, MIN(_GroupGapDesired, _MaxGapThatFits))\nVAR _TotalContentWidth = _BarCount * _GroupWidth + (_BarCount - 1) * _GroupGap\nVAR _StartX = (_W - _TotalContentWidth) / 2\n\n// --- Побудова ---\nVAR _BarsSVG = CONCATENATEX(\n\tADDCOLUMNS(\n\t\tADDCOLUMNS(\n\t\t\t_data,\n\t\t\t\"@i\", RANKX(_data, [Assessment_Year], , ASC, Dense) - 1\n\t\t),\n\t\t\"@cx\", _StartX + [@i] * (_GroupWidth + _GroupGap) + _GroupWidth / 2\n\t),\n\tVAR _v = [Value]\n\n\tVAR _class = SWITCH(TRUE(),\n\t\tISBLANK(_v), \"\",\n\t\t_v < 3, \"D\",\n\t\t_v < 3.4, \"C\",\n\t\t_v < 3.75, \"B\",\n\t\t_v <= 4.25, \"A\",\n\t\t\"TOP A\"\n\t)\n\n\tVAR _Color = SWITCH(_class,\n\t\t\"TOP A\", \"#16C8E8\",\n\t\t\"A\", \"#2EA84F\",\n\t\t\"B\", \"#F2B100\",\n\t\t\"C\", \"#9A9A9A\",\n\t\t\"D\", \"#E2231A\",\n\t\t\"#9A9A9A\"\n\t)\n\n\tVAR _label = FORMAT(_v, \"0.00\") & IF(_class <> \"\", \" (\" & _class & \")\", \"\")\n\n\tVAR _cx = [@cx]\n\tVAR _xBar = _cx - _BarWidth / 2\n\tVAR _xBadge = _cx - _BadgeW / 2\n\n\tVAR _fillH = MIN(DIVIDE(_v, _MaxValue, 0), 1) * _TrackHeight\n\tVAR _yFill = _TrackBottom - _fillH\n\n\tVAR _track =\n\t\t\"<rect x='\" & FORMAT(_xBar, \"0.0\", \"en-US\") & \"' y='\" & _TrackTop & \"' width='\" & _BarWidth & \"' height='\" & _TrackHeight & \"' rx='\" & _BarRadius & \"' fill='\" & _Color & \"' fill-opacity='\" & _TrackOpacity & \"' />\"\n\n\tVAR _fill =\n\t\t\"<rect x='\" & FORMAT(_xBar, \"0.0\", \"en-US\") & \"' y='\" & FORMAT(_yFill, \"0.0\", \"en-US\") & \"' width='\" & _BarWidth & \"' height='\" & FORMAT(_fillH, \"0.0\", \"en-US\") & \"' rx='\" & _BarRadius & \"' fill='\" & _Color & \"' />\"\n\n\tVAR _badge =\n\t\t\"<rect x='\" & FORMAT(_xBadge, \"0.0\", \"en-US\") & \"' y='\" & _BadgeTop & \"' width='\" & _BadgeW & \"' height='\" & _BadgeH & \"' rx='\" & _BadgeRadius & \"' fill='#EBEBEB' />\" &\n\t\t\"<text x='\" & FORMAT(_cx, \"0.0\", \"en-US\") & \"' y='\" & _BadgeTextBaseY & \"' text-anchor='middle' style='font-family:\" & _fontFamily & \"; font-size:15px; fill:\" & _labelColor & \"; font-weight:700;'>\" & FORMAT([Assessment_Year], \"0\") & \"</text>\"\n\n\tVAR _valueLabel =\n\t\t\"<text x='\" & FORMAT(_cx, \"0.0\", \"en-US\") & \"' y='\" & _ValueBaseY & \"' text-anchor='middle' style='font-family:\" & _fontFamily & \"; font-size:\" & _ValueFontSize & \"px; fill:\" & _labelColor & \"; font-weight:600;'>\" & _label & \"</text>\"\n\n\tRETURN _badge & _valueLabel & _track & _fill,\n\t\"\",\n\t[Assessment_Year], ASC\n)\n\nRETURN\n\"<svg xmlns='http://www.w3.org/2000/svg' width='\" & _W & \"' height='\" & _H & \"' viewBox='0 0 \" & _W & \" \" & _H & \"' preserveAspectRatio='xMidYMid meet'>\n\t\" & _BarsSVG & \"\n</svg>\"",
+  "reportPages": [
+    {
+      "display": "Personal Profile",
+      "slug": "personal-profile",
+      "groups": [
+        "Результативність та оцінка › Оцінка компетенцій"
+      ]
+    }
+  ],
+  "dependencies": {
+    "measures": [
+      "PP.Оцінка компетенцій.Загальна"
+    ],
+    "columns": [
+      "fact_360_Assessment[Assessment_Year]"
+    ],
+    "tables": [
+      "fact_360_Assessment"
+    ]
+  },
+  "usedBy": [],
+  "lineage": {
+    "sourceTables": [
+      "DM.vw_R27_fact_360_Assessment"
+    ],
+    "sourceColumns": [
+      "Assessment_Year"
+    ],
+    "powerQuery": "fact_360_Assessment"
+  },
+  "business": {
+    "name": "",
+    "logic": [],
+    "requirementRefs": []
+  },
+  "tags": [
+    "pdp"
+  ],
+  "source": {
+    "repo": "PDP",
+    "file": "PDP.SemanticModel/definition/tables/_Measures.tmdl",
+    "commit": "a424d2059f3e196794146c8cef8009884c9a1c9b",
+    "extractedAt": "2026-06-23T15:19:29+03:00"
+  },
+  "manualNotes": ""
+}
