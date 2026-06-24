@@ -1232,6 +1232,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1945,6 +1953,62 @@
     
   
     dim__HRBP_OS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entities/fact-360-assessment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_360_Assessment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entities/fact-360-behavior-indicator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_360_Behavior_Indicator
   
 
     
@@ -2777,6 +2841,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../entities/t-360-assessment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    t_360_Assessment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../entities/t-ac-burnout/" class="md-nav__link">
         
   
@@ -2917,6 +3009,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../entities/t-participant-categories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    t_Participant_Categories
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../entities/t-user-roles/" class="md-nav__link">
         
   
@@ -3033,6 +3153,28 @@
   
     <nav class="md-nav" aria-label="Зіркові схеми за фактами">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fact_360_assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_360_Assessment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_360_behavior_indicator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_360_Behavior_Indicator
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#fact_average_income" class="md-nav__link">
@@ -3486,6 +3628,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#fact_360_assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_360_Assessment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact_360_behavior_indicator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fact_360_Behavior_Indicator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#fact_average_income" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3819,7 +3983,7 @@
 
 
 <h1 id="_1">Схема моделі<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>Модель — це <strong>схема-сузір'я</strong>: <strong>28</strong> фактових таблиць, пов'язаних із вимірами через <strong>145</strong> зв'язків (many → one). Щоб не зливати все в одну нечитабельну діаграму, нижче наведено окрему <strong>зіркову схему на кожну фактову таблицю</strong>.</p>
+<p>Модель — це <strong>схема-сузір'я</strong>: <strong>30</strong> фактових таблиць, пов'язаних із вимірами через <strong>147</strong> зв'язків (many → one). Щоб не зливати все в одну нечитабельну діаграму, нижче наведено окрему <strong>зіркову схему на кожну фактову таблицю</strong>.</p>
 <h2 id="_2">Конформовані виміри<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Виміри, спільні для кількох фактів (число — у скількох фактах використовується). Натисніть на таблицю, щоб відкрити її опис.</p>
 <table>
@@ -3832,7 +3996,7 @@
 <tbody>
 <tr>
 <td><a href="../entities/dim-admin-os/"><code>dim_Admin_OS</code></a></td>
-<td>20</td>
+<td>22</td>
 </tr>
 <tr>
 <td><a href="../entities/dim-employee-status/"><code>dim_Employee_Status</code></a></td>
@@ -3914,6 +4078,14 @@
 </table>
 <h2 id="_3">Зіркові схеми за фактами<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>У кожній схемі фактова таблиця у центрі, навколо — її виміри; підпис на зв'язку — ключ з'єднання.</p>
+<h3 id="fact_360_assessment">fact_360_Assessment<a class="headerlink" href="#fact_360_assessment" title="Permanent link">&para;</a></h3>
+<p><a href="../entities/fact-360-assessment/"><code>fact_360_Assessment</code></a></p>
+<pre class="mermaid"><code>erDiagram
+  dim_Admin_OS ||--o{ fact_360_Assessment : "USER_ACCESS_ID"</code></pre>
+<h3 id="fact_360_behavior_indicator">fact_360_Behavior_Indicator<a class="headerlink" href="#fact_360_behavior_indicator" title="Permanent link">&para;</a></h3>
+<p><a href="../entities/fact-360-behavior-indicator/"><code>fact_360_Behavior_Indicator</code></a></p>
+<pre class="mermaid"><code>erDiagram
+  dim_Admin_OS ||--o{ fact_360_Behavior_Indicator : "USER_ACCESS_ID"</code></pre>
 <h3 id="fact_average_income">fact_Average_Income<a class="headerlink" href="#fact_average_income" title="Permanent link">&para;</a></h3>
 <p><a href="../entities/fact-average-income/"><code>fact_Average_Income</code></a></p>
 <pre class="mermaid"><code>erDiagram

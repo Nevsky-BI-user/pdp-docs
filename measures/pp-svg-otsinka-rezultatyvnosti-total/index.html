@@ -1226,6 +1226,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1939,6 +1947,62 @@
     
   
     dim__HRBP_OS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-360-assessment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_360_Assessment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/fact-360-behavior-indicator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fact_360_Behavior_Indicator
   
 
     
@@ -2771,6 +2835,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../entities/t-360-assessment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    t_360_Assessment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../entities/t-ac-burnout/" class="md-nav__link">
         
   
@@ -2891,6 +2983,34 @@
     
   
     t_Loss_Productivity_Metrics_by_Persona
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entities/t-participant-categories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    t_Participant_Categories
   
 
     
@@ -3255,7 +3375,7 @@
 <span class="p">)</span>
 
 <span class="c1">// --- Геометрія полотна ---</span>
-<span class="nb">VAR</span><span class="w"> </span>_W = 640
+<span class="nb">VAR</span><span class="w"> </span>_W = 381                       // 423 × 0.9 — ширина відображення із запасом 10% (без прокрутки)
 <span class="nb">VAR</span><span class="w"> </span>_H = 150
 <span class="nb">VAR</span><span class="w"> </span>_MarginTop = 8
 <span class="nb">VAR</span><span class="w"> </span>_MarginLR = 40
@@ -3263,13 +3383,22 @@
 <span class="nb">VAR</span><span class="w"> </span>_ChartBot = _H - _BottomMargin
 <span class="nb">VAR</span><span class="w"> </span>_ChartH = _ChartBot - _ChartTop
 
+<span class="c1">// --- Рядки підписів значень (два рядки замість одного) ---</span>
+<span class="nb">VAR</span><span class="w"> </span>_Label1Y = _MarginTop + 6      // 14 — верхній рядок (Керівником, жирний)
+<span class="nb">VAR</span><span class="w"> </span>_Label2Y = _MarginTop + 19     // 27 — нижній рядок (Самооцінка)
+
 <span class="nb">VAR</span><span class="w"> </span>_BarCount = COUNTROWS(_data_sup)
-<span class="nb">VAR</span><span class="w"> </span>_BarWidth = 20
-<span class="nb">VAR</span><span class="w"> </span>_BarGap = 10
+<span class="nb">VAR</span><span class="w"> </span>_BarWidth = 14
+<span class="nb">VAR</span><span class="w"> </span>_BarGap = 8
 <span class="nb">VAR</span><span class="w"> </span>_GroupWidth = (_BarWidth * 2) + _BarGap
 <span class="nb">VAR</span><span class="w"> </span>_AvailableW = _W - 2 * _MarginLR
-<span class="nb">VAR</span><span class="w"> </span>_GroupGap = IF(_BarCount &gt; 1, (_AvailableW - _BarCount * _GroupWidth) / (_BarCount - 1), 0)
-<span class="nb">VAR</span><span class="w"> </span>_StartX = _MarginLR
+
+<span class="c1">// --- Центрування блоку груп ---</span>
+<span class="nb">VAR</span><span class="w"> </span>_GroupGapDesired = 48
+<span class="nb">VAR</span><span class="w"> </span>_MaxGapThatFits = IF(_BarCount &gt; 1, (_AvailableW - _BarCount * _GroupWidth) / (_BarCount - 1), 0)
+<span class="nb">VAR</span><span class="w"> </span>_GroupGap = MAX(0, MIN(_GroupGapDesired, _MaxGapThatFits))
+<span class="nb">VAR</span><span class="w"> </span>_TotalContentWidth = _BarCount * _GroupWidth + (_BarCount - 1) * _GroupGap
+<span class="nb">VAR</span><span class="w"> </span>_StartX = (_W - _TotalContentWidth) / 2
 
 <span class="c1">// --- Побудова ---</span>
 <span class="nb">VAR</span><span class="w"> </span>_BarsSVG = CONCATENATEX(
@@ -3332,18 +3461,17 @@
 <span class="w">    </span><span class="nb">VAR</span><span class="w"> </span>_y2 = _ChartBot - _h2
 
 <span class="w">    </span><span class="nb">VAR</span><span class="w"> </span>_rects =
-<span class="w">        </span><span class="s">&quot;&lt;rect x=&#39;&quot;</span><span class="w"> </span>&amp; _x1 &amp; &quot;&#39; y=&#39;&quot; &amp; _ChartTop &amp; &quot;&#39; width=&#39;&quot; &amp; _BarWidth &amp; &quot;&#39; height=&#39;&quot; &amp; _ChartH &amp; &quot;&#39; fill=&#39;&quot; &amp; _ColorFill1 &amp; &quot;&#39; fill-opacity=&#39;0.1&#39; stroke=&#39;&quot; &amp; _ColorFill1 &amp; &quot;&#39; stroke-width=&#39;1&#39; stroke-opacity=&#39;0.3&#39; /&gt;&quot; &amp;
-<span class="w">        </span><span class="s">&quot;&lt;rect x=&#39;&quot;</span><span class="w"> </span>&amp; _x2 &amp; &quot;&#39; y=&#39;&quot; &amp; _ChartTop &amp; &quot;&#39; width=&#39;&quot; &amp; _BarWidth &amp; &quot;&#39; height=&#39;&quot; &amp; _ChartH &amp; &quot;&#39; fill=&#39;&quot; &amp; _ColorFill2 &amp; &quot;&#39; fill-opacity=&#39;0.1&#39; /&gt;&quot; &amp;
-<span class="w">        </span><span class="s">&quot;&lt;rect x=&#39;&quot;</span><span class="w"> </span>&amp; _x1 &amp; &quot;&#39; y=&#39;&quot; &amp; FORMAT(_y1, &quot;0.0&quot;) &amp; &quot;&#39; width=&#39;&quot; &amp; _BarWidth &amp; &quot;&#39; height=&#39;&quot; &amp; FORMAT(_h1, &quot;0.0&quot;) &amp; &quot;&#39; fill=&#39;&quot; &amp; _ColorFill1 &amp; &quot;&#39; stroke=&#39;&quot; &amp; _ColorFill1 &amp; &quot;&#39; stroke-width=&#39;1&#39; /&gt;&quot; &amp;
-<span class="w">        </span><span class="s">&quot;&lt;rect x=&#39;&quot;</span><span class="w"> </span>&amp; _x2 &amp; &quot;&#39; y=&#39;&quot; &amp; FORMAT(_y2, &quot;0.0&quot;) &amp; &quot;&#39; width=&#39;&quot; &amp; _BarWidth &amp; &quot;&#39; height=&#39;&quot; &amp; FORMAT(_h2, &quot;0.0&quot;) &amp; &quot;&#39; fill=&#39;&quot; &amp; _ColorFill2 &amp; &quot;&#39; fill-opacity=&#39;0.7&#39; /&gt;&quot;
+<span class="w">        </span><span class="s">&quot;&lt;rect x=&#39;&quot;</span><span class="w"> </span>&amp; FORMAT(_x1, &quot;0.0&quot;, &quot;en-US&quot;) &amp; &quot;&#39; y=&#39;&quot; &amp; _ChartTop &amp; &quot;&#39; width=&#39;&quot; &amp; _BarWidth &amp; &quot;&#39; height=&#39;&quot; &amp; _ChartH &amp; &quot;&#39; fill=&#39;&quot; &amp; _ColorFill1 &amp; &quot;&#39; fill-opacity=&#39;0.1&#39; stroke=&#39;&quot; &amp; _ColorFill1 &amp; &quot;&#39; stroke-width=&#39;1&#39; stroke-opacity=&#39;0.3&#39; /&gt;&quot; &amp;
+<span class="w">        </span><span class="s">&quot;&lt;rect x=&#39;&quot;</span><span class="w"> </span>&amp; FORMAT(_x2, &quot;0.0&quot;, &quot;en-US&quot;) &amp; &quot;&#39; y=&#39;&quot; &amp; _ChartTop &amp; &quot;&#39; width=&#39;&quot; &amp; _BarWidth &amp; &quot;&#39; height=&#39;&quot; &amp; _ChartH &amp; &quot;&#39; fill=&#39;&quot; &amp; _ColorFill2 &amp; &quot;&#39; fill-opacity=&#39;0.1&#39; /&gt;&quot; &amp;
+<span class="w">        </span><span class="s">&quot;&lt;rect x=&#39;&quot;</span><span class="w"> </span>&amp; FORMAT(_x1, &quot;0.0&quot;, &quot;en-US&quot;) &amp; &quot;&#39; y=&#39;&quot; &amp; FORMAT(_y1, &quot;0.0&quot;, &quot;en-US&quot;) &amp; &quot;&#39; width=&#39;&quot; &amp; _BarWidth &amp; &quot;&#39; height=&#39;&quot; &amp; FORMAT(_h1, &quot;0.0&quot;, &quot;en-US&quot;) &amp; &quot;&#39; fill=&#39;&quot; &amp; _ColorFill1 &amp; &quot;&#39; stroke=&#39;&quot; &amp; _ColorFill1 &amp; &quot;&#39; stroke-width=&#39;1&#39; /&gt;&quot; &amp;
+<span class="w">        </span><span class="s">&quot;&lt;rect x=&#39;&quot;</span><span class="w"> </span>&amp; FORMAT(_x2, &quot;0.0&quot;, &quot;en-US&quot;) &amp; &quot;&#39; y=&#39;&quot; &amp; FORMAT(_y2, &quot;0.0&quot;, &quot;en-US&quot;) &amp; &quot;&#39; width=&#39;&quot; &amp; _BarWidth &amp; &quot;&#39; height=&#39;&quot; &amp; FORMAT(_h2, &quot;0.0&quot;, &quot;en-US&quot;) &amp; &quot;&#39; fill=&#39;&quot; &amp; _ColorFill2 &amp; &quot;&#39; fill-opacity=&#39;0.7&#39; /&gt;&quot;
 
-<span class="w">    </span><span class="nb">VAR</span><span class="w"> </span>_labelMidX = _x1 + _BarWidth + (_BarGap / 2)
 <span class="w">    </span><span class="nb">VAR</span><span class="w"> </span>_labels =
-<span class="w">        </span><span class="s">&quot;&lt;text x=&#39;&quot;</span><span class="w"> </span>&amp; (_labelMidX - 3) &amp; &quot;&#39; y=&#39;&quot; &amp; (_ChartTop - 12) &amp; &quot;&#39; text-anchor=&#39;end&#39; style=&#39;font-family:&quot; &amp; _fontFamily &amp; &quot;; font-size:&quot; &amp; _ValueFontSize &amp; &quot;px; fill:&quot; &amp; _labelColor &amp; &quot;; font-weight:700;&#39;&gt;&quot; &amp; _label1 &amp; &quot;&lt;/text&gt;&quot; &amp;
-<span class="w">        </span><span class="s">&quot;&lt;text x=&#39;&quot;</span><span class="w"> </span>&amp; (_labelMidX + 3) &amp; &quot;&#39; y=&#39;&quot; &amp; (_ChartTop - 12) &amp; &quot;&#39; text-anchor=&#39;start&#39; style=&#39;font-family:&quot; &amp; _fontFamily &amp; &quot;; font-size:&quot; &amp; _ValueFontSize &amp; &quot;px; fill:&quot; &amp; _labelColor &amp; &quot;;&#39;&gt;&quot; &amp; _label2 &amp; &quot;&lt;/text&gt;&quot;
+<span class="w">        </span><span class="s">&quot;&lt;text x=&#39;&quot;</span><span class="w"> </span>&amp; FORMAT(_cx, &quot;0.0&quot;, &quot;en-US&quot;) &amp; &quot;&#39; y=&#39;&quot; &amp; _Label1Y &amp; &quot;&#39; text-anchor=&#39;middle&#39; style=&#39;font-family:&quot; &amp; _fontFamily &amp; &quot;; font-size:&quot; &amp; _ValueFontSize &amp; &quot;px; fill:&quot; &amp; _labelColor &amp; &quot;; font-weight:700;&#39;&gt;&quot; &amp; _label1 &amp; &quot;&lt;/text&gt;&quot; &amp;
+<span class="w">        </span><span class="s">&quot;&lt;text x=&#39;&quot;</span><span class="w"> </span>&amp; FORMAT(_cx, &quot;0.0&quot;, &quot;en-US&quot;) &amp; &quot;&#39; y=&#39;&quot; &amp; _Label2Y &amp; &quot;&#39; text-anchor=&#39;middle&#39; style=&#39;font-family:&quot; &amp; _fontFamily &amp; &quot;; font-size:&quot; &amp; _ValueFontSize &amp; &quot;px; fill:&quot; &amp; _labelColor &amp; &quot;;&#39;&gt;&quot; &amp; _label2 &amp; &quot;&lt;/text&gt;&quot;
 
 <span class="w">    </span><span class="nb">VAR</span><span class="w"> </span>_periodLabel =
-<span class="w">        </span><span class="s">&quot;&lt;text x=&#39;&quot;</span><span class="w"> </span>&amp; _cx &amp; &quot;&#39; y=&#39;&quot; &amp; (_H - 5) &amp; &quot;&#39; text-anchor=&#39;middle&#39; style=&#39;font-family:&quot; &amp; _fontFamily &amp; &quot;; font-size:12px; fill:&quot; &amp; _labelColor &amp; &quot;; font-weight:600;&#39;&gt;&quot; &amp;
+<span class="w">        </span><span class="s">&quot;&lt;text x=&#39;&quot;</span><span class="w"> </span>&amp; FORMAT(_cx, &quot;0.0&quot;, &quot;en-US&quot;) &amp; &quot;&#39; y=&#39;&quot; &amp; (_H - 5) &amp; &quot;&#39; text-anchor=&#39;middle&#39; style=&#39;font-family:&quot; &amp; _fontFamily &amp; &quot;; font-size:12px; fill:&quot; &amp; _labelColor &amp; &quot;; font-weight:600;&#39;&gt;&quot; &amp;
 <span class="w">        </span><span class="nf">SUBSTITUTE</span><span class="p">(</span><span class="na">[performence_period]</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&amp;&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&amp;amp;&quot;</span><span class="p">)</span><span class="w"> </span>&amp;
 <span class="w">        </span><span class="s">&quot;&lt;/text&gt;&quot;</span>
 
@@ -3353,7 +3481,7 @@
 <span class="p">)</span>
 
 <span class="nb">RETURN</span>
-<span class="s">&quot;&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;100%&#39; height=&#39;&quot;</span><span class="w"> </span>&amp; _H &amp; &quot;&#39; viewBox=&#39;0 0 &quot; &amp; _W &amp; &quot; &quot; &amp; _H &amp; &quot;&#39; preserveAspectRatio=&#39;xMinYMid meet&#39;&gt;
+<span class="s">&quot;&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;&quot;</span><span class="w"> </span>&amp; _W &amp; &quot;&#39; height=&#39;&quot; &amp; _H &amp; &quot;&#39; viewBox=&#39;0 0 &quot; &amp; _W &amp; &quot; &quot; &amp; _H &amp; &quot;&#39; preserveAspectRatio=&#39;xMidYMid meet&#39;&gt;
 <span class="w">    </span><span class="s">&quot; &amp; _BarsSVG &amp; &quot;</span>
 &lt;/svg&gt;&quot;
 </code></pre></div>
