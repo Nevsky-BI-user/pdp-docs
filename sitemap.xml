@@ -2,3330 +2,3330 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/changelog/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/glossary/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/model/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/validation/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/cg-event-types/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-admin-os/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-date/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-divisions-hierarchy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-employee-special-finbp/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-employee-special-head-admin/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-employee-special-head-functional/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-employee-special-hrbp/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-employee-status/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-employment-type/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-hrbp-os/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-lp-risks/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-office/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-okr-evalution/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-organization/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-performance-evalution/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-permanent-temporary/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-person/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-position-category/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-position/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-trs-categories/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-unit/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/dim-work-format/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-360-assessment/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-360-behavior-indicator/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-average-income/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-burnout-indicators/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-employee-history-position/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-employee-list/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-employee-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-employee-performance-total/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-employee-performance/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-employee-seniority-by-month/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-employees-attributes/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-excel-group-profile-general-metric/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-gaussian-curve-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-gaussian-curve-performance/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-loss-of-productivity/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-metrics/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-mobile-limit/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-monthly-viva-insights/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-okr-goals/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-okr-key-results/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-okr-svg/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-repayment-credit/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-sick-leaves/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-trs-plan-fact/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-trs-plan/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-trs/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-vacancy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-vacation-reserve/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-vacation/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/fact-viva-metrics/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/measures/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/p-ac-loss-productivity/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/t-360-assessment/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/t-ac-burnout/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/t-flagdim/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/t-hierarchytypes/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/t-is-fired/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/t-loss-productivity-metrics-by-persona/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/t-participant-categories/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/entities/t-user-roles/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/5ac-koefitsiient-absenteizmu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-br-hodyn-vzaiemodii-z-kerivnykom/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-br-kilkist-misiatsiv-bez-iakisnoi-vidpustky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-br-kilkist-zvilnenykh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-br-okr-ostannii-rik/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-br-okr-poperednii-rik/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-br-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-br-perepratsiuvannia-viva/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-br-plynnist/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-br-referentne-znachennia-misiatsiv-bez-vidpustky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-br-referentne-znachennia-viva/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-br-referentne-znachennia-vzaiemodiia-z-kerivnykom/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-br-ryzyk-vtraty/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-br-stazh-na-posadi-ostannii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-br-stazh-v-kholdynhu-neperervnyi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-br-tor-ostannii-rik/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-br-tor-poperednii-rik/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-br-trend-otsinky-rezultatyvnosti-tor/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-br-treshkhold-plynnist/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-br-zarplata-vylka/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-burnout-risk-c-rows/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-burnout-risk-panel-filtriv-pratsiuiuchi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-burnout-risk-panel-filtriv-zvilneni/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-burnout-risk-zastosuvaty-vybir/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-burnout-tooltip/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-chy-ie-ryzyk-vyhorannia-cherez-perepratsiuvannia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-chy-ie-ryzyk-vyhorannia-cherez-riven-oplaty-pratsi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-chy-ie-ryzyk-vyhorannia-cherez-vidsutnist-spilkuvannia-z-kerivnykom/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-chy-ie-ryzyk-vyhorannia-cherez-vidsutnist-vidpustok/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-chy-ie-ryzyk-vyhorannia-po-plynnosti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-chy-ie-ryzyk-vyhorannia-po-rezultatam-otsinky-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-chy-ie-ryzyk-vyhorannia-po-rezultatam-otsinky-rezultatyvnosti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-chy-ie-ryzyk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-dani-1-1-v-ser-na-1-pidlehloho-hod/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-dani-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-dani-chystyi-chas-v-ofisi-hod/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-dani-chystyi-chas-v-ofisi-trend/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-dani-dolia-dniv-polovykh-robit/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-dani-dolia-vzaiemodii-viva-v-intervali/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-dani-interval-vzaiemodii-trend/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-dani-interval-vzaiemodii-viva-hod-v-den/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-dani-perepratsiuvannia-viva/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-dani-plynnist-po-vertykali/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-dani-rezultatyvnist-po-kpi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-dani-ryzyk-vtraty-produktyvnosti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-dani-trend-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-dani-trend-otsinky-rez-ti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-dani-trend-rezultatyvnosti-po-kpi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-dolia-spivrobitnykiv-z-vidpustkamy-ponad-10-dniv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-export-1-1-v-ser-na-1-pidlehloho-hod/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-export-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-export-chystyi-chas-v-ofisi-hod/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-export-chystyi-chas-v-ofisi-trend/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-export-dolia-dniv-polovykh-robit/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-export-dolia-vzaiemodii-viva-v-intervali/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-export-interval-vzaiemodii-trend/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-export-interval-vzaiemodii-viva-hod-v-den/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-export-perepratsiuvannia-viva/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-export-plynnist-po-vertykali/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-export-rezultatyvnist-po-kpi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-export-ryzyk-vtraty-produktyvnosti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-export-trend-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-export-trend-otsinky-rez-ti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-export-trend-rezultatyvnosti-po-kpi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-filter/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-intsydenty-z-travmatyzmom/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-katehoriia-otsinky-spvrobitnyka-za-ostannii-period-rik/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-kilkist-misiatsiv-bez-iakisnoi-vidpustky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-lider-za-chasom-bez-vidpustky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-lider-za-nevykorystanymy-dniamy-vidpustky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-loss-productivity-c-rows/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-loss-productivity-panel-filtriv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-loss-productivity-zastosuvaty-vybir/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-lp-nav-my-lead-team/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-lp-rate-color/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-lp-stazh-na-posadi-ostannii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-nav-my-lead-team/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-otsinka-1-1-v-ser-na-1-pidlehloho-hod/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-otsinka-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-otsinka-chystyi-chas-v-ofisi-hod/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-otsinka-chystyi-chas-v-ofisi-trend/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-otsinka-dolia-dniv-polovykh-robit/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-otsinka-dolia-vzaiemodii-viva-v-intervali/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-otsinka-interval-vzaiemodii-trend/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-otsinka-interval-vzaiemodii-viva-hod-v-den/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-otsinka-perepratsiuvannia-viva/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-otsinka-plynnist-po-vertykali/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-otsinka-rezultatyvnist-po-kpi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-otsinka-ryzyk-vtraty-produktyvnosti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-otsinka-trend-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-otsinka-trend-otsinky-rez-ti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-otsinka-trend-rezultatyvnosti-po-kpi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-perepratsiuvannia-viva/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-pib-pratsivnyka/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-plynnist/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-ryzyk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-serednia-kilkist-dniv-nevykorystanoi-vidpustky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-serednia-kilkist-dniv-vykorystanoi-vidpustky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-serednia-kilkist-likarnianykh-na-spivrobitnyka/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-serednia-tryvalist-likarnianoho-na-spivrobitnyka/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-serednia-tryvalist-vidpustky-spivrobitnyka-dniv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-1-1-v-ser-na-1-pidlehloho-hod/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-ahrehovanyi-neproduktynvykh-pidlehlykh-dlia-kerivnykiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-chystyi-chas-v-ofisi-hod/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-chystyi-chas-v-ofisi-trend/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-dolia-dniv-polovykh-robit/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-dolia-vzaiemodii-viva-v-intervali/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-hodyn-1-1-v-ser-za-3-mis/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-hodyn-1-1-v-ser-za-3-mis2/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-interval-vzaiemodii-trend/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-interval-vzaiemodii-viva-hod-v-den/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-kilkist-misiatsiv-bez-iakisnoi-vidpustky-za-ost-3-roky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-perepratsiuvannia-viva-2/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-perepratsiuvannia-viva/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-plynnist-po-vertykali/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-plynnist/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-rezultatyvnist-po-kpi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-ryzyk-vtraty-produktyvnosti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-ryzyk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-trend-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-trend-otsinky-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-trend-otsinky-rez-ti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-trend-otsinky-rezultatyvnosti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-trend-rezultatyvnosti-po-kpi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-switch-zarplata-vylky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-trend-otsinky-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-trend-otsinky-rezultatyvnosti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-vidsotok-dniv-vidpustky-v-robochi-dni/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-vzaiemodiia-z-kerivnykom/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-zarplata-vylky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-znachennia-koefitsiienta-indyvidualnoho-bonusu-za-ostannii-period/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-znachennia-koefitsiienta-indyvidualnoho-bonusu-za-peredostannii-period/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-znachennia-ostannoho-roku-otsinky-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-znachennia-ostannoho-roku-otsinky-rezultatyvnosti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-znachennia-peredostannii-roku-otsinky-rezultatyvnosti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/ac-znachennia-peredostannoho-roku-otsinky-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/administrative-role-filter/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/button-detalization-personal-profile/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/c-rows-admin-os/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/c-rows-employee-list/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/competency-comment-svg/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/current-user-admin-hierarchy-level/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/current-user-hrbp-hierarchy-level/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/current-user-name/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/current-user-photo/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/current-user/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/date-filters-check/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/dolia-kerivnykiv-sered-vsikh-spivrobitnykiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/dolia-upravlinskykh-katehorii-sered-vsikh-spivrobitnykiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/dummy-blank/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/filtered-users-check/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-chastka-conflicting-meeting-hours-kholdynh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-chastka-conflicting-meeting-hours-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-chastka-conflicting-meeting-hours-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-cholovikiv-pid-ryzykom-mobilizatsii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-hibryd-oflain/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-hibryd-onlain/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-iz-doplatoiu-za-nastavnytstvo/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-iz-investytsiinym-proiektnym-bonusom/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-iz-pozykamy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-iz-premiieiu-mkhp-zirky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-iz-premiieiu-za-bank-idei/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-iz-premiieiu-za-prohramoiu-pryvedy-druha/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-iz-premiieiu-za-sumisnytstvo-fakt/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-iz-premiieiu-za-vnutrishnie-trenerstvo/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-iz-premiieiu-za-zberezhennia-ta-rozshyrennia-zemelnoho-banku/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-iz-proektnym-bonusom-za-stratehichni-it-proiekty/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-iz-razovoiu-premiieiu-za-prohramoiu-vyznannia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-z-aktyvnymy-idp/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-z-diiuchym-konfliktom-interesiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-z-doplatoiu-za-roziznyi-kharakter-roboty-fakt/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-z-doplatoiu-za-roziznyi-kharakter-roboty/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-z-doplatoiu-za-shkidlyvi-umovy-pratsi-fakt/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-z-doplatoiu-za-shkidlyvi-umovy-pratsi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-z-kvartalniu-premiieiu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-z-kvartalnoiu-premiieiu-fakt/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-z-navchanniam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-z-pozykoiu-na-noutbuk-diiucha/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-z-premiieiu-za-misiats-fakt/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-z-premiieiu-za-misiats/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-z-richnym-bonusom/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-z-richnymy-bonusamy-fakt/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-z-shchomisiachnoiu-premiieiu-fakt/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-z-shchomisiachnoiu-premiieiu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-komandy-z-sotsialnymy-vyplatamy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-line/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-middle-managers/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-oflain/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-onlain/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-operatsionistiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-polovykh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-senior-managers/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-specialists/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-spivrobitnykiv-komandy-z-naiavnymy-vidpustkamy-ponad-10-dniv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-studentiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-uchasnykiv-komandy-iz-zminoiu-zarplaty-okladu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-workers/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dolia-zabronovanykh-cholovikiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dovzhyna-robochoho-dnia-kholdynh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dovzhyna-robochoho-dnia-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-dovzhyna-robochoho-dnia-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-enps/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-finbp/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-1-1-z-kerivnykom-kholdynh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-1-1-z-kerivnykom-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-1-1-z-kerivnykom-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-fokusnoi-roboty-kholdynh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-fokusnoi-roboty-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-fokusnoi-roboty-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-kerivnyka-dlia-vzaiemodii-z-pidlehlymy-kholdynh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-kerivnyka-dlia-vzaiemodii-z-pidlehlymy-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-kerivnyka-dlia-vzaiemodii-z-pidlehlymy-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-narad-kholdynh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-narad-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-narad-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-vzaiemodii-u-nerobochyi-chas-kholdynh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-vzaiemodii-u-nerobochyi-chas-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-vzaiemodii-u-nerobochyi-chas-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-vzaiemodii-z-kerivnykom-kholdynh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-vzaiemodii-z-kerivnykom-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-vzaiemodii-z-kerivnykom-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-zahalnoi-vzaiemodii-kholdynh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-zahalnoi-vzaiemodii-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hodyny-zahalnoi-vzaiemodii-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-hrbp/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-idei-komandy-sht/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-k-t-spivrobitnykiv-shcho-otrymaly-pozyku-na-noutbuk-diiucha/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-k-t-spivrobitnykiv-shcho-otrymuiut-vyplaty-na-mobilnyi-zviazok/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-k-t-spivrobitnykiv-shcho-otrymuiut-vyplaty-na-orendu-zhytla/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-kerivnyk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-kilkist-cholovikiv-bez-ryzyku-mobilizatsii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-kilkist-cholovikiv-pid-ryzykom-mobilizatsii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-kilkist-fte-po-shtatu-plan/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-kilkist-mobilizovanykh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-kilkist-osnovnykh-pratsivnykiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-kilkist-sezonnykh-pratsivnykiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-kilkist-spivrobitnykiv-u-dekretnii-vidpusttsi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-kilkist-spivrobitnykiv-vsoho-chol-integer/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-kilkist-spivrobitnykiv-vsoho-chol-string/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-kilkist-spivrobitnykiv-vsoho-chol/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-kilkist-stazhysty/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-kilkist-studentiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-kilkist-veteraniv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-kilkist-zainiatykh-fte-fakt/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-komanda/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-manager-id/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-mentorstvo-studentiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-mobilnyi-zviazok-fakt-svg/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-nastavnytstvo/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-nav-panel-filtriv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-navigationbutton2/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-nebazhana-plynnist/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-okhoplennia-middle-senior-nastupnykamy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-okp-color-otsinka-kerivnyka-tekstove-pole/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-okp-color-serednia-otsinka-komady-tekstove-pole/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-okr-k-t-spivrobitnykiv-shcho-otsiniuiutsia-tekstove-pole/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-okr-kilkist-spivrobitnykiv-ostannii-period-otsinky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-okr-nazva-hrafika/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-okr-ostannii-rik/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-okr-otsinka-kerivnyka-kolir/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-okr-otsinka-kerivnyka-tekstove-pole/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-okr-otsinka-kerivnyka-znachennia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-okr-poperednii-rik/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-okr-potochnyi-rik/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-okr-pusto/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-okr-serednia-otsinka-formated/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-okr-serednia-otsinka-komandy-kolir/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-okr-serednia-otsinka-komandy-tekstove-pole/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-okr-serednia-otsinka-komandy-znachennia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-okr-svg-bar-chart/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-optsiia-po-avto-fakt-svg/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-optsiia-po-avto-plan-svg/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-optsiia-po-avto/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-otsinka-rezultatyvnosti-poperednii-rik/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-otsinka-rezultatyvnosti-potochnyi-rik/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-otsinka-rezultatyvnosti-pusto/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-photo-url/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-pidnapriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-plynnist/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-posady-middle-senior-iz-kadrovym-rezervom/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-produktyvnist-color-otsinka-kerivnyka-tekstove-pole/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-produktyvnist-color-serednia-otsinka-komady-tekstove-pole/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-produktyvnist-k-t-spivrobitnykiv-shcho-otsiniuiutsia-tekstove-pole/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-produktyvnist-kilkist-spivrobitnykiv-ostannii-period-otsinky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-produktyvnist-ostannii-period-otsinky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-produktyvnist-otsinka-kerivnyka-katehoriia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-produktyvnist-otsinka-kerivnyka-tekstove-pole/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-produktyvnist-otsinka-kerivnyka-znachennia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-produktyvnist-serednia-otsinka-formeted/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-produktyvnist-serednia-otsinka-komandy-katehoriia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-produktyvnist-serednia-otsinka-komandy-tekstove-pole/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-produktyvnist-serednia-otsinka-komandy-znachennia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-produktyvnist-svg-bar-chart/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-produktyvnist-vidpovidno-do-pohodzhenykh-metryk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rezultatyvnist-nazva-hrafika/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rezultatyvnist-otsinka-okr-filtr-detalizatsii-kr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rezultatyvnist-otsinka-okr-filtr-detalizatsii-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rezultatyvnist-otsinka-okr-kilkist-spivrobitnykiv-z-okr-cy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rezultatyvnist-otsinka-okr-kilkist-spivrobitnykiv-z-okr-py/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-kr-na-okr-cy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-kr-py/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-okr-cy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rezultatyvnist-otsinka-okr-serednia-kilkist-okr-py/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-kr-cy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-kr-py/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-okr-cy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rezultatyvnist-otsinka-okr-zahalna-kilkist-okr-py/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-k-t-pratsivnykiv-total/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-k-t-pratsivnykiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-serednia-otsinka-total/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rezultatyvnist-otsinka-rezultatyvnosti-serednia-otsinka/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rik-otsinky-rezultatyvnosti-last/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rik-otsinky-rezultatyvnosti-prev/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-riven-absenteizmu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-riven-coaching-1-1-hod-mis/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-riven-komandy-v-iierarkhii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-riven-komplaiens-ryzyku/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-riven-krytychnykh-rolei-bez-nastupnykiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-riven-neiakisnykh-vidpustok/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-riven-ryzyku-sb/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-riven-smertelnykh-ne-vyrobnychykh-intsydentiv-za-2025r-sht/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-riven-smertelnykh-vyrobnychykh-intsydentiv-za-2025r-sht/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-riven-vtraty-vysokorezultatyvnykh-pratsivnykiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-maksymalnyi-riven/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-minimalnyi-riven/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-riznytsia-fiksovanoi-vynahorody-fakt-riznytsia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-riznytsia-fiksovanoi-vynahorody-plan-maksymalnyi-riven/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-riznytsia-fiksovanoi-vynahorody-plan-minimalnyi-riven/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-riznytsia-fiksovanoi-vynahorody-plan-riznytsia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rozmir-merezhi-kontaktiv-kholdynh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rozmir-merezhi-kontaktiv-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rozmir-merezhi-kontaktiv-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rozpodil-u-vyltsi-svg/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-rozpodil-u-vyltsi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-ryzyk-mobilizatsii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-ryzyk-vtraty-pratsivnykiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-ryzyk-vtraty-produktyvnosti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-seredni-vytraty-na-mobilnyi-zviazok/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-seredni-vytraty-na-orendu-zhytla/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednia-kilkist-dniv-nevykorystanoi-vidpustky-spivrobitnykom/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednia-otsinka-okr-komandy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednia-zarobitna-plata/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednia-zarplata-oklad/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednie-zrostannia-tsilovoi-richnoi-vynahorody-do-opodatkuvannia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-bal-kompetentsii-komandy-po-kompleksnii-rik/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-dokhid-bez-richnoho-bonusa-za-ost-12-mis/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-dokhid-z-richnym-bonusom-za-ost-12-mis/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-doplat-za-sumishchennia-fakt/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-doplaty-za-nastavnytstvo/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-doplaty-za-roziznyi-kharakter-roboty-fakt/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-doplaty-za-roziznyi-kharakter-roboty/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-doplaty-za-shkidlyvi-umovy-pratsi-fakt/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-doplaty-za-shkidlyvi-umovy-pratsi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-investytsiinoho-proiektnoho-bonusu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-kvartalnoi-premii-fakt/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-kvartalnoi-premii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-pozyky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-premii-mkhp-zirky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-premii-za-bank-idei/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-premii-za-misiats-fakt/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-premii-za-misiats/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-premii-za-prohramoiu-pryvedy-druha/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-premii-za-vnutrishnie-trenerstvo/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-premii-za-zberezhennia-ta-rozshyrennia-zemelnoho-banku/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-proektnoho-bonus-za-stratehichni-it-proiekty/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-razovoi-premii-za-prohramoiu-vyznannia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-richnoho-bonusu-fakt/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-richnoho-bonusu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-shchomisiachnoi-premii-fakt/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-shchomisiachnoi-premii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-sotsialnoi-pidtrymky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-rozmir-vytrat-na-navchannia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-stazh-v-komandi-rokiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-vik/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-serednii-zrostannia-zarplaty-okladu-za-12-mis/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-shyryna-merezhi-kontaktiv-kholdynh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-shyryna-merezhi-kontaktiv-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-shyryna-merezhi-kontaktiv-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-spivrobitnyky-iaki-rozumiiut-ta-demonstruiut-tsinnosti-kompanii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-start-page-navigationbutton/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-svg-okr-komandy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-svg-otsinka-rezultatyvnosti-komandy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-trener-ekspert/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-uchast-u-banku-idei/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-ukomplektovanist-shtatu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-vykonannia-planu-fop-ytd-aktyvni/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-vykonannia-planu-fop-ytd-mobilizovani/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-vykonannia-planu-fop-ytd/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-zakryttia-pozytsii-middle-vnutrishnimy-kandydatamy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/gp-zakryttia-pozytsii-senior-vnutrishnimy-kandydatamy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-absenteizm/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-administratyvnyi-kerivnyk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-adresa-ofisu-pratsivnyk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-adresa-ofisu-shtat/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-ahro-khab/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-avtonomnist-pry-vykonanni-zavdan/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-bal-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-bal/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-beidzh-bank-idei/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-beidzh-nastavnytstvo/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-beidzh-trenerstvo/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-beidzh-zirka-mkhp/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-bonusy-r-k-m/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-broniuvannia-do/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-button-detalization-font-color/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-chastka-kr-za-naiavnistiu-zmin/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-chastka-okr-za-krosfunktsiinistiu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-chastka-okr-za-naiavnistiu-zmin/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-chastka-okr-za-statusom/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-chastka-okr-za-typom-tsili/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-chy-vyplacheno-likarniani-vid-kompanii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-data-dostupnosti-pozyky-na-noutbuk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-data-narodzhennia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-data-podii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-data-pryiomu-na-posadu-ostannii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-data-pryiomu-v-kholdynh-neperervnyi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-data-pryiomu-v-kholdynh-perervnyi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-data-pryiomu-v-komandu-ostannii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-data-pryiomu-v-orhanizatsiiu-ostannii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-diisnist-invalidnosti-do/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-dity-do-14-rokiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-dity-do-18-rokiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-dni-vidpustky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-dniv-vidpustky-v-robochi-dni/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-dolia-conflicting-meeting-hours-kadrovyi-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-dolia-conflicting-meeting-hours-kholdynh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-dolia-conflicting-meeting-hours-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-dolia-conflicting-meeting-hours-spivrobitnyk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-doplata-za-nastavnytstvo/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-doplata-za-shkidlyvi-umovy-pratsi-hrn/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-doplata-za-shkidlyvi-umovy-pratsi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-doplaty-po-sumishchenniu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-doplaty-za-sumishchennia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-dovzhyna-dnia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-dovzhyna-hranytsi-robochoho-dnia-kadrovyi-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-dovzhyna-hranytsi-robochoho-dnia-kholdynh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-dovzhyna-hranytsi-robochoho-dnia-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-dovzhyna-hranytsi-robochoho-dnia-spivrobitnyk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-elektronna-poshta/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-finbp/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-forma-oplaty/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-format-roboty-pratsivnyk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-format-roboty-shtat/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-funktsionalnyi-kerivnyk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-history-position-maxd/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hod-konfliktiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hod-narad/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hod-nerob/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hod-vzaiemodii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-dlia-fokusnoi-roboty-kadrovyi-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-dlia-fokusnoi-roboty-kholdynh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-dlia-fokusnoi-roboty-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-dlia-fokusnoi-roboty-spivrobitnyk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-kadrovyi-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-kholdynh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-kerivnyka-na-vzaiemodiiu-iz-bezposerednimy-pidlehlymy-spivrobitnyk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-narad-1-1-z-kerivnykom-kadrovyi-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-narad-1-1-z-kerivnykom-kholdynh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-narad-1-1-z-kerivnykom-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-narad-1-1-z-kerivnykom-spivrobitnyk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-vzaiemodii-po-naradakh-kadrovyi-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-vzaiemodii-po-naradakh-kholdynh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-vzaiemodii-po-naradakh-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-vzaiemodii-po-naradakh-spivrobitnyk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-kadrovyi-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-kholdynh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-vzaiemodii-u-nerobochyi-chas-spivrobitnyk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-vzaiemodii-z-kerivnykom-kadrovyi-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-vzaiemodii-z-kerivnykom-kholdynh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-vzaiemodii-z-kerivnykom-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-vzaiemodii-z-kerivnykom-spivrobitnyk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-zahalnoi-vzaiemodii-kadrovyi-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-zahalnoi-vzaiemodii-kholdynh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-zahalnoi-vzaiemodii-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hodyn-zahalnoi-vzaiemodii-spivrobitnyk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hrafik-roboty/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hrbp/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-hrupa-invalidnosti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-iakist-rezultatu-vykonanykh-zavdan/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-initsiatyvnist-pry-vykonanni-zavdan/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-inshi-doplaty/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-intsydenty-z-travmatyzmom/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-investytsiinyi-proiektnyi-bonus/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-ipn/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-kadrovyi-pidrozdil/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-katehoriia-mekhanizatora/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-katehoriia-performance/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-katehoriia-posady/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-kilkist-dovhykh-vidpustok/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-kilkist-nastupnykiv-na-moiu-rol/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-kilkist-vidpustok/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-kod-pidrozdilu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-kod-posady/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-koef-bonusu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-kolir-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-kolir-performance/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-kolir-pryrostu-rtsd/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-kolir-shapky-tultipu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-koordynator-dlia-mobilizovanykh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-kr-kliuchovyi-rezultat-dosiahnuto/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-kr-kliuchovyi-rezultat-ne-dosiahnuto/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-kvartalna-premiia-okladiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-kvartalna-premiia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-kvartalni-premii-fakt/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-leibl-pryrostu-rtsd/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-likarniani/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-maksymum-vylky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-materialna-vidpovidalnist/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-matrytsia-9-boxes/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-mentorstvo-studentiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-metryka-9-boxes/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-metryka-hodyny-vzaiemodii-3m/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-metryka-kilkist-nastupnykiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-metryka-produktyvnist-metryky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-metryka-roli-nastupnyk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-metryka-rozmir-shyryna-merezhi-3m/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-metryka-shyryna-merezhi-3m/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-metryka-talent-council/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-min-tariff-rate/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-min-y-axis-rcd/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-minimum-vylky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-misiatsi-bez-vidpustky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-mobilnyi-zviazok-korporatyvnyi-limit/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-mobilnyi-zviazok-nazva-paketu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-na-chyiemu-mistsi-sydyt/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-nadomnyi-invalid-kvota/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-naiavnist-dovhykh-vidpustok/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-nastavnytstvo/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-nastupnyk-dlia-roli/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-natsilenist-na-otrymannia-rezultatu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-nav-my-lead-team/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-nav-panel-filtriv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-nav-zastosuvaty-vybir/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-navchannia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-ofis-shtat/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-oklad-detailed/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-oklad-po-dniakh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-oklad-po-hodynakh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-oklad/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-okr-current-user-koefitsiient-indyvidualnoho-bonusu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-okr-current-user-status-planu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-okr-current-user-zahalna-kolirna-otsinka-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-okr-current-user-zahalna-otsinka-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-okr-iscurrentemployee/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-okr-kolirna-otsinka-kr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-okr-kolirna-otsinka-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-okr-svg-iscurrentemployee/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-okr-svg-last2periods/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-okr-svg-zahalna-kolirna-otsinka-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-okr-tsil-ne-vykonana/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-okr-tsil-vykonana/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-okr-vaha-kr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-okr-vaha-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-okr-zahalna-kilkist-tsilei/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-okr-zahalna-kolirna-otsinka-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-okr-zahalna-otsinka-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-okr-znachennia-kr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-okr-znachennia-okr/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-orenda-zhytla/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-orhanizatsiia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-osvita/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-otsinka-kompetentsii-barchart/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-otsinka-kompetentsii-ekspertna-otsinka/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-otsinka-kompetentsii-otsinka-360/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-otsinka-kompetentsii-otsinka-kerivnyka/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-otsinka-kompetentsii-otsinka-koleh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-otsinka-kompetentsii-otsinka-kros-koleh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-otsinka-kompetentsii-otsinka-pidlehlykh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-otsinka-kompetentsii-samootsinka/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-otsinka-kompetentsii-zahalna/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-otsinka-rezultatyvnosti-bazova/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-otsinka-rezultatyvnosti-dani-vidsutni/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-otsinka-rezultatyvnosti-kerivnykom-total/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-otsinka-rezultatyvnosti-kerivnykom/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-otsinka-rezultatyvnosti-poperednii-rik-pusto/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-otsinka-rezultatyvnosti-poperednii-rik/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-otsinka-rezultatyvnosti-potochnyi-rik-pusto/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-otsinka-rezultatyvnosti-potochnyi-rik/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-otsinka-rezultatyvnosti-samootsinka-total/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-otsinka-rezultatyvnosti-samootsinka/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-otsinka-rezultatyvnosti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-pib/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-pidnapriam-riven-2/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-pidnapriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-pidpryiemstvo/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-pidpys-typu-podii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-pidrozdil-1/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-pidrozdil-2/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-pidrozdil-3/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-pidrozdil-4/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-pidrozdil-5/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-pidrozdil-kadrovyi-po-sumishchenniu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-pidrozdil-kadrovyi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-pilhove-kharchuvannia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-podolannia-pereshkod-pry-vyrishenni-problem/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-posada-po-sumishchenniu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-posada-zvedena/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-posada/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-potochnyi-rtsd/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-pozyka-aktyvna-suma/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-pozyka-na-noutbuk/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-pozytsiia-v-okladnii-vyltsi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-premiia-mkhp-zirky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-premiia-za-bank-idei/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-premiia-za-misiats-hrn/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-premiia-za-misiats/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-premiia-za-prohramoiu-pryvedy-druha/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-premiia-za-vnutrishnie-trenerstvo/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-premiia-za-zberezhennia-ta-rozshyrennia-zemelnoho-banku/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-priorytetne-mistse-roboty/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-produktsiia-zi-znyzhkamy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-proektnyi-bonus-za-stratehichni-it-proiekty/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-prohrama-mkhp-zdorovia-strakhova-kompaniia-kniazha/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-prohrama-mkhp-zdorovia-strakhova-kompaniia-vuso/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-pryiniattia-vidpovidalnosti-za-otrymanyi-rezultat/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-pryrist-okladu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-pryrist-rtsd-detailed/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-pryrist-rtsd/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-razova-premiia-za-prohramoiu-vyznannia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-richni-bonusy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-richnyi-bonus-okladiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-richnyi-bonus/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-rik-otsinky-rezultatyvnosti-last/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-rik-otsinky-rezultatyvnosti-prev/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-rishennia-talent-council/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-riven-anhliiskoi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-riven-v-iierarkhii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-robochi-hodyny/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-robochyi-telefon/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-roziznyi-kharakter-roboty-hrn/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-roziznyi-kharakter-roboty/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-rozmir-fiksovanoi-vynahorody-planovyi-za-misiats-potochnyi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-rozmir-fiksovanoi-vynahorody-planovyi-za-misiats-stanom-na-rik-nazad/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-rozmir-merezhi-kadrovyi-pidrozdil-3m/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-rozmir-merezhi-kholdynh-3m/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-rozmir-merezhi-napriam-3m/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-rozmir-merezhi-spivrobitnyk-3m/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-rozmir-merezhi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-rtsd-detailed/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-rtsd/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-ryzyk-absenteizm/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-ryzyk-dovhi-vidpustky-12m/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-ryzyk-komplaiens/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-ryzyk-mobilizatsii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-ryzyk-nepomichena-zirka/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-ryzyk-sb/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-ryzyk-vtrata-pratsivnyka/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-ryzyk-vtrata-produktyvnosti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-ryzyk-vyd-vidstrochky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-serednia-otsinka-rezultatyvnosti-richna/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-serednia-tryvalist-likarnianoho/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-serednia-tryvalist-vidpustky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-serednii-bal-otsinky-kompetentsii-po-kompleksnii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-seredyna-vylky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-shchokvartalni-premii-v-serednomu-za-kvartal/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-shchomisiachna-premiia-okladiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-shchomisiachna-premiia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-shchomisiachni-premii-nakopychuvalno/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-shchomisiachni-premii-serednomisiachno/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-shyryna-merezhi-kadrovyi-pidrozdil-3m/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-shyryna-merezhi-kholdynh-3m/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-shyryna-merezhi-napriam-3m/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-shyryna-merezhi-spivrobitnyk-3m/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-shyryna-merezhi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-sotsialna-pidtrymka/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-spetsialnist/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-status-pratsivnyka/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-status-veteran/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-stazh-na-posadi-ostannii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-stazh-na-posadi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-stazh-v-kholdynhu-neperervnyi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-stazh-v-kholdynhu-perervnyi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-stazh-v-kholdynhu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-stazh-v-komandi-ostannii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-stazh-v-orhanizatsii-ostannii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-strok-dohovoru-do-daty/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-sumishchennia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-svg-beidzhi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-svg-okr-detalno/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-svg-okr-size/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-svg-okr-zahalna-otsinka/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-svg-otsinka-kompetentsii-khitmap-po-blokakh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-svg-otsinka-kompetentsii-kompetentsiia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-svg-otsinka-kompetentsii-zahalna-po-blokakh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-svg-otsinka-kompetentsii-zahalna/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-svg-otsinka-rezultatyvnosti-total/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-svg-otsinka-rezultatyvnosti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-svg-perfomance-last-year/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-svg-perfomance-prev-year/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-svg-performance-last2periods/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-svg-performence-manager-color/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-svg-performence-self-color/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-svg-pozytsiia-v-okladnii-vyltsi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-svg-prykhovani-mozhlyvosti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-svg-slipi-pliamy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-svg-spiderwebvisual/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-termin-sumishchennia-mis/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-trener-ekspert/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-trs-category-y-axis-max-value-doplaty-za-sumishchennia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-trudovi-umovy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-tryvalist-dovhykh-vidpustok/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia-12-misiatsiv-nazad/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-tsilovyi-rozmir-richnoi-vynahorody-do-opodatkuvannia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-typ-optsii-po-avto/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-typ-podii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-uchast-u-banku-idei/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-uchast-u-proiektakh-pmo/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-umovy-pryiomu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-utochnennia-po-posadi/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-utochnennia-po-robotakh/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-veteran-novachok/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-vidnoshennia-do-vo/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-vidpovidnist-kilkosti-vykonanykh-zavdan-funktsionalu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-vidsotok-zminy-fiksovanoi-vynahorody/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-vidstrochka-vid-pryzovu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-vidviduvanist-tso/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-viiskova-chastyna/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-vnz/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-vyd-zainiatosti/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-vykonannia-zavdan-u-vstanovleni-terminy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-y-axis-rcd/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-zainiatykh-stavok-faktychno/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-zainiatykh-stavok-po-sumishchenniu/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-zainiatykh-stavok-z-vidsutnostiamy/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-zalyshok-vidpustky/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-zhts-katehoriia-posady/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-zhts-napriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-zhts-pidnapriam/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-zhts-pidpryiemstvo/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-zhts-posada/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-zirka-mkhp/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-zmina/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/pp-zrostannia-tsilovoi-richnoi-vynahorody-do-opodatkuvannia-za-ostanni-12-mis/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/selected-hierarchytype/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/test-measure/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/text-my-lead-team/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/user-admin-hierarchy-level/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/user-hrbp-hierarchy-level/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/user-photo/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/measures/user-role-filter/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/report/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/report/group-profile/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/report/personal-profile/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/report/pid-ryzykom-mobilizatsii/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/report/pidskazka-makc-vynahoroda-plan/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/report/pidskazka-maks-vynahoroda-fakt/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/report/pidskazka-min-vynahoroda-fakt/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/report/pidskazka-min-vynahoroda-plan/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/report/produktyvnist-pratsivnykiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/report/tt-doplaty-za-sumishchennia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/report/tt-inshi-doplaty/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/report/tt-kvartalna-premiia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/report/tt-richnyi-bonus/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/report/tt-shchomisiachna-premiia/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/report/tt-zhyttievyi-tsykl/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/report/tt-zmina-fiks-vynahorody/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://nevsky-bi-user.github.io/pdp-docs/report/utrymannia-pratsivnykiv/</loc>
-         <lastmod>2026-06-28</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
 </urlset>
